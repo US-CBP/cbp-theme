@@ -1,0 +1,20 @@
+.badge-primary { @include badge-variant($body-bg, $brand-primary); }
+.badge-default { @include badge-variant($gray-dark, $brand-default); }
+.badge-success { @include badge-variant($body-bg, $brand-success); }
+.badge-warning { @include badge-variant($gray-darker, $brand-warning); }
+.badge-live { @include badge-variant($gray-dark, $brand-live); }
+.badge-danger { @include badge-variant($body-bg, $brand-danger); }
+.badge-info { @include badge-variant($body-bg, $brand-info); }
+.badge-inverse { @include badge-variant($gray-darker, $body-bg); }
+
+.badge-inverse,
+.badge-live,
+.badge-warning,
+.badge-default{
+  border: 1px solid $gray-dark;
+}
+
+.badge {
+    @extend .badge-info;
+    padding: 3px 7px 4px 7px;
+}

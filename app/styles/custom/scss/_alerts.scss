@@ -1,0 +1,106 @@
+// improve alert padding
+.alert {
+    display: inline-block;
+    width: 100%;
+    padding: $alert-padding $alert-padding * 2;
+
+    a {
+      text-decoration: underline;
+    }
+
+    .close {
+        margin-top: -3px;
+        margin-left: 8px;
+        margin-right: -3px;
+        text-shadow: none;
+    }
+
+    .alert-icon {
+        margin-right: 3px;
+        width: 18px;
+        margin-left: -4px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .btn {
+        margin: -4px;
+        margin-left: 10px;
+        text-decoration: underline;
+        // margin-right: -10px;
+        // text-transform: uppercase;
+    }
+}
+
+.alert-icon-info:after,
+.alert-icon-success:after,
+.alert-icon-danger:after,
+.alert-icon-warning:after {
+    @extend .fa:after !optional;
+}
+
+.alert-icon-info:after {
+    @extend .fa-info-circle:after !optional;
+}
+
+.alert-icon-success:after {
+    @extend .fa-check:after !optional;
+}
+
+.alert-icon-danger:after {
+    @extend .fa-times-circle:after !optional;
+}
+
+.alert-icon-warning:after {
+    @extend .fa-warning:after !optional;
+}
+
+.toast-list {
+    .toast {
+        position: relative;
+        border: 1px solid #ddd;
+        border-left-width: 4px;
+        border-radius: 2px;
+        margin-bottom: 9px;
+        position: relative;
+        background: #fff;
+        box-shadow: 0px 1px 3px rgba(0,0,0,.1);
+        padding: $alert-padding*2;
+
+        &.toast-info {
+            border-left-color: $brand-info;
+        }
+        &.toast-primary {
+            border-left-color: $brand-primary;
+        }
+        &.toast-success {
+            border-left-color: $brand-success;
+        }
+        &.toast-danger {
+            border-left-color: $brand-danger;
+        }
+        &.toast-warning {
+            border-left-color: $brand-warning;
+        }
+
+        .toast-content {
+        }
+
+        .toast-actions {
+            margin-top: $alert-padding;
+            padding-top: 0;
+            display: inline-block;
+            width: 100%;
+
+            > .btn-link {
+                padding: 0px;
+                margin-right: 8px;
+            }
+        }
+
+        .close {
+            margin-top: -3px;
+            margin-left: 8px;
+        }
+    }
+}

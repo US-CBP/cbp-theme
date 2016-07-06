@@ -1,0 +1,15 @@
+
+/.idea/
+/components/
+/node_modules/
+/bower_components/
+/build/
+_site
+*.lock
+*/bootstrap.css
+*/*.min.css
+*/*.min.js
+/.gradle/
+*.log
+.tmp
+.sass-cache

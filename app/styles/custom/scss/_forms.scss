@@ -1,0 +1,471 @@
+
+// increase spacing between inline radio/checkboxes to distinguish label relationships.
+.radio-inline, .checkbox-inline {
+  label {
+    font-weight: 400;
+  }
+
+  label + label {
+    margin-left: 18px;
+  }
+}
+
+.required-field:after {
+  content: " (required)";
+  color: $input-text-error-color;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+  option {
+        padding: 3px 20px;
+  }
+}
+
+.checkbox-inline .mdl-checkbox,
+.checkbox-inline .cbp-checkbox {
+  width: auto;
+}
+
+// improve checkbox/radio positioning
+input[type="radio"], input[type="checkbox"] {
+    margin: .2em 0 0;
+}
+
+.is-disabled .mdl-radio__ripple-container,
+.is-disabled .mdl-checkbox__ripple-container,
+.is-disabled .mdl-checkbox__label,
+.is-disabled .mdl-radio__label,
+input[disabled], select[disabled] {
+  cursor: not-allowed !important;
+}
+
+.is-disabled .mdl-selectfield__label {
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+
+
+// removes shadow from inputs and darkens focused field
+.form-control {
+    box-shadow: none;
+    height: 32px;
+    display: inline;
+    line-height: normal;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    .has-error & {
+        box-shadow: none;
+    }
+}
+
+.form-control:-ms-input-placeholder {
+    line-height: 0.4;
+}
+
+.form-group-sm {
+    .form-control-static {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+textarea {
+    //resize: none;
+}
+
+.navbar-form {
+  margin: 3px 0 0 0;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group-heading {
+    border-bottom: 1px solid #eee;
+    margin-top: 27px;
+    margin-bottom: 9px;
+}
+
+/* IE11 hack */
+_:-ms-fullscreen, .input-group-btn {
+  position: relative;
+  top: -4px;
+}
+
+
+// adds required asterisk after label
+form:not(.form-horizontal) {
+    label.required::after {
+        position: relative;
+        content: "*";
+        // color: $state-danger-text;
+        left: 4px;
+        font-size: $font-size-base - 1;
+    }
+}
+
+// adds required asterisk before label
+.form-horizontal {
+    @media(min-width: $screen-sm) {
+        label.required::before {
+            position: relative;
+            content: "*";
+            // color: $state-danger-text;
+            left: -4px;
+            font-size: $font-size-base - 1;
+        }
+    }
+    @media(max-width: 767px) {
+        label.required::after {
+            position: relative;
+            content: "*";
+            // color: $state-danger-text;
+            left: 4px;
+            font-size: $font-size-base - 1;
+        }
+    }
+}
+
+.input-search {
+    border-radius: 100px;
+}
+
+// Add an icon inside the front of an input
+.input-icon {
+    position: absolute;
+    pointer-events: none;
+    margin-top: 7px;
+    margin-left: 9px;
+    opacity: .35;
+}
+.input-icon+input {
+    padding-left: 28px;
+}
+
+.form-control-width-xs {
+    max-width: 75px;
+}
+.form-control-width-sm {
+    max-width: 150px;
+}
+.form-control-width-md {
+    max-width: 250px;
+}
+.form-control-width-lg {
+    max-width: 350px;
+}
+.form-control-width-fill {
+    max-width: 100%;
+}
+
+.dropdown-menu > .active > a,
+.ui-datepicker > .active > a,
+.dropdown-menu > .active > a:hover,
+.ui-datepicker > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.ui-datepicker > .active > a:focus ,
+.ui-datepicker td .ui-state-active{
+  color: $brand-info !important;
+  font-weight: 600  !important;
+}
+
+.switch {
+    padding-left: 64px;
+    overflow: hidden;
+    position: relative;
+
+    > input {
+        appearance: none;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        opacity: 0;
+        left: 0;
+        top: 0;
+    }
+
+    > label {
+        position: relative;
+        cursor: pointer;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    > label:before {
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 25px;
+        height: 25px;
+        width: 58px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 25px;
+        text-align: center;
+        background: #aaa;
+        transition: 0.2s background-color ease-out;
+        margin-left: -64px;
+        margin-right: 6px;
+    }
+
+    > input:checked + label:before {
+        background: $brand-info;
+    }
+
+    > input:disabled + label:before {
+        cursor: not-allowed;
+        background: mix(#aaa, #fff, 30%);
+    }
+    > input:checked:disabled + label:before {
+        background: mix($brand-primary, #fff, 30%);
+    }
+
+    > label:before {
+        content: attr(data-off);
+        padding-left: 20px;
+        padding-right: 0;
+    }
+
+    > input:checked + label:before {
+        content: attr(data-on);
+        padding-right: 20px;
+        padding-left: 0;
+    }
+
+    > label:after {
+        cursor: pointer;
+        content: "";
+        margin: 1px;
+        border-radius: 19px;
+        width: 19px;
+        height: 19px;
+        display: block;
+        background: #fff;
+        position: absolute;
+        top: 2px;
+        left: -62px;
+        z-index: 2;
+        transition: 0.2s left ease-out;
+    }
+
+    > input:checked + label:after {
+        left: -29px;
+    }
+
+}
+
+
+// MDL INPUT COMPONENTS 
+
+// checkbox
+.cbp-checkbox {
+  position: relative;
+
+  z-index: 1;
+
+  vertical-align: middle;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: $checkbox-label-height;
+  margin: 0;
+  padding: 0;
+
+  &.is-upgraded {
+    padding-left: $checkbox-button-size + $checkbox-padding;
+  }
+}
+
+.mdl-checkbox__input {
+  line-height: $checkbox-label-height;
+
+  .cbp-checkbox.is-upgraded & {
+    // Hide input element, while still making it respond to focus.
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+  }
+}
+
+.mdl-checkbox__box-outline {
+  position: absolute;
+  top: $checkbox-top-offset;
+  left: 0;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: $checkbox-button-size;
+  height: $checkbox-button-size;
+  margin: 0;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  border: 2px solid $checkbox-off-color;
+  border-radius: 2px;
+
+  z-index: 2;
+
+  .cbp-checkbox.is-checked & {
+    border: 2px solid $checkbox-color;
+  }
+
+  fieldset[disabled] .cbp-checkbox &,
+  .cbp-checkbox.is-disabled & {
+    border: 2px solid $checkbox-disabled-color;
+    cursor: auto;
+  }
+}
+
+.mdl-checkbox__focus-helper {
+  position: absolute;
+  top: $checkbox-top-offset;
+  left: 0;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: $checkbox-button-size;
+  height: $checkbox-button-size;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  .cbp-checkbox.is-focused & {
+    box-shadow: 0 0 0px ($checkbox-button-size / 2) rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .cbp-checkbox.is-focused.is-checked & {
+    box-shadow: 0 0 0px ($checkbox-button-size / 2) $checkbox-focus-color;
+    background-color: $checkbox-focus-color;
+  }
+}
+
+.mdl-checkbox__label {
+  position: relative;
+  cursor: pointer;
+  font-size: $checkbox-label-font-size;
+  line-height: $checkbox-label-height;
+  margin: 0;
+
+  fieldset[disabled] .cbp-checkbox &,
+  .cbp-checkbox.is-disabled & {
+    color: $checkbox-disabled-color;
+    cursor: auto;
+  }
+}
+
+.mdl-checkbox__ripple-container {
+  position: absolute;
+  z-index: 2;
+  top: -(($checkbox-ripple-size - $checkbox-label-height) / 2);
+  left: -(($checkbox-ripple-size - $checkbox-button-size) / 2);
+
+  box-sizing: border-box;
+  width: $checkbox-ripple-size;
+  height: $checkbox-ripple-size;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+
+  & .mdl-ripple {
+    background: $checkbox-color;
+  }
+
+  fieldset[disabled] .cbp-checkbox &,
+  .cbp-checkbox.is-disabled & {
+    cursor: auto;
+  }
+
+  fieldset[disabled] .cbp-checkbox & .mdl-ripple,
+  .cbp-checkbox.is-disabled & .mdl-ripple {
+    background: transparent;
+  }
+}
+
+// Plain ol' select mdl-selectfield overrides
+.mdl-selectfield {
+
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #808080 transparent transparent transparent;
+  }
+
+  &.mdl-selectfield.is-focused {
+    &:after {
+      margin-top: -4px;
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent #808080 transparent;
+    }
+  }
+
+  .mdl-selectfield__select {
+    background-color: $white !important;
+    padding: 8px 3px!important;
+
+    &:hover {
+      background-color: $input-hover !important;
+    }
+  }
+
+  .mdl-selectfield__label {
+    top: 30px;
+    color: $gray;
+    padding-left: 3px;
+
+    &:after {
+        background-color: $brand-info !important;
+        bottom: 14px !important;
+    }
+  }
+
+  &.mdl-selectfield--multiple {
+    @extend .is-dirty;
+
+    &:after {
+      border:none;
+    }
+  }
+
+  &.mdl-selectfield--floating-label.is-dirty, 
+  &.mdl-selectfield--floating-label.is-focused {
+    .mdl-selectfield__label {
+      top:0;
+      padding-left: 0;
+      color: $brand-info;
+    }
+  }
+
+}
+
