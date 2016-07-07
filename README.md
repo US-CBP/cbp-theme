@@ -7,7 +7,7 @@ This project is based on [Bootstrap 3](http://getbootstrap.com) and [Google's Ma
 
 Run the following command:
 
-	npm install git+https://github.com/US-CBP/cbp-theme
+	npm install git+https://github.com/US-CBP/cbp-theme --OR-- npm i US-CBP/cbp-theme
 
 ### What you get
 
