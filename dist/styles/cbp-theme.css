@@ -7056,12 +7056,10 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 /* CARDS */
 .mdl-card, .cbp-card {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 15px;
@@ -7086,17 +7084,14 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 
 .mdl-card__title, .cbp-card__title {
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: rgb(#222222);
   display: block;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
   line-height: normal;
@@ -7110,13 +7105,11 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .mdl-card__title-text, .cbp-card__title-text {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   color: inherit;
   display: block;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 18px;
@@ -7152,7 +7145,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 
 .mdl-card--expand, .cbp-card--expand {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
