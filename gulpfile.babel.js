@@ -102,12 +102,12 @@ gulp.task('styles', () => {
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync().on('error', $.sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
-    .pipe($.rename('cf-theme.css'))
+    .pipe($.rename('cbp-theme.css'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(gulp.dest('dist/styles'))     // unminified into dist
     .pipe(gulp.dest('app/kitchensink/css'))
     .pipe($.cssnano({ zindex : false }))
-    .pipe($.rename('cf-theme.min.css'))
+    .pipe($.rename('cbp-theme.min.css'))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/styles'))     // minified into dist
     .pipe(gulp.dest('app/kitchensink/css'))
@@ -121,14 +121,14 @@ gulp.task('styles', () => {
 
 gulp.task('app_bundle_scripts', () => {
   return gulp.src(app_js)
-    .pipe($.concat('cf-theme.js'))
+    .pipe($.concat('cbp-theme.js'))
     .pipe($.plumber({ errorHandler : $.util.log }))
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe(gulp.dest('.tmp/js'))
     .pipe(gulp.dest('dist/js'))       // unminified into dist
     .pipe(gulp.dest('app/kitchensink/js'))
-    .pipe($.rename('cf-theme.min.js'))
+    .pipe($.rename('cbp-theme.min.js'))
     .pipe($.uglify().on('error', $.util.log))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))       // minified into dist
