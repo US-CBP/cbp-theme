@@ -12512,3 +12512,7 @@ h2, h3 {
 
 .margin-4 {
   margin: 36px; }
+
+@-moz-document url-prefix() {
+  .mdl-textfield {
+    top: 3px; } }
