@@ -1,5 +1,8 @@
 CBP Common Framework UI Theme
 ==========
+
+[![Build Status](https://travis-ci.org/US-CBP/cbp-theme.svg?branch=master)](https://travis-ci.org/US-CBP/cbp-theme)
+
 This project is based on [Bootstrap 3](http://getbootstrap.com) and [Google's Material Design Lite] (https://github.com/google/material-design-lite)  open source projects that allows us to easily create and maintain.  It is based on SASS.  
 
 
