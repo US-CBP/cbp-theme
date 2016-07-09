@@ -86,7 +86,6 @@
 
 	}
 
-
 	.selectize-dropdown, .selectize-input, .selectize-input {
 	  border-bottom: 1px solid $gray !important;
 	}
@@ -109,15 +108,21 @@
 	    line-height: 0.4;
 	}
 
-	.selectize-dropdown-content div {
-	    background-color: #fff;
+	.selectize-dropdown {
+	    & .option {
+	    	background-color: #fff;
+	    }
+
+	    & .option.active {
+	    	background-color: $input-hover;
+	    }
 	}
 
 	.selectize-dropdown {
 
 		& [data-selectable],
 		& .optgroup-header {
-	    	padding: 15px;
+	    	padding: 10px;
 		}
 	
 	}
