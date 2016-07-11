@@ -7418,8 +7418,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   .select2-field .select2-container--open .select2-dropdown--above,
   .select2-field .select2-container--open .select2-dropdown--below {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.26); }
-  .select2-field .select2-results__option {
-    padding: 1em; }
   .select2-field .select2-container--default .select2-search--dropdown .select2-search__field {
     border-top: none;
     border-right: none;
@@ -7427,6 +7425,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 
 .select2-dropdown {
   border-radius: 2px; }
+  .select2-dropdown .select2-results .select2-results__options .select2-results__option {
+    padding: 13px !important; }
   .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted[aria-selected] {
     background-color: rgba(20, 96, 170, 0.1);
     color: #333333; }
@@ -9739,8 +9739,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   .select2-field .select2-container--open .select2-dropdown--above,
   .select2-field .select2-container--open .select2-dropdown--below {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.26); }
-  .select2-field .select2-results__option {
-    padding: 1em; }
   .select2-field .select2-container--default .select2-search--dropdown .select2-search__field {
     border-top: none;
     border-right: none;
@@ -9748,6 +9746,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 
 .select2-dropdown {
   border-radius: 2px; }
+  .select2-dropdown .select2-results .select2-results__options .select2-results__option {
+    padding: 13px !important; }
   .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted[aria-selected] {
     background-color: rgba(20, 96, 170, 0.1);
     color: #333333; }
@@ -9825,11 +9825,13 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   .selectize-field .selectize-input:-ms-input-placeholder,
   .selectize-field .selectize-input input:-ms-input-placeholder {
     line-height: 0.4; }
-  .selectize-field .selectize-dropdown-content div {
+  .selectize-field .selectize-dropdown .option {
     background-color: #fff; }
+  .selectize-field .selectize-dropdown .option.active {
+    background-color: rgba(20, 96, 170, 0.1); }
   .selectize-field .selectize-dropdown [data-selectable],
   .selectize-field .selectize-dropdown .optgroup-header {
-    padding: 15px; }
+    padding: 10px; }
 
 /* Popovers variants */
 /* Modal variants */
