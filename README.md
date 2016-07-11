@@ -15,13 +15,13 @@ Run the following command:
 ### What you get
 
 The CBP Common Framework UI Theme artifacts should be in the
-`node_modules/cf-theme/dist` directory.
+`node_modules/cbp-theme/dist` directory.
 
 Follow your normal build/development process as you have defined it. Here's what is available:
 
-* `cf-theme/fonts` - Font Awesome and Roboto fonts
-* `cf-theme/js/` - jquery, jquery.inputmask, bootstrap, and custom js from cf-ui-theme
-* `cf-theme/styles` - The theme. cf-ui-theme.css
+* `fonts` - Font Awesome and Roboto fonts
+* `js` - jquery, jquery.inputmask, bootstrap, and custom js from cbp-theme
+* `cbp-theme/styles` - The theme. cf-ui-theme.css
 
 ### Order of Javascript Dependencies
 ```
@@ -30,8 +30,8 @@ Follow your normal build/development process as you have defined it. Here's what
   <script src="./js/jquery.inputmask.bundle.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
 
-  <!-- js for cf-theme should be loaded after all thirdparty js files -->
-  <script src="./js/cf-theme.js"></script>
+  <!-- js for cbp-theme should be loaded after all thirdparty js files -->
+  <script src="./js/cbp-theme.js"></script>
 
 ```
 ### Order of Javascript Dependencies
@@ -39,8 +39,8 @@ Follow your normal build/development process as you have defined it. Here's what
 ```
 	<!-- third party css if any -->
 
-	<!-- cf-theme -->
-    <link media="screen" href="./css/cf-theme.min.css" rel="stylesheet" />
+	<!-- cbp-theme -->
+    <link media="screen" href="./css/cbp-theme.min.css" rel="stylesheet" />
 ```
 ----
 
