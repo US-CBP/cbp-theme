@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme",
   "description": "CBP Common Framework UI Theme",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "CBP Common Framework",
   "main": "./dist/js/npm",
   "contributors": [
@@ -67,8 +67,7 @@
     "webfont-dl": "^0.1.2",
     "wiredep": "^4.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "private": true,
   "scripts": {
     "build": "gulp build",
