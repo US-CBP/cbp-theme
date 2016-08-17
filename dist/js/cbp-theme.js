@@ -229,8 +229,8 @@ componentHandler = function () {
 
       var ev;
       if ('CustomEvent' in window && typeof window.CustomEvent === 'function') {
-        ev = new Event('mdl-componentupgraded', {
-          'bubbles': true, 'cancelable': false
+        ev = new CustomEvent('mdl-componentupgraded', {
+          bubbles: true, cancelable: false
         });
       } else {
         ev = document.createEvent('Events');
@@ -248,10 +248,10 @@ componentHandler = function () {
    */
   function upgradeElementsInternal(elements) {
     if (!Array.isArray(elements)) {
-      if (typeof elements.item === 'function') {
-        elements = Array.prototype.slice.call( /** @type {Array} */elements);
-      } else {
+      if (elements instanceof Element) {
         elements = [elements];
+      } else {
+        elements = Array.prototype.slice.call(elements);
       }
     }
     for (var i = 0, n = elements.length, element; i < n; i++) {
@@ -356,13 +356,14 @@ componentHandler = function () {
 
       var ev;
       if ('CustomEvent' in window && typeof window.CustomEvent === 'function') {
-        ev = new Event('mdl-componentdowngraded', {
-          'bubbles': true, 'cancelable': false
+        ev = new CustomEvent('mdl-componentdowngraded', {
+          bubbles: true, cancelable: false
         });
       } else {
         ev = document.createEvent('Events');
         ev.initEvent('mdl-componentdowngraded', true, true);
       }
+      component.element_.dispatchEvent(ev);
     }
   }
 
@@ -953,7 +954,7 @@ window.addEventListener('load', function () {
    */
   MaterialRadio.prototype.check = function () {
     this.btnElement_.checked = true;
-    this.updateClasses_();
+    this.onChange_(null);
   };
   MaterialRadio.prototype['check'] = MaterialRadio.prototype.check;
 
@@ -964,7 +965,7 @@ window.addEventListener('load', function () {
    */
   MaterialRadio.prototype.uncheck = function () {
     this.btnElement_.checked = false;
-    this.updateClasses_();
+    this.onChange_(null);
   };
   MaterialRadio.prototype['uncheck'] = MaterialRadio.prototype.uncheck;
 
