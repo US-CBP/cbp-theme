@@ -2892,7 +2892,7 @@
                 <div>
                   <table role="grid" class="cbp-table table-sortable table-striped mdl-js-data-table">
                     <thead>
-                      <tr>
+                      <tr role="row">
                         <th scope="col" role="columnheader" aria-sort="ascending" class="non-numeric sortable active">
                           Project name
                           <i class="fa fa-caret-down"></i>
@@ -2945,7 +2945,7 @@
                 <div>
                   <table role="grid" class="cbp-table table-sortable table-striped mdl-js-data-table">
                     <thead>
-                      <tr>
+                      <tr role="row">
                         <th scope="col" role="columnheader" aria-sort="other" class="sortable active non-numeric">
                           Event
                           <i class="fa fa-caret-down text-muted"></i> <sup>1</sup>
@@ -2999,7 +2999,7 @@
                 </div>
                 <h4>Example D <small>Table with action items</small></h4>
                 <div>
-                  <table class="cbp-table table-outline table-striped mdl-js-data-table">
+                  <table role="grid" class="cbp-table table-outline table-striped mdl-js-data-table">
                     <tbody>
                       <tr>
                         <td role="row" class="non-numeric">
@@ -3273,14 +3273,14 @@
                 <div>
                   <table data-pl-expandable-rows role="grid" class="cbp-table-selectable mdl-js-data-table">
                     <thead>
-                      <tr>
+                      <tr role="row">
                         <th scope="col" role="columnheader" class="col-md-4">
                           <label class="cbp-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="table-header-1">
                             <input type="checkbox" id="table-header-1" class="mdl-checkbox__input" />
                           </label>
                         </th>
-                        <th scope="col"  class="mdl-data-table__cell--non-numeric" role="columnheader" aria-sort="none">Project name</th>
-                        <th scope="col"  class="mdl-data-table__cell--non-numeric" role="columnheader" aria-sort="none">Description</th>
+                        <th scope="col" role="columnheader" class="mdl-data-table__cell--non-numeric" aria-sort="none">Project name</th>
+                        <th scope="col" role="columnheader" class="mdl-data-table__cell--non-numeric" aria-sort="none">Description</th>
                         <th scope="col" role="columnheader" aria-sort="none">Price</th>
                       </tr>
                     </thead>
