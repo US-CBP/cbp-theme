@@ -113,10 +113,10 @@
 
                 <li class="dropdown" role="presentation">
                   <a class="pull-left" data-toggle="tab" href="#pane1">View Link w/ View Options Dropdown</a>
-                  <a class="pull-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="pull-right" data-toggle="dropdown" aria-haspopup="true">
                     <span class="caret"></span>
                   </a>
-                  <ul class="dropdown-menu pull-right" role="menu">
+                  <ul class="dropdown-menu pull-right" role="menu" aria-hidden="true" aria-label="submenu">
                     <li role="presentation">
                       <a href="#" data-toggle="tab">View Option A</a>
                     </li>
@@ -150,7 +150,7 @@
                       <input type="text" id="main-search" class="mdl-textfield__input" />
                     </div>
                     <span class="input-group-btn">
-                      <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                      <button aria-label="Search" type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                     </span>
                   </div>
                 </div>
@@ -163,7 +163,7 @@
 
       <div class="container-fluid content">
         <div class="row">
-          <div class="cbp-sidebar sidebar after-double-header" role="sidebar">
+          <div class="cbp-sidebar sidebar after-double-header" >
             <div class="row">
               <div class="col-md-12 pull-left">
                 <form class="filters">
@@ -390,7 +390,7 @@
               <div class="panel-body">
                 <h3>Accordion Standard</h3>
                 <!-- Accordion -->
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel-group" id="accordion" role="tablist">
                   <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" data-toggle="collapse" aria-controls="collapseOne">
                       <h4 class="panel-title">
@@ -481,7 +481,7 @@
                 </div>
                 <!-- Accordion Light -->
                 <h3>Accordion Light</h3>
-                <div class="panel-group" id="2accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel-group" id="2accordion" role="tablist">
                   <div class="panel">
                     <div class="panel-heading" role="tab" id="2headingOne" data-parent="#2accordion" data-target="#2collapseOne" aria-expanded="false" data-toggle="collapse" aria-controls="2collapseOne">
                       <h4 class="panel-title">
@@ -2954,7 +2954,7 @@
                           Date
                           <i class="fa fa-caret-up text-muted non-numeric"></i> <sup>2</sup>
                         </th>
-                        <th role="col" class="non-numeric">Module</th>
+                        <th scope="col" role="columnheader" class="non-numeric">Module</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -3076,11 +3076,11 @@
                 <div>
                   <table class="cbp-table mdl-js-data-table">
                     <thead>
-                      <tr>
-                        <th role="col" class="non-numeric">Project name</th>
-                        <th role="col" class="non-numeric">Description</th>
-                        <th role="col">Price</th>
-                        <th role="col" class="table-config-column" title="Show and hide columns" data-toggle="tooltip">
+                      <tr role="row">
+                        <th scope="col" role="columnheader" class="non-numeric">Project name</th>
+                        <th scope="col" role="columnheader" class="non-numeric">Description</th>
+                        <th scope="col" role="columnheader">Price</th>
+                        <th scope="col" role="columnheader" class="table-config-column" title="Show and hide columns" data-toggle="tooltip">
                           <button aria-label="table_toggle_button_label" type="button" data-container="body" data-target="#example_table_modal" data-toggle="modal" >
                           <i class="fa fa-ellipsis-h" ></i>
                           </button>
@@ -3209,17 +3209,17 @@
                   <table class="cbp-table mdl-js-data-table table-sortable">
                     <thead>
                       <tr>
-                        <th role="col" style="width: 200px;" class="sortable active">
+                        <th scope="col" style="width: 200px;" class="sortable active">
                           Module
                           <i class="fa fa-caret-down text-muted"></i>
                           <sup>1</sup>
                         </th>
-                        <th role="col" class="sortable active">
+                        <th scope="col" class="sortable active">
                           Event
                           <i class="fa fa-caret-down text-muted"></i>
                           <sup>2</sup>
                         </th>
-                        <th role="col" class="sortable active">
+                        <th scope="col" class="sortable active">
                           Date
                           <i class="fa fa-caret-up text-muted"></i>
                           <sup>3</sup>
@@ -3317,7 +3317,7 @@
                           </dl>
                         </td>
                       </tr>
-                      <tr aria-expanded="true">
+                      <tr>
                         <td class="col-md-4">
                           <label class="cbp-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="row[12]">
                             <input type="checkbox" id="row[12]" class="mdl-checkbox__input" />
