@@ -18,7 +18,7 @@
       "email": "david.y.hodge@cbp.dhs.gov"
     }
   ],
-  "license": "MIT",
+  "license": "CC0-1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/US-CBP/cbp-theme"
@@ -68,7 +68,6 @@
     "wiredep": "^4.0.0"
   },
   "dependencies": {},
-  "private": true,
   "scripts": {
     "build": "gulp build",
     "dev": "gulp serve",
