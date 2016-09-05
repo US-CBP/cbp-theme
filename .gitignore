@@ -1,4 +1,3 @@
-
 /.idea/
 /components/
 /node_modules/
@@ -13,3 +12,5 @@ _site
 *.log
 .tmp
 .sass-cache
+.DS_Store
+
