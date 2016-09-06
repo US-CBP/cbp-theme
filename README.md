@@ -16,7 +16,7 @@ ___
 1. **Install [Node 6.0.0 or greater](https://nodejs.org)** - For running multiple versions of Node [nvm](https://github.com/creationix/nvm).
 2. **Install [Git](https://git-scm.com/downloads)**.
 3. Mac users can move on to step 4.  Windows users see Windows Setup section.
-4. npm install git+https://github.com/US-CBP/cbp-theme --OR-- npm i US-CBP/cbp-theme
+4. npm install cbp-theme
 
 **Windows Setup:**
 
