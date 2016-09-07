@@ -143,10 +143,10 @@ gulp.task('app_bundle_scripts', () => {
 
 gulp.task('bundleJqueryInputmask', () => {
   return gulp.src(inputmaskJS)
-    .pipe($.concat('jquery.inputmask.bundle.js'))
+    .pipe($.concat('inputmask.bundle.js'))
     .pipe(gulp.dest('dist/js'))        // minified into dist
     .pipe(gulp.dest('app/kitchensink/js'))
-    .pipe($.concat('jquery.inputmask.bundle.min.js'))
+    .pipe($.concat('inputmask.bundle.min.js'))
     .pipe($.uglify().on('error', $.util.log))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))        // minified into dist
