@@ -36,11 +36,11 @@ const dependencies_js = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/jquery/dist/jquery.js',
   'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-  'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+  'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+  'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
 ];
 
 const inputmaskJS = [
-  'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
   'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
   'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.*.extensions.js'
 ];
