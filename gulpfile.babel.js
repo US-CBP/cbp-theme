@@ -36,11 +36,11 @@ const dependencies_js = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/jquery/dist/jquery.js',
   'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-  'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-  'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
+  'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
 ];
 
 const inputmaskJS = [
+  'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
   'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
   'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.*.extensions.js'
 ];
@@ -143,10 +143,10 @@ gulp.task('app_bundle_scripts', () => {
 
 gulp.task('bundleJqueryInputmask', () => {
   return gulp.src(inputmaskJS)
-    .pipe($.concat('inputmask.bundle.js'))
+    .pipe($.concat('jquery.inputmask.bundle.js'))
     .pipe(gulp.dest('dist/js'))        // minified into dist
     .pipe(gulp.dest('app/kitchensink/js'))
-    .pipe($.concat('inputmask.bundle.min.js'))
+    .pipe($.concat('jquery.inputmask.bundle.min.js'))
     .pipe($.uglify().on('error', $.util.log))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))        // minified into dist

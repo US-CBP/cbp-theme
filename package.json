@@ -59,7 +59,6 @@
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.0.0",
     "gulp-util": "*",
-    "jquery": "3.1.0",
     "material-design-lite": "^1.1.1",
     "mdl-selectfield": "^1.0.2",
     "nouislider": "~8.5.1",
