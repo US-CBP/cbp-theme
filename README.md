@@ -18,8 +18,46 @@ ___
 1. **Install [Node 6.0.0 or greater](https://nodejs.org)** - For running multiple versions of Node [nvm](https://github.com/creationix/nvm).
 2. **Install [Git](https://git-scm.com/downloads)**.
 3. Mac users can move on to step 4.  Windows users see Windows Setup section.
-4. npm install cbp-theme
+4. npm install cbp-theme 
+5. OPTIONAL for Webjars: [Maven Repository](https://mvnrepository.com/artifact/org.webjars.npm/cbp-theme) and follow import instructions per build tool. 
 
+For example for Maven:
+```
+<!-- https://mvnrepository.com/artifact/org.webjars.npm/cbp-theme -->
+<dependency>
+    <groupId>org.webjars.npm</groupId>
+    <artifactId>cbp-theme</artifactId>
+    <version>0.3.2</version>
+</dependency>
+
+```
+
+For Gradle:
+
+```
+compile group: 'org.webjars.npm', name: 'cbp-theme', version: '0.3.2'
+
+```
+6. Include the artifacts like so:
+
+For JS:
+```
+  <!-- optional dependencies from cf-ui-theme repo -->
+  <script src="webjars/cbp-theme/0.3.2/dist/js/jquery.min.js"></script>
+  <script src="webjars/cbp-theme/0.3.2/dist/js/jquery.inputmask.bundle.min.js"></script>
+  <script src="webjars/cbp-theme/0.3.2/dist/js/bootstrap.min.js"></script>
+
+  <!-- js for cbp-theme should be loaded after all thirdparty js files -->
+  <script src="webjars/cbp-theme/0.3.2/dist/js/cbp-theme.js"></script>
+
+```
+For CSS 
+```
+	<!-- third party css if any -->
+
+	<!-- cbp-theme -->
+    <link media="screen" href="webjars/cbp-theme/0.3.2/dist/styles/cbp-theme.min.css" rel="stylesheet" />
+```
 **Windows Setup:**
 
 * **Install [Python 2.7](https://www.python.org/downloads/)**. Some node modules may rely on node-gyp, which requires Python on Windows.
