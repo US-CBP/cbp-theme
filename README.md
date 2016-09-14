@@ -38,8 +38,6 @@ For Gradle:
 compile group: 'org.webjars.npm', name: 'cbp-theme', version: '0.3.2'
 
 ```
-6. Include the artifacts like so:
-
 For JS:
 ```
   <!-- optional dependencies from cf-ui-theme repo -->
