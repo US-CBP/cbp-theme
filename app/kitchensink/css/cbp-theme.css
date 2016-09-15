@@ -71,8 +71,6 @@
  * -----Data table
  * -----Dialog
  * -----Snackbar
- * -----Tooltip
- * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -181,7 +179,6 @@
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
-/* CHIP */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -709,6 +706,7 @@ a {
     color: #00121e;
     text-decoration: underline; }
   a:focus {
+    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -1931,6 +1929,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2442,6 +2441,7 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .ui-datepicker button.ui-state-default:focus, .btn.focus, .ui-datepicker button.focus.ui-state-default, .btn:active:focus, .ui-datepicker button.ui-state-default:active:focus, .btn:active.focus, .ui-datepicker button.ui-state-default:active.focus, .btn.active:focus, .ui-datepicker button.active.ui-state-default:focus, .btn.active.focus, .ui-datepicker button.active.focus.ui-state-default {
+    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .ui-datepicker button.ui-state-default:hover, .btn:focus, .ui-datepicker button.ui-state-default:focus, .btn.focus, .ui-datepicker button.focus.ui-state-default {
@@ -5693,8 +5693,6 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
- * -----Tooltip
- * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -5803,7 +5801,6 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
-/* CHIP */
 .mdl-ripple {
   background: rgb(0,0,0);
   border-radius: 50%;
@@ -5882,8 +5879,6 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
- * -----Tooltip
- * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -5992,7 +5987,6 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
-/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -6188,8 +6182,6 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
- * -----Tooltip
- * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -6298,7 +6290,6 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
-/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -6481,8 +6472,6 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
- * -----Tooltip
- * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -6591,7 +6580,6 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
-/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -6634,8 +6622,6 @@ button.close {
   min-width: 32px;
   width: auto;
   min-height: 32px; }
-  .mdl-textfield--expandable .mdl-button--icon {
-    top: 16px; }
 
 .mdl-textfield__input {
   border: none;
@@ -6812,8 +6798,6 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
- * -----Tooltip
- * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -6922,7 +6906,6 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
-/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -11098,6 +11081,9 @@ input[disabled], select[disabled] {
 .navbar-form {
   margin: 3px 0 0 0; }
 
+.navbar-form .mdl-textfield {
+  display: block; }
+
 .form-group {
   margin-bottom: 8px; }
 
@@ -11105,11 +11091,6 @@ input[disabled], select[disabled] {
   border-bottom: 1px solid #eee;
   margin-top: 27px;
   margin-bottom: 9px; }
-
-/* IE11 hack */
-_:-ms-fullscreen, .input-group-btn {
-  position: relative;
-  top: -4px; }
 
 form:not(.form-horizontal) label.required::after {
   position: relative;
@@ -12611,6 +12592,6 @@ h6, .h6 {
 .margin-4 {
   margin: 36px; }
 
-@-moz-document url-prefix() {
-  .mdl-textfield {
-    top: 3px; } }
+/* IE11 hack */
+_:-ms-fullscreen, .navbar-form .input-group-btn {
+  top: -1px; }

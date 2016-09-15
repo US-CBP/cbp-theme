@@ -1,9 +1,4 @@
-//
-// Firefox hacks -- ugh!
-//
-@-moz-document url-prefix() { 
-	// See https://github.com/US-CBP/cbp-theme/issues/6
-  	.mdl-textfield {
-     	top: 3px;
-  	}
+/* IE11 hack */
+_:-ms-fullscreen, .navbar-form .input-group-btn {
+  top: -1px;
 }
