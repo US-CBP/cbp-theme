@@ -4,14 +4,13 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-import middleware from 'connect-gzip-static';
 
 var exec = require('child_process').exec;
 
 const $ = gulpLoadPlugins({
   DEBUG: false,
   camelize: true, // if true, transforms hyphenated plugins names to camel case
-  scope: [ 'devDependencies' ],
+  scope: ['devDependencies'],
   lazy: true
 });
 const reload = browserSync.reload;
@@ -50,38 +49,34 @@ const FONTS_FILES = [
 ];
 
 const options = {
-  testLint : {
+  testLint: {
     env: {
       mocha: true
     }
   },
-  resourceLint : {
+  resourceLint: {
     extends: 'eslint:recommended',
-    rules : {
-      "quotes": 0,
+    rules: {
+      'quotes': 0,
       'no-unused-expressions': 0,
       'space-infix-ops': 0,
-      'no-underscore-dangle' : 0
+      'no-underscore-dangle': 0
     },
     globals: {
       '$': true,
       'jQuery': true,
-      'define' : true
+      'define': true
     }
   },
-  sass : {
+  sass: {
     outputStyle: 'expanded', // compressed, expanded
     precision: 10,
     includePaths: ['.']
   },
-  autoprefixer : {
+  autoprefixer: {
     browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
-  },
-  gzip : {
-    append: true,
-    threshold: '1kb'
   }
-}
+};
 
 function lint(files, options) {
   return () => {
@@ -98,7 +93,7 @@ gulp.task('lint:test', lint('test/spec/**/*.js', options.testLint));
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/custom/scss/main.scss')
-    .pipe($.plumber({ errorHandler : $.util.log }))
+    .pipe($.plumber({errorHandler: $.util.log}))
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync().on('error', $.sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
@@ -106,15 +101,10 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(gulp.dest('dist/styles'))     // unminified into dist
     .pipe(gulp.dest('app/kitchensink/css'))
-    .pipe($.cssnano({ zindex : false }))
+    .pipe($.cssnano({zindex: false}))
     .pipe($.rename('cbp-theme.min.css'))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/styles'))     // minified into dist
-    .pipe(gulp.dest('app/kitchensink/css'))
-    .pipe($.size({title: 'styles: before gzip', gzip: false}))
-    .pipe($.gzip(options.gzip).on('error', $.util.log))
-    .pipe($.size({title: 'styles: after gzip', gzip: true}))
-    .pipe(gulp.dest('dist/styles'))     // minified & gzipped into dist
     .pipe(gulp.dest('app/kitchensink/css'))
     .pipe(reload({stream: true}));
 });
@@ -122,7 +112,7 @@ gulp.task('styles', () => {
 gulp.task('app_bundle_scripts', () => {
   return gulp.src(app_js)
     .pipe($.concat('cbp-theme.js'))
-    .pipe($.plumber({ errorHandler : $.util.log }))
+    .pipe($.plumber({errorHandler: $.util.log}))
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe(gulp.dest('.tmp/js'))
@@ -132,11 +122,6 @@ gulp.task('app_bundle_scripts', () => {
     .pipe($.uglify().on('error', $.util.log))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))       // minified into dist
-    .pipe(gulp.dest('app/kitchensink/js'))
-    .pipe($.size({title: 'app scripts: before gzip', gzip: false}))
-    .pipe($.gzip(options.gzip))
-    .pipe($.size({title: 'app scripts: after gzip', gzip: true}))
-    .pipe(gulp.dest('dist/js'))       // minified & gzipped into dist
     .pipe(gulp.dest('app/kitchensink/js'))
     .pipe(reload({stream: true}));
 });
@@ -150,33 +135,25 @@ gulp.task('bundleJqueryInputmask', () => {
     .pipe($.uglify().on('error', $.util.log))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))        // minified into dist
-    // .pipe(gulp.dest('app/kitchensink/js'))
-    .pipe($.size({title: 'app scripts: before gzip', gzip: false}))
-    .pipe($.gzip(options.gzip))
-    .pipe($.size({title: 'app scripts: after gzip', gzip: true}))
-    .pipe(gulp.dest('dist/js'))       // minified & gzipped into dist
     .pipe(gulp.dest('app/kitchensink/js'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('scripts', [ 'bundleJqueryInputmask' ], () => {
+gulp.task('scripts', ['bundleJqueryInputmask'], () => {
   return gulp.src(dependencies_js)
-    .pipe($.plumber({ errorHandler : $.util.log }))
+    .pipe($.plumber({errorHandler: $.util.log}))
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(gulp.dest('app/kitchensink/js'))
-    .pipe($.size({title: 'dep scripts: before gzip', gzip: false}))
-    .pipe($.gzip(options.gzip).on('error', $.util.log))
-    .pipe($.size({title: 'dep scripts: after gzip', gzip: true}))
     .pipe(gulp.dest('dist/js'))
     .pipe(gulp.dest('app/kitchensink/js'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('html', [ 'styles', 'bundleJqueryInputmask', 'app_bundle_scripts', 'scripts'], () => {
+gulp.task('html', ['styles', 'bundleJqueryInputmask', 'app_bundle_scripts', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
@@ -200,19 +177,14 @@ gulp.task('fonts', () => {
     return gulp.src(FONTS_FILES)
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'))
-    .pipe(gulp.dest('app/kitchensink/fonts'))
-    .pipe($.size({title: 'fonts: before gzip', gzip: false}))
-    .pipe($.gzip(options.gzip).on('error', $.util.log))
-    .pipe($.size({title: 'fonts: after gzip', gzip: true}))
-    .pipe(gulp.dest('app/kitchensink/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
-});
+    .pipe(gulp.dest('app/kitchensink/fonts'));
+  });
 
 gulp.task('generateFonts', function(cb) {
     exec('webfont-dl -d \"https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic&subset=latin,greek,greek-ext,latin-ext,cyrillic-ext,cyrillic\" -o app/styles/vendor/roboto.css --font-out=dist/fonts --css-rel=../fonts --woff2=link --woff1=link --svg=link --ttf=link --eot=link' , function(err, stdout, stderr) {
       console.log(stdout);
     });
-});
+  });
 
 gulp.task('extras', () => {
   return gulp.src([
@@ -227,7 +199,7 @@ gulp.task('clean', del.bind(null, [
   '.tmp', 'dist', 'app/styles/vendor/*.{css, woff}', 'app/kitchensink/css/*.{css, gz}', 'app/kitchensink/js/*.{js, gz}'
   ]));
 
-gulp.task('serve', [ 'lint', 'styles', 'bundleJqueryInputmask', 'app_bundle_scripts', 'scripts', 'fonts', 'images'], () => {
+gulp.task('serve', ['lint', 'styles', 'bundleJqueryInputmask', 'app_bundle_scripts', 'scripts', 'fonts', 'images'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -235,13 +207,9 @@ gulp.task('serve', [ 'lint', 'styles', 'bundleJqueryInputmask', 'app_bundle_scri
     server: {
       baseDir: ['.tmp', 'app/kitchensink'],
       index: 'index.html',
-      routes: { '/node_modules': 'node_modules' }
+      routes: {'/node_modules': 'node_modules'}
     }
-  }, function (err, bs) {
-    bs.addMiddleware("*", middleware('./app/kitchensink'), {
-        override: true
-    });
-});
+  });
 
   gulp.watch([
     'app/kitchensink/*.html',
@@ -263,10 +231,6 @@ gulp.task('serve:dist', () => {
       baseDir: ['.'],
       index: 'app/kitchensink/index.html'
     }
-  }, function (err, bs) {
-      bs.addMiddleware("*", middleware('./app/kitchensink'), {
-          override: true
-      });
   });
 });
 
@@ -305,9 +269,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras']);
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
