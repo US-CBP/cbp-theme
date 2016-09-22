@@ -3729,8 +3729,8 @@ tbody.collapse.in {
       color: #ccc; }
 
 .navbar-inverse, .cbp-header {
-  background-color: #005a93;
-  border-color: #00609d; }
+  background-color: #004774;
+  border-color: #00446f; }
   .navbar-inverse .navbar-brand, .cbp-header .navbar-brand {
     color: white; }
     .navbar-inverse .navbar-brand:hover, .cbp-header .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .cbp-header .navbar-brand:focus {
@@ -3745,7 +3745,7 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-inverse .navbar-nav > .active > a, .cbp-header .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .cbp-header .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .cbp-header .navbar-nav > .active > a:focus {
     color: white;
-    background-color: #003b60; }
+    background-color: #002841; }
   .navbar-inverse .navbar-nav > .disabled > a, .cbp-header .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .cbp-header .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .cbp-header .navbar-nav > .disabled > a:focus {
     color: #444;
     background-color: transparent; }
@@ -3757,15 +3757,15 @@ tbody.collapse.in {
       background-color: #fff; }
   .navbar-inverse .navbar-collapse, .cbp-header .navbar-collapse,
   .navbar-inverse .navbar-form, .cbp-header .navbar-form {
-    border-color: #00446f; }
+    border-color: #003151; }
   .navbar-inverse .navbar-nav > .open > a, .cbp-header .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .cbp-header .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .cbp-header .navbar-nav > .open > a:focus {
-    background-color: #003b60;
+    background-color: #002841;
     color: white; }
   @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .cbp-header .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse .navbar-nav .open .ui-datepicker > .dropdown-header, .cbp-header .navbar-nav .open .ui-datepicker > .dropdown-header {
-      border-color: #00609d; }
+      border-color: #00446f; }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .cbp-header .navbar-nav .open .dropdown-menu .divider, .navbar-inverse .navbar-nav .open .ui-datepicker .divider, .cbp-header .navbar-nav .open .ui-datepicker .divider {
-      background-color: #00609d; }
+      background-color: #00446f; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .cbp-header .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .navbar-nav .open .ui-datepicker > li > a, .cbp-header .navbar-nav .open .ui-datepicker > li > a {
       color: white; }
       .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .cbp-header .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .ui-datepicker > li > a:hover, .cbp-header .navbar-nav .open .ui-datepicker > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .cbp-header .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .ui-datepicker > li > a:focus, .cbp-header .navbar-nav .open .ui-datepicker > li > a:focus {
@@ -3773,7 +3773,7 @@ tbody.collapse.in {
         background-color: transparent; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .cbp-header .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .ui-datepicker > .active > a, .cbp-header .navbar-nav .open .ui-datepicker > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .cbp-header .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .ui-datepicker > .active > a:hover, .cbp-header .navbar-nav .open .ui-datepicker > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .cbp-header .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .navbar-nav .open .ui-datepicker > .active > a:focus, .cbp-header .navbar-nav .open .ui-datepicker > .active > a:focus {
       color: white;
-      background-color: #003b60; }
+      background-color: #002841; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .cbp-header .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .ui-datepicker > .disabled > a, .cbp-header .navbar-nav .open .ui-datepicker > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .cbp-header .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .ui-datepicker > .disabled > a:hover, .cbp-header .navbar-nav .open .ui-datepicker > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .cbp-header .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .navbar-nav .open .ui-datepicker > .disabled > a:focus, .cbp-header .navbar-nav .open .ui-datepicker > .disabled > a:focus {
       color: #444;
       background-color: transparent; } }
@@ -11539,7 +11539,7 @@ label.mdl-textfield__label.static-label {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
     .navbar-inverse .badge, .cbp-header .badge {
       background-color: #fff;
-      color: #005a93; }
+      color: #004774; }
   .navbar .badge, .app-header .badge,
   .app-header-bottom .badge, .cbp-header .badge {
     text-shadow: none; }
