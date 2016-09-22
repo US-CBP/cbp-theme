@@ -10,7 +10,7 @@
      *
      * NOTE: babel compiles ES6 string interpolations but backtick is needed!
 	 */
-	$('[data-charlimit]').each((idx, val) => {
+	$('[data-charlimit]').each(function (idx, val) {
 		let attrOptions = $(val).attr('data-charlimit');
         if (attrOptions && attrOptions !== ""){
             attrOptions = attrOptions.replace(new RegExp("'", "g"), '"');

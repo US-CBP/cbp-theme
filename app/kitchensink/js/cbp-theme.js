@@ -1,3 +1,7 @@
+'use strict';
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 /**
  * @license
  * Copyright 2015 Google Inc. All Rights Reserved.
@@ -36,7 +40,7 @@ var componentHandler = {
    * @param {string=} optCssClass the name of the CSS class elements of this
    * type will have.
    */
-  upgradeDom: function(optJsClass, optCssClass) {},
+  upgradeDom: function upgradeDom(optJsClass, optCssClass) {},
   /**
    * Upgrades a specific element rather than all in the DOM.
    *
@@ -44,19 +48,19 @@ var componentHandler = {
    * @param {string=} optJsClass Optional name of the class we want to upgrade
    * the element to.
    */
-  upgradeElement: function(element, optJsClass) {},
+  upgradeElement: function upgradeElement(element, optJsClass) {},
   /**
    * Upgrades a specific list of elements rather than all in the DOM.
    *
    * @param {!Element|!Array<!Element>|!NodeList|!HTMLCollection} elements
    * The elements we wish to upgrade.
    */
-  upgradeElements: function(elements) {},
+  upgradeElements: function upgradeElements(elements) {},
   /**
    * Upgrades all registered components found in the current DOM. This is
    * automatically called on window load.
    */
-  upgradeAllRegistered: function() {},
+  upgradeAllRegistered: function upgradeAllRegistered() {},
   /**
    * Allows user to be alerted to any upgrades that are performed for a given
    * component type
@@ -67,25 +71,26 @@ var componentHandler = {
    * upgrade. This function should expect 1 parameter - the HTMLElement which
    * got upgraded.
    */
-  registerUpgradedCallback: function(jsClass, callback) {},
+  registerUpgradedCallback: function registerUpgradedCallback(jsClass, callback) {},
   /**
    * Registers a class for future use and attempts to upgrade existing DOM.
    *
    * @param {componentHandler.ComponentConfigPublic} config the registration configuration
    */
-  register: function(config) {},
+  register: function register(config) {},
   /**
    * Downgrade either a given node, an array of nodes, or a NodeList.
    *
    * @param {!Node|!Array<!Node>|!NodeList} nodes
    */
-  downgradeElements: function(nodes) {}
+  downgradeElements: function downgradeElements(nodes) {}
 };
 
-componentHandler = (function() {
+componentHandler = function () {
   'use strict';
 
   /** @type {!Array<componentHandler.ComponentConfig>} */
+
   var registeredComponents_ = [];
 
   /** @type {!Array<componentHandler.Component>} */
@@ -151,14 +156,12 @@ componentHandler = (function() {
    * type will have.
    */
   function upgradeDomInternal(optJsClass, optCssClass) {
-    if (typeof optJsClass === 'undefined' &&
-        typeof optCssClass === 'undefined') {
+    if (typeof optJsClass === 'undefined' && typeof optCssClass === 'undefined') {
       for (var i = 0; i < registeredComponents_.length; i++) {
-        upgradeDomInternal(registeredComponents_[i].className,
-            registeredComponents_[i].cssClass);
+        upgradeDomInternal(registeredComponents_[i].className, registeredComponents_[i].cssClass);
       }
     } else {
-      var jsClass = /** @type {string} */ (optJsClass);
+      var jsClass = /** @type {string} */optJsClass;
       if (typeof optCssClass === 'undefined') {
         var registeredClass = findRegisteredClass_(jsClass);
         if (registeredClass) {
@@ -182,7 +185,7 @@ componentHandler = (function() {
    */
   function upgradeElementInternal(element, optJsClass) {
     // Verify argument type.
-    if (!(typeof element === 'object' && element instanceof Element)) {
+    if (!((typeof element === 'undefined' ? 'undefined' : _typeof(element)) === 'object' && element instanceof Element)) {
       throw new Error('Invalid argument provided to upgrade MDL element.');
     }
     var upgradedList = getUpgradedListOfElement_(element);
@@ -191,11 +194,9 @@ componentHandler = (function() {
     // ones matching the element's CSS classList.
     if (!optJsClass) {
       var classList = element.classList;
-      registeredComponents_.forEach(function(component) {
+      registeredComponents_.forEach(function (component) {
         // Match CSS & Not to be upgraded & Not upgraded.
-        if (classList.contains(component.cssClass) &&
-            classesToUpgrade.indexOf(component) === -1 &&
-            !isElementUpgraded_(element, component.className)) {
+        if (classList.contains(component.cssClass) && classesToUpgrade.indexOf(component) === -1 && !isElementUpgraded_(element, component.className)) {
           classesToUpgrade.push(component);
         }
       });
@@ -223,8 +224,7 @@ componentHandler = (function() {
           element[registeredClass.className] = instance;
         }
       } else {
-        throw new Error(
-          'Unable to find a registered component for the given class.');
+        throw new Error('Unable to find a registered component for the given class.');
       }
 
       var ev;
@@ -275,23 +275,22 @@ componentHandler = (function() {
     // this method, we need to allow for both the dot and array syntax for
     // property access. You'll therefore see the `foo.bar || foo['bar']`
     // pattern repeated across this method.
-    var widgetMissing = (typeof config.widget === 'undefined' &&
-        typeof config['widget'] === 'undefined');
+    var widgetMissing = typeof config.widget === 'undefined' && typeof config['widget'] === 'undefined';
     var widget = true;
 
     if (!widgetMissing) {
       widget = config.widget || config['widget'];
     }
 
-    var newConfig = /** @type {componentHandler.ComponentConfig} */ ({
+    var newConfig = /** @type {componentHandler.ComponentConfig} */{
       classConstructor: config.constructor || config['constructor'],
       className: config.classAsString || config['classAsString'],
       cssClass: config.cssClass || config['cssClass'],
       widget: widget,
       callbacks: []
-    });
+    };
 
-    registeredComponents_.forEach(function(item) {
+    registeredComponents_.forEach(function (item) {
       if (item.cssClass === newConfig.cssClass) {
         throw new Error('The provided cssClass has already been registered: ' + item.cssClass);
       }
@@ -300,11 +299,8 @@ componentHandler = (function() {
       }
     });
 
-    if (config.constructor.prototype
-        .hasOwnProperty(componentConfigProperty_)) {
-      throw new Error(
-          'MDL component classes must not have ' + componentConfigProperty_ +
-          ' defined as a property.');
+    if (config.constructor.prototype.hasOwnProperty(componentConfigProperty_)) {
+      throw new Error('MDL component classes must not have ' + componentConfigProperty_ + ' defined as a property.');
     }
 
     var found = findRegisteredClass_(config.classAsString, newConfig);
@@ -381,8 +377,8 @@ componentHandler = (function() {
      * Auxiliary function to downgrade a single node.
      * @param  {!Node} node the node to be downgraded
      */
-    var downgradeNode = function(node) {
-      createdComponents_.filter(function(item) {
+    var downgradeNode = function downgradeNode(node) {
+      createdComponents_.filter(function (item) {
         return item.element_ === node;
       }).forEach(deconstructComponentInternal);
     };
@@ -408,7 +404,7 @@ componentHandler = (function() {
     register: registerInternal,
     downgradeElements: downgradeNodesInternal
   };
-})();
+}();
 
 /**
  * Describes the type of a registered component type managed by
@@ -421,7 +417,7 @@ componentHandler = (function() {
  *   widget: (string|boolean|undefined)
  * }}
  */
-componentHandler.ComponentConfigPublic;  // jshint ignore:line
+componentHandler.ComponentConfigPublic; // jshint ignore:line
 
 /**
  * Describes the type of a registered component type managed by
@@ -435,7 +431,7 @@ componentHandler.ComponentConfigPublic;  // jshint ignore:line
  *   callbacks: !Array<function(!HTMLElement)>
  * }}
  */
-componentHandler.ComponentConfig;  // jshint ignore:line
+componentHandler.ComponentConfig; // jshint ignore:line
 
 /**
  * Created component (i.e., upgraded element) type as managed by
@@ -449,23 +445,21 @@ componentHandler.ComponentConfig;  // jshint ignore:line
  *   widget: string
  * }}
  */
-componentHandler.Component;  // jshint ignore:line
+componentHandler.Component; // jshint ignore:line
 
 // Export all symbols, for the benefit of Closure compiler.
 // No effect on uncompiled code.
 componentHandler['upgradeDom'] = componentHandler.upgradeDom;
 componentHandler['upgradeElement'] = componentHandler.upgradeElement;
 componentHandler['upgradeElements'] = componentHandler.upgradeElements;
-componentHandler['upgradeAllRegistered'] =
-    componentHandler.upgradeAllRegistered;
-componentHandler['registerUpgradedCallback'] =
-    componentHandler.registerUpgradedCallback;
+componentHandler['upgradeAllRegistered'] = componentHandler.upgradeAllRegistered;
+componentHandler['registerUpgradedCallback'] = componentHandler.registerUpgradedCallback;
 componentHandler['register'] = componentHandler.register;
 componentHandler['downgradeElements'] = componentHandler.downgradeElements;
 window.componentHandler = componentHandler;
 window['componentHandler'] = componentHandler;
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   'use strict';
 
   /**
@@ -473,20 +467,19 @@ window.addEventListener('load', function() {
    * tested, adds a mdl-js class to the <html> element. It then upgrades all MDL
    * components requiring JavaScript.
    */
-  if ('classList' in document.createElement('div') &&
-      'querySelector' in document &&
-      'addEventListener' in window && Array.prototype.forEach) {
+
+  if ('classList' in document.createElement('div') && 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach) {
     document.documentElement.classList.add('mdl-js');
     componentHandler.upgradeAllRegistered();
   } else {
     /**
      * Dummy function to avoid JS errors.
      */
-    componentHandler.upgradeElement = function() {};
+    componentHandler.upgradeElement = function () {};
     /**
      * Dummy function to avoid JS errors.
      */
-    componentHandler.register = function() {};
+    componentHandler.register = function () {};
   }
 });
 
@@ -507,7 +500,7 @@ window.addEventListener('load', function() {
  * limitations under the License.
  */
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -518,6 +511,7 @@ window.addEventListener('load', function() {
    * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    */
+
   var MaterialCheckbox = function MaterialCheckbox(element) {
     this.element_ = element;
 
@@ -566,7 +560,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialCheckbox.prototype.onChange_ = function(event) {
+  MaterialCheckbox.prototype.onChange_ = function (event) {
     this.updateClasses_();
   };
 
@@ -576,7 +570,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialCheckbox.prototype.onFocus_ = function(event) {
+  MaterialCheckbox.prototype.onFocus_ = function (event) {
     this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -586,7 +580,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialCheckbox.prototype.onBlur_ = function(event) {
+  MaterialCheckbox.prototype.onBlur_ = function (event) {
     this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -596,7 +590,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialCheckbox.prototype.onMouseUp_ = function(event) {
+  MaterialCheckbox.prototype.onMouseUp_ = function (event) {
     this.blur_();
   };
 
@@ -605,7 +599,7 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialCheckbox.prototype.updateClasses_ = function() {
+  MaterialCheckbox.prototype.updateClasses_ = function () {
     this.checkDisabled();
     this.checkToggleState();
   };
@@ -615,12 +609,12 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialCheckbox.prototype.blur_ = function() {
+  MaterialCheckbox.prototype.blur_ = function () {
     // TODO: figure out why there's a focus event being fired after our blur,
     // so that we can avoid this hack.
-    window.setTimeout(function() {
+    window.setTimeout(function () {
       this.inputElement_.blur();
-    }.bind(this), /** @type {number} */ (this.Constant_.TINY_TIMEOUT));
+    }.bind(this), /** @type {number} */this.Constant_.TINY_TIMEOUT);
   };
 
   // Public methods.
@@ -630,37 +624,35 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialCheckbox.prototype.checkToggleState = function() {
+  MaterialCheckbox.prototype.checkToggleState = function () {
     if (this.inputElement_.checked) {
       this.element_.classList.add(this.CssClasses_.IS_CHECKED);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_CHECKED);
     }
   };
-  MaterialCheckbox.prototype['checkToggleState'] =
-      MaterialCheckbox.prototype.checkToggleState;
+  MaterialCheckbox.prototype['checkToggleState'] = MaterialCheckbox.prototype.checkToggleState;
 
   /**
    * Check the inputs disabled state and update display.
    *
    * @public
    */
-  MaterialCheckbox.prototype.checkDisabled = function() {
+  MaterialCheckbox.prototype.checkDisabled = function () {
     if (this.inputElement_.disabled) {
       this.element_.classList.add(this.CssClasses_.IS_DISABLED);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_DISABLED);
     }
   };
-  MaterialCheckbox.prototype['checkDisabled'] =
-      MaterialCheckbox.prototype.checkDisabled;
+  MaterialCheckbox.prototype['checkDisabled'] = MaterialCheckbox.prototype.checkDisabled;
 
   /**
    * Disable checkbox.
    *
    * @public
    */
-  MaterialCheckbox.prototype.disable = function() {
+  MaterialCheckbox.prototype.disable = function () {
     this.inputElement_.disabled = true;
     this.updateClasses_();
   };
@@ -671,7 +663,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialCheckbox.prototype.enable = function() {
+  MaterialCheckbox.prototype.enable = function () {
     this.inputElement_.disabled = false;
     this.updateClasses_();
   };
@@ -682,7 +674,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialCheckbox.prototype.check = function() {
+  MaterialCheckbox.prototype.check = function () {
     this.inputElement_.checked = true;
     this.updateClasses_();
   };
@@ -693,7 +685,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialCheckbox.prototype.uncheck = function() {
+  MaterialCheckbox.prototype.uncheck = function () {
     this.inputElement_.checked = false;
     this.updateClasses_();
   };
@@ -702,10 +694,9 @@ window.addEventListener('load', function() {
   /**
    * Initialize element.
    */
-  MaterialCheckbox.prototype.init = function() {
+  MaterialCheckbox.prototype.init = function () {
     if (this.element_) {
-      this.inputElement_ = this.element_.querySelector('.' +
-          this.CssClasses_.INPUT);
+      this.inputElement_ = this.element_.querySelector('.' + this.CssClasses_.INPUT);
 
       var boxOutline = document.createElement('span');
       boxOutline.classList.add(this.CssClasses_.BOX_OUTLINE);
@@ -777,7 +768,7 @@ window.addEventListener('load', function() {
  * limitations under the License.
  */
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -788,6 +779,7 @@ window.addEventListener('load', function() {
    * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    */
+
   var MaterialRadio = function MaterialRadio(element) {
     this.element_ = element;
 
@@ -836,7 +828,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialRadio.prototype.onChange_ = function(event) {
+  MaterialRadio.prototype.onChange_ = function (event) {
     // Since other radio buttons don't get change events, we need to look for
     // them to update their classes.
     var radios = document.getElementsByClassName(this.CssClasses_.JS_RADIO);
@@ -855,7 +847,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialRadio.prototype.onFocus_ = function(event) {
+  MaterialRadio.prototype.onFocus_ = function (event) {
     this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -865,7 +857,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialRadio.prototype.onBlur_ = function(event) {
+  MaterialRadio.prototype.onBlur_ = function (event) {
     this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -875,7 +867,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialRadio.prototype.onMouseup_ = function(event) {
+  MaterialRadio.prototype.onMouseup_ = function (event) {
     this.blur_();
   };
 
@@ -884,7 +876,7 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialRadio.prototype.updateClasses_ = function() {
+  MaterialRadio.prototype.updateClasses_ = function () {
     this.checkDisabled();
     this.checkToggleState();
   };
@@ -894,13 +886,13 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialRadio.prototype.blur_ = function() {
+  MaterialRadio.prototype.blur_ = function () {
 
     // TODO: figure out why there's a focus event being fired after our blur,
     // so that we can avoid this hack.
-    window.setTimeout(function() {
+    window.setTimeout(function () {
       this.btnElement_.blur();
-    }.bind(this), /** @type {number} */ (this.Constant_.TINY_TIMEOUT));
+    }.bind(this), /** @type {number} */this.Constant_.TINY_TIMEOUT);
   };
 
   // Public methods.
@@ -910,37 +902,35 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialRadio.prototype.checkDisabled = function() {
+  MaterialRadio.prototype.checkDisabled = function () {
     if (this.btnElement_.disabled) {
       this.element_.classList.add(this.CssClasses_.IS_DISABLED);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_DISABLED);
     }
   };
-  MaterialRadio.prototype['checkDisabled'] =
-      MaterialRadio.prototype.checkDisabled;
+  MaterialRadio.prototype['checkDisabled'] = MaterialRadio.prototype.checkDisabled;
 
   /**
    * Check the components toggled state.
    *
    * @public
    */
-  MaterialRadio.prototype.checkToggleState = function() {
+  MaterialRadio.prototype.checkToggleState = function () {
     if (this.btnElement_.checked) {
       this.element_.classList.add(this.CssClasses_.IS_CHECKED);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_CHECKED);
     }
   };
-  MaterialRadio.prototype['checkToggleState'] =
-      MaterialRadio.prototype.checkToggleState;
+  MaterialRadio.prototype['checkToggleState'] = MaterialRadio.prototype.checkToggleState;
 
   /**
    * Disable radio.
    *
    * @public
    */
-  MaterialRadio.prototype.disable = function() {
+  MaterialRadio.prototype.disable = function () {
     this.btnElement_.disabled = true;
     this.updateClasses_();
   };
@@ -951,7 +941,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialRadio.prototype.enable = function() {
+  MaterialRadio.prototype.enable = function () {
     this.btnElement_.disabled = false;
     this.updateClasses_();
   };
@@ -962,7 +952,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialRadio.prototype.check = function() {
+  MaterialRadio.prototype.check = function () {
     this.btnElement_.checked = true;
     this.onChange_(null);
   };
@@ -973,7 +963,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialRadio.prototype.uncheck = function() {
+  MaterialRadio.prototype.uncheck = function () {
     this.btnElement_.checked = false;
     this.onChange_(null);
   };
@@ -982,10 +972,9 @@ window.addEventListener('load', function() {
   /**
    * Initialize element.
    */
-  MaterialRadio.prototype.init = function() {
+  MaterialRadio.prototype.init = function () {
     if (this.element_) {
-      this.btnElement_ = this.element_.querySelector('.' +
-          this.CssClasses_.RADIO_BTN);
+      this.btnElement_ = this.element_.querySelector('.' + this.CssClasses_.RADIO_BTN);
 
       this.boundChangeHandler_ = this.onChange_.bind(this);
       this.boundFocusHandler_ = this.onChange_.bind(this);
@@ -1002,13 +991,10 @@ window.addEventListener('load', function() {
       this.element_.appendChild(innerCircle);
 
       var rippleContainer;
-      if (this.element_.classList.contains(
-          this.CssClasses_.RIPPLE_EFFECT)) {
-        this.element_.classList.add(
-            this.CssClasses_.RIPPLE_IGNORE_EVENTS);
+      if (this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT)) {
+        this.element_.classList.add(this.CssClasses_.RIPPLE_IGNORE_EVENTS);
         rippleContainer = document.createElement('span');
-        rippleContainer.classList.add(
-            this.CssClasses_.RIPPLE_CONTAINER);
+        rippleContainer.classList.add(this.CssClasses_.RIPPLE_CONTAINER);
         rippleContainer.classList.add(this.CssClasses_.RIPPLE_EFFECT);
         rippleContainer.classList.add(this.CssClasses_.RIPPLE_CENTER);
         rippleContainer.addEventListener('mouseup', this.boundMouseUpHandler_);
@@ -1057,7 +1043,7 @@ window.addEventListener('load', function() {
  * limitations under the License.
  */
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -1068,6 +1054,7 @@ window.addEventListener('load', function() {
    * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    */
+
   var MaterialTextfield = function MaterialTextfield(element) {
     this.element_ = element;
     this.maxRows = this.Constant_.NO_MAX_ROWS;
@@ -1112,7 +1099,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialTextfield.prototype.onKeyDown_ = function(event) {
+  MaterialTextfield.prototype.onKeyDown_ = function (event) {
     var currentRowCount = event.target.value.split('\n').length;
     if (event.keyCode === 13) {
       if (currentRowCount >= this.maxRows) {
@@ -1127,7 +1114,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialTextfield.prototype.onFocus_ = function(event) {
+  MaterialTextfield.prototype.onFocus_ = function (event) {
     this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -1137,7 +1124,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialTextfield.prototype.onBlur_ = function(event) {
+  MaterialTextfield.prototype.onBlur_ = function (event) {
     this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -1147,7 +1134,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialTextfield.prototype.onReset_ = function(event) {
+  MaterialTextfield.prototype.onReset_ = function (event) {
     this.updateClasses_();
   };
 
@@ -1156,7 +1143,7 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialTextfield.prototype.updateClasses_ = function() {
+  MaterialTextfield.prototype.updateClasses_ = function () {
     this.checkDisabled();
     this.checkValidity();
     this.checkDirty();
@@ -1170,37 +1157,35 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialTextfield.prototype.checkDisabled = function() {
+  MaterialTextfield.prototype.checkDisabled = function () {
     if (this.input_.disabled) {
       this.element_.classList.add(this.CssClasses_.IS_DISABLED);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_DISABLED);
     }
   };
-  MaterialTextfield.prototype['checkDisabled'] =
-      MaterialTextfield.prototype.checkDisabled;
+  MaterialTextfield.prototype['checkDisabled'] = MaterialTextfield.prototype.checkDisabled;
 
   /**
   * Check the focus state and update field accordingly.
   *
   * @public
   */
-  MaterialTextfield.prototype.checkFocus = function() {
+  MaterialTextfield.prototype.checkFocus = function () {
     if (Boolean(this.element_.querySelector(':focus'))) {
       this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
     }
   };
-  MaterialTextfield.prototype['checkFocus'] =
-    MaterialTextfield.prototype.checkFocus;
+  MaterialTextfield.prototype['checkFocus'] = MaterialTextfield.prototype.checkFocus;
 
   /**
    * Check the validity state and update field accordingly.
    *
    * @public
    */
-  MaterialTextfield.prototype.checkValidity = function() {
+  MaterialTextfield.prototype.checkValidity = function () {
     if (this.input_.validity) {
       if (this.input_.validity.valid) {
         this.element_.classList.remove(this.CssClasses_.IS_INVALID);
@@ -1209,30 +1194,28 @@ window.addEventListener('load', function() {
       }
     }
   };
-  MaterialTextfield.prototype['checkValidity'] =
-      MaterialTextfield.prototype.checkValidity;
+  MaterialTextfield.prototype['checkValidity'] = MaterialTextfield.prototype.checkValidity;
 
   /**
    * Check the dirty state and update field accordingly.
    *
    * @public
    */
-  MaterialTextfield.prototype.checkDirty = function() {
+  MaterialTextfield.prototype.checkDirty = function () {
     if (this.input_.value && this.input_.value.length > 0) {
       this.element_.classList.add(this.CssClasses_.IS_DIRTY);
     } else {
       this.element_.classList.remove(this.CssClasses_.IS_DIRTY);
     }
   };
-  MaterialTextfield.prototype['checkDirty'] =
-      MaterialTextfield.prototype.checkDirty;
+  MaterialTextfield.prototype['checkDirty'] = MaterialTextfield.prototype.checkDirty;
 
   /**
    * Disable text field.
    *
    * @public
    */
-  MaterialTextfield.prototype.disable = function() {
+  MaterialTextfield.prototype.disable = function () {
     this.input_.disabled = true;
     this.updateClasses_();
   };
@@ -1243,7 +1226,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialTextfield.prototype.enable = function() {
+  MaterialTextfield.prototype.enable = function () {
     this.input_.disabled = false;
     this.updateClasses_();
   };
@@ -1255,7 +1238,7 @@ window.addEventListener('load', function() {
    * @param {string} value The value to which to set the control (optional).
    * @public
    */
-  MaterialTextfield.prototype.change = function(value) {
+  MaterialTextfield.prototype.change = function (value) {
 
     this.input_.value = value || '';
     this.updateClasses_();
@@ -1265,7 +1248,7 @@ window.addEventListener('load', function() {
   /**
    * Initialize element.
    */
-  MaterialTextfield.prototype.init = function() {
+  MaterialTextfield.prototype.init = function () {
 
     if (this.element_) {
       this.label_ = this.element_.querySelector('.' + this.CssClasses_.LABEL);
@@ -1273,9 +1256,9 @@ window.addEventListener('load', function() {
 
       if (this.input_) {
         if (this.input_.hasAttribute(
-              /** @type {string} */ (this.Constant_.MAX_ROWS_ATTRIBUTE))) {
+        /** @type {string} */this.Constant_.MAX_ROWS_ATTRIBUTE)) {
           this.maxRows = parseInt(this.input_.getAttribute(
-              /** @type {string} */ (this.Constant_.MAX_ROWS_ATTRIBUTE)), 10);
+          /** @type {string} */this.Constant_.MAX_ROWS_ATTRIBUTE), 10);
           if (isNaN(this.maxRows)) {
             this.maxRows = this.Constant_.NO_MAX_ROWS;
           }
@@ -1300,8 +1283,7 @@ window.addEventListener('load', function() {
           this.boundKeyDownHandler = this.onKeyDown_.bind(this);
           this.input_.addEventListener('keydown', this.boundKeyDownHandler);
         }
-        var invalid = this.element_.classList
-          .contains(this.CssClasses_.IS_INVALID);
+        var invalid = this.element_.classList.contains(this.CssClasses_.IS_INVALID);
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
         if (invalid) {
@@ -1342,7 +1324,7 @@ window.addEventListener('load', function() {
  * limitations under the License.
  */
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -1353,6 +1335,7 @@ window.addEventListener('load', function() {
    * @constructor
    * @param {Element} element The element that will be upgraded.
    */
+
   var MaterialDataTable = function MaterialDataTable(element) {
     this.element_ = element;
 
@@ -1397,9 +1380,9 @@ window.addEventListener('load', function() {
    * @param {(Array<Object>|NodeList)=} opt_rows Rows to toggle when checkbox changes.
    * @private
    */
-  MaterialDataTable.prototype.selectRow_ = function(checkbox, row, opt_rows) {
+  MaterialDataTable.prototype.selectRow_ = function (checkbox, row, opt_rows) {
     if (row) {
-      return function() {
+      return function () {
         if (checkbox.checked) {
           row.classList.add(this.CssClasses_.IS_SELECTED);
         } else {
@@ -1409,7 +1392,7 @@ window.addEventListener('load', function() {
     }
 
     if (opt_rows) {
-      return function() {
+      return function () {
         var i;
         var el;
         if (checkbox.checked) {
@@ -1437,14 +1420,9 @@ window.addEventListener('load', function() {
    * @param {(Array<Object>|NodeList)=} opt_rows Rows to toggle when checkbox changes.
    * @private
    */
-  MaterialDataTable.prototype.createCheckbox_ = function(row, opt_rows) {
+  MaterialDataTable.prototype.createCheckbox_ = function (row, opt_rows) {
     var label = document.createElement('label');
-    var labelClasses = [
-      'mdl-checkbox',
-      'mdl-js-checkbox',
-      'mdl-js-ripple-effect',
-      this.CssClasses_.SELECT_ELEMENT
-    ];
+    var labelClasses = ['mdl-checkbox', 'mdl-js-checkbox', 'mdl-js-ripple-effect', this.CssClasses_.SELECT_ELEMENT];
     label.className = labelClasses.join(' ');
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -1465,7 +1443,7 @@ window.addEventListener('load', function() {
   /**
    * Initialize element.
    */
-  MaterialDataTable.prototype.init = function() {
+  MaterialDataTable.prototype.init = function () {
     if (this.element_) {
       var firstHeader = this.element_.querySelector('th');
       var bodyRows = Array.prototype.slice.call(this.element_.querySelectorAll('tbody tr'));
@@ -1520,7 +1498,7 @@ window.addEventListener('load', function() {
  * limitations under the License.
  */
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -1531,6 +1509,7 @@ window.addEventListener('load', function() {
    * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    */
+
   var MaterialRipple = function MaterialRipple(element) {
     this.element_ = element;
 
@@ -1575,13 +1554,12 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialRipple.prototype.downHandler_ = function(event) {
+  MaterialRipple.prototype.downHandler_ = function (event) {
     if (!this.rippleElement_.style.width && !this.rippleElement_.style.height) {
       var rect = this.element_.getBoundingClientRect();
       this.boundHeight = rect.height;
       this.boundWidth = rect.width;
-      this.rippleSize_ = Math.sqrt(rect.width * rect.width +
-          rect.height * rect.height) * 2 + 2;
+      this.rippleSize_ = Math.sqrt(rect.width * rect.width + rect.height * rect.height) * 2 + 2;
       this.rippleElement_.style.width = this.rippleSize_ + 'px';
       this.rippleElement_.style.height = this.rippleSize_ + 'px';
     }
@@ -1624,13 +1602,13 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialRipple.prototype.upHandler_ = function(event) {
+  MaterialRipple.prototype.upHandler_ = function (event) {
     // Don't fire for the artificial "mouseup" generated by a double-click.
     if (event && event.detail !== 2) {
       // Allow a repaint to occur before removing this class, so the animation
       // shows for tap events, which seem to trigger a mouseup too soon after
       // mousedown.
-      window.setTimeout(function() {
+      window.setTimeout(function () {
         this.rippleElement_.classList.remove(this.CssClasses_.IS_VISIBLE);
       }.bind(this), 0);
     }
@@ -1639,14 +1617,11 @@ window.addEventListener('load', function() {
   /**
    * Initialize element.
    */
-  MaterialRipple.prototype.init = function() {
+  MaterialRipple.prototype.init = function () {
     if (this.element_) {
-      var recentering =
-          this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
-      if (!this.element_.classList.contains(
-          this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {
-        this.rippleElement_ = this.element_.querySelector('.' +
-            this.CssClasses_.RIPPLE);
+      var recentering = this.element_.classList.contains(this.CssClasses_.RIPPLE_CENTER);
+      if (!this.element_.classList.contains(this.CssClasses_.RIPPLE_EFFECT_IGNORE_EVENTS)) {
+        this.rippleElement_ = this.element_.querySelector('.' + this.CssClasses_.RIPPLE);
         this.frameCount_ = 0;
         this.rippleSize_ = 0;
         this.x_ = 0;
@@ -1658,10 +1633,8 @@ window.addEventListener('load', function() {
         this.ignoringMouseDown_ = false;
 
         this.boundDownHandler = this.downHandler_.bind(this);
-        this.element_.addEventListener('mousedown',
-          this.boundDownHandler);
-        this.element_.addEventListener('touchstart',
-            this.boundDownHandler);
+        this.element_.addEventListener('mousedown', this.boundDownHandler);
+        this.element_.addEventListener('touchstart', this.boundDownHandler);
 
         this.boundUpHandler = this.upHandler_.bind(this);
         this.element_.addEventListener('mouseup', this.boundUpHandler);
@@ -1673,7 +1646,7 @@ window.addEventListener('load', function() {
          * Getter for frameCount_.
          * @return {number} the frame count.
          */
-        this.getFrameCount = function() {
+        this.getFrameCount = function () {
           return this.frameCount_;
         };
 
@@ -1681,7 +1654,7 @@ window.addEventListener('load', function() {
          * Setter for frameCount_.
          * @param {number} fC the frame count.
          */
-        this.setFrameCount = function(fC) {
+        this.setFrameCount = function (fC) {
           this.frameCount_ = fC;
         };
 
@@ -1689,7 +1662,7 @@ window.addEventListener('load', function() {
          * Getter for rippleElement_.
          * @return {Element} the ripple element.
          */
-        this.getRippleElement = function() {
+        this.getRippleElement = function () {
           return this.rippleElement_;
         };
 
@@ -1698,7 +1671,7 @@ window.addEventListener('load', function() {
          * @param  {number} newX the new X coordinate
          * @param  {number} newY the new Y coordinate
          */
-        this.setRippleXY = function(newX, newY) {
+        this.setRippleXY = function (newX, newY) {
           this.x_ = newX;
           this.y_ = newY;
         };
@@ -1707,7 +1680,7 @@ window.addEventListener('load', function() {
          * Sets the ripple styles.
          * @param  {boolean} start whether or not this is the start frame.
          */
-        this.setRippleStyles = function(start) {
+        this.setRippleStyles = function (start) {
           if (this.rippleElement_ !== null) {
             var transformString;
             var scale;
@@ -1721,8 +1694,7 @@ window.addEventListener('load', function() {
               scale = this.Constant_.FINAL_SCALE;
               size = this.rippleSize_ + 'px';
               if (recentering) {
-                offset = 'translate(' + this.boundWidth / 2 + 'px, ' +
-                  this.boundHeight / 2 + 'px)';
+                offset = 'translate(' + this.boundWidth / 2 + 'px, ' + this.boundHeight / 2 + 'px)';
               }
             }
 
@@ -1743,7 +1715,7 @@ window.addEventListener('load', function() {
         /**
          * Handles an animation frame.
          */
-        this.animFrameHandler = function() {
+        this.animFrameHandler = function () {
           if (this.frameCount_-- > 0) {
             window.requestAnimationFrame(this.animFrameHandler.bind(this));
           } else {
@@ -1764,7 +1736,7 @@ window.addEventListener('load', function() {
   });
 })();
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -1774,6 +1746,7 @@ window.addEventListener('load', function() {
    * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    */
+
   var MaterialSelectfield = function MaterialSelectfield(element) {
     this.element_ = element;
     // Initialize instance.
@@ -1801,7 +1774,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialSelectfield.prototype.onFocus_ = function(event) {
+  MaterialSelectfield.prototype.onFocus_ = function (event) {
     this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -1811,7 +1784,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialSelectfield.prototype.onBlur_ = function(event) {
+  MaterialSelectfield.prototype.onBlur_ = function (event) {
     this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
   };
 
@@ -1821,7 +1794,7 @@ window.addEventListener('load', function() {
    * @param {Event} event The event that fired.
    * @private
    */
-  MaterialSelectfield.prototype.onReset_ = function(event) {
+  MaterialSelectfield.prototype.onReset_ = function (event) {
     this.updateClasses_();
   };
 
@@ -1830,7 +1803,7 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialSelectfield.prototype.updateClasses_ = function() {
+  MaterialSelectfield.prototype.updateClasses_ = function () {
     this.checkDisabled();
     this.checkValidity();
     this.checkDirty();
@@ -1843,7 +1816,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialSelectfield.prototype.checkDisabled = function() {
+  MaterialSelectfield.prototype.checkDisabled = function () {
     if (this.select_.disabled) {
       this.element_.classList.add(this.CssClasses_.IS_DISABLED);
     } else {
@@ -1857,7 +1830,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialSelectfield.prototype.checkValidity = function() {
+  MaterialSelectfield.prototype.checkValidity = function () {
     if (this.select_.validity.valid) {
       this.element_.classList.remove(this.CssClasses_.IS_INVALID);
     } else {
@@ -1871,7 +1844,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialSelectfield.prototype.checkDirty = function() {
+  MaterialSelectfield.prototype.checkDirty = function () {
     if (this.select_.value && this.select_.value.length > 0) {
       this.element_.classList.add(this.CssClasses_.IS_DIRTY);
     } else {
@@ -1885,7 +1858,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialSelectfield.prototype.disable = function() {
+  MaterialSelectfield.prototype.disable = function () {
     this.select_.disabled = true;
     this.updateClasses_();
   };
@@ -1896,7 +1869,7 @@ window.addEventListener('load', function() {
    *
    * @public
    */
-  MaterialSelectfield.prototype.enable = function() {
+  MaterialSelectfield.prototype.enable = function () {
     this.select_.disabled = false;
     this.updateClasses_();
   };
@@ -1908,7 +1881,7 @@ window.addEventListener('load', function() {
    * @param {string} value The value to which to set the control (optional).
    * @public
    */
-  MaterialSelectfield.prototype.change = function(value) {
+  MaterialSelectfield.prototype.change = function (value) {
     if (value) {
       this.select_.value = value;
     }
@@ -1919,7 +1892,7 @@ window.addEventListener('load', function() {
   /**
    * Initialize element.
    */
-  MaterialSelectfield.prototype.init = function() {
+  MaterialSelectfield.prototype.init = function () {
     if (this.element_) {
       this.label_ = this.element_.querySelector('.' + this.CssClasses_.LABEL);
       this.select_ = this.element_.querySelector('.' + this.CssClasses_.SELECT);
@@ -1945,7 +1918,7 @@ window.addEventListener('load', function() {
    *
    * @private
    */
-  MaterialSelectfield.prototype.mdlDowngrade_ = function() {
+  MaterialSelectfield.prototype.mdlDowngrade_ = function () {
     this.select_.removeEventListener('change', this.boundUpdateClassesHandler);
     this.select_.removeEventListener('focus', this.boundFocusHandler);
     this.select_.removeEventListener('blur', this.boundBlurHandler);
@@ -1962,132 +1935,131 @@ window.addEventListener('load', function() {
   });
 })();
 
-(function($) {
-	'use strict';
-	/**
-	 *
-	 * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
-	 * Contact the Common Framework UI Group for more details or see our confluence page.
-	 *
-     *
-     * TODO: need to find a way to pass custom templates and allow user to use pass it via data attribute!
-     *
-     * NOTE: babel compiles ES6 string interpolations but backtick is needed!
-	 */
-	$('[data-charlimit]').each((idx, val) => {
-		let attrOptions = $(val).attr('data-charlimit');
-        if (attrOptions && attrOptions !== ""){
-            attrOptions = attrOptions.replace(new RegExp("'", "g"), '"');
-            let dataoptions = $.parseJSON("{" + attrOptions + "}"),
-                template = dataoptions.template,
-                updateChar = (ev) => {
-                    let currentLength = $(ev.currentTarget).val().length,
-                        limit = dataoptions.limit;
-                    $(val).parent().find(dataoptions.target).html(template || `<strong> ${currentLength}/${limit} </strong> character limit`);
-                };
+(function ($) {
+  'use strict';
+  /**
+   *
+   * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
+   * Contact the Common Framework UI Group for more details or see our confluence page.
+   *
+      *
+      * TODO: need to find a way to pass custom templates and allow user to use pass it via data attribute!
+      *
+      * NOTE: babel compiles ES6 string interpolations but backtick is needed!
+   */
 
-            $(val).keypress(updateChar);
-            $(val).on('paste', updateChar);
-            updateChar({ currentTarget: val });
-        }
-	});
-}($));
+  $('[data-charlimit]').each(function (idx, val) {
+    var attrOptions = $(val).attr('data-charlimit');
+    if (attrOptions && attrOptions !== "") {
+      (function () {
+        attrOptions = attrOptions.replace(new RegExp("'", "g"), '"');
+        var dataoptions = $.parseJSON("{" + attrOptions + "}"),
+            template = dataoptions.template,
+            updateChar = function updateChar(ev) {
+          var currentLength = $(ev.currentTarget).val().length,
+              limit = dataoptions.limit;
+          $(val).parent().find(dataoptions.target).html(template || '<strong> ' + currentLength + '/' + limit + ' </strong> character limit');
+        };
 
-(function($) {
-	'use strict';
-	/**
-	 *
-	 * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
-	 * Contact the Common Framework UI Group for more details or see our confluence page.
-	 *
-	 */
-	if ($('.datepicker').length > 0) {
-		if (!$.datepicker) {
-			return false;
-		}
-		var oldGoToToday = $.datepicker._gotoToday;
-		$.datepicker._gotoToday = function(id) {
-			oldGoToToday.call(this, id);
-			this._selectDate(id);
-		};
-	}
-}($));
+        $(val).keypress(updateChar);
+        $(val).on('paste', updateChar);
+        updateChar({ currentTarget: val });
+      })();
+    }
+  });
+})($);
 
+(function ($) {
+  'use strict';
+  /**
+   *
+   * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
+   * Contact the Common Framework UI Group for more details or see our confluence page.
+   *
+   */
 
-(function() {
+  if ($('.datepicker').length > 0) {
+    if (!$.datepicker) {
+      return false;
+    }
+    var oldGoToToday = $.datepicker._gotoToday;
+    $.datepicker._gotoToday = function (id) {
+      oldGoToToday.call(this, id);
+      this._selectDate(id);
+    };
+  }
+})($);
+
+(function () {
 
   'use strict';
 
-  !function(factory) {
-      "function" == typeof define && define.amd ? define([ "jquery", "./jquery.inputmask" ], factory) : "object" == typeof exports ? module.exports = factory(require("jquery"), require("./jquery.inputmask")) : factory(jQuery);
-  }(function($) {
+  !function (factory) {
+    "function" == typeof define && define.amd ? define(["jquery", "./jquery.inputmask"], factory) : "object" == (typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) ? module.exports = factory(require("jquery"), require("./jquery.inputmask")) : factory(jQuery);
+  }(function ($) {
 
-      if (!$.inputmask || !$.inputmask.defaults) {
-        return false; // fail gracefully
+    if (!$.inputmask || !$.inputmask.defaults) {
+      return false; // fail gracefully
+    }
+
+    var checkDirty = function checkDirty(ev) {
+      //console.info($(ev.target).parent().get(0));
+      //console.info($(ev.target).parent().get(0).MaterialTextfield);
+      if ($(ev.target).parent().get(0).MaterialTextfield) {
+        $(ev.target).parent().get(0).MaterialTextfield.checkDirty();
       }
+    };
 
-      var checkDirty = function(ev) {
-        //console.info($(ev.target).parent().get(0));
-        //console.info($(ev.target).parent().get(0).MaterialTextfield);
-        if ($(ev.target).parent().get(0).MaterialTextfield) {
-          $(ev.target).parent().get(0).MaterialTextfield.checkDirty();
+    var placeholderCheckDirty = function placeholderCheckDirty(ev) {
+      var target = ev.target || this;
+      //console.info(target);
+      $(target).focus(function () {
+        //console.info(this);
+        $(this).parent().addClass('is-dirty');
+      }).blur(function () {
+        if ($(target).parent().get(0).MaterialTextfield) {
+          $(target).parent().get(0).MaterialTextfield.checkDirty();
         }
-      };
+      });
+    };
 
-      var placeholderCheckDirty = function(ev) {
-        var target = ev.target || this;
-        //console.info(target);
-        $(target).focus(function() {
-          //console.info(this);
-          $(this).parent().addClass('is-dirty');
-        }).blur(function() {
-          if ($(target).parent().get(0).MaterialTextfield) {
-            $(target).parent().get(0).MaterialTextfield.checkDirty();
-          }
-        });
-      };
-
-      return $.extend($.inputmask.defaults.aliases,
-        {
-          'mdl-textfield-default': {
-            showMaskOnHover: false,
-            onKeyDown: checkDirty
-          },
-          'mdl-textfield-default-placeholder': {
-            showMaskOnHover: false,
-            onKeyDown: placeholderCheckDirty,
-            onBeforeMask: placeholderCheckDirty
-          },
-          'mdl-mask-datepicker': {
-            alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
-            showMaskOnHover: false,
-            mask: 'm/d/y',
-            placeholder: 'mm/dd/yyyy',
-            onKeyDown: checkDirty
-          },
-          'mdl-mask-datepicker-placeholder': {
-            alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
-            showMaskOnHover: false,
-            mask: 'm/d/y',
-            placeholder: 'mm/dd/yyyy',
-            onKeyDown: placeholderCheckDirty,
-            onBeforeMask: placeholderCheckDirty
-          }
-        }
-      ), $.fn.inputmask;
-
+    return $.extend($.inputmask.defaults.aliases, {
+      'mdl-textfield-default': {
+        showMaskOnHover: false,
+        onKeyDown: checkDirty
+      },
+      'mdl-textfield-default-placeholder': {
+        showMaskOnHover: false,
+        onKeyDown: placeholderCheckDirty,
+        onBeforeMask: placeholderCheckDirty
+      },
+      'mdl-mask-datepicker': {
+        alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
+        showMaskOnHover: false,
+        mask: 'm/d/y',
+        placeholder: 'mm/dd/yyyy',
+        onKeyDown: checkDirty
+      },
+      'mdl-mask-datepicker-placeholder': {
+        alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
+        showMaskOnHover: false,
+        mask: 'm/d/y',
+        placeholder: 'mm/dd/yyyy',
+        onKeyDown: placeholderCheckDirty,
+        onBeforeMask: placeholderCheckDirty
+      }
+    }), $.fn.inputmask;
   });
+})();
 
-}());
-
-(function($) {
+(function ($) {
 
   'use strict';
 
   var lastPosition = 0;
 
-  $('.cbp-header[role="navigation"]').each(function() {
-    $(window).on('scroll', function() {
+  $('.cbp-header[role="navigation"]').each(function () {
+    $(window).on('scroll', function () {
       var currentPosition = $(this).scrollTop();
 
       if (!lastPosition) {
@@ -2112,37 +2084,37 @@ window.addEventListener('load', function() {
       lastPosition = currentPosition;
     });
   });
+})($);
 
-}($));
+(function () {
+  'use strict';
 
-(function() {
-	'use strict';
+  $('[data-dismiss="tag"]').each(function (idx, el) {
+    $(el).on('click', function (ev) {
+      $(ev.currentTarget.parentElement).remove();
+    });
+  });
+})($);
 
-	$('[data-dismiss="tag"]').each(function(idx, el) {
-		$(el).on('click', function(ev) {
-			$(ev.currentTarget.parentElement).remove();
-		});
-	});
-}($));
+(function ($) {
+  'use strict';
+  /**
+   *
+   * We currently only support selectize and select2.  If you want more select third party lib support, contribute!!!!!
+   * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
+   * Contact the Common Framework UI Group for more details or see our confluence page.
+   *
+   */
 
-(function($) {
-	'use strict';
-	/**
-	 *
-	 * We currently only support selectize and select2.  If you want more select third party lib support, contribute!!!!!
-	 * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
-	 * Contact the Common Framework UI Group for more details or see our confluence page.
-	 *
-	 */
-	let getDirty = (idx, el) => {
-		if (el !== undefined && $(el).children('select').length > 0) {
-			$($(el).children('select').get(0)).change((ev) => {
-				let option = $(ev.currentTarget).find('option:selected').val();
-				let action = (option && option.length > 0) ? 'addClass' : 'removeClass';
-				$(el)[action]('is-dirty');
-			});
-		}
-	};
-	$('.selectize-field').each(getDirty);
-	$('.select2-field').each(getDirty);
-}($));
+  var getDirty = function getDirty(idx, el) {
+    if (el !== undefined && $(el).children('select').length > 0) {
+      $($(el).children('select').get(0)).change(function (ev) {
+        var option = $(ev.currentTarget).find('option:selected').val();
+        var action = option && option.length > 0 ? 'addClass' : 'removeClass';
+        $(el)[action]('is-dirty');
+      });
+    }
+  };
+  $('.selectize-field').each(getDirty);
+  $('.select2-field').each(getDirty);
+})($);
