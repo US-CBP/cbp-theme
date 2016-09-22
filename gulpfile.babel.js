@@ -45,7 +45,8 @@ const inputmaskJS = [
 ];
 
 const FONTS_FILES = [
-  'node_modules/font-awesome/fonts/*'
+  'node_modules/font-awesome/fonts/*',
+  'roboto/*'
 ];
 
 const options = {
@@ -178,12 +179,6 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'))
     .pipe(gulp.dest('app/kitchensink/fonts'));
-  });
-
-gulp.task('generateFonts', function(cb) {
-    exec('webfont-dl -d \"https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic&subset=latin,greek,greek-ext,latin-ext,cyrillic-ext,cyrillic\" -o app/styles/vendor/roboto.css --font-out=dist/fonts --css-rel=../fonts --woff2=link --woff1=link --svg=link --ttf=link --eot=link' , function(err, stdout, stderr) {
-      console.log(stdout);
-    });
   });
 
 gulp.task('extras', () => {
