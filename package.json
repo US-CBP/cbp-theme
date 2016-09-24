@@ -57,8 +57,6 @@
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.0.0",
     "gulp-util": "*",
-    "jquery": "^2.2.4",
-    "jquery.inputmask": "~3.1.26",
     "material-design-lite": "^1.1.1",
     "mdl-selectfield": "^1.0.2",
     "nouislider": "~8.5.1",
@@ -67,7 +65,12 @@
     "webfont-dl": "^0.1.2",
     "wiredep": "^4.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "2.2 - 3"
+  },
+  "optionalDependencies": {
+    "jquery.inputmask": "~3.3.3"
+  },
   "scripts": {
     "build": "gulp build",
     "dev": "gulp serve",
