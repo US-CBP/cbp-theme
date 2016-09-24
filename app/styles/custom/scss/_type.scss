@@ -37,3 +37,9 @@ h6, .h6 {
   margin-top: ($line-height-computed / 2);
   margin-bottom: ($line-height-computed / 2);
 }
+
+@media (max-width:$screen-sm) {
+  .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding-left: 6px;
+  }
+}

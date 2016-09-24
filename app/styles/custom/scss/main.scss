@@ -20,6 +20,7 @@
 
 // CBP overrides
 @import "mixins";
+@import "colors";
 @import "globals";
 @import "accordions";
 @import "alerts";
@@ -40,5 +41,6 @@
 @import "tags";
 @import "type";
 @import "utilities";
+@import "timelines";
 
 @import "hacks";

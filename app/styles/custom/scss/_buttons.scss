@@ -23,11 +23,15 @@
 
 // FA icons only look good at 14px.
 .btn .fa {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .input-group-lg .btn .fa {
-    font-size: 18px;
+  font-size: 18px;
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+  padding: 9px 12px;
 }
 
 .btn-xs, .btn-group-xs > .btn {
