@@ -87,9 +87,10 @@
 @mixin button-mixin($background-color, $text-color, $border-color, $variant:"") {
   .btn {
     font-weight: 600;
-    padding: 9px 12px;
+    padding: 5px 10px;
     font-size: 13px;
     line-height: 1.4;
+    margin: 1px 2px;
   }
 
   /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
@@ -350,4 +351,13 @@
   max-height: $height;
   -webkit-transition: max-height $height;
 	-moz-transition: max-height $height;
+}
+
+// Drop shadows
+//
+// Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
+// supported browsers that have box shadow capabilities now support it.
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  box-shadow: $shadow;
 }

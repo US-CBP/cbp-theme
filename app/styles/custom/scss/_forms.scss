@@ -461,3 +461,9 @@ form:not(.form-horizontal) {
   }
 
 }
+
+@media (max-width:$screen-sm) {
+  .mdl-textfield {
+    width: inherit;
+  }
+}

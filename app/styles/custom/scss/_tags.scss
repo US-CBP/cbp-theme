@@ -1,15 +1,14 @@
 .tag {
-    padding: 2px 8px;
-    border-radius: $border-radius-base;
-    border: none;
-    margin: 0 5px 5px 0;
-    display: inline-block;
+  padding: 3px 7px 2px 7px;
+  border-radius: $border-radius-base;
+  border: none;
+  margin: 0 5px 5px 0;
+  display: inline-block;
 
-    i, a {
-        margin-left: 5px;
-    }
+  i, a {
+    margin-left: 5px;
+  }
 }
-
 
 .tag-default { @include tag-variant($gray-dark, $brand-default); }
 .tag-inverse { @include tag-variant($body-bg, $gray-dark); }
@@ -26,4 +25,3 @@
 .tag-warning.subtle { @include tag-variant($brand-warning-text, $state-warning-bg); }
 .tag-danger.subtle { @include tag-variant($brand-danger, $state-danger-bg); }
 .tag-primary.subtle { @include tag-variant($brand-primary, $state-primary-bg); }
-
