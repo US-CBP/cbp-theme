@@ -9925,6 +9925,42 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 /* Badge variants */
 /* Tag variants */
 /* Pill variants */
+.bg-primary {
+  background-color: #00416A !important;
+  color: #fff !important; }
+  .bg-primary:hover, .bg-primary:focus {
+    background-color: #002237 !important; }
+
+.bg-info {
+  background-color: #1460aa !important;
+  color: #fff !important; }
+  .bg-info:hover, .bg-info:focus {
+    background-color: #0f467c !important; }
+
+.bg-danger {
+  background-color: #a00000 !important;
+  color: #fff !important; }
+  .bg-danger:hover, .bg-danger:focus {
+    background-color: #6d0000 !important; }
+
+.bg-success {
+  background-color: #008000 !important;
+  color: #fff !important; }
+  .bg-success:hover, .bg-success:focus {
+    background-color: #004d00 !important; }
+
+.bg-default {
+  background-color: #333333 !important;
+  color: #fff !important; }
+  .bg-default:hover, .bg-default:focus {
+    background-color: #1a1a1a !important; }
+
+.bg-warning {
+  background-color: #f09511 !important;
+  color: #fff !important; }
+  .bg-warning:hover, .bg-warning:focus {
+    background-color: #c2780c !important; }
+
 body {
   padding-top: 50px;
   padding-bottom: 50px; }
@@ -10265,7 +10301,7 @@ footer.cbp-banner.top-secret:after {
   border: 1px solid #333333; }
 
 .badge {
-  padding: 3px 7px 4px 7px; }
+  padding: 3px 6px; }
 
 .nav-pills > li.active.default > a,
 .nav-pills > li.active.default > a:hover,
@@ -10397,9 +10433,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10443,9 +10480,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10489,9 +10527,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10535,9 +10574,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10581,9 +10621,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10627,9 +10668,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10673,9 +10715,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10719,9 +10762,10 @@ footer.cbp-banner.top-secret:after {
 
 .btn, .ui-datepicker button.ui-state-default {
   font-weight: 600;
-  padding: 9px 12px;
+  padding: 5px 10px;
   font-size: 13px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 1px 2px; }
 
 /* yeah it's a hack -- 'cus of our one browser policy (aka IE11) -- sadness :(  */
 *::-ms-backdrop, .btn, .ui-datepicker button.ui-state-default {
@@ -10772,6 +10816,9 @@ footer.cbp-banner.top-secret:after {
 
 .input-group-lg .btn .fa, .input-group-lg .ui-datepicker button.ui-state-default .fa, .ui-datepicker .input-group-lg button.ui-state-default .fa, .input-group-lg .btn .ui-datepicker .ui-datepicker-prev .ui-icon:after, .ui-datepicker .ui-datepicker-prev .input-group-lg .btn .ui-icon:after, .input-group-lg .ui-datepicker button.ui-state-default .ui-datepicker-prev .ui-icon:after, .input-group-lg .ui-datepicker .ui-datepicker-prev button.ui-state-default .ui-icon:after, .ui-datepicker .input-group-lg button.ui-state-default .ui-datepicker-prev .ui-icon:after, .ui-datepicker .ui-datepicker-prev .input-group-lg button.ui-state-default .ui-icon:after, .input-group-lg .btn .ui-datepicker .ui-datepicker-next .ui-icon:after, .ui-datepicker .ui-datepicker-next .input-group-lg .btn .ui-icon:after, .input-group-lg .ui-datepicker button.ui-state-default .ui-datepicker-next .ui-icon:after, .input-group-lg .ui-datepicker .ui-datepicker-next button.ui-state-default .ui-icon:after, .ui-datepicker .input-group-lg button.ui-state-default .ui-datepicker-next .ui-icon:after, .ui-datepicker .ui-datepicker-next .input-group-lg button.ui-state-default .ui-icon:after, .input-group-lg .btn .ui-datepicker .ui-datepicker-prev, .ui-datepicker .input-group-lg .btn .ui-datepicker-prev, .input-group-lg .ui-datepicker button.ui-state-default .ui-datepicker-prev, .ui-datepicker .input-group-lg button.ui-state-default .ui-datepicker-prev, .input-group-lg .btn .ui-datepicker .ui-datepicker-next, .ui-datepicker .input-group-lg .btn .ui-datepicker-next, .input-group-lg .ui-datepicker button.ui-state-default .ui-datepicker-next, .ui-datepicker .input-group-lg button.ui-state-default .ui-datepicker-next {
   font-size: 18px; }
+
+.input-group-btn:last-child > .btn, .ui-datepicker .input-group-btn:last-child > button.ui-state-default, .input-group-btn:last-child > .btn-group {
+  padding: 9px 12px; }
 
 .btn-xs, .btn-group-xs > .btn, .ui-datepicker .btn-group-xs > button.ui-state-default, .btn-group-xs > .btn, .ui-datepicker .btn-group-xs > button.ui-state-default {
   padding: 1px 6px;
@@ -11372,6 +11419,10 @@ form:not(.form-horizontal) label.required::after {
   top: 0;
   padding-left: 0;
   color: #1460aa; }
+
+@media (max-width: 768px) {
+  .mdl-textfield {
+    width: inherit; } }
 
 /* Label variants */
 .label {
@@ -12225,7 +12276,7 @@ input[type=range]:focus:-ms-fill-upper {
     display: none; }
 
 .tag {
-  padding: 2px 8px;
+  padding: 3px 7px 2px 7px;
   border-radius: 2px;
   border: none;
   margin: 0 5px 5px 0;
@@ -12474,6 +12525,10 @@ h6, .h6 {
   margin-top: 10.5px;
   margin-bottom: 10.5px; }
 
+@media (max-width: 768px) {
+  .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    padding-left: 6px; } }
+
 .keyline-all {
   border: 1px solid #ddd; }
 
@@ -12608,6 +12663,96 @@ h6, .h6 {
 
 .margin-4 {
   margin: 36px; }
+
+/*
+ * Component: Timeline
+ * -------------------
+ */
+.timeline {
+  position: relative;
+  margin: 0 0 50px 0;
+  padding: 0;
+  list-style: none; }
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ddd;
+    left: 31px;
+    margin: 0;
+    border-radius: 2px;
+    background-clip: padding-box; }
+  .timeline > li {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 15px; }
+    .timeline > li:before, .timeline > li:after {
+      content: " ";
+      display: table; }
+    .timeline > li:after {
+      clear: both; }
+    .timeline > li > .timeline-item {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      background-clip: padding-box;
+      margin-top: 0;
+      background: #fff;
+      color: #444;
+      margin-left: 60px;
+      margin-right: 15px;
+      padding: 0;
+      position: relative; }
+      .timeline > li > .timeline-item > .time {
+        float: right;
+        padding: 10px;
+        font-size: 14px; }
+      .timeline > li > .timeline-item > .timeline-header {
+        margin: 0;
+        border-bottom: 1px solid #f4f4f4;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.1; }
+        .timeline > li > .timeline-item > .timeline-header > a {
+          font-weight: 600; }
+      .timeline > li > .timeline-item > .timeline-body, .timeline > li > .timeline-item > .timeline-footer {
+        padding: 10px; }
+    .timeline > li > .fa, .ui-datepicker .ui-datepicker-prev .timeline > li > .ui-icon:after, .ui-datepicker .ui-datepicker-next .timeline > li > .ui-icon:after, .ui-datepicker .timeline > li > .ui-datepicker-prev, .ui-datepicker .timeline > li > .ui-datepicker-next,
+    .timeline > li > .glyphicon,
+    .timeline > li > .timepoint-text {
+      font-size: 15px;
+      position: absolute;
+      color: #eeeeee;
+      background: #333333;
+      text-align: center;
+      top: 0; }
+    .timeline > li > .fa, .ui-datepicker .ui-datepicker-prev .timeline > li > .ui-icon:after, .ui-datepicker .ui-datepicker-next .timeline > li > .ui-icon:after, .ui-datepicker .timeline > li > .ui-datepicker-prev, .ui-datepicker .timeline > li > .ui-datepicker-next,
+    .timeline > li > .glyphicon {
+      width: 30px;
+      left: 18px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%; }
+    .timeline > li > .timepoint-text {
+      width: 40px;
+      left: 12px;
+      padding: 6px 0px;
+      border-radius: 10px; }
+  .timeline > .time-label > span {
+    font-weight: 600;
+    padding: 5px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 4px;
+    background-clip: padding-box; }
+
+.timeline-inverse > li > .timeline-item {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  box-shadow: none; }
+  .timeline-inverse > li > .timeline-item > .timeline-header {
+    border-bottom-color: #ddd; }
 
 /* IE11 hack */
 _:-ms-fullscreen, .navbar-form .input-group-btn {
