@@ -75,12 +75,12 @@ input[disabled], select[disabled] {
     }
 }
 
-textarea {
-    //resize: none;
-}
-
 .navbar-form {
   margin: 3px 0 0 0;
+}
+
+.navbar-form .mdl-textfield {
+  display: block;
 }
 
 .form-group {
@@ -92,13 +92,6 @@ textarea {
     margin-top: 27px;
     margin-bottom: 9px;
 }
-
-/* IE11 hack */
-_:-ms-fullscreen, .input-group-btn {
-  position: relative;
-  top: -4px;
-}
-
 
 // adds required asterisk after label
 form:not(.form-horizontal) {
@@ -262,7 +255,7 @@ form:not(.form-horizontal) {
 }
 
 
-// MDL INPUT COMPONENTS 
+// MDL INPUT COMPONENTS
 
 // checkbox
 .cbp-checkbox {
@@ -458,7 +451,7 @@ form:not(.form-horizontal) {
     }
   }
 
-  &.mdl-selectfield--floating-label.is-dirty, 
+  &.mdl-selectfield--floating-label.is-dirty,
   &.mdl-selectfield--floating-label.is-focused {
     .mdl-selectfield__label {
       top:0;
@@ -468,4 +461,3 @@ form:not(.form-horizontal) {
   }
 
 }
-
