@@ -2,6 +2,7 @@ Customs and Border Protection (CBP) Theme
 ==========
 
 [![Build Status](https://travis-ci.org/US-CBP/cbp-theme.svg?branch=master)](https://travis-ci.org/US-CBP/cbp-theme)
+[![npm version](https://badge.fury.io/js/cbp-theme.svg)](https://badge.fury.io/js/cbp-theme)
 [![dependencies Status](https://david-dm.org/us-cbp/cbp-theme/status.svg)](https://david-dm.org/us-cbp/cbp-theme)
 [![devDependencies Status](https://david-dm.org/us-cbp/cbp-theme/dev-status.svg)](https://david-dm.org/us-cbp/cbp-theme?type=dev)
 
@@ -94,7 +95,8 @@ Follow your normal build/development process as you have defined it. Here's what
 ```
 ----
 
-## NPM Commands
+## Developers 
+### NPM Commands
 
 We use Gulp for our build process but here are the common npm commands:
 
@@ -111,9 +113,16 @@ A demo app is located under app/kitchensink with all the components available so
 that one can experiment and test changes. Run 'npm run dev', which builds and
 uses gulp serve.  The demo app runs localhost:9000
 
-### Contributing
+### Publishing
+We use [SemVer](http://semver.org/) system of versioning (MAJOR MINOR PATCH)
+
+* Run npm run version patch (or minor, major)
+* Run npm publish to publish the current version to NPM's public registry
+* Self publish the webjar by going to [WebJars](http://www.webjars.org/npm) and adding a new webjar using the name cbp-theme. Then select the appropriate version.
+
+#### Contributing
 
 We welcome contributions, please see our [Contribution Policy](https://github.com/US-CBP/open-source-policy/blob/master/CONTRIBUTING.md)
 
-### License
+#### License
 Please refer to [CBP Open Source License](https://github.com/US-CBP/open-source-policy/blob/master/LICENSE.md)
