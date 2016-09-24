@@ -11098,6 +11098,9 @@ input[disabled], select[disabled] {
 .navbar-form {
   margin: 3px 0 0 0; }
 
+.navbar-form .mdl-textfield {
+  display: block; }
+
 .form-group {
   margin-bottom: 8px; }
 
@@ -11105,11 +11108,6 @@ input[disabled], select[disabled] {
   border-bottom: 1px solid #eee;
   margin-top: 27px;
   margin-bottom: 9px; }
-
-/* IE11 hack */
-_:-ms-fullscreen, .input-group-btn {
-  position: relative;
-  top: -4px; }
 
 form:not(.form-horizontal) label.required::after {
   position: relative;
@@ -12611,6 +12609,6 @@ h6, .h6 {
 .margin-4 {
   margin: 36px; }
 
-@-moz-document url-prefix() {
-  .mdl-textfield {
-    top: 3px; } }
+/* IE11 hack */
+_:-ms-fullscreen, .navbar-form .input-group-btn {
+  top: -1px; }
