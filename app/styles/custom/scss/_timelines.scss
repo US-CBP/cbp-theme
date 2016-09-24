@@ -85,10 +85,10 @@
     }
 
     > .timepoint-text {
-      width: 40px;
-      left: 12px;
-      padding: 6px 0px;
-      border-radius: 10px;
+      width: 60px;
+      padding: 5px 3px;
+      border-radius: 5px;
+      font-size: 14px;
     }
   }
 
@@ -96,7 +96,7 @@
   > .time-label {
     > span {
       font-weight: 600;
-      padding: 5px;
+      padding: 4px 10px;
       display: inline-block;
       background-color: #fff;
 
