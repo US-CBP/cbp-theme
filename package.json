@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme",
   "description": "CBP Common Framework UI Theme",
-  "version": "0.3.2",
+  "version": "0.3.6",
   "author": "CBP Common Framework",
   "main": "./dist/js/npm",
   "contributors": [
@@ -32,7 +32,6 @@
     "bootstrap": "^3.3.6",
     "bootstrap-sass": "^3.3.6",
     "browser-sync": "^2.13.0",
-    "connect-gzip-static": "^1.0.0",
     "del": "^2.2.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.0",
@@ -43,7 +42,6 @@
     "gulp-cssnano": "^2.0.0",
     "gulp-eslint": "^2.0.0",
     "gulp-exec": "^2.1.2",
-    "gulp-gzip": "^1.4.0",
     "gulp-htmlmin": "^2.0.0",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.1",
@@ -75,7 +73,7 @@
     "dev": "gulp serve",
     "test": "echo 'we need tests'",
     "a11y": "pa11y --standard Section508 --reporter html > a11y.html http://localhost:9000 || true",
-    "fonts": "webfont-dl -d \"https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic&subset=latin,greek,greek-ext,latin-ext,cyrillic-ext,cyrillic\" -o app/styles/vendor/roboto.css --font-out=dist/fonts --css-rel=../fonts --woff2=link --woff1=link --svg=link --ttf=link --eot=link",
+    "fonts": "webfont-dl -d \"https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic&subset=latin,greek,greek-ext,latin-ext,cyrillic-ext,cyrillic\" -o app/styles/vendor/roboto.css --font-out=roboto/ --css-rel=../fonts --woff2=link --woff1=link --svg=link --ttf=link --eot=link",
     "preversion": "npm test",
     "version": "npm run build && git add -A .",
     "postversion": "git push && git push --tags"

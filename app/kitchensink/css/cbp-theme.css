@@ -71,6 +71,8 @@
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -179,6 +181,7 @@
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -706,7 +709,6 @@ a {
     color: #00121e;
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -1929,7 +1931,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2441,7 +2442,6 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .ui-datepicker button.ui-state-default:focus, .btn.focus, .ui-datepicker button.focus.ui-state-default, .btn:active:focus, .ui-datepicker button.ui-state-default:active:focus, .btn:active.focus, .ui-datepicker button.ui-state-default:active.focus, .btn.active:focus, .ui-datepicker button.active.ui-state-default:focus, .btn.active.focus, .ui-datepicker button.active.focus.ui-state-default {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .ui-datepicker button.ui-state-default:hover, .btn:focus, .ui-datepicker button.ui-state-default:focus, .btn.focus, .ui-datepicker button.focus.ui-state-default {
@@ -3729,8 +3729,8 @@ tbody.collapse.in {
       color: #ccc; }
 
 .navbar-inverse, .cbp-header {
-  background-color: #002841;
-  border-color: #002237; }
+  background-color: #003e65;
+  border-color: #003b60; }
   .navbar-inverse .navbar-brand, .cbp-header .navbar-brand {
     color: white; }
     .navbar-inverse .navbar-brand:hover, .cbp-header .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .cbp-header .navbar-brand:focus {
@@ -3745,7 +3745,7 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-inverse .navbar-nav > .active > a, .cbp-header .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .cbp-header .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .cbp-header .navbar-nav > .active > a:focus {
     color: white;
-    background-color: #00090e; }
+    background-color: #001f32; }
   .navbar-inverse .navbar-nav > .disabled > a, .cbp-header .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .cbp-header .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .cbp-header .navbar-nav > .disabled > a:focus {
     color: #444;
     background-color: transparent; }
@@ -3757,15 +3757,15 @@ tbody.collapse.in {
       background-color: #fff; }
   .navbar-inverse .navbar-collapse, .cbp-header .navbar-collapse,
   .navbar-inverse .navbar-form, .cbp-header .navbar-form {
-    border-color: #00121e; }
+    border-color: #002841; }
   .navbar-inverse .navbar-nav > .open > a, .cbp-header .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .cbp-header .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .cbp-header .navbar-nav > .open > a:focus {
-    background-color: #00090e;
+    background-color: #001f32;
     color: white; }
   @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .cbp-header .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse .navbar-nav .open .ui-datepicker > .dropdown-header, .cbp-header .navbar-nav .open .ui-datepicker > .dropdown-header {
-      border-color: #002237; }
+      border-color: #003b60; }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .cbp-header .navbar-nav .open .dropdown-menu .divider, .navbar-inverse .navbar-nav .open .ui-datepicker .divider, .cbp-header .navbar-nav .open .ui-datepicker .divider {
-      background-color: #002237; }
+      background-color: #003b60; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .cbp-header .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .navbar-nav .open .ui-datepicker > li > a, .cbp-header .navbar-nav .open .ui-datepicker > li > a {
       color: white; }
       .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .cbp-header .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .ui-datepicker > li > a:hover, .cbp-header .navbar-nav .open .ui-datepicker > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .cbp-header .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .ui-datepicker > li > a:focus, .cbp-header .navbar-nav .open .ui-datepicker > li > a:focus {
@@ -3773,7 +3773,7 @@ tbody.collapse.in {
         background-color: transparent; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .cbp-header .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .ui-datepicker > .active > a, .cbp-header .navbar-nav .open .ui-datepicker > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .cbp-header .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .ui-datepicker > .active > a:hover, .cbp-header .navbar-nav .open .ui-datepicker > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .cbp-header .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .navbar-nav .open .ui-datepicker > .active > a:focus, .cbp-header .navbar-nav .open .ui-datepicker > .active > a:focus {
       color: white;
-      background-color: #00090e; }
+      background-color: #001f32; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .cbp-header .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .ui-datepicker > .disabled > a, .cbp-header .navbar-nav .open .ui-datepicker > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .cbp-header .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .ui-datepicker > .disabled > a:hover, .cbp-header .navbar-nav .open .ui-datepicker > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .cbp-header .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .navbar-nav .open .ui-datepicker > .disabled > a:focus, .cbp-header .navbar-nav .open .ui-datepicker > .disabled > a:focus {
       color: #444;
       background-color: transparent; } }
@@ -5693,6 +5693,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -5801,6 +5803,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 .mdl-ripple {
   background: rgb(0,0,0);
   border-radius: 50%;
@@ -5879,6 +5882,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -5987,6 +5992,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -6182,6 +6188,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -6290,6 +6298,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -6472,6 +6481,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -6580,6 +6591,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -6622,6 +6634,8 @@ button.close {
   min-width: 32px;
   width: auto;
   min-height: 32px; }
+  .mdl-textfield--expandable .mdl-button--icon {
+    top: 16px; }
 
 .mdl-textfield__input {
   border: none;
@@ -6798,6 +6812,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -6906,6 +6922,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -7505,31 +7522,31 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 300;
-  src: local("Roboto Light Italic"), local("Roboto-LightItalic"), url("../fonts/roboto-f3b9f22dc60d9d44ef107ccae1a0030f6e6292ba.woff2") format("woff2"), url("../fonts/roboto-8da249381e5effaaadc8809385179b5aa491a4ae.woff") format("woff"), url("../fonts/roboto-c40c4ea0dc2fa9dcde63bcf3fd9b95cccbd5cc62.ttf") format("truetype"); }
+  src: local("Roboto Light Italic"), local("Roboto-LightItalic"), url("../fonts/roboto-8da249381e5effaaadc8809385179b5aa491a4ae.woff") format("woff"), url("../fonts/roboto-c40c4ea0dc2fa9dcde63bcf3fd9b95cccbd5cc62.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
-  src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/roboto-6943bcbf61f12ef4d5d17694e7463049bdd227c8.woff2") format("woff2"), url("../fonts/roboto-fe5ca35863958aa9f3a879b7032979a3f0db3974.woff") format("woff"), url("../fonts/roboto-be6836de04ee4e0012ef88496a05b2a9e6dbf293.ttf") format("truetype"); }
+  src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/roboto-fe5ca35863958aa9f3a879b7032979a3f0db3974.woff") format("woff"), url("../fonts/roboto-be6836de04ee4e0012ef88496a05b2a9e6dbf293.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 500;
-  src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("../fonts/roboto-9dc0b55fe6fcb4de23fe1ab6b9a6cdd043296161.woff2") format("woff2"), url("../fonts/roboto-3e4b853a8ecf83541f6a7ba875070ebce7a19642.woff") format("woff"), url("../fonts/roboto-e3f5a4bdfdf56584b05705dfad3b14c8a30f393c.ttf") format("truetype"); }
+  src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("../fonts/roboto-3e4b853a8ecf83541f6a7ba875070ebce7a19642.woff") format("woff"), url("../fonts/roboto-e3f5a4bdfdf56584b05705dfad3b14c8a30f393c.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 700;
-  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("../fonts/roboto-eed22286f53383eb4493d5090c247b186970b396.woff2") format("woff2"), url("../fonts/roboto-67688000f61879d468fa6516ddb21c7cace1b212.woff") format("woff"), url("../fonts/roboto-e1262eb60d828ff664011e8bffc586fb3fd2d080.ttf") format("truetype"); }
+  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("../fonts/roboto-67688000f61879d468fa6516ddb21c7cace1b212.woff") format("woff"), url("../fonts/roboto-e1262eb60d828ff664011e8bffc586fb3fd2d080.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/roboto-23d439d23da3eaa8144f02e19043fab2b3f19a33.woff2") format("woff2"), url("../fonts/roboto-cd565969dd0cf49f8408deff0aed2b9d6008a06d.woff") format("woff"), url("../fonts/roboto-8fca32cc805ea3e480e6458ae7c3640d41f6c96b.ttf") format("truetype"); }
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/roboto-cd565969dd0cf49f8408deff0aed2b9d6008a06d.woff") format("woff"), url("../fonts/roboto-8fca32cc805ea3e480e6458ae7c3640d41f6c96b.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
@@ -7537,19 +7554,19 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   font-weight: 400;
   /* IE6-8 compat */
   src: url("../fonts/roboto-c8755b34719e3012d4ae9455615b1549fec1ca3f.eot");
-  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-5cdbe0a3b2ecefc9c25ccefa511cf8a781c78799.woff2") format("woff2"), url("../fonts/roboto-9e2b4436ba4c5c9b33f4fca42b43d99a703467f0.woff") format("woff"), url("../fonts/roboto-148fe3b2ffcb825efff40a8378f22125ccf88cb0.svg#Roboto") format("svg"), url("../fonts/roboto-c8755b34719e3012d4ae9455615b1549fec1ca3f.eot") format("embedded-opentype"), url("../fonts/roboto-b376a31e25af67e36a420aa2348874c5a8b5c9a5.ttf") format("truetype"); }
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-9e2b4436ba4c5c9b33f4fca42b43d99a703467f0.woff") format("woff"), url("../fonts/roboto-148fe3b2ffcb825efff40a8378f22125ccf88cb0.svg#Roboto") format("svg"), url("../fonts/roboto-c8755b34719e3012d4ae9455615b1549fec1ca3f.eot") format("embedded-opentype"), url("../fonts/roboto-b376a31e25af67e36a420aa2348874c5a8b5c9a5.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/roboto-5cb23c2ac98be5b4e0fb8a97e28dda99ae76b8c7.woff2") format("woff2"), url("../fonts/roboto-d561d8824866e60a2a2d327c6b6219939b259b57.woff") format("woff"), url("../fonts/roboto-15d4ddc447af43a160ea7249c8a3b8db63b90c43.ttf") format("truetype"); }
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/roboto-d561d8824866e60a2a2d327c6b6219939b259b57.woff") format("woff"), url("../fonts/roboto-15d4ddc447af43a160ea7249c8a3b8db63b90c43.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-0346683d1de814a4d109387bb90bb82e0bb8aeb1.woff2") format("woff2"), url("../fonts/roboto-922ef2c34858a412764dfd5efadf3e387c8d7402.woff") format("woff"), url("../fonts/roboto-d9a17a54541b34b38ef67cf919f1ac63b44a7454.ttf") format("truetype"); }
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-922ef2c34858a412764dfd5efadf3e387c8d7402.woff") format("woff"), url("../fonts/roboto-d9a17a54541b34b38ef67cf919f1ac63b44a7454.ttf") format("truetype"); }
 
 /* FONT PATH
  * -------------------------- */
@@ -11520,7 +11537,7 @@ label.mdl-textfield__label.static-label {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
     .navbar-inverse .badge, .cbp-header .badge {
       background-color: #fff;
-      color: #002841; }
+      color: #003e65; }
   .navbar .badge, .app-header .badge,
   .app-header-bottom .badge, .cbp-header .badge {
     text-shadow: none; }
