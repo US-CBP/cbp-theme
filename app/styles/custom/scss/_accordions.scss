@@ -1,5 +1,5 @@
 
-.panel-group[role="tablist"] > .panel > .panel-heading,
+.panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a,
 .filter-list[role="tablist"] > .filter-group-title {
     cursor: pointer;
 
