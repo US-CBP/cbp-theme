@@ -7083,8 +7083,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   font-weight: 400;
   min-height: 200px;
   overflow: hidden;
-  width: 330px;
-  z-index: 1;
   position: relative;
   background: rgb(#FFF);
   border-radius: 2px;
