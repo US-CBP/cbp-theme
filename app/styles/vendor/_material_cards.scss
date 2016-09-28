@@ -21,8 +21,6 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   font-weight: 400;
   min-height: $card-height;
   overflow: hidden;
-  width: $card-width;
-  z-index: $card-z-index;
   position: relative;
   background: $card-background-color;
   border-radius: 2px;
