@@ -7083,8 +7083,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   font-weight: 400;
   min-height: 200px;
   overflow: hidden;
-  width: 330px;
-  z-index: 1;
   position: relative;
   background: rgb(#FFF);
   border-radius: 2px;
@@ -7098,6 +7096,10 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   background-origin: padding-box;
   background-attachment: scroll;
   box-sizing: border-box; }
+  .mdl-card__media img, .cbp-card__media img {
+    /* typically in our bootstrap/material implementation, cards will be in col-x-# so, this allows the image to size accordingly!*/
+    width: 100%;
+    height: 100%; }
 
 .mdl-card__title, .cbp-card__title {
   -webkit-box-align: center;

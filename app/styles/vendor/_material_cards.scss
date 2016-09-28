@@ -35,6 +35,12 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   background-origin: padding-box;
   background-attachment: scroll;
   box-sizing: border-box;
+
+  img {
+    /* typically in our bootstrap/material implementation, cards will be in col-x-# so, this allows the image to size accordingly!*/
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .mdl-card__title {
