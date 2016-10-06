@@ -58,12 +58,14 @@ For CSS
 
 	<!-- cbp-theme -->
     <link media="screen" href="webjars/cbp-theme/0.3.2/dist/styles/cbp-theme.min.css" rel="stylesheet" />
+
+<!-- COMMENTED OUT UNTIL CONFIRMED THAT WEBPACK RESOLVED THE WINDOWS GULP DEPENDANCIES ISSUES
 ```
 **Windows Setup:**
 
 * **Install [Python 2.7](https://www.python.org/downloads/)**. Some node modules may rely on node-gyp, which requires Python on Windows.
 * **Install C++ Compiler**. Browser-sync requires a C++ compiler on Windows. [Visual Studio Express](https://www.visualstudio.com/en-US/products/visual-studio-express-vs) comes bundled with a free C++ compiler. Or, if you already have Visual Studio installed: Open Visual Studio and go to File -> New -> Project -> Visual C++ -> Install Visual C++ Tools for Windows Desktop. The C++ compiler is used to compile browser-sync (and perhaps other Node modules).
-
+-->
 
 ### What you get
 
@@ -78,22 +80,30 @@ Follow your normal build/development process as you have defined it. Here's what
 
 ### Order of Javascript Dependencies
 ```
-  <!-- optional dependencies from cf-ui-theme repo -->
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/jquery.inputmask.bundle.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
+   <!-- optional dependencies from cf-ui-theme repo -->
+    <script src="./dist/jquery.js"></script>
+    <script src="./dist/inputmask.js"></script>
 
-  <!-- js for cbp-theme should be loaded after all thirdparty js files -->
-  <script src="./js/cbp-theme.js"></script>
+    <!-- application specific third party js files here -->
+    <script src="./thirdparty/js/jquery-ui.min.js"></script>
+    <script src="./thirdparty/js/alerts.js"></script>
+    <script src="./thirdparty/js/select2.min.js"></script> 
+
+    <!-- js for cbp-theme should be loaded after all thirdparty js files -->
+    <script src="./dist/cbp-theme.js"></script>
 
 ```
 ### Order of CSS Dependencies
 
 ```
+
 	<!-- third party css if any -->
+  <link media="screen" href="./css/datepicker.css" rel="stylesheet" />
+  <link media="screen" href="./css/select2.css" rel="stylesheet" />
 
 	<!-- cbp-theme -->
-    <link media="screen" href="./css/cbp-theme.min.css" rel="stylesheet" />
+  <link media="screen" href="./css/cbp-theme.css" rel="stylesheet" />
+
 ```
 ----
 
@@ -102,9 +112,8 @@ Follow your normal build/development process as you have defined it. Here's what
 
 We use Gulp for our build process but here are the common npm commands:
 
-* npm install
-* npm run build - calls gulp
-* npm run dev - runs gulp serve
+* npm i
+* npm run dev - build and serve it up via WEBPACK
 * npm run a11y - runs pa11y accesibility on the kitchen sink (assumes gulp serve
 		 has been called) pa11y
 * npm run fonts - generates fonts from Google's Roboto font family

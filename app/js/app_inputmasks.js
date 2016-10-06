@@ -1,17 +1,23 @@
+import $ from 'jquery';
+import InputMask from 'inputmask';
+import 'jquery.inputmask';
+import 'inputmask.dependencyLib';
+import 'inputmaskDir/inputmask.extensions';
+import 'inputmaskDir/inputmask.regex.extensions';
+import 'inputmaskDir/inputmask.phone.extensions';
+import 'inputmaskDir/inputmask.date.extensions';
+import 'inputmaskDir/inputmask.numeric.extensions';
 
-(function() {
 
-  'use strict';
+(function($, InputMask) {
 
-  !function(factory) {
-      "function" == typeof define && define.amd ? define([ "jquery", "./jquery.inputmask" ], factory) : "object" == typeof exports ? module.exports = factory(require("jquery"), require("./jquery.inputmask")) : factory(jQuery);
-  }(function($) {
+      'use strict';
 
-      if (!$.inputmask || !$.inputmask.defaults) {
+      if (!$ || !InputMask) {
         return false; // fail gracefully
       }
 
-      var checkDirty = function(ev) {
+      const checkDirty = (ev) => {
         //console.info($(ev.target).parent().get(0));
         //console.info($(ev.target).parent().get(0).MaterialTextfield);
         if ($(ev.target).parent().get(0).MaterialTextfield) {
@@ -19,12 +25,11 @@
         }
       };
 
-      var placeholderCheckDirty = function(ev) {
-        var target = ev.target || this;
+      const placeholderCheckDirty = (target) => {
         //console.info(target);
         $(target).focus(function() {
           //console.info(this);
-          $(this).parent().addClass('is-dirty');
+          $(target).parent().addClass('is-dirty');
         }).blur(function() {
           if ($(target).parent().get(0).MaterialTextfield) {
             $(target).parent().get(0).MaterialTextfield.checkDirty();
@@ -32,35 +37,44 @@
         });
       };
 
-      return $.extend($.inputmask.defaults.aliases,
-        {
-          'mdl-textfield-default': {
-            showMaskOnHover: false,
-            onKeyDown: checkDirty
-          },
-          'mdl-textfield-default-placeholder': {
-            showMaskOnHover: false,
-            onKeyDown: placeholderCheckDirty,
-            onBeforeMask: placeholderCheckDirty
-          },
-          'mdl-mask-datepicker': {
-            alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
-            showMaskOnHover: false,
-            mask: 'm/d/y',
-            placeholder: 'mm/dd/yyyy',
-            onKeyDown: checkDirty
-          },
-          'mdl-mask-datepicker-placeholder': {
-            alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
-            showMaskOnHover: false,
-            mask: 'm/d/y',
-            placeholder: 'mm/dd/yyyy',
-            onKeyDown: placeholderCheckDirty,
-            onBeforeMask: placeholderCheckDirty
-          }
-        }
-      ), $.fn.inputmask;
+      const placeholderOnKeyCheckDirty = (ev) => {
+        placeholderCheckDirty(ev.target);
+      };
 
-  });
+      //
+      // DONT USE lambda/arrow function HERE SINCE 'this' SCOPE IS NEEDED!!!
+      //
+      var placeholderBeforeEventCheckDirty = function(val, opt) {
+        placeholderCheckDirty(this);
+      };
 
-}());
+      const TEXTFIELD_DEFAULT = {
+        showMaskOnHover: false
+      };
+
+      const DATEPICKER_DEFAULT = {
+        alias: 'dd/mm/yyyy',  // use one of the predefined inputmasks
+        mask: 'm/d/y',
+        placeholder: 'mm/dd/yyyy',
+        showMaskOnHover: false
+      };
+
+      const PLACEHOLDER_LABEL_DEFAULT = {
+        onKeyDown: placeholderOnKeyCheckDirty,
+        onBeforeMask: placeholderBeforeEventCheckDirty,
+        onBeforePaste: placeholderBeforeEventCheckDirty
+      };
+
+      const FLOAT_LABEL_DEFAULT = {
+        onKeyDown: checkDirty,
+        onBeforePaste: checkDirty
+      };
+
+      Inputmask.extendAliases({
+        'mdl-textfield-default': Object.assign({}, TEXTFIELD_DEFAULT , FLOAT_LABEL_DEFAULT),
+        'mdl-textfield-default-placeholder': Object.assign({}, TEXTFIELD_DEFAULT, PLACEHOLDER_LABEL_DEFAULT),
+        'mdl-mask-datepicker': Object.assign({}, DATEPICKER_DEFAULT , FLOAT_LABEL_DEFAULT),
+        'mdl-mask-datepicker-placeholder': Object.assign({}, DATEPICKER_DEFAULT, PLACEHOLDER_LABEL_DEFAULT)
+      });
+
+})($, InputMask);
