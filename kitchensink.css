@@ -1,0 +1,19 @@
+.bs-example {
+  z-index: 5 !important;
+  background-color: rgba(0, 0, 0, 0.045);
+  position: relative;
+}
+.bs-example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 280px;
+  margin: 20px;
+  z-index: 5 !important;
+}
+.sandbox {
+  padding: 20px 0;
+}
+.cards-example {
+  padding:  0 20px;
+}
