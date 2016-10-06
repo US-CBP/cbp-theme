@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme",
   "description": "CBP Common Framework UI Theme",
-  "version": "0.5.0",
+  "version": "0.4.1",
   "author": "CBP Common Framework",
   "main": "./dist/js/npm",
   "contributors": [
@@ -86,7 +86,7 @@
     "a11y": "pa11y --standard Section508 --reporter html > a11y.html http://localhost:9000 || true",
     "fonts": "webfont-dl -d \"https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic&subset=latin,greek,greek-ext,latin-ext,cyrillic-ext,cyrillic\" -o app/styles/vendor/roboto.css --font-out=app/fonts --css-rel=../../fonts --woff2=link --woff1=link --svg=link --ttf=link --eot=link",
     "preversion": "npm test",
-    "version": "npm run build && git add -A .",
+    "version": "npm run dev:build && git add -A .",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
