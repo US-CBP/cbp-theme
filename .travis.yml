@@ -4,7 +4,7 @@ node_js:
 before_script:
 - npm install
 script:
-- npm run dev:build
+- npm run build
 after_success:
 - bash publish.sh
 notifications:

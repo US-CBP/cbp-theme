@@ -10,7 +10,7 @@ Customs and Border Protection (CBP) Theme
 
 This is the common UI theme for CBP. It is used for internal and external web applications. We encourage the reuse of the theme and welcome contributions.  The theme is a set of artifacts (CSS, Javascript, and fonts), and we provide a static html page to demonstrate all the components available called the [Kitchen Sink](https://us-cbp.github.io/cbp-theme).  We also provide a [Style Guide](https://us-cbp.github.io/cbp-style-guide) to give guidance on how to use each component or pattern.
 
-This project is based on [Bootstrap 3](http://getbootstrap.com) and [Google's Material Design Lite] (https://github.com/google/material-design-lite) open source projects that allows us to easily create and maintain.  It is based on SASS. 
+This project is based on [Bootstrap 3](http://getbootstrap.com) and [Google's Material Design Lite] (https://github.com/google/material-design-lite) open source projects that allows us to easily create and maintain.  It is based on SASS.
 ___
 
 [![Kitchen Sink Screenshot](https://us-cbp.github.io/cbp-theme/images/sample_screen_shot.png)](https://us-cbp.github.io/cbp-theme/images/sample_screen_shot.png)
@@ -21,8 +21,8 @@ ___
 1. **Install [Node 6.0.0 or greater](https://nodejs.org)** - For running multiple versions of Node [nvm](https://github.com/creationix/nvm).
 2. **Install [Git](https://git-scm.com/downloads)**.
 3. Mac users can move on to step 4.  Windows users see Windows Setup section.
-4. npm install cbp-theme 
-5. OPTIONAL for Webjars: [Maven Repository](https://mvnrepository.com/artifact/org.webjars.npm/cbp-theme) and follow import instructions per build tool. 
+4. npm install cbp-theme
+5. OPTIONAL for Webjars: [Maven Repository](https://mvnrepository.com/artifact/org.webjars.npm/cbp-theme) and follow import instructions per build tool.
 
 For example for Maven:
 ```
@@ -52,7 +52,7 @@ For JS:
   <script src="webjars/cbp-theme/0.3.2/dist/js/cbp-theme.js"></script>
 
 ```
-For CSS 
+For CSS
 ```
 	<!-- third party css if any -->
 
@@ -79,7 +79,7 @@ Follow your normal build/development process as you have defined it. Here's what
     <!-- application specific third party js files here -->
     <script src="./thirdparty/js/jquery-ui.min.js"></script>
     <script src="./thirdparty/js/alerts.js"></script>
-    <script src="./thirdparty/js/select2.min.js"></script> 
+    <script src="./thirdparty/js/select2.min.js"></script>
 
     <!-- js for cbp-theme should be loaded after all thirdparty js files -->
     <script src="./dist/cbp-theme.js"></script>
@@ -99,16 +99,17 @@ Follow your normal build/development process as you have defined it. Here's what
 ```
 ----
 
-## Developers 
+## Developers
 ### NPM Commands
 
 We use Gulp for our build process but here are the common npm commands:
 
 * npm i
-* npm run dev - build and serve it up via WEBPACK
+* npm run build - builds the dependencies via WEBPACK
+* npm run dev - builds and serves it up via WEBPACK
 * npm run a11y - runs pa11y accesibility on the kitchen sink (assumes gulp serve
 		 has been called) pa11y
-* npm run fonts - generates fonts from Google's Roboto font family
+* npm run fonts - generates fonts from Google's Roboto font family (NOTE - only need to run if adding newer font styles)
 
 ### Using the Kitchen Sink
 

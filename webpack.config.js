@@ -10,7 +10,10 @@ const defaultConfig = {
     entry: {
         'cbp-theme': './index.js',
         'inputmask': './inputmask.js',
-        'jquery': [ 'jquery' ]
+        'jquery': [ 'jquery' ],
+        'cbp-theme.min': './index.js',
+        'inputmask.min': './inputmask.js',
+        'jquery.min': [ 'jquery' ]
     },
     eslint: {
         configFile: '.eslintrc'
@@ -57,6 +60,10 @@ const defaultConfig = {
         new ExtractTextPlugin('cbp-theme.css', {
           publicPath: "./",
           allChunks : false
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+          include: /\.min\.js$/,
+          minimize: true
         })
     ]
 };
