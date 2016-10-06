@@ -76,7 +76,7 @@ Follow your normal build/development process as you have defined it. Here's what
 
 * `fonts` - Font Awesome and Roboto fonts
 * `js` - jquery, jquery.inputmask, bootstrap, and custom js from cbp-theme
-* `styles` - The theme. cf-ui-theme.css
+* `styles` - The theme. cbp-theme.css
 
 ### Order of Javascript Dependencies
 ```
