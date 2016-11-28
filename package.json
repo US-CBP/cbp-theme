@@ -80,7 +80,7 @@
     "clean": "rm -rf ./dist && rm -rf ./app/kitchensink/dist",
     "lint": "eslint --ignore-pattern ./app/**/app-*.js --ext .js js/**",
     "build": "webpack --bail && npm run test",
-    "serve": "webpack-dev-server --host=0.0.0.0 --port=9000 --content-base",
+    "serve": "webpack-dev-server --host=0.0.0.0 --port=8888 --content-base",
     "dev": "npm run clean && npm run build && npm run serve",
     "test": "jest",
     "a11y": "pa11y --standard Section508 --reporter html > a11y.html http://localhost:9000 || true",
