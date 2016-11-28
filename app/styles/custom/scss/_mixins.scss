@@ -100,9 +100,9 @@
   }
 
   [disabled].btn{
-    background-color: $gray;
-    color: $gray-lightest;
-    border: 1px solid $gray;
+    background-color: $gray-darker !important;
+    color: $white !important;
+    border: 1px solid $gray-darker;
     font-weight: normal;
 
     &:focus,
@@ -117,16 +117,16 @@
   }
 
   [disabled].btn-link {
-    background-color: transparent;
-    color: $gray;
+    background-color: transparent !important;
+    color: $gray-darker !important;
     border: none;
 
     &:focus,
     &:active,
     &.active,
     &:hover {
-      background-color: transparent;
-      color: $gray;
+      background-color: transparent !important;
+      color: $gray-darker !important;
       border: none;
       cursor: not-allowed;
     }
