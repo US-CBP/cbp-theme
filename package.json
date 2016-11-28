@@ -70,9 +70,6 @@
     "webpack": "^1.12.3",
     "webpack-dev-server": "1.16.1"
   },
-  "dependencies": {
-    "jquery": "2.2 - 3"
-  },
   "optionalDependencies": {
     "jquery.inputmask": "~3.3.3"
   },
