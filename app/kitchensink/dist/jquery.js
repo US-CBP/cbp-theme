@@ -76,11 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-<<<<<<< HEAD
-/******/ 			script.src = __webpack_require__.p + "" + "287d75d3c703e08a7934" + "/js/" + chunkId + ".js";
-=======
-/******/ 			script.src = __webpack_require__.p + "" + "faf0a85c98d0171f393f" + "/js/" + chunkId + ".js";
->>>>>>> master
+/******/ 			script.src = __webpack_require__.p + "" + "4c7bac9d21b0efd20c3b" + "/js/" + chunkId + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
