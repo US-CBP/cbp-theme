@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import 'babel-polyfill'; //fixes ie11 Object.assign
 import InputMask from 'inputmask';
 import 'jquery.inputmask';
 import 'inputmask.dependencyLib';

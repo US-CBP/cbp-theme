@@ -3779,9 +3779,11 @@
       </div>
     </div>
 
+    <!-- required CBP dependency: jQuery 2.x+ -->
+    <script src="./thirdparty/js/jquery-2.2.4.min.js"></script>
+
     <!-- optional dependencies from cf-ui-theme repo -->
-    <script src="./dist/jquery.js"></script>
-    <script src="./dist/inputmask.js"></script>
+    <script src="./dist/inputmask.min.js"></script>
 
     <!-- application specific third party js files here -->
     <script src="./thirdparty/js/jquery-ui.min.js"></script>
@@ -3790,8 +3792,8 @@
     <script src="./thirdparty/js/selectize.min.js"></script>
     <script src="./thirdparty/js/tota11y.min.js"></script>
 
-    <!-- js for cbp-theme should be loaded after all thirdparty js files -->
-    <script src="./dist/cbp-theme.js"></script>
+    <!-- js for cbp-theme should be loaded after all dependencies and thirdparty js files -->
+    <script src="./dist/cbp-theme.min.js"></script>
 
     <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>

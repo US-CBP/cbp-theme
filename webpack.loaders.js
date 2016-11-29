@@ -4,9 +4,6 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin'),
     path = require('path');
 
 module.exports = [{
-    test: require.resolve('jquery'),
-    loader: 'expose?$!expose?jQuery'
-}, {
     test: /\.json$/,
     loaders: ['json']
 }, {
