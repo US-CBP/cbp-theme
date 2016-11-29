@@ -1,4 +1,5 @@
 /dist
+/app/kitchensink/dist
 /components/
 /node_modules/
 /build/
