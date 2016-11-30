@@ -17,56 +17,56 @@ ___
 
 ___
 
-### Quickstart
-* Install using NPM - npm install cbp-theme
+# Quickstart
+## Installation
+The recommended way to get the latest CBP theme is by saving as a dependency via [npm](https://docs.npmjs.com/getting-started/what-is-npm).  
 
-### Install using Webjars
+From your npm project, simply run:  
+* `npm install cbp-theme --save`
 
-* Webjars: [Maven Repository](https://mvnrepository.com/artifact/org.webjars.npm/cbp-theme) and follow import instructions per build tool.
+Or if you are using the [yarn](https://yarnpkg.com/) package manager: 
+* `yarn add cbp-theme`
 
-For Maven:
-```
-<!-- https://mvnrepository.com/artifact/org.webjars.npm/cbp-theme -->
-<dependency>
-    <groupId>org.webjars.npm</groupId>
-    <artifactId>cbp-theme</artifactId>
-    <version>0.3.2</version>
-</dependency>
-```
-For Gradle:
-```
-compile group: 'org.webjars.npm', name: 'cbp-theme', version: '0.3.2'
-```
+Note: It is recommended that you use npm to manage your frontend dependencies.  
+If you are not using npm, see [alternative installations](./alternative-installations.md) for other ways to get cbp-theme. 
 
-### Using CBP Theme with Webjars
 
-For JS:
+## Including in your html
+
+Using the cbp theme is as easy as including cbp-theme.css and cbp-theme.js in your markup.
+
+Note: cbp-theme does require `jQuery 2.x` or higher to be included before adding cbp-theme.js.    
+
+### Order of Javascript Dependencies
 ```
-  <!-- optional dependencies from cf-ui-theme repo -->
-  <script src="webjars/cbp-theme/0.3.2/dist/js/jquery.min.js"></script>
-  <script src="webjars/cbp-theme/0.3.2/dist/js/jquery.inputmask.bundle.min.js"></script>
-  <script src="webjars/cbp-theme/0.3.2/dist/js/bootstrap.min.js"></script>
+  <!-- required CBP dependency: jQuery 2.x+ -->
+  <script src="./path/to/thirdparty/js/jquery-2.2.4.min.js"></script>
+
+  <!-- optional cbp-theme plugins -->
+  <script src="./path/to/dist/inputmask.js"></script>
+
+  <!-- application specific third party js files here -->
+  <script src="./path/to/thirdparty/js/jquery-ui.min.js"></script>
+  <script src="./path/to/thirdparty/js/alerts.js"></script>
+  <script src="./path/to/thirdparty/js/select2.min.js"></script>
 
   <!-- js for cbp-theme should be loaded after all thirdparty js files -->
-  <script src="webjars/cbp-theme/0.3.2/dist/js/cbp-theme.js"></script>
+  <script src="./path/to/cbp-theme.js"></script>
+```
 
-```
-For CSS
-```
-	<!-- third party css if any -->
-
-	<!-- cbp-theme -->
-    <link media="screen" href="webjars/cbp-theme/0.3.2/dist/styles/cbp-theme.min.css" rel="stylesheet" />
-```
-### What you get
+## What you get
 
 The CBP Theme artifacts are in the
 `node_modules/cbp-theme/dist` directory.
 The dist directory contains:
 
-* `fonts` - Font Awesome and Roboto fonts
-* `js` - jquery, jquery.inputmask, bootstrap, and custom js from cbp-theme
-* `styles` - The theme. cbp-theme.css
+* `js` 
+  - cbp-theme.js:  
+  - inputmask.js:   
+* `styles` 
+  - cbp-theme.css
+* `fonts` 
+  - Font Awesome and Roboto fonts
 
 ```
 dist/
@@ -79,8 +79,6 @@ dist/
 ├── fontawesome-webfont.woff
 ├── fontawesome-webfont.woff2
 ├── inputmask.js
-├── inputmask.min.js
-├── jquery.js
 ├── inputmask.min.js
 ├── roboto-148fe3b2ffcb825efff40a8378f22125ccf88cb0.svg
 ├── roboto-15d4ddc447af43a160ea7249c8a3b8db63b90c43.ttf
@@ -102,67 +100,12 @@ dist/
 ├── roboto-fe5ca35863958aa9f3a879b7032979a3f0db3974.woff
 ```
 
-### Order of Javascript Dependencies
-```
-   <!-- optional dependencies from cf-ui-theme repo -->
-    <script src="./dist/jquery.js"></script>
-    <script src="./dist/inputmask.js"></script>
-
-    <!-- application specific third party js files here -->
-    <script src="./thirdparty/js/jquery-ui.min.js"></script>
-    <script src="./thirdparty/js/alerts.js"></script>
-    <script src="./thirdparty/js/select2.min.js"></script>
-
-    <!-- js for cbp-theme should be loaded after all thirdparty js files -->
-    <script src="./dist/cbp-theme.js"></script>
-
-```
-### Order of CSS Dependencies
-```
-	<!-- third party css if any -->
-  <link media="screen" href="./css/datepicker.css" rel="stylesheet" />
-  <link media="screen" href="./css/select2.css" rel="stylesheet" />
-
-	<!-- cbp-theme -->
-  <link media="screen" href="./css/cbp-theme.css" rel="stylesheet" />
-
-```
 ----
 
-## Building CBP Theme
-
-### Initial Machine Setup
-1. **Install [Node 6.0.0 or greater](https://nodejs.org)** - For running multiple versions of Node [nvm](https://github.com/creationix/nvm).
-2. **Install [Git](https://git-scm.com/downloads)**.
-3. git clone
-
-### NPM Commands
-
-We use Webpack for our build process wrapped by npm commands:
-
-* npm install
-* npm run build - builds the dependencies via Webpack
-* npm run dev - builds via Webpack
-* npm run server - builds and serves it up via Webpack
-* npm run a11y - runs pa11y accesibility on the kitchen sink (assumes npm run serve has been called) pa11y
-* npm run fonts - generates fonts from Google's Roboto font family (NOTE - only need to run if adding newer font styles)
-
-### Using the Kitchen Sink
-
-A demo app is located under app/kitchensink with all the components available so
-that one can experiment and test changes. Run 'npm run dev', which builds and
-uses gulp serve.  The demo app runs localhost:9000
-
-### Publishing
-We use [SemVer](http://semver.org/) system of versioning (MAJOR MINOR PATCH)
-
-* Run npm run version patch (or minor, major)
-* Run npm publish to publish the current version to NPM's public registry
-* Self publish the webjar by going to [WebJars](http://www.webjars.org/npm) and adding a new webjar using the name cbp-theme. Then select the appropriate version.
-
-### Contributing
-
+## Contributing
 We welcome contributions, please see our [Contribution Policy](https://github.com/US-CBP/open-source-policy/blob/master/CONTRIBUTING.md)
 
-### License
+To get started developing, see developer readme [here](./developer-guide.md).
+
+## License
 Please refer to [CBP Open Source License](https://github.com/US-CBP/open-source-policy/blob/master/LICENSE.md)
