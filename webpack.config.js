@@ -10,10 +10,9 @@ const defaultConfig = {
     entry: {
         'cbp-theme': './index.js',
         'inputmask': './inputmask.js',
-        'jquery': [ 'jquery' ],
+
         'cbp-theme.min': './index.js',
         'inputmask.min': './inputmask.js',
-        'jquery.min': [ 'jquery' ]
     },
     eslint: {
         configFile: '.eslintrc'
@@ -52,18 +51,14 @@ const defaultConfig = {
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.CommonsChunkPlugin('jquery', 'jquery.js', Infinity), // name, chucks/filename, minchunk
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
-        }),
         new ExtractTextPlugin('cbp-theme.css', {
           publicPath: "./",
           allChunks : false
         }),
         new webpack.optimize.UglifyJsPlugin({
           include: /\.min\.js$/,
-          minimize: true
+          minimize: true,
+          comments: false
         })
     ]
 };
@@ -73,17 +68,27 @@ const kitchensinkConfig = Object.assign({}, defaultConfig, {
     devtool: "#eval",
     debug: true,
     output: {
+        libraryTarget: 'umd',
         path: path.resolve('./app/kitchensink/dist'),
         filename: '[name].js',
         chunkFilename: "[hash]/js/[id].js"
+    },
+    externals: {
+        'jquery': 'jQuery',
+        '$': 'jQuery'
     }
 });
 
 const standardDistConfig = Object.assign({}, defaultConfig, {
     output: {
+        libraryTarget: 'umd',
         path: path.resolve('./dist'),
         filename: '[name].js',
         chunkFilename: "[hash]/js/[id].js"
+    },
+    externals: {
+        'jquery': 'jQuery',
+        '$': 'jQuery'
     }
 });
 
