@@ -17,3 +17,34 @@
 .cards-example {
   padding:  0 20px;
 }
+
+.navbar-brand .cbp-brand:before {
+  content: 'Organization Brand - CBP Theme 1.0'
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .navbar-brand .cbp-brand:before{
+    content:'Brand'
+    }
+}
+@media (max-width:767px){
+  .navbar-brand .cbp-brand:before{
+    content:'Brand'
+  }
+}
+
+.navbar-brand .dhs-brand:before {
+    content: 'Organization Sub Branding';
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .navbar-brand .dhs-brand:before{
+    content:''
+    }
+}
+
+@media (max-width:767px){
+  .navbar-brand .dhs-brand:before{
+    content:''
+  }
+}
