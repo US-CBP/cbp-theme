@@ -13,6 +13,8 @@
         margin-left: 8px;
         margin-right: -3px;
         text-shadow: none;
+        opacity: .6;
+
     }
 
     .alert-icon {
@@ -101,6 +103,7 @@
         .close {
             margin-top: -3px;
             margin-left: 8px;
+            opacity: .6;
         }
     }
 }
