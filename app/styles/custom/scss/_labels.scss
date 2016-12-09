@@ -50,7 +50,7 @@
 }
 
 .label-success.subtle {
-    color: $brand-success;
+    color: darken($brand-success, 8.8%);
     background-color: $state-success-bg;
     border: 1px solid $state-success-border;
 }
