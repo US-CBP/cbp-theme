@@ -3,7 +3,8 @@
 let webpack = require('webpack'),
     path = require('path'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    postcssImport = require('postcss-import');
+    postcssImport = require('postcss-import'),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const defaultConfig = {
     cache: true,
@@ -59,7 +60,10 @@ const defaultConfig = {
           include: /\.min\.js$/,
           minimize: true,
           comments: false
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: 'app/styles', to: 'scss' }
+        ])
     ]
 };
 
