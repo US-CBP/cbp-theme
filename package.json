@@ -71,7 +71,7 @@
     "webpack-dev-server": "1.16.1"
   },
   "optionalDependencies": {
-    "jquery.inputmask": "~3.3.3"
+    "jquery.inputmask": "3.3.3"
   },
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf ./app/kitchensink/dist",
