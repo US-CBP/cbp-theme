@@ -1,0 +1,175 @@
+
+.select2-field {
+	position: relative;
+    font-size: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
+
+	.select2, select {
+		width: 100%;
+	}
+
+	label {
+		padding-left: 8px;
+	    position: absolute;
+	    display: block;
+	    top: 30px;
+	    width: 100%;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-align: left;
+	    margin: 0;
+
+	    @include material-animation-default();
+	}
+
+	&.is-dirty {
+		label {
+			display: none;
+		}
+
+		&.select2-field--floating-label {
+			label {
+				font-size: 12px;
+				display: block;
+				top: 0;
+    			padding-left: 0px;
+    			color: $brand-info;
+			}
+		}
+	}
+
+	.select2-container {
+		z-index: 1;
+
+		.selection {
+			z-index: inherit;
+			background-color: transparent;
+
+			.select2-selection {
+				background-color: inherit;
+			}
+		}
+	}
+
+
+	.select2-container--default .select2-results__option--highlighted[aria-selected],
+	.select2-container--default.select2-container--focus .selection .select2-selection--multiple,
+	.select2-container--default .selection .select2-selection--multiple:hover,
+	.select2-container--default .selection .select2-selection--single:hover,
+	.select2-container--default .selection .select2-selection--single[aria-expanded="true"] {
+		background-color: $input-hover;
+		color: $text-color;
+	}
+
+
+	.select2-container--default .select2-selection--multiple,
+	.select2-container--default .select2-selection--single,
+	.select2-container--default.select2-container--focus .select2-selection--multiple {
+		height: 40px;
+		border: none;
+		border-bottom: 1px solid $gray;
+		border-radius: 0;
+		outline: 0;
+	}
+
+	.select2-container--default .select2-selection--multiple,.select2-container--default.select2-container--focus .select2-selection--multiple {
+		height:auto;
+	}
+
+	.select2-container--default .select2-search--inline .select2-search__field {
+		height: 30px;
+		padding: 12px 0 0 3px;
+	}
+
+
+	.select2-container--default .select2-selection--multiple input {
+		margin: 0;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice {
+		border: 1px solid $brand-default-border;
+		color: $text-color;
+		margin-top: 8px;
+		padding: 3px 10px;
+		background-color: $brand-default;
+		border-radius: 2px;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice:hover {
+		background-color: lighten($brand-default, 5%);
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+		color: $text-color;
+		margin: 0 0 0 5px;
+		float: right;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: 40px;
+		padding: 0 8px;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 40px;
+		width: 40px;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__arrow b {
+		border-color: #808080 transparent transparent transparent;
+		border-style: solid;
+	    border-width: 5px 5px 0 5px;
+	}
+
+	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+		margin-top: -4px;
+	    border-width: 0 5px 5px 5px;
+	    border-color: transparent transparent #808080 transparent;
+	}
+	    
+
+	.select2-container--open .select2-dropdown--above,
+	.select2-container--open .select2-dropdown--below {
+		box-shadow: 0 1px 2px rgba(0,0,0,.26);
+	}
+
+	.select2-container--default .select2-search--dropdown .select2-search__field {
+		border-top: none;
+		border-right: none;
+		border-left: none
+	}
+	
+
+}
+
+.select2-dropdown {
+	border-radius: 2px;
+
+	.select2-results {
+
+		.select2-results__options {
+
+			.select2-results__option {
+				padding: 13px !important;
+			}
+
+			.select2-results__option--highlighted[aria-selected] {
+				background-color: $input-hover;
+				color: $text-color;
+			}
+
+		}
+
+	}
+}
+
+
+
+
+
