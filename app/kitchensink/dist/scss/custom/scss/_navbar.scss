@@ -1,0 +1,261 @@
+.navbar {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  &-inverse {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    //background-image: url(../images/hero-mockup11.png);
+    //background-size: cover;
+    //background-repeat: no-repeat;
+    //background-position: center -10em;
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
+  }
+
+  .badge {
+    text-shadow: none;
+  }
+
+  &-nav > li > a > .glyphicon,
+  &-nav > li > a > .fa {
+    line-height: 0;
+    top: 2px;
+    padding: 0 2px;
+  }
+  &-nav > li > a, &-nav > li > a:hover {
+    padding-top: $navbar-padding-vertical + 2px;
+    padding-bottom: $navbar-padding-vertical - 2px;
+    @include transition(color ease-in-out .2s);
+  }
+
+  &-brand {
+    padding: 5px 70px 5px 17px;
+    height: 50px;
+
+    @include transition(color ease-in-out .2s);
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding: 16px 70px 16px 17px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding: 16px 70px 16px 17px;
+    }
+
+    &.nav-brand-offset {
+      padding-left: 3em;
+    }
+
+    .cbp-brand {
+
+      span {
+        display: none;
+      }
+
+      @media (max-width: $screen-xs-max) {
+          span {
+            display: inline;
+          }
+      }
+
+      &:before {
+        content: 'U.S. Customs & Border Protection';
+        font-size: 18px;
+        line-height: 16px;
+
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          content : 'U.S. CBP';
+        }
+
+        @media (max-width: $screen-xs-max) {
+          content : 'U.S. CBP';
+        }
+      }
+
+    }
+
+
+    .dhs-brand {
+      display: block;
+      margin: 0;
+      line-height: 14px;
+
+      &:before {
+        content: 'U.S. Department of Homeland Security';
+        font-size: 12px;
+        font-style: italic;
+
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          content : '';
+          display: hidden;
+        }
+
+        @media (max-width: $screen-xs-max) {
+          content : '';
+          display: hidden;
+        }
+      }
+    }
+
+  }
+
+
+  .caret, .caret:hover {
+    @include transition(border-color ease-in-out .2s);
+  }
+  .dropdown-menu {
+    text-shadow: none;
+
+    &.with-badges {
+      width: 230px;
+
+      .badge.pull-right {
+        margin-top: -2px;
+      }
+    }
+  }
+
+  &.navbar-fixed-top.navbar-second-fixed {
+    top: 50px;
+    z-index: 1000;
+  }
+  &.navbar-flush {
+    margin-bottom: 0;
+  }
+
+  .mdl-textfield {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    input.mdl-textfield__input {
+
+    }
+
+    label.mdl-textfield__label {
+      top: 14px;
+
+      &:after {
+        bottom: 5px;
+      }
+    }
+  }
+
+}
+
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.navbar a:hover {
+  outline: thin dotted;
+  outline-offset: -2px;
+}
+
+.navbar .form-control:focus {
+  background-color: #FFFFFF;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: $brand-primary;
+}
+
+.navbar-nav .nav-tabs li.dropdown {
+  &:hover {
+    > a {
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid #1460aa;
+    }
+  }
+
+  a.pull-right {
+    padding-left: 5px;
+  }
+
+  a.pull-left {
+    padding-right: 5px;
+  }
+
+}
+
+.app-header,
+.app-header-bottom {
+  @extend .navbar, .navbar-default, .navbar-flush;
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.cbp-header {
+  @extend .navbar, .navbar-inverse, .navbar-fixed-top, .navbar-flush;
+  height: auto;
+  @include transition(all linear .1s);
+  z-index: $zindex-navbar;
+
+  &.disappear {
+    @include max-height(0);
+    z-index: $zindex-navbar - 100;
+  }
+
+  .navbar-right {
+    margin-right: 3px !important;
+  }
+}
+
+.app-header {
+  @extend .navbar, .navbar-default, .navbar-flush;
+  @include transition(all ease-in-out .2s);
+  z-index: $zindex-appbar;
+  top: 50px;
+  //border-width: 0 0 1px;
+
+  &.top {
+    top:0px;
+    z-index: $zindex-navbar-fixed;
+  }
+}
+
+.app-header-bottom {
+  bottom: 0;
+  margin-bottom: 0; // override .navbar defaults
+  border-width: 1px 0 0;
+}
+
+.navbar-collapse .navbar-nav > .nav-tabs > li > a {
+    padding: 15px 15px;
+}
+
+.nav.navbar-nav .nav-item {
+  border-bottom: 2px solid $gray-lighter;
+
+  > .dropdown-menu,
+  > .ui-datepicker {
+    margin-top: 3px;
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid $brand-info;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+}

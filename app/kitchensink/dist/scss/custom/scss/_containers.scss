@@ -1,0 +1,45 @@
+.sidebar {
+    left: 0;
+    z-index: 990;
+    background-color: $gray-lightest;
+    border-right: 1px solid #eee;
+  }
+@media (min-width:$screen-lg) {
+  .sidebar {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    position: fixed;
+    bottom: 0;
+
+    &.after-double-header {
+      top: 104px;
+      @include transition(top ease 0.25s);
+    }
+
+    &.after-header {
+      top: 54px;
+      @include transition(top ease 0.25s);
+    }
+  }
+  .content {
+    padding-top: 51px;
+  }
+
+}
+@media (max-width:$screen-lg) {
+  .sidebar {
+    &.after-double-header {
+      padding-top: 50px;
+    }
+  }
+}
+@media (min-width:$screen-lg) and (min-width:$screen-md) and (min-width:$screen-sm){
+  .cbp-sidebar {
+    width: 350px;
+    padding-left: 0.5em;
+  }
+  .cbp-sidebar-offset {
+    margin-left: 360px;
+  }
+}
