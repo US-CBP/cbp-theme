@@ -1,0 +1,36 @@
+.mdl-textfield__help,
+.mdl-textfield__counter {
+  color: $gray;
+  position: absolute;
+  font-size: $input-text-floating-label-fontsize;
+  margin-top: 3px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.mdl-textfield__counter {
+  @extend .mdl-textfield--align-right;
+  @extend .mdl-textfield--full-width;
+}
+
+.is-invalid .mdl-textfield__help {
+  visibility: hidden;
+}
+
+
+.mdl-textfield__input {
+  background-color: $white;
+  padding-left: 3px;
+  &:hover {
+    background-color: $input-hover;
+  }
+}
+
+.mdl-textfield__label {
+  padding-left: 3px;
+}
+
+fieldset[disabled] .mdl-textfield .mdl-textfield__input,
+.mdl-textfield.is-disabled .mdl-textfield__input {
+  cursor: not-allowed;
+}

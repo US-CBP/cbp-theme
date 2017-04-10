@@ -1,0 +1,129 @@
+.selectize-field {
+	position: relative;
+    font-size: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 0;
+
+	label {
+		padding-left: 8px;
+	    position: absolute;
+	    display: block;
+	    top: 30px;
+	    width: 100%;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-align: left;
+	    margin: 0;
+
+	    @include material-animation-default();
+	}
+
+	&.is-dirty {
+		label {
+			display: none;
+		}
+
+		&.selectize-field--floating-label {
+			label {
+				font-size: 12px;
+				display: block;
+				top: 0;
+    			padding-left: 0px;
+    			color: $brand-info;
+			}
+		}
+	}
+
+
+	.selectize-control {
+		height: 32px;
+	  	line-height: normal;
+
+		.selectize-input {
+			border: none;
+			box-shadow: none;
+			background-color: transparent;
+			min-height: 32px;
+		    padding: 10px 8px;
+		    border-top: none;
+		    border-width: 0 0 1px 0;
+
+			&.input-active,
+			&:hover {
+				background-color: $input-hover;
+			}
+		}
+
+		&.multi {
+		    display: initial;
+
+		    .selectize-input {
+
+				&.has-items {
+					padding: 6px 8px;
+				}
+
+		    	> div, 
+			    > div.active {
+					border: 1px solid $brand-default-border;
+					color: $text-color;
+					margin: 3px 5px 3px 0;
+					padding: 4px 10px;
+					background-color: $brand-default;
+					border-radius: 2px;
+					
+					&:hover {
+						background-color: lighten($brand-default, 5%);
+					}
+			    }
+
+		    }
+		}
+
+	}
+
+	.selectize-dropdown, .selectize-input, .selectize-input {
+	  border-bottom: 1px solid $gray !important;
+	}
+
+	.selectize-dropdown, .selectize-input, .selectize-input input {
+	  line-height: normal;
+	  border-radius: 0;
+	  font-size: $font-size-base;
+
+	  &.focus {
+	    border-radius: 0;
+	    box-shadow: none;
+	    border-bottom: 1px
+	  }
+	}
+
+	.selectize-dropdown:-ms-input-placeholder,
+	.selectize-input:-ms-input-placeholder,
+	.selectize-input input:-ms-input-placeholder {
+	    line-height: 0.4;
+	}
+
+	.selectize-dropdown {
+	    & .option {
+	    	background-color: #fff;
+	    }
+
+	    & .option.active {
+	    	background-color: $input-hover;
+	    }
+	}
+
+	.selectize-dropdown {
+
+		& [data-selectable],
+		& .optgroup-header {
+	    	padding: 10px;
+		}
+	
+	}
+}

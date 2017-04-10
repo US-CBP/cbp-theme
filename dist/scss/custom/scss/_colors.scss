@@ -1,0 +1,20 @@
+//COLORS
+//--------------------------------------------------------
+
+// Contextual backgrounds
+@mixin bg-color-variant($color)
+{
+  background-color: $color !important;
+  color: #fff !important;
+
+  &:hover, &:focus {
+    background-color: darken($color, 10%) !important;
+  }
+}
+
+.bg-primary { @include bg-color-variant($brand-primary); }
+.bg-info { @include bg-color-variant($brand-info); }
+.bg-danger { @include bg-color-variant($brand-danger); }
+.bg-success { @include bg-color-variant($brand-success); }
+.bg-default { @include bg-color-variant($gray-dark); }
+.bg-warning { @include bg-color-variant($brand-warning); }
