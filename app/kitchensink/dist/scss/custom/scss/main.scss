@@ -1,4 +1,4 @@
-@import "../../../../node_modules/material-design-lite/src/resets/_resets";
+@import "~material-design-lite/src/resets/_resets";
 
 @import "_variables"; // Bootstrap and our variables!!!
 @import "../../vendor/_bootstrap"; // apply variables to bootstrap!
@@ -6,7 +6,7 @@
 
 
 // vendor imports
-@import "../../../../node_modules/mdl-selectfield/src/selectfield/selectfield";
+@import "../../../../node_modules/mdl-selectfield/src/selectfield/selectfield.scss";
 @import "../../vendor/_datepicker";
 @import "../../vendor/_nouislider";
 @import "../../vendor/_select2_mdl_theme";
