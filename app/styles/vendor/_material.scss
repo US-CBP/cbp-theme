@@ -30,13 +30,13 @@ $checkbox-padding: 8px !default;
 $checkbox-top-offset: ($checkbox-label-height - $checkbox-button-size - $checkbox-inner-margin) / 2;
 $checkbox-ripple-size: $checkbox-label-height * 1.5;
 
-@import '../../../node_modules/material-design-lite/src/_mixins';
+@import '~material-design-lite/src/_mixins';
 
-@import '../../../node_modules/material-design-lite/src/ripple/_ripple';
-@import '../../../node_modules/material-design-lite/src/checkbox/_checkbox';
-@import '../../../node_modules/material-design-lite/src/radio/_radio';
-@import '../../../node_modules/material-design-lite/src/textfield/_textfield';
-@import '../../../node_modules/material-design-lite/src/data-table/data-table';
+@import '~material-design-lite/src/ripple/_ripple';
+@import '~material-design-lite/src/checkbox/_checkbox';
+@import '~material-design-lite/src/radio/_radio';
+@import '~material-design-lite/src/textfield/_textfield';
+@import '~material-design-lite/src/data-table/data-table';
 
 @import 'material_images'; //embedded mdl svg images
 @import 'material_custom';
