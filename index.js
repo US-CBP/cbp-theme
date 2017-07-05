@@ -1,6 +1,6 @@
 import 'bootstrap';
 import 'material-design-lite';
-import 'mdl-selectfield';
+import 'mdl-selectfield-module';
 
 import './app/js/app_char_limit';
 import './app/js/app_datepicker';

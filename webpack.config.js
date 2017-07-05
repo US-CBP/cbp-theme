@@ -45,7 +45,7 @@ const defaultConfig = {
             "inputmask": path.resolve('./node_modules/jquery.inputmask/dist/inputmask/inputmask.js'),
             "jquery.inputmask": path.resolve('./node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js'),
             "inputmaskDir": path.resolve('./node_modules/jquery.inputmask/dist/inputmask'),
-            "mdl-selectfield": path.resolve('./node_modules/mdl-selectfield/dist/mdl-selectfield.js'),
+            "mdl-selectfield-module": path.resolve('./node_modules/mdl-selectfield/dist/mdl-selectfield.js')
         },
         extensions: [ '', '.json', '.js', '.min.js', '.bundle.js', '.css', '.min.css', '.scss', '.html' ]
     },
