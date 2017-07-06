@@ -18,18 +18,14 @@ import 'inputmaskDir/inputmask.numeric.extensions';
       }
 
       const checkDirty = (ev) => {
-        //console.info($(ev.target).parent().get(0));
-        //console.info($(ev.target).parent().get(0).MaterialTextfield);
         if ($(ev.target).parent().get(0).MaterialTextfield) {
           $(ev.target).parent().get(0).MaterialTextfield.checkDirty();
         }
       };
 
       const placeholderCheckDirty = (target) => {
-        //console.info(target);
-        $(target).focus(function() {
-          //console.info(this);
-          $(target).parent().addClass('is-dirty');
+        $(target).focusin(function() {
+          $(target).parent().addClass('is-focused');
         }).blur(function() {
           if ($(target).parent().get(0).MaterialTextfield) {
             $(target).parent().get(0).MaterialTextfield.checkDirty();
@@ -60,7 +56,7 @@ import 'inputmaskDir/inputmask.numeric.extensions';
       };
 
       const PLACEHOLDER_LABEL_DEFAULT = {
-        onKeyDown: placeholderOnKeyCheckDirty,
+        onKeyDown: placeholderBeforeEventCheckDirty,
         onBeforeMask: placeholderBeforeEventCheckDirty,
         onBeforePaste: placeholderBeforeEventCheckDirty
       };
