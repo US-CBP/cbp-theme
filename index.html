@@ -380,7 +380,7 @@
               <a href="#Tooltips" class="list-group-item">Tooltips</a>
               <a href="#Typography" class="list-group-item">Typography</a>
             </div>
-            
+
             <!-- Accordion -->
             <div>
               <h2 id="Accordion" class="page-header"> Accordion
@@ -1647,6 +1647,7 @@
                     <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield mdl-textfield--full-width">
                       <label for="ht58" class="mdl-textfield__label">Email</label>
                       <input class="mdl-textfield__input" type="text" maxlength="25" data-charlimit=" 'target' : '.mdl-textfield__counter', 'limit' : 25 " pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" id="ht58">
+                      <i class="fa fa-info-circle" aria-hidden="true"></i>
                       <p class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Not a valid email address</p>
                       <p class="mdl-textfield__help">This is how people will contact you.</p>
                       <p class="mdl-textfield__counter"></p>
@@ -2374,16 +2375,17 @@
                   <h4>Includes Borderless, Comfortable, Hover stylings with MDL additions <small>Just by using the classnames: "cbp-table mdl-js-data-table"</small></h4>
                   <div>
                     <table class="cbp-table mdl-js-data-table">
+                      <caption>Standard Table</caption>
                       <thead>
                         <tr>
                           <th scope="col" class="non-numeric">Project name</th>
                           <th scope="col" class="non-numeric">Description</th>
-                          <th>Price</th>
+                          <th scope="col">Price</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td scope="row" class="non-numeric">Invoice</td>
+                          <th scope="row" class="non-numeric">Invoice</th>
                           <td class="non-numeric">
                             <span>Add invoice confirmation</span>
                           </td>
@@ -2392,7 +2394,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td scope="row" class="non-numeric">Templates</td>
+                          <th scope="row" class="non-numeric">Templates</th>
                           <td class="non-numeric">
                             <span>Refactor templates to use the new templating library</span>
                           </td>
@@ -2401,7 +2403,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td scope="row" class="non-numeric">Payments</td>
+                          <th scope="row" class="non-numeric">Payments</th>
                           <td class="non-numeric">
                             <span>Process payments using third party api</span>
                           </td>
@@ -2410,7 +2412,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td scope="row" class="non-numeric">Account Management</td>
+                          <th scope="row" class="non-numeric">Account Management</th>
                           <td class="non-numeric">
                             <span>Improve account management workflow</span>
                           </td>
@@ -2425,56 +2427,59 @@
                   <h4>Striped Alternative Rows</h4>
                   <div>
                     <table class="cbp-table table-striped mdl-js-data-table">
+                      <caption>Striped Table</caption>
                       <thead>
                         <tr>
                           <th scope="col" class="non-numeric">Project name</th>
                           <th scope="col" class="non-numeric">Description</th>
-                          <th scope="col" >Price</th>
+                          <th scope="col">Price</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td scope="row" class="non-numeric">Invoice</td>
-                          <td class="non-numeric">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td>
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row" class="non-numeric">Templates</td>
-                          <td class="non-numeric">
-                            <span>Refactor templates to use the new templating library</span>
-                          </td>
-                          <td>
-                            <span>$9,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row" class="non-numeric">Payments</td>
-                          <td class="non-numeric">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td>
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row" class="non-numeric">Account Management</td>
-                          <td class="non-numeric">
-                            <span>Improve account management workflow</span>
-                          </td>
-                          <td>
-                            <span>$6,000</span>
-                          </td>
-                        </tr>
-                      </tbody>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="non-numeric">Invoice</th>
+                        <td class="non-numeric">
+                          <span>Add invoice confirmation</span>
+                        </td>
+                        <td>
+                          <span>$4,500</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Templates</th>
+                        <td class="non-numeric">
+                          <span>Refactor templates to use the new templating library</span>
+                        </td>
+                        <td>
+                          <span>$9,000</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Payments</th>
+                        <td class="non-numeric">
+                          <span>Process payments using third party api</span>
+                        </td>
+                        <td>
+                          <span>$5,400</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Account Management</th>
+                        <td class="non-numeric">
+                          <span>Improve account management workflow</span>
+                        </td>
+                        <td>
+                          <span>$6,000</span>
+                        </td>
+                      </tr>
+                    </tbody>
                     </table>
                   </div>
+
                   <h4>Selectable Table <small>With a selected row</small></h4>
                   <div>
                     <table class="cbp-table-selectable mdl-js-data-table">
+                      <caption>Selection</caption>
                       <thead>
                         <tr>
                           <th scope="col">
@@ -2494,7 +2499,7 @@
                               <input type="checkbox" id="row[1]" class="mdl-checkbox__input" />
                             </label>
                           </td>
-                          <td scope="row" class="non-numeric">Acrylic (Transparent)</td>
+                          <th scope="row" class="non-numeric">Acrylic (Transparent)</th>
                           <td>25</td>
                           <td>$2.90</td>
                         </tr>
@@ -2504,7 +2509,7 @@
                               <input type="checkbox" id="row[2]" class="mdl-checkbox__input" checked />
                             </label>
                           </td>
-                          <td scope="row" class="non-numeric">Plywood (Birch)</td>
+                          <th scope="row" class="non-numeric">Acrylic (Transparent)</th>
                           <td>50</td>
                           <td>$1.25</td>
                         </tr>
@@ -2514,7 +2519,7 @@
                               <input type="checkbox" id="row[3]" class="mdl-checkbox__input" />
                             </label>
                           </td>
-                          <td scope="row" class="non-numeric">Laminate (Gold on Blue)</td>
+                          <th scope="row" class="non-numeric">Laminate (Gold on Blue)</th>
                           <td>10</td>
                           <td>$2.35</td>
                         </tr>
@@ -2523,7 +2528,8 @@
                   </div>
                   <h4>Floating header <small>Example w/o thirdparty fix</small></h4>
                   <div>
-                    <table aria-hidden="true" class="cbp-table-selectable mdl-js-data-table floating-table-header">
+                    <table aria-hidden="true" class="cbp-table mdl-js-data-table floating-table-header">
+                      <caption>Fixed Header Table</caption>
                       <thead>
                         <tr>
                           <th scope="col" class="non-numeric" style="width: 25%">Project name</th>
@@ -2533,17 +2539,17 @@
                       </thead>
                     </table>
                     <div class="floating-table-body" style="max-height: 200px;">
-                      <table class="cbp-table-selectable mdl-js-data-table" >
+                      <table class="cbp-table-selectable mdl-js-data-table">
                         <thead>
                           <tr>
                             <th scope="col" class="non-numeric" style="width: 25%;">Project name</th>
                             <th scope="col" class="non-numeric" style="width: 50%;">Description</th>
                             <th scope="col">Price</th>
                           </tr>
-                        </thead>
-                        <tbody>
+                      </thead>
+                       <tbody>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Invoice</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Add invoice confirmation</span>
                             </td>
@@ -2552,7 +2558,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Templates</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Refactor templates to use the new templating library</span>
                             </td>
@@ -2561,7 +2567,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Payments</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Process payments using third party api</span>
                             </td>
@@ -2570,7 +2576,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Account Management</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Improve account management workflow</span>
                             </td>
@@ -2579,7 +2585,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Invoice</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Add invoice confirmation</span>
                             </td>
@@ -2588,7 +2594,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Templates</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Refactor templates to use the new templating library</span>
                             </td>
@@ -2597,7 +2603,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Payments</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Process payments using third party api</span>
                             </td>
@@ -2606,7 +2612,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Account Management</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Improve account management workflow</span>
                             </td>
@@ -2615,7 +2621,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Invoice</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Add invoice confirmation</span>
                             </td>
@@ -2624,7 +2630,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Templates</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Refactor templates to use the new templating library</span>
                             </td>
@@ -2633,7 +2639,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Payments</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Process payments using third party api</span>
                             </td>
@@ -2642,7 +2648,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Account Management</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Improve account management workflow</span>
                             </td>
@@ -2651,7 +2657,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Invoice</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Add invoice confirmation</span>
                             </td>
@@ -2660,7 +2666,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Templates</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Refactor templates to use the new templating library</span>
                             </td>
@@ -2669,7 +2675,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Payments</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Process payments using third party api</span>
                             </td>
@@ -2678,7 +2684,7 @@
                             </td>
                           </tr>
                           <tr>
-                            <td scope="row" class="non-numeric" style="width: 25%;">Account Management</td>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
                             <td class="non-numeric" style="width: 50%;">
                               <span>Improve account management workflow</span>
                             </td>
@@ -2686,9 +2692,8 @@
                               <span>$6,000</span>
                             </td>
                           </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                          </tbody>
+                    </table>
                   </div>
                   <h3>Other Examples</h3>
                   <h4>Example A</h4>
@@ -2741,59 +2746,61 @@
                   <h4>Example B <small>Sortable</small></h4>
                   <div>
                     <table role="grid" class="cbp-table table-sortable table-striped mdl-js-data-table">
-                      <thead>
-                        <tr role="row">
-                          <th scope="col" role="columnheader" aria-sort="ascending" class="non-numeric sortable active">
-                            Project name
-                            <i class="fa fa-caret-down"></i>
-                          </th>
-                          <th scope="col" role="columnheader" aria-sort="none" class="non-numeric sortable">Description</th>
-                          <th scope="col" role="columnheader" aria-sort="none" class="sortable">Price</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td role="row" class="non-numeric">Invoice</td>
-                          <td class="non-numeric">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td>
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">Templates</td>
-                          <td class="non-numeric">
-                            <span>Refactor templates to use the new templating library</span>
-                          </td>
-                          <td>
-                            <span>$9,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">Payments</td>
-                          <td class="non-numeric">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td>
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">Account Management</td>
-                          <td class="non-numeric">
-                            <span>Improve account management workflow</span>
-                          </td>
-                          <td>
-                            <span>$6,000</span>
-                          </td>
-                        </tr>
-                      </tbody>
+                    <caption>Single Sorting</caption>
+                    <thead>
+                      <tr role="row">
+                        <th scope="col" role="columnheader" aria-sort="ascending" class="non-numeric sortable active">
+                          Project name
+                          <i class="fa fa-caret-down"></i>
+                        </th>
+                        <th scope="col" role="columnheader" aria-sort="none" class="non-numeric sortable">Description</th>
+                        <th scope="col" role="columnheader" aria-sort="none" class="sortable">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="non-numeric">Invoice</th>
+                        <td class="non-numeric">
+                          <span>Add invoice confirmation</span>
+                        </td>
+                        <td>
+                          <span>$4,500</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Templates</th>
+                        <td class="non-numeric">
+                          <span>Refactor templates to use the new templating library</span>
+                        </td>
+                        <td>
+                          <span>$9,000</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Payments</th>
+                        <td class="non-numeric">
+                          <span>Process payments using third party api</span>
+                        </td>
+                        <td>
+                          <span>$5,400</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Account Management</th>
+                        <td class="non-numeric">
+                          <span>Improve account management workflow</span>
+                        </td>
+                        <td>
+                          <span>$6,000</span>
+                        </td>
+                      </tr>
+                    </tbody>
                     </table>
                   </div>
                   <h4>Example C <small>With Sort Order Annotations</small></h4>
                   <div>
                     <table role="grid" class="cbp-table table-sortable table-striped mdl-js-data-table">
+                      <caption>Multi Sorting</caption>
                       <thead>
                         <tr role="row">
                           <th scope="col" role="columnheader" aria-sort="other" class="sortable active non-numeric">
@@ -2804,12 +2811,12 @@
                             Date
                             <i class="fa fa-caret-up text-muted non-numeric"></i> <sup>2</sup>
                           </th>
-                          <th scope="col" role="columnheader" class="non-numeric">Module</th>
+                          <th scope="col" class="non-numeric">Module</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td role="row" class="non-numeric">user.create</td>
+                          <th scope="row" class="non-numeric">user.create</th>
                           <td>
                             <span>10/21/14</span>
                           </td>
@@ -2818,7 +2825,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td role="row" class="non-numeric">user.create</td>
+                          <th scope="row" class="non-numeric">user.create</th>
                           <td>
                             <span>10/19/14</span>
                           </td>
@@ -2827,7 +2834,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td role="row" class="non-numeric">user.register</td>
+                          <th scope="row" class="non-numeric">user.register</th>
                           <td>
                             <span>10/21/14</span>
                           </td>
@@ -2836,7 +2843,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td role="row" class="non-numeric">user.register</td>
+                          <th scope="row" class="non-numeric">user.register</th>
                           <td>
                             <span>10/18/14</span>
                           </td>
@@ -2849,135 +2856,136 @@
                   </div>
                   <h4>Example D <small>Table with action items</small></h4>
                   <div>
-                    <table role="grid" class="cbp-table table-outline table-striped mdl-js-data-table">
-                      <tbody>
-                        <tr>
-                          <td role="row" class="non-numeric">
-                            <strong>IMG_234.jpg</strong>
-                            <br>
-                            <span>2 days ago</span>
-                          </td>
-                          <td>
-                            <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
-                            <i class="fa text-muted fa-close"></i>
-                            <span class="sr-only">Delete</span>
-                            </button>
-                            <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
-                            <i class="fa text-muted fa-ellipsis-v"></i>
-                            <span class="sr-only">More</span>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">
-                            <strong>IMG_235.jpg</strong>
-                            <br>
-                            <span>2 days ago</span>
-                          </td>
-                          <td>
-                            <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
-                            <i class="fa text-muted fa-close"></i>
-                            <span class="sr-only">Delete</span>
-                            </button>
-                            <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
-                            <i class="fa text-muted fa-ellipsis-v"></i>
-                            <span class="sr-only">More</span>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">
-                            <strong>IMG_236.jpg</strong>
-                            <br>
-                            <span>2 days ago</span>
-                          </td>
-                          <td>
-                            <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
-                            <i class="fa text-muted fa-close"></i>
-                            <span class="sr-only">Delete</span>
-                            </button>
-                            <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
-                            <i class="fa text-muted fa-ellipsis-v"></i>
-                            <span class="sr-only">More</span>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">
-                            <strong>IMG_237.jpg</strong>
-                            <br>
-                            <span>2 days ago</span>
-                          </td>
-                          <td>
-                            <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
-                            <i class="fa text-muted fa-close"></i>
-                            <span class="sr-only">Delete</span>
-                            </button>
-                            <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
-                            <i class="fa text-muted fa-ellipsis-v"></i>
-                            <span class="sr-only">More</span>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <table class="cbp-table table-outline table-striped mdl-js-data-table">
+                    <caption>Row Action Buttons</caption>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="non-numeric">
+                          <strong>IMG_234.jpg</strong>
+                          <br>
+                          <span>2 days ago</span>
+                        </th>
+                        <td>
+                          <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
+                          <i class="fa text-muted fa-close"></i>
+                          <span class="sr-only">Delete</span>
+                          </button>
+                          <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
+                          <i class="fa text-muted fa-ellipsis-v"></i>
+                          <span class="sr-only">More</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">
+                          <strong>IMG_235.jpg</strong>
+                          <br>
+                          <span>2 days ago</span>
+                        </th>
+                        <td>
+                          <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
+                          <i class="fa text-muted fa-close"></i>
+                          <span class="sr-only">Delete</span>
+                          </button>
+                          <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
+                          <i class="fa text-muted fa-ellipsis-v"></i>
+                          <span class="sr-only">More</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                         <th scope="row" class="non-numeric">
+                          <strong>IMG_236.jpg</strong>
+                          <br>
+                          <span>2 days ago</span>
+                        </th>
+                        <td>
+                          <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
+                          <i class="fa text-muted fa-close"></i>
+                          <span class="sr-only">Delete</span>
+                          </button>
+                          <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
+                          <i class="fa text-muted fa-ellipsis-v"></i>
+                          <span class="sr-only">More</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">
+                          <strong>IMG_237.jpg</strong>
+                          <br>
+                          <span>2 days ago</span>
+                        </th>
+                        <td>
+                          <button class="btn btn-hover btn-icon-only" title="Delete" data-toggle="tooltip">
+                          <i class="fa text-muted fa-close"></i>
+                          <span class="sr-only">Delete</span>
+                          </button>
+                          <button class="btn btn-hover btn-icon-only" title="More options" data-toggle="tooltip">
+                          <i class="fa text-muted fa-ellipsis-v"></i>
+                          <span class="sr-only">More</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                   </div>
                   <h4>Example E <small>Table header with options menu</small></h4>
                   <div>
-                    <table class="cbp-table mdl-js-data-table">
-                      <thead>
-                        <tr role="row">
-                          <th scope="col" role="columnheader" class="non-numeric">Project name</th>
-                          <th scope="col" role="columnheader" class="non-numeric">Description</th>
-                          <th scope="col" role="columnheader">Price</th>
-                          <th scope="col" role="columnheader" class="table-config-column" title="Show and hide columns" data-toggle="tooltip">
-                            <button aria-label="table_toggle_button_label" type="button" data-container="body" data-target="#example_table_modal" data-toggle="modal" >
-                            <i class="fa fa-ellipsis-h" ></i>
-                            </button>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td role="row" class="non-numeric">Invoice</td>
-                          <td class="non-numeric">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td colspan="2">
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="non-numeric">Templates</td>
-                          <td class="non-numeric">
-                            <span>Refactor templates to use the new templating library</span>
-                          </td>
-                          <td colspan="2">
-                            <span>$9,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">Payments</td>
-                          <td class="non-numeric">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td colspan="2">
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row" class="non-numeric">Account Management</td>
-                          <td class="non-numeric">
-                            <span>Improve account management workflow</span>
-                          </td>
-                          <td colspan="2">
-                            <span>$6,000</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <table class="cbp-table mdl-js-data-table">
+                    <caption>Column Customization</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col" class="non-numeric">Project name</th>
+                        <th scope="col" class="non-numeric">Description</th>
+                        <th scope="col" >Price</th>
+                        <th scope="col" class="table-config-column" title="Show and hide columns" data-toggle="tooltip">
+                          <button type="button" data-container="body" data-target="#example_table_modal" data-toggle="modal" >
+                          <i class="fa fa-ellipsis-h" ></i>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="non-numeric">Invoice</th>
+                        <td class="non-numeric">
+                          <span>Add invoice confirmation</span>
+                        </td>
+                        <td colspan="2">
+                          <span>$4,500</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Templates</th>
+                        <td class="non-numeric">
+                          <span>Refactor templates to use the new templating library</span>
+                        </td>
+                        <td colspan="2">
+                          <span>$9,000</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Payments</th>
+                        <td class="non-numeric">
+                          <span>Process payments using third party api</span>
+                        </td>
+                        <td colspan="2">
+                          <span>$5,400</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="non-numeric">Account Management</th>
+                        <td class="non-numeric">
+                          <span>Improve account management workflow</span>
+                        </td>
+                        <td colspan="2">
+                          <span>$6,000</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                   </div>
-
                   <!-- Show and hide columns popup for table above -->
                   <div class="modal fade in" id="example_table_modal">
                     <div class="modal-dialog modal-sm">
@@ -2994,56 +3002,56 @@
                             <div class="form-group">
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes0" class="mdl-checkbox__input" value="option0" />
-                                  <span for="optionsCheckboxes0" class="mdl-checkbox__label">Select all</span>
+                                  <input type="checkbox" id="optionsCheckboxes10" class="mdl-checkbox__input" value="option0" />
+                                  <span for="optionsCheckboxes10" class="mdl-checkbox__label">Select all</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes188" class="mdl-checkbox__input" value="option1" checked />
-                                  <span for="optionsCheckboxes188" class="mdl-checkbox__label">Thumbnail</span>
+                                  <input type="checkbox" id="optionsCheckboxes11" class="mdl-checkbox__input" value="option1" checked />
+                                  <span for="optionsCheckboxes11" class="mdl-checkbox__label">Thumbnail</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes288" class="mdl-checkbox__input" value="option2" checked />
-                                  <span for="optionsCheckboxes288" class="mdl-checkbox__label">Word mark</span>
+                                  <input type="checkbox" id="optionsCheckboxes12" class="mdl-checkbox__input" value="option2" checked />
+                                  <span for="optionsCheckboxes12" class="mdl-checkbox__label">Word mark</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes388" class="mdl-checkbox__input" value="option3" />
-                                  <span for="optionsCheckboxes388" class="mdl-checkbox__label">Review source</span>
+                                  <input type="checkbox" id="optionsCheckboxes13" class="mdl-checkbox__input" value="option3" />
+                                  <span for="optionsCheckboxes13" class="mdl-checkbox__label">Review source</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes488" class="mdl-checkbox__input" value="option4" checked />
-                                  <span for="optionsCheckboxes488" class="mdl-checkbox__label">Review type</span>
+                                  <input type="checkbox" id="optionsCheckboxes14" class="mdl-checkbox__input" value="option4" checked />
+                                  <span for="optionsCheckboxes14" class="mdl-checkbox__label">Review type</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes588" class="mdl-checkbox__input" value="option5"  />
-                                  <span for="optionsCheckboxes588" class="mdl-checkbox__label">Review revision</span>
+                                  <input type="checkbox" id="optionsCheckboxes5" class="mdl-checkbox__input" value="option5"  />
+                                  <span for="optionsCheckboxes15" class="mdl-checkbox__label">Review revision</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes688" class="mdl-checkbox__input" value="option6" checked />
-                                  <span for="optionsCheckboxes688" class="mdl-checkbox__label">Mentor</span>
+                                  <input type="checkbox" id="optionsCheckboxes6" class="mdl-checkbox__input" value="option6" checked />
+                                  <span for="optionsCheckboxes16" class="mdl-checkbox__label">Mentor</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes788" class="mdl-checkbox__input" value="option7"  />
-                                  <span for="optionsCheckboxes788" class="mdl-checkbox__label">Advisor</span>
+                                  <input type="checkbox" id="optionsCheckboxes7" class="mdl-checkbox__input" value="option7"  />
+                                  <span for="optionsCheckboxes17" class="mdl-checkbox__label">Advisor</span>
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                                  <input type="checkbox" id="optionsCheckboxes888" class="mdl-checkbox__input" value="option8"  />
-                                  <span for="optionsCheckboxes888" class="mdl-checkbox__label">Owner</span>
+                                  <input type="checkbox" id="optionsCheckboxes8" class="mdl-checkbox__input" value="option8"  />
+                                  <span for="optionsCheckboxes18" class="mdl-checkbox__label">Owner</span>
                                 </label>
                               </div>
                             </div>
@@ -3054,154 +3062,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <h4>Example F <small>Nested Table</small></h4>
-                  <div>
-                    <table class="cbp-table mdl-js-data-table table-sortable">
-                      <thead>
-                        <tr>
-                          <th scope="col" style="width: 200px;" class="sortable active">
-                            Module
-                            <i class="fa fa-caret-down text-muted"></i>
-                            <sup>1</sup>
-                          </th>
-                          <th scope="col" class="sortable active">
-                            Event
-                            <i class="fa fa-caret-down text-muted"></i>
-                            <sup>2</sup>
-                          </th>
-                          <th scope="col" class="sortable active">
-                            Date
-                            <i class="fa fa-caret-up text-muted"></i>
-                            <sup>3</sup>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="table-group">
-                          <td role="row" class="non-numeric" colspan="3">
-                            <i class="fa text-muted fa-angle-down" style="margin-right: 6px;"></i>
-                            <strong>Module:</strong> User
-                            <span class="text-muted">(2)</span>
-                          </td>
-                        </tr>
-                        <tr class="table-group">
-                          <td role="row" class="non-numeric" style="padding-left: 20px;" colspan="3">
-                            <i class="fa text-muted fa-angle-down" style="margin-right: 6px;"></i>
-                            <strong>Event:</strong> Create
-                            <span class="text-muted">(2)</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row">
-                            <span>Users</span>
-                          </td>
-                          <td>Create</td>
-                          <td>
-                            <span>10/21/14</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td role="row">
-                            <span>Users</span>
-                          </td>
-                          <td>Create</td>
-                          <td>
-                            <span>10/19/14</span>
-                          </td>
-                        </tr>
-                        <tr class="table-group">
-                          <td role="row" class="non-numeric" style="padding-left: 20px;" colspan="4">
-                            <i class="fa text-muted fa-angle-right" style="margin-right: 6px;"></i>
-                            <strong>Event:</strong> Register
-                            <span class="text-muted">(2)</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <h4>Example G <small>Expandable Details Table</small></h4>
-                  <div>
-                    <table data-pl-expandable-rows role="grid" class="cbp-table-selectable mdl-js-data-table">
-                      <thead>
-                        <tr role="row">
-                          <th scope="col" role="columnheader" class="col-md-4">
-                            <label class="cbp-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="table-header-1">
-                              <input type="checkbox" id="table-header-1" class="mdl-checkbox__input" />
-                            </label>
-                          </th>
-                          <th scope="col" role="columnheader" class="mdl-data-table__cell--non-numeric" aria-sort="none">Project name</th>
-                          <th scope="col" role="columnheader" class="mdl-data-table__cell--non-numeric" aria-sort="none">Description</th>
-                          <th scope="col" role="columnheader" aria-sort="none">Price</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="col-md-4">
-                            <label class="cbp-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="row[11]">
-                              <input type="checkbox" id="row[11]" class="mdl-checkbox__input" />
-                            </label>
-                          </td>
-                          <td role="row" class="non-numeric">
-                            <i class="fa fa-angle-right"></i> &nbsp;Invoice
-                          </td>
-                          <td class="non-numeric">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td>
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr data-pl-detail-row style="display: none;">
-                          <td colspan="4">
-                            <dl class="dl-horizontal" style="margin-bottom: 0;">
-                              <dt>Examiner</dt>
-                              <dd>IP, Sikyin / 69776 / 1742</dd>
-                              <dt>SPE (multiple)</dt>
-                              <dd>John Olaskey</dd>
-                              <dt>Applicants</dt>
-                              <dd>Roman Amirpur</dd>
-                              <dt>Inventors</dt>
-                              <dd>Disney Dale</dd>
-                              <dt>Law firm</dt>
-                              <dd>Clayton & Clayton Associates</dd>
-                            </dl>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-md-4">
-                            <label class="cbp-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="row[12]">
-                              <input type="checkbox" id="row[12]" class="mdl-checkbox__input" />
-                            </label>
-                          </td>
-                          <td role="row" class="non-numeric">
-                            <i class="fa fa-angle-right"></i> &nbsp;Payments
-                          </td>
-                          <td class="non-numeric">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td>
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr data-pl-detail-row style="display: table-row;">
-                          <td role="row" colspan="4">
-                            <dl class="dl-horizontal" style="margin-bottom: 0;">
-                              <dt>BOL Type</dt>
-                              <dd>B - Booking</dd>
-                              <dt>MOT</dt>
-                              <dd>11 - Vessel(Containerized)</dd>
-                              <dt>Carrier</dt>
-                              <dd>JONN</dd>
-                              <dt>Conveyance</dt>
-                              <dd>REG O BOL B2</dd>
-                              <dt>Voyage/Trip/Flight</dt>
-                              <dd>0512A000001</dd>
-                            </dl>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
                   </div>
                 </div>
               </div>
