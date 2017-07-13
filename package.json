@@ -40,7 +40,6 @@
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-react": "^6.5.0",
     "bootstrap": "^3.3.6",
-    "bootstrap-sass": "^3.3.6",
     "change-case": "^3.0.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.22.0",
@@ -55,8 +54,6 @@
     "immutable": "^3.8.1",
     "jest": "16.0.1",
     "json-loader": "^0.5.4",
-    "material-design-lite": "^1.1.1",
-    "mdl-selectfield": "^1.0.2",
     "node-sass": "^3.4.2",
     "nouislider": "~8.5.1",
     "postcss-import": "8.1.2",
@@ -111,6 +108,9 @@
     }
   },
   "dependencies": {
+    "material-design-lite": "^1.1.1",
+    "mdl-selectfield": "^1.0.2",
+    "bootstrap-sass": "^3.3.6",
     "roboto-fontface": "0.8.0"
   }
 }
