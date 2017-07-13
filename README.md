@@ -63,6 +63,7 @@ The dist directory contains:
   - inputmask.js:   
 * `styles` 
   - cbp-theme.css
+  - `scss/` for those who want to import scss files 
 * `fonts` 
   - Font Awesome and Roboto fonts
 
@@ -98,7 +99,38 @@ dist/
 ├── roboto-fe5ca35863958aa9f3a879b7032979a3f0db3974.woff
 ```
 
-----
+
+## Importing SCSS
+
+SCSS importing has been easy and many libraries are providing this ability e.g. `bootstrap-sass`, `font-awesome` etc.
+SCSS files can be imported straight from `cbp-theme` npm module.
+
+Other than certain inherent open issues like [sass/node-sass: Relative url paths](https://github.com/sass/node-sass/issues/430) and 
+[sass/libsass: Feature: Curate / normalize asset path](https://github.com/sass/node-sass/issues/430) in `sass/node-sass` and `sass/libsass` for `url` assets pretty much everything should work.  
+
+Other libraries such as `bootstrap-sass`, `font-awesome` etc provide a variable to configure url assets which we let you override.
+ 
+### Users of `webpack`
+Add the following in `webpack.config.json`
+    
+    sassLoader: {
+          includePaths: [path.resolve(__dirname, './node_modules')]
+    }
+    
+### Direct users of `node-scss`
+
+Use `--include-path=node_modules` command line. 
+
+
+Override following variables to resolve paths from node_modules:-<br>
+
+```
+$fa-font-path: "font-awesome/fonts";
+$roboto-font-path: 'roboto-fontface/fonts';
+//import cbp-teheme scss artifacts after this
+
+```
+
 
 ## Contributing
 We welcome contributions, please see our [Contribution Policy](https://github.com/US-CBP/open-source-policy/blob/master/CONTRIBUTING.md)
