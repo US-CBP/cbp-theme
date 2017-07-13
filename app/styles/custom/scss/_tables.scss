@@ -111,7 +111,7 @@
 .table > thead > tr > th {
     border-bottom-color: $table-border-color;
     border-bottom-width: 2px;
-    font-weight: 600;
+    // font-weight: 600;
 }
 
 .table-group {
@@ -209,6 +209,15 @@
   > thead > tr > th.non-numeric {
     @extend .mdl-data-table__cell--non-numeric;
   }
+  > tbody > tr > td {
+    color: $gray-dark;
+  }
+  > tbody > tr > th {
+      text-align: left !important;
+      color: $gray-dark;
+      // width: 50px;
+      font-weight: normal;
+  }
 }
 
 .cbp-table-selectable {
@@ -216,7 +225,8 @@
   @extend .table-selectable !optional;
 
   > thead > tr > th:first-child,
-  > tbody > tr > td:first-child{
+  > tbody > tr > td:first-child,
+  > tbody > tr > th {
       text-align: left !important;
       width: 50px;
   }
