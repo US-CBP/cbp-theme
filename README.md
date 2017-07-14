@@ -100,36 +100,10 @@ dist/
 ```
 
 
-## Importing SCSS
+# Importing Style Sheets
 
-SCSS importing has been easy and many libraries are providing this ability e.g. `bootstrap-sass`, `font-awesome` etc.
-SCSS files can be imported straight from `cbp-theme` npm module.
+For more advanced users checkout wiki [Guide to Importing Style Sheets.](https://github.com/US-CBP/cbp-theme/wiki/Guide-to-Importing-Style-Sheets)
 
-Other than certain inherent open issues like [sass/node-sass: Relative url paths](https://github.com/sass/node-sass/issues/430) and 
-[sass/libsass: Feature: Curate / normalize asset path](https://github.com/sass/node-sass/issues/430) in `sass/node-sass` and `sass/libsass` for `url` assets pretty much everything should work.  
-
-Other libraries such as `bootstrap-sass`, `font-awesome` etc provide a variable to configure url assets which we let you override.
- 
-### Users of `webpack`
-Add the following in `webpack.config.json`
-    
-    sassLoader: {
-          includePaths: [path.resolve(__dirname, './node_modules')]
-    }
-    
-### Direct users of `node-scss`
-
-Use `--include-path=node_modules` command line. 
-
-
-Override following variables to resolve paths from node_modules:-<br>
-
-```
-$fa-font-path: "font-awesome/fonts";
-$roboto-font-path: 'roboto-fontface/fonts';
-//import cbp-teheme scss artifacts after this
-
-```
 
 
 ## Contributing
