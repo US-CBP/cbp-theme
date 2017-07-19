@@ -45,7 +45,7 @@ We use Webpack for our build process wrapped by npm commands:
 
 A demo app is located under app/kitchensink with all the components available so
 that one can experiment and test changes. Run 'npm run dev', which builds and
-uses gulp serve.  The demo app runs localhost:9000
+uses gulp serve.  The demo app runs localhost:8888/webpack-dev-server
 
 ## Open bugs
 

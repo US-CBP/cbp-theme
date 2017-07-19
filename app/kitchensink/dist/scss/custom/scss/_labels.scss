@@ -89,11 +89,12 @@ label.mdl-textfield__label {
   margin-bottom: 0;
 }
 
+.mdl-textfield.is-focused:not(.mdl-textfield--floating-label) label.mdl-textfield__label {
+    visibility: hidden !important;
+}
+
 label.mdl-textfield__label.static-label {
   font-size: 12px;
   top: 4px;
-}
-
-.mdl-textfield.is-focused label.mdl-textfield__label:after {
-    visibility: hidden;
+  visibility: visible !important;
 }

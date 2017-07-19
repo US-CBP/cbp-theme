@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme",
   "description": "CBP Common Framework UI Theme",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "author": "CBP Common Framework",
   "main": "./dist/js/npm",
   "contributors": [
