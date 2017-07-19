@@ -17,16 +17,23 @@ import $ from 'jquery';
 
       if (lastPosition > currentPosition) {
         $('.cbp-header').removeClass('disappear');
-        $('.app-header').removeClass('top');
-        $('.sidebar').removeClass('after-header').addClass('after-double-header');
+
+        //if not using app-header
+        if($('.app-header').length) {
+          $('.app-header').removeClass('top');
+          $('.sidebar').removeClass('after-header').addClass('after-double-header');
+        }
       } else {
         $('.cbp-header').addClass('disappear');
-        $('.app-header').addClass('top');
-        $('.sidebar').removeClass('after-double-header').addClass('after-header');
-
-        // hida all menu items from the header
+        // hide all menu items from the header
         $('.cbp-header .dropdown.open').removeClass('open');
-        $('.app-header .dropdown.open').removeClass('open');
+
+        if($('.app-header').length) {
+          $('.app-header').addClass('top');
+          $('.sidebar').removeClass('after-double-header').addClass('after-header');
+          $('.app-header .dropdown.open').removeClass('open');
+        }
+
       }
 
       lastPosition = currentPosition;
