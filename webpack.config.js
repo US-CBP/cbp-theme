@@ -49,6 +49,9 @@ const defaultConfig = {
         },
         extensions: [ '', '.json', '.js', '.min.js', '.bundle.js', '.css', '.min.css', '.scss', '.html' ]
     },
+    sassLoader: {
+      includePaths: [path.resolve(__dirname, './node_modules')]
+    },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),

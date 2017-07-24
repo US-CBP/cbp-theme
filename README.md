@@ -63,6 +63,7 @@ The dist directory contains:
   - inputmask.js:   
 * `styles` 
   - cbp-theme.css
+  - `scss/` for those who want to import scss files 
 * `fonts` 
   - Font Awesome and Roboto fonts
 
@@ -98,7 +99,12 @@ dist/
 ├── roboto-fe5ca35863958aa9f3a879b7032979a3f0db3974.woff
 ```
 
-----
+
+# Importing Style Sheets
+
+For more advanced users checkout wiki [Guide to Importing Style Sheets.](https://github.com/US-CBP/cbp-theme/wiki/Guide-to-Importing-Style-Sheets)
+
+
 
 ## Contributing
 We welcome contributions, please see our [Contribution Policy](https://github.com/US-CBP/open-source-policy/blob/master/CONTRIBUTING.md)

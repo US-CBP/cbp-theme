@@ -8,5 +8,5 @@ import './app/js/app_navigation';
 import './app/js/app_tags';
 import './app/js/app_thirdparty_select';
 
-import './app/styles/custom/scss/main.scss';
+import './app/styles/main.scss';
 
