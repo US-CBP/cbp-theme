@@ -1,0 +1,27 @@
+.tag {
+  padding: 3px 7px 2px 7px;
+  border-radius: $border-radius-base;
+  border: none;
+  margin: 0 5px 5px 0;
+  display: inline-block;
+
+  i, a {
+    margin-left: 5px;
+  }
+}
+
+.tag-default { @include tag-variant($gray-dark, $brand-default); }
+.tag-inverse { @include tag-variant($body-bg, $gray-dark); }
+.tag-primary { @include tag-variant($body-bg, $brand-primary); }
+.tag-success { @include tag-variant($body-bg, $brand-success); }
+.tag-warning { @include tag-variant($gray-darker, $brand-warning); }
+.tag-live { @include tag-variant($gray-dark, $brand-live); }
+.tag-danger { @include tag-variant($body-bg, $brand-danger); }
+.tag-info { @include tag-variant($body-bg, $brand-info); }
+
+.tag-default.subtle { @include tag-variant($gray-dark, mix($gray-darker, $gray-lighter, 7.5%)); }
+.tag-success.subtle { @include tag-variant($brand-success, $state-success-bg); }
+.tag-info.subtle { @include tag-variant($brand-info, $state-info-bg); }
+.tag-warning.subtle { @include tag-variant($brand-warning-text, $state-warning-bg); }
+.tag-danger.subtle { @include tag-variant($brand-danger, $state-danger-bg); }
+.tag-primary.subtle { @include tag-variant($brand-primary, $state-primary-bg); }

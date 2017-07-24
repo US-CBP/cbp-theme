@@ -195,7 +195,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 318:
 /***/ (function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin\n\n//////////////////\n// WEBPACK FOOTER\n// ./app/styles/custom/scss/main.scss\n// module id = 318\n// module chunks = 2 3\n//# sourceURL=webpack:///./app/styles/custom/scss/main.scss?");
+	eval("// removed by extract-text-webpack-plugin\n\n//////////////////\n// WEBPACK FOOTER\n// ./app/styles/main.scss\n// module id = 318\n// module chunks = 2 3\n//# sourceURL=webpack:///./app/styles/main.scss?");
 
 /***/ }),
 
