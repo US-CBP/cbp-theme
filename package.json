@@ -40,7 +40,6 @@
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-react": "^6.5.0",
     "bootstrap": "^3.3.6",
-    "bootstrap-sass": "^3.3.6",
     "change-case": "^3.0.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.22.0",
@@ -55,8 +54,6 @@
     "immutable": "^3.8.1",
     "jest": "16.0.1",
     "json-loader": "^0.5.4",
-    "material-design-lite": "^1.1.1",
-    "mdl-selectfield": "^1.0.2",
     "node-sass": "^3.4.2",
     "nouislider": "~8.5.1",
     "postcss-import": "8.1.2",
@@ -82,7 +79,6 @@
     "dev": "npm run clean && npm run build && npm run serve",
     "test": "jest",
     "a11y": "pa11y --standard Section508 --reporter html > a11y.html http://localhost:9000 || true",
-    "fonts": "webfont-dl -d \"https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic&subset=latin,greek,greek-ext,latin-ext,cyrillic-ext,cyrillic\" -o app/styles/vendor/roboto.css --font-out=app/fonts --css-rel=../../fonts --woff2=link --woff1=link --svg=link --ttf=link --eot=link",
     "preversion": "npm test",
     "version": "npm run build && git add -A .",
     "postversion": "git push && git push --tags"
@@ -110,5 +106,11 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "material-design-lite": "^1.1.1",
+    "mdl-selectfield": "^1.0.2",
+    "bootstrap-sass": "^3.3.6",
+    "roboto-fontface": "0.8.0"
   }
 }
