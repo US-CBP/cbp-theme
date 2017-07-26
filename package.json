@@ -48,7 +48,6 @@
     "expose-loader": "0.7.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "0.8.5",
-    "font-awesome": "^4.6.3",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "2.22.0",
     "immutable": "^3.8.1",
@@ -111,6 +110,7 @@
     "material-design-lite": "^1.1.1",
     "mdl-selectfield": "^1.0.2",
     "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.6.3",
     "roboto-fontface": "0.8.0"
   }
 }
