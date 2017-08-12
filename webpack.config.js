@@ -81,8 +81,12 @@ const kitchensinkConfig = Object.assign({}, defaultConfig, {
         chunkFilename: "[hash]/js/[id].js"
     },
     externals: {
-        'jquery': 'jQuery',
-        '$': 'jQuery'
+        'jquery': {
+            root: 'jQuery',
+            commonjs2: 'jquery',
+            commonjs: 'jquery',
+            amd: 'jquery'
+        }
     }
 });
 
@@ -94,8 +98,12 @@ const standardDistConfig = Object.assign({}, defaultConfig, {
         chunkFilename: "[hash]/js/[id].js"
     },
     externals: {
-        'jquery': 'jQuery',
-        '$': 'jQuery'
+        'jquery': {
+            root: 'jQuery',
+            commonjs2: 'jquery',
+            commonjs: 'jquery',
+            amd: 'jquery'
+        }
     }
 });
 
