@@ -37,7 +37,7 @@
     @include transition(color ease-in-out .2s);
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-      padding: 16px 70px 16px 17px;
+      //padding: 16px 70px 16px 17px;
     }
 
     @media (max-width: $screen-xs-max) {
@@ -49,6 +49,8 @@
     }
 
     .cbp-brand {
+      font-size: 18px;
+      line-height: 16px;
 
       span {
         display: none;
@@ -60,6 +62,9 @@
           }
       }
 
+      
+
+      /*
       &:before {
         content: 'U.S. Customs & Border Protection';
         font-size: 18px;
@@ -73,15 +78,21 @@
           content : 'U.S. CBP';
         }
       }
+      */
 
     }
 
 
     .dhs-brand {
       display: block;
-      margin: 0;
+      margin:3px 0 0;
       line-height: 14px;
+      font-size: 12px;
+      font-style: italic;
 
+     
+
+      /*
       &:before {
         content: 'U.S. Department of Homeland Security';
         font-size: 12px;
@@ -97,6 +108,7 @@
           display: hidden;
         }
       }
+      */
     }
 
   }
