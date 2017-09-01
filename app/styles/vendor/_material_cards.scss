@@ -85,7 +85,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   line-height: $card-supporting-text-line-height;
   overflow: hidden;
   padding: $card-vertical-padding $card-horizontal-padding;
-  width: 90%;
+  //width: 90%;
 }
 
 .mdl-card__actions {
@@ -93,7 +93,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   line-height: normal;
   width: 100%;
   background-color: rgba(0,0,0,0);
-  padding: 8px;
+  padding: $card-vertical-padding $card-horizontal-padding;
   box-sizing: border-box;
 
   &.mdl-card--border {
@@ -115,59 +115,55 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
 
 /* CBP ALIAS */
-.cbp-card-container {
+.mdl-card-container {
   @extend .row;
-
-  > .cbp-card {
-    margin: 1em 0.5em;
+  
+  > div[class*='col-'] {
+   margin-bottom: 25px;
   }
 }
 
-.cbp-card {
+.mdl-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div[class*='col-'] {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  .mdl-card__actions {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .mdl-card__supporting-text {
+    &.with-footer {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.mdl-card {
   @extend .mdl-card;
   background-color: $white;
 
-  &.cbp-card-shadow {
+  &.mdl-card-shadow {
     @include shadow-4dp();
   }
-}
 
-.cbp-card__media {
-  @extend .mdl-card__media;
-}
-
-.cbp-card__title {
-  @extend .mdl-card__title;
-
-  &.cbp-card--border {
-    @extend .mdl-card--border;
+  &.mdl-card-border {
+    border: 1px solid $card-border-color;  
   }
-}
 
-.cbp-card__title-text {
-  @extend .mdl-card__title-text;
-}
-
-.cbp-card__subtitle-text {
-  @extend .mdl-card__subtitle-text;
-}
-
-.cbp-card__supporting-text {
-  @extend .mdl-card__supporting-text;
-}
-
-.cbp-card__actions {
-  @extend .mdl-card__actions;
-
-  &.cbp-card--border {
-    @extend .mdl-card--border;
+  &.mdl-card-expand {
+    border: 1px solid $card-border-color; 
+    &:focus, &:hover, &:active { 
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+      transform: translate(0, -3px);
+    }
   }
+    
 }
 
-.cbp-card--expand {
-  @extend .mdl-card--expand;
-}
-
-.cbp-card__menu {
-  @extend .mdl-card__menu;
-}

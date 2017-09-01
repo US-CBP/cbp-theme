@@ -31,6 +31,19 @@ $(document).ready(function () {
         }, 1000);
       });
 
+      //adding ellipsis to the large text
+      var ellipsisText = function (e, etc) {
+        var wordArray = e.innerHTML.split(" ");
+        while (e.scrollHeight > e.offsetHeight) {
+          wordArray.pop();
+          e.innerHTML = wordArray.join(" ") + (etc || "...");
+        }
+      };
+      
+      [].forEach.call(document.querySelectorAll(".text-ellipsis-4line"), function(elem) {
+        ellipsisText(elem);
+      });
+
       //
       // Init datepicker
       //
@@ -125,5 +138,7 @@ $(document).ready(function () {
       $('#topSecret').on('click', function() {
         hulkIt('top-secret');
       });
+
+
 
 });
