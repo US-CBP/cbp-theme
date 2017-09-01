@@ -117,7 +117,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 /* CBP ALIAS */
 .mdl-card-container {
   @extend .row;
-  
+
   > div[class*='col-'] {
    margin-bottom: 25px;
   }
@@ -133,14 +133,14 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   }
 
   .mdl-card__actions {
-    height: 40px;
+    height: 56px;
     position: absolute;
     bottom: 0;
   }
 
   .mdl-card__supporting-text {
     &.with-footer {
-      padding-bottom: 40px;
+      padding-bottom: 56px;
     }
   }
 }
