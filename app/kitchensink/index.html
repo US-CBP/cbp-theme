@@ -26,8 +26,9 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="../">
-              <div class="cbp-brand"></div>
-              <div class="dhs-brand"></div>
+              <span class="visible-md visible-lg"><span class="cbp-brand">Organization Brand - CBP Theme 1.0</span></span>
+              <span class="visible-xs visible-sm"><span class="cbp-brand">Brand</span></span>
+              <span class="visible-md visible-lg"><span class="dhs-brand">Organization Sub Branding</span></span>
             </a>
             <button data-target="#navbar-user-info" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="sr-only">Toggle Global Navigation</span>
@@ -587,47 +588,47 @@
               </h2>
               <div class="panel">
                 <div class="panel-body">
-                  <div class="alert alert-info">
+                  <div class="alert alert-info" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
-                    <i class="alert-icon-info alert-icon"></i> Press the <strong>'A'</strong> key to automatically assign a case.
+                    <i class="alert-icon-info alert-icon" aria-hidden="true"></i><span class="sr-only">Info alert</span> Press the <strong>'A'</strong> key to automatically assign a case.
                   </div>
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
                     <button class="btn btn-sm btn-link alert-link pull-right">Undo</button>
-                    <i class="alert-icon-success alert-icon"></i> Case assigned to <strong>Jerry</strong> .
+                    <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
-                    <i class="alert-icon-success alert-icon"></i> Case assigned to
+                    <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to
                     <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-warning">
+                  <div class="alert alert-warning" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
-                    <i class="alert-icon-warning alert-icon"></i> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
+                    <i class="alert-icon-warning alert-icon"></i><span class="sr-only">Warning alert</span> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
                   </div>
-                  <div class="alert alert-danger">
+                  <div class="alert alert-danger" aria-live="polite">
                     <button class="btn btn-sm btn-link alert-link pull-right">Retry</button>
-                    <i class="alert-icon-danger alert-icon"></i> There was a network error assigning case
+                    <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> There was a network error assigning case
                     <strong>90/934,382</strong> .
                   </div>
                   <div class="alert alert-danger">
-                    <i class="alert-icon-danger alert-icon"></i> Please fix the 3 errors.
+                    <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> Please fix the 3 errors.
                   </div>
                   <h3>Notifications</h3>
                   <div class="toast-list" style="max-width: 400px;">
-                    <div class="toast toast-success" tabindex="-1">
+                    <div class="toast toast-success" tabindex="-1" aria-live="polite"><span class="sr-only">Success notification</span>
                       <div class="toast-content">
                         <button class="close" data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -635,7 +636,7 @@
                         <span>Message sent to Jerry.</span>
                       </div>
                     </div>
-                    <div class="toast toast-info" tabindex="-1">
+                    <div class="toast toast-info" tabindex="-1" aria-live="polite"><span class="sr-only">Info notification</span>
                       <div class="toast-content">
                         <button class="close" data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -646,7 +647,7 @@
                         <button type="button" class="btn btn-link">View comment</button>
                       </div>
                     </div>
-                    <div class="toast toast-warning" tabindex="-1">
+                    <div class="toast toast-warning" tabindex="-1" aria-live="polite"><span class="sr-only">Warning notification</span>
                       <div class="toast-content">
                         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -662,7 +663,7 @@
                         </button>
                       </div>
                     </div>
-                    <div class="toast toast-danger" tabindex="-1">
+                    <div class="toast toast-danger" tabindex="-1" aria-live="polite"><span class="sr-only">Danger notification</span>
                       <div class="toast-content">
                         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -679,7 +680,7 @@
                   <div class="toast-list pl-closable-toasts"
                     style="display: none; width: 400px; padding: 9px;"
                     id="example-toasts">
-                    <div class="toast toast-success" tabindex="0">
+                    <div class="toast toast-success" tabindex="0" aria-live="polite"><span class="sr-only">Success notification</span>
                       <div class="toast-content">
                         <button class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -687,7 +688,7 @@
                         <span>Message sent to Jerry.</span>
                       </div>
                     </div>
-                    <div class="toast toast-info" tabindex="0">
+                    <div class="toast toast-info" tabindex="0" aria-live="polite"><span class="sr-only">Info notification</span>
                       <div class="toast-content">
                         <button class="close">
                         <span>&times;</span>
@@ -698,7 +699,7 @@
                         <button type="button" class="btn btn-link">View comment</button>
                       </div>
                     </div>
-                    <div class="toast toast-warning" tabindex="0">
+                    <div class="toast toast-warning" tabindex="0" aria-live="polite"><span class="sr-only">Warning notification</span>
                       <div class="toast-content">
                         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -714,7 +715,7 @@
                         </button>
                       </div>
                     </div>
-                    <div class="toast toast-danger" tabindex="0">
+                    <div class="toast toast-danger" tabindex="0" aria-live="polite"><span class="sr-only">Danger notification</span>
                       <div class="toast-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
