@@ -1,1 +1,1 @@
-import './app/js/app_inputmasks';
+export { default as applyInputMask } from './app/js/app_inputmasks';

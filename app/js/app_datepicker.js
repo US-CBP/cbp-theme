@@ -1,11 +1,11 @@
 import $ from 'jquery';
 
-(function($) {
+let applyDatePicker = function() {
 	'use strict';
 	/**
 	 *
 	 * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
-	 * Contact the Common Framework UI Group for more details or see our confluence page.
+	 * Contact the Common Framework UI Group for more details or see our github page.
 	 *
 	 */
 	if ($('.datepicker').length > 0) {
@@ -18,4 +18,6 @@ import $ from 'jquery';
 			this._selectDate(id);
 		};
 	}
-}($));
+};
+
+export default applyDatePicker;
