@@ -1,4 +1,28 @@
 
+@mixin box-height($name, $lineNum) {
+  .#{$name} {
+    display: block;
+    line-height: 18px;
+    max-height: ($line-height-computed * $lineNum);   
+    &:hover{
+         max-height:auto;
+         height: auto;
+    }
+  }
+}
+
+@mixin show-list-item($name, $listItemNum, $listItemHide ) {
+  ul.#{$name} {
+   
+   li:nth-child(#{$listItemNum}):after {
+        content: '... ';
+
+    } 
+    li:nth-child(n  + #{$listItemHide}) {
+        display: none;
+    }
+  }
+}
 
 // Keylines
 
@@ -187,10 +211,25 @@
     margin: 36px;
 }
 
-//Ellipsis for the large text
-.text-ellipsis-4line {
-  display: block;
-  display: -webkit-box;
-  line-height: 1.4;
-  max-height: 5.6em; /* max: 4 lines */
+//text styles
+.text-bold{
+    font-weight: 700;
 }
+
+.text-semibold{
+    font-weight: 500;
+}
+
+//Ellipsis for the large text
+@include box-height(text-ellipsis-5line, 5);
+@include box-height(text-ellipsis-4line, 4);
+@include box-height(text-ellipsis-3line, 3);
+@include box-height(text-ellipsis-2line, 2);
+
+
+@include show-list-item(list-12items, 12, 13);
+@include show-list-item(list-10items, 10, 11);
+@include show-list-item(list-6items, 6, 7);
+
+
+

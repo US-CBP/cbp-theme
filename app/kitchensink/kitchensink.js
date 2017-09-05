@@ -39,10 +39,23 @@ $(document).ready(function () {
           e.innerHTML = wordArray.join(" ") + (etc || "...");
         }
       };
+
+      var removeEllipsisText = function (e, etc) {
+       
+      };
       
       [].forEach.call(document.querySelectorAll(".text-ellipsis-4line"), function(elem) {
         ellipsisText(elem);
       });
+
+      //on focus on card-expanded remove the ellipsis class
+      /*$('.mdl-card-expand').on({
+        focus: function () {
+        $(this).children("p").removeClass('text-ellipsis-4line');
+        }
+      
+      });*/
+
 
       //
       // Init datepicker

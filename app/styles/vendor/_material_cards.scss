@@ -10,7 +10,7 @@ $card-font-size: $font-size-base; // 15px
 $card-title-font-size: ceil(($font-size-base * 1.20)); // ~18px
 $card-title-text-font-weight: 500;
 $card-subtitle-font-size: floor(($font-size-base * 1.07)); // ~16px
-$card-supporting-text-font-size: floor(($font-size-base * 0.90)); // ~13px
+$card-supporting-text-font-size: floor(($font-size-base * 1.04)); // ~13px
 $card-supporting-text-line-height: 18px;
 $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
@@ -84,7 +84,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   font-size: $card-supporting-text-font-size;
   line-height: $card-supporting-text-line-height;
   overflow: hidden;
-  padding: $card-vertical-padding $card-horizontal-padding;
+  padding: 0 $card-horizontal-padding $card-vertical-padding ;
   //width: 90%;
 }
 
@@ -114,10 +114,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
 
 
-/* CBP ALIAS */
-.mdl-card-container {
-  @extend .row;
-
+/* CBP Extensions */
+.mdl-card-container { 
   > div[class*='col-'] {
    margin-bottom: 25px;
   }
@@ -158,10 +156,12 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   }
 
   &.mdl-card-expand {
-    border: 1px solid $card-border-color; 
     &:focus, &:hover, &:active { 
       box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
       transform: translate(0, -3px);
+      /* > [class*='text-ellipsis-'] {
+        max-height: auto;
+      } */
     }
   }
     
