@@ -47,6 +47,22 @@ input[disabled], select[disabled] {
   color: rgba(0, 0, 0, 0.26) !important;
 }
 
+.mdl-textfield.is-readonly .mdl-textfield__label, fieldset[readonly] .mdl-textfield .mdl-textfield__label {
+  color: rgba(0, 0, 0, 0.56) ;
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.26) ;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-bottom: 1px dotted #808080;  
+
+
+}
+.mdl-textfield.is-readonly input {
+  pointer-events: none;
+}
+
 
 // removes shadow from inputs and darkens focused field
 .form-control {
