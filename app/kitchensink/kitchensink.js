@@ -33,35 +33,31 @@ $(document).ready(function () {
 
       //adding ellipsis to the large text
       var ellipsisText = function (e, etc) {
-        var wordArray = e.innerHTML.split(" ");
+        var completeText = e.innerHTML;
+        var wordArray = completeText.split(" ");
         while (e.scrollHeight > e.offsetHeight) {
           wordArray.pop();
           e.innerHTML = wordArray.join(" ") + (etc || "...");
         }
       };
 
-      var removeEllipsisText = function (e, etc) {
-       var comleteText = e.innerHTML;
-        console.log(comleteText);
-      };
-      
+      // this should be a function which you will call on load
+      function addEllipsis(el) {      
+        [].forEach.call(el, function(elem) {
+          ellipsisText(elem);
+        });
+      }; 
 
-      [].forEach.call(document.querySelectorAll(".text-ellipsis-4line"), function(elem) {
-        ellipsisText(elem);
-        
-      });
+      var ellipsisEls = document.querySelectorAll(".text-ellipsis-4line");
+      addEllipsis(ellipsisEls);
+     
 
-      //add function to show the completetext on foxus
-      
-
-
-      //on focus on card-expanded remove the ellipsis class
-      /*$('.mdl-card-expand').on({
-        focus: function () {
-        $(this).children("p").removeClass('text-ellipsis-4line');
-        }
-      
-      });*/
+      for (var i = 0; i < ellipsisEls.length; i++) {
+        ellipsisEls[i].addEventListener('mouseover', function () {
+          // this is where you replace the text... either remove ... or completely replace with new text.
+          this.innerText = this.innerText.replace('...', '');
+        });        
+      }
 
 
       //
