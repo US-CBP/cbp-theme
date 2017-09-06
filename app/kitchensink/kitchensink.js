@@ -46,14 +46,21 @@ $(document).ready(function () {
         [].forEach.call(el, function(elem) {
           ellipsisText(elem);
         });
+      };
+
+      function removeEllipsis(el) {      
+        [].forEach.call(el, function(elem) {
+          var completeText = elem.innerHTML;
+        });
       }; 
 
       var ellipsisEls = document.querySelectorAll(".text-ellipsis-4line");
-      addEllipsis(ellipsisEls);
+      // addEllipsis(ellipsisEls);
      
 
       for (var i = 0; i < ellipsisEls.length; i++) {
         addEllipsis(ellipsisEls);
+        removeEllipsis(ellipsisEls);
         ellipsisEls[i].addEventListener('mouseover', function () {
           // this is where you replace the text... either remove ... or completely replace with completeText.
           this.innerText = this.innerText.replace('...', '');
