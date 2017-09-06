@@ -53,9 +53,11 @@ $(document).ready(function () {
      
 
       for (var i = 0; i < ellipsisEls.length; i++) {
+        addEllipsis(ellipsisEls);
         ellipsisEls[i].addEventListener('mouseover', function () {
-          // this is where you replace the text... either remove ... or completely replace with new text.
+          // this is where you replace the text... either remove ... or completely replace with completeText.
           this.innerText = this.innerText.replace('...', '');
+          
         });        
       }
 
