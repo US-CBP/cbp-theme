@@ -41,12 +41,19 @@ $(document).ready(function () {
       };
 
       var removeEllipsisText = function (e, etc) {
-       
+       var comleteText = e.innerHTML;
+        console.log(comleteText);
       };
       
+
       [].forEach.call(document.querySelectorAll(".text-ellipsis-4line"), function(elem) {
         ellipsisText(elem);
+        
       });
+
+      //add function to show the completetext on foxus
+      
+
 
       //on focus on card-expanded remove the ellipsis class
       /*$('.mdl-card-expand').on({
