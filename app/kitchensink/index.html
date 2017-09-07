@@ -588,14 +588,14 @@
               </h2>
               <div class="panel">
                 <div class="panel-body">
-                  <div class="alert alert-info" aria-live="polite">
+                  <div class="alert alert-info" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
                     <i class="alert-icon-info alert-icon" aria-hidden="true"></i><span class="sr-only">Info alert</span> Press the <strong>'A'</strong> key to automatically assign a case.
                   </div>
-                  <div class="alert alert-success" aria-live="polite">
+                  <div class="alert alert-success" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
@@ -603,7 +603,7 @@
                     <button class="btn btn-sm btn-link alert-link pull-right">Undo</button>
                     <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-success" aria-live="polite">
+                  <div class="alert alert-success" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
@@ -611,19 +611,19 @@
                     <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to
                     <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-warning" aria-live="polite">
+                  <div class="alert alert-warning" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
                     <i class="alert-icon-warning alert-icon"></i><span class="sr-only">Warning alert</span> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
                   </div>
-                  <div class="alert alert-danger" aria-live="polite">
+                  <div class="alert alert-danger" role="alert" aria-live="polite">
                     <button class="btn btn-sm btn-link alert-link pull-right">Retry</button>
                     <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> There was a network error assigning case
                     <strong>90/934,382</strong> .
                   </div>
-                  <div class="alert alert-danger">
+                  <div class="alert alert-danger" role="alert" aria-live="polite">
                     <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> Please fix the 3 errors.
                   </div>
                   <h3>Notifications</h3>
@@ -1022,8 +1022,7 @@
                     <h3 class="mdl-card__title-text">Heading text for the card</h3>
                   </div>
                   <div class="mdl-card__supporting-text with-footer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
-                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>                    
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
                     <button class="btn btn-primary btn-xs pull-right">
@@ -1038,15 +1037,21 @@
                     <h3 class="mdl-card__title-text">Heading text for the card</h3>
                   </div>
                   <div class="mdl-card__supporting-text with-footer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.<br /></p>
-                    
-                    <ul class="list-inline list-10items">
-                      <li><span class="text-bold">Developer</span></li>
-                      <li>Testing</li>
-                      <li>SSO</li>
-                      <li>AES</li><li>ACE</li><li>ATS-AT</li><li>Sample</li><li>sample</li><li>Sample</li><li>sample</li><li>Sample</li><li>sample</li></ul>
-                      
-                      
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.<br /></p>                    
+                    <ul class="list-inline show-list-10items">
+                        <li><span class="text-bold">Developer</span></li>
+                        <li>Testing</li>
+                        <li>SSO</li>
+                        <li>AES</li>
+                        <li>ACE</li>
+                        <li>ATS-AT</li>
+                        <li>Sample</li>
+                        <li>sample</li>
+                        <li>Sample</li>
+                        <li>sample</li>
+                        <li>Sample</li>
+                        <li>sample</li>
+                      </ul>                 
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
                       <button class="btn btn-primary btn-xs pull-right">
@@ -1116,7 +1121,7 @@
                     <div class="mdl-card__supporting-text with-footer">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.<br /></p>
                       
-                      <ul class="list-inline list-10items">
+                      <ul class="list-inline show-list-10items">
                         <li><span class="text-bold">Developer</span></li>
                         <li>Testing</li>
                         <li>SSO</li>

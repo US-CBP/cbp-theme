@@ -3,23 +3,38 @@
   .#{$name} {
     display: block;
     line-height: 18px;
-    max-height: ($line-height-computed * $lineNum);   
-    &:hover{
-         max-height:auto;
-         height: auto;
-    }
+    max-height: ($line-height-computed * $lineNum); 
+    .additional-text {
+        display: none;
+    } 
+    &.expanded-view{
+        height: auto;
+        max-height: inherit; // reset max height
+       .ellipsis {
+          display: none;
+       }
+       .additional-text {
+        display: inline;
+        }
+    }     
   }
 }
 
 @mixin show-list-item($name, $listItemNum, $listItemHide ) {
-  ul.#{$name} {
-   
+  ul.#{$name} {   
    li:nth-child(#{$listItemNum}):after {
         content: '... ';
-
     } 
     li:nth-child(n  + #{$listItemHide}) {
         display: none;
+    }
+    &.expanded-view {
+        li:nth-child(#{$listItemNum}):after {
+            content: '';
+        } 
+        li:nth-child(n  + #{$listItemHide}) {
+            display: inline;
+        }
     }
   }
 }
@@ -226,10 +241,10 @@
 @include box-height(text-ellipsis-3line, 3);
 @include box-height(text-ellipsis-2line, 2);
 
+@include show-list-item(show-list-12items, 12, 13);
+@include show-list-item(show-list-10items, 10, 11);
+@include show-list-item(show-list-6items, 6, 7);
 
-@include show-list-item(list-12items, 12, 13);
-@include show-list-item(list-10items, 10, 11);
-@include show-list-item(list-6items, 6, 7);
 
 
 

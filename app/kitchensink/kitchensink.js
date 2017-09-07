@@ -32,13 +32,17 @@ $(document).ready(function () {
       });
 
       //adding ellipsis to the large text
-      var ellipsisText = function (e, etc) {
-        var completeText = e.innerHTML;
-        var wordArray = completeText.split(" ");
+      var ellipsisText = function (e) {
+        //complete text stored in a variable
+        var completeText = e.innerHTML.split(" ");
+        //wordArray will be the text displayed
+        var wordArray = e.innerHTML.split(" ");
         while (e.scrollHeight > e.offsetHeight) {
           wordArray.pop();
-          e.innerHTML = wordArray.join(" ") + (etc || "...");
+          e.innerHTML = wordArray.join(" ") + '<span class="ellipsis">... </span>';
         }
+        //save the additional text in the span
+        e.innerHTML = e.innerHTML + ' <span class="additional-text">' + completeText.splice(wordArray.length).join(" ") + '</span>';
       };
 
       // this should be a function which you will call on load
@@ -48,23 +52,41 @@ $(document).ready(function () {
         });
       };
 
-      function removeEllipsis(el) {      
-        [].forEach.call(el, function(elem) {
-          var completeText = elem.innerHTML;
-        });
-      }; 
+       
+      //add ellipsis to all p using the class
+      var addEllipsisSelector = document.querySelectorAll(".text-ellipsis-4line");
+      addEllipsis(addEllipsisSelector);
 
-      var ellipsisEls = document.querySelectorAll(".text-ellipsis-4line");
-      // addEllipsis(ellipsisEls);
+      //remove ellipsis and show the original text 
+      var removeEllipsisSelector = document.querySelectorAll(".mdl-card-expand .text-ellipsis-4line");
+
+      for (var i = 0; i < removeEllipsisSelector.length; i++) {       
+        
+        removeEllipsisSelector[i].addEventListener('mouseenter', function () {
+          // this is where you replace the text... either remove ... or completely replace with completeText.
+          this.classList.add("expanded-view");
+
+
+        });  
+        removeEllipsisSelector[i].parentElement.addEventListener('focus', function () {
+          this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
+        });        
+      }
+
+      //remove ellipsis and show the original text 
+      var removeEllipsisSelectorUL = document.querySelectorAll(".mdl-card-expand ul[class*='show-list-']");      
      
 
-      for (var i = 0; i < ellipsisEls.length; i++) {
-        addEllipsis(ellipsisEls);
-        removeEllipsis(ellipsisEls);
-        ellipsisEls[i].addEventListener('mouseover', function () {
+      for (var i = 0; i < removeEllipsisSelectorUL.length; i++) {       
+        
+        removeEllipsisSelectorUL[i].addEventListener('mouseenter', function () {
           // this is where you replace the text... either remove ... or completely replace with completeText.
-          this.innerText = this.innerText.replace('...', '');
-          
+          this.classList.add("expanded-view");
+
+
+        });  
+        removeEllipsisSelectorUL[i].parentElement.addEventListener('focus', function () {
+          this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
         });        
       }
 
