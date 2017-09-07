@@ -1147,6 +1147,11 @@
                           <label for="tb133" class="mdl-textfield__label">Disabled</label>
                           <input type="text" class="mdl-textfield__input" id="tb133" disabled>
                         </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-readonly is-focused">
+                          <label for="tb134" class="mdl-textfield__label">Readonly</label>
+                          <input type="text" class="mdl-textfield__input" id="tb134" readonly tabindex="-1">
+                        </div>
+                        
                       </form>
                     </div>
                   </div>
@@ -1604,6 +1609,16 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width is-required">
                       <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample3999" aria-required="true">
                       <label class="mdl-textfield__label" for="sample3999">floating-label <span class="required-field"></span></label>
+                      <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required">
+                      <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" disabled/>
+                      <label class="mdl-textfield__label static-label" for="sample4999">static-label disabled<span class="required-field"></span></label>
+                      <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required is-readonly">
+                      <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" readonly/>
+                      <label class="mdl-textfield__label static-label" for="sample4999">static-label readonly<span class="required-field"></span></label>
                       <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
                     </div>
                   </form>
@@ -3660,5 +3675,6 @@
     <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>
 
+   
   </body>
 </html>
