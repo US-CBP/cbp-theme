@@ -79,22 +79,5 @@
     border: 1px solid $state-success-border;
 }
 
-label {
-  font-weight: 400;
-}
 
-// material
 
-label.mdl-textfield__label {
-  margin-bottom: 0;
-}
-
-.mdl-textfield.is-focused:not(.mdl-textfield--floating-label) label.mdl-textfield__label {
-    visibility: hidden !important;
-}
-
-label.mdl-textfield__label.static-label {
-  font-size: 12px;
-  top: 4px;
-  visibility: visible !important;
-}

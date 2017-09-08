@@ -6,7 +6,7 @@ $card-supporting-text-text-color: unquote("rgba(#{$gray-darker}, 0.54)");
 $card-border-color: rgba(0,0,0,0.1) !default;
 $card-subtitle-color: unquote("rgba(#{$gray-darker}, 0.54)");
 
-$card-font-size: $font-size-base; // 15px
+$card-font-size: $font-size-base; // 13px
 $card-title-font-size: ceil(($font-size-base * 1.20)); // ~18px
 $card-title-text-font-weight: 500;
 $card-subtitle-font-size: floor(($font-size-base * 1.07)); // ~16px
