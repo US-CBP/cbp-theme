@@ -34,3 +34,19 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 .mdl-textfield.is-disabled .mdl-textfield__input {
   cursor: not-allowed;
 }
+
+label {
+  font-weight: 400;
+}
+
+label.mdl-textfield__label {
+  margin-bottom: 0;
+}
+
+ .mdl-textfield.is-focused:not(.mdl-textfield--floating-label) label.mdl-textfield__label:not(.static-label) {
+    visibility: hidden !important;
+} 
+
+.mdl-textfield label.mdl-textfield__label.static-label {
+  top: 4px;  
+} 
