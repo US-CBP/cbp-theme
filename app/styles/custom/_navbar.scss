@@ -210,6 +210,7 @@
 .app-header-bottom {
   @extend .navbar, .navbar-default, .navbar-flush;
   position: fixed;
+  font-size: ceil(($font-size-base * 1.15));
   right: 0;
   left: 0;
 }

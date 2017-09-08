@@ -1,3 +1,4 @@
+
 .mdl-textfield__help,
 .mdl-textfield__counter {
   color: $gray;
@@ -26,8 +27,12 @@
   }
 }
 
+.mdl-textfield {
+  //font-size: $input-text-font-size;
+}
 .mdl-textfield__label {
   padding-left: 3px;
+ // font-size: $input-text-font-size;
 }
 
 fieldset[disabled] .mdl-textfield .mdl-textfield__input,
