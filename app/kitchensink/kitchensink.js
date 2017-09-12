@@ -57,39 +57,22 @@ $(document).ready(function () {
       var addEllipsisSelector = document.querySelectorAll(".text-ellipsis-4line");
       addEllipsis(addEllipsisSelector);
 
-      //remove ellipsis and show the original text 
-      var removeEllipsisSelector = document.querySelectorAll(".mdl-card-expand .text-ellipsis-4line");
+
+      var removeEllipsisSelector = document.querySelectorAll(".mdl-card-expand");
 
       for (var i = 0; i < removeEllipsisSelector.length; i++) {       
         
         removeEllipsisSelector[i].addEventListener('mouseenter', function () {
-          // this is where you replace the text... either remove ... or completely replace with completeText.
-          this.classList.add("expanded-view");
-
-
-        });  
-        removeEllipsisSelector[i].parentElement.addEventListener('focus', function () {
           this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
-        });        
-      }
-
-      //remove ellipsis and show the original text 
-      var removeEllipsisSelectorUL = document.querySelectorAll(".mdl-card-expand ul[class*='show-list-']");      
-     
-
-      for (var i = 0; i < removeEllipsisSelectorUL.length; i++) {       
-        
-        removeEllipsisSelectorUL[i].addEventListener('mouseenter', function () {
-          // this is where you replace the text... either remove ... or completely replace with completeText.
-          this.classList.add("expanded-view");
+          //this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
 
 
         });  
-        removeEllipsisSelectorUL[i].parentElement.addEventListener('focus', function () {
-          this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
+        removeEllipsisSelector[i].addEventListener('focus', function () {
+          this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
+          //this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
         });        
       }
-
 
       //
       // Init datepicker
