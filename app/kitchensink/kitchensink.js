@@ -62,16 +62,30 @@ $(document).ready(function () {
 
       for (var i = 0; i < removeEllipsisSelector.length; i++) {       
         
-        removeEllipsisSelector[i].addEventListener('mouseenter', function () {
-          this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
-          //this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
+        removeEllipsisSelector[i].addEventListener('mouseenter', function () {         
+          var paraText = this.querySelectorAll("p")[0];
+          var listText = this.querySelectorAll("ul")[0];
+          if (paraText.classList.contains("text-ellipsis-4line")) {
+              this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
 
-
+          }
+          if (listText.classList.contains("show-list-10items")) {
+              this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");              
+          } 
+          
         });  
-        removeEllipsisSelector[i].addEventListener('focus', function () {
-          this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
-          //this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
-        });        
+       removeEllipsisSelector[i].addEventListener('focus', function () {
+          var paraText = this.querySelectorAll("p")[0];
+          var listText = this.querySelectorAll("ul")[0];
+          if (paraText.classList.contains("text-ellipsis-4line")) {
+              this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
+
+          }
+          if (listText.classList.contains("show-list-10items")) {
+              this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
+              
+          } 
+        });  
       }
 
       //
