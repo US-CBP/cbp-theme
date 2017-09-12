@@ -60,31 +60,31 @@ $(document).ready(function () {
 
       var removeEllipsisSelector = document.querySelectorAll(".mdl-card-expand");
 
-      for (var i = 0; i < removeEllipsisSelector.length; i++) {       
-        
-        removeEllipsisSelector[i].addEventListener('mouseenter', function () {         
-          var paraText = this.querySelectorAll("p")[0];
-          var listText = this.querySelectorAll("ul")[0];
-          if (paraText.classList.contains("text-ellipsis-4line")) {
-              this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
+      //expand the text when this function is called
+      function expandText(elem) { 
+        //check if the element exists and add the expanded-view class     
+        var textToExpand = elem;
+        if (typeof(textToExpand) != 'undefined' && textToExpand != null) {
+              textToExpand.classList.add("expanded-view");
 
           }
-          if (listText.classList.contains("show-list-10items")) {
-              this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");              
-          } 
+      };
+
+      for (var i = 0; i < removeEllipsisSelector.length; i++) {     
+        //add mouse enter or hover event listener on the div
+        removeEllipsisSelector[i].addEventListener('mouseenter', function () {  
+        var paraText = this.querySelectorAll("p[class*='text-ellipsis-']")[0];
+        var listText = this.querySelectorAll("ul[class*='show-list-']")[0];
+        expandText(paraText);
+        expandText(listText);            
           
         });  
+        //add key enter or focus event listener on the div
        removeEllipsisSelector[i].addEventListener('focus', function () {
-          var paraText = this.querySelectorAll("p")[0];
-          var listText = this.querySelectorAll("ul")[0];
-          if (paraText.classList.contains("text-ellipsis-4line")) {
-              this.querySelectorAll(".text-ellipsis-4line")[0].classList.add("expanded-view");
-
-          }
-          if (listText.classList.contains("show-list-10items")) {
-              this.querySelectorAll("ul[class*='show-list-']")[0].classList.add("expanded-view");
-              
-          } 
+          var paraText = this.querySelectorAll("p[class*='text-ellipsis-']")[0];
+          var listText = this.querySelectorAll("ul[class*='show-list-']")[0];
+          expandText(paraText);
+          expandText(listText); 
         });  
       }
 
