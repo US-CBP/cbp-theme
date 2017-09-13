@@ -31,63 +31,7 @@ $(document).ready(function () {
         }, 1000);
       });
 
-      //adding ellipsis to the large text
-      var ellipsisText = function (e) {
-        //complete text stored in a variable
-        var completeText = e.innerHTML.split(" ");
-        //wordArray will be the text displayed
-        var wordArray = e.innerHTML.split(" ");
-        while (e.scrollHeight > e.offsetHeight) {
-          wordArray.pop();
-          e.innerHTML = wordArray.join(" ") + '<span class="ellipsis">... </span>';
-        }
-        //save the additional text in the span
-        e.innerHTML = e.innerHTML + ' <span class="additional-text">' + completeText.splice(wordArray.length).join(" ") + '</span>';
-      };
-
-      // this should be a function which you will call on load
-      function addEllipsis(el) {      
-        [].forEach.call(el, function(elem) {
-          ellipsisText(elem);
-        });
-      };
-
-       
-      //add ellipsis to all p using the class
-      var addEllipsisSelector = document.querySelectorAll(".text-ellipsis-4line");
-      addEllipsis(addEllipsisSelector);
-
-
-      var removeEllipsisSelector = document.querySelectorAll(".mdl-card-expand");
-
-      //expand the text when this function is called
-      function expandText(elem) { 
-        //check if the element exists and add the expanded-view class     
-        var textToExpand = elem;
-        if (typeof(textToExpand) != 'undefined' && textToExpand != null) {
-              textToExpand.classList.add("expanded-view");
-
-          }
-      };
-
-      for (var i = 0; i < removeEllipsisSelector.length; i++) {     
-        //add mouse enter or hover event listener on the div
-        removeEllipsisSelector[i].addEventListener('mouseenter', function () {  
-        var paraText = this.querySelectorAll("p[class*='text-ellipsis-']")[0];
-        var listText = this.querySelectorAll("ul[class*='show-list-']")[0];
-        expandText(paraText);
-        expandText(listText);            
-          
-        });  
-        //add key enter or focus event listener on the div
-       removeEllipsisSelector[i].addEventListener('focus', function () {
-          var paraText = this.querySelectorAll("p[class*='text-ellipsis-']")[0];
-          var listText = this.querySelectorAll("ul[class*='show-list-']")[0];
-          expandText(paraText);
-          expandText(listText); 
-        });  
-      }
-
+     
       //
       // Init datepicker
       //
