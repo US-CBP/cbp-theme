@@ -31,6 +31,7 @@ $(document).ready(function () {
         }, 1000);
       });
 
+     
       //
       // Init datepicker
       //
@@ -125,5 +126,7 @@ $(document).ready(function () {
       $('#topSecret').on('click', function() {
         hulkIt('top-secret');
       });
+
+
 
 });
