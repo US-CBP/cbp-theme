@@ -68,7 +68,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   font-size: $card-title-font-size;
   font-weight: $card-title-text-font-weight;
   line-height: normal;
-  overflow: hidden;
+  //overflow: hidden;
   transform-origin: $card-title-text-transform-origin-x $card-title-text-transform-origin-y;
   margin: 0;
 }
@@ -83,7 +83,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   color: $card-supporting-text-text-color;
   font-size: $card-supporting-text-font-size;
   line-height: $card-supporting-text-line-height;
-  overflow: hidden;
+  //overflow: hidden;
   padding: 0 $card-horizontal-padding $card-vertical-padding ;
   //width: 90%;
 }
