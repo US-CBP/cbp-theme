@@ -140,7 +140,7 @@
                       <input type="text" id="main-search" class="mdl-textfield__input" />
                     </div>
                     <span class="input-group-btn">
-                      <button aria-label="Search" type="submit" class="btn btn-primary btn-xs"><i class="fa fa-search"></i></button>
+                      <button aria-label="Search" type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                     </span>
                   </div>
                 </div>
@@ -588,14 +588,14 @@
               </h2>
               <div class="panel">
                 <div class="panel-body">
-                  <div class="alert alert-info" aria-live="polite">
+                  <div class="alert alert-info" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
                     <i class="alert-icon-info alert-icon" aria-hidden="true"></i><span class="sr-only">Info alert</span> Press the <strong>'A'</strong> key to automatically assign a case.
                   </div>
-                  <div class="alert alert-success" aria-live="polite">
+                  <div class="alert alert-success" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
@@ -603,7 +603,7 @@
                     <button class="btn btn-sm btn-link alert-link pull-right">Undo</button>
                     <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-success" aria-live="polite">
+                  <div class="alert alert-success" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
@@ -611,19 +611,19 @@
                     <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to
                     <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-warning" aria-live="polite">
+                  <div class="alert alert-warning" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
                     <i class="alert-icon-warning alert-icon"></i><span class="sr-only">Warning alert</span> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
                   </div>
-                  <div class="alert alert-danger" aria-live="polite">
+                  <div class="alert alert-danger" role="alert" aria-live="polite">
                     <button class="btn btn-sm btn-link alert-link pull-right">Retry</button>
                     <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> There was a network error assigning case
                     <strong>90/934,382</strong> .
                   </div>
-                  <div class="alert alert-danger">
+                  <div class="alert alert-danger" role="alert" aria-live="polite">
                     <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> Please fix the 3 errors.
                   </div>
                   <h3>Notifications</h3>
@@ -894,94 +894,93 @@
             </div>
 
             <!-- Cards -->
-            <div>
-              <h2 id="Cards" class="page-header">Cards
-              <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
-                <i class="fa fa-chevron-up bounce"></i>
-              </a>
-              </h2>
-              <div class="panel bs-example cards-example ">
-                <div class="cbp-card-container container-fluid row">
+          <div>
+        <h2 id="Cards" class="page-header">Cards
+        <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
+          <i class="fa fa-chevron-up bounce"></i>
+        </a>
+        </h2>
 
-                    <div class="cbp-card cbp-card-shadow col-sm-4">
-
-                      <div class="cbp-card__media">
-                        <img src="./images/cbp_super_bowl.jpg" width="330" height="157" border="0" alt="CBP Super Bowl 50 Air and Marine Operations Security" >
-                      </div>
-                      <div class="cbp-card__menu">
-                          <i class="fa fa-share-square fa-inverse" aria-hidden="true"></i>
-                      </div>
-                       <div class="cbp-card__title">
-                          <h3 class="cbp-card__title-text">CBP Super Bowl 50 Air and Marine Operations Security</h3>
-                        </div>
-                      <div class="cbp-card__supporting-text">
-                        Personnel with U.S. Customs and Border Protection conduct operations in advance of Super Bowl 50 in Santa Clara, Calif., 2016. (U.S. Customs and Border Protection Photo by Glenn Fawcett)
-                      </div>
-                      <div class="cbp-card__actions cbp-card--border">
-                        <button class="btn btn-default pull-right">
-                          Read More...
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="cbp-card cbp-card-shadow col-sm-4">
-
-                      <div class="cbp-card__title cbp-card--expand">
-                        <h2 class="cbp-card__title-text">Update</h2>
-                      </div>
-                      <div class="cbp-card__menu">
-                          <i class="fa fa-trash" aria-hidden="true"></i>
-                      </div>
-                      <div class="cbp-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                      </div>
-                      <div class="cbp-card__actions cbp-card--border">
-                        <button class="btn btn-default">
-                          View Updates
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="cbp-card cbp-card-shadow col-sm-3">
-
-                      <div class="cbp-card__title cbp-card--expand">
-                        <h3>
-                          Featured event:<br>
-                          May 24, 2016<br>
-                          7-11pm
-                        </h3>
-                      </div>
-                      <div class="cbp-card__menu">
-                          <i class="fa fa-times" aria-hidden="true"></i>
-                      </div>
-                      <div class="cbp-card__actions cbp-card--border">
-                        <button class="btn btn-default">
-                          <i class="fa fa-calendar fa-fw"></i>
-                          &nbsp;Add to Calendar
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="cbp-card cbp-card-shadow col-sm-3">
-                      <div class="cbp-card__title cbp-card--expand">
-                        <h2 class="cbp-card__title-text"><i class="fa fa-newspaper-o fa-fw " aria-hidden="true"></i>&nbsp; Latest News</h2>
-                      </div>
-                      <div class="cbp-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                      </div>
-                      <div class="cbp-card__actions cbp-card--border">
-                        <button class="btn btn-default">
-                          View Headlines
-                        </button>
-                      </div>
-                    </div>
-
+        <div class="cards-example"><h3>Cards with different content</h3>
+          <div class="mdl-card-container row">
+            <div class="col-sm-4">
+              <div class="mdl-card mdl-card-shadow">
+                <div class="mdl-card__media">
+                  <img src="./images/cbp_super_bowl.jpg" width="330" height="157" border="0" alt="CBP Super Bowl 50 Air and Marine Operations Security" >
+                </div>
+                <div class="mdl-card__menu">
+                  <i class="fa fa-share-square fa-inverse" aria-hidden="true"></i>
+                </div>
+                <div class="mdl-card__title">
+                  <h3 class="mdl-card__title-text">CBP Super Bowl 50 Air and Marine Operations Security</h3>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Personnel with U.S. Customs and Border Protection conduct operations in advance of Super Bowl 50 in Santa Clara, Calif., 2016. (U.S. Customs and Border Protection Photo by Glenn Fawcett)
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <button class="btn btn-default pull-right">
+                  Read More...
+                  </button>
                 </div>
               </div>
             </div>
-
+            <div class="col-sm-4">
+              <div class="mdl-card mdl-card-shadow">
+                <div class="mdl-card__title mdl-card--expand">
+                  <h2 class="mdl-card__title-text">Update</h2>
+                </div>
+                <div class="mdl-card__menu">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenan convallis.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <button class="btn btn-default">
+                  View Updates
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mdl-card mdl-card-shadow">
+                <div class="mdl-card__title mdl-card--expand">
+                  <h3>
+                  Featured event:<br>
+                  May 24, 2016<br>
+                  7-11pm
+                  </h3>
+                </div>
+                <div class="mdl-card__menu">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <button class="btn btn-default">
+                  <i class="fa fa-calendar fa-fw"></i>
+                  &nbsp;Add to Calendar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mdl-card mdl-card-shadow">
+                <div class="mdl-card__title mdl-card--expand">
+                  <h2 class="mdl-card__title-text"><i class="fa fa-newspaper-o fa-fw " aria-hidden="true"></i>&nbsp; Latest News</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenan convallis.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <button class="btn btn-default">
+                  View Headlines
+                  </button>
+                </div>
+              </div>
+            </div></div>
+            
+            
             <!-- Dialogs -->
             <div>
               <h2 id="Dialogs" class="page-header">Dialogs
