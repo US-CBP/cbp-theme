@@ -1,3 +1,4 @@
+
 .mdl-textfield__help,
 .mdl-textfield__counter {
   color: $gray;
@@ -27,7 +28,8 @@
 }
 
 .mdl-textfield__label {
-  padding-left: 3px;
+  padding-left: 3px; 
+  margin-bottom: 0;
 }
 
 fieldset[disabled] .mdl-textfield .mdl-textfield__input,
@@ -39,11 +41,7 @@ label {
   font-weight: 400;
 }
 
-label.mdl-textfield__label {
-  margin-bottom: 0;
-}
-
- .mdl-textfield.is-focused:not(.mdl-textfield--floating-label) label.mdl-textfield__label:not(.static-label) {
+.mdl-textfield.is-focused:not(.mdl-textfield--floating-label) label.mdl-textfield__label:not(.static-label) {
     visibility: hidden !important;
 } 
 
