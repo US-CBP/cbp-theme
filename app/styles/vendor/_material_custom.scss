@@ -46,5 +46,6 @@ label {
 } 
 
 .mdl-textfield label.mdl-textfield__label.static-label {
-  top: 4px;  
+   visibility: visible !important;
+   top: 4px;  
 } 
