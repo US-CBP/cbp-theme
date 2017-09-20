@@ -1,3 +1,6 @@
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type";
+
+
 .black {
     font-weight: 900;
 }
@@ -58,3 +61,5 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $gray;
   }
 }
+
+@include bg-variant('.bg-default', $gray-dark);

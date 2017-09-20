@@ -2,7 +2,8 @@
 
 @import "material-design-lite/src/resets/_resets";
 
-@import "custom/_variables"; // Bootstrap and our variables!!!
+@import "bs_partials/_variables"; // Bootstrap and our variables!!!
+
 @import "vendor/_bootstrap"; // apply variables to bootstrap!
 @import "vendor/_material";
 
@@ -25,7 +26,7 @@
 
 // CBP overrides
 @import "custom/_mixins";
-@import "custom/_colors";
+//@import "custom/_colors"; 
 @import "custom/_globals";
 @import "custom/_accordions";
 @import "custom/_alerts";
@@ -44,7 +45,7 @@
 @import "custom/_tabs";
 @import "custom/_tables";
 @import "custom/_tags";
-@import "custom/_type";
+@import "bs_partials/_type";
 @import "custom/_utilities";
 @import "custom/_timelines";
 
