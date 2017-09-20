@@ -68,8 +68,8 @@
     > .timepoint-text {
       font-size: 13px;
       position: absolute;
-      color: $white;
-      //background: $gray-dark;
+      //color: $gray-lighter;
+      background: #ddd;
       text-align: center;
       top: 0;
     }
@@ -88,17 +88,22 @@
       width: 60px;
       padding: 5px 3px;
       border-radius: 5px;
-      font-size: 14px;
+      //font-size: 13px;
     }
   }
 
   // Time label
   > .time-label {
     > span {
+      color: $white;
       font-weight: 600;
       padding: 4px 10px;
       display: inline-block;
+<<<<<<< HEAD
       //background-color: #fff;
+=======
+      background-color: $brand-primary;
+>>>>>>> master
 
       @include border-radius(4px);
     }
