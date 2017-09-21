@@ -20,8 +20,8 @@
 .tag-info { @include tag-variant($body-bg, $brand-info); }
 
 .tag-default.subtle { @include tag-variant($gray-dark, mix($gray-darker, $gray-lighter, 7.5%)); }
-.tag-success.subtle { @include tag-variant($brand-success, mix($brand-success, #fff, 7.5%)); }
-.tag-info.subtle { @include tag-variant($brand-info, mix($brand-info, #fff, 7.5%)); }
-.tag-warning.subtle { @include tag-variant($brand-warning-text, mix($brand-warning, #fff, 7.5%)); }
-.tag-danger.subtle { @include tag-variant($brand-danger, mix($brand-danger, #fff, 7.5%)); }
-.tag-primary.subtle { @include tag-variant($brand-primary, mix($brand-primary, #fff, 7.5%)); }
+.tag-success.subtle { @include tag-variant($brand-success, $state-success-bg); }
+.tag-info.subtle { @include tag-variant($brand-info, $state-info-bg); }
+.tag-warning.subtle { @include tag-variant($brand-warning-text, $state-warning-bg); }
+.tag-danger.subtle { @include tag-variant($brand-danger, $state-danger-bg); }
+.tag-primary.subtle { @include tag-variant($brand-primary, $state-primary-bg); }
