@@ -39,7 +39,7 @@
 @mixin tag-variant($color, $background) {
   color: $color;
   background-color: $background;
-  border: 1px solid darken($background, 15%);
+  border: 1px solid darken(adjust-hue($background, -10), 5%);
 
   a,i {
     color: $color;
