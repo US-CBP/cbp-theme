@@ -44,7 +44,48 @@ input[disabled], select[disabled] {
 }
 
 .is-disabled .mdl-selectfield__label {
+  color: rgba(0, 0, 0, 0.26) !important;  
+}
+
+.mdl-textfield.is-disabled .mdl-textfield__label, .mdl-textfield.is-disabled .mdl-selectfield__label {
   color: rgba(0, 0, 0, 0.26) !important;
+  .required-field:after {
+    content: " " !important;    
+  }
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__label, .mdl-textfield.is-readonly .mdl-selectfield__label , fieldset[readonly] .mdl-textfield .mdl-textfield__label {
+  color: rgba(0, 0, 0, 0.56) ;
+  .required-field:after {
+    content: " " !important;    
+  }
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.26) ;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-bottom: 1px dotted #808080;  
+}
+
+.mdl-textfield.is-readonly input {
+  pointer-events: none;
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__label, fieldset[readonly] .mdl-textfield .mdl-textfield__label {
+  color: rgba(0, 0, 0, 0.56) ;
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.26) ;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-bottom: 1px dotted #808080;  
+
+
+}
+.mdl-textfield.is-readonly input {
+  pointer-events: none;
 }
 
 
@@ -76,7 +117,11 @@ input[disabled], select[disabled] {
 }
 
 .navbar-form {
-  margin: 3px 0 0 0;
+  margin: 5px 0 0 0;
+
+  .input-group-btn:last-child >.btn {
+  padding: 6px 12px;
+  }
 }
 
 .navbar-form .mdl-textfield {

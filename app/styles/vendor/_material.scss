@@ -8,9 +8,11 @@ $radio-color: $brand-info;
 $input-text-highlight-color: $brand-info;
 $input-text-bottom-border-color: $gray;
 $input-text-label-color: $gray-darker;
-$input-text-padding: 8px;
+$input-text-font-size: 13px;
+$input-text-padding: 6px;
 $input-hover: transparentize($brand-info, 0.90);
 $input-text-disabled-color: $gray;
+$input-text-floating-label-fontsize: 13px ;
 
 
 /* TABLES */
@@ -20,9 +22,19 @@ $data-table-row-height: $line-height-computed;
 $data-table-header-color: $gray;
 $data-table-dividers: none;
 
+/* RADIO */
+
+$radio-label-font-size: 13px;
+//$radio-label-height: 30px;
+//$radio-button-size: 16px !default;
+//$radio-inner-margin: $radio-button-size / 4;
+//$radio-padding: 8px !default;
+//$radio-top-offset: 2px;
+//$radio-ripple-size: 42px !default;
+
 /* CHECKBOX */
 $checkbox-color: $brand-info;
-$checkbox-label-font-size: 15px !default;
+$checkbox-label-font-size: 13px; //changed from 15px MK
 $checkbox-label-height: 24px !default;
 $checkbox-button-size: 18px !default;
 $checkbox-inner-margin: 2px !default;

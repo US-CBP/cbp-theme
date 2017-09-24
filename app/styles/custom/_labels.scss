@@ -12,36 +12,35 @@
 }
 .label-primary {
   @include label-variant($brand-primary);
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
 .label-success {
   @include label-variant($brand-success);
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
 .label-info {
   @include label-variant($brand-info);
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
 .label-danger {
   @include label-variant($brand-danger);
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
 .label-inverse {
   @include label-variant($body-bg);
   color: $gray-dark;
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
 .label-live {
   @include label-variant($brand-live);
   color: $gray-dark;
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
 .label-warning {
   @include label-variant($brand-warning);
   color: $brand-warning-text;
-  border: 1px solid $gray !important;
+  border: 1px solid $gray;
 }
-
 
 .label-default.subtle {
     color: $gray-dark;
@@ -50,51 +49,34 @@
 }
 
 .label-success.subtle {
-    color: darken($brand-success, 8.8%);
+    color: $state-success-text;
     background-color: $state-success-bg;
     border: 1px solid $state-success-border;
 }
 
 .label-info.subtle {
-    color: $brand-info;
+    color: $state-info-text;
     background-color: $state-info-bg;
     border: 1px solid $state-info-border;
 }
 
 .label-warning.subtle {
-    color: $brand-warning-text;
+    color: $state-warning-text;
     background-color: $state-warning-bg;
     border: 1px solid $state-warning-border;
 }
 
 .label-danger.subtle {
-    color: $brand-danger;
+    color: $state-danger-text;
     background-color: $state-danger-bg;
     border: 1px solid $state-danger-border;
 }
 
 .label-primary.subtle {
-    color: $brand-primary;
-    background-color: mix($brand-primary, #fff, 7.5%);
-    border: 1px solid $state-success-border;
+    color: $state-primary-text;
+    background-color: $state-primary-bg;
+    border: 1px solid $state-primary-border;
 }
 
-label {
-  font-weight: 400;
-}
 
-// material
 
-label.mdl-textfield__label {
-  margin-bottom: 0;
-}
-
-.mdl-textfield.is-focused:not(.mdl-textfield--floating-label) label.mdl-textfield__label {
-    visibility: hidden !important;
-}
-
-label.mdl-textfield__label.static-label {
-  font-size: 12px;
-  top: 4px;
-  visibility: visible !important;
-}
