@@ -688,15 +688,15 @@ $list-group-border:             #ddd !default;
 $list-group-border-radius:      $border-radius-base !default;
 
 //** Background color of single list items on hover
-$list-group-hover-bg:           #f5f5f5 !default;
+$list-group-hover-bg:           $state-info-bg !default;
 //** Text color of active list items
 $list-group-active-color:       $component-active-color !default;
 //** Background color of active list items
-$list-group-active-bg:          $component-active-bg !default;
+$list-group-active-bg:          #fff !default; 
 //** Border color of active list elements
-$list-group-active-border:      $list-group-active-bg !default;
+$list-group-active-border:      #ddd !default;
 //** Text color for content within active list items
-$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+$list-group-active-text-color:  $text-color !default;
 
 //** Text color of disabled list items
 $list-group-disabled-color:      $gray-light !default;

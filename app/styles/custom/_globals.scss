@@ -161,9 +161,18 @@ input[type=radio]:focus
   //box-shadow: none;
 }
 
-.list-group .list-group-item.active {
-  background-color: $brand-default-highlight;
-  color: #333;
+.list-group .list-group-item {
+    a {
+        color: #333;
+    }
+    &.active {
+        border-right: 3px solid $brand-primary;
+        font-weight: bold;
+        color: #333;
+    }
+    &:hover, &:active, &:focus {
+        background-color: $list-group-hover-bg;
+    }
 }
 
 .nav-steps > li > a, .nav-steps > li > span {
