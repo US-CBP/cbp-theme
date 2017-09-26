@@ -1,4 +1,29 @@
 
+.mdl-data-table {
+  tbody {
+    tr {
+      &.is-selected {
+        background-color: $state-primary-bg;
+      }
+
+      &:hover {
+        //background-color: darken($table-bg-hover, 3%);
+        background-color: $table-bg-hover;
+      }
+    }
+  }
+  td, th {   
+
+    &:first-of-type {
+      padding-left: $table-cell-padding;
+    }
+
+    &:last-of-type {
+      padding-right: $table-cell-padding;
+    }
+  }
+}
+
 // Sortable table
 //
 // Adds styling for sortable/disabled/active sort cells.
@@ -221,20 +246,7 @@ these styles are inherited from bootstrap
   }
 }
 
-.mdl-data-table {
-  tbody {
-    tr {
-      &.is-selected {
-        background-color: $state-primary-bg;
-      }
 
-      &:hover {
-        //background-color: darken($table-bg-hover, 3%);
-        background-color: $table-bg-hover;
-      }
-    }
-  }
-}
 
 /* .cbp-table {
   @extend .table;
@@ -279,6 +291,7 @@ these styles are inherited from bootstrap
     }
   }
 } */
+
 
 .table {
   
@@ -333,3 +346,4 @@ these styles are inherited from bootstrap
     display: none;
   }
 }
+
