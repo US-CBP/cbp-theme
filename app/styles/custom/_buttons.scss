@@ -32,12 +32,9 @@
 }
 
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-  padding: 9px 12px;
+  padding: $padding-base-vertical $padding-base-horizontal;
 }
 
-.input-group-btn:last-child>.btn.btn-xs {
-  padding: 6px 12px;
-}
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 6px;
