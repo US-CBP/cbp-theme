@@ -200,7 +200,7 @@
   }
 }
 
-.cbp-table {
+/* .cbp-table {
   @extend .table;
   @extend .table-comfortable;
   @extend .mdl-data-table;
@@ -222,6 +222,49 @@
 
 .cbp-table-selectable {
   @extend .cbp-table;
+  @extend .table-selectable !optional;
+
+  > thead > tr > th:first-child,
+  > tbody > tr > td:first-child,
+  > tbody > tr > th {
+      text-align: left !important;
+      width: 50px;
+  }
+
+  thead {
+     > label.cbp-checkbox {
+      margin-top: 0;
+    }
+  }
+
+  td {
+    > label.cbp-checkbox {
+      vertical-align: middle;
+    }
+  }
+} */
+
+.table {
+  
+  //@extend .table-comfortable;
+  @extend .mdl-data-table;
+
+  > tbody > tr > td.non-numeric,
+  > thead > tr > th.non-numeric {
+    @extend .mdl-data-table__cell--non-numeric;
+  }
+  > tbody > tr > td {
+    color: $gray-dark;
+  }
+  > tbody > tr > th {
+      text-align: left !important;
+      color: $gray-dark;
+      font-weight: normal;
+  }
+}
+
+.table-selectable {
+  @extend .table;
   @extend .table-selectable !optional;
 
   > thead > tr > th:first-child,
