@@ -30,9 +30,16 @@
 // gets rid of all cell borders
 
 .table-borderless {
-    > tbody > tr > td, > thead > tr > th {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
         border: none;
+      }
     }
+  }
 }
 
 .panel > .panel-collapse > .table {
@@ -65,6 +72,8 @@
     }
 }
 
+/* 
+these styles are inherited from bootstrap
 .table {
   > thead,
   > tbody,
@@ -99,6 +108,19 @@
       > th,
       > td {
         padding: $table-cell-padding*1.6 $table-cell-padding*2;
+      }
+    }
+  }
+} */
+
+.table-comfortable {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding*1.5 $table-cell-padding*1.5;
       }
     }
   }
