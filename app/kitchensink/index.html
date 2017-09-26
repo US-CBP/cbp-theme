@@ -1663,9 +1663,9 @@
                   <form class="form" style="max-width: 450px;" role="form">
                     <h4>Textfield</h4>
                     <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield mdl-textfield--full-width">
-                      <label for="ht58" class="mdl-textfield__label">Email</label>
+                      <label for="ht58" class="mdl-textfield__label">Email <i class="fa fa-info-circle" aria-hidden="true"></i></label>
                       <input class="mdl-textfield__input" type="text" maxlength="25" data-charlimit=" 'target' : '.mdl-textfield__counter', 'limit' : 25 " pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" id="ht58">
-                      <i class="fa fa-info-circle" aria-hidden="true"></i>
+                      
                       <p class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Not a valid email address</p>
                       <p class="mdl-textfield__help">This is how people will contact you.</p>
                       <p class="mdl-textfield__counter"></p>
@@ -1822,13 +1822,25 @@
                   <ul class="list-group" style="max-width: 150px;">
                     <li class="list-group-item">
                       Inbox
-                      <span class="badge pull-right">1,932</span>
+                      <span class="pull-right">1,932</span>
                     </li>
                     <li class="list-group-item active">
                       Outbox
-                      <span class="badge pull-right">2</span>
+                      <span class="pull-right">2</span>
                     </li>
                     <li class="list-group-item">Spam</li>
+                  </ul>
+
+                  <ul class="list-group" style="max-width: 150px;">
+                    <li class="list-group-item">
+                      <a href="#">Inbox</a>
+                      <span class="pull-right">1,932</span>
+                    </li>
+                    <li class="list-group-item active">
+                      <a href="#">Outbox</a>
+                      <span class="pull-right">2</span>
+                    </li>
+                    <li class="list-group-item"><a href="#">Spam</a></li>
                   </ul>
                 </div>
               </div>
