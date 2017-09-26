@@ -11,7 +11,8 @@
     > thead > tr > .sortable {
         &.active {
             background: $table-bg-hover; //overrides bootstrap's active color
-            border-color: darken($table-bg-hover, 4%);
+            //border-color: darken($table-bg-hover, 4%);
+            border-color: $brand-primary;
             color: #222;
             // border-bottom-color: #bbb;
             font-weight: 700;
@@ -19,7 +20,8 @@
 
         &:hover {
             background: $table-bg-hover;
-            border-color: darken($table-bg-hover, 4%);
+            //border-color: darken($table-bg-hover, 4%);
+            border-color: $brand-primary;
             cursor: pointer;
         }
     }
@@ -30,7 +32,6 @@
 // gets rid of all cell borders
 
 .table-borderless {
-  > thead,
   > tbody,
   > tfoot {
     > tr {
@@ -62,7 +63,7 @@
 // Adds a border to the outside of the table, but not the cells.
 
 .table-outline {
-    border: 1px solid #eee;
+    border: 1px solid $table-border-color;
 }
 
 // Vertical align middle all cells
@@ -126,14 +127,25 @@ these styles are inherited from bootstrap
   }
 }
 
+.table-striped {
+  > tbody {
+    > tr:nth-of-type(even) {
+    background-color: $table-bg-accent;
+    }
+    tr:nth-of-type(odd) {
+    background-color: $white;
+    }
+  }
+}
+
 // Adds a background color to the table header
 .table > thead > tr {
-    background: darken($table-bg-hover, 5%);
-}
-.table > thead > tr > th {
+    background: $gray-lighter;
+  > th {
     border-bottom-color: $table-border-color;
     border-bottom-width: 2px;
     // font-weight: 600;
+  }
 }
 
 .table-group {
@@ -157,6 +169,7 @@ these styles are inherited from bootstrap
 
       &:hover {
           background-color: $table-bg-hover;
+          border-color: $brand-primary;
       }
     }
 }
@@ -212,11 +225,12 @@ these styles are inherited from bootstrap
   tbody {
     tr {
       &.is-selected {
-        background-color: $brand-default-highlight;
+        background-color: $state-primary-bg;
       }
 
       &:hover {
-        background-color: darken($table-bg-hover, 3%);
+        //background-color: darken($table-bg-hover, 3%);
+        background-color: $table-bg-hover;
       }
     }
   }
