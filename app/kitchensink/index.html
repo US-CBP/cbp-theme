@@ -26,8 +26,9 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="../">
-              <div class="cbp-brand"></div>
-              <div class="dhs-brand"></div>
+              <span class="visible-md visible-lg"><span class="cbp-brand">Organization Brand - CBP Theme 1.0</span></span>
+              <span class="visible-xs visible-sm"><span class="cbp-brand">Brand</span></span>
+              <span class="visible-md visible-lg"><span class="dhs-brand">Organization Sub Branding</span></span>
             </a>
             <button data-target="#navbar-user-info" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="sr-only">Toggle Global Navigation</span>
@@ -364,6 +365,7 @@
               <a href="#Dialogs" class="list-group-item">Dialogs</a>
               <a href="#Form Controls" class="list-group-item">Form Controls</a>
               <a href="#Forms" class="list-group-item">Forms</a>
+              <a href="#Icons" class="list-group-item">Icons</a>
               <a href="#Labels and Badges" class="list-group-item">Labels and Badges</a>
               <a href="#List Group" class="list-group-item">List Group</a>
               <a href="#Menus" class="list-group-item">Menus</a>
@@ -587,47 +589,47 @@
               </h2>
               <div class="panel">
                 <div class="panel-body">
-                  <div class="alert alert-info">
+                  <div class="alert alert-info" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
-                    <i class="alert-icon-info alert-icon"></i> Press the <strong>'A'</strong> key to automatically assign a case.
+                    <i class="alert-icon-info alert-icon" aria-hidden="true"></i><span class="sr-only">Info alert</span> Press the <strong>'A'</strong> key to automatically assign a case.
                   </div>
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
                     <button class="btn btn-sm btn-link alert-link pull-right">Undo</button>
-                    <i class="alert-icon-success alert-icon"></i> Case assigned to <strong>Jerry</strong> .
+                    <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
-                    <i class="alert-icon-success alert-icon"></i> Case assigned to
+                    <i class="alert-icon-success alert-icon" aria-hidden="true"></i><span class="sr-only">Success alert</span> Case assigned to
                     <strong>Jerry</strong> .
                   </div>
-                  <div class="alert alert-warning">
+                  <div class="alert alert-warning" role="alert" aria-live="polite">
                     <button type="button" class="close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                     </button>
-                    <i class="alert-icon-warning alert-icon"></i> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
+                    <i class="alert-icon-warning alert-icon"></i><span class="sr-only">Warning alert</span> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
                   </div>
-                  <div class="alert alert-danger">
+                  <div class="alert alert-danger" role="alert" aria-live="polite">
                     <button class="btn btn-sm btn-link alert-link pull-right">Retry</button>
-                    <i class="alert-icon-danger alert-icon"></i> There was a network error assigning case
+                    <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> There was a network error assigning case
                     <strong>90/934,382</strong> .
                   </div>
-                  <div class="alert alert-danger">
-                    <i class="alert-icon-danger alert-icon"></i> Please fix the 3 errors.
+                  <div class="alert alert-danger" role="alert" aria-live="polite">
+                    <i class="alert-icon-danger alert-icon" aria-hidden="true"></i><span class="sr-only">Danger alert</span> Please fix the 3 errors.
                   </div>
                   <h3>Notifications</h3>
                   <div class="toast-list" style="max-width: 400px;">
-                    <div class="toast toast-success" tabindex="-1">
+                    <div class="toast toast-success" tabindex="-1" aria-live="polite"><span class="sr-only">Success notification</span>
                       <div class="toast-content">
                         <button class="close" data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -635,7 +637,7 @@
                         <span>Message sent to Jerry.</span>
                       </div>
                     </div>
-                    <div class="toast toast-info" tabindex="-1">
+                    <div class="toast toast-info" tabindex="-1" aria-live="polite"><span class="sr-only">Info notification</span>
                       <div class="toast-content">
                         <button class="close" data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -646,7 +648,7 @@
                         <button type="button" class="btn btn-link">View comment</button>
                       </div>
                     </div>
-                    <div class="toast toast-warning" tabindex="-1">
+                    <div class="toast toast-warning" tabindex="-1" aria-live="polite"><span class="sr-only">Warning notification</span>
                       <div class="toast-content">
                         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -662,7 +664,7 @@
                         </button>
                       </div>
                     </div>
-                    <div class="toast toast-danger" tabindex="-1">
+                    <div class="toast toast-danger" tabindex="-1" aria-live="polite"><span class="sr-only">Danger notification</span>
                       <div class="toast-content">
                         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -679,7 +681,7 @@
                   <div class="toast-list pl-closable-toasts"
                     style="display: none; width: 400px; padding: 9px;"
                     id="example-toasts">
-                    <div class="toast toast-success" tabindex="0">
+                    <div class="toast toast-success" tabindex="0" aria-live="polite"><span class="sr-only">Success notification</span>
                       <div class="toast-content">
                         <button class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -687,7 +689,7 @@
                         <span>Message sent to Jerry.</span>
                       </div>
                     </div>
-                    <div class="toast toast-info" tabindex="0">
+                    <div class="toast toast-info" tabindex="0" aria-live="polite"><span class="sr-only">Info notification</span>
                       <div class="toast-content">
                         <button class="close">
                         <span>&times;</span>
@@ -698,7 +700,7 @@
                         <button type="button" class="btn btn-link">View comment</button>
                       </div>
                     </div>
-                    <div class="toast toast-warning" tabindex="0">
+                    <div class="toast toast-warning" tabindex="0" aria-live="polite"><span class="sr-only">Warning notification</span>
                       <div class="toast-content">
                         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -714,7 +716,7 @@
                         </button>
                       </div>
                     </div>
-                    <div class="toast toast-danger" tabindex="0">
+                    <div class="toast toast-danger" tabindex="0" aria-live="polite"><span class="sr-only">Danger notification</span>
                       <div class="toast-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span>&times;</span>
@@ -899,88 +901,89 @@
                 <i class="fa fa-chevron-up bounce"></i>
               </a>
               </h2>
-              <div class="panel bs-example cards-example ">
-                <div class="cbp-card-container container-fluid row">
-
-                    <div class="cbp-card cbp-card-shadow col-sm-4">
-
-                      <div class="cbp-card__media">
+              <div class="cards-example">
+                <h3>Cards with different content</h3>
+                <div class="mdl-card-container row">
+                  <div class="col-sm-4">
+                    <div class="mdl-card mdl-card-shadow">
+                      <div class="mdl-card__media">
                         <img src="./images/cbp_super_bowl.jpg" width="330" height="157" border="0" alt="CBP Super Bowl 50 Air and Marine Operations Security" >
                       </div>
-                      <div class="cbp-card__menu">
-                          <i class="fa fa-share-square fa-inverse" aria-hidden="true"></i>
+                      <div class="mdl-card__menu">
+                        <i class="fa fa-share-square fa-inverse" aria-hidden="true"></i>
                       </div>
-                       <div class="cbp-card__title">
-                          <h3 class="cbp-card__title-text">CBP Super Bowl 50 Air and Marine Operations Security</h3>
-                        </div>
-                      <div class="cbp-card__supporting-text">
+                      <div class="mdl-card__title">
+                        <h3 class="mdl-card__title-text">CBP Super Bowl 50 Air and Marine Operations Security</h3>
+                      </div>
+                      <div class="mdl-card__supporting-text">
                         Personnel with U.S. Customs and Border Protection conduct operations in advance of Super Bowl 50 in Santa Clara, Calif., 2016. (U.S. Customs and Border Protection Photo by Glenn Fawcett)
                       </div>
-                      <div class="cbp-card__actions cbp-card--border">
+                      <div class="mdl-card__actions mdl-card--border">
                         <button class="btn btn-default pull-right">
-                          Read More...
+                        Read More...
                         </button>
                       </div>
                     </div>
-
-                    <div class="cbp-card cbp-card-shadow col-sm-4">
-
-                      <div class="cbp-card__title cbp-card--expand">
-                        <h2 class="cbp-card__title-text">Update</h2>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="mdl-card mdl-card-shadow">
+                      <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Update</h2>
                       </div>
-                      <div class="cbp-card__menu">
-                          <i class="fa fa-trash" aria-hidden="true"></i>
+                      <div class="mdl-card__menu">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                       </div>
-                      <div class="cbp-card__supporting-text">
+                      <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Aenan convallis.
                       </div>
-                      <div class="cbp-card__actions cbp-card--border">
+                      <div class="mdl-card__actions mdl-card--border">
                         <button class="btn btn-default">
-                          View Updates
+                        View Updates
                         </button>
                       </div>
                     </div>
-
-                    <div class="cbp-card cbp-card-shadow col-sm-3">
-
-                      <div class="cbp-card__title cbp-card--expand">
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="mdl-card mdl-card-shadow">
+                      <div class="mdl-card__title mdl-card--expand">
                         <h3>
-                          Featured event:<br>
-                          May 24, 2016<br>
-                          7-11pm
+                        Featured event:<br>
+                        May 24, 2016<br>
+                        7-11pm
                         </h3>
                       </div>
-                      <div class="cbp-card__menu">
-                          <i class="fa fa-times" aria-hidden="true"></i>
+                      <div class="mdl-card__menu">
+                        <i class="fa fa-times" aria-hidden="true"></i>
                       </div>
-                      <div class="cbp-card__actions cbp-card--border">
+                      <div class="mdl-card__actions mdl-card--border">
                         <button class="btn btn-default">
-                          <i class="fa fa-calendar fa-fw"></i>
-                          &nbsp;Add to Calendar
+                        <i class="fa fa-calendar fa-fw"></i>
+                        &nbsp;Add to Calendar
                         </button>
                       </div>
                     </div>
-
-                    <div class="cbp-card cbp-card-shadow col-sm-3">
-                      <div class="cbp-card__title cbp-card--expand">
-                        <h2 class="cbp-card__title-text"><i class="fa fa-newspaper-o fa-fw " aria-hidden="true"></i>&nbsp; Latest News</h2>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="mdl-card mdl-card-shadow">
+                      <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text"><i class="fa fa-newspaper-o fa-fw " aria-hidden="true"></i>&nbsp; Latest News</h2>
                       </div>
-                      <div class="cbp-card__supporting-text">
+                      <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Aenan convallis.
                       </div>
-                      <div class="cbp-card__actions cbp-card--border">
+                      <div class="mdl-card__actions mdl-card--border">
                         <button class="btn btn-default">
-                          View Headlines
+                        View Headlines
                         </button>
                       </div>
                     </div>
-
+                  </div>
                 </div>
-              </div>
-            </div>
-
+                <a href="https://us-cbp.github.io/cbp-style-guide/docs/components/cards.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more cards examples</a>
+              </div>              
+            </div>  
             <!-- Dialogs -->
             <div>
               <h2 id="Dialogs" class="page-header">Dialogs
@@ -1146,6 +1149,11 @@
                           <label for="tb133" class="mdl-textfield__label">Disabled</label>
                           <input type="text" class="mdl-textfield__input" id="tb133" disabled>
                         </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-readonly is-focused">
+                          <label for="tb134" class="mdl-textfield__label">Readonly</label>
+                          <input type="text" class="mdl-textfield__input" id="tb134" readonly tabindex="-1">
+                        </div>
+                        
                       </form>
                     </div>
                   </div>
@@ -1605,6 +1613,16 @@
                       <label class="mdl-textfield__label" for="sample3999">floating-label <span class="required-field"></span></label>
                       <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
                     </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required">
+                      <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" disabled/>
+                      <label class="mdl-textfield__label static-label" for="sample4999">static-label disabled<span class="required-field"></span></label>
+                      <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required is-readonly">
+                      <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" readonly/>
+                      <label class="mdl-textfield__label static-label" for="sample4999">static-label readonly<span class="required-field"></span></label>
+                      <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
+                    </div>
                   </form>
                   <h3>Form Validation</h3>
                   <form class="form" style="max-width: 450px;" role="form">
@@ -1645,9 +1663,9 @@
                   <form class="form" style="max-width: 450px;" role="form">
                     <h4>Textfield</h4>
                     <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield mdl-textfield--full-width">
-                      <label for="ht58" class="mdl-textfield__label">Email</label>
+                      <label for="ht58" class="mdl-textfield__label">Email <i class="fa fa-info-circle" aria-hidden="true"></i></label>
                       <input class="mdl-textfield__input" type="text" maxlength="25" data-charlimit=" 'target' : '.mdl-textfield__counter', 'limit' : 25 " pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" id="ht58">
-                      <i class="fa fa-info-circle" aria-hidden="true"></i>
+                      
                       <p class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Not a valid email address</p>
                       <p class="mdl-textfield__help">This is how people will contact you.</p>
                       <p class="mdl-textfield__counter"></p>
@@ -1736,6 +1754,32 @@
               </div>
             </div>
 
+            <!-- Icons -->
+            <div>
+              <h2 id="Icons" class="page-header">Icons
+              <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
+                <i class="fa fa-chevron-up bounce"></i>
+              </a>
+              </h2>
+              <div class="panel">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x text-success"></i>
+                  <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                </span>  
+
+                <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/foundation/icons.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more icons examples</a>   
+                </p>                    
+              </div>
+            </div>
+
             <!-- Labels and Badges -->
             <div>
               <h2 id="Labels and Badges" class="page-header">Labels and Badges
@@ -1778,13 +1822,25 @@
                   <ul class="list-group" style="max-width: 150px;">
                     <li class="list-group-item">
                       Inbox
-                      <span class="badge pull-right">1,932</span>
+                      <span class="pull-right">1,932</span>
                     </li>
                     <li class="list-group-item active">
                       Outbox
-                      <span class="badge pull-right">2</span>
+                      <span class="pull-right">2</span>
                     </li>
                     <li class="list-group-item">Spam</li>
+                  </ul>
+
+                  <ul class="list-group" style="max-width: 150px;">
+                    <li class="list-group-item">
+                      <a href="#">Inbox</a>
+                      <span class="pull-right">1,932</span>
+                    </li>
+                    <li class="list-group-item active">
+                      <a href="#">Outbox</a>
+                      <span class="pull-right">2</span>
+                    </li>
+                    <li class="list-group-item"><a href="#">Spam</a></li>
                   </ul>
                 </div>
               </div>
@@ -3288,7 +3344,7 @@
                           <!-- timeline item -->
                           <li>
                               <!-- timeline icon -->
-                              <i class="fa fa-envelope bg-info"></i>
+                              <i class="fa fa-envelope"></i>
                               <div class="timeline-item">
                                   <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
 
@@ -3308,7 +3364,7 @@
                           <!-- END timeline item -->
 
                           <li>
-                              <i class="timepoint-text bg-info">Text and more</i>
+                              <i class="timepoint-text">Text and more</i>
 
                               <div class="timeline-item">
                                 <div class="timeline-body">
@@ -3344,7 +3400,7 @@
                           <!-- END timeline item -->
 
                           <li>
-                            <i class="fa fa-clock-o bg-default"></i>
+                            <i class="fa fa-clock-o"></i>
                           </li>
                         </ul>
                       </div>
@@ -3361,13 +3417,13 @@
 
                           <!-- timeline time label -->
                           <li class="time-label">
-                            <span class="bg-primary">Yesterday</span>
+                            <span>Yesterday</span>
                           </li>
                           <!-- /.timeline-label -->
 
 
                           <li>
-                            <i class="fa fa-files-o bg-success"></i>
+                            <i class="fa fa-files-o"></i>
                             <div class="timeline-item">
                               <span class="time">2 filings <i class="fa fa-info-circle"></i></span>
 
@@ -3380,7 +3436,7 @@
                           </li>
 
                           <li>
-                            <i class="fa fa-truck bg-primary"></i>
+                            <i class="fa fa-truck"></i>
                             <div class="timeline-item">
                               <span class="time">Port 1234 to Port 4321 <i class="fa fa-info-circle"></i></span>
 
@@ -3389,7 +3445,7 @@
                           </li>
 
                           <li>
-                            <i class="fa fa-cogs bg-primary"></i>
+                            <i class="fa fa-cogs"></i>
                             <div class="timeline-item">
                               <span class="time text-danger">* 53 system events <i class="fa fa-info-circle"></i></span>
 
@@ -3398,7 +3454,7 @@
                           </li>
 
                           <li>
-                            <i class="fa fa-sticky-note-o bg-warning"></i>
+                            <i class="fa fa-sticky-note-o"></i>
                             <div class="timeline-item">
                               <span class="time">7 related notes <i class="fa fa-info-circle"></i></span>
 
@@ -3407,7 +3463,7 @@
                           </li>
 
                           <li>
-                            <i class="fa fa-user bg-danger"></i>
+                            <i class="fa fa-user"></i>
                             <div class="timeline-item">
                               <span class="time">3 actions <i class="fa fa-info-circle"></i></span>
 
@@ -3418,7 +3474,7 @@
 
                           <!-- timeline time label -->
                           <li class="time-label">
-                              <span class="bg-primary">
+                              <span class="">
                                  Today
                               </span>
                           </li>
@@ -3426,7 +3482,7 @@
 
 
                           <li>
-                            <i class="fa fa-circle-o-notch bg-success"></i>
+                            <i class="fa fa-circle-o-notch"></i>
                             <div class="timeline-item">
                               <span class="time">1 event <i class="fa fa-info-circle"></i></span>
 
@@ -3436,7 +3492,7 @@
 
 
                           <li>
-                            <i class="fa fa-clock-o bg-default"></i>
+                            <i class="fa fa-clock-o"></i>
                           </li>
                         </ul>
                       </div>
@@ -3455,7 +3511,7 @@
 
                           <!-- timeline time label -->
                           <li class="time-label">
-                                <span class="bg-primary">
+                                <span class="">
                                   2016 July 10
                                 </span>
                           </li>
@@ -3463,7 +3519,7 @@
 
                           <!-- timeline item -->
                           <li>
-                            <i class="fa fa-envelope bg-info"></i>
+                            <i class="fa fa-envelope"></i>
 
                             <div class="timeline-item">
                               <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
@@ -3483,7 +3539,7 @@
 
                           <!-- timeline item -->
                           <li>
-                            <i class="fa fa-user bg-success"></i>
+                            <i class="fa fa-user"></i>
 
                             <div class="timeline-item">
                               <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
@@ -3495,7 +3551,7 @@
 
                           <!-- timeline item -->
                           <li>
-                            <i class="fa fa-comments bg-warning"></i>
+                            <i class="fa fa-comments"></i>
 
                             <div class="timeline-item">
                               <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
@@ -3514,7 +3570,7 @@
 
                           <!-- timeline time label -->
                           <li class="time-label">
-                                <span class="bg-primary">
+                                <span class="">
                                  2016 June 22
                                 </span>
                           </li>
@@ -3522,7 +3578,7 @@
 
                           <!-- timeline item -->
                           <li>
-                            <i class="fa fa-camera bg-danger"></i>
+                            <i class="fa fa-camera"></i>
 
                             <div class="timeline-item">
                               <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
@@ -3540,7 +3596,7 @@
                           <!-- END timeline item -->
 
                           <li>
-                            <i class="fa fa-clock-o bg-default"></i>
+                            <i class="fa fa-clock-o"></i>
                           </li>
                         </ul>
                       </div>
@@ -3596,12 +3652,14 @@
               </h2>
               <div class="panel">
                 <div class="panel-body">
-                  <h1>h1. Main Heading <small>Secondary text</small></h1>
-                  <h2>h2. Sub Heading <small>Secondary text</small></h2>
-                  <h3>h3. Sub Sub Heading <small>Secondary text</small></h3>
-                  <h4>h4. Sub Sub Sub Heading <small>Secondary text</small></h4>
-                  <h5>h5. Sub Sub Sub Sub Heading <small>Secondary text</small></h5>
-                  <h6>h6. Sub Sub Sub Sub Sub Heading <small>Secondary text</small></h6>
+                  <h1>h1. Main Heading Regular 30px <small>Secondary text</small></h1>
+                  <h2>h2. Sub Heading Semibold 24px <small>Secondary text</small></h2>
+                  <h3>h3. Sub Sub Heading Semibold 22px <small>Secondary text</small></h3>
+                  <h4>h4. Sub Sub Sub Heading Semibold 20px <small>Secondary text</small></h4>
+                  <h5>h5. Sub Sub Sub Sub Heading Semibold 18px <small>Secondary text</small></h5>
+                  <h6>h6. Sub Sub Sub Sub Sub Heading Semibold 16px <small>Secondary text</small></h6>
+
+                  <a href="https://us-cbp.github.io/cbp-style-guide/docs/foundation/typography.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more typography examples</a>
                 </div>
               </div>
             </div>
@@ -3659,5 +3717,6 @@
     <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>
 
+   
   </body>
 </html>

@@ -49,6 +49,8 @@
     }
 
     .cbp-brand {
+      font-size: 18px;
+      line-height: 20px;
 
       span {
         display: none;
@@ -58,45 +60,17 @@
           span {
             display: inline;
           }
-      }
-
-      &:before {
-        content: 'U.S. Customs & Border Protection';
-        font-size: 18px;
-        line-height: 16px;
-
-        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-          content : 'U.S. CBP';
-        }
-
-        @media (max-width: $screen-xs-max) {
-          content : 'U.S. CBP';
-        }
-      }
+      }     
 
     }
 
 
     .dhs-brand {
       display: block;
-      margin: 0;
+      margin:3px 0 0;
       line-height: 14px;
-
-      &:before {
-        content: 'U.S. Department of Homeland Security';
-        font-size: 12px;
-        font-style: italic;
-
-        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-          content : '';
-          display: hidden;
-        }
-
-        @media (max-width: $screen-xs-max) {
-          content : '';
-          display: hidden;
-        }
-      }
+      font-size: 12px;
+      font-style: italic;      
     }
 
   }
@@ -198,6 +172,7 @@
 .app-header-bottom {
   @extend .navbar, .navbar-default, .navbar-flush;
   position: fixed;
+  font-size: ceil(($font-size-base * 1.15));
   right: 0;
   left: 0;
 }

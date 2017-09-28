@@ -38,8 +38,7 @@ We use Webpack for our build process wrapped by npm commands:
 * npm run build - builds the dependencies via Webpack
 * npm run dev - builds via Webpack
 * npm run server - builds and serves it up via Webpack
-* npm run a11y - runs pa11y accesibility on the kitchen sink (assumes npm run serve has been called) pa11y
-* npm run fonts - generates fonts from Google's Roboto font family (NOTE - only need to run if adding newer font styles)
+* npm run a11y - runs pa11y accesibility on the kitchen sink (assumes npm run serve has been called)
 
 ## The Kitchen Sink
 
@@ -54,6 +53,6 @@ Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on 
 ## Publishing
 We use [SemVer](http://semver.org/) system of versioning (MAJOR MINOR PATCH)
 
-* Run npm run version patch (or minor, major)
+* Run npm version patch (or minor, major)
 * Run npm publish to publish the current version to NPM's public registry
 * Self publish the webjar by going to [WebJars](http://www.webjars.org/npm) and adding a new webjar using the name cbp-theme. Then select the appropriate version.

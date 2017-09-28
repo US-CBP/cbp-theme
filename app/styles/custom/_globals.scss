@@ -116,7 +116,7 @@ input[type=radio]:focus
     &.has-icon > .dropdown-header {
         color: $gray-darker;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
     }
 
 }
@@ -161,9 +161,17 @@ input[type=radio]:focus
   //box-shadow: none;
 }
 
-.list-group .list-group-item.active {
-  background-color: $brand-default-highlight;
-  color: #333;
+.list-group .list-group-item {
+    a {
+        color: $text-color;
+    }
+    &.active {
+        border-right: 3px solid $brand-primary;
+        font-weight: bold;
+    }
+    &:hover, &:active, &:focus {
+        background-color: $list-group-hover-bg;
+    }
 }
 
 .nav-steps > li > a, .nav-steps > li > span {

@@ -18,13 +18,13 @@
 
 .btn {
   font-weight: normal;
-  font-size: 14px;
+  font-size: $font-size-base;
   margin: 1px 0px;
 }
 
-// FA icons only look good at 14px.
+// FA icons only look good at 13px.
 .btn .fa {
-  font-size: 14px;
+  font-size: $font-size-base;
 }
 
 .input-group-lg .btn .fa {
@@ -32,8 +32,9 @@
 }
 
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
-  padding: 9px 12px;
+  padding: $padding-base-vertical $padding-base-horizontal;
 }
+
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 6px;

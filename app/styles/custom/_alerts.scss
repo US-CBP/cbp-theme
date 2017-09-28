@@ -2,22 +2,23 @@
 .alert {
     display: inline-block;
     width: 100%;
-    padding: $alert-padding $alert-padding * 2;
+    padding: $alert-padding $alert-padding*2;
 
     a {
       text-decoration: underline;
     }
 
     .close {
-        margin-top: -3px;
+        //margin-top: -3px;
         margin-left: 8px;
-        margin-right: -3px;
+        //margin-right: -3px;
         text-shadow: none;
         opacity: .6;
 
     }
 
     .alert-icon {
+        @extend .fa;
         margin-right: 3px;
         width: 18px;
         margin-left: -4px;
@@ -26,35 +27,28 @@
     }
 
     .btn {
-        margin: -4px;
+        margin: -2px;
         margin-left: 10px;
         text-decoration: underline;
         // margin-right: -10px;
         // text-transform: uppercase;
     }
 }
-
-.alert-icon-info:after,
-.alert-icon-success:after,
-.alert-icon-danger:after,
-.alert-icon-warning:after {
-    @extend .fa:after !optional;
+.alert-icon-info{
+    @extend .fa-info-circle;
 }
 
-.alert-icon-info:after {
-    @extend .fa-info-circle:after !optional;
+
+.alert-icon-success {
+    @extend .fa-check ;
 }
 
-.alert-icon-success:after {
-    @extend .fa-check:after !optional;
+.alert-icon-danger {
+    @extend .fa-times-circle ;
 }
 
-.alert-icon-danger:after {
-    @extend .fa-times-circle:after !optional;
-}
-
-.alert-icon-warning:after {
-    @extend .fa-warning:after !optional;
+.alert-icon-warning {
+    @extend .fa-warning ;
 }
 
 .toast-list {

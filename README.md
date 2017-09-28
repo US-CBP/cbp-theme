@@ -8,7 +8,7 @@ Customs and Border Protection (CBP) Theme
 
 This is the common UI theme for CBP. It is used for internal and external web applications. We encourage the reuse of the theme and welcome contributions.  The theme is a set of artifacts (CSS, Javascript, and fonts), and we provide a static html page to demonstrate all the components available called the [Kitchen Sink](https://us-cbp.github.io/cbp-theme).  We also provide a [Style Guide](https://us-cbp.github.io/cbp-style-guide) to give guidance on how to use each component or pattern.
 
-This project is based on [Bootstrap 3](http://getbootstrap.com) and [Google's Material Design Lite] (https://github.com/google/material-design-lite) open source projects that allows us to easily create and maintain.  It is based on SASS.
+This project is based on [Bootstrap 3](http://getbootstrap.com) and [Google's Material Design Lite](https://github.com/google/material-design-lite) open source projects that allows us to easily create and maintain.  It is based on SASS.
 ___
 
 [![Kitchen Sink Screenshot](https://us-cbp.github.io/cbp-theme/images/sample_screen_shot.png)](https://us-cbp.github.io/cbp-theme/images/sample_screen_shot.png)
@@ -64,39 +64,102 @@ The dist directory contains:
 * `styles` 
   - cbp-theme.css
   - `scss/` for those who want to import scss files 
-* `fonts` 
+* `fonts`
   - Font Awesome and Roboto fonts
-
+  
 ```
 dist/
-├── cbp-theme.css
-├── cbp-theme.js
-├── cbp-theme.min.js
-├── fontawesome-webfont.eot
-├── fontawesome-webfont.svg
-├── fontawesome-webfont.ttf
-├── fontawesome-webfont.woff
-├── fontawesome-webfont.woff2
-├── inputmask.js
+├── scss
+│   ├── vendor
+│   │   ├── _selectize_mdl_theme.scss
+│   │   ├── _select2_mdl_theme.scss
+│   │   ├── _roboto.scss
+│   │   ├── _nouislider.scss
+│   │   ├── _mdl-selectfield.scss
+│   │   ├── _material_images.scss
+│   │   ├── _material_custom.scss
+│   │   ├── _material_cards.scss
+│   │   ├── _material.scss
+│   │   ├── _fontawesome.scss
+│   │   ├── _datepicker.scss
+│   │   └── _bootstrap.scss
+│   ├── main.scss
+│   └── custom
+│       ├── _variables.scss
+│       ├── _utilities.scss
+│       ├── _type.scss
+│       ├── _timelines.scss
+│       ├── _tags.scss
+│       ├── _tabs.scss
+│       ├── _tables.scss
+│       ├── _steps.scss
+│       ├── _sliders.scss
+│       ├── _popup.scss
+│       ├── _navbar.scss
+│       ├── _modals.scss
+│       ├── _mixins.scss
+│       ├── _load-spinners.scss
+│       ├── _labels.scss
+│       ├── _hacks.scss
+│       ├── _globals.scss
+│       ├── _forms.scss
+│       ├── _filters.scss
+│       ├── _containers.scss
+│       ├── _colors.scss
+│       ├── _buttons.scss
+│       ├── _badges.scss
+│       ├── _alerts.scss
+│       └── _accordions.scss
 ├── inputmask.min.js
-├── roboto-148fe3b2ffcb825efff40a8378f22125ccf88cb0.svg
-├── roboto-15d4ddc447af43a160ea7249c8a3b8db63b90c43.ttf
-├── roboto-3e4b853a8ecf83541f6a7ba875070ebce7a19642.woff
-├── roboto-67688000f61879d468fa6516ddb21c7cace1b212.woff
-├── roboto-8da249381e5effaaadc8809385179b5aa491a4ae.woff
-├── roboto-8fca32cc805ea3e480e6458ae7c3640d41f6c96b.ttf
-├── roboto-922ef2c34858a412764dfd5efadf3e387c8d7402.woff
-├── roboto-9e2b4436ba4c5c9b33f4fca42b43d99a703467f0.woff
-├── roboto-b376a31e25af67e36a420aa2348874c5a8b5c9a5.ttf
-├── roboto-be6836de04ee4e0012ef88496a05b2a9e6dbf293.ttf
-├── roboto-c40c4ea0dc2fa9dcde63bcf3fd9b95cccbd5cc62.ttf
-├── roboto-c8755b34719e3012d4ae9455615b1549fec1ca3f.eot
-├── roboto-cd565969dd0cf49f8408deff0aed2b9d6008a06d.woff
-├── roboto-d561d8824866e60a2a2d327c6b6219939b259b57.woff
-├── roboto-d9a17a54541b34b38ef67cf919f1ac63b44a7454.ttf
-├── roboto-e1262eb60d828ff664011e8bffc586fb3fd2d080.ttf
-├── roboto-e3f5a4bdfdf56584b05705dfad3b14c8a30f393c.ttf
-├── roboto-fe5ca35863958aa9f3a879b7032979a3f0db3974.woff
+├── inputmask.js
+├── fontawesome-webfont.woff2
+├── fontawesome-webfont.woff
+├── fontawesome-webfont.ttf
+├── fontawesome-webfont.svg
+├── fontawesome-webfont.eot
+├── cbp-theme.min.js
+├── cbp-theme.js
+├── cbp-theme.css
+├── Roboto-RegularItalic.woff2
+├── Roboto-RegularItalic.woff
+├── Roboto-RegularItalic.ttf
+├── Roboto-RegularItalic.svg
+├── Roboto-RegularItalic.eot
+├── Roboto-Regular.woff2
+├── Roboto-Regular.woff
+├── Roboto-Regular.ttf
+├── Roboto-Regular.svg
+├── Roboto-Regular.eot
+├── Roboto-MediumItalic.woff2
+├── Roboto-MediumItalic.woff
+├── Roboto-MediumItalic.ttf
+├── Roboto-MediumItalic.svg
+├── Roboto-MediumItalic.eot
+├── Roboto-Medium.woff2
+├── Roboto-Medium.woff
+├── Roboto-Medium.ttf
+├── Roboto-Medium.svg
+├── Roboto-Medium.eot
+├── Roboto-LightItalic.woff2
+├── Roboto-LightItalic.woff
+├── Roboto-LightItalic.ttf
+├── Roboto-LightItalic.svg
+├── Roboto-LightItalic.eot
+├── Roboto-Light.woff2
+├── Roboto-Light.woff
+├── Roboto-Light.ttf
+├── Roboto-Light.svg
+├── Roboto-Light.eot
+├── Roboto-BoldItalic.woff2
+├── Roboto-BoldItalic.woff
+├── Roboto-BoldItalic.ttf
+├── Roboto-BoldItalic.svg
+├── Roboto-BoldItalic.eot
+├── Roboto-Bold.woff2
+├── Roboto-Bold.woff
+├── Roboto-Bold.ttf
+├── Roboto-Bold.svg
+└── Roboto-Bold.eot
 ```
 
 

@@ -1,8 +1,12 @@
 .black {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .bold {
+    font-weight: 700;
+}
+
+.semibold {
     font-weight: 500;
 }
 
@@ -17,6 +21,10 @@
 .caption {
     font-size: $font-size-base - 1;
     color: $gray-light;
+}
+
+h1, .h1 {
+  @extend .normal;
 }
 
 h1, .h1,
