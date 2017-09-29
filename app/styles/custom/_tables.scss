@@ -1,4 +1,4 @@
-
+// mdl table style
 .mdl-data-table {
   tbody {
     tr {
@@ -7,7 +7,6 @@
       }
 
       &:hover {
-        //background-color: darken($table-bg-hover, 3%);
         background-color: $table-bg-hover;
       }
     }
@@ -29,23 +28,16 @@
 // Adds styling for sortable/disabled/active sort cells.
 
 .table-sortable {
-    > thead > tr > th,
-    > tbody > tr > th {
-        // font-weight: 400;
-    }
     > thead > tr > .sortable {
         &.active {
             background: $table-bg-hover; //overrides bootstrap's active color
-            //border-color: darken($table-bg-hover, 4%);
             border-color: $brand-primary;
             color: #222;
-            // border-bottom-color: #bbb;
             font-weight: 700;
         }
 
         &:hover {
             background: $table-bg-hover;
-            //border-color: darken($table-bg-hover, 4%);
             border-color: $brand-primary;
             cursor: pointer;
         }
@@ -98,47 +90,7 @@
     }
 }
 
-/* 
-these styles are inherited from bootstrap
-.table {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-cell-padding $table-cell-padding*1.4;
-      }
-    }
-  }
-}
-
-.table-condensed {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-condensed-cell-padding $table-condensed-cell-padding*2;
-      }
-    }
-  }
-}
-
-.table-comfortable {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-cell-padding*1.6 $table-cell-padding*2;
-      }
-    }
-  }
-} */
-
+// table with extra padding
 .table-comfortable {
   > thead,
   > tbody,
@@ -152,6 +104,7 @@ these styles are inherited from bootstrap
   }
 }
 
+// table with odd and even color switched
 .table-striped {
   > tbody {
     > tr:nth-of-type(even) {
@@ -246,56 +199,8 @@ these styles are inherited from bootstrap
   }
 }
 
-
-
-/* .cbp-table {
-  @extend .table;
-  @extend .table-comfortable;
-  @extend .mdl-data-table;
-
-  > tbody > tr > td.non-numeric,
-  > thead > tr > th.non-numeric {
-    @extend .mdl-data-table__cell--non-numeric;
-  }
-  > tbody > tr > td {
-    color: $gray-dark;
-  }
-  > tbody > tr > th {
-      text-align: left !important;
-      color: $gray-dark;
-      // width: 50px;
-      font-weight: normal;
-  }
-}
-
-.cbp-table-selectable {
-  @extend .cbp-table;
-  @extend .table-selectable !optional;
-
-  > thead > tr > th:first-child,
-  > tbody > tr > td:first-child,
-  > tbody > tr > th {
-      text-align: left !important;
-      width: 50px;
-  }
-
-  thead {
-     > label.cbp-checkbox {
-      margin-top: 0;
-    }
-  }
-
-  td {
-    > label.cbp-checkbox {
-      vertical-align: middle;
-    }
-  }
-} */
-
-
 .table {
   
-  //@extend .table-comfortable;
   @extend .mdl-data-table;
 
   > tbody > tr > td.non-numeric,
