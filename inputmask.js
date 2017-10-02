@@ -1,1 +1,1 @@
-import './app/js/app_inputmasks';
+import './app/js/app_inputmasks'
