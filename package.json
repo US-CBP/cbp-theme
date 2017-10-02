@@ -100,7 +100,6 @@
     "font-awesome": "4.6.3",
     "material-design-lite": "1.1.1",
     "mdl-selectfield": "1.0.2",
-    "roboto-fontface": "0.8.0",
-    "yarn": "^1.1.0"
+    "roboto-fontface": "0.8.0"
   }
 }
