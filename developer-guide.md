@@ -46,6 +46,21 @@ A demo app is located under app/kitchensink with all the components available so
 that one can experiment and test changes. Run 'npm run dev', which builds and
 uses gulp serve.  The demo app runs localhost:8888/webpack-dev-server
 
+## Testing the Kitchen Sink using Visual Diff Image
+
+We use [PhantomJs](http://phantomjs.org) and [PixelMatch](https://github.com/mapbox/pixelmatch) to generate an image of the Kitchen Sink running locally and compares it to a baseline image that gives a visual difference so that we can easily spot differences.
+
+PixelMatch is a devDependency while PhantomJs is expected to be installed globally.
+
+* npm run viz:baseline - creates a new baseline image that uses the public Kitchen Sink page
+* npm run viz:new - creates a new image based on the the local Kitchen Sink running at http://127.0.0.1:8888
+* npm run viz:check - creates a diff image that highlights the areas where the baseline and new images are different
+
+Typical use after making changes locally:
+
+1. npm run dev 
+2. npm run viz:check
+
 ## Open bugs
 
 Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on github to get started with a bug fix.  
