@@ -40,32 +40,58 @@ import $ from 'jquery';
     });
   });*/
 
-  $(window).scroll(function(){  
+  
+
+  $( document ).ready(function() {
+    //height of only top header
+    var sidebarOffsetTopHeader = $(".cbp-header").height();
+
+    //height of only app header
     var sidebarOffsetSingleHeader = $(".app-header").height();
-    var sidebarOffsetDoubleHeader = $(".app-header").height() + $(".cbp-header").height();
+
+    //height of both header
+    var sidebarOffsetDoubleHeader = sidebarOffsetTopHeader + sidebarOffsetSingleHeader;
+
+    //dynamically add the offset to sidebar on page load
+    if($('.app-header').length === 0) {
+        $('.sidebar').css('top', sidebarOffsetTopHeader) ;
+      }
+      else{
+        $('.sidebar').css('top', sidebarOffsetDoubleHeader) ;
+      }
+
+
+
+$(window).scroll(function(){  
+   
     var scroll = $(window).scrollTop();
-    if (scroll >= 50) {
+
+ if($('.app-header').length === 0) {
+        
+      }
+      else{
+        if (scroll >= sidebarOffsetTopHeader) {
+         $('.app-header').addClass('top'); }
+      }
+
+
+    /*if (scroll >= sidebarOffsetTopHeader) {
       $('.app-header').addClass('top');
-      if($('.app-header').length) {
-        $('.sidebar.after-double-header').css('top', sidebarOffsetSingleHeader) ;
+      if($('.app-header').length === 0) {
+        $('.sidebar').css('top', sidebarOffsetSingleHeader) ;
       } else{
-        $('.sidebar.after-double-header').css('top', 0) ;
+        $('.sidebar').css('top', 0) ;
       }
     }
     else {
       $('.app-header').removeClass('top');
-      if($('.app-header').length) {
+      if($('.app-header').length === 0) {
       $('.sidebar.after-double-header').css('top', sidebarOffsetDoubleHeader) ;
       } else{
         $('.sidebar.after-double-header').css('top', sidebarOffsetSingleHeader) ;
       }
-    }
+    }*/
   });
-
-  $( document ).ready(function() {
-    if($('.app-header').length) {
-        $('.sidebar').removeClass('after-double-header').addClass('after-header');
-      }
 
 
     $(window).resize(function() {
