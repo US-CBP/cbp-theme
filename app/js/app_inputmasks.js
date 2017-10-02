@@ -9,7 +9,7 @@ import 'inputmaskDir/inputmask.date.extensions';
 import 'inputmaskDir/inputmask.numeric.extensions';
 
 
-(function($, InputMask) {
+let applyInputMask = function() {
 
       'use strict';
 
@@ -73,4 +73,6 @@ import 'inputmaskDir/inputmask.numeric.extensions';
         'mdl-mask-datepicker-placeholder': Object.assign({}, DATEPICKER_DEFAULT, PLACEHOLDER_LABEL_DEFAULT)
       });
 
-})($, InputMask);
+}
+
+export default applyInputMask;

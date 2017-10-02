@@ -1,11 +1,11 @@
 import $ from 'jquery';
 
-(function($) {
+let applyCharLimit = function() {
 	'use strict';
 	/**
 	 *
 	 * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
-	 * Contact the Common Framework UI Group for more details or see our confluence page.
+	 * Contact the Common Framework UI Group for more details or see our github page.
 	 *
      *
      * TODO: need to find a way to pass custom templates and allow user to use pass it via data attribute!
@@ -29,4 +29,6 @@ import $ from 'jquery';
             updateChar({ currentTarget: val });
         }
 	});
-}($));
+};
+
+export default applyCharLimit;

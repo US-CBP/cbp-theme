@@ -1,6 +1,12 @@
 import $ from 'jquery';
 
-(function($) {
+let applyNavigation = function() {
+  /**
+   *
+   * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
+   * Contact the Common Framework UI Group for more details or see our github page.
+   *
+   */
 
   'use strict';
 
@@ -40,4 +46,6 @@ import $ from 'jquery';
     });
   });
 
-}($));
+}
+
+export default applyNavigation;

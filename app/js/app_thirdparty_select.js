@@ -1,12 +1,12 @@
 import $ from 'jquery';
 
-(function($) {
+let applySelect = function() {
 	'use strict';
 	/**
 	 *
 	 * We currently only support selectize and select2.  If you want more select third party lib support, contribute!!!!!
 	 * See room for improvements...CONTRIBUTE, CONTRIBUTE, CONTRIBUTE!
-	 * Contact the Common Framework UI Group for more details or see our confluence page.
+	 * Contact the Common Framework UI Group for more details or see our github page.
 	 *
 	 */
 	let getDirty = function(idx, el) {
@@ -20,4 +20,6 @@ import $ from 'jquery';
 	};
 	$('.selectize-field').each(getDirty);
 	$('.select2-field').each(getDirty);
-}($));
+}
+
+export default applySelect;

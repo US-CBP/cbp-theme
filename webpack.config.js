@@ -11,9 +11,11 @@ const defaultConfig = {
     entry: {
         'cbp-theme': './index.js',
         'inputmask': './inputmask.js',
+        'cbp-theme-helpers' : './helpers.js',
 
         'cbp-theme.min': './index.js',
         'inputmask.min': './inputmask.js',
+        'cbp-theme-helpers.min' : './helpers.js'
     },
     eslint: {
         configFile: '.eslintrc'

@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+      //
+      // Init other kitchen components
+      //
+
       $('.dropdown-toggle').dropdown();
 
       // enable tooltips
