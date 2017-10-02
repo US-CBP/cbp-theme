@@ -99,4 +99,10 @@ $(window).scroll(function(){
     }).resize();
   });
 
+  $( document ).ready(function() {
+    $(window).resize(function() {
+        $('.content').css("padding-top", $(".app-header").height());
+    }).resize();
+  });
+
 }($));
