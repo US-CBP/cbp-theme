@@ -43,6 +43,8 @@ import $ from 'jquery';
   
 
   $( document ).ready(function() {
+    $(window).scrollTop(0);
+    $(window).resize(function() { 
     //height of only top header
     var sidebarOffsetTopHeader = $(".cbp-header").height();
 
@@ -56,53 +58,45 @@ import $ from 'jquery';
     if($('.app-header').length === 0) {
         $('.sidebar').css('top', sidebarOffsetTopHeader) ;
       }
-      else{
-        $('.sidebar').css('top', sidebarOffsetDoubleHeader) ;
-      }
-
-
-
-$(window).scroll(function(){  
-   
-    var scroll = $(window).scrollTop();
-
- if($('.app-header').length === 0) {
-        
-      }
-      else{
-        if (scroll >= sidebarOffsetTopHeader) {
-         $('.app-header').addClass('top'); }
-      }
-
-
-    /*if (scroll >= sidebarOffsetTopHeader) {
-      $('.app-header').addClass('top');
-      if($('.app-header').length === 0) {
-        $('.sidebar').css('top', sidebarOffsetSingleHeader) ;
-      } else{
-        $('.sidebar').css('top', 0) ;
-      }
-    }
     else {
-      $('.app-header').removeClass('top');
+        $('.sidebar').css('top', sidebarOffsetDoubleHeader) ;
+    }
+
+
+    //scroll function 
+    $(window).scroll(function(){  
+   
+      var scroll = $(window).scrollTop();
+
+      //check if the app header is there or not
       if($('.app-header').length === 0) {
-      $('.sidebar.after-double-header').css('top', sidebarOffsetDoubleHeader) ;
-      } else{
-        $('.sidebar.after-double-header').css('top', sidebarOffsetSingleHeader) ;
+
+        if (scroll >= sidebarOffsetTopHeader) {
+          $('.sidebar').css('top', 0) ;
+        } 
+        else {
+          $('.sidebar').css('top', sidebarOffsetTopHeader);
+        }
+      } else {
+        
+        if (scroll >= sidebarOffsetTopHeader) {
+          $('.app-header').addClass('top');
+          $('.sidebar').css('top', sidebarOffsetSingleHeader) }
+        else {
+          $('.app-header').removeClass('top');
+          $('.sidebar').css('top', sidebarOffsetDoubleHeader) ;
+        }
       }
-    }*/
+
+    
+    });
+  $('.content').css("padding-top", sidebarOffsetSingleHeader); 
+
+       
+}).resize();
+  
   });
 
-
-    $(window).resize(function() {
-        $('.content').css("padding-top", $(".app-header").height());        
-    }).resize();
-  });
-
-  $( document ).ready(function() {
-    $(window).resize(function() {
-        $('.content').css("padding-top", $(".app-header").height());
-    }).resize();
-  });
+ 
 
 }($));

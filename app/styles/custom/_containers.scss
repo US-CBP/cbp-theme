@@ -3,6 +3,7 @@
     z-index: 990;
     background-color: $gray-lightest;
     border-right: 1px solid #eee;
+    float: left;
   }
 @media (min-width:$screen-lg) {
   .sidebar {
@@ -11,26 +12,26 @@
     display: block;
     position: fixed;
     bottom: 0;
-
+    @include transition(top ease 0.25s);
     &.after-double-header {
-      top: 104px;
-      @include transition(top ease 0.25s);
+      //top: 104px;
+      //@include transition(top ease 0.25s);
     }
 
     &.after-header {
-      top: 52px;
-      @include transition(top ease 0.25s);
+      //top: 52px;
+      //@include transition(top ease 0.25s);
     }
   }
   .content {
-    padding-top: 51px;
+   // padding-top: 51px;
   }
 
 }
 @media (max-width:$screen-lg) {
   .sidebar {
     &.after-double-header {
-      padding-top: 50px;
+     // padding-top: 50px;
     }
   }
 }
@@ -41,5 +42,7 @@
   }
   .cbp-sidebar-offset {
     margin-left: 360px;
+    overflow-x: hidden;
+    padding-right: 8px;
   }
 }
