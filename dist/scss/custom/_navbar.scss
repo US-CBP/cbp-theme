@@ -178,7 +178,7 @@
 }
 
 .cbp-header {
-  @extend .navbar, .navbar-inverse, .navbar-fixed-top, .navbar-flush;
+  @extend .navbar, .navbar-inverse, .navbar-flush;
   height: auto;
   @include transition(all linear .1s);
   z-index: $zindex-navbar;
