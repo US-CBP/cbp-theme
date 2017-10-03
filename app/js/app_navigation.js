@@ -42,7 +42,7 @@ import $ from 'jquery';
 
   
 
-  $( document ).ready(function() {
+  $(window).load(function() {
     //make the header sticky
     $(window).scrollTop(0);
     $(window).resize(function() { 
@@ -93,6 +93,7 @@ import $ from 'jquery';
 
     
     });
+    
     $('.content').css("padding-top", sidebarOffsetSingleHeader); 
 
        
