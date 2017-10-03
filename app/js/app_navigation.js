@@ -93,10 +93,7 @@ import $ from 'jquery';
 
     
     });
-<<<<<<< HEAD
-    
-=======
->>>>>>> master
+
     $('.content').css("padding-top", sidebarOffsetSingleHeader); 
 
        
