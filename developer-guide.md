@@ -66,7 +66,6 @@ Typical use after making changes locally:
 Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on github to get started with a bug fix.  
 
 ## Publishing
-We use [SemVer](http://semver.org/) system of versioning (MAJOR MINOR PATCH)
 
 * Run npm version patch (or minor, major)
 * Run npm publish to publish the current version to NPM's public registry
