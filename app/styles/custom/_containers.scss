@@ -1,5 +1,5 @@
 .sidebar {
-    left: 0;
+    margin-left: -8px; //this is to offset container-fluid padding
     z-index: 990;
     background-color: $gray-lightest;
     border-right: 1px solid #eee;
@@ -14,6 +14,7 @@
       overflow-y: auto;
       position: fixed;
       bottom: 0;
+      left: 0;
     }
     
   }  
@@ -22,8 +23,8 @@
 @media (min-width:$screen-lg) and (min-width:$screen-md) and (min-width:$screen-sm){
   .cbp-sidebar {
     width: 350px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
     box-sizing: border-box;
   }
   .cbp-sidebar-offset {
