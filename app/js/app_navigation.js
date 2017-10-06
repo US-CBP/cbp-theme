@@ -3,7 +3,9 @@ import $ from 'jquery';
 (function ($) {
   'use strict'
 
-  $(window).load(function () {
+
+  $(window).on('load', function() {   
+  
     // make the header sticky
     $(window).scrollTop(0)
     $(window).resize(function () {
