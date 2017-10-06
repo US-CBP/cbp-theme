@@ -29,6 +29,10 @@
       margin-left: 350px;
     }
   }
+  &.fluid-layout{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 @media (max-width: $screen-xs-max) {
