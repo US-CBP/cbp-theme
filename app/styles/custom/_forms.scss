@@ -469,8 +469,8 @@ form:not(.form-horizontal) {
   }
 
   .mdl-selectfield__select {
-    background-color: $white !important;
-    padding: 8px 3px!important;
+    //background-color: $white !important;
+    padding: $selectfield-padding 3px !important;
     border-bottom: 1px solid $gray;
 
 
@@ -480,8 +480,8 @@ form:not(.form-horizontal) {
   }
 
   .mdl-selectfield__label {
-    top: 30px;
-    color: $gray;
+    top: 28px;
+    color: $text-color;
     padding-left: 3px;
 
     &:after {

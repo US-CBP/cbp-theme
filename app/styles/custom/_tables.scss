@@ -1,25 +1,44 @@
+// mdl table style
+.mdl-data-table {
+  tbody {
+    tr {
+      &.is-selected {
+        background-color: $state-primary-bg;
+      }
+
+      &:hover {
+        background-color: $table-bg-hover;
+      }
+    }
+  }
+  td, th {   
+
+    &:first-of-type {
+      padding-left: $table-cell-padding;
+    }
+
+    &:last-of-type {
+      padding-right: $table-cell-padding;
+    }
+  }
+}
 
 // Sortable table
 //
 // Adds styling for sortable/disabled/active sort cells.
 
 .table-sortable {
-    > thead > tr > th,
-    > tbody > tr > th {
-        // font-weight: 400;
-    }
     > thead > tr > .sortable {
         &.active {
             background: $table-bg-hover; //overrides bootstrap's active color
-            border-color: darken($table-bg-hover, 4%);
+            border-color: $brand-primary;
             color: #222;
-            // border-bottom-color: #bbb;
             font-weight: 700;
         }
 
         &:hover {
             background: $table-bg-hover;
-            border-color: darken($table-bg-hover, 4%);
+            border-color: $brand-primary;
             cursor: pointer;
         }
     }
@@ -30,9 +49,15 @@
 // gets rid of all cell borders
 
 .table-borderless {
-    > tbody > tr > td, > thead > tr > th {
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
         border: none;
+      }
     }
+  }
 }
 
 .panel > .panel-collapse > .table {
@@ -55,7 +80,7 @@
 // Adds a border to the outside of the table, but not the cells.
 
 .table-outline {
-    border: 1px solid #eee;
+    border: 1px solid $table-border-color;
 }
 
 // Vertical align middle all cells
@@ -65,32 +90,7 @@
     }
 }
 
-.table {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-cell-padding $table-cell-padding*1.4;
-      }
-    }
-  }
-}
-
-.table-condensed {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-condensed-cell-padding $table-condensed-cell-padding*2;
-      }
-    }
-  }
-}
-
+// table with extra padding
 .table-comfortable {
   > thead,
   > tbody,
@@ -98,20 +98,32 @@
     > tr {
       > th,
       > td {
-        padding: $table-cell-padding*1.6 $table-cell-padding*2;
+        padding: $table-cell-padding*1.5 $table-cell-padding*1.5;
       }
+    }
+  }
+}
+
+// table with odd and even color switched
+.table-striped {
+  > tbody {
+    > tr:nth-of-type(even) {
+    background-color: $table-bg-accent;
+    }
+    tr:nth-of-type(odd) {
+    background-color: $white;
     }
   }
 }
 
 // Adds a background color to the table header
 .table > thead > tr {
-    background: darken($table-bg-hover, 5%);
-}
-.table > thead > tr > th {
+    background: $gray-lighter;
+  > th {
     border-bottom-color: $table-border-color;
     border-bottom-width: 2px;
     // font-weight: 600;
+  }
 }
 
 .table-group {
@@ -135,6 +147,7 @@
 
       &:hover {
           background-color: $table-bg-hover;
+          border-color: $brand-primary;
       }
     }
 }
@@ -186,23 +199,8 @@
   }
 }
 
-.mdl-data-table {
-  tbody {
-    tr {
-      &.is-selected {
-        background-color: $brand-default-highlight;
-      }
-
-      &:hover {
-        background-color: darken($table-bg-hover, 3%);
-      }
-    }
-  }
-}
-
-.cbp-table {
-  @extend .table;
-  @extend .table-comfortable;
+.table {
+  
   @extend .mdl-data-table;
 
   > tbody > tr > td.non-numeric,
@@ -215,13 +213,12 @@
   > tbody > tr > th {
       text-align: left !important;
       color: $gray-dark;
-      // width: 50px;
       font-weight: normal;
   }
 }
 
-.cbp-table-selectable {
-  @extend .cbp-table;
+.table-selectable {
+  @extend .table;
   @extend .table-selectable !optional;
 
   > thead > tr > th:first-child,
@@ -254,3 +251,4 @@
     display: none;
   }
 }
+
