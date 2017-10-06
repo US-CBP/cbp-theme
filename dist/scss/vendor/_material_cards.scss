@@ -25,6 +25,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   background: $card-background-color;
   border-radius: 2px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .mdl-card__media {
@@ -157,7 +158,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
   &.mdl-card-expand {
     &:focus, &:hover, &:active { 
-      box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
       transform: translate(0, -3px);      
     }
   }
