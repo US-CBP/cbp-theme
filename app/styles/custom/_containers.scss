@@ -59,10 +59,14 @@
 /* Small devices (tablets, 768px and up) and smaller than 991px*/
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  .cbp-sidebar,
-  .cbp-sidebar-offset {
+  .cbp-sidebar {
     padding-right: 8px;
     padding-left: 8px;
+  }
+
+  .cbp-sidebar-offset {
+    padding-right: 8px;
+    
   }
 }
 
@@ -72,9 +76,11 @@
 /* Medium devices (desktops, 992px and up) */
 
 @media (min-width: $screen-md-min) {
-  .cbp-sidebar,
-  .cbp-sidebar-offset {
+  .cbp-sidebar {
     padding-left: 15px;
+    padding-right: 15px;
+  }
+  .cbp-sidebar-offset {
     padding-right: 15px;
   }
 }
