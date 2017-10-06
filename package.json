@@ -73,7 +73,7 @@
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf ./app/kitchensink/dist",
     "lint": "standard 'app/js/**' 'app/kitchensink/kitchensink.js' --fix | snazzy",
-    "build": "webpack --bail && npm run test",
+    "build": "webpack --bail && npm run lint && npm run test",
     "serve": "webpack-dev-server --host=0.0.0.0 --port=8888 --content-base",
     "dev": "npm run clean && npm run build && npm run serve",
     "test": "jest",
