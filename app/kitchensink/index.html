@@ -19,7 +19,7 @@
 
   </head>
   <body>
-    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div class="cbp-main page-container">
 
       <div role="navigation" class="cbp-header">
@@ -154,8 +154,7 @@
       <div class="container-fluid">
        <div class="content fixed">
           <div class="cbp-sidebar sidebar" >
-            <div class="row">
-              <div class="col-md-12 pull-left">
+            
                 <form class="filters">
                   <div class="filter-list" role="tablist">
                     <h1 class="filter-heading">Filters <a href="#" class="filters-clear">Clear Filters</a></h1>
@@ -344,12 +343,11 @@
                     </div>
                   </div>
                 </form>
-              </div>
-            </div>
+              
           </div>
 
-          <div id="content" class="cbp-sidebar-offset">
-
+          <div id="main-content" class="cbp-sidebar-offset">
+            
             <h1 class="page-header">All Components</h1>
             <p>This is the "Kitchen Sink" of the <a href="https://github.com/US-CBP/cbp-theme">CBP Theme&nbsp;<i class="fa fa-external-link"></i></a>.  It is provided to demonstrate various components in action. For guidance on how best to use the theme's components take a look at the <a href="https://us-cbp.github.io/cbp-style-guide">CBP Style Guide&nbsp;<i class="fa fa-external-link"></i></a>.
 
@@ -903,7 +901,7 @@
               <div class="cards-example">
                 <h3>Cards with different content</h3>
                 <div class="mdl-card-container row">
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-4">
                     <div class="mdl-card mdl-card-shadow">
                       <div class="mdl-card__media">
                         <img src="./images/cbp_super_bowl.jpg" width="330" height="157" border="0" alt="CBP Super Bowl 50 Air and Marine Operations Security" >
@@ -924,7 +922,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-5 col-md-4">
                     <div class="mdl-card mdl-card-shadow">
                       <div class="mdl-card__title mdl-card--expand">
                         <h2 class="mdl-card__title-text">Update</h2>
@@ -943,7 +941,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-5 col-md-4">
                     <div class="mdl-card mdl-card-shadow">
                       <div class="mdl-card__title mdl-card--expand">
                         <h3>
@@ -958,12 +956,12 @@
                       <div class="mdl-card__actions mdl-card--border">
                         <button class="btn btn-default">
                         <i class="fa fa-calendar fa-fw"></i>
-                        &nbsp;Add to Calendar
+                        &nbsp;Calendar
                         </button>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-5 col-md-4">
                     <div class="mdl-card mdl-card-shadow">
                       <div class="mdl-card__title mdl-card--expand">
                         <h2 class="mdl-card__title-text"><i class="fa fa-newspaper-o fa-fw " aria-hidden="true"></i>&nbsp; Latest News</h2>
@@ -974,7 +972,7 @@
                       </div>
                       <div class="mdl-card__actions mdl-card--border">
                         <button class="btn btn-default">
-                        View Headlines
+                        Headlines
                         </button>
                       </div>
                     </div>
@@ -993,7 +991,7 @@
               <div class="panel">
                 <div class="panel-body bs-example">
                   <h3>Standard Dialog (File Upload)</h3>
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">
@@ -1017,7 +1015,7 @@
                     </div>
                   </div>
                   <h3>Standard Dialog (Search and Replace)</h3>
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">
@@ -1058,7 +1056,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal">
@@ -1075,7 +1073,7 @@
                     </div>
                   </div>
                   <h3>Confirmation</h3>
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal">
@@ -1091,7 +1089,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                       <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal">
@@ -1108,7 +1106,7 @@
                     </div>
                   </div>
                   <h3>Actionless</h3>
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-sm">
                     <div class="modal-content modal-center">
                       <div class="modal-body">
                         <div style="margin-bottom: 6px;" class="clearfix">
@@ -1966,111 +1964,106 @@
               <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
                 <i class="fa fa-chevron-up bounce"></i>
               </a>
-              </h2>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <h3>Stacked</h3>
-                  <div class="panel">
-                    <div class="panel-body">
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <dl>
-                            <dt>BOL Type</dt>
-                            <dd>B - Booking</dd>
-                            <dt>MOT</dt>
-                            <dd>11 - Vessel(Containerized)</dd>
-                            <dt>Carrier</dt>
-                            <dd>JONN</dd>
-                            <dt>Conveyance</dt>
-                            <dd>REG O BOL B2</dd>
-                            <dt>Voyage/Trip/Flight</dt>
-                            <dd>0512A000001</dd>
-                          </dl>
-                        </div>
-                        <div class="col-sm-4">
-                          <dt>Entry Number (Type)</dt>
-                          <dd>BVA-01070040 (01)</dd>
-                          <dt>Bill Number (Type)</dt>
-                          <dd>JONN-150512MC0202 (B)</dd>
-                          <dt>Entry Type</dt>
+              </h2>             
+                <h3>Stacked</h3>
+                <div class="panel">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <dl>
+                          <dt>BOL Type</dt>
+                          <dd>B - Booking</dd>
+                          <dt>MOT</dt>
+                          <dd>11 - Vessel(Containerized)</dd>
+                          <dt>Carrier</dt>
+                          <dd>JONN</dd>
+                          <dt>Conveyance</dt>
+                          <dd>REG O BOL B2</dd>
+                          <dt>Voyage/Trip/Flight</dt>
+                          <dd>0512A000001</dd>
+                        </dl>
+                      </div>
+                      <div class="col-sm-4">
+                        <dt>Entry Number (Type)</dt>
+                        <dd>BVA-01070040 (01)</dd>
+                        <dt>Bill Number (Type)</dt>
+                        <dd>JONN-150512MC0202 (B)</dd>
+                        <dt>Entry Type</dt>
+                        <dd>01 - Consumption: Free and Dutiable</dd>
+                        <dt>Port of Entry</dt>
+                        <dd>
+                        <a href="#">
+                          5206 <i class="fa fa-external-link"></i>
+                        </a>
+                        </dd>
+                        <dt>Importer</dt>
+                        <dd>--</dd>
+                      </div>
+                      <div class="col-sm-4">
+                        <dl>
+                          <dt>Bond Type</dt>
+                          <dd>9 - Single Transaction</dd>
+                          <dt>Entry Filing Date</dt>
+                          <dd>07/17/2015 13:40:22</dd>
+                          <dt>Status</dt>
+                          <dd>1</dd>
+                          <dt>Shipment</dt>
+                          <dd>
+                          <a href="">
+                            5004672569 <i class="fa fa-external-link"></i>
+                          </a>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>        
+           
+                <h3>Side-by-side</h3>
+                <div class="panel">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <dl class="dl-horizontal">
+                          <dt>BOL Type</dt>
+                          <dd>B - Booking</dd>
+                          <dt>MOT</dt>
+                          <dd>11 - Vessel(Containerized)</dd>
+                          <dt>Carrier</dt>
+                          <dd>JONN</dd>
+                        </dl>
+                      </div>
+                      <div class="col-sm-8">
+                        <dl class="dl-horizontal">
+                          <dt>Entry Type (Type)</dt>
                           <dd>01 - Consumption: Free and Dutiable</dd>
                           <dt>Port of Entry</dt>
                           <dd>
-                          <a href="#">
-                            5206 <i class="fa fa-external-link"></i>
+                          <a href="">
+                            5206
+                            <i class="fa fa-external-link"></i>
                           </a>
                           </dd>
                           <dt>Importer</dt>
                           <dd>--</dd>
-                        </div>
-                        <div class="col-sm-4">
-                          <dl>
-                            <dt>Bond Type</dt>
-                            <dd>9 - Single Transaction</dd>
-                            <dt>Entry Filing Date</dt>
-                            <dd>07/17/2015 13:40:22</dd>
-                            <dt>Status</dt>
-                            <dd>1</dd>
-                            <dt>Shipment</dt>
-                            <dd>
-                            <a href="">
-                              5004672569 <i class="fa fa-external-link"></i>
-                            </a>
-                            </dd>
-                          </dl>
-                        </div>
+                        </dl>
+                      </div>
+                      <div class="col-sm-8">
+                        <dl class="dl-horizontal">
+                          <dt>Bond Type</dt>
+                          <dd>9 - Single Transaction</dd>
+                          <dt>Entry Filing Date</dt>
+                          <dd>07/17/2015 13:40:22</dd>
+                          <dt>Conveyance</dt>
+                          <dd>REG O BOL B2</dd>
+                          <dt>Voyage/Trip/Flight</dt>
+                          <dd>0512A000001</dd>
+                        </dl>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <h3>Side-by-side</h3>
-                  <div class="panel">
-                    <div class="panel-body">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <dl class="dl-horizontal">
-                            <dt>BOL Type</dt>
-                            <dd>B - Booking</dd>
-                            <dt>MOT</dt>
-                            <dd>11 - Vessel(Containerized)</dd>
-                            <dt>Carrier</dt>
-                            <dd>JONN</dd>
-                          </dl>
-                        </div>
-                        <div class="col-md-4">
-                          <dl class="dl-horizontal">
-                            <dt>Entry Type (Type)</dt>
-                            <dd>01 - Consumption: Free and Dutiable</dd>
-                            <dt>Port of Entry</dt>
-                            <dd>
-                            <a href="">
-                              5206
-                              <i class="fa fa-external-link"></i>
-                            </a>
-                            </dd>
-                            <dt>Importer</dt>
-                            <dd>--</dd>
-                          </dl>
-                        </div>
-                        <div class="col-md-4">
-                          <dl class="dl-horizontal">
-                            <dt>Bond Type</dt>
-                            <dd>9 - Single Transaction</dd>
-                            <dt>Entry Filing Date</dt>
-                            <dd>07/17/2015 13:40:22</dd>
-                            <dt>Conveyance</dt>
-                            <dd>REG O BOL B2</dd>
-                            <dt>Voyage/Trip/Flight</dt>
-                            <dd>0512A000001</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </div>              
+              
             </div>
 
             <!-- Pagination -->
@@ -2418,129 +2411,30 @@
 
 
             <!-- Tables -->
-          <div>
-            <h2 id="Tables" class="page-header">Tables
-            <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
-              <i class="fa fa-chevron-up bounce"></i>
-            </a>
-            </h2>
-            <div class="panel">
-              <div class="panel-body">
-                <h3>CBP Default Table</h3>
-                <h4>Includes Borderless and Hover stylings with MDL additions <small>Just by using the classnames: "table mdl-js-data-table"</small></h4>
-                <div>
-                  <table class="table mdl-js-data-table">
-                    <caption>Standard Table</caption>
-                    <thead>
-                      <tr>
-                        <th scope="col" class="non-numeric">Project name</th>
-                        <th scope="col" class="non-numeric">Description</th>
-                        <th scope="col">Price</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" class="non-numeric">Invoice</th>
-                        <td class="non-numeric">
-                          <span>Add invoice confirmation</span>
-                        </td>
-                        <td>
-                          <span>$4,500</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="non-numeric">Templates</th>
-                        <td class="non-numeric">
-                          <span>Refactor templates to use the new templating library</span>
-                        </td>
-                        <td>
-                          <span>$9,000</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="non-numeric">Payments</th>
-                        <td class="non-numeric">
-                          <span>Process payments using third party api</span>
-                        </td>
-                        <td>
-                          <span>$5,400</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="non-numeric">Account Management</th>
-                        <td class="non-numeric">
-                          <span>Improve account management workflow</span>
-                        </td>
-                        <td>
-                          <span>$6,000</span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/components/tables.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more table examples</a></p>                
-                 
-               <!-- leaving it here as there is an issue for me to fix this -->
-                <!-- <h4>Floating header <small>Example w/o thirdparty fix</small></h4>
-                <div>
-                  <table aria-hidden="true" class="table mdl-js-data-table floating-table-header">
-                    <caption>Fixed Header Table</caption>
-                    <thead>
-                      <tr>
-                        <th scope="col" class="non-numeric" style="width: 25%">Project name</th>
-                        <th scope="col" class="non-numeric" style="width: 50%">Description</th>
-                        <th scope="col">Price</th>
-                      </tr>
-                    </thead>
-                  </table>
-                  <div class="floating-table-body" style="max-height: 200px;">
-                    <table class="table-selectable mdl-js-data-table">
+            <div>
+              <h2 id="Tables" class="page-header">Tables
+              <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
+                <i class="fa fa-chevron-up bounce"></i>
+              </a>
+              </h2>
+              <div class="panel">
+                <div class="panel-body">
+                  <h3>CBP Default Table</h3>
+                  <h4>Includes Borderless and Hover stylings with MDL additions <small>Just by using the classnames: "table mdl-js-data-table"</small></h4>
+                  
+                    <!-- <table class="table mdl-js-data-table">
+                      <caption>Standard Table</caption>
                       <thead>
                         <tr>
-                          <th scope="col" class="non-numeric" style="width: 25%;">Project name</th>
-                          <th scope="col" class="non-numeric" style="width: 50%;">Description</th>
+                          <th scope="col" class="non-numeric">Project name</th>
+                          <th scope="col" class="non-numeric">Description</th>
                           <th scope="col">Price</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td >
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Refactor templates to use the new templating library</span>
-                          </td>
-                          <td>
-                            <span>$9,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td>
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Improve account management workflow</span>
-                          </td>
-                          <td>
-                            <span>$6,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
-                          <td class="non-numeric" style="width: 50%;">
+                          <th scope="row" class="non-numeric">Invoice</th>
+                          <td class="non-numeric">
                             <span>Add invoice confirmation</span>
                           </td>
                           <td>
@@ -2548,8 +2442,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
-                          <td class="non-numeric" style="width: 50%;">
+                          <th scope="row" class="non-numeric">Templates</th>
+                          <td class="non-numeric">
                             <span>Refactor templates to use the new templating library</span>
                           </td>
                           <td>
@@ -2557,8 +2451,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
-                          <td class="non-numeric" style="width: 50%;">
+                          <th scope="row" class="non-numeric">Payments</th>
+                          <td class="non-numeric">
                             <span>Process payments using third party api</span>
                           </td>
                           <td>
@@ -2566,80 +2460,8 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Improve account management workflow</span>
-                          </td>
-                          <td>
-                            <span>$6,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td>
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Refactor templates to use the new templating library</span>
-                          </td>
-                          <td>
-                            <span>$9,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td>
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Improve account management workflow</span>
-                          </td>
-                          <td>
-                            <span>$6,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Add invoice confirmation</span>
-                          </td>
-                          <td>
-                            <span>$4,500</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Refactor templates to use the new templating library</span>
-                          </td>
-                          <td>
-                            <span>$9,000</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
-                          <td class="non-numeric" style="width: 50%;">
-                            <span>Process payments using third party api</span>
-                          </td>
-                          <td>
-                            <span>$5,400</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
-                          <td class="non-numeric" style="width: 50%;">
+                          <th scope="row" class="non-numeric">Account Management</th>
+                          <td class="non-numeric">
                             <span>Improve account management workflow</span>
                           </td>
                           <td>
@@ -2647,14 +2469,186 @@
                           </td>
                         </tr>
                       </tbody>
+                    </table> -->
+                  
+                    <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/components/tables.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more table examples</a></p>                
+                   
+                 <!-- leaving it here as there is an issue for me to fix this -->
+                  <!-- <h4>Floating header <small>Example w/o thirdparty fix</small></h4>
+                  <div>
+                    <table aria-hidden="true" class="table mdl-js-data-table floating-table-header">
+                      <caption>Fixed Header Table</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="non-numeric" style="width: 25%">Project name</th>
+                          <th scope="col" class="non-numeric" style="width: 50%">Description</th>
+                          <th scope="col">Price</th>
+                        </tr>
+                      </thead>
                     </table>
-                  </div>        
-                 
-                 
-                </div> -->
+                    <div class="floating-table-body" style="max-height: 200px;">
+                      <table class="table-selectable mdl-js-data-table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="non-numeric" style="width: 25%;">Project name</th>
+                            <th scope="col" class="non-numeric" style="width: 50%;">Description</th>
+                            <th scope="col">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Add invoice confirmation</span>
+                            </td>
+                            <td >
+                              <span>$4,500</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Refactor templates to use the new templating library</span>
+                            </td>
+                            <td>
+                              <span>$9,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Process payments using third party api</span>
+                            </td>
+                            <td>
+                              <span>$5,400</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Improve account management workflow</span>
+                            </td>
+                            <td>
+                              <span>$6,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Add invoice confirmation</span>
+                            </td>
+                            <td>
+                              <span>$4,500</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Refactor templates to use the new templating library</span>
+                            </td>
+                            <td>
+                              <span>$9,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Process payments using third party api</span>
+                            </td>
+                            <td>
+                              <span>$5,400</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Improve account management workflow</span>
+                            </td>
+                            <td>
+                              <span>$6,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Add invoice confirmation</span>
+                            </td>
+                            <td>
+                              <span>$4,500</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Refactor templates to use the new templating library</span>
+                            </td>
+                            <td>
+                              <span>$9,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Process payments using third party api</span>
+                            </td>
+                            <td>
+                              <span>$5,400</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Improve account management workflow</span>
+                            </td>
+                            <td>
+                              <span>$6,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Invoice</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Add invoice confirmation</span>
+                            </td>
+                            <td>
+                              <span>$4,500</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Templates</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Refactor templates to use the new templating library</span>
+                            </td>
+                            <td>
+                              <span>$9,000</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Payments</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Process payments using third party api</span>
+                            </td>
+                            <td>
+                              <span>$5,400</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row" class="non-numeric" style="width: 25%;">Account Management</th>
+                            <td class="non-numeric" style="width: 50%;">
+                              <span>Improve account management workflow</span>
+                            </td>
+                            <td>
+                              <span>$6,000</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>        
+                   
+                   
+                  </div> -->
+                </div>
               </div>
             </div>
-          </div>
             <!-- Tabs -->
             <div>
               <h2 id="Tabs" class="page-header">Tabs
@@ -2858,7 +2852,7 @@
                 <div class="panel-body">
 
                   <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-sm-5">
 
                       <h2>Basic Timeline Example</h2>
                       <div class="bs-component">
@@ -2939,7 +2933,7 @@
 
                     </div>
 
-                    <div class="col-md-7">
+                    <div class="col-sm-7">
 
                       <h2>Another Shipment Timeline Example</h2>
                       <div class="bs-component">
@@ -3033,7 +3027,7 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-sm-12">
 
                       <h2>Another Random Timeline Example</h2>
                       <div class="bs-component">
@@ -3138,9 +3132,9 @@
 
                   </div>
                 </div>
-              </div>
+              
             </div>
-
+      
             <!-- Tooltips -->
             <div>
               <h2 id="Tooltips" class="page-header">Tooltips
@@ -3151,7 +3145,7 @@
               <div class="panel">
                 <div class="panel-body">
                   <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-sm-5">
                       <h3>Variable Positioning</h3>
                       <div>
                         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip above">Position above</button>
@@ -3160,7 +3154,7 @@
                         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip below">Position below</button>
                       </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-sm-5">
                       <h4>Additional Styling Options</h4>
                       <div>
                         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Print">Short</button>
@@ -3195,12 +3189,13 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
+      </div>
+    </div>
       
 
-    </div>
+ 
     <footer role="banner" class="cbp-banner"></footer>
 
     <!-- modals -->
