@@ -15,7 +15,10 @@ import $ from 'jquery';
        
     // scroll function
       $(window).scroll(function () {
-        // check if the app header is there or not
+      // check when the scroll is more than the height of universal header
+        var scroll = $(window).scrollTop()
+
+      // check if the app header is there or not
         if ($('.app-header').length === 0) {
         // check when the scroll is more than the height of universal header
           if (scroll >= sidebarOffsetTopHeader) {
@@ -33,7 +36,9 @@ import $ from 'jquery';
             $('.sidebar').removeClass('after-header').addClass('after-double-header')
           }
         }
-      })     
+      })
+
+      
     
   })
 }($))
