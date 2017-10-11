@@ -61,7 +61,13 @@
       overflow-y: auto;
       position: fixed;
       bottom: 0;
-      left: 0;     
+      left: 0; 
+      &.after-header{
+        top: 50px;  
+      }
+      &.after-double-header{
+        top: 100px;  
+      }  
     }
     .cbp-sidebar-offset {
       margin-left: 300px;
@@ -89,7 +95,13 @@
       overflow-y: auto;
       position: fixed;
       bottom: 0;
-      left: 0;      
+      left: 0;
+      &.after-header{
+        top: 50px;  
+      }
+      &.after-double-header{
+        top: 100px;  
+      }       
     }
     .cbp-sidebar-offset {
       margin-left: 350px;
