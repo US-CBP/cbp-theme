@@ -1,5 +1,6 @@
 // mdl table style
 .mdl-data-table {
+  white-space: inherit;
   tbody {
     tr {
       &.is-selected {

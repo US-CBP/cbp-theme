@@ -1,48 +1,99 @@
-.sidebar {
-    left: 0;
+.content {
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  //overflow-x: hidden;
+  .sidebar {
     z-index: 990;
     background-color: $gray-lightest;
     border-right: 1px solid #eee;
     float: left;
-  }
-@media (min-width:$screen-lg) {
-  .sidebar {
-    overflow-x: hidden;
-    overflow-y: auto;
     display: block;
-    position: fixed;
-    bottom: 0;
-    @include transition(top ease 0.25s);
-    &.after-double-header {
-      //top: 104px;
-      //@include transition(top ease 0.25s);
-    }
-
-    &.after-header {
-      //top: 52px;
-      //@include transition(top ease 0.25s);
-    }
+    margin-left: -8px; //this is to offset container-fluid padding
+    box-sizing: border-box;   
   }
-  .content {
-   // padding-top: 51px;
+  .cbp-sidebar-offset {    
+    margin-right: -8px; //this is to offset container-fluid padding   
   }
-
-}
-@media (max-width:$screen-lg) {
-  .sidebar {
-    &.after-double-header {
-     // padding-top: 50px;
-    }
-  }
-}
-@media (min-width:$screen-lg) and (min-width:$screen-md) and (min-width:$screen-sm){
-  .cbp-sidebar {
-    width: 350px;
-    padding-left: 0.5em;
-  }
-  .cbp-sidebar-offset {
-    margin-left: 360px;
-    overflow-x: hidden;
+  
+  &.fluid-layout{
+    padding-left: 8px;
     padding-right: 8px;
   }
+}
+
+@media (max-width: $screen-xs-max) {
+  .content {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    .cbp-sidebar {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .cbp-sidebar-offset {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+}
+
+
+
+/* Small devices (tablets, 768px and up) and smaller than 991px*/
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .cbp-sidebar, .cbp-sidebar-offset  {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .sidebar {
+      width: 300px;
+      min-width: 300px;
+    }
+  .fixed {
+    .sidebar {
+      @include transition(top ease 0.25s);
+      overflow-y: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;     
+    }
+    .cbp-sidebar-offset {
+      margin-left: 300px;
+      padding-left: 0;
+    }
+  }
+
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-md-min) {
+  .cbp-sidebar, .cbp-sidebar-offset {
+    padding-left: 15px;
+    padding-right: 15px;
+  } 
+  .sidebar {
+      width: 350px;
+      min-width: 350px;
+    }
+  .fixed {
+    .sidebar {
+      @include transition(top ease 0.25s);
+      overflow-y: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;      
+    }
+    .cbp-sidebar-offset {
+      margin-left: 350px;
+      padding-left: 0;
+    }
+  } 
 }
