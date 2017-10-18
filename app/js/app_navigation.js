@@ -8,23 +8,11 @@ import $ from 'jquery';
   
     // make the header sticky
     $(window).scrollTop(0)
-    $(window).resize(function () {
+  
     // height of only top header
-      var sidebarOffsetTopHeader = $('.cbp-header').height()
+      var sidebarOffsetTopHeader = 50 //this is the height of the cbp-header
 
-    // height of only app header
-      var sidebarOffsetSingleHeader = $('.app-header').height()
-
-    // height of both header
-      var sidebarOffsetDoubleHeader = sidebarOffsetTopHeader + sidebarOffsetSingleHeader
-
-    // dynamically add the offset to sidebar on page load
-      if ($('.app-header').length === 0) {
-        $('.sidebar').css('top', sidebarOffsetTopHeader)
-      } else {
-        $('.sidebar').css('top', sidebarOffsetDoubleHeader)
-      }
-
+       
     // scroll function
       $(window).scroll(function () {
       // check when the scroll is more than the height of universal header
@@ -34,23 +22,23 @@ import $ from 'jquery';
         if ($('.app-header').length === 0) {
         // check when the scroll is more than the height of universal header
           if (scroll >= sidebarOffsetTopHeader) {
-            $('.sidebar').css('top', 0)
+            $('.sidebar').removeClass('after-header')
           } else {
-            $('.sidebar').css('top', sidebarOffsetTopHeader)
+            $('.sidebar').addClass('after-header')
           }
         } else {
         // check when the scroll is more than the height of universal header
           if (scroll >= sidebarOffsetTopHeader) {
             $('.app-header').addClass('top')
-            $('.sidebar').css('top', sidebarOffsetSingleHeader)
+           $('.sidebar').removeClass('after-double-header').addClass('after-header')
           } else {
             $('.app-header').removeClass('top')
-            $('.sidebar').css('top', sidebarOffsetDoubleHeader)
+            $('.sidebar').removeClass('after-header').addClass('after-double-header')
           }
         }
       })
 
-      $('.content').css('padding-top', sidebarOffsetSingleHeader)
-    }).resize()
+      
+    
   })
 }($))
