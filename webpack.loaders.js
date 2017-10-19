@@ -30,10 +30,10 @@ module.exports = [{
 }, {
     test: /\.(jpe?g|png|gif)$/i,
     loader: 'file?hash=sha512&digest=hex&name=[name].[ext]'
-}, {
+}, /*{
     test: /\.svg(\?.*)?$/,
     loader: 'url-loader?name=[name].[ext]&limit=10000&mimetype=image/svg+xml'
-}, {
+},*/ {
     test: /\.svg(\?.*)?$/,
     loader: 'file?name=[name].[ext]'
 }, {
