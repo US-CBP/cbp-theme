@@ -46,6 +46,8 @@ h6, .h6 {
   margin-bottom: ($line-height-computed / 2);
 }
 
+@include text-emphasis-variant('.text-warning', $brand-warning-text);
+
 @media (max-width:$screen-sm) {
   .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding-left: 6px;
