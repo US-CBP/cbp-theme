@@ -10,13 +10,13 @@
     float: left;
     display: block;
     margin-left: -8px; //this is to offset container-fluid padding
-    box-sizing: border-box;   
+    box-sizing: border-box;
   }
-  .cbp-sidebar-offset {    
+  .cbp-sidebar-offset {
     margin-right: -8px; //this is to offset container-fluid padding   
   }
-  
-  &.fluid-layout{
+
+  &.fluid-layout {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -44,51 +44,56 @@
 
 
 
+
 /* Small devices (tablets, 768px and up) and smaller than 991px*/
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  .cbp-sidebar, .cbp-sidebar-offset  {
+  .cbp-sidebar,
+  .cbp-sidebar-offset {
     padding-right: 8px;
-    padding-left: 8px;
+    padding-left: 15px;
   }
   .sidebar {
-      width: 300px;
-      min-width: 300px;
-    }
+    width: 300px;
+    min-width: 300px;
+  }
   .fixed {
     .sidebar {
       @include transition(top ease 0.25s);
       overflow-y: auto;
       position: fixed;
       bottom: 0;
-      left: 0; 
-      &.after-header{
-        top: 50px;  
+
+      left: 0;
+      &.after-header {
+        top: 50px;
       }
-      &.after-double-header{
-        top: 100px;  
-      }  
+      &.after-double-header {
+        top: 100px;
+      }
     }
     .cbp-sidebar-offset {
+      width: calc(100% - 300px);
       margin-left: 300px;
       padding-left: 0;
     }
   }
-
 }
+
 
 
 /* Medium devices (desktops, 992px and up) */
 
 @media (min-width: $screen-md-min) {
-  .cbp-sidebar, .cbp-sidebar-offset {
+  .cbp-sidebar,
+  .cbp-sidebar-offset {
     padding-left: 15px;
     padding-right: 15px;
-  } 
+  }
   .sidebar {
-      width: 350px;
-      min-width: 350px;
-    }
+    width: 350px;
+    min-width: 350px;
+  }
   .fixed {
     .sidebar {
       @include transition(top ease 0.25s);
@@ -96,16 +101,17 @@
       position: fixed;
       bottom: 0;
       left: 0;
-      &.after-header{
-        top: 50px;  
+      &.after-header {
+        top: 50px;
       }
-      &.after-double-header{
-        top: 100px;  
-      }       
+      &.after-double-header {
+        top: 100px;
+      }
     }
     .cbp-sidebar-offset {
+      width: calc(100% - 350px);
       margin-left: 350px;
       padding-left: 0;
     }
-  } 
+  }
 }
