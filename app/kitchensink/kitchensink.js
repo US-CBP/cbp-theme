@@ -124,4 +124,10 @@ $(document).ready(function () {
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
   })
+
+  //brand card interaction
+  $('.btn-circle').on('click', function(e){
+    
+    $(this).parent('.mdl-card').addClass('brand-card-expand');
+  })
 })

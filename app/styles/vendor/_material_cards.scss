@@ -116,6 +116,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
 
 
+
+
 /* CBP Extensions */
 
 .mdl-card-container {
@@ -185,8 +187,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
     width: 200px;
     height: 275px;
     overflow: visible;
-    margin-bottom: 20px;
-
+    margin: 10px;
     .image-container {
       margin-left: auto;
       margin-right: auto;
@@ -256,19 +257,48 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
       }
     }
     .mdl-card__title {
-      padding: 25px;
+      padding: 16px 25px;
+      height: 104px;
       .mdl-card__title-text {
         text-align: center;
+        align-self: center;
       }
     }
-    .btn{
-      
+    .btn {
+      @extend .btn-xs;
+      cursor: not-allowed;
+      pointer-events: none;
+      &.btn-circle {
+        border-radius: 50% !important;
+        height: 24px;
+        width: 24px;
+        background-color: #222;
+        color: #fff;
+      }
     }
     &:focus,
     &:hover,
     &:active {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
       transform: translate(0, -3px);
+
+      .btn {
+        cursor: default;
+        pointer-events: auto;
+        &.btn-circle {
+          @extend .btn-info; //border-radius: 50%;
+        }
+        &.btn-default {
+          @extend .btn-primary;
+        }
+      }
+    }
+    &.brand-card-expand {
+      width: 420px;
+      height: 475px;
+      .image-container {
+        margin-left: 15px;
+      }
     }
   }
 }
