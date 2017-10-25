@@ -294,8 +294,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
       }
     }
     &.brand-card-expand {
-      width: 420px;
-      height: 475px;
+      flex-grow: 2;
       .image-container {
         margin-left: 15px;
       }

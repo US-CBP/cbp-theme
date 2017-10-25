@@ -126,8 +126,8 @@ $(document).ready(function () {
   })
 
   //brand card interaction
-  $('.btn-circle').on('click', function(e){
+  $('.btn-circle').on('click', function(){
     
-    $(this).parent('.mdl-card').addClass('brand-card-expand');
+    $(this).parents('.mdl-card').addClass('brand-card-expand');
   })
 })
