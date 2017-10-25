@@ -127,7 +127,7 @@ $(document).ready(function () {
 
   //brand card interaction
   $('.btn-circle').on('click', function(){
-    
+    $('.mdl-card').removeClass('brand-card-expand');
     $(this).parents('.mdl-card').addClass('brand-card-expand');
   })
 })

@@ -118,6 +118,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
 
 
+
+
 /* CBP Extensions */
 
 .mdl-card-container {
@@ -181,17 +183,19 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; //justify-content: space-between;
   .mdl-card {
     width: 200px;
     height: 275px;
     overflow: visible;
-    margin: 10px;
+    margin: 16px;
+    -webkit-transition: width .2s, height 2s, linear .2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width .2s, height 2s, linear .2s;
     .image-container {
       margin-left: auto;
       margin-right: auto;
-      margin-top: -15px;
+      margin-top: -16px;
       height: 125px;
       width: 125px;
       border-radius: 5px;
@@ -259,21 +263,41 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
     .mdl-card__title {
       padding: 16px 25px;
       height: 104px;
+      justify-content: center;
       .mdl-card__title-text {
         text-align: center;
         align-self: center;
       }
     }
+    .mdl-card__supporting-text {
+      display: none;
+    }
     .btn {
       @extend .btn-xs;
       cursor: not-allowed;
       pointer-events: none;
+      &.btn-default {
+        &:focus,
+        &:hover,
+        &:active {
+          @extend .btn-primary;
+        }
+      }
       &.btn-circle {
         border-radius: 50% !important;
         height: 24px;
         width: 24px;
         background-color: #222;
         color: #fff;
+        i {
+          margin-top: 5px;
+        }
+        &:focus,
+        &:hover,
+        &:active {
+          @extend .btn-info;
+          border-color: transparent;
+        }
       }
     }
     &:focus,
@@ -286,7 +310,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
         cursor: default;
         pointer-events: auto;
         &.btn-circle {
-          @extend .btn-info; //border-radius: 50%;
+          @extend .btn-info;
+          border-color: transparent;
         }
         &.btn-default {
           @extend .btn-primary;
@@ -294,9 +319,20 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
       }
     }
     &.brand-card-expand {
-      flex-grow: 2;
+      //flex-grow: 2;
+      width: 400px;
+      height: auto;
+
       .image-container {
-        margin-left: 15px;
+        margin-left: 16px;
+        position: absolute;
+      }
+      .mdl-card__title {
+        margin-left: 125px;
+      }
+      .mdl-card__supporting-text {
+        display: block;
+        padding: 16px;
       }
     }
   }

@@ -235,6 +235,10 @@
     font-weight: 500;
 }
 
+.text-italic{
+font-style: italic;
+}
+
 //Ellipsis for the large text
 @include box-height(text-ellipsis-5line, 5);
 @include box-height(text-ellipsis-4line, 4);
