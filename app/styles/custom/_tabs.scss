@@ -76,12 +76,15 @@
                 border-bottom-color: transparent;
             }
         }
-        > a:hover {
+        > a:hover , a:focus {
             border: none;
             background: transparent;
             border-bottom: 2px solid $brand-info;
         }
-
+        &.active > a{
+            color: $brand-primary;
+            font-weight: 500;
+        }
         &.active > a,
         &.active > a:hover,
         &.active > a:focus,

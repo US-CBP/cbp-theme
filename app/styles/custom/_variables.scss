@@ -35,7 +35,8 @@ $brand-default-border:              #adadad;
 $brand-live-border:                 darken($brand-live, 10%);
 
 // custom brand text
-$brand-warning-text:                darken($brand-warning, 45%);
+//this color is adjusted-hue of brand-warning to create proper color contrast
+$brand-warning-text:               #A44900; 
 
 //
 $brand-default-highlight:           rgba(20,96,170,.1);
@@ -168,7 +169,7 @@ $btn-info-color:                    $gray-lighter;
 $btn-info-bg:                       $brand-info;
 $btn-info-border:                   darken($btn-info-bg, 9%);
 
-$btn-warning-color: 				        $brand-warning-text;  //--$text-color;
+$btn-warning-color: 				$brand-warning-text;  //--$text-color;
 $btn-warning-bg:                    $brand-warning;
 $btn-warning-border:                darken($btn-warning-bg, 9%);
 
