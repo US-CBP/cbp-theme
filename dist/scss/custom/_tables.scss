@@ -1,6 +1,7 @@
 // mdl table style
 .mdl-data-table {
   white-space: inherit;
+
   tbody {
     tr {
       &.is-selected {
@@ -65,6 +66,14 @@
     border-top: 1px solid $panel-default-border;
 }
 
+// Borderless version
+//
+// gets rid of all cell borders
+
+.table-bordered {  
+  border: 1px solid $table-border-color;  
+}
+
 // Row hover effect
 //
 // Duplicated from Bootstrap for precedence over striping
@@ -116,6 +125,7 @@
     }
   }
 }
+
 
 // Adds a background color to the table header
 .table > thead > tr {
