@@ -185,8 +185,9 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; //justify-content: space-between;
   .mdl-card {
+    background-color: $gray-lightest;
     width: 200px;
-    height: 275px;
+    height: 272px;
     overflow: visible;
     margin: 16px;
     -webkit-transition: width .2s, height 2s, linear .2s;
@@ -285,12 +286,13 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
       }
       &.btn-circle {
         border-radius: 50% !important;
-        height: 24px;
-        width: 24px;
-        background-color: #222;
-        color: #fff;
+        height: 22px;
+        width: 22px;
+        @extend .btn-default;
+        
         i {
-          margin-top: 5px;
+          margin-top: 3px;
+          margin-left: -1px;
         }
         &:focus,
         &:hover,
@@ -305,6 +307,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
     &:active {
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
       transform: translate(0, -3px);
+      .mdl-card__actions{
+        background-color: $white;
 
       .btn {
         cursor: default;
@@ -316,6 +320,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
         &.btn-default {
           @extend .btn-primary;
         }
+      }
       }
     }
     &.brand-card-expand {
@@ -334,6 +339,9 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
         display: block;
         padding: 16px;
       }
+      .mdl-card__actions{
+        background-color: $white;
+}
     }
   }
 }
