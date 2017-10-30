@@ -197,69 +197,20 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
       margin-left: auto;
       margin-right: auto;
       margin-top: -16px;
-      height: 125px;
-      width: 125px;
-      border-radius: 5px;
-      &.image1 {
-        background-color: #ff9900;
-      }
-      &.image2 {
-        background-color: #414042;
-      }
-      &.image3 {
-        background-color: #f54846;
-      }
-      &.image4 {
-        background-color: #006633;
-      }
-      &.image5 {
-        background-color: #231f12;
-      }
-      &.image6 {
-        background-color: #23238b;
-      }
-      &.image7 {
-        background-color: #005d62;
-      }
-      &.image8 {
-        background-color: #019788;
-      }
-      &.image9 {
-        background-color: #0555f1;
-      }
-      &.image10 {
-        background-color: #2c365f;
-      }
-      &.image11 {
-        background-color: #efa506;
-      }
-      &.image12 {
-        background-color: #76c4ae;
-      }
-      &.image13 {
-        background-color: #231f20;
-      }
-      &.image14 {
-        background-color: #029005;
-      }
-      &.image15 {
-        background-color: #20a8f3;
-      }
-      &.image16 {
-        background-color: #2b3990;
-      }
-      &.image17 {
-        background-color: #053aa0;
-      }
-      &.image18 {
-        background-color: #371759;
-      }
-      &.image19 {
-        background-color: #530064;
-      }
-      &.image20 {
-        background-color: #ed1c24;
-      }
+      height: 120px;
+      width: 120px;
+      border-radius: 7px;
+      vertical-align: middle;
+      text-align: center;
+      .icon-span{
+        vertical-align: middle;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+      }      
     }
     .mdl-card__title {
       padding: 16px 25px;

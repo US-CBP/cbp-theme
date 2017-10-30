@@ -127,7 +127,13 @@ $(document).ready(function () {
 
   //brand card interaction
   $('.btn-circle').on('click', function(){
-    $('.mdl-card').removeClass('brand-card-expand');
-    $(this).parents('.mdl-card').addClass('brand-card-expand');
+   
+    if ($(this).parents('.mdl-card').hasClass('brand-card-expand')) {
+      $(this).parents('.mdl-card').removeClass('brand-card-expand');
+    } else {
+      $('.mdl-card').removeClass('brand-card-expand');
+      $(this).parents('.mdl-card').addClass('brand-card-expand');
+    }
+
   })
 })
