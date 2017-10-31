@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme",
   "description": "CBP Common Framework UI Theme",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "author": "CBP Common Framework",
   "main": "./dist/js/npm",
   "contributors": [
@@ -68,7 +68,7 @@
     "webpack-dev-server": "1.16.1"
   },
   "optionalDependencies": {
-    "flag-icon-css": "2.8.0",       
+    "flag-icon-css": "2.8.0",
     "jquery.inputmask": "3.3.3"
   },
   "scripts": {
