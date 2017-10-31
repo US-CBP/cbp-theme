@@ -124,14 +124,4 @@ $(document).ready(function () {
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
   })
-
-  // brand card interaction
-  $('.btn-circle').on('click', function () {
-    if ($(this).parents('.mdl-card').hasClass('brand-card-expand')) {
-      $(this).parents('.mdl-card').removeClass('brand-card-expand')
-    } else {
-      $('.mdl-card').removeClass('brand-card-expand')
-      $(this).parents('.mdl-card').addClass('brand-card-expand')
-    }
-  })
 })
