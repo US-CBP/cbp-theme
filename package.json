@@ -45,7 +45,6 @@
     "expose-loader": "0.7.1",
     "extract-text-webpack-plugin": "0.9.1",
     "file-loader": "0.8.5",
-    "flag-icon-css": "2.8.0",
     "html-loader": "0.4.3",
     "html-webpack-plugin": "2.22.0",
     "immutable": "3.8.1",
@@ -69,6 +68,7 @@
     "webpack-dev-server": "1.16.1"
   },
   "optionalDependencies": {
+    "flag-icon-css": "2.8.0",       
     "jquery.inputmask": "3.3.3"
   },
   "scripts": {
