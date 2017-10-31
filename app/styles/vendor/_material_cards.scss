@@ -197,8 +197,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
       margin-left: auto;
       margin-right: auto;
       margin-top: -16px;
-      height: 120px;
-      width: 120px;
+      height: 125px;
+      width: 125px;
       border-radius: 7px;
       vertical-align: middle;
       text-align: center;
@@ -210,7 +210,10 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
         white-space: nowrap;
         align-items: center;
         justify-content: center;
-      }      
+      }  
+      img{
+        border-radius: 7px;
+      }    
     }
     .mdl-card__title {
       padding: 16px 25px;
