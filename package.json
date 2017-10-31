@@ -68,6 +68,7 @@
     "webpack-dev-server": "1.16.1"
   },
   "optionalDependencies": {
+    "flag-icon-css": "2.8.0",       
     "jquery.inputmask": "3.3.3"
   },
   "scripts": {
@@ -102,7 +103,6 @@
   "dependencies": {
     "bootstrap-sass": "3.3.6",
     "font-awesome": "4.6.3",
-    "flag-icon-css": "2.8.0",    
     "material-design-lite": "1.1.1",
     "mdl-selectfield": "1.0.2",
     "roboto-fontface": "0.8.0"
