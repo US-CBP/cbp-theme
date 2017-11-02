@@ -68,7 +68,6 @@
     "webpack-dev-server": "1.16.1"
   },
   "optionalDependencies": {
-    "flag-icon-css": "2.8.0",       
     "jquery.inputmask": "3.3.3"
   },
   "scripts": {
