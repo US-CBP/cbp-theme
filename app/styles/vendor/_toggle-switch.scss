@@ -76,9 +76,13 @@ $em-base: 16 !default;
       float: left;
       padding: 0 size(8);
       margin: 0;
-
       text-align: center;
     }
+
+    input:checked + label {
+  color: $white;
+ 
+}
 
     a {
       position: absolute;
