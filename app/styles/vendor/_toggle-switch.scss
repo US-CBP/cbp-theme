@@ -44,6 +44,8 @@ $em-base: 16 !default;
     @include clearfix;
     position: relative;
     display: block;
+    border: 1px solid $gray-light;
+    border-radius: 4px;
 
 
     a {
@@ -92,6 +94,9 @@ $em-base: 16 !default;
       z-index: 1;
       width: 10px;
       height: 100%;
+      &.btn{
+        margin: 0;
+      }
     }
 
     /* 2 items
