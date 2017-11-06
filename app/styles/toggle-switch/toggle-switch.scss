@@ -1,0 +1,57 @@
+/*
+* CSS TOGGLE SWITCH
+*
+* Ionuț Colceriu - ghinda.net
+* https://github.com/ghinda/css-toggle-switch
+*
+*/
+
+/* supported values are px, rem-calc, em-calc
+ */
+$size-unit: em !default;
+$em-base: 16 !default;
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+/* imports
+ */
+@import 'core/functions';
+//@import 'core/shared';
+
+/* Hide by default
+ */
+.switch-toggle a {
+  display: none;
+}
+
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+ 
+  @import 'core/toggle';  
+}
+
+/* Bugfix for older Webkit, including mobile Webkit. Adapted from
+ * http://css-tricks.com/webkit-sibling-bug/
+ */
+@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: size(1280)) {
+ 
+  .switch-toggle {
+    -webkit-animation: webkitSiblingBugfix infinite 1s;
+  }
+}
+
+@-webkit-keyframes webkitSiblingBugfix {
+  from {
+    -webkit-transform: translate3d(0,0,0);
+  } to {
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
