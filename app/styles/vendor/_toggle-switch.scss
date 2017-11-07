@@ -6,6 +6,8 @@
 *
 */
 
+/*  https://github.com/ghinda/css-toggle-switch - contains a lot more styles, extracted what was needed for the theme */
+
 
 /* supported values are px, rem-calc, em-calc
  */
@@ -24,12 +26,14 @@ $em-base: 16 !default;
 
 
 
+
 /* Hide by default
  */
 
 .switch-toggle a {
   display: none;
 }
+
 
 
 /* We can't test for a specific feature,
@@ -81,10 +85,9 @@ $em-base: 16 !default;
       text-align: center;
     }
 
-    input:checked + label {
-  color: $white;
- 
-}
+    input:checked+label {
+      color: $white;
+    }
 
     a {
       position: absolute;
@@ -94,7 +97,7 @@ $em-base: 16 !default;
       z-index: 1;
       width: 10px;
       height: 100%;
-      &.btn{
+      &.btn {
         margin: 0;
       }
     }
@@ -200,6 +203,7 @@ $em-base: 16 !default;
     }
   }
 }
+
 
 
 /* Bugfix for older Webkit, including mobile Webkit. Adapted from
