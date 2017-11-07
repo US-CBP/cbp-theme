@@ -57,6 +57,9 @@
     width: 300px;
     min-width: 300px;
   }
+  .cbp-sidebar-offset {
+    width: calc(100% - 300px);
+  }
   .fixed {
     .sidebar {
       @include transition(top ease 0.25s);
@@ -73,7 +76,6 @@
       }
     }
     .cbp-sidebar-offset {
-      width: calc(100% - 300px);
       margin-left: 300px;
       padding-left: 0;
     }
@@ -94,6 +96,9 @@
     width: 350px;
     min-width: 350px;
   }
+  .cbp-sidebar-offset {
+      width: calc(100% - 350px);     
+  }
   .fixed {
     .sidebar {
       @include transition(top ease 0.25s);
@@ -109,7 +114,6 @@
       }
     }
     .cbp-sidebar-offset {
-      width: calc(100% - 350px);
       margin-left: 350px;
       padding-left: 0;
     }
