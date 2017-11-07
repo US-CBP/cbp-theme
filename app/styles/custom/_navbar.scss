@@ -205,9 +205,13 @@
     z-index: $zindex-navbar-fixed;
   }
   .heading-text{
-    font-size:20px;
-    margin-top: 10px;
+    font-size: 24px;
+    margin-top: 15px;
     margin-bottom: 8px;
+  }
+
+  .mdl-textfield.is-dirty .mdl-textfield__label {
+    height: 27px; //fixing the font size shifting issue in app direcotry
   }
   
   @media (max-width: $screen-sm-max) {
