@@ -4,7 +4,7 @@ $card-background-color: unquote("rgb(#{$white})");
 $card-text-color: unquote("rgb(#{$gray-darker})");
 $card-image-placeholder-color: $gray-lighter;
 $card-supporting-text-text-color: unquote("rgba(#{$gray-darker}, 0.54)");
-$card-border-color: rgba(0, 0, 0, 0.1) !default;
+$card-border-color: rgba(0, 0, 0, 0.3);
 $card-subtitle-color: unquote("rgba(#{$gray-darker}, 0.54)");
 
 $card-font-size: $font-size-base; // 13px
