@@ -2,7 +2,6 @@
 /app/kitchensink/dist
 /components/
 /node_modules/
-/build/
 *.lock
 */bootstrap.css
 */*.min.css

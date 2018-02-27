@@ -9,10 +9,10 @@ let webpack = require('webpack'),
 const defaultConfig = {
     cache: true,
     entry: {
-        'cbp-theme': './index.js',
+        'cbp-theme': './cbp-theme.js',
         'inputmask': './inputmask.js',
 
-        'cbp-theme.min': './index.js',
+        'cbp-theme.min': './cbp-theme.js',
         'inputmask.min': './inputmask.js',
     },
     eslint: {

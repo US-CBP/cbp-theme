@@ -1,14 +1,16 @@
 /* global $, Inputmask */
 
-import 'babel-polyfill' // fixes ie11 Object.assign
-import InputMask from 'inputmask'
-import 'jquery.inputmask'
-import 'inputmask.dependencyLib'
-import 'inputmaskDir/inputmask.extensions'
-import 'inputmaskDir/inputmask.regex.extensions'
-import 'inputmaskDir/inputmask.phone.extensions'
-import 'inputmaskDir/inputmask.date.extensions'
-import 'inputmaskDir/inputmask.numeric.extensions';
+// EXTERNAL import 'babel-polyfill' // fixes ie11 Object.assign
+import InputMask from 'jquery.inputmask';
+
+// EXTERNALS
+
+// import 'jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery';
+// import 'jquery.inputmask/dist/inputmask/inputmask.extensions';
+// import 'jquery.inputmask/dist/inputmask/inputmask.regex.extensions';
+// import 'jquery.inputmask/dist/inputmask/inputmask.phone.extensions';
+// import 'jquery.inputmask/dist/inputmask/inputmask.date.extensions';
+// import 'jquery.inputmask/dist/inputmask/inputmask.numeric.extensions';
 
 (function ($, InputMask) {
   'use strict'
