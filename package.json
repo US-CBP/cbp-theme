@@ -93,7 +93,7 @@
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf ./kitchensink/dist",
     "lint": "standard 'src/js/**' './kitchensink/kitchensink.js' --fix | snazzy",
-    "build": "rollup -c build/cbp-rollup-build/rollup.config.esm5.js && ncp ./dist/ ./kitchensink/dist",
+    "build": "rollup -c && ncp ./dist/ ./kitchensink/dist",
     "build:old": "webpack --bail && npm run lint && npm run test",
     "serve": "webpack-dev-server --host=0.0.0.0 --port=8888 --content-base",
     "dev": "npm run clean && npm run build && npm run serve",

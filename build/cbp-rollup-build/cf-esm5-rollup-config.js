@@ -17,7 +17,7 @@ const filesize = require('rollup-plugin-filesize');
 const alias = require ('rollup-plugin-alias');
 const sass = require('rollup-plugin-sass');
 
-const projectRoot = path.join(__dirname, '../../');
+const projectRoot = path.join(__dirname);
 const defaults = {
   root: projectRoot,
   src: path.join(projectRoot, "src"),
@@ -27,13 +27,14 @@ const defaults = {
 const pkg = require(path.join(defaults.root, 'package.json'));
 
 
-export const cfESM5Config = function (options) {
+export function getRollupConfig(options) {
 
   options = options || {};
   options.name  = options.name  || pkg.name;
   options.input = options.input ||  path.join(defaults.src, `${options.name}.js`);
   options.output = options.output || {};
-  options.output.file = options.output.file || `${defaults.dist}/${pkg.name}.esm5.js`;
+  options.output.file = options.output.file || `${defaults.dist}/${pkg.name}.default.js`;
+  options.output.format = options.output.format || 'es';
 
   const externals = _getDependencies(pkg, options);
 
@@ -45,7 +46,7 @@ export const cfESM5Config = function (options) {
     external: id => matchExternal(id, externals),
     output: {
       file: `${options.output.file}`,
-      format: 'es',
+      format: `${options.output.format}`,
       sourcemap: true,
     },
     globals: options.globals,
@@ -96,13 +97,20 @@ export const cfESM5Config = function (options) {
   }
   return config;
 };
+export const getESM5Config = function (options) {
+  options.output = options.output || {};
+  options.output.file = options.output.file || `${defaults.dist}/${options.name}.esm5.js`;
+  options.output.format = 'es';
+  const config = getRollupConfig(options);
 
-export const cfUMDConfig = function (options) {
+  return config;
+};
+export const getUMDConfig = function (options) {
   options.output = options.output || {};
   options.output.file = options.output.file || `${defaults.dist}/${options.name}.umd.js`;
-  const config = cfESM5Config(options);
-  //config.output.file = `${defaults.dist}/${options.name}.umd.js`;
-  config.output.format = 'umd';
+  options.output.format = 'umd';
+  const config = getRollupConfig(options);
+
   return config;
 };
 function _getDependencies(pkg, options) {
