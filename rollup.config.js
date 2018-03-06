@@ -1,4 +1,4 @@
-import {getESM5Config, getUMDConfig} from './build/cbp-rollup-build/cf-esm5-rollup-config';
+import {getESM5Config, getUMDConfig} from './build/cbp-rollup-build/rollup-config-helper';
 import path from 'path';
 
 function getCommonOptions () {
