@@ -1,6 +1,12 @@
 /* global $ */
+window.cbpTheme.setupInputMasks()
 
 $(document).ready(function () {
+  window.cbpTheme.applyDatePicker()
+  window.cbpTheme.applyCharLimit()
+  window.cbpTheme.applyTags()
+  window.cbpTheme.applyThirdPartySelect()
+
   $('.dropdown-toggle').dropdown()
 
       // enable tooltips
@@ -123,5 +129,5 @@ $(document).ready(function () {
   })
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
-  })  
+  })
 })

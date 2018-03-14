@@ -1,17 +1,8 @@
+import $ from 'jquery'
+import InputMask from 'inputmaskDir/inputmask'
 
-import InputMask from 'inputmask'
-import 'jquery.inputmask'
-import 'inputmask.dependencyLib'
-import 'inputmaskDir/inputmask.extensions'
-import 'inputmaskDir/inputmask.regex.extensions'
-import 'inputmaskDir/inputmask.phone.extensions'
-import 'inputmaskDir/inputmask.date.extensions'
-import 'inputmaskDir/inputmask.numeric.extensions';
-
-
-(function ($, InputMask) {
+export function setupInputMasks () {
   'use strict'
-
   if (!$ || !InputMask) {
     return false // fail gracefully
   }
@@ -31,9 +22,9 @@ import 'inputmaskDir/inputmask.numeric.extensions';
       }
     })
   }
-      //
-      // DONT USE lambda/arrow function HERE SINCE 'this' SCOPE IS NEEDED!!!
-      //
+  //
+  // DONT USE lambda/arrow function HERE SINCE 'this' SCOPE IS NEEDED!!!
+  //
   var placeholderBeforeEventCheckDirty = function (val, opt) {
     placeholderCheckDirty(this)
   }
@@ -60,10 +51,10 @@ import 'inputmaskDir/inputmask.numeric.extensions';
     onBeforePaste: checkDirty
   }
 
-  Inputmask.extendAliases({
+  InputMask.extendAliases({
     'mdl-textfield-default': Object.assign({}, TEXTFIELD_DEFAULT, FLOAT_LABEL_DEFAULT),
     'mdl-textfield-default-placeholder': Object.assign({}, TEXTFIELD_DEFAULT, PLACEHOLDER_LABEL_DEFAULT),
     'mdl-mask-datepicker': Object.assign({}, DATEPICKER_DEFAULT, FLOAT_LABEL_DEFAULT),
     'mdl-mask-datepicker-placeholder': Object.assign({}, DATEPICKER_DEFAULT, PLACEHOLDER_LABEL_DEFAULT)
   })
-})($, InputMask)
+}

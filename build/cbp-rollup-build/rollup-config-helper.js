@@ -36,6 +36,7 @@ export function getRollupConfig(options) {
   options.output.file = options.output.file || `${defaults.dist}/${pkg.name}.default.js`;
   options.output.format = options.output.format || 'es';
   options.namesExports = options.namesExports || {};
+  options.aliases = options.aliases || {};
 
   const externals = _getDependencies(pkg, options);
 
@@ -52,13 +53,7 @@ export function getRollupConfig(options) {
     },
     globals: options.globals,
     plugins: [
-      alias({
-        '$': 'jquery',
-        "inputmask.dependencyLib": path.join(projectRoot,'node_modules/jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery.js'),
-        "inputmask": path.join(projectRoot,'/node_modules/jquery.inputmask/dist/inputmask/inputmask.js'),
-        "jquery.inputmask": path.join(projectRoot,'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js'),
-        "inputmaskDir": path.join(projectRoot,'node_modules/jquery.inputmask/dist/inputmask'),
-      }),
+      alias(options.aliases),
       sourcemaps(),
       json({
         exclude: ['node_modules/**']
@@ -120,16 +115,15 @@ export const getUMDConfig = function (options) {
 };
 function _getDependencies(pkg, options) {
   let deps = [];
-  options.includeExternal = options.includeExternal || []; //nulls
+  options.excludeExternal = options.excludeExternal || []; //nulls
   const dependencies = pkg.dependencies ? Object.keys(pkg.dependencies) : [];
   const peerDependencies = pkg.peerDependencies ? Object.keys(pkg.peerDependencies) : [];
   const optionalDependencies = pkg.optionalDependencies ? Object.keys(pkg.optionalDependencies) : [];
-  const devDependencies = pkg.devDependencies ? Object.keys(pkg.devDependencies) : [];
 
-  const allDependencies = [].concat(dependencies, peerDependencies, optionalDependencies, devDependencies);
+  const allDependencies = [].concat(dependencies, peerDependencies, optionalDependencies);
 
   allDependencies.forEach((dep) => {
-    if (!options.includeExternal.includes(dep)) {
+    if (!options.excludeExternal.includes(dep)) {
       deps.push(dep);
     }
   });
@@ -142,6 +136,7 @@ function matchExternal(id, externals) {
   externals = externals || [];
   // starts-with: if id starts with any of the external
   // e.g. lodash-es/isObject
+
   const match = externals.find(external => new RegExp(`^${external}/?.*?$`).test(id));
   return match ? true : false;
 
