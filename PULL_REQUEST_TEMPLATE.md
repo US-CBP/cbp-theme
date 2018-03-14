@@ -7,4 +7,3 @@
 #### Questions:
 - Is there a blog post?
 - Does the knowledge base need an update?
-- Does this add new (Python) dependencies which need to be added to chef?
