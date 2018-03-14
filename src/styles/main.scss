@@ -15,8 +15,10 @@
 @import "vendor/nouislider";
 @import "vendor/select2_mdl_theme";
 
+$roboto-font-path: 'roboto-fontface/fonts' !default;
 @import "vendor/roboto";
 
+$fa-font-path: "font-awesome/fonts" !default;
 @import "vendor/fontawesome";
 
 @import "vendor/select2_mdl_theme";

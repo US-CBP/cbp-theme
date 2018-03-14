@@ -35,6 +35,7 @@ export function getRollupConfig(options) {
   options.output = options.output || {};
   options.output.file = options.output.file || `${defaults.dist}/${pkg.name}.default.js`;
   options.output.format = options.output.format || 'es';
+  options.namesExports = options.namesExports || {};
 
   const externals = _getDependencies(pkg, options);
 
@@ -52,7 +53,11 @@ export function getRollupConfig(options) {
     globals: options.globals,
     plugins: [
       alias({
-        '$': 'jquery'
+        '$': 'jquery',
+        "inputmask.dependencyLib": path.join(projectRoot,'node_modules/jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery.js'),
+        "inputmask": path.join(projectRoot,'/node_modules/jquery.inputmask/dist/inputmask/inputmask.js'),
+        "jquery.inputmask": path.join(projectRoot,'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js'),
+        "inputmaskDir": path.join(projectRoot,'node_modules/jquery.inputmask/dist/inputmask'),
       }),
       sourcemaps(),
       json({
@@ -72,7 +77,7 @@ export function getRollupConfig(options) {
         }
       }),
       commonjs({
-        namedExports: {}
+        namedExports: options.namesExports
       }),
       babel({
         babelrc: false,
@@ -115,20 +120,21 @@ export const getUMDConfig = function (options) {
 };
 function _getDependencies(pkg, options) {
   let deps = [];
-  options.excludeExternal = options.excludeExternal || []; //nulls
+  options.includeExternal = options.includeExternal || []; //nulls
   const dependencies = pkg.dependencies ? Object.keys(pkg.dependencies) : [];
   const peerDependencies = pkg.peerDependencies ? Object.keys(pkg.peerDependencies) : [];
   const optionalDependencies = pkg.optionalDependencies ? Object.keys(pkg.optionalDependencies) : [];
+  const devDependencies = pkg.devDependencies ? Object.keys(pkg.devDependencies) : [];
 
-  const allDependencies = [].concat(dependencies, peerDependencies, optionalDependencies);
+  const allDependencies = [].concat(dependencies, peerDependencies, optionalDependencies, devDependencies);
 
   allDependencies.forEach((dep) => {
-    if (!options.excludeExternal.includes(dep)) {
+    if (!options.includeExternal.includes(dep)) {
       deps.push(dep);
     }
   });
 
-  console.log(options.output.file+':::Treating external dependencies:\n\t' + JSON.stringify(deps));
+  console.log(options.output.file+':::Treating external dependencies :\n\t' , JSON.stringify(deps));
   return deps;
 }
 
