@@ -12,10 +12,10 @@ const sourcemaps = require('rollup-plugin-sourcemaps');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
-const cleanup = require('rollup-plugin-cleanup');
 const filesize = require('rollup-plugin-filesize');
 const alias = require ('rollup-plugin-alias');
-const sass = require('rollup-plugin-sass');
+const uglify = require ('rollup-plugin-uglify');
+
 
 const projectRoot = path.join(__dirname);
 const defaults = {
@@ -45,7 +45,9 @@ export function getRollupConfig(options) {
     name: pkg.name,
     input: options.input,
     debug: true,
+    includes: options.includes || [],
     external: id => matchExternal(id, externals),
+    sourcemap: true,
     output: {
       file: `${options.output.file}`,
       format: `${options.output.format}`,
@@ -53,8 +55,8 @@ export function getRollupConfig(options) {
     },
     globals: options.globals,
     plugins: [
-      alias(options.aliases),
       sourcemaps(),
+      alias(options.aliases),
       json({
         exclude: ['node_modules/**']
       }),
@@ -77,6 +79,7 @@ export function getRollupConfig(options) {
       babel({
         babelrc: false,
         comments: true,
+        sourceMap: true,
         moduleId: options.name,
         presets: [
           ["es2015", {
@@ -86,14 +89,16 @@ export function getRollupConfig(options) {
         ],
         exclude: 'node_modules/**',
       }),
-      // cleanup({comments: ['all']}),
       progress({clearLine: !options.debug}),
       filesize()
     ]
   };
 
-  if (options.sassConfig) {
-    config.plugins.push(sass(options.sassConfig))
+  if (options.minify) {
+    config.plugins.push(uglify(options.minify === true? {} : options.minify));
+  }
+  if (options.plugins) {
+    Array.prototype.push.apply(config.plugins, options.plugins);
   }
   return config;
 };
