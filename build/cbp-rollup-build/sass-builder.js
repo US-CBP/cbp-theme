@@ -30,7 +30,7 @@ var dest = path.join(destDir, 'cbp-theme.css')
 // });
 //
 const postcssAssetOptions = [
-  { url: 'copy', basePath: nodeModulesDir, assetsPath: destDir, useHash: false },
+  { url: 'copy', basePath: nodeModulesDir, assetsPath: destDir, useHash: true , hashOptions: {append: true}},
   // { filter: '**/assets/inline/*.svg', url: 'inline' },
   // { filter: '**/assets/**/*.gif', url: 'rebase' },
   // // using custom function to build url
@@ -48,7 +48,7 @@ sass.render({
 }, function (error, result) { // node-style callback from v3.0.0 onwards
   if (!error) {
     // No errors during the compilation, write this result on the disk
-    fs.writeFileSync(dest, result.css)
+    // fs.writeFileSync(dest, result.css)
     postcss([
       autoprefixer({
         browsers: [
