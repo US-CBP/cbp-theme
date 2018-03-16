@@ -29,6 +29,14 @@ var dest = path.join(destDir, 'cbp-theme.css')
 //   includePaths: [nodeModulesDir]
 // });
 //
+const postcssAssetOptions = [
+  { url: 'copy', basePath: nodeModulesDir, assetsPath: destDir, useHash: false },
+  // { filter: '**/assets/inline/*.svg', url: 'inline' },
+  // { filter: '**/assets/**/*.gif', url: 'rebase' },
+  // // using custom function to build url
+  // { filter: 'cdn/**/*', url: (asset) => `https://cdn.url/${asset.url}` }
+];
+
 sass.render({
   file: entry,
   outputStyle: 'compressed',
@@ -48,17 +56,21 @@ sass.render({
           'last 2 versions'
         ]
       }),
-      url({
-        url: function (asset, dir, options, decl, warn, result) {
-          if (asset.url.match(/roboto/)) {
-            asset.url = 'yogesh/' + asset.url
-            return asset.url
-          }
-          console.log(asset)
-        },
-        basePath: projectDir,
-        assetsPath: destDir,
-        useHash: true})
+      url(postcssAssetOptions)
+      // url({
+      //   // url: function (asset, dir, options, decl, warn, result) {
+      //   //   if (asset.url.match(/roboto/)) {
+      //   //     const url = 'yogesh/' + asset.url
+      //   //     decl.value = url
+      //   //     return decl.value
+      //   //   }
+      //   //   console.log(asset)
+      //   // },
+      //   url: 'copy',
+      //   basePath: projectDir,
+      //   assetsPath: destDir,
+      //   useHash: true
+      // })
     ]).process(result.css, {
       from: entry,
       to: path.join(destDir, 'cbp-theme-css.min.css')
