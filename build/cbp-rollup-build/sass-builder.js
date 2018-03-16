@@ -48,9 +48,19 @@ sass.render({
           'last 2 versions'
         ]
       }),
-      url({url: 'copy', basePath: projectDir, assetsPath: destDir, useHash: true})
+      url({
+        url: function (asset, dir, options, decl, warn, result) {
+          if (asset.url.match(/roboto/)) {
+            asset.url = 'yogesh/' + asset.url
+            return asset.url
+          }
+          console.log(asset)
+        },
+        basePath: projectDir,
+        assetsPath: destDir,
+        useHash: true})
     ]).process(result.css, {
-      from: dest,
+      from: entry,
       to: path.join(destDir, 'cbp-theme-css.min.css')
       // map: true
     }).then(function (postcssResults) {
