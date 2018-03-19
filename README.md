@@ -29,7 +29,7 @@ Note: It is recommended that you use npm to manage your frontend dependencies.
 If you are not using npm, see [alternative installations](./alternative-installations.md) for other ways to get cbp-theme. 
 
 
-## Including in your html
+## Consuming cbp-theme by Including in your html
 
 Using the cbp theme is as easy as including cbp-theme.css and cbp-theme.js in your markup.
 

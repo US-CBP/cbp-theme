@@ -14,20 +14,20 @@ var srcDir = path.join(projectDir, 'src')
 var destDir = path.join(projectDir, 'dist')
 var nodeModulesDir = path.join(projectDir, 'node_modules')
 
-
 var entry = path.join(srcDir, 'styles/main.scss')
 
 const postcssAssetOptions = [
   {url: 'copy', basePath: nodeModulesDir, assetsPath: destDir, useHash: true, hashOptions: {append: true}}
 ]
 
-function sassToCss() {
+function sassToCss () {
   sass.render({
     file: entry,
     outputStyle: 'expanded',
     outFile: 'cbp-theme.css',
     sourceMap: true,
-    sourceMapContents: false,
+    sourceMapContents: true,
+    omitSourceMapUrl: false,
     includePaths: [nodeModulesDir]
   }, function (error, result) {
     if (!error) {
@@ -55,13 +55,15 @@ function sassToCss() {
       postcssBuilder.process(result.css, {
         from: entry,
         to: path.join(destDir, 'cbp-theme.min.css'),
-        map: {prev: JSON.parse(result.map), inline: false}
+        map: {prev: JSON.parse(result.map), inline: false, sourcesContent: true}
+        // map: {prev: JSON.parse(result.map), inline: false, sourcesContent: true, from: 'cbp-theme.css'}
+        // map: {inline: false, sourcesContent: false, from: 'cbp-theme.css'}
       }).then(function (postcssResults) {
         fs.writeFileSync(path.join(destDir, 'cbp-theme.min.css'), postcssResults.css)
         fs.writeFileSync(path.join(destDir, 'cbp-theme.min.css.map'), postcssResults.map)
       })
       fs.writeFileSync(path.join(destDir, 'cbp-theme.css'), result.css)
-      fs.writeFileSync(path.join(destDir, 'cbp-theme.css.map'), result.map)
+      // fs.writeFileSync(path.join(destDir, 'cbp-theme.css.map'), result.map)
     } else {
       console.error(error)
     }
@@ -72,9 +74,8 @@ sassToCss()
 
 if (argv.w || argv.watch) {
   var chokidar = require('chokidar')
-  chokidar.watch(srcDir).on('change', path => {
+  chokidar.watch(srcDir, {ignored: /^(.*?)\.(?!(scss|sass)$).*$/}).on('change', path => {
     console.log(`File ${path} has been changed`)
     sassToCss()
   })
-
 }

@@ -88,9 +88,8 @@ export function getRollupConfig(options) {
           }],
         ],
         exclude: 'node_modules/**',
-      }),
-      progress({clearLine: !options.debug}),
-      filesize()
+      })
+
     ]
   };
 
@@ -100,6 +99,9 @@ export function getRollupConfig(options) {
   if (options.plugins) {
     Array.prototype.push.apply(config.plugins, options.plugins);
   }
+
+  config.plugins.push(progress({clearLine: !options.debug}))
+  config.plugins.push(filesize())
   return config;
 };
 export const getESM5Config = function (options) {
