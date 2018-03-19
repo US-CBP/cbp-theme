@@ -32,7 +32,7 @@ module.exports = {
   'logPrefix': 'Browsersync',
   'logFileChanges': true,
   'logSnippet': true,
-  'open': 'local',
+  'open': false,
   'browser': 'default',
   'host': '0.0.0.0',
   'localOnly': false,
