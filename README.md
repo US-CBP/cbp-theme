@@ -37,15 +37,16 @@ The CBP Theme artifacts are in the
 `node_modules/cbp-theme/dist` directory.
 The `dist` directory contains:
 
-* `cbp-theme.css` - Full Content
-  - cbp-theme.min.css - For production
-  - cbp-theme.min.css.map
-* `scss`
-  - cbp-theme.css
-  - `scss/` for those who want to import scss files
-* `fonts`
-  - Font Awesome and Roboto fonts
-
+* `cbp-theme.css` - Full Combined Content
+* `cbp-theme.min.css` - For production Use
+* `cbp-theme.min.css.map` - Mapped to scss for debugging
+* `cbp-theme.browser.bundle.umd.js` This contains everything you need except jQuery for browser consumption.
+* `cbp-theme.esm5.js` ESM5 Module are for use in your builds e.g. Angular, React, Webpack
+* `cbp-theme.umd.js` UMD Module without any dependencies bundled in in case you have the dependencies added separately.
+* `cbp-theme-inputmask.umd.js` jQuery Inputmask bundled with few minimum inputmask plugins required for style. Use this with `cbp-theme.browser.bundle.umd.js` or `cbp-theme.umd.js`.
+* `fontawesome*.*` Font Awesome Icons referenced by css
+* `Roboto-*.*` - Roboto Fonts referenced by css
+* `scss/` - For those who want to import scss files shown below:-
 ```
 dist/
 ├── scss
@@ -89,77 +90,38 @@ dist/
 │       ├── _badges.scss
 │       ├── _alerts.scss
 │       └── _accordions.scss
-├── inputmask.min.js
-├── inputmask.js
-├── fontawesome-webfont.woff2
-├── fontawesome-webfont.woff
-├── fontawesome-webfont.ttf
-├── fontawesome-webfont.svg
-├── fontawesome-webfont.eot
-├── cbp-theme.min.js
-├── cbp-theme.js
-├── cbp-theme.css
-├── Roboto-RegularItalic.woff2
-├── Roboto-RegularItalic.woff
-├── Roboto-RegularItalic.ttf
-├── Roboto-RegularItalic.svg
-├── Roboto-RegularItalic.eot
-├── Roboto-Regular.woff2
-├── Roboto-Regular.woff
-├── Roboto-Regular.ttf
-├── Roboto-Regular.svg
-├── Roboto-Regular.eot
-├── Roboto-MediumItalic.woff2
-├── Roboto-MediumItalic.woff
-├── Roboto-MediumItalic.ttf
-├── Roboto-MediumItalic.svg
-├── Roboto-MediumItalic.eot
-├── Roboto-Medium.woff2
-├── Roboto-Medium.woff
-├── Roboto-Medium.ttf
-├── Roboto-Medium.svg
-├── Roboto-Medium.eot
-├── Roboto-LightItalic.woff2
-├── Roboto-LightItalic.woff
-├── Roboto-LightItalic.ttf
-├── Roboto-LightItalic.svg
-├── Roboto-LightItalic.eot
-├── Roboto-Light.woff2
-├── Roboto-Light.woff
-├── Roboto-Light.ttf
-├── Roboto-Light.svg
-├── Roboto-Light.eot
-├── Roboto-BoldItalic.woff2
-├── Roboto-BoldItalic.woff
-├── Roboto-BoldItalic.ttf
-├── Roboto-BoldItalic.svg
-├── Roboto-BoldItalic.eot
-├── Roboto-Bold.woff2
-├── Roboto-Bold.woff
-├── Roboto-Bold.ttf
-├── Roboto-Bold.svg
-└── Roboto-Bold.eot
+
 ```
 
+## Consuming cbp-theme in your ES6/TypeScript project
 
-## Consuming cbp-theme
+Whether you are using Webpack or Rullup cbp-theme package is distributed with `cbp-theme.esm5.js` as `module`.
 
-### cbp-theme.browser.bundle.umd.js
+This allows you to import the required functions as below and your build will pickup the correct 3rd party dependencies installed as cbp-theme dependencies:
 
-Using the cbp theme is as easy as including cbp-theme.css and cbp-theme.js in your markup.
+import {applyCharLimit, applyDatePicker, applyTags, applyThirdPartySelect } from 'cbp-theme';
+
+
+## Consuming cbp-theme by Including in your html
+
+
+Using the cbp theme is as easy as including cbp-theme.min.css and `cbp-theme.browser.bundle.umd.js` in your markup.
+
+Optionally `cbp-theme-inputmask.umd.js` can be used for inputmask.
 
 Note: cbp-theme does require `jQuery 2.x` or higher to be included before adding cbp-theme.js.
 
 This option is meant for in browser consumption only as apposed to using in your build.
 
+Refer to `kitchensink/index.html` for markup reference.
 
-#### Order of Javascript Dependencies
+### Order of Javascript Dependencies
 ```
   <!-- required CBP dependency: jQuery 2.x+ -->
   <script src="./path/to/thirdparty/js/jquery-2.2.4.min.js"></script>
 
   <!-- optional cbp-theme plugins -->
-  <script src="./path/to/dist/inputmask.js"></script>
+  <script src="./path/to/dist/cbp-theme-inputmask.umd.js"></script>
 
   <!-- application specific third party js files here -->
   <script src="./path/to/thirdparty/js/jquery-ui.min.js"></script>
@@ -170,15 +132,11 @@ This option is meant for in browser consumption only as apposed to using in your
   <script src="./path/to/cbp-theme.browser.bundle.umd.js"></script>
 ```
 
-## Consuming cbp-theme by Including in your html
-
-
 
 
 # Importing Style Sheets
 
 For more advanced users checkout wiki [Guide to Importing Style Sheets.](https://github.com/US-CBP/cbp-theme/wiki/Guide-to-Importing-Style-Sheets)
-
 
 
 ## Contributing
