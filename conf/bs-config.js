@@ -11,7 +11,7 @@
  |
  |
  */
-var files = ['./kitchensink', './dist']
+var files = ['./kitchensink', './']
 module.exports = {
   'ui': {
     'port': 3001

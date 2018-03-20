@@ -3,7 +3,9 @@
   "description": "CBP Common Framework UI Theme",
   "version": "1.8.1",
   "author": "CBP Common Framework",
-  "main": "./dist/js/npm",
+  "main": "./dist/cbp-theme.umd.js",
+  "module": "./dist/cbp-theme.esm5.js",
+  "browser": "./dist/cbp-theme.browser.bundle.umd.js",
   "contributors": [
     {
       "name": "Kianoosh Raika",
@@ -39,6 +41,7 @@
     "babel-preset-es2015": "6.24.1",
     "bootstrap": "3.3.6",
     "browser-sync": "2.23.6",
+    "cpx": "1.5.0",
     "cssnano": "3.10.0",
     "eslint": "3.19.0",
     "glob": "7.1.2",
@@ -69,7 +72,8 @@
     "select2": "4.0.3",
     "selectize": "0.12.1",
     "snazzy": "7.0.0",
-    "standard": "10.0.3"
+    "standard": "10.0.3",
+    "yargs": "11.0.0"
   },
   "optionalDependencies": {
     "flag-icon-css": "2.8.0",
@@ -79,7 +83,7 @@
     "clean": "rimraf ./dist",
     "lint": "standard 'src/js/**' './kitchensink/kitchensink.js' --fix | snazzy",
     "build": "npm-run-all clean --parallel build:rollup  \"build:scss:postcss -- --production\"",
-    "build:scss:postcss": "node ./build/cbp-rollup-build/sass-builder.js",
+    "build:scss:postcss": "node ./build/sass-builder.js",
     "build:rollup": "rollup -c",
     "serve": "browser-sync start --config conf/bs-config.js",
     "dev": "npm-run-all clean --parallel \"build:scss:postcss -- -w\" \"build:rollup -- -w\" serve",
@@ -89,7 +93,7 @@
     "viz:check": "npm run viz:new && node e2e/viz-diff.js",
     "a11y": "pa11y --standard Section508  > a11y.html http://localhost:8888 || true",
     "preversion": "npm test",
-    "version": "npm run build && git add -A .",
+    "version": "npm run build",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
@@ -115,6 +119,6 @@
     "roboto-fontface": "0.8.0"
   },
   "peerDependencies": {
-    "chokidar" : "*"
+    "chokidar": "*"
   }
 }

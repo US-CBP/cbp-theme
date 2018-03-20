@@ -16,6 +16,7 @@ ___
 ___
 
 # Quickstart
+
 ## Installation
 The recommended way to get the latest CBP theme is by saving as a dependency via [npm](https://docs.npmjs.com/getting-started/what-is-npm).  
 
@@ -29,44 +30,22 @@ Note: It is recommended that you use npm to manage your frontend dependencies.
 If you are not using npm, see [alternative installations](./alternative-installations.md) for other ways to get cbp-theme. 
 
 
-## Consuming cbp-theme by Including in your html
-
-Using the cbp theme is as easy as including cbp-theme.css and cbp-theme.js in your markup.
-
-Note: cbp-theme does require `jQuery 2.x` or higher to be included before adding cbp-theme.js.    
-
-### Order of Javascript Dependencies
-```
-  <!-- required CBP dependency: jQuery 2.x+ -->
-  <script src="./path/to/thirdparty/js/jquery-2.2.4.min.js"></script>
-
-  <!-- optional cbp-theme plugins -->
-  <script src="./path/to/dist/inputmask.js"></script>
-
-  <!-- application specific third party js files here -->
-  <script src="./path/to/thirdparty/js/jquery-ui.min.js"></script>
-  <script src="./path/to/thirdparty/js/alerts.js"></script>
-  <script src="./path/to/thirdparty/js/select2.min.js"></script>
-
-  <!-- js for cbp-theme should be loaded after all thirdparty js files -->
-  <script src="./path/to/cbp-theme.js"></script>
-```
 
 ## What you get
 
 The CBP Theme artifacts are in the
 `node_modules/cbp-theme/dist` directory.
-The dist directory contains:
+The `dist` directory contains:
 
-* `js` 
-  - cbp-theme.js:  
-  - inputmask.js:   
-* `styles` 
+* `cbp-theme.css` - Full Content
+  - cbp-theme.min.css - For production
+  - cbp-theme.min.css.map
+* `scss`
   - cbp-theme.css
-  - `scss/` for those who want to import scss files 
+  - `scss/` for those who want to import scss files
 * `fonts`
   - Font Awesome and Roboto fonts
-  
+
 ```
 dist/
 ├── scss
@@ -161,6 +140,39 @@ dist/
 ├── Roboto-Bold.svg
 └── Roboto-Bold.eot
 ```
+
+
+## Consuming cbp-theme
+
+### cbp-theme.browser.bundle.umd.js
+
+Using the cbp theme is as easy as including cbp-theme.css and cbp-theme.js in your markup.
+
+Note: cbp-theme does require `jQuery 2.x` or higher to be included before adding cbp-theme.js.
+
+This option is meant for in browser consumption only as apposed to using in your build.
+
+
+#### Order of Javascript Dependencies
+```
+  <!-- required CBP dependency: jQuery 2.x+ -->
+  <script src="./path/to/thirdparty/js/jquery-2.2.4.min.js"></script>
+
+  <!-- optional cbp-theme plugins -->
+  <script src="./path/to/dist/inputmask.js"></script>
+
+  <!-- application specific third party js files here -->
+  <script src="./path/to/thirdparty/js/jquery-ui.min.js"></script>
+  <script src="./path/to/thirdparty/js/alerts.js"></script>
+  <script src="./path/to/thirdparty/js/select2.min.js"></script>
+
+  <!-- js for cbp-theme should be loaded after all thirdparty js files -->
+  <script src="./path/to/cbp-theme.browser.bundle.umd.js"></script>
+```
+
+## Consuming cbp-theme by Including in your html
+
+
 
 
 # Importing Style Sheets

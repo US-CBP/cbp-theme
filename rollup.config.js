@@ -1,4 +1,4 @@
-import {getESM5Config, getUMDConfig} from './build/cbp-rollup-build/rollup-config-helper'
+import {getESM5Config, getUMDConfig} from './build/rollup-config-helper'
 
 
 import path from 'path'
@@ -44,7 +44,6 @@ const allInclusive = getUMDConfig(Object.assign(getCommonOptions(), {
   name: 'cbp-theme.browser.bundle',
   excludeExternal: ['bootstrap', 'material-design-lite', 'mdl-selectfield'],
   minify: true,
-  // plugins: [postcss()]
 }))
 
 export default [cbpThemeESM5Config, cbpThemeUMDConfig, inputMaskUMDConfig, allInclusive]
