@@ -32,19 +32,18 @@ See below for more info on developing:
 
 ## NPM Commands
 
-We use Webpack for our build process wrapped by npm commands:
 
 * npm install - downloads and resolves depedencies
-* npm run build - builds the dependencies via Webpack
-* npm run dev - builds via Webpack
-* npm run server - builds and serves it up via Webpack
+* npm run build - builds the dependencies
+* npm run dev - compiles and runs a server in a watch mode
+* npm run server - builds and serves it up
 * npm run a11y - runs pa11y accesibility on the kitchen sink (assumes npm run serve has been called)
 
 ## The Kitchen Sink
 
 A demo app is located under app/kitchensink with all the components available so
 that one can experiment and test changes. Run 'npm run dev', which builds and
-uses gulp serve.  The demo app runs localhost:8888/webpack-dev-server
+uses gulp serve.  The demo app runs http://localhost:8888
 
 ## Testing the Kitchen Sink using Visual Diff Image
 
