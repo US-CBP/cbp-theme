@@ -82,7 +82,7 @@ export function getRollupConfig(options) {
         sourceMap: true,
         moduleId: options.name,
         presets: [
-          ["es2015", {
+          ["env", {
             modules: false,
             loose: true,
           }],
