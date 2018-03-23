@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import InputMask from 'inputmaskDir/inputmask'
+import InputMask from 'inputmask'
 
 export function setupInputMasks () {
   'use strict'
@@ -34,7 +34,7 @@ export function setupInputMasks () {
   }
 
   const DATEPICKER_DEFAULT = {
-    alias: 'dd/mm/yyyy',  // use one of the predefined inputmasks
+    alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
     mask: 'm/d/y',
     placeholder: 'mm/dd/yyyy',
     showMaskOnHover: false

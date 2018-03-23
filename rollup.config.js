@@ -15,10 +15,7 @@ function getCommonOptions () {
     },
     aliases: {
       '$': 'jquery',
-      'inputmask.dependencyLib': path.join(projectRoot, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery.js'),
-      'inputmask': path.join(projectRoot, '/node_modules/jquery.inputmask/dist/inputmask/inputmask.js'),
-      'jquery.inputmask': path.join(projectRoot, 'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js'),
-      'inputmaskDir': path.join(projectRoot, 'node_modules/jquery.inputmask/dist/inputmask'),
+      './dependencyLibs/inputmask.dependencyLib': path.join(projectRoot, 'node_modules/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js'),
       'bootstrap': path.join(projectRoot, 'node_modules/bootstrap/dist/js/bootstrap.js')
     }
   }

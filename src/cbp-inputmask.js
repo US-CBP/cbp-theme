@@ -1,14 +1,12 @@
 /**
  * Takes away pain of having to setup inputmask with useful dafaults.
  */
-import 'inputmaskDir/inputmask.dependencyLib.jquery'
-import 'inputmaskDir/inputmask'
-import 'inputmaskDir/inputmask.extensions'
-import 'inputmaskDir/inputmask.regex.extensions'
-import 'inputmaskDir/inputmask.phone.extensions'
-import 'inputmaskDir/inputmask.date.extensions'
-import 'inputmaskDir/inputmask.numeric.extensions'
-import 'inputmaskDir/jquery.inputmask'
+
+import 'inputmask/dist/inputmask/jquery.inputmask'
+import 'inputmask/dist/inputmask/inputmask.numeric.extensions'
+import 'inputmask/dist/inputmask/inputmask.regex.extensions'
+import 'inputmask/dist/inputmask/inputmask.date.extensions'
+import 'inputmask/dist/inputmask/inputmask.phone.extensions'
 
 import {setupInputMasks} from './js/app-inputmasks'
 
