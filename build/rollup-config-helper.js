@@ -26,34 +26,42 @@ const defaults = {
 
 const pkg = require(path.join(defaults.root, 'package.json'));
 
+export function getESM5Config(options) {
+  options.output = options.output || {};
+  options.output.name = options.output.name || pkg.name;
+  options.output = Object.assign({
+    file: `${defaults.dist}/${options.output.name}.esm5.js`,
+    format: 'es'
+  }, options.output)
+  return getRollupConfig(options);
+}
+export function getUMDConfig(options) {
+  options.output = options.output || {};
+  options.output.name = options.output.name || pkg.name;
+  options.output = Object.assign({
+    file: `${defaults.dist}/${options.output.name}.umd.js`,
+    format: 'umd'
+  }, options.output)
+  options.ugligyUmd = true;
+  return getRollupConfig(options);
+}
 
 export function getRollupConfig(options) {
 
   options = options || {};
-  options.name  = options.name  || pkg.name;
   options.input = options.input ||  path.join(defaults.src, `${options.name}.js`);
-  options.output = options.output || {};
-  options.output.file = options.output.file || `${defaults.dist}/${pkg.name}.default.js`;
-  options.output.format = options.output.format || 'es';
   options.namesExports = options.namesExports || {};
   options.aliases = options.aliases || {};
+  options.name = options.name || pkg.name;
+  options.ugligyUmd = options.ugligyUmd ? options.ugligyUmd : false
 
   const externals = _getDependencies(pkg, options);
 
 
   const config = {
-    name: pkg.name,
     input: options.input,
-    debug: true,
-    includes: options.includes || [],
+    output: options.output,
     external: id => matchExternal(id, externals),
-    sourcemap: true,
-    output: {
-      file: `${options.output.file}`,
-      format: `${options.output.format}`,
-      sourcemap: true,
-    },
-    globals: options.globals,
     plugins: [
       sourcemaps(),
       alias(options.aliases),
@@ -74,13 +82,13 @@ export function getRollupConfig(options) {
         }
       }),
       commonjs({
-        namedExports: options.namesExports
+        namedExports: options.namedExports
       }),
       babel({
         babelrc: false,
         comments: true,
         sourceMap: true,
-        moduleId: options.name,
+        moduleId: options.output.name,
         presets: [
           ["env", {
             modules: false,
@@ -93,7 +101,7 @@ export function getRollupConfig(options) {
     ]
   };
 
-  if (options.minify) {
+  if (options.ugligyUmd) {
     config.plugins.push(uglify(options.minify === true? {} : options.minify));
   }
   if (options.plugins) {
@@ -104,22 +112,8 @@ export function getRollupConfig(options) {
   config.plugins.push(filesize())
   return config;
 };
-export const getESM5Config = function (options) {
-  options.output = options.output || {};
-  options.output.file = options.output.file || `${defaults.dist}/${options.name}.esm5.js`;
-  options.output.format = 'es';
-  const config = getRollupConfig(options);
 
-  return config;
-};
-export const getUMDConfig = function (options) {
-  options.output = options.output || {};
-  options.output.file = options.output.file || `${defaults.dist}/${options.name}.umd.js`;
-  options.output.format = 'umd';
-  const config = getRollupConfig(options);
 
-  return config;
-};
 function _getDependencies(pkg, options) {
   let deps = [];
   options.excludeExternal = options.excludeExternal || []; //nulls
@@ -135,7 +129,7 @@ function _getDependencies(pkg, options) {
     }
   });
 
-  console.log(options.output.file+':::Treating external dependencies :\n\t' , JSON.stringify(deps));
+  console.log(options.output.name+':::Treating external dependencies :\n\t' , JSON.stringify(deps));
   return deps;
 }
 
