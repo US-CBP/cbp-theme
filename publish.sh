@@ -11,7 +11,7 @@ fi
 rev=$(git rev-parse --short HEAD)
 
 # Directory of Generated Files
-cp ./dist ./kitchensink/
+cp -rf ./dist ./kitchensink/
 cd ./kitchensink
 
 git init
