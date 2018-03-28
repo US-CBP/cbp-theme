@@ -68,6 +68,10 @@ function runPostCSS (result) {
     fs.writeFileSync(path.join(destDir, 'cbp-theme.min.css'), postcssResults.css)
     fs.writeFileSync(path.join(destDir, 'cbp-theme.min.css.map'), postcssResults.map)
   })
+  if (!fs.existsSync(destDir)) {
+    fs.mkdirSync(destDir)
+  }
+
   fs.writeFileSync(path.join(destDir, 'cbp-theme.css'), result.css)
   cpx.copySync(srcDir + '/styles/**/*.scss', destDir + '/scss')
 }
