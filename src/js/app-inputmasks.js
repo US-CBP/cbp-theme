@@ -35,8 +35,7 @@ export function setupInputMasks () {
 
   const DATEPICKER_DEFAULT = {
     alias: 'dd/mm/yyyy', // use one of the predefined inputmasks
-    mask: 'm/d/y',
-    placeholder: 'mm/dd/yyyy',
+    placeholder: 'dd/mm/yyyy',
     showMaskOnHover: false
   }
 

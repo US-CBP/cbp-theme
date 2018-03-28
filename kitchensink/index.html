@@ -228,7 +228,7 @@
                           <div class="form-group col-sm-6">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                               <label for="startRange" class="mdl-textfield__label"><i class="fa fa-calendar-o fa-fw"></i>&nbsp;Start</label>
-                              <input type="text" id="startRange" class="datepicker mdl-textfield__input" data-inputmask=" 'alias' : 'mdl-mask-datepicker' " />
+                              <input type="text" id="startRange" class="datepicker mdl-textfield__input" data-inputmask=" 'alias' : 'mdl-mask-datepicker'  " />
                             </div>
                           </div>
                           <div class="form-group col-sm-6">
@@ -1168,7 +1168,7 @@
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <label for="im444" class="mdl-textfield__label">Start date</label>
-                          <input type="text" class="mdl-textfield__input" id="im444" data-inputmask=" 'mask': 'd/m/y', 'placeholder': 'dd/mm/yyyy', 'alias' : 'mdl-mask-datepicker' ">
+                          <input type="text" class="mdl-textfield__input" id="im444" data-inputmask="'alias' : 'mdl-mask-datepicker' ">
                         </div>
                       </form>
                     </div>
@@ -1187,7 +1187,7 @@
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
                           <label for="im3" class="mdl-textfield__label">Start date</label>
-                          <input type="text" class="mdl-textfield__input" id="im3" data-inputmask=" 'mask': 'd/m/y', 'placeholder': 'dd/mm/yyyy', 'alias' : 'mdl-mask-datepicker-placeholder' ">
+                          <input type="text" class="mdl-textfield__input" id="im3" data-inputmask=" 'alias' : 'mdl-mask-datepicker-placeholder' ">
                         </div>
                       </form>
                     </div>
@@ -3074,12 +3074,9 @@
     </div>
 
 
-
+    <!-- required CBP dependency: jQuery 2.x+ -->
     <!-- required CBP dependency: jQuery 2.x+ -->
     <script src="./thirdparty/js/jquery-2.2.4.min.js"></script>
-
-    <!-- optional dependencies from cf-ui-theme repo -->
-    <script src="/dist/cbp-theme-inputmask.umd.js"></script>
 
     <!-- application specific third party js files here -->
     <script src="./thirdparty/js/jquery-ui.min.js"></script>
@@ -3091,8 +3088,13 @@
 
     <!-- js for cbp-theme should be loaded after all dependencies and thirdparty js files -->
     <script src="./dist/cbp-theme.browser.bundle.umd.js"></script>
+    <!-- optional dependencies from cf-ui-theme repo -->
+    <script src="/dist/cbp-theme-inputmask.umd.js"></script>
 
-    <!-- and finally kitchen sink js that init all components when DOM ready! -->
+
+
+
+      <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>
 
 
