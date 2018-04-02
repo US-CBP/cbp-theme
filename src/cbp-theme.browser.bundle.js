@@ -8,18 +8,11 @@ import 'bootstrap'
 import 'material-design-lite'
 import 'mdl-selectfield/dist/mdl-selectfield'
 
-import './cbp-theme'
-
-import { applyDatePicker } from './js/app-datepicker'
-import { applyCharLimit } from './js/app-char-limit'
-import { applyTags } from './js/app-tags'
-import { applyThirdPartySelect } from './js/app-thirdparty-select'
+import {CBPTheme} from './cbp-theme'
 
 (function () {
-  window.cbpTheme = window.cbpTheme || {}
+  window.CBPTheme = CBPTheme
+  window.cbpTheme = new CBPTheme()
+  window.cbpTheme.setupCBPHeader()
 
-  window.cbpTheme.applyDatePicker = applyDatePicker
-  window.cbpTheme.applyCharLimit = applyCharLimit
-  window.cbpTheme.applyTags = applyTags
-  window.cbpTheme.applyThirdPartySelect = applyThirdPartySelect
 })()

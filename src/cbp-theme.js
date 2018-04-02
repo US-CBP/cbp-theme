@@ -1,6 +1,23 @@
+import { applyDatePicker } from './js/app-datepicker'
+import { applyCharLimit } from './js/app-char-limit'
+import { applyTags } from './js/app-tags'
+import { applyThirdPartySelect } from './js/app-thirdparty-select'
+import { setupCBPHeader } from './js/app-navigation'
 
-export * from './js/app-char-limit'
-export * from './js/app-datepicker'
-export * from './js/app-navigation'
-export * from './js/app-tags'
-export * from './js/app-thirdparty-select'
+export class CBPTheme {
+  setupCBPHeader () {
+    return setupCBPHeader()
+  }
+  applyDatePicker () {
+    return applyDatePicker()
+  }
+  applyCharLimit () {
+    return applyCharLimit()
+  }
+  applyTags () {
+    return applyTags()
+  }
+  applyThirdPartySelect () {
+    return applyThirdPartySelect()
+  }
+}

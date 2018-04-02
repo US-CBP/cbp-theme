@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
-
-(function ($) {
+export function setupCBPHeader () {
   'use strict'
 
   $(window).on('load', function () {
@@ -36,4 +35,4 @@ import $ from 'jquery';
       }
     })
   })
-}($))
+}
