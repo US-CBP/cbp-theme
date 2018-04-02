@@ -1,7 +1,5 @@
 /* global $ */
 
-
-
 $(document).ready(function () {
   window.cbpThemeInputMask.setupInputMasks()
   window.cbpTheme.applyDatePicker()

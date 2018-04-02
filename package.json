@@ -90,7 +90,7 @@
     "viz:baseline": "phantomjs e2e/baseline.js",
     "viz:new": "phantomjs e2e/new-viz-diff.js",
     "viz:check": "npm run viz:new && node e2e/viz-diff.js",
-    "a11y": "pa11y --standard Section508  > a11y.html http://localhost:8888 || true",
+    "a11y": "pa11y --standard Section508  > a11y.html http://localhost:8888",
     "preversion": "npm test",
     "version": "npm run build",
     "postversion": "git push && git push --tags"
