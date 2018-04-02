@@ -1,7 +1,9 @@
 /* global $ */
-window.cbpTheme.setupInputMasks()
+
+
 
 $(document).ready(function () {
+  window.cbpThemeInputMask.setupInputMasks()
   window.cbpTheme.applyDatePicker()
   window.cbpTheme.applyCharLimit()
   window.cbpTheme.applyTags()
@@ -19,7 +21,7 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover()
 
       // enable masks
-  $(':input').inputmask()
+  $('[data-inputmask]').inputmask()
 
       // TOC
   $('.toc a').on('click', function () {

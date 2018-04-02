@@ -13,7 +13,7 @@ import {setupInputMasks} from './js/app-inputmasks'
 (function () {
   // YG: Since browsers don't import stuff the only way to share objects is by placing them on window
   if (window) {
-    window.cbpTheme = window.cbpTheme || {}
-    window.cbpTheme.setupInputMasks = setupInputMasks
+    window.cbpThemeInputMask = window.cbpThemeInputMask || {}
+    window.cbpThemeInputMask.setupInputMasks = setupInputMasks
   }
 })()
