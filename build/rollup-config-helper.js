@@ -3,7 +3,7 @@
 
 const path = require('path');
 
-const argv = require('yargs').argv;
+const process = require('process');
 const json = require('rollup-plugin-json');
 const jst = require('rollup-plugin-jst');
 const progress = require('rollup-plugin-progress');
@@ -42,7 +42,7 @@ export function getUMDConfig(options) {
     file: `${defaults.dist}/${options.output.name}.umd.js`,
     format: 'umd'
   }, options.output)
-  options.ugligyUmd = argv.production ? true : false;
+  options.ugligyUmd = process.env.production ? true : false;
   return getRollupConfig(options);
 }
 
