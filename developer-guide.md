@@ -62,7 +62,7 @@ Typical use after making changes locally:
 
 ## Open bugs
 
-Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on github to get started with a bug fix.  
+Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on github to get started with a bug fix. Please use this method for pull requests: [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/davezen1/5e73590c42edaa8c320eb4a9d1d646f1)
 
 ## Publishing
 
