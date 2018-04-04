@@ -212,6 +212,20 @@
     margin-bottom: 8px;
   }
 
+  #app-header-menu {
+    display: none;
+  } 
+
+  
+  @media (max-width: 1005px) {
+    #app-header-menu{
+      display: block;
+    }
+    #bs-example-navbar-collapse-1 {
+      display: none;
+    }
+  }
+
   .mdl-textfield.is-dirty .mdl-textfield__label {
     height: 27px; //fixing the font size shifting issue in app direcotry
   }
@@ -276,3 +290,5 @@
   }
 
 }
+
+

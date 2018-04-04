@@ -82,17 +82,17 @@
       <div role="navigation" class="app-header">
         <div class="container-fluid">
 
-          <div class="navbar-header">
+          <!-- <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle Application Navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-          </div>
+          </div> -->
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="nav navbar-nav">
               <ul class="nav nav-tabs nav-tabs-light" role="tablist">
 
@@ -148,6 +148,83 @@
             </div>
 
           </div>
+
+          <div id="app-header-menu">
+            <div class="nav navbar-nav app-header-menu-right">
+              <ul class="nav nav-tabs nav-tabs-light" role="tablist">
+                <li class="dropdown" role="presentation">
+                  <a class="pull-left" href="" role="tab">App Header Menu</a>
+                  <a class="pull-right" href="" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </a>
+
+                  <ul class="dropdown-menu" id="app-header-dropdown-menu" role="menu" aria-hidden="true" aria-label="submenu">
+
+                    <li class="active" role="presentation">
+                      <a href="http://www.google.com" target="_blank" role="tab">
+                        Active App Link
+                      </a>
+                    </li>
+
+                    <li class="divider"></li>
+                    <li role="presentation">
+                      <a href="">Normal App Link</a>
+                    </li>
+
+                    <li class="divider"></li>
+                    <li class="disabled" role="presentation">
+                      <a role="tab">DIsabled App Link</a>
+                    </li>
+
+                    <li class="divider"></li>
+                    <li class="dropdown" role="presentation">
+                      <a href="#pane1">View Link Dropdown
+                        <i class="fa fa-caret-right pull-right"></i>
+                      </a>
+                      <a class="pull-right" href="#pane1"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- <span class="caret"></span> -->
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </a>
+                      <ul class="dropdown-menu pull-right" role="menu" aria-hidden="true" aria-label="submenu">
+                        <li role="presentation">
+                          <a href="" data-toggle="tab">View Option A</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li role="presentation">
+                          <a href="" data-toggle="tab">View Option B</a>
+                        </li>
+                        <li role="presentation">
+                          <a href="" data-toggle="tab">View Option C</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+            <div class="nav navbar-nav navbar-form navbar-right app-header-menu-search">
+              <form role="search">
+                <div class="form-group">
+                  <div class="input-group">
+                    <div id="SEARch" class="mdl-textfield mdl-js-textfield">
+                      <label for="main-search" class="mdl-textfield__label">Search</label>
+                      <input type="text" id="main-search" class="mdl-textfield__input" />
+                    </div>
+                    <span class="input-group-btn">
+                      <button aria-label="Search" type="submit" class="btn btn-primary">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </span>
+                    
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
         </div>
       </div>
 

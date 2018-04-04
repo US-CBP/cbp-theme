@@ -18,6 +18,75 @@
   padding:  0 20px;
 }
 
+ /*@media (max-width: 1001px) {
+    .app-header>#sm-app-header{
+      display: block;
+    }
+    .app-header>#bs-example-navbar-collapse-1 {
+      display: none;
+    }
+  }*/
+
+  @media (max-width: 768px) {
+    /*.nav .navbar-nav*/
+    .app-header-menu-right{
+      display: inline-block;
+      float: left;
+      width: 50%;
+      margin-left: -8px;
+      margin-top: 7.5px;
+    }
+    /*.nav .navbar-nav .navbar-form .navbar-right*/
+    .app-header-menu-search{
+      display: inline-block;
+      float: right;
+      width: 50%;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 7.5px;
+    }
+  }
+
+  @media (min-width:768px) and (max-width:768px) {
+    .mdl-textfield {
+      width: 297px;
+    }
+    .app-header-menu-search>form[role=search]{
+      float: right;
+    }
+  }
+
+  @media (max-width: 1002px){
+    #app-header-dropdown-menu{
+      position: absolute;
+      float: left;
+      margin-top: -1px;
+      background-color: #fff;
+      border: 1px solid #aaa;
+      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      min-width: 180px;
+    }
+    .fa-caret-right {
+      margin-top: 3px;
+    }
+    #app-header-dropdown-menu>li[class=active]{
+      background-color: transparent;
+    }
+    .app-header-menu-search>form[role=search]>.form-group>.input-group>.mdl-textfield{
+      visibility: visible;
+  }
+
+  .app-header-menu-right{
+    margin-top: 7.5px;
+  }
+
+@media (max-width: 480px){
+  .app-header-menu-search>form[role=search]>.form-group>.input-group>.mdl-textfield{
+    visibility: hidden;
+  }
+}
+
+
 /* .navbar-brand .cbp-brand:before {
   content: 'Organization Brand - CBP Theme 1.0'
 }
