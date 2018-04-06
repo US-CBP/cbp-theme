@@ -85,7 +85,7 @@
     "build:scss:postcss": "node ./build/sass-builder.js",
     "build:rollup": "rollup -c",
     "serve": "browser-sync start --config conf/bs-config.js",
-    "dev": "npm-run-all lint clean --parallel\"build:scss:postcss -- -w\" \"build:rollup -- -w\" serve",
+    "dev": "npm-run-all lint clean --parallel \"build:scss:postcss -- -w\" \"build:rollup -- -w\" serve",
     "test": "jest",
     "viz:baseline": "phantomjs e2e/baseline.js",
     "viz:new": "phantomjs e2e/new-viz-diff.js",
