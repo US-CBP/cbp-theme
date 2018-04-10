@@ -176,7 +176,9 @@
   right: 0;
   left: 0;
 }
-
+.yogesh-test::placeholder {
+  color: gray;
+}
 .cbp-header {
   @extend .navbar, .navbar-inverse, .navbar-flush;
   height: auto;
@@ -269,9 +271,7 @@
   &:focus,
   &:hover {
     border-bottom: 2px solid $brand-info;
-    -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 

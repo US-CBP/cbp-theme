@@ -11,7 +11,8 @@ fi
 rev=$(git rev-parse --short HEAD)
 
 # Directory of Generated Files
-cd app/kitchensink
+cp -rf ./dist ./kitchensink/
+cd ./kitchensink
 
 git init
 git config user.name "David Hodge"

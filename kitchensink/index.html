@@ -12,7 +12,7 @@
     <link media="screen" href="./thirdparty/css/select2.min.css" rel="stylesheet" />
     <link media="screen" href="./thirdparty/css/selectize.css" rel="stylesheet" />
     <link media="screen" href="./thirdparty/css/datepicker.css" rel="stylesheet" />
-    <link media="screen" href="./dist/cbp-theme.css" rel="stylesheet" />
+    <link media="screen" href="/dist/cbp-theme.min.css" rel="stylesheet" />
 
     <!-- CUSTOM CSS ONLY FOR THIS KITCHEN SINK -->
     <link media="screen" href="./kitchensink.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
     <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div class="cbp-main page-container">
 
-      <div role="navigation" class="cbp-header">
+      <div role="navigation" class="cbp-header" id="cbp-header">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="../">
@@ -44,33 +44,33 @@
                   Kitchen Sink <span class="caret"></span> <!-- Your application name goes here!!!-->
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Recent Apps</a></li>
+                  <li><a href="#cbp-header">Recent Apps</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">Another Application</a></li>
-                  <li><a href="#">Yet Another Application</a></li>
+                  <li><a href="#cbp-header">Another Application</a></li>
+                  <li><a href="#cbp-header">Yet Another Application</a></li>
                 </ul>
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="#">
+                <a href="#cbp-header">
                   <span class="fa fa-comment"></span>
                   <span class="hidden-sm">Feedback</span>
                 </a>
               </li>
               <li data-toggle="hover" class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                <a href="" data-toggle="dropdown" class="dropdown-toggle">
                   <span class="fa fa-user"></span>
                   <span class="hidden-sm" title="FIRST.LAST@CBP.DHS.GOV">First Last Name</span>
                   <span class="caret"></span>
                 </a>
-                <ul rel="right-menu-links" role="menu" class="dropdown-menu">
+                <ul rel="right-menu-links" role="menu" class="dropdown-menu" id="user-menu">
                   <li>
-                    <a title="Preferences" href="#">Preferences</a>
+                    <a title="Preferences" href="#user-menu">Preferences</a>
                   </li>
                   <li class="divider"></li>
                   <li>
-                    <a title="Logout" href="#">Logout</a>
+                    <a title="Logout" href="#user-menu">Logout</a>
                   </li>
                 </ul>
               </li>
@@ -153,28 +153,28 @@
 
       <div class="container-fluid">
        <div class="content fixed">
-          <div class="cbp-sidebar sidebar after-double-header" >            
+          <div class="cbp-sidebar sidebar after-double-header" id="cbp-sidebar">
                 <form class="filters">
                   <div class="filter-list" role="tablist">
-                    <h1 class="filter-heading">Filters <a href="#" class="filters-clear">Clear Filters</a></h1>
+                    <h1 class="filter-heading">Filters <a href="#cbp-sidebar" class="filters-clear">Clear Filters</a></h1>
 
                     <h2 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup8" aria-controls="filterGroup8" class="filter-group-title">
-                    Year <a href="#"><i class="fa fa-angle-right pull-right"></i></a>
+                    Year <a name="#sidebar"><i class="fa fa-angle-right pull-right"></i></a>
                     </h2>
                     <div id="filterGroup8" class="collapse in">
                       <div class="filter-group-content">
                         <div class="form-group">
                           <ul class="list-unstyled">
-                            <li><a href="#">2014</a></li>
-                            <li><a href="#">2013</a></li>
-                            <li><a href="#">2012</a></li>
-                            <li><a href="#">2011</a></li>
+                            <li><a href="#cbp-sidebar">2014</a></li>
+                            <li><a href="#cbp-sidebar">2013</a></li>
+                            <li><a href="#cbp-sidebar">2012</a></li>
+                            <li><a href="#cbp-sidebar">2011</a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <h3 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup2" aria-controls="filterGroup2" class="filter-group-title">
-                      <a href="#"><i class="fa fa-angle-right pull-right"></i></a>
+                      <a name="#cbp-sidebar"><i class="fa fa-angle-right pull-right"></i></a>
                     Mode of Transportation
                     </h3>
                     <div id="filterGroup2" class="collapse in">
@@ -220,7 +220,7 @@
                       </div>
                     </div>
                     <h3 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup1" aria-controls="filterGroup1" class="filter-group-title">
-                      <a href="#"><i class="fa fa-angle-right pull-right"></i></a> Date range
+                      <a name="#cbp-sidebar"><i class="fa fa-angle-right pull-right"></i></a> Date range
                     </h3>
                     <div id="filterGroup1" class="collapse in">
                       <div class="filter-group-content">
@@ -228,7 +228,7 @@
                           <div class="form-group col-sm-6">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                               <label for="startRange" class="mdl-textfield__label"><i class="fa fa-calendar-o fa-fw"></i>&nbsp;Start</label>
-                              <input type="text" id="startRange" class="datepicker mdl-textfield__input" data-inputmask=" 'alias' : 'mdl-mask-datepicker' " />
+                              <input type="text" id="startRange" class="datepicker mdl-textfield__input" data-inputmask=" 'alias' : 'mdl-mask-datepicker'  " />
                             </div>
                           </div>
                           <div class="form-group col-sm-6">
@@ -241,7 +241,7 @@
                       </div>
                     </div>
                     <h3 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup5" aria-controls="filterGroup5" class="filter-group-title">
-                      <a href="#"><i class="fa fa-angle-right pull-right"></i></a> Distance
+                      <a name="#cbp-sidebar"><i class="fa fa-angle-right pull-right"></i></a> Distance
                     </h3>
                     <div id="filterGroup5" class="collapse in">
                       <div class="filter-group-content">
@@ -287,7 +287,7 @@
                       </div>
                     </div> -->
                     <h3 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup6" aria-controls="filterGroup6" class="filter-group-title">
-                    <a href="#"><i class="fa fa-angle-right pull-right"></i></a> Name
+                    <a name="#cbp-sidebar"><i class="fa fa-angle-right pull-right"></i></a> Name
                     </h3>
                     <div id="filterGroup6" class="collapse in">
                       <div class="filter-group-content">
@@ -298,7 +298,7 @@
                       </div>
                     </div>
                     <h3 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup3" aria-controls="filterGroup3" class="filter-group-title">
-                      Chart Colors <a href="#"><i class="fa fa-angle-right pull-right"></i></a>
+                      Chart Colors <a name="#cbp-sidebar"><i class="fa fa-angle-right pull-right"></i></a>
                     </h3>
                     <div id="filterGroup3" class="collapse in">
                       <div class="filter-group-content">
@@ -313,7 +313,7 @@
                       </div>
                     </div>
                     <h3 aria-expanded="true" data-toggle="collapse" role="tab" data-target="#filterGroup7" aria-controls="filterGroup7" class="filter-group-title">
-                      Tags <a href="#"><i class="fa fa-angle-right pull-right"></i></a>
+                      Tags <a name="#cbp-sidebar"><i class="fa fa-angle-right pull-right"></i></a>
                     </h3>
                     <div id="filterGroup7" class="collapse in">
                       <div class="filter-group-content">
@@ -342,11 +342,11 @@
                     </div>
                   </div>
                 </form>
-              
+
           </div>
 
           <div id="main-content" class="cbp-sidebar-offset">
-            
+
             <h1 class="page-header">All Components</h1>
             <p>This is the "Kitchen Sink" of the <a href="https://github.com/US-CBP/cbp-theme">CBP Theme&nbsp;<i class="fa fa-external-link"></i></a>.  It is provided to demonstrate various components in action. For guidance on how best to use the theme's components take a look at the <a href="https://us-cbp.github.io/cbp-style-guide">CBP Style Guide&nbsp;<i class="fa fa-external-link"></i></a>.
 
@@ -978,8 +978,8 @@
                   </div>
                 </div>
               <a href="https://us-cbp.github.io/cbp-style-guide/docs/components/cards.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more cards examples</a>
-              </div>              
-            </div>  
+              </div>
+            </div>
             <!-- Dialogs -->
             <div>
               <h2 id="Dialogs" class="page-header">Dialogs
@@ -1149,7 +1149,7 @@
                           <label for="tb134" class="mdl-textfield__label">Readonly</label>
                           <input type="text" class="mdl-textfield__input" id="tb134" readonly tabindex="-1">
                         </div>
-                        
+
                       </form>
                     </div>
                   </div>
@@ -1168,7 +1168,7 @@
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                           <label for="im444" class="mdl-textfield__label">Start date</label>
-                          <input type="text" class="mdl-textfield__input" id="im444" data-inputmask=" 'mask': 'd/m/y', 'placeholder': 'dd/mm/yyyy', 'alias' : 'mdl-mask-datepicker' ">
+                          <input type="text" class="mdl-textfield__input" id="im444" data-inputmask="'alias' : 'mdl-mask-datepicker' ">
                         </div>
                       </form>
                     </div>
@@ -1187,7 +1187,7 @@
                         </div>
                         <div class="mdl-textfield mdl-js-textfield">
                           <label for="im3" class="mdl-textfield__label">Start date</label>
-                          <input type="text" class="mdl-textfield__input" id="im3" data-inputmask=" 'mask': 'd/m/y', 'placeholder': 'dd/mm/yyyy', 'alias' : 'mdl-mask-datepicker-placeholder' ">
+                          <input type="text" class="mdl-textfield__input" id="im3" data-inputmask=" 'alias' : 'mdl-mask-datepicker-placeholder' ">
                         </div>
                       </form>
                     </div>
@@ -1512,7 +1512,7 @@
 
                   <div class="row">
                     <div class="col-md-6">
-                    <p>Use the toggle switches, instead of radio buttons, for two or more specific options. </p>              
+                    <p>Use the toggle switches, instead of radio buttons, for two or more specific options. </p>
 
                     <fieldset >
                       <legend class="sr-only">Select options</legend>
@@ -1629,7 +1629,7 @@
                       <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required">
-                      <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" disabled/>
+                      <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample49991" aria-required="true" disabled/>
                       <label class="mdl-textfield__label static-label" for="sample4999">static-label disabled<span class="required-field"></span></label>
                       <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
                     </div>
@@ -1680,7 +1680,7 @@
                     <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield mdl-textfield--full-width">
                       <label for="ht58" class="mdl-textfield__label">Email <i class="fa fa-info-circle" aria-hidden="true"></i></label>
                       <input class="mdl-textfield__input" type="text" maxlength="25" data-charlimit=" 'target' : '.mdl-textfield__counter', 'limit' : 25 " pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" id="ht58">
-                      
+
                       <p class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Not a valid email address</p>
                       <p class="mdl-textfield__help">This is how people will contact you.</p>
                       <p class="mdl-textfield__counter"></p>
@@ -1788,14 +1788,14 @@
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
-                </span>  
+                </span>
 
-                <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/foundation/icons.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more icons examples</a>   
-                </p>    
+                <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/foundation/icons.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more icons examples</a>
+                </p>
 
-                
-                
-                                 
+
+
+
               </div>
             </div>
 
@@ -1986,7 +1986,7 @@
               <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
                 <i class="fa fa-chevron-up bounce"></i>
               </a>
-              </h2>             
+              </h2>
                 <h3>Stacked</h3>
                 <div class="panel">
                   <div class="panel-body">
@@ -2039,8 +2039,8 @@
                       </div>
                     </div>
                   </div>
-                </div>        
-           
+                </div>
+
                 <h3>Side-by-side</h3>
                 <div class="panel">
                   <div class="panel-body">
@@ -2084,8 +2084,8 @@
                       </div>
                     </div>
                   </div>
-                </div>              
-              
+                </div>
+
             </div>
 
             <!-- Pagination -->
@@ -2442,7 +2442,7 @@
               <div class="panel">
                 <div class="panel-body">
                   <h3>CBP Default Table</h3>
-                  <h4>Includes Borderless and Hover stylings with MDL additions <small>Just by using the classnames: "table mdl-js-data-table"</small></h4>                  
+                  <h4>Includes Borderless and Hover stylings with MDL additions <small>Just by using the classnames: "table mdl-js-data-table"</small></h4>
                   <table class="table mdl-js-data-table">
                     <caption>Standard Table</caption>
                     <thead>
@@ -2491,10 +2491,10 @@
                       </tr>
                     </tbody>
                   </table>
-                  
-                    <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/components/tables.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more table examples</a></p>                
-                   
-              
+
+                    <p><a href="https://us-cbp.github.io/cbp-style-guide/docs/components/tables.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more table examples</a></p>
+
+
               </div>
             </div>
             <!-- Tabs -->
@@ -2980,9 +2980,9 @@
 
                   </div>
                 </div>
-              
+
             </div>
-      
+
             <!-- Tooltips -->
             <div>
               <h2 id="Tooltips" class="page-header">Tooltips
@@ -3041,9 +3041,9 @@
         </div>
       </div>
     </div>
-      
 
- 
+    </div>
+
     <footer role="banner" class="cbp-banner"></footer>
 
     <!-- modals -->
@@ -3073,11 +3073,14 @@
       </div>
     </div>
 
+
+
+
+    <!-- required CBP dependency: jQuery 2.x+ -->
     <!-- required CBP dependency: jQuery 2.x+ -->
     <script src="./thirdparty/js/jquery-2.2.4.min.js"></script>
 
-    <!-- optional dependencies from cf-ui-theme repo -->
-    <script src="./dist/inputmask.min.js"></script>
+
 
     <!-- application specific third party js files here -->
     <script src="./thirdparty/js/jquery-ui.min.js"></script>
@@ -3086,12 +3089,18 @@
     <script src="./thirdparty/js/selectize.min.js"></script>
     <script src="./thirdparty/js/tota11y.min.js"></script>
 
-    <!-- js for cbp-theme should be loaded after all dependencies and thirdparty js files -->
-    <script src="./dist/cbp-theme.min.js"></script>
 
-    <!-- and finally kitchen sink js that init all components when DOM ready! -->
+    <!-- js for cbp-theme should be loaded after all dependencies and thirdparty js files -->
+    <script src="./dist/cbp-theme.browser.bundle.umd.js"></script>
+    <!-- optional dependencies from cf-ui-theme repo -->
+    <script src="/dist/cbp-theme-inputmask.umd.js"></script>
+
+
+
+
+      <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>
 
-   
+
   </body>
 </html>
