@@ -43,7 +43,8 @@ See below for more info on developing:
 
 A demo app is located under app/kitchensink with all the components available so
 that one can experiment and test changes. Run 'npm run dev', which builds and
-uses gulp serve.  The demo app runs http://localhost:8888 (BrowserSync will find the next available port so look for the logs)
+uses gulp serve.  The demo app runs at http://localhost:8888. 
+`npm run dev` will open browserSync UI which provides local link http://localhost:8888 to navigate to the app.  
  
 
 ## Testing the Kitchen Sink using Visual Diff Image
