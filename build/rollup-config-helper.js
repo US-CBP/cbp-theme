@@ -108,7 +108,7 @@ export function getRollupConfig(options) {
     Array.prototype.push.apply(config.plugins, options.plugins);
   }
 
-  config.plugins.push(progress({clearLine: !options.debug}))
+  config.plugins.push(progress({clearLine: process.env.production ? false : true}))
   config.plugins.push(filesize())
   return config;
 };
