@@ -81,8 +81,11 @@
   }
 
 @media (max-width: 480px){
-  .app-header-menu-search>form[role=search]>.form-group>.input-group>.mdl-textfield{
+  #search{
     visibility: hidden;
+  }
+  .app-header-menu-search:hover #search{
+    visibility: visible;
   }
 }
 
