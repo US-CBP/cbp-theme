@@ -13,12 +13,12 @@ export function setupInputMasks () {
     }
   }
 
-  const placeholderCheckDirty = (target) => {
-    $(target).focusin(function () {
-      $(target).parent().addClass('is-focused')
+  const placeholderCheckDirty = (ev) => {
+    $(ev.target).focusin(function () {
+      $(ev.target).parent().addClass('is-focused')
     }).blur(function () {
-      if ($(target).parent().get(0).MaterialTextfield) {
-        $(target).parent().get(0).MaterialTextfield.checkDirty()
+      if ($(ev.target).parent().get(0).MaterialTextfield) {
+        $(ev.target).parent().get(0).MaterialTextfield.checkDirty()
       }
     })
   }
