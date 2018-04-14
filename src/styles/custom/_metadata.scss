@@ -1,0 +1,41 @@
+dt {
+  font-weight: 600;
+  // color: $gray-light;
+}
+
+dd {
+  margin-bottom: 6px;
+}
+
+@media (min-width: $screen-sm) {
+  .dl-horizontal dd {
+    margin-bottom: 0px;
+  }
+}
+
+.dl-inline {
+  @include clearfix();
+  dd, dt {
+    font-weight: 400;
+    float: left;
+    display: inline-block;
+    color: $gray-light;
+  }
+  dd, dt {
+    margin-right: 4px;
+    margin-bottom: 0;
+  }
+  dt:after {
+    content: ":";
+    display: inline-block;
+  }
+  dd:after {
+    margin-left: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    content: "•";
+  }
+  dd:last-child:after {
+    display: none;
+  }
+}
