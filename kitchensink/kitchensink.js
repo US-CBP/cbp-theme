@@ -133,10 +133,13 @@ $(document).ready(function () {
   })
 =======
   })  
+<<<<<<< cb422f9db187621cf61c75bdcb8ea297d1c9347c:kitchensink/kitchensink.js
 
   if (typeof jQuery != 'undefined') {  
     // jQuery is loaded => print the version
     alert(jQuery.fn.jquery);
   }
 >>>>>>> Upgrade and tested jQuery 3.3.1. Modified files to fix compatibility issues.:app/kitchensink/kitchensink.js
+=======
+>>>>>>> Deleted alert displaying jquery version and migration script.:app/kitchensink/kitchensink.js
 })
