@@ -71,9 +71,7 @@
   .fa-caret-right {
     margin-top: 3px;
   }
-  #app-header-dropdown-menu>li[class=active]{
-    background-color: transparent;
-  }
+  
   .app-header-menu-search>form[role=search]>.form-group>.input-group>.mdl-textfield{
     visibility: visible;
   }
