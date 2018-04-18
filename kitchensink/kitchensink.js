@@ -130,8 +130,4 @@ $(document).ready(function () {
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
   })
-  if (typeof jQuery != 'undefined') {
-    console.log("jQuery Version: " + jQuery.fn.jquery);
-  }
-  console.log("Bootstarp Version: " + $.fn.tooltip.Constructor.VERSION);
 })
