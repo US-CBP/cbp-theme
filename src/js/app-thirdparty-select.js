@@ -12,7 +12,7 @@ export function applyThirdPartySelect () {
   'use strict'
   let getDirty = function (idx, el) {
     if (el !== undefined && $(el).children('select').length > 0) {
-      $($(el).children('select').get(0)).change((ev) => {
+      $($(el).children('select').get(0)).on("change",(ev) => {
         let option = $(ev.currentTarget).find('option:selected').val()
         let action = (option && option.length > 0) ? 'addClass' : 'removeClass'
         $(el)[action]('is-dirty')

@@ -129,5 +129,14 @@ $(document).ready(function () {
   })
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
+<<<<<<< 8ef9945733a158cb015691a44865753a8e55dca3:kitchensink/kitchensink.js
   })
+=======
+  })  
+
+  if (typeof jQuery != 'undefined') {  
+    // jQuery is loaded => print the version
+    alert(jQuery.fn.jquery);
+  }
+>>>>>>> Upgrade and tested jQuery 3.3.1. Modified files to fix compatibility issues.:app/kitchensink/kitchensink.js
 })

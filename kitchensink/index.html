@@ -2605,10 +2605,10 @@
                   <h3>Light</h3>
                   <ul class="nav nav-tabs nav-tabs-light" role="tablist">
                     <li class="active">
-                      <a href="#" role="tab" data-toggle="tab">Active</a>
+                      <a href="#activetab" role="tab" data-toggle="tab" aria-controls="activeTab">Active</a>
                     </li>
                     <li>
-                      <a href="#" role="tab" data-toggle="tab">Normal</a>
+                      <a href="#normaltab" role="tab" data-toggle="tab" aria-controls="normalTab">Normal</a>
                     </li>
                     <li class="disabled">
                       <a role="tab">Disabled</a>
@@ -2654,10 +2654,10 @@
                       <div role="tabpanel" class="tab-pane fade" id="history">
                         <ul class="nav nav-tabs nav-tabs-light" role="tablist">
                           <li>
-                            <a href="#" role="tab" data-toggle="tab">Cargo History</a>
+                            <a href="#cargohistory" role="tab" data-toggle="tab">Cargo History</a>
                           </li>
                           <li class="active">
-                            <a href="#" role="tab" data-toggle="tab">Vessel History</a>
+                            <a href="#vesselhistory" role="tab" data-toggle="tab">Vessel History</a>
                           </li>
                         </ul>
                         <div class="panel-body">
@@ -3145,7 +3145,9 @@
 
     <!-- required CBP dependency: jQuery 2.x+ -->
     <!-- required CBP dependency: jQuery 2.x+ -->
-    <script src="./thirdparty/js/jquery-2.2.4.min.js"></script>
+    <!-- <script src="./thirdparty/js/jquery-2.2.4.min.js"></script> -->
+    <script src="./thirdparty/js/jquery-3.3.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script> -->
 
 
 
