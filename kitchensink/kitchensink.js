@@ -129,17 +129,9 @@ $(document).ready(function () {
   })
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
-<<<<<<< 8ef9945733a158cb015691a44865753a8e55dca3:kitchensink/kitchensink.js
   })
-=======
-  })  
-<<<<<<< cb422f9db187621cf61c75bdcb8ea297d1c9347c:kitchensink/kitchensink.js
-
-  if (typeof jQuery != 'undefined') {  
-    // jQuery is loaded => print the version
-    alert(jQuery.fn.jquery);
+  if (typeof jQuery != 'undefined') {
+    console.log("jQuery Version: " + jQuery.fn.jquery);
   }
->>>>>>> Upgrade and tested jQuery 3.3.1. Modified files to fix compatibility issues.:app/kitchensink/kitchensink.js
-=======
->>>>>>> Deleted alert displaying jquery version and migration script.:app/kitchensink/kitchensink.js
+  console.log("Bootstarp Version: " + $.fn.tooltip.Constructor.VERSION);
 })
