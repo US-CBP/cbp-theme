@@ -809,7 +809,6 @@ a:hover, a:focus {
 }
 
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2422,7 +2421,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3054,7 +3052,6 @@ select[multiple].input-lg,
 }
 
 .btn:focus, .ui-datepicker button.ui-state-default:focus, .switch-toggle a:focus, .btn.focus, .ui-datepicker button.focus.ui-state-default, .switch-toggle a.focus, .btn:active:focus, .ui-datepicker button.ui-state-default:active:focus, .switch-toggle a:active:focus, .btn:active.focus, .ui-datepicker button.ui-state-default:active.focus, .switch-toggle a:active.focus, .btn.active:focus, .ui-datepicker button.active.ui-state-default:focus, .switch-toggle a.active:focus, .btn.active.focus, .ui-datepicker button.active.focus.ui-state-default, .switch-toggle a.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }

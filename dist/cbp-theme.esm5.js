@@ -93,7 +93,7 @@ function applyThirdPartySelect() {
 
   var getDirty = function getDirty(idx, el) {
     if (el !== undefined && $(el).children('select').length > 0) {
-      $($(el).children('select').get(0)).change(function (ev) {
+      $($(el).children('select').get(0)).on("change", function (ev) {
         var option = $(ev.currentTarget).find('option:selected').val();
         var action = option && option.length > 0 ? 'addClass' : 'removeClass';
         $(el)[action]('is-dirty');
