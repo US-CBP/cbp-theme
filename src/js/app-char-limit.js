@@ -32,8 +32,7 @@ export function applyCharLimit (selector) {
         $(val).parent().find(dataoptions.target).html(template || `<strong> ${currentLength}/${limit} </strong> character limit`)
       }
 
-      $(val).keydown(updateChar)
-      $(val).on('paste', updateChar)
+      $(val).on('input contextmenu', updateChar)
       updateChar({ currentTarget: val })
     }
   })
