@@ -109,7 +109,7 @@ Using the cbp theme is as easy as including cbp-theme.min.css and `cbp-theme.bro
 
 Optionally `cbp-theme-inputmask.umd.js` can be used for inputmask.
 
-Note: cbp-theme does require `jQuery 2.x` or higher to be included before adding cbp-theme.js.
+Note: cbp-theme does require `jQuery 3.x` or higher to be included before adding cbp-theme.js.
 
 This option is meant for in browser consumption only as apposed to using in your build.
 
@@ -117,8 +117,8 @@ Refer to `kitchensink/index.html` for markup reference.
 
 ### Order of Javascript Dependencies
 ```
-  <!-- required CBP dependency: jQuery 2.x+ -->
-  <script src="./path/to/thirdparty/js/jquery-2.2.4.min.js"></script>
+  <!-- required CBP dependency: jQuery 3.x+ -->
+  <script src="./path/to/thirdparty/js/jquery-3.3.1.min.js"></script>
 
   <!-- optional cbp-theme plugins -->
   <script src="./path/to/dist/cbp-theme-inputmask.umd.js"></script>
