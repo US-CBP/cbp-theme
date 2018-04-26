@@ -17355,6 +17355,7 @@ input[type=range]:focus::-ms-fill-upper {
   opacity: 1;
 }
 
+/** CBP VARIABLES **/
 .black {
   font-weight: 900;
 }
