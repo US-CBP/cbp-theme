@@ -13946,6 +13946,7 @@ input[type=radio]:focus .switch-toggle a:focus,
 .tooltip-inner {
   padding: 6px 12px;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .progress {
