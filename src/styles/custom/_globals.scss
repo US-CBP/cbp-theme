@@ -120,6 +120,13 @@ input[type=radio]:focus
 .list-group .list-group-item {
     a {
         color: $text-color;
+        
+        &:not(.label-info):not(.label-success){
+            color: #00416a;
+        }
+        &.label-info{
+            color: #fff;
+        }
     }
     &.active {
         border-right: 3px solid $brand-primary;
