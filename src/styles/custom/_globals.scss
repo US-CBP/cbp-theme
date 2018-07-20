@@ -122,10 +122,10 @@ input[type=radio]:focus
         color: $text-color;
         
         &:not(.label-info):not(.label-success){
-            color: #00416a;
+            color: $brand-primary;
         }
         &.label-info{
-            color: #fff;
+            color: $brand-default;
         }
     }
     &.active {
