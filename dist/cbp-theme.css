@@ -14029,6 +14029,14 @@ input[type=radio]:focus .switch-toggle a:focus,
   color: #333333;
 }
 
+.list-group .list-group-item a:not(.label-info):not(.label-success) {
+  color: #00416A;
+}
+
+.list-group .list-group-item a.label-info {
+  color: #fff;
+}
+
 .list-group .list-group-item.active {
   border-right: 3px solid #00416A;
   font-weight: bold;
