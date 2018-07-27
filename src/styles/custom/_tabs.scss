@@ -70,6 +70,11 @@
             border: none;
             background: transparent;
             border-bottom: 2px solid transparent;
+
+            &.btn {
+                margin-top: 2px;
+                margin-bottom: 0px;
+            }
         }
         &.disabled > a {
             &:hover {
@@ -94,5 +99,7 @@
             background: transparent;
             border-bottom: 2px solid $brand-primary;
         }
+
+        
     }
 }
