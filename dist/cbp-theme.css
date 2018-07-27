@@ -16695,6 +16695,11 @@ input[type=range]:focus::-ms-fill-upper {
   border-bottom: 2px solid transparent;
 }
 
+.nav-tabs.nav-tabs-light > li > a.btn, .switch-toggle .nav-tabs.nav-tabs-light > li > a {
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
 .nav-tabs.nav-tabs-light > li.disabled > a:hover {
   border-bottom-color: transparent;
 }
