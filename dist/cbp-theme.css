@@ -787,7 +787,7 @@ body {
   font-family: Roboto, Calibri, Tahoma, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.42857;
-  color: #333333;
+  color: #333;
   background-color: #FFF;
 }
 
@@ -855,7 +855,7 @@ hr {
   margin-top: 18px;
   margin-bottom: 18px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
 }
 
 .sr-only {
@@ -906,7 +906,7 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 h1, .h1,
@@ -1032,7 +1032,7 @@ mark,
 }
 
 .text-muted {
-  color: #555555;
+  color: #555;
 }
 
 .text-primary {
@@ -1063,7 +1063,7 @@ a.text-info:focus {
 }
 
 .text-warning {
-  color: #555555;
+  color: #555;
 }
 
 a.text-warning:hover,
@@ -1132,7 +1132,7 @@ a.bg-danger:focus {
 .page-header {
   padding-bottom: 8px;
   margin: 36px 0 18px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 
 ul,
@@ -1210,7 +1210,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #aaaaaa;
+  border-bottom: 1px dotted #aaa;
 }
 
 .initialism {
@@ -1221,7 +1221,7 @@ blockquote {
   padding: 9px 18px;
   margin: 0 0 18px;
   font-size: 16.25px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #eee;
 }
 
 blockquote p:last-child,
@@ -1236,7 +1236,7 @@ blockquote .small {
   display: block;
   font-size: 80%;
   line-height: 1.42857;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 blockquote footer:before,
@@ -1249,7 +1249,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #eee;
   border-left: 0;
   text-align: right;
 }
@@ -1317,7 +1317,7 @@ pre {
   line-height: 1.42857;
   word-break: break-all;
   word-wrap: break-word;
-  color: #333333;
+  color: #333;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 2px;
@@ -2100,7 +2100,7 @@ table {
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #555555;
+  color: #555;
   text-align: left;
 }
 
@@ -2446,7 +2446,7 @@ legend {
   margin-bottom: 18px;
   font-size: 19.5px;
   line-height: inherit;
-  color: #333333;
+  color: #333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2497,7 +2497,7 @@ output {
   padding-top: 7px;
   font-size: 13px;
   line-height: 1.42857;
-  color: #555555;
+  color: #555;
 }
 
 .form-control {
@@ -2507,7 +2507,7 @@ output {
   padding: 6px 12px;
   font-size: 13px;
   line-height: 1.42857;
-  color: #555555;
+  color: #555;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
@@ -2546,7 +2546,7 @@ output {
 
 .form-control[disabled], .form-control[readonly],
 fieldset[disabled] .form-control {
-  background-color: #eeeeee;
+  background-color: #eee;
   opacity: 1;
 }
 
@@ -2901,11 +2901,11 @@ select[multiple].input-lg,
 .has-warning.checkbox label,
 .has-warning.radio-inline label,
 .has-warning.checkbox-inline label {
-  color: #555555;
+  color: #555;
 }
 
 .has-warning .form-control {
-  border-color: #555555;
+  border-color: #555;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -2917,13 +2917,13 @@ select[multiple].input-lg,
 }
 
 .has-warning .input-group-addon {
-  color: #555555;
-  border-color: #555555;
+  color: #555;
+  border-color: #555;
   background-color: #fef7ed;
 }
 
 .has-warning .form-control-feedback {
-  color: #555555;
+  color: #555;
 }
 
 .has-error .help-block,
@@ -3108,7 +3108,7 @@ select[multiple].input-lg,
 }
 
 .btn:hover, .ui-datepicker button.ui-state-default:hover, .switch-toggle a:hover, .btn:focus, .ui-datepicker button.ui-state-default:focus, .switch-toggle a:focus, .btn.focus, .ui-datepicker button.focus.ui-state-default, .switch-toggle a.focus {
-  color: #222222;
+  color: #222;
   text-decoration: none;
 }
 
@@ -3140,19 +3140,19 @@ fieldset[disabled] .switch-toggle a,
 }
 
 .btn-default, .brand-card-container .mdl-card .btn.btn-circle, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default, .brand-card-container .mdl-card .switch-toggle a.btn-circle, .switch-toggle .brand-card-container .mdl-card a.btn-circle, .ui-datepicker button.ui-state-default, .btn.btn-hover:hover, .ui-datepicker button.btn-hover.ui-state-default:hover, .switch-toggle a.btn-hover:hover {
-  color: #222222;
+  color: #222;
   background-color: #fff;
   border-color: #cccccc;
 }
 
 .btn-default:focus, .brand-card-container .mdl-card .btn.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus, .ui-datepicker button.ui-state-default:focus, .btn.btn-hover:focus, .switch-toggle a.btn-hover:focus, .btn-default.focus, .brand-card-container .mdl-card .focus.btn.btn-circle, .brand-card-container .mdl-card .ui-datepicker button.focus.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle, .ui-datepicker button.focus.ui-state-default, .focus.btn.btn-hover:hover, .switch-toggle a.focus.btn-hover:hover {
-  color: #222222;
+  color: #222;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 
 .btn-default:hover, .brand-card-container .mdl-card .btn.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover, .ui-datepicker button.ui-state-default:hover, .btn.btn-hover:hover, .switch-toggle a.btn-hover:hover {
-  color: #222222;
+  color: #222;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3166,7 +3166,7 @@ fieldset[disabled] .switch-toggle a,
 .ui-datepicker .open > button.dropdown-toggle.ui-state-default,
 .open > .dropdown-toggle.btn.btn-hover:hover,
 .switch-toggle .open > a.dropdown-toggle.btn-hover:hover {
-  color: #222222;
+  color: #222;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3196,7 +3196,7 @@ fieldset[disabled] .switch-toggle a,
 .ui-datepicker .open > button.dropdown-toggle.focus.ui-state-default,
 .open > .dropdown-toggle.focus.btn.btn-hover:hover,
 .switch-toggle .open > a.dropdown-toggle.focus.btn-hover:hover {
-  color: #222222;
+  color: #222;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
@@ -3256,23 +3256,23 @@ fieldset[disabled] .switch-toggle a.focus.btn-hover:hover,
 
 .btn-default .badge, .brand-card-container .mdl-card .btn.btn-circle .badge, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle .badge, .ui-datepicker button.ui-state-default .badge, .btn.btn-hover:hover .badge, .switch-toggle a.btn-hover:hover .badge {
   color: #fff;
-  background-color: #222222;
+  background-color: #222;
 }
 
 .btn-primary, .brand-card-container .mdl-card .btn.btn-default:focus, .brand-card-container .mdl-card .btn.btn-circle:focus, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.btn-default:focus, .switch-toggle .brand-card-container .mdl-card a.btn-default:focus, .brand-card-container .mdl-card .btn.btn-hover:focus, .brand-card-container .mdl-card .switch-toggle a.btn-hover:focus, .switch-toggle .brand-card-container .mdl-card a.btn-hover:focus, .brand-card-container .mdl-card .btn.btn-default:hover, .brand-card-container .mdl-card .btn.btn-circle:hover, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.btn-default:hover, .switch-toggle .brand-card-container .mdl-card a.btn-default:hover, .brand-card-container .mdl-card .btn.btn-hover:hover, .brand-card-container .mdl-card .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card a.btn-hover:hover, .brand-card-container .mdl-card .btn.btn-default:active, .brand-card-container .mdl-card .btn.btn-circle:active, .brand-card-container .mdl-card .switch-toggle a.btn-circle:active, .switch-toggle .brand-card-container .mdl-card a.btn-circle:active, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:active, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:active, .brand-card-container .mdl-card .switch-toggle a.btn-default:active, .switch-toggle .brand-card-container .mdl-card a.btn-default:active, .brand-card-container .mdl-card .btn.btn-hover:active, .brand-card-container .mdl-card .switch-toggle a.btn-hover:active, .switch-toggle .brand-card-container .mdl-card a.btn-hover:active, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-default, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle, .brand-card-container .mdl-card:focus .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle, .brand-card-container .mdl-card:focus .switch-toggle .mdl-card__actions a.btn-circle, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.ui-state-default, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-default, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-default, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-hover:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-hover:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-default, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle, .brand-card-container .mdl-card:hover .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle, .brand-card-container .mdl-card:hover .switch-toggle .mdl-card__actions a.btn-circle, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.ui-state-default, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-default, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-default, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-hover:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-hover:hover, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-default, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle, .brand-card-container .mdl-card:active .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle, .brand-card-container .mdl-card:active .switch-toggle .mdl-card__actions a.btn-circle, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.ui-state-default, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-default, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-default, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-hover:hover, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-hover:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #00416A;
   border-color: #00253c;
 }
 
 .btn-primary:focus, .brand-card-container .mdl-card .btn.btn-default:focus, .brand-card-container .mdl-card .btn.btn-circle:focus, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.btn-default:focus, .switch-toggle .brand-card-container .mdl-card a.btn-default:focus, .brand-card-container .mdl-card .btn.btn-hover:focus, .brand-card-container .mdl-card .switch-toggle a.btn-hover:focus, .switch-toggle .brand-card-container .mdl-card a.btn-hover:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-default:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle:focus, .brand-card-container .mdl-card:focus .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle:focus, .brand-card-container .mdl-card:focus .switch-toggle .mdl-card__actions a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.ui-state-default:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-default:focus, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-default:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-hover:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-hover:focus, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-hover:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-default:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle:focus, .brand-card-container .mdl-card:hover .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle:focus, .brand-card-container .mdl-card:hover .switch-toggle .mdl-card__actions a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.ui-state-default:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-default:focus, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-default:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-hover:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-hover:focus, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-hover:focus, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-default:focus, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle:focus, .brand-card-container .mdl-card:active .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle:focus, .brand-card-container .mdl-card:active .switch-toggle .mdl-card__actions a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle:focus, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.ui-state-default:focus, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-default:focus, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-default:focus, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-hover:focus, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-hover:focus, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-hover:focus, .btn-primary.focus, .brand-card-container .mdl-card .focus.btn.btn-default:focus, .brand-card-container .mdl-card .focus.btn.btn-circle:focus, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.focus.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.focus.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.focus.btn-default:focus, .switch-toggle .brand-card-container .mdl-card a.focus.btn-default:focus, .brand-card-container .mdl-card .focus.btn.btn-hover:focus, .brand-card-container .mdl-card .switch-toggle a.focus.btn-hover:focus, .switch-toggle .brand-card-container .mdl-card a.focus.btn-hover:focus, .brand-card-container .mdl-card .focus.btn.btn-default:hover, .brand-card-container .mdl-card .focus.btn.btn-circle:hover, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.focus.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.focus.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.focus.btn-default:hover, .switch-toggle .brand-card-container .mdl-card a.focus.btn-default:hover, .brand-card-container .mdl-card .focus.btn.btn-hover:hover, .brand-card-container .mdl-card .switch-toggle a.focus.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card a.focus.btn-hover:hover, .brand-card-container .mdl-card .focus.btn.btn-default:active, .brand-card-container .mdl-card .focus.btn.btn-circle:active, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle:active, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle:active, .brand-card-container .mdl-card .ui-datepicker button.focus.ui-state-default:active, .ui-datepicker .brand-card-container .mdl-card button.focus.ui-state-default:active, .brand-card-container .mdl-card .switch-toggle a.focus.btn-default:active, .switch-toggle .brand-card-container .mdl-card a.focus.btn-default:active, .brand-card-container .mdl-card .focus.btn.btn-hover:active, .brand-card-container .mdl-card .switch-toggle a.focus.btn-hover:active, .switch-toggle .brand-card-container .mdl-card a.focus.btn-hover:active, .brand-card-container .mdl-card:focus .mdl-card__actions .focus.btn.btn-default, .brand-card-container .mdl-card:focus .mdl-card__actions .focus.btn.btn-circle, .brand-card-container .mdl-card:focus .ui-datepicker .mdl-card__actions button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.focus.btn-circle, .brand-card-container .mdl-card:focus .switch-toggle .mdl-card__actions a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.focus.btn-circle, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.focus.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.focus.ui-state-default, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.focus.btn-default, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.focus.btn-default, .brand-card-container .mdl-card:hover .mdl-card__actions .focus.btn.btn-default, .brand-card-container .mdl-card:hover .mdl-card__actions .focus.btn.btn-circle, .brand-card-container .mdl-card:hover .ui-datepicker .mdl-card__actions button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.focus.btn-circle, .brand-card-container .mdl-card:hover .switch-toggle .mdl-card__actions a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.focus.btn-circle, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.focus.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.focus.ui-state-default, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.focus.btn-default, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.focus.btn-default, .brand-card-container .mdl-card:active .mdl-card__actions .focus.btn.btn-default, .brand-card-container .mdl-card:active .mdl-card__actions .focus.btn.btn-circle, .brand-card-container .mdl-card:active .ui-datepicker .mdl-card__actions button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.focus.btn-circle, .brand-card-container .mdl-card:active .switch-toggle .mdl-card__actions a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.focus.btn-circle, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.focus.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.focus.ui-state-default, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.focus.btn-default, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.focus.btn-default {
-  color: #eeeeee;
+  color: #eee;
   background-color: #002237;
   border-color: black;
 }
 
 .btn-primary:hover, .brand-card-container .mdl-card .btn.btn-default:hover, .brand-card-container .mdl-card .btn.btn-circle:hover, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.btn-default:hover, .switch-toggle .brand-card-container .mdl-card a.btn-default:hover, .brand-card-container .mdl-card .btn.btn-hover:hover, .brand-card-container .mdl-card .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card a.btn-hover:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-default:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle:hover, .brand-card-container .mdl-card:focus .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle:hover, .brand-card-container .mdl-card:focus .switch-toggle .mdl-card__actions a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.ui-state-default:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-default:hover, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-default:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-hover:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-hover:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-default:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle:hover, .brand-card-container .mdl-card:hover .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle:hover, .brand-card-container .mdl-card:hover .switch-toggle .mdl-card__actions a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.ui-state-default:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-default:hover, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-default:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-hover:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-hover:hover, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-default:hover, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle:hover, .brand-card-container .mdl-card:active .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle:hover, .brand-card-container .mdl-card:active .switch-toggle .mdl-card__actions a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle:hover, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.ui-state-default:hover, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-default:hover, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-default:hover, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-hover:hover, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-hover:hover, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-hover:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #002237;
   border-color: black;
 }
@@ -3348,7 +3348,7 @@ fieldset[disabled] .switch-toggle a.focus.btn-hover:hover,
 .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions .open > a.dropdown-toggle.btn-default,
 .brand-card-container .mdl-card:active .mdl-card__actions .open > .dropdown-toggle.btn.btn-hover:hover,
 .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions .open > a.dropdown-toggle.btn-hover:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #002237;
   border-color: black;
 }
@@ -3502,7 +3502,7 @@ fieldset[disabled] .switch-toggle a.focus.btn-hover:hover,
 .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions .open > a.dropdown-toggle.focus.btn-default,
 .brand-card-container .mdl-card:active .mdl-card__actions .open > .dropdown-toggle.focus.btn.btn-hover:hover,
 .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions .open > a.dropdown-toggle.focus.btn-hover:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #000c13;
   border-color: black;
 }
@@ -3761,30 +3761,30 @@ fieldset[disabled] .switch-toggle .brand-card-container .mdl-card:active .mdl-ca
 
 .btn-primary .badge, .brand-card-container .mdl-card .btn.btn-default:focus .badge, .brand-card-container .mdl-card .btn.btn-circle:focus .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus .badge, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:focus .badge, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:focus .badge, .brand-card-container .mdl-card .switch-toggle a.btn-default:focus .badge, .switch-toggle .brand-card-container .mdl-card a.btn-default:focus .badge, .brand-card-container .mdl-card .btn.btn-hover:focus .badge, .brand-card-container .mdl-card .switch-toggle a.btn-hover:focus .badge, .switch-toggle .brand-card-container .mdl-card a.btn-hover:focus .badge, .brand-card-container .mdl-card .btn.btn-default:hover .badge, .brand-card-container .mdl-card .btn.btn-circle:hover .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover .badge, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:hover .badge, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:hover .badge, .brand-card-container .mdl-card .switch-toggle a.btn-default:hover .badge, .switch-toggle .brand-card-container .mdl-card a.btn-default:hover .badge, .brand-card-container .mdl-card .btn.btn-hover:hover .badge, .brand-card-container .mdl-card .switch-toggle a.btn-hover:hover .badge, .switch-toggle .brand-card-container .mdl-card a.btn-hover:hover .badge, .brand-card-container .mdl-card .btn.btn-default:active .badge, .brand-card-container .mdl-card .btn.btn-circle:active .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle:active .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle:active .badge, .brand-card-container .mdl-card .ui-datepicker button.ui-state-default:active .badge, .ui-datepicker .brand-card-container .mdl-card button.ui-state-default:active .badge, .brand-card-container .mdl-card .switch-toggle a.btn-default:active .badge, .switch-toggle .brand-card-container .mdl-card a.btn-default:active .badge, .brand-card-container .mdl-card .btn.btn-hover:active .badge, .brand-card-container .mdl-card .switch-toggle a.btn-hover:active .badge, .switch-toggle .brand-card-container .mdl-card a.btn-hover:active .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-default .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle .badge, .brand-card-container .mdl-card:focus .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle .badge, .brand-card-container .mdl-card:focus .switch-toggle .mdl-card__actions a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.ui-state-default .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-default .badge, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-default .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-default .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle .badge, .brand-card-container .mdl-card:hover .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle .badge, .brand-card-container .mdl-card:hover .switch-toggle .mdl-card__actions a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.ui-state-default .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-default .badge, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-default .badge, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-default .badge, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle .badge, .brand-card-container .mdl-card:active .ui-datepicker .mdl-card__actions button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle .badge, .brand-card-container .mdl-card:active .switch-toggle .mdl-card__actions a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle .badge, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.ui-state-default .badge, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-default .badge, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-default .badge {
   color: #00416A;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .btn-success {
-  color: #eeeeee;
+  color: #eee;
   background-color: #008000;
   border-color: #005200;
 }
 
 .btn-success:focus, .btn-success.focus {
-  color: #eeeeee;
+  color: #eee;
   background-color: #004d00;
   border-color: black;
 }
 
 .btn-success:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #004d00;
   border-color: #001500;
 }
 
 .btn-success:active, .btn-success.active,
 .open > .btn-success.dropdown-toggle {
-  color: #eeeeee;
+  color: #eee;
   background-color: #004d00;
   border-color: #001500;
 }
@@ -3793,7 +3793,7 @@ fieldset[disabled] .switch-toggle .brand-card-container .mdl-card:active .mdl-ca
 .open > .btn-success.dropdown-toggle:hover,
 .open > .btn-success.dropdown-toggle:focus,
 .open > .btn-success.dropdown-toggle.focus {
-  color: #eeeeee;
+  color: #eee;
   background-color: #002900;
   border-color: black;
 }
@@ -3813,23 +3813,23 @@ fieldset[disabled] .btn-success.focus {
 
 .btn-success .badge {
   color: #008000;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .btn-info, .brand-card-container .mdl-card .btn.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus, .brand-card-container .mdl-card .btn.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover, .brand-card-container .mdl-card .btn.btn-circle:active, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:active, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:active, .brand-card-container .mdl-card .switch-toggle a.btn-circle:active, .switch-toggle .brand-card-container .mdl-card a.btn-circle:active, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.btn-circle.ui-state-default, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.btn-circle.ui-state-default, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.btn-circle.ui-state-default, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle, .switch-toggle a {
-  color: #eeeeee;
+  color: #eee;
   background-color: #1460aa;
   border-color: #0f4981;
 }
 
 .btn-info:focus, .brand-card-container .mdl-card .btn.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle:focus, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle:focus, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle:focus, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle:focus, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle:focus, .switch-toggle a:focus, .btn-info.focus, .brand-card-container .mdl-card .focus.btn.btn-circle:focus, .brand-card-container .mdl-card .ui-datepicker button.focus.btn-circle.ui-state-default:focus, .ui-datepicker .brand-card-container .mdl-card button.focus.btn-circle.ui-state-default:focus, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle:focus, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle:focus, .brand-card-container .mdl-card .focus.btn.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.focus.btn-circle.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.focus.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle:hover, .brand-card-container .mdl-card .focus.btn.btn-circle:active, .brand-card-container .mdl-card .ui-datepicker button.focus.btn-circle.ui-state-default:active, .ui-datepicker .brand-card-container .mdl-card button.focus.btn-circle.ui-state-default:active, .brand-card-container .mdl-card .switch-toggle a.focus.btn-circle:active, .switch-toggle .brand-card-container .mdl-card a.focus.btn-circle:active, .brand-card-container .mdl-card:focus .mdl-card__actions .focus.btn.btn-circle, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.focus.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.focus.btn-circle, .brand-card-container .mdl-card:hover .mdl-card__actions .focus.btn.btn-circle, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.focus.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.focus.btn-circle, .brand-card-container .mdl-card:active .mdl-card__actions .focus.btn.btn-circle, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.focus.btn-circle.ui-state-default, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.focus.btn-circle.ui-state-default, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.focus.btn-circle, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.focus.btn-circle, .switch-toggle a.focus {
-  color: #eeeeee;
+  color: #eee;
   background-color: #0f467c;
   border-color: #02080f;
 }
 
 .btn-info:hover, .brand-card-container .mdl-card .btn.btn-circle:hover, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:hover, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:hover, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle:hover, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle:hover, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle:hover, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle:hover, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle:hover, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle:hover, .switch-toggle a:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #0f467c;
   border-color: #092a4a;
 }
@@ -3867,7 +3867,7 @@ fieldset[disabled] .btn-success.focus {
 .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle .open > a.dropdown-toggle.btn-circle,
 .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions .open > a.dropdown-toggle.btn-circle,
 .switch-toggle .open > a.dropdown-toggle {
-  color: #eeeeee;
+  color: #eee;
   background-color: #0f467c;
   border-color: #092a4a;
 }
@@ -3944,7 +3944,7 @@ fieldset[disabled] .btn-success.focus {
 .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle .open > a.dropdown-toggle.focus.btn-circle,
 .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions .open > a.dropdown-toggle.focus.btn-circle,
 .switch-toggle .open > a.dropdown-toggle.focus {
-  color: #eeeeee;
+  color: #eee;
   background-color: #0b345c;
   border-color: #02080f;
 }
@@ -4081,7 +4081,7 @@ fieldset[disabled] .switch-toggle a.focus,
 
 .btn-info .badge, .brand-card-container .mdl-card .btn.btn-circle:focus .badge, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:focus .badge, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:focus .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle:focus .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle:focus .badge, .brand-card-container .mdl-card .btn.btn-circle:hover .badge, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:hover .badge, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:hover .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle:hover .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle:hover .badge, .brand-card-container .mdl-card .btn.btn-circle:active .badge, .brand-card-container .mdl-card .ui-datepicker button.btn-circle.ui-state-default:active .badge, .ui-datepicker .brand-card-container .mdl-card button.btn-circle.ui-state-default:active .badge, .brand-card-container .mdl-card .switch-toggle a.btn-circle:active .badge, .switch-toggle .brand-card-container .mdl-card a.btn-circle:active .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .btn.btn-circle .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .ui-datepicker button.btn-circle.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card:focus .mdl-card__actions button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card:focus .mdl-card__actions .switch-toggle a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card:focus .mdl-card__actions a.btn-circle .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .btn.btn-circle .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .ui-datepicker button.btn-circle.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card:hover .mdl-card__actions button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card:hover .mdl-card__actions .switch-toggle a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card:hover .mdl-card__actions a.btn-circle .badge, .brand-card-container .mdl-card:active .mdl-card__actions .btn.btn-circle .badge, .brand-card-container .mdl-card:active .mdl-card__actions .ui-datepicker button.btn-circle.ui-state-default .badge, .ui-datepicker .brand-card-container .mdl-card:active .mdl-card__actions button.btn-circle.ui-state-default .badge, .brand-card-container .mdl-card:active .mdl-card__actions .switch-toggle a.btn-circle .badge, .switch-toggle .brand-card-container .mdl-card:active .mdl-card__actions a.btn-circle .badge, .switch-toggle a .badge {
   color: #1460aa;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .btn-warning {
@@ -4137,26 +4137,26 @@ fieldset[disabled] .btn-warning.focus {
 }
 
 .btn-danger {
-  color: #eeeeee;
+  color: #eee;
   background-color: #a00000;
   border-color: #720000;
 }
 
 .btn-danger:focus, .btn-danger.focus {
-  color: #eeeeee;
+  color: #eee;
   background-color: #6d0000;
   border-color: black;
 }
 
 .btn-danger:hover {
-  color: #eeeeee;
+  color: #eee;
   background-color: #6d0000;
   border-color: #350000;
 }
 
 .btn-danger:active, .btn-danger.active,
 .open > .btn-danger.dropdown-toggle {
-  color: #eeeeee;
+  color: #eee;
   background-color: #6d0000;
   border-color: #350000;
 }
@@ -4165,7 +4165,7 @@ fieldset[disabled] .btn-warning.focus {
 .open > .btn-danger.dropdown-toggle:hover,
 .open > .btn-danger.dropdown-toggle:focus,
 .open > .btn-danger.dropdown-toggle.focus {
-  color: #eeeeee;
+  color: #eee;
   background-color: #490000;
   border-color: black;
 }
@@ -4185,7 +4185,7 @@ fieldset[disabled] .btn-danger.focus {
 
 .btn-danger .badge {
   color: #a00000;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .btn-link {
@@ -4214,7 +4214,7 @@ fieldset[disabled] .btn-link {
 .btn-link[disabled]:hover, .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
-  color: #aaaaaa;
+  color: #aaa;
   text-decoration: none;
 }
 
@@ -4329,7 +4329,7 @@ tbody.collapse.in {
   text-align: left;
   background-color: #fff;
   border: 1px solid #ddd;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   border-radius: 2px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -4354,25 +4354,25 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857;
-  color: #333333;
+  color: #333;
   white-space: nowrap;
 }
 
 .dropdown-menu > li > a:hover, .ui-datepicker > li > a:hover, .dropdown-menu > li > a:focus, .ui-datepicker > li > a:focus {
   text-decoration: none;
   color: #262626;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .dropdown-menu > .active > a, .ui-datepicker > .active > a, .dropdown-menu > .active > a:hover, .ui-datepicker > .active > a:hover, .dropdown-menu > .active > a:focus, .ui-datepicker > .active > a:focus {
   color: #FFF;
   text-decoration: none;
   outline: 0;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .dropdown-menu > .disabled > a, .ui-datepicker > .disabled > a, .dropdown-menu > .disabled > a:hover, .ui-datepicker > .disabled > a:hover, .dropdown-menu > .disabled > a:focus, .ui-datepicker > .disabled > a:focus {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .dropdown-menu > .disabled > a:hover, .ui-datepicker > .disabled > a:hover, .dropdown-menu > .disabled > a:focus, .ui-datepicker > .disabled > a:focus {
@@ -4406,7 +4406,7 @@ tbody.collapse.in {
   padding: 3px 20px;
   font-size: 12px;
   line-height: 1.42857;
-  color: #aaaaaa;
+  color: #aaa;
   white-space: nowrap;
 }
 
@@ -4758,9 +4758,9 @@ tbody.collapse.in {
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #555;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 2px;
 }
@@ -4895,22 +4895,22 @@ tbody.collapse.in {
 
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .nav > li.disabled > a {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
-  color: #aaaaaa;
+  color: #aaa;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #eeeeee;
+  background-color: #eee;
   border-color: #00416A;
 }
 
@@ -4942,11 +4942,11 @@ tbody.collapse.in {
 }
 
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #ddd;
+  border-color: #eee #eee #ddd;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: #555;
   background-color: #FFF;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -4967,7 +4967,7 @@ tbody.collapse.in {
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #FFF;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .nav-stacked > li {
@@ -5682,11 +5682,11 @@ fieldset[disabled] .cbp-header .btn-link:focus {
 .breadcrumb > li + li:before {
   content: "/ ";
   padding: 0 5px;
-  color: #222222;
+  color: #222;
 }
 
 .breadcrumb > .active {
-  color: #222222;
+  color: #222;
 }
 
 .pagination {
@@ -5731,7 +5731,7 @@ fieldset[disabled] .cbp-header .btn-link:focus {
 .pagination > li > span:focus {
   z-index: 2;
   color: #00121e;
-  background-color: #eeeeee;
+  background-color: #eee;
   border-color: #ddd;
 }
 
@@ -5752,7 +5752,7 @@ fieldset[disabled] .cbp-header .btn-link:focus {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #aaaaaa;
+  color: #aaa;
   background-color: #fff;
   border-color: #ddd;
   cursor: not-allowed;
@@ -5828,7 +5828,7 @@ fieldset[disabled] .cbp-header .btn-link:focus {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .pager .next > a,
@@ -5845,7 +5845,7 @@ fieldset[disabled] .cbp-header .btn-link:focus {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #aaaaaa;
+  color: #aaa;
   background-color: #fff;
   cursor: not-allowed;
 }
@@ -5879,7 +5879,7 @@ a.label:hover, a.label:focus {
 }
 
 .label-default {
-  background-color: #aaaaaa;
+  background-color: #aaa;
 }
 
 .label-default[href]:hover, .label-default[href]:focus {
@@ -5937,7 +5937,7 @@ a.label:hover, a.label:focus {
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #aaaaaa;
+  background-color: #aaa;
   border-radius: 10px;
 }
 
@@ -5987,7 +5987,7 @@ a.badge:hover, a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .jumbotron h1,
@@ -6056,7 +6056,7 @@ a.badge:hover, a.badge:focus {
 
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #333;
 }
 
 a.thumbnail:hover,
@@ -6134,7 +6134,7 @@ a.thumbnail.active {
 .alert-warning {
   background-color: #fef7ed;
   border-color: #fde6d5;
-  color: #555555;
+  color: #555;
 }
 
 .alert-warning hr {
@@ -6368,8 +6368,8 @@ button.list-group-item {
 }
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
-  background-color: #eeeeee;
-  color: #aaaaaa;
+  background-color: #eee;
+  color: #aaa;
   cursor: not-allowed;
 }
 
@@ -6378,12 +6378,12 @@ button.list-group-item {
 }
 
 .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
-  color: #333333;
+  color: #333;
   background-color: #FFF;
   border-color: #ddd;
 }
@@ -6399,7 +6399,7 @@ button.list-group-item {
 }
 
 .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-  color: #333333;
+  color: #333;
 }
 
 .list-group-item-success {
@@ -6465,13 +6465,13 @@ button.list-group-item-info.active:focus {
 }
 
 .list-group-item-warning {
-  color: #555555;
+  color: #555;
   background-color: #fef7ed;
 }
 
 a.list-group-item-warning,
 button.list-group-item-warning {
-  color: #555555;
+  color: #555;
 }
 
 a.list-group-item-warning .list-group-item-heading,
@@ -6482,7 +6482,7 @@ button.list-group-item-warning .list-group-item-heading {
 a.list-group-item-warning:hover, a.list-group-item-warning:focus,
 button.list-group-item-warning:hover,
 button.list-group-item-warning:focus {
-  color: #555555;
+  color: #555;
   background-color: #fdecd5;
 }
 
@@ -6491,8 +6491,8 @@ button.list-group-item-warning.active,
 button.list-group-item-warning.active:hover,
 button.list-group-item-warning.active:focus {
   color: #fff;
-  background-color: #555555;
-  border-color: #555555;
+  background-color: #555;
+  border-color: #555;
 }
 
 .list-group-item-danger {
@@ -6866,7 +6866,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-default > .panel-heading {
-  color: #333333;
+  color: #333;
   background-color: #f5f5f5;
   border-color: #ddd;
 }
@@ -6877,7 +6877,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-default > .panel-heading .badge {
   color: #f5f5f5;
-  background-color: #333333;
+  background-color: #333;
 }
 
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
@@ -6958,7 +6958,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-warning > .panel-heading {
-  color: #555555;
+  color: #555;
   background-color: #fef7ed;
   border-color: #fde6d5;
 }
@@ -6969,7 +6969,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-warning > .panel-heading .badge {
   color: #fef7ed;
-  background-color: #555555;
+  background-color: #555;
 }
 
 .panel-warning > .panel-footer + .panel-collapse > .panel-body {
@@ -9147,7 +9147,7 @@ fieldset[disabled] .mdl-radio .mdl-radio__ripple-container .mdl-ripple,
 
 .mdl-textfield__input {
   border: none;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #555;
   display: block;
   font-size: 13px;
   font-family: Roboto, Calibri, Tahoma, Arial, sans-serif;
@@ -9180,7 +9180,7 @@ fieldset[disabled] .mdl-radio .mdl-radio__ripple-container .mdl-ripple,
 fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 .mdl-textfield.is-disabled .mdl-textfield__input {
   background-color: transparent;
-  border-bottom: 1px dotted #555555;
+  border-bottom: 1px dotted #555;
   color: rgba(0,0,0, 0.26);
 }
 
@@ -9190,7 +9190,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 
 .mdl-textfield__label {
   bottom: 0;
-  color: #333333;
+  color: #333;
   font-size: 13px;
   left: 0;
   right: 0;
@@ -9547,7 +9547,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   letter-spacing: 0;
   height: 18px;
   font-size: 13px;
-  color: #555555;
+  color: #555;
   padding-bottom: 8px;
   box-sizing: border-box;
 }
@@ -9612,7 +9612,7 @@ fieldset[disabled] .cbp-checkbox.is-checked .mdl-checkbox__tick-outline,
 
 .mdl-textfield__help,
 .mdl-textfield__counter {
-  color: #555555;
+  color: #555;
   position: absolute;
   font-size: 13px;
   margin-top: 3px;
@@ -9676,7 +9676,7 @@ label {
 }
 
 .mdl-card__media {
-  background-color: #eeeeee;
+  background-color: #eee;
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -9693,7 +9693,7 @@ label {
 
 .mdl-card__title {
   align-items: center;
-  color: rgb(#222222);
+  color: rgb(#222);
   display: block;
   display: flex;
   justify-content: stretch;
@@ -9722,12 +9722,12 @@ label {
 
 .mdl-card__subtitle-text {
   font-size: 13px;
-  color: rgba(#222222, 0.54);
+  color: rgba(#222, 0.54);
   margin: 0;
 }
 
 .mdl-card__supporting-text {
-  color: rgba(#222222, 0.54);
+  color: rgba(#222, 0.54);
   font-size: 13px;
   line-height: 18px;
   padding: 0 16px 16px;
@@ -10078,19 +10078,19 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 }
 
 .ui-datepicker td .ui-state-hover {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .ui-datepicker td .ui-state-active {
   color: #FFF;
-  background-color: #eeeeee;
+  background-color: #eee;
   border-radius: 2px;
 }
 
 .ui-datepicker td a, .ui-datepicker td span {
   padding: .3em;
   text-align: center;
-  color: #333333;
+  color: #333;
   font-size: 13px;
 }
 
@@ -10216,11 +10216,11 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 }
 
 .noUi-value-horizontal.noUi-value-sub {
-  color: #555555;
+  color: #555;
 }
 
 .noUi-pips {
-  color: #555555;
+  color: #555;
 }
 
 .noUi-handle:before,
@@ -10297,7 +10297,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 .select2-field .select2-container--default .selection .select2-selection--single:hover,
 .select2-field .select2-container--default .selection .select2-selection--single[aria-expanded="true"] {
   background-color: rgba(20, 96, 170, 0.1);
-  color: #333333;
+  color: #333;
 }
 
 .select2-field .select2-container--default .select2-selection--multiple,
@@ -10305,7 +10305,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 .select2-field .select2-container--default.select2-container--focus .select2-selection--multiple {
   height: 40px;
   border: none;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #555;
   border-radius: 0;
   outline: 0;
 }
@@ -10325,7 +10325,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .select2-field .select2-container--default .select2-selection--multiple .select2-selection__choice {
   border: 1px solid #adadad;
-  color: #333333;
+  color: #333;
   margin-top: 8px;
   padding: 3px 10px;
   background-color: #fff;
@@ -10338,7 +10338,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .select2-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
 .select2-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
-  color: #333333;
+  color: #333;
   margin: 0 0 0 5px;
   float: right;
 }
@@ -10386,7 +10386,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted[aria-selected] {
   background-color: rgba(20, 96, 170, 0.1);
-  color: #333333;
+  color: #333;
 }
 
 /**
@@ -13438,7 +13438,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 .select2-field .select2-container--default .selection .select2-selection--single:hover,
 .select2-field .select2-container--default .selection .select2-selection--single[aria-expanded="true"] {
   background-color: rgba(20, 96, 170, 0.1);
-  color: #333333;
+  color: #333;
 }
 
 .select2-field .select2-container--default .select2-selection--multiple,
@@ -13446,7 +13446,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 .select2-field .select2-container--default.select2-container--focus .select2-selection--multiple {
   height: 40px;
   border: none;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #555;
   border-radius: 0;
   outline: 0;
 }
@@ -13466,7 +13466,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .select2-field .select2-container--default .select2-selection--multiple .select2-selection__choice {
   border: 1px solid #adadad;
-  color: #333333;
+  color: #333;
   margin-top: 8px;
   padding: 3px 10px;
   background-color: #fff;
@@ -13479,7 +13479,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .select2-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
 .select2-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
-  color: #333333;
+  color: #333;
   margin: 0 0 0 5px;
   float: right;
 }
@@ -13527,7 +13527,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted[aria-selected] {
   background-color: rgba(20, 96, 170, 0.1);
-  color: #333333;
+  color: #333;
 }
 
 .selectize-field {
@@ -13597,7 +13597,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 .selectize-field .selectize-control.multi .selectize-input > div,
 .selectize-field .selectize-control.multi .selectize-input > div.active {
   border: 1px solid #adadad;
-  color: #333333;
+  color: #333;
   margin: 3px 5px 3px 0;
   padding: 4px 10px;
   background-color: #fff;
@@ -13610,7 +13610,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 }
 
 .selectize-field .selectize-dropdown, .selectize-field .selectize-input, .selectize-field .selectize-input {
-  border-bottom: 1px solid #555555 !important;
+  border-bottom: 1px solid #555 !important;
 }
 
 .selectize-field .selectize-dropdown, .selectize-field .selectize-input, .selectize-field .selectize-input input {
@@ -13670,7 +13670,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
   .switch-toggle {
     position: relative;
     display: block;
-    border: 1px solid #aaaaaa;
+    border: 1px solid #aaa;
     border-radius: 4px;
     /* For callout panels in foundation
   */
@@ -13857,7 +13857,7 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 }
 
 .bg-default {
-  background-color: #333333 !important;
+  background-color: #333 !important;
   color: #fff !important;
   /* &:hover, &:focus {
     background-color: darken($color, 10%) !important;
@@ -13907,7 +13907,7 @@ dd {
   font-weight: 400;
   float: left;
   display: inline-block;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .dl-inline dd, .dl-inline dt {
@@ -13970,7 +13970,7 @@ input[type=radio]:focus .switch-toggle a:focus,
 }
 
 .dropdown-menu, .ui-datepicker {
-  border-color: #aaaaaa;
+  border-color: #aaa;
 }
 
 .dropdown-menu.has-icon > li > a, .has-icon.ui-datepicker > li > a,
@@ -13990,7 +13990,7 @@ input[type=radio]:focus .switch-toggle a:focus,
 
 .dropdown-menu.has-icon > .dropdown-header,
 .has-icon.ui-datepicker > .dropdown-header {
-  color: #222222;
+  color: #222;
   font-weight: 600;
   font-size: 13px;
 }
@@ -14008,7 +14008,7 @@ input[type=radio]:focus .switch-toggle a:focus,
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-smooth: always;
-  color: #222222;
+  color: #222;
   opacity: .45;
   left: 2px;
   margin-right: 4px;
@@ -14026,7 +14026,7 @@ input[type=radio]:focus .switch-toggle a:focus,
 }
 
 .list-group .list-group-item a {
-  color: #333333;
+  color: #333;
 }
 
 .list-group .list-group-item a:not(.label-info):not(.label-success) {
@@ -14057,7 +14057,7 @@ input[type=radio]:focus .switch-toggle a:focus,
 
 .navbar-default, .app-header,
 .app-header-bottom {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .noUi-handle {
@@ -14070,7 +14070,7 @@ input[type=radio]:focus .switch-toggle a:focus,
 
 .showBanner, footer.cbp-banner.confidential:after, footer.cbp-banner.law-enforcement:after, footer.cbp-banner.secret:after, footer.cbp-banner.top-secret:after {
   width: 100%;
-  background-color: #555555;
+  background-color: #555;
   height: 20px;
   padding-top: 1.5px;
   font-size: 0.8em;
@@ -14255,13 +14255,13 @@ a .badge.badge-primary:hover, a .badge.badge-primary:focus {
 }
 
 .badge.badge-default {
-  color: #333333;
+  color: #333;
   background-color: #fff;
   border: 1px solid #fff;
 }
 
 a .badge.badge-default:hover, a .badge.badge-default:focus {
-  color: #333333;
+  color: #333;
 }
 
 .badge.badge-success {
@@ -14275,23 +14275,23 @@ a .badge.badge-success:hover, a .badge.badge-success:focus {
 }
 
 .badge.badge-warning {
-  color: #222222;
+  color: #222;
   background-color: #f09511;
   border: 1px solid #f09511;
 }
 
 a .badge.badge-warning:hover, a .badge.badge-warning:focus {
-  color: #222222;
+  color: #222;
 }
 
 .badge.badge-live {
-  color: #333333;
+  color: #333;
   background-color: #fcde9e;
   border: 1px solid #fcde9e;
 }
 
 a .badge.badge-live:hover, a .badge.badge-live:focus {
-  color: #333333;
+  color: #333;
 }
 
 .badge.badge-danger {
@@ -14315,24 +14315,24 @@ a .badge.badge-info:hover, a .badge:hover, a .badge.badge-info:focus, a .badge:f
 }
 
 .badge.badge-inverse {
-  color: #222222;
+  color: #222;
   background-color: #FFF;
   border: 1px solid #FFF;
 }
 
 a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
-  color: #222222;
+  color: #222;
 }
 
 .badge.badge-inverse, .badge.badge-live, .badge.badge-warning, .badge.badge-default {
-  border: 1px solid #333333;
+  border: 1px solid #333;
 }
 
 .nav-pills > li.active.default > a,
 .nav-pills > li.active.default > a:hover,
 .nav-pills > li.active.default > a:focus {
   background-color: #fff;
-  color: #333333;
+  color: #333;
   border: 1px solid #adadad;
 }
 
@@ -14340,7 +14340,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.default > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14359,7 +14359,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.primary > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14378,7 +14378,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.success > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14397,7 +14397,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.warning > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14408,7 +14408,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > li.active.live > a:hover,
 .nav-pills > li.active.live > a:focus {
   background-color: #fcde9e;
-  color: #333333;
+  color: #333;
   border: 1px solid #000;
 }
 
@@ -14416,7 +14416,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.live > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14435,7 +14435,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.danger > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14454,7 +14454,7 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > .active.info > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14465,15 +14465,15 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .nav-pills > li.active.inverse > a:hover,
 .nav-pills > li.active.inverse > a:focus {
   background-color: #FFF;
-  color: #222222;
-  border: 1px solid #aaaaaa;
+  color: #222;
+  border: 1px solid #aaa;
 }
 
 .list-group-item.active > .badge,
 .nav-pills > .active.inverse > a > .badge {
   color: #000;
   padding: 3px 7px;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .nav-pills span.badge {
@@ -14489,28 +14489,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14518,17 +14518,17 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .btn- {
   border-radius: 2px;
   background-color: #fff;
-  color: #333333;
+  color: #333;
   border: 1px solid #adadad;
 }
 
 .btn-:hover {
-  color: #333333;
+  color: #333;
   background-color: #f9f9f9;
 }
 
 .btn-:focus, .btn-:active, .btn-.active, .btn-.focus {
-  color: #333333;
+  color: #333;
   background-color: #f2f2f2;
 }
 
@@ -14545,28 +14545,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14601,28 +14601,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14657,28 +14657,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14713,28 +14713,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14742,17 +14742,17 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .btn-live {
   border-radius: 2px;
   background-color: #fcde9e;
-  color: #333333;
+  color: #333;
   border: 1px solid #000;
 }
 
 .btn-live:hover {
-  color: #333333;
+  color: #333;
   background-color: #fde2ab;
 }
 
 .btn-live:focus, .btn-live:active, .btn-live.active, .btn-live.focus {
-  color: #333333;
+  color: #333;
   background-color: #fde7b7;
 }
 
@@ -14769,28 +14769,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14825,28 +14825,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14881,28 +14881,28 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 }
 
 [disabled].btn, .ui-datepicker button.ui-state-default[disabled], .switch-toggle a[disabled] {
-  background-color: #222222 !important;
+  background-color: #222 !important;
   color: #FFF !important;
-  border: 1px solid #222222;
+  border: 1px solid #222;
   font-weight: normal;
 }
 
 [disabled].btn:focus, .ui-datepicker button.ui-state-default[disabled]:focus, .switch-toggle a[disabled]:focus, [disabled].btn:active, .ui-datepicker button.ui-state-default[disabled]:active, .switch-toggle a[disabled]:active, [disabled].btn.active, .ui-datepicker button.ui-state-default[disabled].active, .switch-toggle a[disabled].active, [disabled].btn:hover, .ui-datepicker button.ui-state-default[disabled]:hover, .switch-toggle a[disabled]:hover {
   color: #f6f6f6;
-  background-color: #555555;
-  border: 1px solid #555555;
+  background-color: #555;
+  border: 1px solid #555;
   cursor: not-allowed;
 }
 
 [disabled].btn-link {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
 }
 
 [disabled].btn-link:focus, [disabled].btn-link:active, [disabled].btn-link.active, [disabled].btn-link:hover {
   background-color: transparent !important;
-  color: #222222 !important;
+  color: #222 !important;
   border: none;
   cursor: not-allowed;
 }
@@ -14910,17 +14910,17 @@ a .badge.badge-inverse:hover, a .badge.badge-inverse:focus {
 .btn-inverse {
   border-radius: 2px;
   background-color: #FFF;
-  color: #333333;
+  color: #333;
   border: 1px solid #dddddd;
 }
 
 .btn-inverse:hover {
-  color: #333333;
+  color: #333;
   background-color: white;
 }
 
 .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.focus {
-  color: #333333;
+  color: #333;
   background-color: white;
 }
 
@@ -15058,7 +15058,7 @@ fieldset[disabled] .switch-toggle a,
 }
 
 .return-to-top-btn i {
-  color: #333333;
+  color: #333;
   left: 5px;
   position: relative;
   top: 4px;
@@ -15069,11 +15069,11 @@ fieldset[disabled] .switch-toggle a,
 }
 
 .return-to-top-btn:hover {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 .return-to-top-btn:hover i {
-  color: #333333;
+  color: #333;
   top: 0;
 }
 
@@ -15276,7 +15276,7 @@ fieldset[disabled] .switch-toggle a,
 }
 
 .filters .filter-group-title {
-  color: #555555;
+  color: #555;
   font-size: 12px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -15381,7 +15381,7 @@ fieldset[disabled] .switch-toggle a,
   display: inline-block;
   content: ",";
   margin-right: 6px;
-  color: #aaaaaa;
+  color: #aaa;
   text-align: left;
 }
 
@@ -15830,7 +15830,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .mdl-selectfield .mdl-selectfield__select {
   padding: 6px 3px !important;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #555;
 }
 
 .mdl-selectfield .mdl-selectfield__select:hover {
@@ -15839,7 +15839,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .mdl-selectfield .mdl-selectfield__label {
   top: 28px;
-  color: #333333;
+  color: #333;
   padding-left: 3px;
 }
 
@@ -15872,13 +15872,13 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .label-default {
-  color: #222222 !important;
-  border: 1px solid #555555 !important;
+  color: #222 !important;
+  border: 1px solid #555 !important;
 }
 
 .label-primary {
   background-color: #00416A;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .label-primary[href]:hover, .label-primary[href]:focus {
@@ -15887,7 +15887,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .label-success {
   background-color: #008000;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .label-success[href]:hover, .label-success[href]:focus {
@@ -15896,7 +15896,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .label-info {
   background-color: #1460aa;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .label-info[href]:hover, .label-info[href]:focus {
@@ -15905,7 +15905,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .label-danger {
   background-color: #a00000;
-  border: 1px solid #555555;
+  border: 1px solid #555;
 }
 
 .label-danger[href]:hover, .label-danger[href]:focus {
@@ -15914,8 +15914,8 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .label-inverse {
   background-color: #FFF;
-  color: #333333;
-  border: 1px solid #555555;
+  color: #333;
+  border: 1px solid #555;
 }
 
 .label-inverse[href]:hover, .label-inverse[href]:focus {
@@ -15924,8 +15924,8 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .label-live {
   background-color: #fcde9e;
-  color: #333333;
-  border: 1px solid #555555;
+  color: #333;
+  border: 1px solid #555;
 }
 
 .label-live[href]:hover, .label-live[href]:focus {
@@ -15934,8 +15934,8 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .label-warning {
   background-color: #f09511;
-  color: #333333;
-  border: 1px solid #555555;
+  color: #333;
+  border: 1px solid #555;
 }
 
 .label-warning[href]:hover, .label-warning[href]:focus {
@@ -15943,7 +15943,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .label-default.subtle {
-  color: #333333;
+  color: #333;
   background-color: #f0f0f0;
   border: 1px solid #b8b8b8;
 }
@@ -15961,7 +15961,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .label-warning.subtle {
-  color: #555555;
+  color: #555;
   background-color: #fef7ed;
   border: 1px solid #fde6d5;
 }
@@ -16016,7 +16016,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
   top: 50%;
   left: 50%;
-  color: #333333;
+  color: #333;
 }
 
 .modal-footer {
@@ -16330,7 +16330,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .nav.navbar-nav .nav-item {
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid #eee;
 }
 
 .nav.navbar-nav .nav-item > .dropdown-menu, .nav.navbar-nav .nav-item > .ui-datepicker,
@@ -16346,7 +16346,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .popover {
   padding: 0;
-  border-color: #aaaaaa;
+  border-color: #aaa;
 }
 
 .popover .popover-header .close {
@@ -16409,7 +16409,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   background: #1460aa;
   border-radius: 100%;
   content: "";
-  box-shadow: 0 0 0 3px #aaaaaa;
+  box-shadow: 0 0 0 3px #aaa;
   height: 10px;
   left: 50%;
   margin-left: -5px;
@@ -16421,7 +16421,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 .nav-steps li + li > span:after,
 .nav-steps li + li > a:after {
   background: #1460aa;
-  border: solid #aaaaaa;
+  border: solid #aaa;
   border-width: 2px 0;
   box-shadow: -5px 0 0 -2px #1460aa, 5px 0 0 -2px #1460aa;
   content: "";
@@ -16435,7 +16435,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .nav-steps .active ~ li {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .nav-steps .active ~ li > span:before,
@@ -16445,7 +16445,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .nav-steps .active ~ li > span:after,
 .nav-steps .active ~ li > a:after {
-  background-color: #aaaaaa;
+  background-color: #aaa;
   box-shadow: none;
 }
 
@@ -16490,9 +16490,9 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 
 .nav-steps.nav-stacked > li.active ~ li > span:before,
 .nav-steps.nav-stacked > li.active ~ li > a:before {
-  color: #333333;
+  color: #333;
   background: #fff;
-  box-shadow: 0 0 0 3px #aaaaaa;
+  box-shadow: 0 0 0 3px #aaa;
 }
 
 .nav-steps.nav-stacked li + li > span:after,
@@ -16524,7 +16524,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   width: 10px;
   overflow: hidden;
   text-indent: 100%;
-  background-color: #aaaaaa;
+  background-color: #aaa;
 }
 
 .nav-dots > li:last-child > a {
@@ -16532,7 +16532,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 }
 
 .nav-dots > li.active > a {
-  background-color: #555555;
+  background-color: #555;
 }
 
 input[type="range"] {
@@ -16638,7 +16638,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   background-color: #eee;
-  color: #333333;
+  color: #333;
 }
 
 .nav-tabs > li > a {
@@ -16805,7 +16805,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .table > thead > tr, .table-selectable > thead > tr {
-  background: #eeeeee;
+  background: #eee;
 }
 
 .table > thead > tr > th, .table-selectable > thead > tr > th {
@@ -16977,7 +16977,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .table-inverse > th {
-  color: #aaaaaa !important;
+  color: #aaa !important;
   border-bottom: none;
 }
 
@@ -16992,7 +16992,7 @@ input[type=range]:focus::-ms-fill-upper {
 .table-inverse.table-bordered > thead > tr > th {
   border-color: #262626;
   border-bottom: 1px solid #262626;
-  color: #aaaaaa !important;
+  color: #aaa !important;
 }
 
 .table-clear > thead > tr {
@@ -17002,14 +17002,14 @@ input[type=range]:focus::-ms-fill-upper {
 
 .table > tbody > tr > td,
 .table-selectable > tbody > tr > td {
-  color: #333333;
+  color: #333;
 }
 
 
 .table > tbody > tr > th,
 .table-selectable > tbody > tr > th {
   text-align: left !important;
-  color: #333333;
+  color: #333;
   font-weight: normal;
 }
 
@@ -17053,13 +17053,13 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tag-default {
-  color: #333333;
+  color: #333;
   background-color: #fff;
   border: 1px solid #f2f2f2;
 }
 
 .tag-default a, .tag-default i {
-  color: #333333;
+  color: #333;
 }
 
 .tag-default a:hover, .tag-default a:focus, .tag-default a:active, .tag-default i:hover, .tag-default i:focus, .tag-default i:active {
@@ -17078,7 +17078,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tag-inverse {
   color: #FFF;
-  background-color: #333333;
+  background-color: #333;
   border: 1px solid #262626;
 }
 
@@ -17149,13 +17149,13 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tag-warning {
-  color: #222222;
+  color: #222;
   background-color: #f09511;
   border: 1px solid #da640e;
 }
 
 .tag-warning a, .tag-warning i {
-  color: #222222;
+  color: #222;
 }
 
 .tag-warning a:hover, .tag-warning a:focus, .tag-warning a:active, .tag-warning i:hover, .tag-warning i:focus, .tag-warning i:active {
@@ -17173,13 +17173,13 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tag-live {
-  color: #333333;
+  color: #333;
   background-color: #fcde9e;
   border: 1px solid #fbc286;
 }
 
 .tag-live a, .tag-live i {
-  color: #333333;
+  color: #333;
 }
 
 .tag-live a:hover, .tag-live a:focus, .tag-live a:active, .tag-live i:hover, .tag-live i:focus, .tag-live i:active {
@@ -17245,13 +17245,13 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tag-default.subtle {
-  color: #333333;
+  color: #333;
   background-color: #dfdfdf;
   border: 1px solid #d2d2d2;
 }
 
 .tag-default.subtle a, .tag-default.subtle i {
-  color: #333333;
+  color: #333;
 }
 
 .tag-default.subtle a:hover, .tag-default.subtle a:focus, .tag-default.subtle a:active, .tag-default.subtle i:hover, .tag-default.subtle i:focus, .tag-default.subtle i:active {
@@ -17411,7 +17411,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .caption {
   font-size: 12px;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 h1, .h1,
@@ -17448,7 +17448,7 @@ a.text-warning:focus {
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
-  color: #555555;
+  color: #555;
 }
 
 .keyline-all {

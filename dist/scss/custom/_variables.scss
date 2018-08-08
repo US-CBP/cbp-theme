@@ -10,12 +10,13 @@ $bootstrap-sass-asset-helper: false !default;
 
 $white:                             #FFF;
 $gray-base:                         #000;
-$gray-darker:                       lighten($gray-base, 13.5%); // #222
-$gray-dark:                         lighten($gray-base, 20%);   // #333
-$gray:                              lighten($gray-base, 33.5%); // #555
-$gray-light:                        lighten($gray-base, 66.7%); // #aaa
-$gray-lighter:                      lighten($gray-base, 93.5%); // #eee
-$gray-lightest:                     lighten($gray-base, 96.5%); // #f6f6f6
+$gray-darker:                       #222;
+$gray-dark:                         #333;
+$gray:                              #555;
+$gray-medium:                       #808080;
+$gray-light:                        #aaa;
+$gray-lighter:                      #eee;
+$gray-lightest:                     #f6f6f6;
 
 $brand-primary:                     #00416A !default;
 $brand-success:                     #008000 !default;
