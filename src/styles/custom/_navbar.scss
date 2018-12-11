@@ -192,21 +192,26 @@
 
   .navbar-right {
     margin-right: 0 !important;
-  }
 
-  .navbar-nav > li > .dropdown-menu, .dropdown-menu .divider  {
-    background-color: #00416A;
-  }
+    > li > .dropdown-menu, .dropdown-menu .divider  {
+      background-color: $brand-primary;
+    }
 
-  .dropdown-menu > li > a {
-    color: white;
-    &:hover,
-    &focus {
-      background-color: transparent;
-
+    .dropdown-menu {
+      border: none;
+      > li {
+        padding: 5px 0;
+        > a {
+          color: $white;
+          &:hover,
+          &:focus {
+            background-color: $white;
+            color: $brand-primary;
+          }
+        }
+      }
     }
   }
-
 }
 
 .app-header {
