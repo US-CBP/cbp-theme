@@ -222,14 +222,9 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
     bottom: 0;
   }
 
-  /*.mdl-card__supporting-text {
+  .mdl-card__supporting-text {
     &.with-footer {
       padding-bottom: 56px;
-    }
-  }*/
-  .mdl-card__supporting-text {
-    .with-footer {
-    padding-bottom: 56px;
     }
   }
 }
