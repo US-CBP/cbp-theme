@@ -1,13 +1,23 @@
 /* CARDS */
-@mixin border($width, $color) {
+@import '../custom/_mixins.scss';
+
+@mixin border-all($width, $color) {
   border: $width solid $color;
 }
+
+@mixin border($direction, $width, $color) {
+  border-#{$direction}: $width solid $color;
+}
+
 $card-background-color: unquote("rgb(#{$white})");
 $card-text-color: unquote("rgb(#{$gray-darker})");
 $card-image-placeholder-color: $gray-lighter;
 $card-supporting-text-text-color: unquote("rgba(#{$gray-darker}, 0.54)");
 $card-border-color: $gray-lighter;
+$card-border-width: 3px;
+$card-boxshadow: 0 0 4px 1px lighten(#000, 25%);
 $card-subtitle-color: unquote("rgba(#{$gray-darker}, 0.54)");
+$cbp-card-height: 250px;
 
 $card-font-size: $font-size-base; // 13px
 $card-title-font-size: ceil(($font-size-base * 1.20)); // ~18px
@@ -16,6 +26,7 @@ $card-subtitle-font-size: floor(($font-size-base * 1.07)); // ~16px
 $card-supporting-text-font-size: floor(($font-size-base * 1.04)); // ~13px
 $card-supporting-text-line-height: 18px;
 $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
+
 .mdl-card {
   display: flex;
   flex-direction: column;
@@ -128,44 +139,44 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   @extend .mdl-card;
   background-color: $gray-lightest;
   box-shadow: none;
-  border-radius: 5px;
-  @include border(3px, $gray-lighter);
+  @include border-radius(5px);
+  @include border-all(3px, $gray-lighter);
 
   &.mdl-card-shadow {
     @include shadow-4dp();
   }
 
   &.mdl-card-border {
-    @include border(3px, $gray-lighter);
+    @include border-all($card-border-width, $gray-lighter);
   }
 
   &.mdl-card-expand {
     &:focus,
     &:hover,
     &:active {
-      box-shadow: 0 0 4px 1px lighten(#000, 25%);
-      @include border(3px, $brand-info);
+      @include box-shadow($card-boxshadow);
+      @include border-all($card-border-width, $brand-info);
       &.mdl-card-border {
-        @include border(3px, $brand-info);
+        @include border-all($card-border-width, $brand-info);
       }
     }
   }
   &:focus,
   &:hover,
   &:active {
-    box-shadow: 0 0 4px 1px lighten(#000, 25%);
-    @include border(3px, $brand-info);
+    @include box-shadow($card-boxshadow);
+    @include border-all($card-border-width, $brand-info);
 
     .mdl-card--border {
-      border-top: 3px solid $brand-info;
+      @include border('top', $card-border-width, $brand-info);
     }
   }
   &:focus-within {
-    box-shadow: 0 0 4px 1px lighten(#000, 25%);
-    @include border(3px, $brand-info);
+    @include box-shadow($card-boxshadow);
+    @include border-all($card-border-width, $brand-info);
 
     .mdl-card--border {
-      border-top: 3px solid $brand-info;
+      @include border('top', $card-border-width, $brand-info);
     }
   }
 }
@@ -173,8 +184,13 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 .mdl-card__actions {
   @extend .mdl-card__actions;
 
+  .btn {
+    @include border-all(2px, $gray-medium);
+    color: $gray;
+  }
+
   &.mdl-card--border {
-      border-top: 3px solid $gray-lighter;
+    @include border('top', $card-border-width, $gray-lighter);
     }
 
   &:focus,
@@ -183,8 +199,8 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
     background-color: $white;
     .btn {
       background-color: transparent;
-      @include border(2px, $gray-medium);
-      border-radius: 3px;
+      @include border-all(2px, $gray-medium);
+      @include border-radius(3px);
       color: $gray;
 
       &:focus,
@@ -229,6 +245,58 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   }
 }
 
+.mdl-card__actions-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+  .btn {
+    background-color: transparent;
+    @include border-all(2px, $gray);
+    @include border-radius(3px);
+    color: $gray;
+    font-weight: 500;
+
+    + .btn {
+      margin-left: 5px;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      border: 2px solid $brand-info;
+      background-color: $brand-info;
+      color: $white;
+    }
+  }
+}
+
+.mdl-card__actions-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+
+  .btn {
+    border: none;
+    color: $gray;
+    font-size: inherit;
+    background-color: transparent;
+
+    + .btn {
+      margin-left: 5px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $brand-info;
+      background-color: transparent;
+      .text-muted {
+        color: $brand-info;
+      }
+    }
+  }
+}
 /* Expand Cards individually */
 
 .mdl-card-single-expansion {
@@ -241,7 +309,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
 
   .mdl-card {
     @extend .mdl-card;
-    height: 250px;
+    height: $cbp-card-height;
   }
 
   .mdl-card__title {
@@ -259,7 +327,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   .mdl-card__actions {
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: ($cbp-card-height / 5);
   }
 
   .list-inline {
