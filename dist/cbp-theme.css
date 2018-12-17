@@ -17167,6 +17167,13 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   -o-transition: border-color ease-in-out 0.2s;
 }
 
+.navbar .open .caret, .app-header .open .caret, .app-header-bottom .open .caret, .cbp-header .open .caret {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
 .navbar .dropdown-menu, .app-header .dropdown-menu, .app-header-bottom .dropdown-menu, .cbp-header .dropdown-menu, .navbar .ui-datepicker, .app-header .ui-datepicker, .app-header-bottom .ui-datepicker, .cbp-header .ui-datepicker {
   text-shadow: none;
 }
@@ -17361,6 +17368,80 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   border-bottom: 2px solid #1460aa;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-nav > li > .dropdown-menu, .navbar-nav > li > .ui-datepicker {
+  background-color: #00416A;
+}
+
+.navbar-nav .dropdown-menu, .navbar-nav .ui-datepicker {
+  border: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.navbar-nav .dropdown-menu > li:not(.divider), .navbar-nav .ui-datepicker > li:not(.divider) {
+  padding: 5px 0;
+  margin: 0 10px;
+}
+
+.navbar-nav .dropdown-menu > li:not(.divider) > a, .navbar-nav .ui-datepicker > li:not(.divider) > a {
+  color: #FFF;
+  font-weight: 700;
+}
+
+.navbar-nav .dropdown-menu > li:not(.divider) > a:hover, .navbar-nav .ui-datepicker > li:not(.divider) > a:hover, .navbar-nav .dropdown-menu > li:not(.divider) > a:focus, .navbar-nav .ui-datepicker > li:not(.divider) > a:focus {
+  background-color: #FFF;
+  color: #00416A;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:first-child, .navbar-nav.navbar-right .ui-datepicker li:first-child {
+  margin: 0 10px;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:first-child p, .navbar-nav.navbar-right .ui-datepicker li:first-child p {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:first-child p.label, .navbar-nav.navbar-right .ui-datepicker li:first-child p.label {
+  font-size: 80%;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:last-child, .navbar-nav.navbar-right .ui-datepicker li:last-child {
+  padding: 5px 0 10px 0;
+  margin: 0 10px;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:last-child .btn, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a {
+  border-radius: 3px;
+  border: 1px solid #FFF;
+  color: white;
+  background-color: #00416A;
+  width: 100%;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:last-child .btn a, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn a, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default a, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default a, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default a, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a a {
+  color: white;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:last-child .btn a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default a:hover, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a a:hover, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a a:hover, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .btn a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn a:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default a:focus, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default a:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a a:focus, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a a:focus, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a a:focus {
+  color: #00416A;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:last-child .btn:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:hover, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:hover, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:hover, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .btn:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:focus, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:focus, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:focus, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:focus {
+  background-color: #FFF;
+  color: #00416A;
+}
+
+.navbar-nav.navbar-right .dropdown-menu li:last-child .btn:hover a, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:hover a, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:hover a, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:hover a, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:hover a, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:hover a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:hover a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:hover a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:hover a, .navbar-nav.navbar-right .dropdown-menu li:last-child .btn:focus a, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:focus a, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:focus a, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:focus a, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:focus a, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:focus a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:focus a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:focus a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:focus a {
+  color: #00416A;
+  outline: none;
+  text-decoration: none;
 }
 
 .popover {
