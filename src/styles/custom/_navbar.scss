@@ -1,3 +1,5 @@
+$dropdownMenu-content: 5px;
+
 .navbar {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 
@@ -78,6 +80,12 @@
 
   .caret, .caret:hover {
     @include transition(border-color ease-in-out .2s);
+  }
+
+  .open {
+    .caret {
+      @include rotate(180deg);
+    }
   }
   .dropdown-menu {
     text-shadow: none;
@@ -192,25 +200,6 @@
 
   .navbar-right {
     margin-right: 0 !important;
-
-    > li > .dropdown-menu, .dropdown-menu .divider  {
-      background-color: $brand-primary;
-    }
-
-    .dropdown-menu {
-      border: none;
-      > li {
-        padding: 5px 0;
-        > a {
-          color: $white;
-          &:hover,
-          &:focus {
-            background-color: $white;
-            color: $brand-primary;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -264,7 +253,9 @@
         padding-bottom: 10px;
     }
     .collapse.in{
+        max-height: none;
         display:block !important;
+        height: 100vh;
     }
   }
 }
@@ -296,7 +287,221 @@
 
 }
 
-.mobile-cbp-header {
+.navbar-nav {
+  > li > .dropdown-menu, {
+    background-color: $brand-primary;
+  }
+
+  .dropdown-menu {
+    border: none;
+    border-radius: 0 0 5px 5px;
+    > li:not(.divider) {
+      padding: $dropdownMenu-content 0;
+      margin: 0 ($dropdownMenu-content * 2);
+
+      > a {
+        color: $white;
+        font-weight: 700;
+        &:hover,
+        &:focus {
+          background-color: $white;
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+
+  &.navbar-right {
+    .dropdown-menu {
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: $white;
+        font-style: italic;
+        font-weight: 400;
+
+        &.label {
+          font-size: 80%;
+        }
+      }
+
+      .logout .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Logout button */
+.logout {
+  .btn {
+    border-radius: 3px;
+    border: 1px solid $white;
+    color: white;
+    background-color: $brand-primary;
+
+    a {
+      color: white;
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $brand-primary;
+      a {
+        color: $brand-primary;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* Mobile header */
+@media (max-width:$screen-sm) {
+  .cbp-header {
+    .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      padding-left: 0;
+    }
+    .list-group {
+      margin: 0;
+    }
+    .list-group-item {
+      padding: 10px 10px;
+      // Place the border on the list items and negative margin up for better styling
+      margin-bottom: -1px;
+      background-color: inherit;
+      border: none;
+
+    }
+    .list-group .list-group-item {
+        a {
+            color: $text-color;
+
+            &:not(.label-info):not(.label-success){
+                color: white;
+            }
+        }
+
+        &:hover, &:active, &:focus {
+            background-color: #003e65;
+        }
+    }
+    .panel {
+      margin-bottom: $line-height-computed;
+      background-color: inherit;
+      border: none;
+    }
+    .panel-body {
+      padding: 0 15px;
+      @include clearfix;
+      background-color: #003e65;
+    }
+  }
+  .panel-heading {
+    padding: 10px 0;
+    color: white;
+  }
+  .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: inherit;
+
+    > a,
+    > small,
+    > .small,
+    > small > a,
+    > .small > a {
+      color: inherit;
+    }
+  }
+  .panel {
+    > .list-group,
+    > .panel-collapse > .list-group {
+      margin-bottom: 0;
+
+      .list-group-item {
+        border-width: 1px 0;
+        border-radius: 0;
+      }
+
+      // Add border top radius for first one
+      &:first-child {
+        .list-group-item:first-child {
+          border-top: 0;
+          @include border-top-radius(($panel-border-radius - 1));
+        }
+      }
+
+      // Add border bottom radius for last one
+      &:last-child {
+        .list-group-item:last-child {
+          border-bottom: 0;
+          @include border-bottom-radius(($panel-border-radius - 1));
+        }
+      }
+    }
+    > .panel-heading + .panel-collapse > .list-group {
+      .list-group-item:first-child {
+        @include border-top-radius(0);
+      }
+    }
+  }
+
+  .panel-group {
+     margin-bottom: $line-height-computed;
+     background-color: inherit;
+
+     // Tighten up margin so it's only between panels
+     .panel {
+       margin-bottom: 0;
+       border-radius: $panel-border-radius;
+
+       + .panel {
+         margin-top: 5px;
+       }
+     }
+
+     .panel-heading {
+       border: none;
+     }
+   }
+
+   .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a,
+   .filter-list[role="tablist"] > .filter-group-title {
+       cursor: pointer;
+       color: white;
+
+       &[aria-expanded="false"] .fa.fa-angle-right {
+           @include transition(all 0.25s linear);
+       }
+       &[aria-expanded="true"] .fa.fa-angle-right {
+           @include transition(all 0.25s linear);
+           @include transform(rotate(90deg));
+       }
+   }
+
+  .panel-group .panel:not(.panel-default) + .panel{
+      border-top: none;
+  }
+}
+
+.app-name {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  font-style: italic;
+}
+
+/* .mobile-cbp-header {
+  padding: 0 9px;
+
   .list-group {
     margin-bottom: 0;
     padding: 0;
@@ -308,15 +513,13 @@
     }
 
     .list-group-item {
-      background-color: inherit;
-      border: none;
-      padding: 9px 0;
 
       .panel-group {
         .panel:not(panel-default) {
           background: #003e65;
           + .panel {
             border: none;
+            margin-top: ($dropdownMenu-content * 2);
           }
         }
         .panel-title {
@@ -358,39 +561,14 @@
       a {
         color: white;
       }
-
-      .btn {
-        border-radius: 3px;
-        border: 1px solid $white;
-        color: white;
-        background-color: $brand-primary;
-        a {
-          color: white;
-          &:hover,
-          &:focus {
-            color: $brand-primary;
-          }
-        }
-        &:hover,
-        &:focus {
-          background-color: $white;
-          color: $brand-primary;
+      .logout {
+        .btn {
           a {
-            color: $brand-primary;
-            outline: none;
-            text-decoration: none;
+            color: white;
           }
         }
       }
     }
   }
-}
-
-/*.navbar-collapse.collapsing {
-    height: 0 !important;
-}
-.navbar-collapse.collapse.in{
-    max-height: none;
-    height: 100vh;
 }
 */

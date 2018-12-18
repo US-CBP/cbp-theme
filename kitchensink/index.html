@@ -72,6 +72,9 @@
                   <span class="caret"></span>
                 </a>
                 <ul rel="right-menu-links" role="menu" class="dropdown-menu" id="user-menu">
+                  <li class="app-name">
+                    <p class="label normal">Application Name</p>
+                  </li>
                   <li>
                     <a title="Application Overview" href="#user-menu">Application Overview</a>
                   </li>
@@ -88,7 +91,13 @@
                     <a title="Entitlement Self Service" href="#user-menu">Entitlement Self Service</a>
                   </li>
                   <li>
-                    <a title="Logout" href="#user-menu">Logout</a>
+                    <div class="logout">
+                      <button class="btn">
+                        <i class="fa fa-sign-out fa-fw"></i>
+                        <a title="Logout" href="#user-menu">Not you? Click to Logout</a>
+                      </button>
+                    </div>
+
                   </li>
                 </ul>
               </li>
@@ -96,60 +105,66 @@
             <div class="visible-xs mobile-cbp-header">
               <ul class="list-group">
                 <li class="list-group-item" style=" color: white;">
-                  <h2 title="FIRST.LAST@CBP.DHS.GOV">First Last Name</h2>
+                  <h2 class="margin-0" title="FIRST.LAST@CBP.DHS.GOV">First Last Name</h2>
                 </li>
                 <li class="list-group-item">
-                  <button class="btn">
+                  <div class="logout">
+                    <button class="btn">
+                      <i class="fa fa-sign-out fa-fw"></i>
+                      <a title="Logout" href="#user-menu">Not you? Click to Logout</a>
+                    </button>
+                  </div>
+                  <!-- <button class="btn">
                     <i class="fa fa-sign-out fa-fw"></i>
                     <a title="Logout" href="#user-menu">Not you? Click to Logout</a>
-                  </button>
+                  </button> -->
                 </li>
-                <li class="list-group-item" style="color: white;">
-                  <h4 style="
+                <li class="list-group-item app-name" style="color: white;">
+                  <h6 class="normal margin-0" style="
                       border-top: 1px solid #aaa;
                       border-bottom: 1px solid #aaa;
                       padding: 9px 0;
                       font-style: italic;
                       font-weight: 400;
-                  ">Application Name</h4>
+                  ">Application Name</h6>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item margin-0">
                   <div class="panel-group" id="2accordion" role="tablist">
                     <div class="panel">
                       <div class="panel-heading" role="tab" id="2headingOne">
                         <h3 class="panel-title">
                         <a role="button" data-toggle="collapse" data-parent="#2accordion" href="#2collapseOne" aria-expanded="false" aria-controls="2collapseOne" class="collapsed"><i class="fa fa-angle-right"></i>
-                        Application Directory</a>
+                        &nbsp;Application Directory</a>
                         </h3>
                       </div>
                       <div id="2collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="2headingOne" aria-expanded="false" style="height: 0px;">
                         <div class="panel-body">
-                          <ul class="list-group" role="menu">
+                          <ul class="list-group margin-bottom-0" role="menu">
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Recent Apps</a>
-                              </h4>
+                              </h6>
                             </li>
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Another Application</a>
-                              </h4>
+                              </h6>
                             </li>
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Yet Another Application</a>
-                              </h4>
+                              </h6>
                             </li>
                           </ul>
                         </div>
                       </div>
                     </div>
-                    <div class="panel">
+                    <div class="panel margin-bottom-1">
                       <div class="panel-heading" role="tab" id="2headingTwo">
                         <h3 class="panel-title">
                         <a role="button" href="#cbp-header" >
                           <i class="fa fa-comment"></i>
-                        Feedback</a>
+                        &nbsp;Feedback</a>
                         </h3>
                       </div>
                       <!-- <div id="2collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="2headingTwo" aria-expanded="false" style="">
@@ -164,36 +179,36 @@
                         <a role="button" data-toggle="collapse" data-parent="#2accordion" href="#2collapseThree" aria-expanded="false" aria-controls="2collapseTwo" class="collapsed">
                           <i class="fa fa-angle-right"></i>
                           <i class="fa fa-user fa-fw"></i>
-                        Preferences</a>
+                          Preferences</a>
                         </h3>
                       </div>
                       <div id="2collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="2headingTwo" aria-expanded="false" style="">
                         <div class="panel-body">
                           <ul class="list-group" role="menu">
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Application Overview</a>
-                              </h4>
+                              </h6>
                             </li>
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">User Guide</a>
-                              </h4>
+                              </h6>
                             </li>
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Frequently Asked Questions</a>
-                              </h4>
+                              </h6>
                             </li>
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Release Notes</a>
-                              </h4>
+                              </h6>
                             </li>
                             <li class="list-group-item" style="background-color: inherit;">
-                              <h4>
+                              <h6>
                                 <a href="#cbp-header" style="color: white;">Entitlement Self Service</a>
-                              </h4>
+                              </h6>
                             </li>
                           </ul>
                         </div>
