@@ -1,5 +1,17 @@
 $dropdownMenu-content: 5px;
 
+@mixin header-collapse-btn {
+  font-size: 18px;
+  background-color: inherit;
+  color: white;
+  border: none;
+  margin: 0 8px 0 0;
+  padding: 16px 0;
+  height: 50px;
+  line-height: 20px;
+
+}
+
 .navbar {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 
@@ -201,6 +213,38 @@ $dropdownMenu-content: 5px;
   .navbar-right {
     margin-right: 0 !important;
   }
+
+  .app-name {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    font-style: italic;
+  }
+
+  .btn {
+    border-radius: 3px;
+    border: 1px solid $white;
+    color: white;
+    background-color: $brand-primary;
+
+    a {
+      color: white;
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $brand-primary;
+      a {
+        color: $brand-primary;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .app-header {
@@ -326,249 +370,164 @@ $dropdownMenu-content: 5px;
         }
       }
 
-      .logout .btn {
+      .btn {
         width: 100%;
       }
     }
   }
 }
 
-/* Logout button */
-.logout {
-  .btn {
-    border-radius: 3px;
-    border: 1px solid $white;
-    color: white;
-    background-color: $brand-primary;
+/* Mobile header */
+@media (max-width:$screen-sm) {
 
-    a {
-      color: white;
-      &:hover,
-      &:focus {
-        color: $brand-primary;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $white;
-      color: $brand-primary;
-      a {
-        color: $brand-primary;
+  .cbp-header {
+    .navbar-toggle {
+      border: none;
+      &:focus,
+      &:hover {
+        background-color: inherit;
         outline: none;
         text-decoration: none;
       }
     }
-  }
-}
 
+    button.navbar-toggle.collapsed:before {
+      font-family: FontAwesome;
+      content: "\f0c9 \00a0\00a0 Menu";
+      @include header-collapse-btn();
+    }
 
-/* Mobile header */
-@media (max-width:$screen-sm) {
-  .cbp-header {
+    button.navbar-toggle:before {
+      font-family: FontAwesome;
+      content: "\f00d \00a0\00a0 Close";
+      @include header-collapse-btn();
+    }
+
+    .navbar-collapse {
+      &.in {
+        overflow-y: unset;
+      }
+    }
+
     .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       padding-left: 0;
     }
+
     .list-group {
       margin: 0;
     }
+
     .list-group-item {
-      padding: 10px 10px;
-      // Place the border on the list items and negative margin up for better styling
+      padding: ($dropdownMenu-content * 2);
       margin-bottom: -1px;
       background-color: inherit;
       border: none;
+      color: white;
 
+      &.app-name {
+        border-top: 1px solid $gray-light;
+        border-bottom: 1px solid $gray-light;
+        margin: ($dropdownMenu-content * 2) 0 0 0;
+      }
     }
+
     .list-group .list-group-item {
-        a {
-            color: $text-color;
+      a {
+          color: $text-color;
 
-            &:not(.label-info):not(.label-success){
-                color: white;
-            }
-        }
+          &:not(.label-info):not(.label-success){
+              color: white;
+          }
+      }
 
-        &:hover, &:active, &:focus {
-            background-color: #003e65;
+      &:hover, &:active, &:focus {
+          background-color: $navbar-inverse-bg;
+      }
+
+      .btn {
+        &:focus,
+        &:hover {
+          a {
+            color: $brand-primary;
+          }
         }
+      }
     }
     .panel {
       margin-bottom: $line-height-computed;
       background-color: inherit;
       border: none;
+
+      > .list-group,
+      > .panel-collapse > .list-group {
+        margin-bottom: 0;
+
+        .list-group-item {
+          border-width: 1px 0;
+          border-radius: 0;
+        }
+      }
     }
+
     .panel-body {
-      padding: 0 15px;
+      padding: 0 ($dropdownMenu-content * 3);
       @include clearfix;
-      background-color: #003e65;
-    }
-  }
-  .panel-heading {
-    padding: 10px 0;
-    color: white;
-  }
-  .panel-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 18px;
-    color: inherit;
+      background-color: $navbar-inverse-bg;
 
-    > a,
-    > small,
-    > .small,
-    > small > a,
-    > .small > a {
-      color: inherit;
+      .list-group-item > h6 {
+        margin: 0;
+      }
     }
-  }
-  .panel {
-    > .list-group,
-    > .panel-collapse > .list-group {
+
+    .panel-heading {
+      padding: ($dropdownMenu-content * 2) 0;
+      color: white;
+    }
+
+    .panel-title {
+      margin-top: 0;
       margin-bottom: 0;
+      font-size: 18px;
+      color: inherit;
 
-      .list-group-item {
-        border-width: 1px 0;
-        border-radius: 0;
-      }
-
-      // Add border top radius for first one
-      &:first-child {
-        .list-group-item:first-child {
-          border-top: 0;
-          @include border-top-radius(($panel-border-radius - 1));
-        }
-      }
-
-      // Add border bottom radius for last one
-      &:last-child {
-        .list-group-item:last-child {
-          border-bottom: 0;
-          @include border-bottom-radius(($panel-border-radius - 1));
-        }
+      > a,
+      > small,
+      > .small,
+      > small > a,
+      > .small > a {
+        color: inherit;
       }
     }
-    > .panel-heading + .panel-collapse > .list-group {
-      .list-group-item:first-child {
-        @include border-top-radius(0);
-      }
-    }
-  }
 
-  .panel-group {
-     margin-bottom: $line-height-computed;
-     background-color: inherit;
+    .panel-group {
+       margin-bottom: $line-height-computed;
+       background-color: inherit;
 
-     // Tighten up margin so it's only between panels
-     .panel {
-       margin-bottom: 0;
-       border-radius: $panel-border-radius;
+       .panel {
+         margin-bottom: 0;
 
-       + .panel {
-         margin-top: 5px;
+         + .panel {
+           margin-top: $dropdownMenu-content;
+         }
+       }
+
+       .panel-heading {
+         border: none;
        }
      }
 
-     .panel-heading {
-       border: none;
-     }
-   }
-
-   .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a,
-   .filter-list[role="tablist"] > .filter-group-title {
+     .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a {
        cursor: pointer;
        color: white;
-
-       &[aria-expanded="false"] .fa.fa-angle-right {
-           @include transition(all 0.25s linear);
+       &:focus,
+       &:hover {
+        outline: none;
+        text-decoration: none;
        }
-       &[aria-expanded="true"] .fa.fa-angle-right {
-           @include transition(all 0.25s linear);
-           @include transform(rotate(90deg));
-       }
-   }
+     }
 
-  .panel-group .panel:not(.panel-default) + .panel{
+    .panel-group .panel:not(.panel-default) + .panel{
       border-top: none;
-  }
-}
-
-.app-name {
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  font-style: italic;
-}
-
-/* .mobile-cbp-header {
-  padding: 0 9px;
-
-  .list-group {
-    margin-bottom: 0;
-    padding: 0;
-
-    .list-group-item:first-child {
-      h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 0;
-      }
-    }
-
-    .list-group-item {
-
-      .panel-group {
-        .panel:not(panel-default) {
-          background: #003e65;
-          + .panel {
-            border: none;
-            margin-top: ($dropdownMenu-content * 2);
-          }
-        }
-        .panel-title {
-          font-size: 18px;
-          a {
-            color: white;
-            &:focus,
-            &:active,
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-      }
-
-      .panel-heading {
-        padding: 10px 0;
-      }
-
-      .panel-body {
-        padding: 0 15px;
-        background: #003e65;
-
-        .list-group {
-          padding: 0;
-          .list-group-item {
-            padding: 9px 0;
-
-            h1, h2, h3, h4, h5, h6 {
-              margin: 0;
-              a:not(.label-info):not(.label-success) {
-                color: white;
-              }
-            }
-          }
-        }
-      }
-
-      a {
-        color: white;
-      }
-      .logout {
-        .btn {
-          a {
-            color: white;
-          }
-        }
-      }
     }
   }
 }
-*/
