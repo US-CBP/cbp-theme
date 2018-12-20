@@ -30,15 +30,13 @@
               <span class="visible-xs visible-sm"><span class="cbp-brand">Brand</span></span>
               <span class="visible-md visible-lg"><span class="dhs-brand">Organization Sub Branding</span></span>
             </a>
-            <button data-target="#navbar-user-info" data-toggle="collapse" type="button" class="navbar-toggle">
+            <button data-target="#navbar-user-info" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
               <span class="sr-only">Toggle Global Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
             </button>
+
           </div>
           <div id="navbar-user-info" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="hidden-xs nav navbar-nav navbar-left">
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
                   Kitchen Sink <span class="caret"></span> <!-- Your application name goes here!!!-->
@@ -51,7 +49,7 @@
                 </ul>
               </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="hidden-xs nav navbar-nav navbar-right">
               <li>
                 <a href="#cbp-header">
                   <span class="fa fa-comment"></span>
@@ -65,8 +63,8 @@
                   <span class="caret"></span>
                 </a>
                 <ul rel="right-menu-links" role="menu" class="dropdown-menu" id="user-menu">
-                  <li>
-                    <p class="label">Application Name</p>
+                  <li class="app-name">
+                    <p class="label normal">Application Name</p>
                   </li>
                   <li>
                     <a title="Application Overview" href="#user-menu">Application Overview</a>
@@ -92,6 +90,105 @@
                 </ul>
               </li>
             </ul>
+            <div class="visible-xs">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h2 class="margin-0" title="FIRST.LAST@CBP.DHS.GOV">First Last Name</h2>
+                </li>
+                <li class="list-group-item">
+                  <button class="btn">
+                    <i class="fa fa-sign-out fa-fw"></i>
+                    <a title="Logout" href="#user-menu">Not you? Click to Logout</a>
+                  </button>
+                </li>
+                <li class="list-group-item app-name">
+                  <h6 class="normal margin-0">Application Name</h6>
+                </li>
+                <li class="list-group-item margin-0">
+                  <div class="panel-group" id="2accordion" role="tablist">
+                    <div class="panel">
+                      <div class="panel-heading" role="tab" id="2headingOne">
+                        <h3 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#2accordion" href="#2collapseOne" aria-expanded="false" aria-controls="2collapseOne" class="collapsed"><i class="fa fa-angle-right"></i>
+                        &nbsp;Application Directory</a>
+                        </h3>
+                      </div>
+                      <div id="2collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="2headingOne" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body">
+                          <ul class="list-group margin-bottom-0" role="menu">
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header">Recent Apps</a>
+                              </h6>
+                            </li>
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >Another Application</a>
+                              </h6>
+                            </li>
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >Yet Another Application</a>
+                              </h6>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel margin-bottom-1">
+                      <div class="panel-heading" role="tab" id="2headingTwo">
+                        <h3 class="panel-title">
+                        <a role="button" href="#cbp-header" >
+                          <i class="fa fa-comment"></i>
+                        &nbsp;Feedback</a>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading" role="tab" id="2headingTwo">
+                        <h3 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#2accordion" href="#2collapseThree" aria-expanded="false" aria-controls="2collapseTwo" class="collapsed">
+                          <i class="fa fa-angle-right"></i>
+                          <i class="fa fa-user fa-fw"></i>
+                          Preferences</a>
+                        </h3>
+                      </div>
+                      <div id="2collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="2headingTwo" aria-expanded="false" >
+                        <div class="panel-body">
+                          <ul class="list-group" role="menu">
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >Application Overview</a>
+                              </h6>
+                            </li>
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >User Guide</a>
+                              </h6>
+                            </li>
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >Frequently Asked Questions</a>
+                              </h6>
+                            </li>
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >Release Notes</a>
+                              </h6>
+                            </li>
+                            <li class="list-group-item" >
+                              <h6>
+                                <a href="#cbp-header" >Entitlement Self Service</a>
+                              </h6>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
