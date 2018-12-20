@@ -17288,6 +17288,38 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   margin-right: 0 !important;
 }
 
+.cbp-header .app-name {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  font-style: italic;
+}
+
+.cbp-header .btn, .cbp-header .ui-datepicker button.ui-state-default, .ui-datepicker .cbp-header button.ui-state-default, .cbp-header .switch-toggle a, .switch-toggle .cbp-header a {
+  border-radius: 3px;
+  border: 1px solid #FFF;
+  color: white;
+  background-color: #00416A;
+}
+
+.cbp-header .btn a, .cbp-header .ui-datepicker button.ui-state-default a, .ui-datepicker .cbp-header button.ui-state-default a, .cbp-header .switch-toggle a a, .switch-toggle .cbp-header a a {
+  color: white;
+}
+
+.cbp-header .btn a:hover, .cbp-header .ui-datepicker button.ui-state-default a:hover, .ui-datepicker .cbp-header button.ui-state-default a:hover, .cbp-header .switch-toggle a a:hover, .switch-toggle .cbp-header a a:hover, .cbp-header .btn a:focus, .cbp-header .ui-datepicker button.ui-state-default a:focus, .ui-datepicker .cbp-header button.ui-state-default a:focus, .cbp-header .switch-toggle a a:focus, .switch-toggle .cbp-header a a:focus {
+  color: #00416A;
+}
+
+.cbp-header .btn:hover, .cbp-header .ui-datepicker button.ui-state-default:hover, .ui-datepicker .cbp-header button.ui-state-default:hover, .cbp-header .switch-toggle a:hover, .switch-toggle .cbp-header a:hover, .cbp-header .btn:focus, .cbp-header .ui-datepicker button.ui-state-default:focus, .ui-datepicker .cbp-header button.ui-state-default:focus, .cbp-header .switch-toggle a:focus, .switch-toggle .cbp-header a:focus {
+  background-color: #FFF;
+  color: #00416A;
+}
+
+.cbp-header .btn:hover a, .cbp-header .ui-datepicker button.ui-state-default:hover a, .ui-datepicker .cbp-header button.ui-state-default:hover a, .cbp-header .switch-toggle a:hover a, .switch-toggle .cbp-header a:hover a, .cbp-header .btn:focus a, .cbp-header .ui-datepicker button.ui-state-default:focus a, .ui-datepicker .cbp-header button.ui-state-default:focus a, .cbp-header .switch-toggle a:focus a, .switch-toggle .cbp-header a:focus a {
+  color: #00416A;
+  outline: none;
+  text-decoration: none;
+}
+
 .app-header {
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
@@ -17341,7 +17373,9 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
     padding-bottom: 10px;
   }
   .app-header .collapse.in {
+    max-height: none;
     display: block !important;
+    height: 100vh;
   }
 }
 
@@ -17394,13 +17428,7 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   color: #00416A;
 }
 
-.navbar-nav.navbar-right .dropdown-menu li:first-child, .navbar-nav.navbar-right .ui-datepicker li:first-child {
-  margin: 0 10px;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-}
-
-.navbar-nav.navbar-right .dropdown-menu li:first-child p, .navbar-nav.navbar-right .ui-datepicker li:first-child p {
+.navbar-nav.navbar-right .dropdown-menu p, .navbar-nav.navbar-right .ui-datepicker p {
   margin: 0;
   padding: 0;
   color: #FFF;
@@ -17408,40 +17436,142 @@ fieldset[disabled] .cbp-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   font-weight: 400;
 }
 
-.navbar-nav.navbar-right .dropdown-menu li:first-child p.label, .navbar-nav.navbar-right .ui-datepicker li:first-child p.label {
+.navbar-nav.navbar-right .dropdown-menu p.label, .navbar-nav.navbar-right .ui-datepicker p.label {
   font-size: 80%;
 }
 
-.navbar-nav.navbar-right .dropdown-menu li:last-child, .navbar-nav.navbar-right .ui-datepicker li:last-child {
-  padding: 5px 0 10px 0;
-  margin: 0 10px;
-}
-
-.navbar-nav.navbar-right .dropdown-menu li:last-child .btn, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a {
-  border-radius: 3px;
-  border: 1px solid #FFF;
-  color: white;
-  background-color: #00416A;
+.navbar-nav.navbar-right .dropdown-menu .btn, .navbar-nav.navbar-right .ui-datepicker .btn, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu button.ui-state-default, .navbar-nav.navbar-right .ui-datepicker button.ui-state-default, .navbar-nav.navbar-right .dropdown-menu .switch-toggle a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu a, .navbar-nav.navbar-right .ui-datepicker .switch-toggle a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker a {
   width: 100%;
 }
 
-.navbar-nav.navbar-right .dropdown-menu li:last-child .btn a, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn a, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default a, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default a, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default a, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a a {
-  color: white;
-}
-
-.navbar-nav.navbar-right .dropdown-menu li:last-child .btn a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default a:hover, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a a:hover, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a a:hover, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .btn a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn a:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default a:focus, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default a:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a a:focus, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a a:focus, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a a:focus {
-  color: #00416A;
-}
-
-.navbar-nav.navbar-right .dropdown-menu li:last-child .btn:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:hover, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:hover, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:hover, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:hover, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:hover, .navbar-nav.navbar-right .dropdown-menu li:last-child .btn:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:focus, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:focus, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:focus, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:focus, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:focus, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:focus {
-  background-color: #FFF;
-  color: #00416A;
-}
-
-.navbar-nav.navbar-right .dropdown-menu li:last-child .btn:hover a, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:hover a, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:hover a, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:hover a, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:hover a, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:hover a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:hover a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:hover a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:hover a, .navbar-nav.navbar-right .dropdown-menu li:last-child .btn:focus a, .navbar-nav.navbar-right .ui-datepicker li:last-child .btn:focus a, .navbar-nav.navbar-right .dropdown-menu li:last-child .ui-datepicker button.ui-state-default:focus a, .ui-datepicker .navbar-nav.navbar-right .dropdown-menu li:last-child button.ui-state-default:focus a, .navbar-nav.navbar-right .ui-datepicker li:last-child button.ui-state-default:focus a, .navbar-nav.navbar-right .dropdown-menu li:last-child .switch-toggle a:focus a, .switch-toggle .navbar-nav.navbar-right .dropdown-menu li:last-child a:focus a, .navbar-nav.navbar-right .ui-datepicker li:last-child .switch-toggle a:focus a, .switch-toggle .navbar-nav.navbar-right .ui-datepicker li:last-child a:focus a {
-  color: #00416A;
-  outline: none;
-  text-decoration: none;
+/* Mobile header */
+@media (max-width: 768px) {
+  .cbp-header .navbar-toggle {
+    border: none;
+  }
+  .cbp-header .navbar-toggle:focus, .cbp-header .navbar-toggle:hover {
+    background-color: inherit;
+    outline: none;
+    text-decoration: none;
+  }
+  .cbp-header button.navbar-toggle {
+    font-size: 18px;
+    background-color: inherit;
+    color: white;
+    border: none;
+    margin: 0;
+    padding: 16px 10px;
+    height: 50px;
+    line-height: 20px;
+  }
+  .cbp-header button.navbar-toggle.collapsed::before {
+    font-family: FontAwesome;
+    content: "\f0c9 \00a0\00a0 Menu";
+  }
+  .cbp-header button.navbar-toggle::before {
+    font-family: FontAwesome;
+    content: "\f00d \00a0\00a0 Close";
+  }
+  .cbp-header .navbar-collapse.in {
+    overflow-y: unset;
+  }
+  .cbp-header .page-header, .cbp-header h1, .cbp-header h2, .cbp-header h3, .cbp-header h4, .cbp-header h5, .cbp-header h6, .cbp-header .h1, .cbp-header .h2, .cbp-header .h3, .cbp-header .h4, .cbp-header .h5, .cbp-header .h6 {
+    padding-left: 0;
+  }
+  .cbp-header .list-group {
+    margin: 0;
+  }
+  .cbp-header .list-group-item {
+    padding: 10px;
+    margin-bottom: -1px;
+    background-color: inherit;
+    border: none;
+    color: white;
+  }
+  .cbp-header .list-group-item.app-name {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    margin: 10px 0 0 0;
+  }
+  .cbp-header .list-group .list-group-item a {
+    color: #333;
+  }
+  .cbp-header .list-group .list-group-item a:not(.label-info):not(.label-success) {
+    color: white;
+  }
+  .cbp-header .list-group .list-group-item:hover, .cbp-header .list-group .list-group-item:active, .cbp-header .list-group .list-group-item:focus {
+    background-color: #003e65;
+  }
+  .cbp-header .list-group .list-group-item .btn:focus a, .cbp-header .list-group .list-group-item .ui-datepicker button.ui-state-default:focus a, .ui-datepicker .cbp-header .list-group .list-group-item button.ui-state-default:focus a, .cbp-header .list-group .list-group-item .switch-toggle a:focus a, .switch-toggle .cbp-header .list-group .list-group-item a:focus a, .cbp-header .list-group .list-group-item .btn:hover a, .cbp-header .list-group .list-group-item .ui-datepicker button.ui-state-default:hover a, .ui-datepicker .cbp-header .list-group .list-group-item button.ui-state-default:hover a, .cbp-header .list-group .list-group-item .switch-toggle a:hover a, .switch-toggle .cbp-header .list-group .list-group-item a:hover a {
+    color: #00416A;
+  }
+  .cbp-header .panel {
+    margin-bottom: 18px;
+    background-color: inherit;
+    border: none;
+  }
+  .cbp-header .panel > .list-group,
+  .cbp-header .panel > .panel-collapse > .list-group {
+    margin-bottom: 0;
+  }
+  .cbp-header .panel > .list-group .list-group-item,
+  .cbp-header .panel > .panel-collapse > .list-group .list-group-item {
+    border-width: 1px 0;
+    border-radius: 0;
+  }
+  .cbp-header .panel-body {
+    padding: 0 15px;
+    background-color: #003e65;
+  }
+  .cbp-header .panel-body::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  .cbp-header .panel-body .list-group-item > h6 {
+    margin: 0;
+  }
+  .cbp-header .panel-heading {
+    padding: 10px 0;
+    color: white;
+  }
+  .cbp-header .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: inherit;
+  }
+  .cbp-header .panel-title > a,
+  .cbp-header .panel-title > small,
+  .cbp-header .panel-title > .small,
+  .cbp-header .panel-title > small > a,
+  .cbp-header .panel-title > .small > a {
+    color: inherit;
+  }
+  .cbp-header .panel-group {
+    margin-bottom: 18px;
+    background-color: inherit;
+  }
+  .cbp-header .panel-group .panel {
+    margin-bottom: 0;
+  }
+  .cbp-header .panel-group .panel + .panel {
+    margin-top: 5px;
+  }
+  .cbp-header .panel-group .panel-heading {
+    border: none;
+  }
+  .cbp-header .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a {
+    cursor: pointer;
+    color: white;
+  }
+  .cbp-header .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a:focus, .cbp-header .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a:hover {
+    outline: none;
+    text-decoration: none;
+  }
+  .cbp-header .panel-group .panel:not(.panel-default) + .panel {
+    border-top: none;
+  }
 }
 
 .popover {
