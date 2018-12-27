@@ -1,0 +1,199 @@
+body {
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+}
+
+.toolbar-text {
+    padding: 8px 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+@import './_metadata';
+
+a:focus,
+button:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 1px dotted lighten($brand-info, 0.25)!important;
+    border-color: transparent;
+}
+
+
+
+.tooltip-inner {
+    padding: 6px 12px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.progress {
+    box-shadow: inset 0 0px 0px 1px rgba(0, 0, 0, 0.1);
+    height: 12px;
+}
+
+.progress-bar {
+    transition: width 0.5s;
+    box-shadow: none;
+    background-color: #1460aa;
+}
+
+.progress-label {
+    margin-bottom: 6px;
+}
+
+
+
+.dropdown-toggle:focus {
+  outline: thin dotted;
+  outline-offset: -2px;
+}
+
+.dropdown-menu {
+  border-color: $gray-light;
+
+    &.has-icon > li > a,
+    &.has-icon > .dropdown-header {
+        padding-left: 28px;
+
+        .dropdown-menu-icon {
+            position: absolute;
+            line-height: 18px;
+            margin-left: -20px;
+        }
+    }
+
+    &.has-icon > .dropdown-header {
+        color: $gray-darker;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+}
+
+.breadcrumb {
+    padding: 8px 16px;
+
+    > li {
+
+      + li:before{
+      // extending .fa doesnt seem to work!!!
+        display: inline-block;
+        font: normal normal normal $font-size-base/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        @include antialiasing(antialiased);
+
+        @extend .fa:before !optional;
+        @extend .fa-angle-right:before;
+
+        color: $gray-darker;
+        opacity: .45;
+        left: 2px;
+        margin-right: 4px;
+        margin-left: 2px;
+        top: 2px;
+      }
+
+      + li:first-child:before{
+        content: '' !important;
+      }
+
+    }
+}
+
+.tooltip-inner {
+    padding: 6px 12px;
+    text-align: left;
+}
+
+.selectize-input.focus{
+  //box-shadow: none;
+}
+
+.list-group .list-group-item {
+    a {
+        color: $text-color;
+        
+        &:not(.label-info):not(.label-success){
+            color: $brand-primary;
+        }
+        &.label-info{
+            color: $brand-default;
+        }
+    }
+    &.active {
+        border-right: 3px solid $brand-primary;
+        font-weight: bold;
+    }
+    &:hover, &:active, &:focus {
+        background-color: $list-group-hover-bg;
+    }
+}
+
+.nav-steps > li > a, .nav-steps > li > span {
+  font-weight: 300 !important;
+}
+
+
+.filters .filter-group-title {
+    border-top: 1px solid #dddddd !important;
+    font-weight: normal !important;
+}
+
+.navbar-default {
+  background-color: $gray-lighter;
+}
+
+.noUi-handle {
+    background-color: #ffffff !important;
+}
+
+.fa-sm {
+  font-size: 0.5em !important;
+}
+
+.showBanner {
+    width: 100%;
+    background-color: $gray;
+    height: 20px;
+    padding-top: 1.5px;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    z-index: 2000;
+}
+
+footer.cbp-banner {
+
+    &.confidential:after {
+        @extend .showBanner;
+        content: 'Confidential - For Official Use Only';
+    }
+
+    &.law-enforcement:after {
+        @extend .showBanner;
+        content: 'Law Enforcement Sensitive - For Official Use Only';
+    }
+
+    &.secret:after {
+        @extend .showBanner;
+        content: 'Secret  - For Official Use Only';
+    }
+
+    &.top-secret:after {
+        @extend .showBanner;
+        content: 'Top Secret  - For Official Use Only';
+    }
+}

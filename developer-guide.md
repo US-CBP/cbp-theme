@@ -32,26 +32,41 @@ See below for more info on developing:
 
 ## NPM Commands
 
-We use Webpack for our build process wrapped by npm commands:
 
 * npm install - downloads and resolves depedencies
-* npm run build - builds the dependencies via Webpack
-* npm run dev - builds via Webpack
-* npm run server - builds and serves it up via Webpack
+* npm run build - builds the dependencies
+* npm run dev - compiles and runs a server in a watch mode
+* npm run server - builds and serves it up
 * npm run a11y - runs pa11y accesibility on the kitchen sink (assumes npm run serve has been called)
 
 ## The Kitchen Sink
 
 A demo app is located under app/kitchensink with all the components available so
 that one can experiment and test changes. Run 'npm run dev', which builds and
-uses gulp serve.  The demo app runs localhost:8888/webpack-dev-server
+uses gulp serve.  The demo app runs at http://localhost:8888. 
+`npm run dev` will open browserSync UI which provides local link http://localhost:8888 to navigate to the app.  
+ 
+
+## Testing the Kitchen Sink using Visual Diff Image
+
+We use [PhantomJs](http://phantomjs.org) and [PixelMatch](https://github.com/mapbox/pixelmatch) to generate an image of the Kitchen Sink running locally and compares it to a baseline image that gives a visual difference so that we can easily spot differences.
+
+PixelMatch is a devDependency while PhantomJs is expected to be installed globally.
+
+* npm run viz:baseline - creates a new baseline image that uses the public Kitchen Sink page
+* npm run viz:new - creates a new image based on the the local Kitchen Sink running at http://127.0.0.1:8888
+* npm run viz:check - creates a diff image that highlights the areas where the baseline and new images are different
+
+Typical use after making changes locally:
+
+1. npm run dev 
+2. npm run viz:check
 
 ## Open bugs
 
-Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on github to get started with a bug fix.  
+Browse the [list](https://github.com/US-CBP/cbp-theme/issues) of open issues on github to get started with a bug fix. Please use this method for pull requests: [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/davezen1/5e73590c42edaa8c320eb4a9d1d646f1)
 
 ## Publishing
-We use [SemVer](http://semver.org/) system of versioning (MAJOR MINOR PATCH)
 
 * Run npm version patch (or minor, major)
 * Run npm publish to publish the current version to NPM's public registry

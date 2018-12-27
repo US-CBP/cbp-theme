@@ -1,0 +1,507 @@
+/* CARDS */
+@import '../custom/_mixins.scss';
+
+@mixin border-all($width, $color) {
+  border: $width solid $color;
+}
+
+@mixin border($direction, $width, $color) {
+  border-#{$direction}: $width solid $color;
+}
+
+$card-background-color: unquote("rgb(#{$white})");
+$card-text-color: unquote("rgb(#{$gray-darker})");
+$card-image-placeholder-color: $gray-lighter;
+$card-supporting-text-text-color: unquote("rgba(#{$gray-darker}, 0.54)");
+$card-border-color: $gray-lighter;
+$card-border-width: 3px;
+$card-boxshadow: 0 0 4px 1px lighten(#000, 25%);
+$card-subtitle-color: unquote("rgba(#{$gray-darker}, 0.54)");
+$cbp-card-height: 250px;
+
+$card-font-size: $font-size-base; // 13px
+$card-title-font-size: ceil(($font-size-base * 1.20)); // ~18px
+$card-title-text-font-weight: 500;
+$card-subtitle-font-size: floor(($font-size-base * 1.07)); // ~16px
+$card-supporting-text-font-size: floor(($font-size-base * 1.04)); // ~13px
+$card-supporting-text-line-height: 18px;
+$card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
+
+.mdl-card {
+  display: flex;
+  flex-direction: column;
+  font-size: $card-font-size;
+  font-weight: 400;
+  min-height: $card-height;
+  overflow: hidden;
+  position: relative;
+  background: $card-background-color;
+  border-radius: 2px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.mdl-card__media {
+  background-color: $card-image-placeholder-color;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-origin: padding-box;
+  background-attachment: scroll;
+  box-sizing: border-box;
+
+  img {
+    /* typically in our bootstrap/material implementation, cards will be in col-x-# so, this allows the image to size accordingly!*/
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mdl-card__title {
+  align-items: center;
+  color: $card-text-color;
+  display: block;
+  display: flex;
+  justify-content: stretch;
+  line-height: normal;
+  padding: $card-vertical-padding $card-horizontal-padding;
+  perspective-origin: $card-title-perspective-origin-x $card-title-perspective-origin-y;
+  transform-origin: $card-title-transform-origin-x $card-title-transform-origin-y;
+  box-sizing: border-box;
+
+  &.mdl-card--border {
+    border-bottom: 1px solid $card-border-color;
+  }
+}
+
+.mdl-card__title-text {
+  align-self: flex-end;
+  color: inherit;
+  display: block;
+  display: flex;
+  font-size: $card-title-font-size;
+  font-weight: $card-title-text-font-weight;
+  line-height: normal; //overflow: hidden;
+  transform-origin: $card-title-text-transform-origin-x $card-title-text-transform-origin-y;
+  margin: 0;
+}
+
+.mdl-card__subtitle-text {
+  font-size: $card-subtitle-font-size;
+  color: $card-subtitle-color;
+  margin: 0;
+}
+
+.mdl-card__supporting-text {
+  color: $card-supporting-text-text-color;
+  font-size: $card-supporting-text-font-size;
+  line-height: $card-supporting-text-line-height; //overflow: hidden;
+  padding: 0 $card-horizontal-padding $card-vertical-padding; //width: 90%;
+}
+
+.mdl-card__actions {
+  font-size: $card-actions-font-size;
+  line-height: normal;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  padding: $card-vertical-padding $card-horizontal-padding;
+  box-sizing: border-box;
+
+  &.mdl-card--border {
+    border-top: 1px solid $card-border-color;
+  }
+}
+
+.mdl-card--expand {
+  flex-grow: 1;
+}
+
+
+.mdl-card__menu {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CBP Extensions */
+
+.mdl-card {
+  @extend .mdl-card;
+  background-color: $gray-lightest;
+  box-shadow: none;
+  @include border-radius(5px);
+  @include border-all(3px, $gray-lighter);
+
+  &.mdl-card-shadow {
+    @include shadow-4dp();
+  }
+
+  &.mdl-card-border {
+    @include border-all($card-border-width, $gray-lighter);
+  }
+
+  &.mdl-card-expand {
+    &:focus,
+    &:hover,
+    &:active {
+      @include box-shadow($card-boxshadow);
+      @include border-all($card-border-width, $brand-info);
+      &.mdl-card-border {
+        @include border-all($card-border-width, $brand-info);
+      }
+    }
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    @include box-shadow($card-boxshadow);
+    @include border-all($card-border-width, $brand-info);
+
+    .mdl-card--border {
+      @include border('top', $card-border-width, $brand-info);
+    }
+  }
+  &:focus-within {
+    @include box-shadow($card-boxshadow);
+    @include border-all($card-border-width, $brand-info);
+
+    .mdl-card--border {
+      @include border('top', $card-border-width, $brand-info);
+    }
+  }
+}
+
+.mdl-card__actions {
+  @extend .mdl-card__actions;
+
+  .btn {
+    @include border-all(2px, $gray-medium);
+    color: $gray;
+  }
+
+  &.mdl-card--border {
+    @include border('top', $card-border-width, $gray-lighter);
+    }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $white;
+    .btn {
+      background-color: transparent;
+      @include border-all(2px, $gray-medium);
+      @include border-radius(3px);
+      color: $gray;
+
+      &:focus,
+      &:hover,
+      &active {
+        border-color: $brand-info;
+        background-color: $brand-info;
+        color: $white;
+      }
+    }
+  }
+  &:focus-within{
+   background-color: $white;
+  }
+}
+
+.mdl-card-container {
+  >div[class*='col-'] {
+    margin-bottom: 25px;
+  }
+}
+
+.mdl-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+
+  >div[class*='col-'] {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  .mdl-card__actions {
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .mdl-card__supporting-text {
+    &.with-footer {
+      padding-bottom: 56px;
+    }
+  }
+}
+
+.mdl-card__actions-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+  .btn {
+    background-color: transparent;
+    @include border-all(2px, $gray);
+    @include border-radius(3px);
+    color: $gray;
+    font-weight: 500;
+
+    + .btn {
+      margin-left: 5px;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      border: 2px solid $brand-info;
+      background-color: $brand-info;
+      color: $white;
+    }
+  }
+}
+
+.mdl-card__actions-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+
+  .btn {
+    border: none;
+    color: $gray;
+    font-size: inherit;
+    background-color: transparent;
+
+    + .btn {
+      margin-left: 5px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $brand-info;
+      background-color: transparent;
+      .text-muted {
+        color: $brand-info;
+      }
+    }
+  }
+}
+/* Expand Cards individually */
+
+.mdl-card-single-expansion {
+  display: flex;
+  flex-wrap: wrap;
+
+  >div[class*='col-'] {
+    margin-bottom: 25px;
+  }
+
+  .mdl-card {
+    @extend .mdl-card;
+    height: $cbp-card-height;
+  }
+
+  .mdl-card__title {
+    height: 70px;
+  }
+
+  .mdl-card__title-text {
+    align-self: center;
+  }
+
+  .mdl-card__supporting-text {
+    flex-grow: 1;
+  }
+
+  .mdl-card__actions {
+    display: flex;
+    justify-content: space-between;
+    height: ($cbp-card-height / 5);
+  }
+
+  .list-inline {
+    display: none;
+  }
+
+  .collapse-card {
+    display: none;
+    padding-left: $card-horizontal-padding;
+    width: fit-content;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brand-info;
+      outline: none;
+    }
+  }
+
+  .expand-card {
+    padding-left: $card-horizontal-padding;
+    width: fit-content;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brand-info;
+      outline: none;
+    }
+  }
+
+  .expanded-card {
+    height: auto;
+    .mdl-card__supporting-text {
+      height: auto;
+    }
+
+    .list-inline, .collapse-card {
+      display: block;
+    }
+
+    .collapse-card {
+      margin-bottom: 9px;
+    }
+
+    .expand-card {
+      display: none;
+    }
+  }
+}
+
+/* Brand-Cards */
+
+.brand-card-container {
+  padding: 0;
+  margin: 0;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; //justify-content: space-between;
+  .mdl-card {
+    background-color: $gray-lightest;
+    width: 200px;
+    height: 272px;
+    overflow: visible;
+    margin: 16px;
+    -webkit-transition: width .2s, height 2s, linear .2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width .2s, height 2s, linear .2s;
+    .image-container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -16px;
+      height: 125px;
+      width: 125px;
+      border-radius: 7px;
+      vertical-align: middle;
+      text-align: center;
+      .icon-span{
+        vertical-align: middle;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+      img{
+        border-radius: 7px;
+      }
+    }
+    .mdl-card__title {
+      padding: 16px 25px;
+      height: 104px;
+      justify-content: center;
+      .mdl-card__title-text {
+        text-align: center;
+        align-self: center;
+      }
+    }
+    .mdl-card__supporting-text {
+      display: none;
+    }
+    .btn {
+      @extend .btn-xs;
+      cursor: not-allowed;
+      pointer-events: none;
+      &.btn-default {
+        &:focus,
+        &:hover,
+        &:active {
+          @extend .btn-primary;
+        }
+      }
+      &.btn-circle {
+        border-radius: 50% !important;
+        height: 22px;
+        width: 22px;
+        @extend .btn-default;
+
+        i {
+          margin-top: 3px;
+          margin-left: -1px;
+        }
+        &:focus,
+        &:hover,
+        &:active {
+          @extend .btn-info;
+          border-color: transparent;
+        }
+      }
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+      transform: translate(0, -3px);
+      .mdl-card__actions{
+        background-color: $white;
+
+      .btn {
+        cursor: default;
+        pointer-events: auto;
+        &.btn-circle {
+          @extend .btn-info;
+          border-color: transparent;
+        }
+        &.btn-default {
+          @extend .btn-primary;
+        }
+      }
+      }
+    }
+    &.brand-card-expand {
+      width: 432px;
+      height: auto;
+
+      .image-container {
+        margin-left: 16px;
+        position: absolute;
+      }
+      .mdl-card__title {
+        margin-left: 125px;
+      }
+      .mdl-card__supporting-text {
+        display: block;
+        padding: 16px;
+      }
+      .mdl-card__actions{
+        background-color: $white;
+}
+    }
+  }
+}

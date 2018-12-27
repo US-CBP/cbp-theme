@@ -1,0 +1,432 @@
+@import './switch';
+
+// increase spacing between inline radio/checkboxes to distinguish label relationships.
+.radio-inline, .checkbox-inline {
+  label {
+    font-weight: 400;
+  }
+
+  label + label {
+    margin-left: 18px;
+  }
+}
+
+.required-field:after {
+  content: " (required)";
+  color: $input-text-error-color;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+  option {
+        padding: 3px 20px;
+  }
+}
+
+.checkbox-inline .mdl-checkbox,
+.checkbox-inline .cbp-checkbox {
+  width: auto;
+}
+
+// improve checkbox/radio positioning
+input[type="radio"], input[type="checkbox"] {
+    margin: .2em 0 0;
+}
+
+.is-disabled .mdl-radio__ripple-container,
+.is-disabled .mdl-checkbox__ripple-container,
+.is-disabled .mdl-checkbox__label,
+.is-disabled .mdl-radio__label,
+input[disabled], select[disabled] {
+  cursor: not-allowed !important;
+}
+
+.is-disabled .mdl-selectfield__label {
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+
+.mdl-textfield.is-disabled .mdl-textfield__label, .mdl-textfield.is-disabled .mdl-selectfield__label {
+  color: rgba(0, 0, 0, 0.26) !important;
+  .required-field:after {
+    content: " " !important;
+  }
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__label, .mdl-textfield.is-readonly .mdl-selectfield__label , fieldset[readonly] .mdl-textfield .mdl-textfield__label {
+  color: rgba(0, 0, 0, 0.56) ;
+  .required-field:after {
+    content: " " !important;
+  }
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.26) ;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-bottom: 1px dotted #808080;
+}
+
+.mdl-textfield.is-readonly input {
+  pointer-events: none;
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__label, fieldset[readonly] .mdl-textfield .mdl-textfield__label {
+  color: rgba(0, 0, 0, 0.56) ;
+}
+
+.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.26) ;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-bottom: 1px dotted #808080;
+
+
+}
+.mdl-textfield.is-readonly input {
+  pointer-events: none;
+}
+
+
+// removes shadow from inputs and darkens focused field
+.form-control {
+    box-shadow: none;
+    height: 32px;
+    display: inline;
+    line-height: normal;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    .has-error & {
+        box-shadow: none;
+    }
+}
+
+.form-control:-ms-input-placeholder {
+    line-height: 0.4;
+}
+
+.form-group-sm {
+    .form-control-static {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+.navbar-form {
+  margin: 5px 0 0 0;
+  padding-right: 0;
+
+  .input-group-btn:last-child >.btn {
+  padding: 6px 12px;
+  }
+}
+
+.navbar-form .mdl-textfield {
+  display: block;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group-heading {
+    border-bottom: 1px solid #eee;
+    margin-top: 27px;
+    margin-bottom: 9px;
+}
+
+// adds required asterisk after label
+form:not(.form-horizontal) {
+    label.required::after {
+        position: relative;
+        content: "*";
+        // color: $state-danger-text;
+        left: 4px;
+        font-size: $font-size-base - 1;
+    }
+}
+
+// adds required asterisk before label
+.form-horizontal {
+    @media(min-width: $screen-sm) {
+        label.required::before {
+            position: relative;
+            content: "*";
+            // color: $state-danger-text;
+            left: -4px;
+            font-size: $font-size-base - 1;
+        }
+    }
+    @media(max-width: 767px) {
+        label.required::after {
+            position: relative;
+            content: "*";
+            // color: $state-danger-text;
+            left: 4px;
+            font-size: $font-size-base - 1;
+        }
+    }
+}
+
+.input-search {
+    border-radius: 100px;
+}
+
+// Add an icon inside the front of an input
+.input-icon {
+    position: absolute;
+    pointer-events: none;
+    margin-top: 7px;
+    margin-left: 9px;
+    opacity: .35;
+}
+.input-icon+input {
+    padding-left: 28px;
+}
+
+.form-control-width-xs {
+    max-width: 75px;
+}
+.form-control-width-sm {
+    max-width: 150px;
+}
+.form-control-width-md {
+    max-width: 250px;
+}
+.form-control-width-lg {
+    max-width: 350px;
+}
+.form-control-width-fill {
+    max-width: 100%;
+}
+
+.dropdown-menu > .active > a,
+.ui-datepicker > .active > a,
+.dropdown-menu > .active > a:hover,
+.ui-datepicker > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.ui-datepicker > .active > a:focus ,
+.ui-datepicker td .ui-state-active{
+  color: $brand-info !important;
+  font-weight: 600  !important;
+}
+
+// MDL INPUT COMPONENTS
+
+// checkbox
+.cbp-checkbox {
+  position: relative;
+
+  z-index: 1;
+
+  vertical-align: middle;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: $checkbox-label-height;
+  margin: 0;
+  padding: 0;
+
+  &.is-upgraded {
+    padding-left: $checkbox-button-size + $checkbox-padding;
+  }
+}
+
+.mdl-checkbox__input {
+  line-height: $checkbox-label-height;
+
+  .cbp-checkbox.is-upgraded & {
+    // Hide input element, while still making it respond to focus.
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+  }
+}
+
+.mdl-checkbox__box-outline {
+  position: absolute;
+  top: $checkbox-top-offset;
+  left: 0;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: $checkbox-button-size;
+  height: $checkbox-button-size;
+  margin: 0;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  border: 2px solid $checkbox-off-color;
+  border-radius: 2px;
+
+  z-index: 2;
+
+  .cbp-checkbox.is-checked & {
+    border: 2px solid $checkbox-color;
+  }
+
+  fieldset[disabled] .cbp-checkbox &,
+  .cbp-checkbox.is-disabled & {
+    border: 2px solid $checkbox-disabled-color;
+    cursor: auto;
+  }
+}
+
+.mdl-checkbox__focus-helper {
+  position: absolute;
+  top: $checkbox-top-offset;
+  left: 0;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: $checkbox-button-size;
+  height: $checkbox-button-size;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  .cbp-checkbox.is-focused & {
+    box-shadow: 0 0 0px ($checkbox-button-size / 2) rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .cbp-checkbox.is-focused.is-checked & {
+    box-shadow: 0 0 0px ($checkbox-button-size / 2) $checkbox-focus-color;
+    background-color: $checkbox-focus-color;
+  }
+}
+
+.mdl-checkbox__label {
+  position: relative;
+  cursor: pointer;
+  font-size: $checkbox-label-font-size;
+  line-height: $checkbox-label-height;
+  margin: 0;
+
+  fieldset[disabled] .cbp-checkbox &,
+  .cbp-checkbox.is-disabled & {
+    color: $checkbox-disabled-color;
+    cursor: auto;
+  }
+}
+
+.mdl-checkbox__ripple-container {
+  position: absolute;
+  z-index: 2;
+  top: -(($checkbox-ripple-size - $checkbox-label-height) / 2);
+  left: -(($checkbox-ripple-size - $checkbox-button-size) / 2);
+
+  box-sizing: border-box;
+  width: $checkbox-ripple-size;
+  height: $checkbox-ripple-size;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+
+  & .mdl-ripple {
+    background: $checkbox-color;
+  }
+
+  fieldset[disabled] .cbp-checkbox &,
+  .cbp-checkbox.is-disabled & {
+    cursor: auto;
+  }
+
+  fieldset[disabled] .cbp-checkbox & .mdl-ripple,
+  .cbp-checkbox.is-disabled & .mdl-ripple {
+    background: transparent;
+  }
+}
+
+// Plain ol' select mdl-selectfield overrides
+.mdl-selectfield {
+
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #808080 transparent transparent transparent;
+  }
+
+  &.mdl-selectfield.is-focused {
+    &:after {
+      margin-top: -4px;
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent #808080 transparent;
+    }
+  }
+
+  .mdl-selectfield__select {
+    //background-color: $white !important;
+    padding: $selectfield-padding 3px !important;
+    border-bottom: 1px solid $gray;
+
+
+    &:hover {
+      background-color: $input-hover !important;
+    }
+  }
+
+  .mdl-selectfield__label {
+    top: 28px;
+    color: $text-color;
+    padding-left: 3px;
+
+    &:after {
+        background-color: $brand-info !important;
+        bottom: 14px !important;
+    }
+  }
+
+  &.mdl-selectfield--multiple {
+    @extend .is-dirty;
+
+    &:after {
+      border:none;
+    }
+  }
+
+  &.mdl-selectfield--floating-label.is-dirty,
+  &.mdl-selectfield--floating-label.is-focused {
+    .mdl-selectfield__label {
+      top:0;
+      padding-left: 0;
+      color: $brand-info;
+    }
+  }
+
+}
+
+@media (max-width:$screen-sm) {
+  .mdl-textfield {
+    width: inherit;
+  }
+}

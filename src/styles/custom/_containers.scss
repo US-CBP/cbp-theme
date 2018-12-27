@@ -1,0 +1,121 @@
+.content {
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding-top: 50px;
+  .sidebar {
+    z-index: 990;
+    background-color: $gray-lightest;
+    border-right: 1px solid #eee;
+    float: left;
+    display: block;
+    margin-left: -8px; //this is to offset container-fluid padding
+    box-sizing: border-box;
+  }
+  .cbp-sidebar-offset {
+    margin-right: -8px; //this is to offset container-fluid padding   
+  }
+
+  &.fluid-layout {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .content {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    .cbp-sidebar {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .cbp-sidebar-offset {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+}
+
+
+
+
+/* Small devices (tablets, 768px and up) and smaller than 991px*/
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .cbp-sidebar,
+  .cbp-sidebar-offset {
+    padding-right: 8px;
+    padding-left: 15px;
+  }
+  .sidebar {
+    width: 300px;
+    min-width: 300px;
+  }
+  .cbp-sidebar-offset {
+    width: calc(100% - 300px);
+  }
+  .fixed {
+    .sidebar {
+      @include transition(top ease 0.25s);
+      overflow-y: auto;
+      position: fixed;
+      bottom: 0;
+
+      left: 0;
+      &.after-header {
+        top: 50px;
+      }
+      &.after-double-header {
+        top: 100px;
+      }
+    }
+    .cbp-sidebar-offset {
+      margin-left: 300px;
+      padding-left: 0;
+    }
+  }
+}
+
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-md-min) {
+  .cbp-sidebar,
+  .cbp-sidebar-offset {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .sidebar {
+    width: 350px;
+    min-width: 350px;
+  }
+  .cbp-sidebar-offset {
+      width: calc(100% - 350px);     
+  }
+  .fixed {
+    .sidebar {
+      @include transition(top ease 0.25s);
+      overflow-y: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      &.after-header {
+        top: 50px;
+      }
+      &.after-double-header {
+        top: 100px;
+      }
+    }
+    .cbp-sidebar-offset {
+      margin-left: 350px;
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.bs-example {
+  z-index: 5 !important;
+  background-color: rgba(0, 0, 0, 0.045);
+  position: relative;
+}
+.bs-example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 280px;
+  margin: 20px;
+  z-index: 5 !important;
+}
+.sandbox {
+  padding: 20px 0;
+}
+.cards-example {
+  padding:  0 20px;
+}
+
+#app-header-menu {
+  display: none;
+} 
+
+@media (max-width: 1005px) {
+  #app-header-menu{
+    display: block;
+  }
+  #bs-example-navbar-collapse-1 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header-menu-right{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-left: -8px;
+    margin-top: 7.5px;
+  }
+  .app-header-menu-search{
+    display: inline-block;
+    float: right;
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 7.5px;
+  }
+}
+
+@media (min-width:768px) and (max-width:768px) {
+  .mdl-textfield {
+    width: 297px;
+  }
+  .app-header-menu-search>form[role=search]{
+    float: right;
+  }
+}
+
+@media (max-width: 1002px){
+  #app-header-dropdown-menu{
+    position: absolute;
+    float: left;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    min-width: 180px;
+  }
+  .fa-caret-right {
+    margin-top: 3px;
+  }
+  
+  .app-header-menu-search>form[role=search]>.form-group>.input-group>.mdl-textfield{
+    visibility: visible;
+  }
+}
+
+.app-header-menu-right{
+  margin-top: 7.5px;
+}
+
+@media (max-width: 480px){
+  .app-header-menu-search>form[role=search]>.form-group>.input-group>.mdl-textfield{
+    visibility: hidden;
+  }
+  .app-header-menu-search:hover >form[role=search]>.form-group>.input-group>.mdl-textfield{
+    visibility: visible;
+  }
+}
+
+
+/* .navbar-brand .cbp-brand:before {
+  content: 'Organization Brand - CBP Theme 1.0'
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .navbar-brand .cbp-brand:before{
+    content:'Brand'
+    }
+}
+@media (max-width:767px){
+  .navbar-brand .cbp-brand:before{
+    content:'Brand'
+  }
+}
+
+.navbar-brand .dhs-brand:before {
+    content: 'Organization Sub Branding';
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .navbar-brand .dhs-brand:before{
+    content:''
+    }
+}
+
+@media (max-width:767px){
+  .navbar-brand .dhs-brand:before{
+    content:''
+  }
+} */

@@ -1,0 +1,82 @@
+/* Label variants */
+.label {
+  font-size: 70%;
+  letter-spacing: 0.06em;
+  padding: .3em .6em;
+}
+
+
+.label-default {
+  color: $gray-darker !important;
+  border: 1px solid $gray !important;
+}
+.label-primary {
+  @include label-variant($brand-primary);
+  border: 1px solid $gray;
+}
+.label-success {
+  @include label-variant($brand-success);
+  border: 1px solid $gray;
+}
+.label-info {
+  @include label-variant($brand-info);
+  border: 1px solid $gray;
+}
+.label-danger {
+  @include label-variant($brand-danger);
+  border: 1px solid $gray;
+}
+.label-inverse {
+  @include label-variant($body-bg);
+  color: $gray-dark;
+  border: 1px solid $gray;
+}
+.label-live {
+  @include label-variant($brand-live);
+  color: $gray-dark;
+  border: 1px solid $gray;
+}
+.label-warning {
+  @include label-variant($brand-warning);
+  color: $text-color;
+  border: 1px solid $gray;
+}
+
+.label-default.subtle {
+    color: $gray-dark;
+    background-color: mix($text-color, #fff, 7.5%);
+    border: 1px solid mix($text-color, #fff, 35%);
+}
+
+.label-success.subtle {
+    color: $state-success-text;
+    background-color: $state-success-bg;
+    border: 1px solid $state-success-border;
+}
+
+.label-info.subtle {
+    color: $state-info-text;
+    background-color: $state-info-bg;
+    border: 1px solid $state-info-border;
+}
+
+.label-warning.subtle {
+    color: $state-warning-text;
+    background-color: $state-warning-bg;
+    border: 1px solid $state-warning-border;
+}
+
+.label-danger.subtle {
+    color: $state-danger-text;
+    background-color: $state-danger-bg;
+    border: 1px solid $state-danger-border;
+}
+
+.label-primary.subtle {
+    color: $state-primary-text;
+    background-color: $state-primary-bg;
+    border: 1px solid $state-primary-border;
+}
+
+
+

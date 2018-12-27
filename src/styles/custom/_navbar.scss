@@ -1,0 +1,534 @@
+$dropdownMenu-content: 5px;
+
+@mixin header-collapse-btn {
+  font-size: 18px;
+  background-color: inherit;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 16px 10px;
+  height: 50px;
+  line-height: 20px;
+
+}
+
+.navbar {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  &-inverse {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    //background-image: url(../images/hero-mockup11.png);
+    //background-size: cover;
+    //background-repeat: no-repeat;
+    //background-position: center -10em;
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
+  }
+
+  .badge {
+    text-shadow: none;
+  }
+
+  &-nav > li > a > .glyphicon,
+  &-nav > li > a > .fa {
+    line-height: 0;
+    top: 2px;
+    padding: 0 2px;
+  }
+  &-nav > li > a, &-nav > li > a:hover {
+    padding-top: $navbar-padding-vertical + 2px;
+    padding-bottom: $navbar-padding-vertical - 2px;
+    @include transition(color ease-in-out .2s);
+  }
+
+  &-brand {
+    padding: 5px 70px 5px 17px;
+    height: 50px;
+
+    @include transition(color ease-in-out .2s);
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding: 16px 70px 16px 17px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding: 16px 70px 16px 17px;
+    }
+
+    &.nav-brand-offset {
+      padding-left: 3em;
+    }
+
+    .cbp-brand {
+      font-size: 18px;
+      line-height: 20px;
+
+      span {
+        display: none;
+      }
+
+      @media (max-width: $screen-xs-max) {
+          span {
+            display: inline;
+          }
+      }
+
+    }
+
+
+    .dhs-brand {
+      display: block;
+      margin:3px 0 0;
+      line-height: 14px;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+  }
+
+
+  .caret, .caret:hover {
+    @include transition(border-color ease-in-out .2s);
+  }
+
+  .open {
+    .caret {
+      @include rotate(180deg);
+    }
+  }
+  .dropdown-menu {
+    text-shadow: none;
+
+    &.with-badges {
+      width: 230px;
+
+      .badge.pull-right {
+        margin-top: -2px;
+      }
+    }
+  }
+
+  &.navbar-fixed-top.navbar-second-fixed {
+    top: 50px;
+    z-index: 1000;
+  }
+  &.navbar-flush {
+    margin-bottom: 0;
+  }
+
+  .mdl-textfield {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    input.mdl-textfield__input {
+
+    }
+
+    label.mdl-textfield__label {
+      top: 14px;
+
+      &:after {
+        bottom: 5px;
+      }
+    }
+  }
+
+}
+
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.navbar a:hover {
+  outline: thin dotted;
+  outline-offset: -2px;
+}
+
+.navbar .form-control:focus {
+  background-color: #FFFFFF;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: $brand-primary;
+}
+
+.navbar-nav .nav-tabs li.dropdown {
+  &:hover {
+    > a {
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid #1460aa;
+    }
+  }
+
+  a.pull-right {
+    padding-left: 5px;
+  }
+
+  a.pull-left {
+    padding-right: 5px;
+  }
+
+}
+
+.app-header,
+.app-header-bottom {
+  @extend .navbar, .navbar-default, .navbar-flush;
+  position: fixed;
+  font-size: ceil(($font-size-base * 1.15));
+  right: 0;
+  left: 0;
+}
+.yogesh-test::placeholder {
+  color: gray;
+}
+.cbp-header {
+  @extend .navbar, .navbar-inverse, .navbar-flush;
+  height: auto;
+  @include transition(all linear .1s);
+  z-index: $zindex-navbar;
+
+  &.disappear {
+    @include max-height(0);
+    z-index: $zindex-navbar - 100;
+  }
+
+  .navbar-right {
+    margin-right: 0 !important;
+  }
+
+  .app-name {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    font-style: italic;
+  }
+
+  .btn {
+    border-radius: 3px;
+    border: 1px solid $white;
+    color: white;
+    background-color: $brand-primary;
+
+    a {
+      color: white;
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $brand-primary;
+      a {
+        color: $brand-primary;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.app-header {
+  @extend .navbar, .navbar-default, .navbar-flush;
+  @include transition(all ease-in-out .2s);
+  z-index: $zindex-appbar;
+  top: 50px;
+  //border-width: 0 0 1px;
+
+  &.top {
+    top:0px;
+    z-index: $zindex-navbar-fixed;
+  }
+  .heading-text{
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  .mdl-textfield.is-dirty .mdl-textfield__label {
+    height: 27px; //fixing the font size shifting issue in app direcotry
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        max-height: none;
+        display:block !important;
+        height: 100vh;
+    }
+  }
+}
+
+.app-header-bottom {
+  bottom: 0;
+  margin-bottom: 0; // override .navbar defaults
+  border-width: 1px 0 0;
+}
+
+.navbar-collapse .navbar-nav > .nav-tabs > li > a {
+    padding: 15px 15px;
+}
+
+.nav.navbar-nav .nav-item {
+  border-bottom: 2px solid $gray-lighter;
+
+  > .dropdown-menu,
+  > .ui-datepicker {
+    margin-top: 3px;
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid $brand-info;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+}
+
+.navbar-nav {
+  > li > .dropdown-menu, {
+    background-color: $brand-primary;
+  }
+
+  .dropdown-menu {
+    border: none;
+    border-radius: 0 0 5px 5px;
+    > li:not(.divider) {
+      padding: $dropdownMenu-content 0;
+      margin: 0 ($dropdownMenu-content * 2);
+
+      > a {
+        color: $white;
+        font-weight: 700;
+        &:hover,
+        &:focus {
+          background-color: $white;
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+
+  &.navbar-right {
+    .dropdown-menu {
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: $white;
+        font-style: italic;
+        font-weight: 400;
+
+        &.label {
+          font-size: 80%;
+        }
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Mobile header */
+@media (max-width:$screen-sm) {
+
+  .cbp-header {
+    .navbar-toggle {
+      border: none;
+      &:focus,
+      &:hover {
+        background-color: inherit;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+
+    button.navbar-toggle {
+      @include header-collapse-btn();
+
+      &.collapsed::before {
+        font-family: FontAwesome;
+      content: "\f0c9 \00a0\00a0 Menu";
+      }
+      &::before {
+        font-family: FontAwesome;
+      content: "\f00d \00a0\00a0 Close";
+      }
+    }
+
+    .navbar-collapse {
+      &.in {
+        overflow-y: unset;
+      }
+    }
+
+    .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      padding-left: 0;
+    }
+
+    .list-group {
+      margin: 0;
+    }
+
+    .list-group-item {
+      padding: ($dropdownMenu-content * 2);
+      margin-bottom: -1px;
+      background-color: inherit;
+      border: none;
+      color: white;
+
+      &.app-name {
+        border-top: 1px solid $gray-light;
+        border-bottom: 1px solid $gray-light;
+        margin: ($dropdownMenu-content * 2) 0 0 0;
+      }
+    }
+
+    .list-group .list-group-item {
+      a {
+          color: $text-color;
+
+          &:not(.label-info):not(.label-success){
+              color: white;
+          }
+      }
+
+      &:hover, &:active, &:focus {
+          background-color: $navbar-inverse-bg;
+      }
+
+      .btn {
+        &:focus,
+        &:hover {
+          a {
+            color: $brand-primary;
+          }
+        }
+      }
+    }
+    .panel {
+      margin-bottom: $line-height-computed;
+      background-color: inherit;
+      border: none;
+
+      > .list-group,
+      > .panel-collapse > .list-group {
+        margin-bottom: 0;
+
+        .list-group-item {
+          border-width: 1px 0;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .panel-body {
+      padding: 0 ($dropdownMenu-content * 3);
+      @include clearfix;
+      background-color: $navbar-inverse-bg;
+
+      .list-group-item > h6 {
+        margin: 0;
+      }
+    }
+
+    .panel-heading {
+      padding: ($dropdownMenu-content * 2) 0;
+      color: white;
+    }
+
+    .panel-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 18px;
+      color: inherit;
+
+      > a,
+      > small,
+      > .small,
+      > small > a,
+      > .small > a {
+        color: inherit;
+      }
+    }
+
+    .panel-group {
+       margin-bottom: $line-height-computed;
+       background-color: inherit;
+
+       .panel {
+         margin-bottom: 0;
+
+         + .panel {
+           margin-top: $dropdownMenu-content;
+         }
+       }
+
+       .panel-heading {
+         border: none;
+       }
+     }
+
+     .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a {
+       cursor: pointer;
+       color: white;
+       &:focus,
+       &:hover {
+        outline: none;
+        text-decoration: none;
+       }
+     }
+
+    .panel-group .panel:not(.panel-default) + .panel{
+      border-top: none;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+//
+// Variables we are overriding!
+//
+
+$performance_font: $font-family-sans-serif;
+
+$radio-color: $brand-info;
+$input-text-highlight-color: $brand-info;
+$input-text-bottom-border-color: $gray;
+$input-text-label-color: $text-color;
+$input-text-font-size: 13px;
+$input-text-padding: 6px;
+$input-hover: transparentize($brand-info, 0.90);
+$input-text-disabled-color: $gray;
+$input-text-floating-label-fontsize: 13px ;
+
+/* TABLES */
+$data-table-font-size: $font-size-base;
+$data-table-header-font-size: $font-size-base;
+$data-table-row-height: $line-height-computed;
+$data-table-header-color: $gray;
+$data-table-dividers: none;
+
+/* RADIO */
+$radio-label-font-size: 13px;
+//$radio-label-height: 30px;
+//$radio-button-size: 16px !default;
+//$radio-inner-margin: $radio-button-size / 4;
+//$radio-padding: 8px !default;
+//$radio-top-offset: 2px;
+//$radio-ripple-size: 42px !default;
+
+/* CHECKBOX */
+$checkbox-color: $brand-info;
+$checkbox-label-font-size: 13px; //changed from 15px MK
+$checkbox-label-height: 24px !default;
+$checkbox-button-size: 18px !default;
+$checkbox-inner-margin: 2px !default;
+$checkbox-padding: 8px !default;
+$checkbox-top-offset: ($checkbox-label-height - $checkbox-button-size - $checkbox-inner-margin) / 2;
+$checkbox-ripple-size: $checkbox-label-height * 1.5;
+
+/* SELECTFIELD */
+$selectfield-font-size: 13px ;
+$selectfield-padding: 6px;
+//$selectfield-vertical-spacing: 20px;
+
+$selectfield-floating-label-fontsize: 13px;
+
+$selectfield-background-color: $white;
+//$selectfield-label-color: unquote("rgba(#{$color-black}, 0.26)") !default;
+//$selectfield-bottom-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+//$selectfield-highlight-color: unquote("rgb(#{$color-primary})") !default;
+//$selectfield-disabled-color: $selectfield-bottom-border-color !default;
+//$selectfield-disabled-text-color: $selectfield-label-color !default;
+//$selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
+
+
+@import 'material-design-lite/src/_mixins';
+
+@import 'material-design-lite/src/ripple/_ripple';
+@import 'material-design-lite/src/checkbox/_checkbox';
+@import 'material-design-lite/src/radio/_radio';
+@import 'material-design-lite/src/textfield/_textfield';
+@import 'material-design-lite/src/data-table/data-table';
+
+@import 'material_images'; //embedded mdl svg images
+@import 'material_custom';
+@import 'material_cards';
