@@ -14,9 +14,9 @@ export function setupInputMasks () {
   }
 
   const placeholderCheckDirty = (ev) => {
-    $(ev.target).on("focusin",function () {
+    $(ev.target).on('focusin', function () {
       $(ev.target).parent().addClass('is-focused')
-    }).on("blur",function () {
+    }).on('blur', function () {
       if ($(ev.target).parent().get(0).MaterialTextfield) {
         $(ev.target).parent().get(0).MaterialTextfield.checkDirty()
       }
