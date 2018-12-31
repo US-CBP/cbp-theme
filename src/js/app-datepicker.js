@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jquery'
 
 /**
  * Selector defaults to .datepicker
@@ -26,5 +26,4 @@ export function applyDatePicker (selector) {
       this._selectDate(id)
     }
   }
-
 }
