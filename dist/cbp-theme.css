@@ -10644,8 +10644,9 @@ label {
 }
 
 .mdl-card__actions .btn, .mdl-card__actions .ui-datepicker button.ui-state-default, .ui-datepicker .mdl-card__actions button.ui-state-default, .mdl-card__actions .switch-toggle a, .switch-toggle .mdl-card__actions a {
-  border: 2px solid #808080;
+  border: 1px solid #555;
   color: #555;
+  background-color: transparent;
 }
 
 .mdl-card--border.mdl-card__actions {
@@ -10658,7 +10659,7 @@ label {
 
 .mdl-card__actions:focus .btn, .mdl-card__actions:focus .ui-datepicker button.ui-state-default, .ui-datepicker .mdl-card__actions:focus button.ui-state-default, .mdl-card__actions:focus .switch-toggle a, .switch-toggle .mdl-card__actions:focus a, .mdl-card__actions:hover .btn, .mdl-card__actions:hover .ui-datepicker button.ui-state-default, .ui-datepicker .mdl-card__actions:hover button.ui-state-default, .mdl-card__actions:hover .switch-toggle a, .switch-toggle .mdl-card__actions:hover a, .mdl-card__actions:active .btn, .mdl-card__actions:active .ui-datepicker button.ui-state-default, .ui-datepicker .mdl-card__actions:active button.ui-state-default, .mdl-card__actions:active .switch-toggle a, .switch-toggle .mdl-card__actions:active a {
   background-color: transparent;
-  border: 2px solid #808080;
+  border: 1px solid #555;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
