@@ -17,7 +17,7 @@ var nodeModulesDir = path.join(projectDir, 'node_modules')
 var entry = path.join(srcDir, 'styles/main.scss')
 
 const postcssAssetOptions = [
-  {url: 'copy', basePath: nodeModulesDir, assetsPath: destDir, useHash: true, hashOptions: {append: true}}
+  {url: 'copy', basePath: nodeModulesDir, assetsPath: destDir, useHash: false}
 ]
 
 function sassToCss () {

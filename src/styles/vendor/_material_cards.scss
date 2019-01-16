@@ -185,8 +185,9 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   @extend .mdl-card__actions;
 
   .btn {
-    @include border-all(2px, $gray-medium);
+    @include border-all(1px, $gray);
     color: $gray;
+    background-color: transparent;
   }
 
   &.mdl-card--border {
@@ -199,7 +200,7 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
     background-color: $white;
     .btn {
       background-color: transparent;
-      @include border-all(2px, $gray-medium);
+      @include border-all(1px, $gray);
       @include border-radius(3px);
       color: $gray;
 
