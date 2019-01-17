@@ -92,7 +92,7 @@ input[type=radio]:focus
         @include antialiasing(antialiased);
 
         @extend .fa:before !optional;
-        @extend .fa-angle-right:before;
+        @extend .fa-angle-right:before !optional;
 
         color: $gray-darker;
         opacity: .45;

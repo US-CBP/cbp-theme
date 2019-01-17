@@ -85,8 +85,9 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "lint": "standard 'src/js/**' './kitchensink/kitchensink.js' --fix | snazzy",
-    "build": "npm-run-all clean --parallel \"build:rollup -- --environment production\"  \"build:scss:postcss -- --production\"",
+    "build": "npm-run-all clean --parallel \"build:rollup -- --environment production\"  \"build:scss:postcss -- --production\" \"build:nofonts:scss:postcss -- --production\"",
     "build:scss:postcss": "node ./build/sass-builder.js",
+    "build:nofonts:scss:postcss": "node ./build/sass-builder-no-fonts.js",
     "build:rollup": "rollup -c",
     "serve": "browser-sync start --config conf/bs-config.js",
     "dev": "npm-run-all lint clean --parallel \"build:rollup -- -w\" \"build:scss:postcss -- -w\" serve",

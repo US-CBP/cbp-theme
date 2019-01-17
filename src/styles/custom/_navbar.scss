@@ -1,17 +1,3 @@
-$dropdownMenu-content: 5px;
-
-@mixin header-collapse-btn {
-  font-size: 18px;
-  background-color: inherit;
-  color: white;
-  border: none;
-  margin: 0;
-  padding: 16px 10px;
-  height: 50px;
-  line-height: 20px;
-
-}
-
 .navbar {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 
@@ -74,7 +60,7 @@ $dropdownMenu-content: 5px;
           span {
             display: inline;
           }
-      }
+      }     
 
     }
 
@@ -84,7 +70,7 @@ $dropdownMenu-content: 5px;
       margin:3px 0 0;
       line-height: 14px;
       font-size: 12px;
-      font-style: italic;
+      font-style: italic;      
     }
 
   }
@@ -92,12 +78,6 @@ $dropdownMenu-content: 5px;
 
   .caret, .caret:hover {
     @include transition(border-color ease-in-out .2s);
-  }
-
-  .open {
-    .caret {
-      @include rotate(180deg);
-    }
   }
   .dropdown-menu {
     text-shadow: none;
@@ -213,38 +193,6 @@ $dropdownMenu-content: 5px;
   .navbar-right {
     margin-right: 0 !important;
   }
-
-  .app-name {
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
-    font-style: italic;
-  }
-
-  .btn {
-    border-radius: 3px;
-    border: 1px solid $white;
-    color: white;
-    background-color: $brand-primary;
-
-    a {
-      color: white;
-      &:hover,
-      &:focus {
-        color: $brand-primary;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $white;
-      color: $brand-primary;
-      a {
-        color: $brand-primary;
-        outline: none;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 .app-header {
@@ -267,7 +215,7 @@ $dropdownMenu-content: 5px;
   .mdl-textfield.is-dirty .mdl-textfield__label {
     height: 27px; //fixing the font size shifting issue in app direcotry
   }
-
+  
   @media (max-width: $screen-sm-max) {
     .navbar-header {
         float: none;
@@ -331,204 +279,4 @@ $dropdownMenu-content: 5px;
 
 }
 
-.navbar-nav {
-  > li > .dropdown-menu, {
-    background-color: $brand-primary;
-  }
 
-  .dropdown-menu {
-    border: none;
-    border-radius: 0 0 5px 5px;
-    > li:not(.divider) {
-      padding: $dropdownMenu-content 0;
-      margin: 0 ($dropdownMenu-content * 2);
-
-      > a {
-        color: $white;
-        font-weight: 700;
-        &:hover,
-        &:focus {
-          background-color: $white;
-          color: $brand-primary;
-        }
-      }
-    }
-  }
-
-  &.navbar-right {
-    .dropdown-menu {
-
-      p {
-        margin: 0;
-        padding: 0;
-        color: $white;
-        font-style: italic;
-        font-weight: 400;
-
-        &.label {
-          font-size: 80%;
-        }
-      }
-
-      .btn {
-        width: 100%;
-      }
-    }
-  }
-}
-
-/* Mobile header */
-@media (max-width:$screen-sm) {
-
-  .cbp-header {
-    .navbar-toggle {
-      border: none;
-      &:focus,
-      &:hover {
-        background-color: inherit;
-        outline: none;
-        text-decoration: none;
-      }
-    }
-
-    button.navbar-toggle {
-      @include header-collapse-btn();
-
-      &.collapsed::before {
-        font-family: FontAwesome;
-      content: "\f0c9 \00a0\00a0 Menu";
-      }
-      &::before {
-        font-family: FontAwesome;
-      content: "\f00d \00a0\00a0 Close";
-      }
-    }
-
-    .navbar-collapse {
-      &.in {
-        overflow-y: unset;
-      }
-    }
-
-    .page-header, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-      padding-left: 0;
-    }
-
-    .list-group {
-      margin: 0;
-    }
-
-    .list-group-item {
-      padding: ($dropdownMenu-content * 2);
-      margin-bottom: -1px;
-      background-color: inherit;
-      border: none;
-      color: white;
-
-      &.app-name {
-        border-top: 1px solid $gray-light;
-        border-bottom: 1px solid $gray-light;
-        margin: ($dropdownMenu-content * 2) 0 0 0;
-      }
-    }
-
-    .list-group .list-group-item {
-      a {
-          color: $text-color;
-
-          &:not(.label-info):not(.label-success){
-              color: white;
-          }
-      }
-
-      &:hover, &:active, &:focus {
-          background-color: $navbar-inverse-bg;
-      }
-
-      .btn {
-        &:focus,
-        &:hover {
-          a {
-            color: $brand-primary;
-          }
-        }
-      }
-    }
-    .panel {
-      margin-bottom: $line-height-computed;
-      background-color: inherit;
-      border: none;
-
-      > .list-group,
-      > .panel-collapse > .list-group {
-        margin-bottom: 0;
-
-        .list-group-item {
-          border-width: 1px 0;
-          border-radius: 0;
-        }
-      }
-    }
-
-    .panel-body {
-      padding: 0 ($dropdownMenu-content * 3);
-      @include clearfix;
-      background-color: $navbar-inverse-bg;
-
-      .list-group-item > h6 {
-        margin: 0;
-      }
-    }
-
-    .panel-heading {
-      padding: ($dropdownMenu-content * 2) 0;
-      color: white;
-    }
-
-    .panel-title {
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: 18px;
-      color: inherit;
-
-      > a,
-      > small,
-      > .small,
-      > small > a,
-      > .small > a {
-        color: inherit;
-      }
-    }
-
-    .panel-group {
-       margin-bottom: $line-height-computed;
-       background-color: inherit;
-
-       .panel {
-         margin-bottom: 0;
-
-         + .panel {
-           margin-top: $dropdownMenu-content;
-         }
-       }
-
-       .panel-heading {
-         border: none;
-       }
-     }
-
-     .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a {
-       cursor: pointer;
-       color: white;
-       &:focus,
-       &:hover {
-        outline: none;
-        text-decoration: none;
-       }
-     }
-
-    .panel-group .panel:not(.panel-default) + .panel{
-      border-top: none;
-    }
-  }
-}
