@@ -5,8 +5,8 @@ $dropdownMenu-content: 5px;
   background-color: inherit;
   color: white;
   border: none;
-  margin: 0;
-  padding: 16px 10px;
+  margin: 0 8px 0 0;
+  padding: 16px 0;
   height: 50px;
   line-height: 20px;
 
@@ -391,17 +391,16 @@ $dropdownMenu-content: 5px;
       }
     }
 
-    button.navbar-toggle {
-      @include header-collapse-btn();
-
-      &.collapsed::before {
-        font-family: FontAwesome;
+    button.navbar-toggle.collapsed:before {
+      font-family: FontAwesome;
       content: "\f0c9 \00a0\00a0 Menu";
-      }
-      &::before {
-        font-family: FontAwesome;
+      @include header-collapse-btn();
+    }
+
+    button.navbar-toggle:before {
+      font-family: FontAwesome;
       content: "\f00d \00a0\00a0 Close";
-      }
+      @include header-collapse-btn();
     }
 
     .navbar-collapse {
