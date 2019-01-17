@@ -60,7 +60,7 @@
           span {
             display: inline;
           }
-      }
+      }     
 
     }
 
@@ -70,7 +70,7 @@
       margin:3px 0 0;
       line-height: 14px;
       font-size: 12px;
-      font-style: italic;
+      font-style: italic;      
     }
 
   }
@@ -193,20 +193,6 @@
   .navbar-right {
     margin-right: 0 !important;
   }
-
-  .navbar-nav > li > .dropdown-menu, .dropdown-menu .divider  {
-    background-color: #00416A;
-  }
-
-  .dropdown-menu > li > a {
-    color: white;
-    &:hover,
-    &focus {
-      background-color: transparent;
-
-    }
-  }
-
 }
 
 .app-header {
@@ -229,7 +215,7 @@
   .mdl-textfield.is-dirty .mdl-textfield__label {
     height: 27px; //fixing the font size shifting issue in app direcotry
   }
-
+  
   @media (max-width: $screen-sm-max) {
     .navbar-header {
         float: none;
@@ -292,3 +278,5 @@
   }
 
 }
+
+
