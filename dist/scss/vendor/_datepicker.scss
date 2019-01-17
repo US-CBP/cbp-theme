@@ -87,7 +87,7 @@
 
     .ui-datepicker-prev {
       @extend .fa;
-      @extend .fa-chevron-left;
+      @extend .fa-chevron-left !optional;
       top: 10px !important;
       left: 2px !important;
 
@@ -100,7 +100,7 @@
 
     .ui-datepicker-next {
       @extend .fa;
-      @extend .fa-chevron-right;
+      @extend .fa-chevron-right !optional;
       top: 10px !important;
       right: -14px !important;
 
