@@ -192,58 +192,21 @@
 
   .navbar-right {
     margin-right: 0 !important;
-
-    > li > .dropdown-menu, .dropdown-menu .divider  {
-      background-color: $brand-primary;
-    }
-
-    .dropdown-menu {
-      border: none;
-      > li {
-        padding: 5px 0;
-        > a {
-          color: $white;
-          &:hover,
-          &:focus {
-            background-color: $white;
-            color: $brand-primary;
-          }
-        }
-      }
-    }
   }
 
-  .app-name {
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
-    font-style: italic;
+  .navbar-nav > li > .dropdown-menu, .dropdown-menu .divider  {
+    background-color: #00416A;
   }
 
-  .btn {
-    border-radius: 3px;
-    border: 1px solid $white;
+  .dropdown-menu > li > a {
     color: white;
-    background-color: $brand-primary;
-
-    a {
-      color: white;
-      &:hover,
-      &:focus {
-        color: $brand-primary;
-      }
-    }
-
     &:hover,
-    &:focus {
-      background-color: $white;
-      color: $brand-primary;
-      a {
-        color: $brand-primary;
-        outline: none;
-        text-decoration: none;
-      }
+    &focus {
+      background-color: transparent;
+
     }
   }
+
 }
 
 .app-header {
