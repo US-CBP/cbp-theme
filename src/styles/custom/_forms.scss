@@ -36,6 +36,39 @@ input[type="radio"], input[type="checkbox"] {
     margin: .2em 0 0;
 }
 
+// styling for input file types to look like our default buttons
+input.inputfile {
+   width: 0.1px;
+   height: 0.1px;
+   opacity: 0;
+   overflow: hidden;
+   position: absolute;
+   z-index: -1;
+}
+
+input.inputfile + label {
+font-size: 13px;
+font-weight:400;
+white-space: nowrap;
+color: #222;
+background: #fff;
+display: inline-block;
+padding: 5px 10px;
+line-height: 1.4;
+border: 1px solid #000;
+}
+
+.inputfile + label {
+   outline: 1px solid #000;
+  cursor: pointer;
+}
+
+label.btn.btn-hover:focus {
+outline: none;
+}
+// end of input file type styling
+
+
 .is-disabled .mdl-radio__ripple-container,
 .is-disabled .mdl-checkbox__ripple-container,
 .is-disabled .mdl-checkbox__label,
