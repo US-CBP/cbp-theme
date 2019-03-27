@@ -36,7 +36,7 @@ input[type="radio"], input[type="checkbox"] {
     margin: .2em 0 0;
 }
 
-// styling for input file types to look like our default buttons
+// styling for input[type="file"] elements to look like our default buttons
 input.inputfile {
    width: 0.1px;
    height: 0.1px;
@@ -59,12 +59,31 @@ border: 1px solid #000;
 }
 
 .inputfile + label {
-   outline: 1px solid #000;
+  outline: 1px solid #000;
   cursor: pointer;
 }
 
-label.btn.btn-hover:focus {
+label.btn.btn-hover:focus{
 outline: none;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px solid #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    background-color: #ccc;    
 }
 // end of input file type styling
 
