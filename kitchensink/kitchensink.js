@@ -129,5 +129,41 @@ $(document).ready(function () {
   })
   $('#topSecret').on('click', function () {
     hulkIt('top-secret')
-  })
+  })  
 })
+
+// Enable the <input type="file"> additional functionality and styling needed
+/*
+By Osvaldas Valutis, www.osvaldas.info
+Available for use under the MIT License
+*/      
+     'use strict';
+      
+     ;( function( $, _window, _document ) {
+       $( '.inputfile' ).each( function() {
+         var $input	 = $( this ),
+           $label	 = $input.next( 'label' ),
+           labelVal = $label.html();
+     
+     // changes the label text to show the name of the selected file
+         $input.on( 'change', function( e ) {
+           var fileName = '';
+     
+          if( this.files && this.files.length > 1 )
+             fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+           else if( e.target.value )
+             fileName = e.target.value.split( '\\' ).pop();
+     
+           if( fileName )
+             $label.find( 'span' ).html( fileName );
+           else
+             $label.html( labelVal );
+         });
+     
+      // Firefox bug fix
+      // Applies and removes necessary accessiblity styling for focus events
+         $input
+         .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+         .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+       });
+     })( jQuery, window, document );
