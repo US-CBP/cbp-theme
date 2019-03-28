@@ -47,16 +47,17 @@ input.inputfile {
 }
 
 input.inputfile + label {
-font-size: 13px;
-font-weight:400;
-white-space: nowrap;
-color: #222;
-background: #fff;
-display: inline-block;
-padding: 5px 10px;
-line-height: 1.4;
-border: 1px solid #000;
+// font-size: 13px;
+// font-weight:400;
+// white-space: nowrap;
+// color: #222;
+// background: #fff;
+// display: inline-block;
+// padding: 5px 10px;
+// line-height: 1.4;
+// border: 1px solid #000;
 }
+
 
 .inputfile + label {
   outline: 1px solid #000;
@@ -67,14 +68,13 @@ label.btn.btn-hover:focus{
 outline: none;
 }
 
-.inputfile + label svg {
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-  fill: currentColor;
-  margin-top: -0.25em;
-  margin-right: 0.25em;
+.fa.fa-upload::before {
+  margin-right:10px;
 }
+span.file-title {
+  font-family: $font-family-sans-serif;
+}
+
 .inputfile:focus + label,
 .inputfile.has-focus + label {
     outline: 1px solid #000;
