@@ -1800,9 +1800,24 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required is-readonly">
                       <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" readonly/>
                       <label class="mdl-textfield__label static-label" for="sample4999">static-label readonly<span class="required-field"></span></label>
-                      <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
+              <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
                     </div>
                   </form>
+                  
+                  <!-- Form Input Type File element -->
+                  <h3>Form Input File Type</h3>    
+                  <form class="form mdl-textfield">
+                   <div class="form-group">
+                   <div class="input-group">
+                  <input type="file" name="file" id="file" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
+                  <label class="btn btn-default fa fa-upload" aria-hidden="true" for="file" role="button">
+                  <span class="file-title">Choose a file…</span>
+                  </label>
+                </div>
+              </div>
+                  </form>    
+    
+
                   <h3>Form Validation</h3>
                   <form class="form" style="max-width: 450px;" role="form">
                     <h4>Alphabet Validation (no space)</h4>
@@ -3238,37 +3253,65 @@
     </div>
   </div>
 
-
-
     <!-- required CBP dependency: jQuery 2.x+ -->
     <!-- required CBP dependency: jQuery 2.x+ -->
     <!-- <script src="./thirdparty/js/jquery-2.2.4.min.js"></script> -->
 
     <!-- jQuery 3.x= -->
-    <script src="./thirdparty/js/jquery-3.3.1.min.js"></script>
-    
-
-
+     <script src="./thirdparty/js/jquery-3.3.1.min.js"></script> <!--original-->
 
     <!-- application specific third party js files here -->
-    <script src="./thirdparty/js/jquery-ui.min.js"></script>
+   <script src="./thirdparty/js/jquery-ui.min.js"></script>
     <script src="./thirdparty/js/alerts.js"></script>
     <script src="./thirdparty/js/select2.min.js"></script>
     <script src="./thirdparty/js/selectize.min.js"></script>
     <script src="./thirdparty/js/tota11y.min.js"></script>
 
-
     <!-- js for cbp-theme should be loaded after all dependencies and thirdparty js files -->
     <script src="./dist/cbp-theme.browser.bundle.umd.js"></script>
     <!-- optional dependencies from cf-ui-theme repo -->
     <script src="./dist/cbp-theme-inputmask.umd.js"></script>
-
-
-
-
       <!-- and finally kitchen sink js that init all components when DOM ready! -->
+
     <script src="./kitchensink.js"></script>
 
-
-  </body>
+    <script>
+        // export function setupCBPHeader () {
+        'use strict'
+      
+         $(window).on('load', function () {
+          // make the header sticky
+          $(window).scrollTop(0)
+      
+          // height of only top header
+          var sidebarOffsetTopHeader = 50 // this is the height of the cbp-header
+      
+          // scroll function
+          $(window).scroll(function () {
+            // check when the scroll is more than the height of universal header
+            var scroll = $(window).scrollTop()
+      
+            // check if the app header is there or not
+            if ($('.app-header').length === 0) {
+              // check when the scroll is more than the height of universal header
+              if (scroll >= sidebarOffsetTopHeader) {
+                $('.sidebar').removeClass('after-header')
+              } else {
+                $('.sidebar').addClass('after-header')
+              }
+            } else {
+              // check when the scroll is more than the height of universal header
+              if (scroll >= sidebarOffsetTopHeader) {
+                $('.app-header').addClass('top')
+                $('.sidebar').removeClass('after-double-header').addClass('after-header')
+              } else {
+                $('.app-header').removeClass('top')
+                $('.sidebar').removeClass('after-header').addClass('after-double-header')
+              }
+            }
+          })
+         })
+        //  }
+      </script>
+</body>
 </html>
