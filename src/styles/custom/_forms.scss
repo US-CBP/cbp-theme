@@ -46,28 +46,6 @@ input.inputfile {
    z-index: -1;
 }
 
-input.inputfile + label {
-// font-size: 13px;
-// font-weight:400;
-// white-space: nowrap;
-// color: #222;
-// background: #fff;
-// display: inline-block;
-// padding: 5px 10px;
-// line-height: 1.4;
-// border: 1px solid #000;
-}
-
-
-.inputfile + label {
-  outline: 1px solid #000;
-  cursor: pointer;
-}
-
-label.btn.btn-hover:focus{
-outline: none;
-}
-
 .fa.fa-upload::before {
   margin-right:10px;
 }
@@ -77,13 +55,12 @@ span.file-title {
 
 .inputfile:focus + label,
 .inputfile.has-focus + label {
-    outline: 1px solid #000;
-    outline: -webkit-focus-ring-color auto 5px;
+  outline: 1px dotted  #222; 
 }
 .inputfile-1:focus + label,
 .inputfile-1.has-focus + label,
 .inputfile-1 + label:hover {
-    background-color: #ccc;    
+  background-color: #ccc;  
 }
 // end of input file type styling
 
