@@ -55,12 +55,12 @@ span.file-title {
 
 .inputfile:focus + label,
 .inputfile.has-focus + label {
-  outline: 1px dotted  #222; 
+  outline: 1px dotted  $gray-darker; 
 }
 .inputfile-1:focus + label,
 .inputfile-1.has-focus + label,
 .inputfile-1 + label:hover {
-  background-color: #e6e6e6;  
+  background-color: $gray-lightest;  
 }
 // end of input file type styling
 
