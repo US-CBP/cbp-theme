@@ -6,7 +6,6 @@ $(document).ready(function () {
   window.cbpTheme.applyCharLimit()
   window.cbpTheme.applyTags()
   window.cbpTheme.applyThirdPartySelect()
-  window.cbpTheme.setupCBPHeader() //my addition
 
   $('.dropdown-toggle').dropdown()
 
