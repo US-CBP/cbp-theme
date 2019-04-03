@@ -121,8 +121,5 @@
     "material-design-lite": "1.1.1",
     "mdl-selectfield": "1.0.2",
     "roboto-fontface": "0.10.0"
-  },
-  "peerDependencies": {
-    "chokidar": "*"
   }
 }
