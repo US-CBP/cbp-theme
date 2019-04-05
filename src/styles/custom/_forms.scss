@@ -89,7 +89,10 @@ text-align: left;
 #filename:hover, #filename:focus{
   outline: none;
   border-bottom: 2px solid #1460aa;
+}
 
+#fileupload {
+  display: none !important;
 }
 
 #buttonlabel:focus {
@@ -105,8 +108,6 @@ span#fileupload-label {
 span#fileupload-label:focus {
   outline: 1px dotted  $gray-darker; 
 }
-
-
 // end of File Upload Version #2
 
 
