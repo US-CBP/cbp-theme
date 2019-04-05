@@ -132,10 +132,9 @@ $(document).ready(function () {
   })  
 })
 
+// File Input Type #1
 // Enable the <input type="file"> additional functionality and styling needed
-/*
-By Osvaldas Valutis, www.osvaldas.info
-Available for use under the MIT License
+/* By Osvaldas Valutis, www.osvaldas.info / Available for use under the MIT License
 */      
      'use strict';
       
@@ -167,3 +166,23 @@ Available for use under the MIT License
          .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
        });
      })( jQuery, window, document );
+
+ 
+     // File Input Type #2
+     // trigger upload on space & enter
+     // = standard button functionality
+     $('#buttonlabel span[role=button]').bind('keypress keyup', function(e) {
+     if(e.which === 32 || e.which === 13){
+     e.preventDefault();
+     $('#fileupload').click();
+     }    
+     });
+   
+     // return chosen filename to additional input
+     $('#fileupload').change(function(e) {
+     var filename = $('#fileupload').val().split('\\').pop();
+     $('#filename').val(filename);
+     $('#filename').attr('placeholder', filename);
+     $('#filename').focus();
+     });
+

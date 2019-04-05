@@ -16,7 +16,33 @@
 
     <!-- CUSTOM CSS ONLY FOR THIS KITCHEN SINK -->
     <link media="screen" href="./kitchensink.css" rel="stylesheet" />
+<style>
 
+#fileupload {
+  display: none;
+}
+
+span[role=button] {
+
+
+}
+
+span[role=button]:hover,
+span[role=button]:focus {
+
+}
+.hide {
+  /* position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0; */
+}
+
+</style>
   </head>
   <body>
     <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -1804,19 +1830,39 @@
                     </div>
                   </form>
                   
-                  <!-- Form Input Type File element -->
-                  <h3>Form Input File Type</h3>    
-                  <form class="form mdl-textfield">
-                   <div class="form-group">
-                   <div class="input-group">
-                  <input type="file" name="file" id="file" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="">
-                  <label class="btn btn-default fa fa-upload" aria-hidden="true" for="file" role="button">
-                  <span class="file-title">Choose a file…</span>
-                  </label>
-                </div>
-              </div>
-                  </form>    
-    
+          <!-- Form Input Type File element -->
+          <h3>Form Input File Type #1</h3>  
+          <h5>( Mobile-First Approach )</h5>  
+          <form role="upload" class="form mdl-textfield">
+          <div class="form-group">
+          <div class="input-group">
+          <input type="file" name="file" id="file" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="" readonly>
+          <label class="btn btn-default fa fa-upload" aria-hidden="true" for="file" role="button">
+          <span class="file-title">Choose a file…</span>
+          </label>
+          </div>
+          </div>
+          </form>   
+                  
+              <!-- Form Input Type File element -->
+            <h3>Form Input File Type #2</h3>
+            <h5>( Matches current Style Guide )</h5> 
+          <form role="upload" class="fileupload" action="#" enctype="multipart/form-data">
+          <div class="form-group">
+          <div class="input-group">
+          <input type="file" id="fileupload">
+          <label for="filename" class="hide">Select File</label>   
+          <input type="text" id="filename" autocomplete="off" readonly placeholder="Name of File"> 
+          <label for="fileupload" id="buttonlabel" class="input-group-btn">
+          <span id="fileupload-label" class="btn btn-default" role="button" aria-controls="filename" tabindex="0">
+          Select File
+          </span>
+          </label>
+          </div>
+          </div>
+          </form>
+
+
 
                   <h3>Form Validation</h3>
                   <form class="form" style="max-width: 450px;" role="form">
