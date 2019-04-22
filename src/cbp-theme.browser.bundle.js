@@ -9,11 +9,6 @@ import 'mdl-selectfield/dist/mdl-selectfield'
 
 import {CBPTheme} from './cbp-theme'
 
-// if (!window._babelPolyfill) {
-//   /* eslint-disable global-require */
-//   require("babel-polyfill");
-// }
-
 (function () {
   window.CBPTheme = CBPTheme
   window.cbpTheme = new CBPTheme()
