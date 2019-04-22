@@ -7,6 +7,7 @@ import $ from 'jquery';
  * @param selector
  * @returns {boolean}
  */
+
 function applyDatePicker(selector) {
   /**
    *
@@ -16,13 +17,17 @@ function applyDatePicker(selector) {
    */
 
   selector = selector || '.datepicker';
+
   if ($(selector).length > 0) {
     if (!$.datepicker) {
       return false;
     }
+
     var oldGoToToday = $.datepicker._gotoToday;
+
     $.datepicker._gotoToday = function (id) {
       oldGoToToday.call(this, id);
+
       this._selectDate(id);
     };
   }
@@ -33,6 +38,7 @@ function applyDatePicker(selector) {
  * e.g. * applyCharLimit('.modal [data-charlimit]');
  * @param selector
  */
+
 function applyCharLimit(selector) {
   /**
    *
@@ -51,17 +57,19 @@ function applyCharLimit(selector) {
 
     if (attrOptions && attrOptions !== '') {
       attrOptions = attrOptions.replace(new RegExp("'", 'g'), '"');
-
       var dataoptions = $.parseJSON('{' + attrOptions + '}');
       var template = dataoptions.template;
+
       var updateChar = function updateChar(ev) {
         var currentLength = $(ev.currentTarget).val().length;
         var limit = dataoptions.limit;
-        $(val).parent().find(dataoptions.target).html(template || '<strong> ' + currentLength + '/' + limit + ' </strong> character limit');
+        $(val).parent().find(dataoptions.target).html(template || "<strong> " + currentLength + "/" + limit + " </strong> character limit");
       };
 
       $(val).on('input contextmenu', updateChar);
-      updateChar({ currentTarget: val });
+      updateChar({
+        currentTarget: val
+      });
     }
   });
 }
@@ -70,6 +78,7 @@ function applyCharLimit(selector) {
  * Default selector is '[data-dismiss="tag"]'
  * @param selector
  */
+
 function applyTags(selector) {
 
   selector = selector || '[data-dismiss="tag"]';
@@ -88,6 +97,7 @@ function applyTags(selector) {
  * Contact the Common Framework UI Group for more details or see our confluence page.
  *
  */
+
 function applyThirdPartySelect() {
 
   var getDirty = function getDirty(idx, el) {
@@ -99,6 +109,7 @@ function applyThirdPartySelect() {
       });
     }
   };
+
   $('.selectize-field').each(getDirty);
   $('.select2-field').each(getDirty);
 }
@@ -107,17 +118,15 @@ function setupCBPHeader() {
 
   $(window).on('load', function () {
     // make the header sticky
-    $(window).scrollTop(0);
+    $(window).scrollTop(0); // height of only top header
 
-    // height of only top header
     var sidebarOffsetTopHeader = 50; // this is the height of the cbp-header
-
     // scroll function
+
     $(window).scroll(function () {
       // check when the scroll is more than the height of universal header
-      var scroll = $(window).scrollTop();
+      var scroll = $(window).scrollTop(); // check if the app header is there or not
 
-      // check if the app header is there or not
       if ($('.app-header').length === 0) {
         // check when the scroll is more than the height of universal header
         if (scroll >= sidebarOffsetTopHeader) {
@@ -139,30 +148,30 @@ function setupCBPHeader() {
   });
 }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var CBPTheme =
+/*#__PURE__*/
+function () {
+  function CBPTheme() {}
 
-var CBPTheme = function () {
-  function CBPTheme() {
-    _classCallCheck(this, CBPTheme);
-  }
+  var _proto = CBPTheme.prototype;
 
-  CBPTheme.prototype.setupCBPHeader = function setupCBPHeader$$1() {
+  _proto.setupCBPHeader = function setupCBPHeader$$1() {
     return setupCBPHeader();
   };
 
-  CBPTheme.prototype.applyDatePicker = function applyDatePicker$$1() {
+  _proto.applyDatePicker = function applyDatePicker$$1() {
     return applyDatePicker();
   };
 
-  CBPTheme.prototype.applyCharLimit = function applyCharLimit$$1() {
+  _proto.applyCharLimit = function applyCharLimit$$1() {
     return applyCharLimit();
   };
 
-  CBPTheme.prototype.applyTags = function applyTags$$1() {
+  _proto.applyTags = function applyTags$$1() {
     return applyTags();
   };
 
-  CBPTheme.prototype.applyThirdPartySelect = function applyThirdPartySelect$$1() {
+  _proto.applyThirdPartySelect = function applyThirdPartySelect$$1() {
     return applyThirdPartySelect();
   };
 
