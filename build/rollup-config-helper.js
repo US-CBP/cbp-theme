@@ -90,7 +90,7 @@ export function getRollupConfig(options) {
         sourceMap: true,
         moduleId: options.output.name,
         presets: [
-          ["env", {
+          ["@babel/preset-env", {
             modules: false,
             loose: true,
           }],
