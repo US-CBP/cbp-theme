@@ -131,9 +131,8 @@ $(document).ready(function () {
     hulkIt('top-secret')
   })  
 })
-
-// File Input Type #1
-// Enable the <input type="file"> additional functionality and styling needed
+// Form Input File Type #1
+// Enable the <input type="file"> functionality
 /* By Osvaldas Valutis, www.osvaldas.info / Available for use under the MIT License
 */      
      'use strict';
@@ -168,7 +167,7 @@ $(document).ready(function () {
      })( jQuery, window, document );
 
  
-     // File Input Type #2
+     // Form Input File Type #2
      // trigger upload on space & enter
      // = standard button functionality
      $('#buttonlabel span[role=button]').bind('keypress keyup', function(e) {
