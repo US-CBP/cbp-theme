@@ -77,10 +77,10 @@ form.fileupload {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid $gray;
   font-size: 13px;
   padding-left: 3px;
-  color: #333;
+  color: $gray-dark;
   overflow: hidden;
   white-space: nowrap;
   text-align: left;
@@ -88,7 +88,7 @@ form.fileupload {
 
 #filename:hover, #filename:focus{
   outline: none;
-  border-bottom: 2px solid #1460aa;
+  border-bottom: 2px solid $brand-primary;
 }
 
 #fileupload {
