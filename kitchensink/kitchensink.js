@@ -131,11 +131,12 @@ $(document).ready(function () {
     hulkIt('top-secret')
   })  
 })
+
 // Form Input File Type #1
 // Enable the <input type="file"> functionality
 /* By Osvaldas Valutis, www.osvaldas.info / Available for use under the MIT License
 */      
-     'use strict';
+    //  'use strict';
       
      ;( function( $, _window, _document ) {
        $( '.inputfile' ).each( function() {
@@ -164,7 +165,7 @@ $(document).ready(function () {
          .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
          .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
        });
-     })( jQuery, window, document );
+     })( window, document );
 
  
      // Form Input File Type #2
