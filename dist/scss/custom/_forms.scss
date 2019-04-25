@@ -36,6 +36,81 @@ input[type="radio"], input[type="checkbox"] {
     margin: .2em 0 0;
 }
 
+// styling for input[type="file"] elements to look like our default buttons
+input.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.fa.fa-upload::before {
+  margin-right:10px;
+}
+span.file-title {
+  font-family: $font-family-sans-serif;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label, .fileupload-label:focus {
+  outline: 1px dotted  $gray-darker; 
+}
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: $gray-lightest;  
+}
+// end of input file type styling
+
+// Form Input File Type #2 styling
+
+form.fileupload {
+  max-width:450px;
+}
+
+#filename {
+  width: 100%;
+  height: 28px;
+  font-size: 13px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $gray;
+  font-size: 13px;
+  padding-left: 3px;
+  color: $gray-dark;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+
+#filename:hover, #filename:focus{
+  outline: none;
+  border-bottom: 2px solid $brand-primary;
+}
+
+#fileupload {
+  display: none !important;
+}
+
+#buttonlabel:focus {
+  outline: none;
+}
+
+span#fileupload-label {
+  font-family: $font-family-sans-serif;
+  padding: 6px 12px 2px 12px;
+  margin-left: 0px;
+}
+
+span#fileupload-label:focus {
+  outline: 1px dotted  $gray-darker; 
+}
+// end of File Upload Version #2
+
+
 .is-disabled .mdl-radio__ripple-container,
 .is-disabled .mdl-checkbox__ripple-container,
 .is-disabled .mdl-checkbox__label,

@@ -1800,9 +1800,44 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--full-width is-required is-readonly">
                       <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="sample4999" aria-required="true" readonly/>
                       <label class="mdl-textfield__label static-label" for="sample4999">static-label readonly<span class="required-field"></span></label>
-                      <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
+              <span class="mdl-textfield__error"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp;Only alphabet and no spaces</span>
                     </div>
                   </form>
+                  
+          <!-- Form Input Type File element -->
+          <h3>Form Input File Type #1</h3>  
+          <h5>( Mobile-First Approach )</h5>  
+          <form role="upload" class="form mdl-textfield">
+          <div class="form-group">
+          <div class="input-group">
+          <input type="file" name="file" id="file" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple="" readonly>
+          <label class="btn btn-default fa fa-upload" aria-hidden="true" for="file" role="button">
+          <span class="file-title">Choose a file…</span>
+          </label>
+          </div>
+          </div>
+          </form>   
+                  
+              <!-- Form Input Type File element -->
+            <h3>Form Input File Type #2</h3>
+            <h5>( Matches current Style Guide )</h5> 
+          <form role="upload" class="fileupload" action="#" enctype="multipart/form-data">
+          <div class="form-group">
+          <div class="input-group">
+          <input type="file" id="fileupload">
+          <label for="filename" class="hide">Select File</label>   
+          <input type="text" id="filename" autocomplete="off" readonly placeholder="Name of File"> 
+          <label for="fileupload" id="buttonlabel" class="input-group-btn">
+          <span id="fileupload-label" class="btn btn-default" role="button" aria-controls="filename" tabindex="0">
+          Select File
+          </span>
+          </label>
+          </div>
+          </div>
+          </form>
+
+
+
                   <h3>Form Validation</h3>
                   <form class="form" style="max-width: 450px;" role="form">
                     <h4>Alphabet Validation (no space)</h4>
@@ -3254,9 +3289,8 @@
     <script src="./dist/cbp-theme.browser.bundle.umd.js"></script>
     <!-- optional dependencies from cf-ui-theme repo -->
     <script src="./dist/cbp-theme-inputmask.umd.js"></script>
-
       <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>
 
-  </body>
+</body>
 </html>
