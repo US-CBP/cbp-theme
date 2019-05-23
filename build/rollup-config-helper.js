@@ -90,11 +90,16 @@ export function getRollupConfig(options) {
         sourceMap: true,
         moduleId: options.output.name,
         presets: [
-          ["@babel/preset-env", {
+          [
+            "@babel/preset-env", {
             modules: false,
             loose: true,
           }],
-        ],
+          ],
+          plugins: [
+            "@babel/plugin-transform-object-assign",
+          ],
+          
         exclude: 'node_modules/**',
       })
 
@@ -142,7 +147,3 @@ function matchExternal(id, externals) {
   return match ? true : false;
 
 }
-
-
-
-
