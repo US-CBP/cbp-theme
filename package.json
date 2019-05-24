@@ -125,7 +125,7 @@
     "parser": "babel-eslint"
   },
   "dependencies": {
-    "bootstrap-sass": "3.3.7",
+    "bootstrap-sass": "3.4.1",
     "font-awesome": "4.6.3",
     "jquery": "3.4.1",
     "material-design-lite": "1.1.1",
