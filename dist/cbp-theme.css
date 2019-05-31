@@ -14723,6 +14723,33 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 /* Badge variants */
 /* Tag variants */
 /* Pill variants */
+.carousel {
+  margin: 10px;
+  box-shadow: 0 0 4px 1px #404040;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+  outline: none !important;
+}
+
+.carousel-caption {
+  bottom: 6px;
+}
+
+.carousel-indicators {
+  bottom: 4px;
+}
+
+.carousel-indicators li {
+  width: 20px;
+}
+
 .bg-primary {
   background-color: #00416A !important;
   color: #fff !important;
@@ -16294,6 +16321,12 @@ fieldset[disabled] .switch-toggle a,
 
 .filters label {
   font-weight: 400;
+}
+
+.fa-chevron-right, .ui-datepicker .ui-datepicker-next, .fa-chevron-left, .ui-datepicker .ui-datepicker-prev {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .switch {

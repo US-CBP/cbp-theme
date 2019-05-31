@@ -21,6 +21,7 @@ $roboto-font-path: 'roboto-fontface/fonts' !default;
 $fa-font-path: "font-awesome/fonts" !default;
 @import "vendor/fontawesome";
 
+
 @import "vendor/select2_mdl_theme";
 @import "vendor/selectize_mdl_theme";
 
@@ -28,6 +29,7 @@ $fa-font-path: "font-awesome/fonts" !default;
 
 // CBP overrides
 @import "custom/mixins";
+@import "custom/carousel";
 @import "custom/colors";
 @import "custom/globals";
 @import "custom/accordions";
@@ -36,6 +38,7 @@ $fa-font-path: "font-awesome/fonts" !default;
 @import "custom/buttons";
 @import "custom/containers";
 @import "custom/filters";
+@import "custom/font-awesome";
 @import "custom/forms";
 @import "custom/labels";
 @import "custom/load-spinners";
@@ -50,7 +53,5 @@ $fa-font-path: "font-awesome/fonts" !default;
 @import "custom/type";
 @import "custom/utilities";
 @import "custom/responsive-utilities";
-
 @import "custom/timelines";
-
 @import "custom/hacks";

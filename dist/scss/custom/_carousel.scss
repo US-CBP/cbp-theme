@@ -1,0 +1,26 @@
+.carousel {
+  margin: 10px;
+  box-shadow: $card-boxshadow;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+  outline: none !important;
+}
+
+.carousel-caption {
+  bottom: 6px;
+}
+
+.carousel-indicators {
+  bottom: 4px;
+}
+
+.carousel-indicators li {
+  width: 20px;
+}
