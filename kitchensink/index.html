@@ -12,6 +12,7 @@
     <link media="screen" href="./thirdparty/css/select2.min.css" rel="stylesheet" />
     <link media="screen" href="./thirdparty/css/selectize.css" rel="stylesheet" />
     <link media="screen" href="./thirdparty/css/datepicker.css" rel="stylesheet" />
+
     <link media="screen" href="./dist/cbp-theme.min.css" rel="stylesheet" />
 
     <!-- CUSTOM CSS ONLY FOR THIS KITCHEN SINK -->
@@ -315,7 +316,7 @@
       </div>
     </div>
 
-      <div class="container-fluid">
+      <div id="content" class="container-fluid">
        <div class="content fixed">
           <div class="cbp-sidebar sidebar after-double-header" id="cbp-sidebar">
                 <form class="filters">
@@ -522,6 +523,7 @@
               <a href="#Bread Crumbs" class="list-group-item">Bread Crumbs</a>
               <a href="#Buttons" class="list-group-item">Buttons</a>
               <a href="#Cards" class="list-group-item">Cards</a>
+              <a href="#bootstrap-carousel" class="list-group-item">Bootstrap Carousel</a>
               <a href="#Dialogs" class="list-group-item">Dialogs</a>
               <a href="#Form Controls" class="list-group-item">Form Controls</a>
               <a href="#Forms" class="list-group-item">Forms</a>
@@ -1144,6 +1146,52 @@
               <a href="https://us-cbp.github.io/cbp-style-guide/docs/components/cards.html" target="_blank"><span class="sr-only">Link opens in new window</span>See CBP style guide for more cards examples</a>
               </div>
             </div>
+
+   <!-- Bootstrap Carousel Demo -->
+<h2 id="bootstrap-carousel" class="page-header">Bootstrap Carousel
+  <a href="#content" class="pull-right circle-btn return-to-top-btn" title="Back to Top" data-toggle="tooltip" data-placement="left">
+    <i class="fa fa-chevron-up bounce"></i></a>  </h2>
+
+<div id="bs-carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover" data-keyboard="true">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://placeimg.com/640/360/any" alt="Image of anything that seems cool">
+      <div class="carousel-caption">
+      	<h3>Your image caption goes here</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://placekitten.com/640/360" alt="Cute kitten">
+      <div class="carousel-caption">
+      	<h3>Another caption goes here</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://placebear.com/640/360" alt="Scary Bear doing this thing">
+      <div class="carousel-caption">
+      	<h3>Another caption goes here</h3>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#bs-carousel" role="button" data-slide="prev">
+    <span class="fa fa-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#bs-carousel" role="button" data-slide="next">
+    <span class="fa fa-chevron-right"></span>
+  </a>
+</div> 
+<!-- End of Bootstrap Carousel Demo -->
+
             <!-- Dialogs -->
             <div>
               <h2 id="Dialogs" class="page-header">Dialogs
@@ -3278,6 +3326,7 @@
 
     <!-- application specific third party js files here -->
     <script src="./thirdparty/js/jquery-ui.min.js"></script>
+    
     <script src="./thirdparty/js/alerts.js"></script>
     <script src="./thirdparty/js/select2.min.js"></script>
     <script src="./thirdparty/js/selectize.min.js"></script>
@@ -3290,5 +3339,17 @@
       <!-- and finally kitchen sink js that init all components when DOM ready! -->
     <script src="./kitchensink.js"></script>
 
+    <script type="text/javascript">
+
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+  
+    </script>
+ 
+    
 </body>
 </html>
