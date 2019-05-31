@@ -27,9 +27,6 @@ $fa-font-path: "font-awesome/fonts" !default;
 
 @import "vendor/toggle-switch";
 
-@import "vendor/slick";
-@import "vendor/slick-theme";
-
 // CBP overrides
 @import "custom/mixins";
 @import "custom/carousel";
@@ -41,6 +38,7 @@ $fa-font-path: "font-awesome/fonts" !default;
 @import "custom/buttons";
 @import "custom/containers";
 @import "custom/filters";
+@import "custom/font-awesome";
 @import "custom/forms";
 @import "custom/labels";
 @import "custom/load-spinners";
@@ -55,8 +53,5 @@ $fa-font-path: "font-awesome/fonts" !default;
 @import "custom/type";
 @import "custom/utilities";
 @import "custom/responsive-utilities";
-@import "custom/font-awesome";
-
 @import "custom/timelines";
-
 @import "custom/hacks";
