@@ -5,9 +5,18 @@
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 100%;
   margin: auto;
 }
+
+img.carousel-full-size {
+  width: 100%;
+}
+
+.carousel-control span.fa-chevron-right, .carousel-control span.fa-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  }
 
 .carousel-control:focus, .carousel-control:hover {
   outline: none !important;
@@ -19,8 +28,4 @@
 
 .carousel-indicators {
   bottom: 4px;
-}
-
-.carousel-indicators li {
-  width: 20px;
 }
