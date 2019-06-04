@@ -1,0 +1,31 @@
+.carousel {
+  margin: 10px;
+  box-shadow: $card-boxshadow;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: auto;
+}
+
+img.carousel-full-size {
+  width: 100%;
+}
+
+.carousel-control span.fa-chevron-right, .carousel-control span.fa-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  }
+
+.carousel-control:focus, .carousel-control:hover {
+  outline: none !important;
+}
+
+.carousel-caption {
+  bottom: 6px;
+}
+
+.carousel-indicators {
+  bottom: 4px;
+}
