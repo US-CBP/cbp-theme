@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme",
   "description": "CBP Common Framework UI Theme",
-  "version": "1.10.16",
+  "version": "1.10.17",
   "author": "CBP Common Framework",
   "main": "./dist/cbp-theme.umd.js",
   "module": "./dist/cbp-theme.esm5.js",
