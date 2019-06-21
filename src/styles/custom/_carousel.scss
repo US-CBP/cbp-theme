@@ -36,21 +36,18 @@
 }
 
 @media screen and (max-width: 350px) {
-
   .carousel-caption, .carousel-indicators {
     display: none;
   }
 }
 
 @media screen and (max-width: 480px) { 
-
   .carousel-caption {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 1040px) {
-
   #bs-carousel .carousel-inner > .item > img {
     max-width: 100%;
   }
