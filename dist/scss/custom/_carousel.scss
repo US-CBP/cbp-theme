@@ -1,31 +1,54 @@
-.carousel {
+#bs-carousel.carousel {
   margin: 10px;
   box-shadow: $card-boxshadow;
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+  max-width: 100vh;
+  min-width: 250px;
   margin: auto;
 }
 
-img.carousel-full-size {
-  width: 100%;
+#bs-carousel .carousel-inner > .item > img,
+#bs-carousel .carousel-inner > .item > a > img {
+  margin: auto;
 }
 
-.carousel-control span.fa-chevron-right, .carousel-control span.fa-chevron-left {
+#bs-carousel .carousel-control span.fa-chevron-left {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 20%;
   }
 
-.carousel-control:focus, .carousel-control:hover {
+#bs-carousel .carousel-control span.fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+}
+
+#bs-carousel .carousel-control:focus, #bs-carousel .carousel-control:hover {
   outline: none !important;
 }
 
-.carousel-caption {
+#bs-carousel .carousel-caption {
   bottom: 6px;
 }
 
-.carousel-indicators {
+#bs-carousel .carousel-indicators {
   bottom: 4px;
+}
+
+@media screen and (max-width: 350px) {
+  .carousel-caption, .carousel-indicators {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) { 
+  .carousel-caption {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  #bs-carousel .carousel-inner > .item > img {
+    max-width: 100%;
+  }
 }
