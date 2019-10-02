@@ -1,0 +1,45 @@
+{
+  "name": "cbp-ds-css",
+  "version": "1.0.0",
+  "description": "This is the CSS offering built upon the CBP UX Guidelines.  The CSS can be used with any web user interface or framework.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "Creative Services",
+  "contributors": [
+    {
+      "name": "David Y. Hodge",
+      "email": "david.y.hodge@cbp.dhs.gov"
+    },
+    {
+      "name": "John D. Higgins",
+      "email": "john.d.higgins@associates.cbp.dhs.gov"
+    },
+    {
+      "name": "Ray Robertson",
+      "email": "ray.robertson@associates.cbp.dhs.gov"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "bulma": "^0.7.5",
+    "css-loader": "^3.2.0",
+    "eslint-loader": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
