@@ -5,8 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
+  devtool: 'source-map', // any "source-map"-like devtool is possible
   entry: './src/js/index.js',
   // controls the devServer process and localhost port
   devServer: {
@@ -16,16 +18,25 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    filename: 'js/cbp-ds-bundle.js'
   },
+
+  watch: true,
+
   module: {
-    rules: [{
-      test: /\.scss$/,
+    rules: [
+      {
+      // test: /\.scss$/,
+      // below test covers both sass and css file types
+      test: /\.(sa|sc|c)ss$/,
       use: [
           
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            }
           },
           {
             loader: 'sass-loader',
@@ -33,24 +44,51 @@ module.exports = {
               sourceMap: true,
               // options...
             }
-          }
+          },
         ]
-    }]
+    },
+    {
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/plugin-transform-runtime'],
+          cacheDirectory: true,
+        }
+      }
+    },
+  ]
   },
+
   plugins: [
-// pushes current version of the 'src/index.html' file &
-// any of the object.property.value(s) used from below within the 'src/index.html' file to 'dist/index.html' version
+
     new HtmlWebpackPlugin({
-      title: 'CBP-DS THEME TEST SITE',
+      hash: true,
+      title: 'CBP-DS Theme Website',
       template: './src/index.html',
       inject: true,
       minify: {
-          removeComments: true,
+          removeComments: false,
           collapseWhitespace: false
       }
   }),
     new MiniCssExtractPlugin({
+      ignoreOrder: false, //enable to remove warnings about any possible conflict
       filename: 'css/[name].bundle.css'
     }),
-  ]
+
+    new OptimizeCssAssetsPlugin({
+      // assetNameRegExp: /\.optimize\.css$/g,
+      assetNameRegExp: /\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true
+    })
+
+  ],
+
 };
