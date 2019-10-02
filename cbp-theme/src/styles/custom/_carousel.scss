@@ -1,0 +1,54 @@
+#bs-carousel.carousel {
+  margin: 10px;
+  box-shadow: $card-boxshadow;
+  max-width: 100vh;
+  min-width: 250px;
+  margin: auto;
+}
+
+#bs-carousel .carousel-inner > .item > img,
+#bs-carousel .carousel-inner > .item > a > img {
+  margin: auto;
+}
+
+#bs-carousel .carousel-control span.fa-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  }
+
+#bs-carousel .carousel-control span.fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+}
+
+#bs-carousel .carousel-control:focus, #bs-carousel .carousel-control:hover {
+  outline: none !important;
+}
+
+#bs-carousel .carousel-caption {
+  bottom: 6px;
+}
+
+#bs-carousel .carousel-indicators {
+  bottom: 4px;
+}
+
+@media screen and (max-width: 350px) {
+  .carousel-caption, .carousel-indicators {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) { 
+  .carousel-caption {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  #bs-carousel .carousel-inner > .item > img {
+    max-width: 100%;
+  }
+}
