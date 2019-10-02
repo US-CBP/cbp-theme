@@ -1,0 +1,16 @@
+body {
+  font-family: 'Roboto', 'Calibri', 'Tahoma', sans-serif;
+  font-size: 13px;
+}
+
+#cbp-ds {
+  display: grid;
+  grid-template-rows: minmax(100px, 100px) 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;  
+}
+
+/* CBP HEADER START */
+.cbp-header {
+  box-sizing: border-box;
+}
