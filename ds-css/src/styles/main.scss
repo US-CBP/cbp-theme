@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+// INTRODUCTION: for customizations to matching CBP general variables.
+
+// Everything is in alphabetical order w/in each section
+
+// ** Only general variables, nothing pertaining to a specific element/component/object
+// Note: For all customizations to non-generic variables, need to find inside those more specific files.
+
+// Beginning of General Variable Customizations
+
+// Set CBP initial colors
+
+// Overidden variables 
+// (* w/in the /initial-variables.sass Bulma file)
+$grey:                              #555555;
+$grey-dark:                         #333333;
+$grey-darker:                       #222222;
+$grey-light:                        #aaaaaa;
+$grey-lighter:                      #eeeeee;
+$white:                             #ffffff;
+
+// New variables to Bulma
+$grey-base:                         #000000;
+$grey-lightest:                     #f6f6f6;
+$grey-medium:                       #808080;
+
+// New variables in general
+$cbp-danger:                        #a00000;
+$cbp-default:                       #ffffff;
+$cbp-info:                          #1460aa;
+$cbp-live:                          #FFEB7A;
+$cbp-primary:                       #00416A;
+$cbp-success:                       #008000;
+$cbp-warning:                       #f09511;
+
+// Set CBP Brand Colors
+// (* w/in the /derived-variables.sass Bulma file)
+
+// Overidden variables
+$danger: $cbp-danger !default;
+$info: $cbp-info !default;
+$primary: $cbp-primary !default;
+$success: $cbp-success !default;
+$warning: $cbp-warning !default;
+
+// New variables (not yet in use w/in Bulma)
+$default: $cbp-default !default;
+$live: $cbp-live !default;
+
+// Set Generic Colors
+// (* w/in the /generic.sass Bulma file)
+
+// Overidden
+
+// New
+
+
+// General Colors
+// (* w/in the /derived-variables.sass Bulma file)
+
+// Overidden
+$background: $white !default;
+
+
+// Set Border Colors
+// (* w/in the /derived-variables.sass Bulma file)
+
+// Overidden variables
+$border: none !default;
+$border-hover: none !default;
+
+// New variables
+$cbp-danger-border:               #aa0000;
+$cbp-default-border:              #adadad;
+$cbp-info-border:                 #0f4880;
+$cbp-live-border:                 darken($cbp-live, 10%);
+$cbp-primary-border:              #0A3055;
+$cbp-success-border:              #134d13;
+$cbp-warning-border:              #4a2e1f;
+
+// Set Text & Link Colors
+// (* w/in the /derived-variables.sass Bulma file)
+
+// Overidden variables
+
+
+// New variables
+
+
+// Exiting matched variables
+// $text: $grey-dark !default
+
+
+@import "~bulma/bulma";
+
+
+// Import only what we need from Bulma
+
+// example
+// @import "../node_modules/bulma/sass/utilities/_all.sass";
+
+
+
