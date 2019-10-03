@@ -55,7 +55,7 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env'],
           plugins: ['@babel/plugin-transform-runtime'],
-          cacheDirectory: true,
+          cacheDirectory: true, 
         }
       }
     },
@@ -65,7 +65,7 @@ module.exports = {
   plugins: [
 
     new HtmlWebpackPlugin({
-      hash: true,
+      hash: false, // set to 'true' if needing unique ID's at end of file name
       title: 'CBP-DS Theme Website',
       template: './src/index.html',
       inject: true,
@@ -76,11 +76,10 @@ module.exports = {
   }),
     new MiniCssExtractPlugin({
       ignoreOrder: false, //enable to remove warnings about any possible conflict
-      filename: 'css/[name].bundle.css'
+      filename: 'css/cbp-ds.min.css'
     }),
 
     new OptimizeCssAssetsPlugin({
-      // assetNameRegExp: /\.optimize\.css$/g,
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
