@@ -66,15 +66,13 @@ $background: $white !default;
 // Set Border Colors
 // (* w/in the /derived-variables.sass Bulma file)
 
-// Overidden variables
-$border: none !default;
-$border-hover: none !default;
 
 // New variables
 $cbp-danger-border:               #aa0000;
 $cbp-default-border:              #adadad;
 $cbp-info-border:                 #0f4880;
-$cbp-live-border:                 darken($cbp-live, 10%);
+// $cbp-live-border:                 darken($cbp-live, 10%);
+$cbp-live-border:                   #E6D261;
 $cbp-primary-border:              #0A3055;
 $cbp-success-border:              #134d13;
 $cbp-warning-border:              #4a2e1f;
