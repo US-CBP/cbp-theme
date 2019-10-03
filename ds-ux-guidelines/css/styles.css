@@ -1,16 +1,75 @@
+/* CBP Primary Color Palette */
 body {
-  font-family: 'Roboto', 'Calibri', 'Tahoma', sans-serif;
+  font-family: 'Roboto', 'Calibri', 'Tahoma', 'Arial', sans-serif;
   font-size: 13px;
+  margin: 0;
 }
 
 #cbp-ds {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: minmax(100px, 100px) 1fr;
-  grid-template-columns: 1fr;
-  grid-gap: 1em;  
+  -ms-grid-rows: 50px 1fr;
+      grid-template-rows: 50px 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1em;
+  height: 100vh;
+}
+
+.is-primary {
+  background: #00416A !important;
 }
 
 /* CBP HEADER START */
 .cbp-header {
-  box-sizing: border-box;
+  background: #00416A !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*
+  &__main-header {
+    background-color: $primary;
+    box-sizing: border-box;
+    color: #fff;
+    height: 50px;
+    padding: 1em;
+    text-align: center;
+  }*/
 }
+
+.cbp-header nav {
+  height: 100%;
+}
+
+.cbp-header nav .navbar-brand {
+  font-size: 1.538em;
+}
+
+.cbp-header nav .navbar-menu {
+  height: inherit;
+}
+
+.cbp-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cbp-header span {
+  font-weight: 300;
+}
+
+.cbp-header__usa-skipnav {
+  background: #fff;
+  left: 0;
+  padding: .5rem 1rem;
+  position: absolute;
+  top: -3.8rem;
+  z-index: 100;
+}
+
+.cbp-header__usa-skipnav:focus {
+  color: #00416A !important;
+  top: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,69 @@
+/* CBP Primary Color Palette */
+$danger: #A00000;
+$primary: #00416A !important;
+$info: #1460AA;
+$success: #008000;
+$warning: #f09511;
+
+body {
+  font-family: 'Roboto', 'Calibri', 'Tahoma', 'Arial', sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+#cbp-ds {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  height: 100vh;
+}
+.is-primary{ background: $primary }
+/* CBP HEADER START */
+.cbp-header {
+  background: $primary;
+  box-sizing: border-box;
+
+  nav {
+    height: 100%;
+
+    .navbar-brand { font-size: 1.538em }
+    .navbar-menu { height: inherit; }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  span {
+    font-weight: 300;
+  }
+
+  &__usa-skipnav {
+    background: #fff;
+
+    left: 0;
+    padding: .5rem 1rem;
+    position: absolute;
+    top: -3.8rem;
+    z-index: 100;
+    
+    &:focus {
+      color: $primary;
+      top: 0;
+      transition: all .2s ease-in-out;
+    }
+  }
+  /*
+  &__main-header {
+    background-color: $primary;
+    box-sizing: border-box;
+    color: #fff;
+    height: 50px;
+    padding: 1em;
+    text-align: center;
+  }*/
+
+
+}
