@@ -9,6 +9,18 @@
 // ** Only global variables, nothing pertaining to a specific element/component/object
 // Note: For all customizations to non-gelobal variables, need to find inside those more specific files.
 
+// ** NOTE ** Usage of the !default flag rules:
+// Only use the !default flag on a variable's value if it has not already been set Beforehand
+
+// Reason to use the !default flag carefully is because: 
+   // 1.  If the variable already has an assignment, it will not be re-assigned
+   // 2.  Variables with null value will be considered unassigned and will be assigned with !default
+
+// Usage of !default Benefit:
+  // The !default flag is extremely useful when creating plug-in type code and with Mixins.
+
+  ////////////////////////// **************************** /////////////////////////
+
 // Beginning of Customizations
 
 // Set CBP Brand (Primary Palette) Colors
@@ -17,74 +29,75 @@
 // (* w/in the /initial-variables.sass Bulma file)
 $grey:                              #555555;
 $grey-dark:                         #333333;
-$grey-darker:                       #222222;
+$grey-darker:                       #222222; 
 $grey-light:                        #aaaaaa;
 $grey-lighter:                      #eeeeee;
 $white:                             #ffffff;
 
 // New variables (that are Similar & Extend) current global Bulma variables
-$grey-base:                         #000000 !default;
-$grey-lightest:                     #f6f6f6 !default;
-$grey-medium:                       #808080 !default;
+
+$grey-base:                         #000000;
+$grey-lightest:                     #f6f6f6;
+$grey-medium:                       #808080;
 
 //////////////////////////////////////////////////////////////
 
 // Set CBP Brand (Notification/Alert/Message) BACKGROUND Colors
 
 // New variables
-$cbp-danger:                        #a00000 !default;
-$cbp-default:                       #ffffff !default;
-$cbp-info:                          #1460aa !default;
-$cbp-live:                          #FFEB7A !default;
-$cbp-primary:                       #00416A !default;
-$cbp-success:                       #008000 !default;
-$cbp-warning:                       #f09511 !default;
+$cbp-danger:                        #a00000;
+$cbp-default:                       #ffffff;
+$cbp-info:                          #1460aa;
+$cbp-live:                          #FFEB7A;
+$cbp-primary:                       #00416A;
+$cbp-success:                       #008000;
+$cbp-warning:                       #f09511;
 
 // (* w/in the /derived-variables.sass Bulma file)
 
 // Overidden values using new CBP Brand variables as the reference = "First-Class" status
-$danger: $cbp-danger !default;
-$info: $cbp-info !default;
-$primary: $cbp-primary !default;
-$success: $cbp-success !default;
-$warning: $cbp-warning !default;
+$danger:                            $cbp-danger;
+$info:                              $cbp-info;
+$primary:                           $cbp-primary;
+$success:                           $cbp-success;
+$warning:                           $cbp-warning;
 
 // New variables (not yet in use w/in Bulma) using CBP "First-Class" referenced variables
-$default: $cbp-default !default;
-$live: $cbp-live !default;
+$default:                           $cbp-default;
+$live:                              $cbp-live;
 
 // General CBP Brand (DOM Element) BACKGROUND Colors
 // (* w/in the /derived-variables.sass Bulma file)
 
 // Overidden
-$background: $white !default;
+$background:                        $white;
 
 // Set CBP Brand (Notification/Alert/Message) BORDER Colors
 // (* w/in the /derived-variables.sass Bulma file)
 
 // New variables
-$cbp-danger-border:               #aa0000 !default;
-$cbp-default-border:              #adadad !default;
-$cbp-info-border:                 #0f4880 !default;
-$cbp-live-border:                 #E6D261 !default;
-$cbp-primary-border:              #0A3055 !default;
-$cbp-success-border:              #134d13 !default;
-$cbp-warning-border:              #4a2e1f !default;
+$cbp-danger-border:                #aa0000;
+$cbp-default-border:               #adadad;
+$cbp-info-border:                  #0f4880;
+$cbp-live-border:                  #E6D261;
+$cbp-primary-border:               #0A3055;
+$cbp-success-border:               #134d13;
+$cbp-warning-border:               #4a2e1f;
 
 // Set CBP Brand (Notification/Alert/Message) TEXT Colors
 
 // New variables
-$cbp-warning-text:               #A44900 !default; 
+$cbp-warning-text:                 #A44900; 
 
 // Set CBP Branch LINK Color
 
 // Overidden variables
-$link:                           $cbp-primary !default;
+$link:                              $cbp-primary;
 
 // Set CBP Branch LINK Color State(s)
 
 // Overidden variables
-$link-hover:                     #001B44 !default;
+$link-hover:                      #001B44;
 
 
 @import "~bulma/bulma";
