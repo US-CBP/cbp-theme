@@ -21,9 +21,19 @@
 
   ////////////////////////// **************************** /////////////////////////
 
+//   ***  Table of Contents  ***
+
+// #1 PRIMARY COLORS
+// #2 NOTIFICATION/Alert/Message COLORS
+// #3 NOTIFICATION/Alert/Message BORDER Colors
+// #4 NOTIFICATION/Alert/Message) TEXT Colors
+// #5 (DOM Element) BACKGROUND Colors
+// #6 LINK Color
+// #7 STATE Color
+
 // Beginning of Customizations
 
-// Set CBP Brand (Primary Palette) Colors
+// (#1) -- CBP Brand (Primary) Colors
 
 // Overidden variables 
 // (* w/in the /initial-variables.sass Bulma file)
@@ -42,7 +52,7 @@ $grey-medium:                       #808080;
 
 //////////////////////////////////////////////////////////////
 
-// Set CBP Brand (Notification/Alert/Message) BACKGROUND Colors
+// (#2) CBP Brand (Notification/Alert/Message) Colors
 
 // New variables
 $cbp-danger:                        #a00000;
@@ -53,26 +63,19 @@ $cbp-primary:                       #00416A;
 $cbp-success:                       #008000;
 $cbp-warning:                       #f09511;
 
-// (* w/in the /derived-variables.sass Bulma file)
+// New variables (not yet in use w/in Bulma)
+$default:                           $cbp-default;
+$live:                              $cbp-live;
 
-// Overidden values using new CBP Brand variables as the reference = "First-Class" status
+// Overidden values
+// (* w/in the /derived-variables.sass Bulma file)
 $danger:                            $cbp-danger;
 $info:                              $cbp-info;
 $primary:                           $cbp-primary;
 $success:                           $cbp-success;
 $warning:                           $cbp-warning;
 
-// New variables (not yet in use w/in Bulma) using CBP "First-Class" referenced variables
-$default:                           $cbp-default;
-$live:                              $cbp-live;
-
-// General CBP Brand (DOM Element) BACKGROUND Colors
-// (* w/in the /derived-variables.sass Bulma file)
-
-// Overidden
-$background:                        $white;
-
-// Set CBP Brand (Notification/Alert/Message) BORDER Colors
+// (#3) CBP Brand (Notification/Alert/Message) BORDER Colors
 // (* w/in the /derived-variables.sass Bulma file)
 
 // New variables
@@ -84,17 +87,23 @@ $cbp-primary-border:               #0A3055;
 $cbp-success-border:               #134d13;
 $cbp-warning-border:               #4a2e1f;
 
-// Set CBP Brand (Notification/Alert/Message) TEXT Colors
+// (#4) CBP Brand (Notification/Alert/Message) TEXT Colors
 
 // New variables
 $cbp-warning-text:                 #A44900; 
 
-// Set CBP Branch LINK Color
+// (#5) CBP Brand (DOM Element) BACKGROUND Colors
+// (* w/in the /derived-variables.sass Bulma file)
+
+// Overidden
+$background:                        $white;
+
+// (#6) CBP Brand LINK Color
 
 // Overidden variables
 $link:                              $cbp-primary;
 
-// Set CBP Branch LINK Color State(s)
+// (#7) CBP Brand STATE Colors
 
 // Overidden variables
 $link-hover:                      #001B44;
