@@ -34,7 +34,7 @@ body {
   }
 }
 
-#cbp-ds {
+#cbp-ds-grid {
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-columns: 1fr;
@@ -48,7 +48,7 @@ body {
 .cbp-side-nav {
   background: $primary-bg;
   height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
   position: absolute;
   width: 280px;
   z-index: 50;
@@ -69,6 +69,11 @@ body {
   }
 
   &__menu {
+    height:inherit;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-bottom: 2em;
+
     li {
       cursor: pointer;
       display: block;

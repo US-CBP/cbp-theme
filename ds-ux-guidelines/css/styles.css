@@ -22,7 +22,7 @@ body {
   transition: all .2s ease-in-out;
 }
 
-#cbp-ds {
+#cbp-ds-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 50px 1fr;
@@ -41,7 +41,7 @@ body {
 .cbp-side-nav {
   background: #ECF1F4;
   height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
   position: absolute;
   width: 280px;
   z-index: 50;
@@ -61,6 +61,13 @@ body {
 
 .cbp-side-nav__cbp-logo:hover {
   color: #fff;
+}
+
+.cbp-side-nav__menu {
+  height: inherit;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-bottom: 2em;
 }
 
 .cbp-side-nav__menu li {
