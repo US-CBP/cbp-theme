@@ -5,10 +5,33 @@ $info: #1460AA;
 $success: #008000;
 $warning: #f09511;
 
+/* CBP Subtle Color Palette */
+$primary-bg: #ECF1F4;
+$info-bg: #EDF3F9;
+$danger-bg: #F8ECEC;
+
+
+
 body {
   font-family: 'Roboto', 'Calibri', 'Tahoma', 'Arial', sans-serif;
   font-size: 13px;
   margin: 0;
+}
+
+.cbp-skipnav {
+  background: #fff;
+
+  left: 0;
+  padding: .5rem 1rem;
+  position: absolute;
+  top: -3.8rem;
+  z-index: 100;
+  
+  &:focus {
+    color: $primary;
+    top: 0;
+    transition: all .2s ease-in-out;
+  }
 }
 
 #cbp-ds {
@@ -18,7 +41,61 @@ body {
   grid-gap: 1em;
   height: 100vh;
 }
+
 .is-primary{ background: $primary }
+
+/* CBP DS SIDE NAV START */
+.cbp-side-nav {
+  background: $primary-bg;
+  height: 100vh;
+  overflow: scroll;
+  position: absolute;
+  width: 280px;
+  z-index: 50;
+
+  &__cbp-logo {
+    background: $primary;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 1.538em;
+    height: 52px;
+    padding: .5em;
+    width: inherit;
+    
+    &:hover {
+      color:#fff;
+    }
+  }
+
+  &__menu {
+    li {
+      cursor: pointer;
+      display: block;
+      font-size: 1.231em;
+      display: block;
+      padding: .5em 0;
+      
+      a { 
+        color: #000;
+        padding-left: 2em
+      }
+    }
+
+    li:hover {
+      background: $info-bg;
+    }
+  }  
+
+}
+
+li.cbp-side-nav__menu--category {
+  font-size: 1.385em;
+  font-weight: 600;
+  margin: .75em 0 0.385em 0;
+  padding: 0 0 0 1em;
+}
+
 /* CBP HEADER START */
 .cbp-header {
   background: $primary;
@@ -28,6 +105,12 @@ body {
     height: 100%;
 
     .navbar-brand { font-size: 1.538em }
+    
+    i {
+      cursor: pointer; 
+      padding: .75em 0;
+    }
+    
     .navbar-menu { height: inherit; }
   }
 
@@ -40,21 +123,7 @@ body {
     font-weight: 300;
   }
 
-  &__usa-skipnav {
-    background: #fff;
 
-    left: 0;
-    padding: .5rem 1rem;
-    position: absolute;
-    top: -3.8rem;
-    z-index: 100;
-    
-    &:focus {
-      color: $primary;
-      top: 0;
-      transition: all .2s ease-in-out;
-    }
-  }
   /*
   &__main-header {
     background-color: $primary;

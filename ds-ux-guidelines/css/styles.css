@@ -1,8 +1,25 @@
 /* CBP Primary Color Palette */
+/* CBP Subtle Color Palette */
 body {
   font-family: 'Roboto', 'Calibri', 'Tahoma', 'Arial', sans-serif;
   font-size: 13px;
   margin: 0;
+}
+
+.cbp-skipnav {
+  background: #fff;
+  left: 0;
+  padding: .5rem 1rem;
+  position: absolute;
+  top: -3.8rem;
+  z-index: 100;
+}
+
+.cbp-skipnav:focus {
+  color: #00416A !important;
+  top: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 #cbp-ds {
@@ -18,6 +35,56 @@ body {
 
 .is-primary {
   background: #00416A !important;
+}
+
+/* CBP DS SIDE NAV START */
+.cbp-side-nav {
+  background: #ECF1F4;
+  height: 100vh;
+  overflow: scroll;
+  position: absolute;
+  width: 280px;
+  z-index: 50;
+}
+
+.cbp-side-nav__cbp-logo {
+  background: #00416A !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-size: 1.538em;
+  height: 52px;
+  padding: .5em;
+  width: inherit;
+}
+
+.cbp-side-nav__cbp-logo:hover {
+  color: #fff;
+}
+
+.cbp-side-nav__menu li {
+  cursor: pointer;
+  display: block;
+  font-size: 1.231em;
+  display: block;
+  padding: .5em 0;
+}
+
+.cbp-side-nav__menu li a {
+  color: #000;
+  padding-left: 2em;
+}
+
+.cbp-side-nav__menu li:hover {
+  background: #EDF3F9;
+}
+
+li.cbp-side-nav__menu--category {
+  font-size: 1.385em;
+  font-weight: 600;
+  margin: .75em 0 0.385em 0;
+  padding: 0 0 0 1em;
 }
 
 /* CBP HEADER START */
@@ -44,6 +111,11 @@ body {
   font-size: 1.538em;
 }
 
+.cbp-header nav i {
+  cursor: pointer;
+  padding: .75em 0;
+}
+
 .cbp-header nav .navbar-menu {
   height: inherit;
 }
@@ -55,21 +127,5 @@ body {
 
 .cbp-header span {
   font-weight: 300;
-}
-
-.cbp-header__usa-skipnav {
-  background: #fff;
-  left: 0;
-  padding: .5rem 1rem;
-  position: absolute;
-  top: -3.8rem;
-  z-index: 100;
-}
-
-.cbp-header__usa-skipnav:focus {
-  color: #00416A !important;
-  top: 0;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
 }
 /*# sourceMappingURL=styles.css.map */
