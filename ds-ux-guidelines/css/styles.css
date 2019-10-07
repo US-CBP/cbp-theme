@@ -22,7 +22,7 @@ body {
   transition: all .2s ease-in-out;
 }
 
-#cbp-ds-grid {
+.cbp-ds-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 50px 1fr;
@@ -41,6 +41,7 @@ body {
 .cbp-side-nav {
   background: #ECF1F4;
   height: 100vh;
+  left: 0;
   overflow: hidden;
   position: absolute;
   -webkit-transition: 0.7s;
@@ -50,7 +51,9 @@ body {
 }
 
 .cbp-side-nav--hide {
-  width: 0;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  left: -280px;
 }
 
 .cbp-side-nav__cbp-logo {
@@ -100,6 +103,18 @@ li.cbp-side-nav__menu--category {
   padding: 0 0 0 1em;
 }
 
+/* CBP DS SIDE NAV END */
+/* CBP MAIN SECTION START */
+.cbp-ds-grid {
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.cbp-ds-grid--margin-left {
+  margin-left: 280px;
+}
+
+/* CBP MAIN SECTION END*/
 /* CBP HEADER START */
 .cbp-header {
   background: #00416A !important;
@@ -126,7 +141,7 @@ li.cbp-side-nav__menu--category {
 
 .cbp-header nav i {
   cursor: pointer;
-  padding: .75em 0;
+  padding: .75em;
 }
 
 .cbp-header nav .navbar-menu {
