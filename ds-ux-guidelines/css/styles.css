@@ -43,8 +43,14 @@ body {
   height: 100vh;
   overflow: hidden;
   position: absolute;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
   width: 280px;
   z-index: 50;
+}
+
+.cbp-side-nav--hide {
+  width: 0;
 }
 
 .cbp-side-nav__cbp-logo {
@@ -64,7 +70,7 @@ body {
 }
 
 .cbp-side-nav__menu {
-  height: inherit;
+  height: calc(100% - 50px);
   overflow: scroll;
   overflow-x: hidden;
   padding-bottom: 2em;

@@ -50,8 +50,13 @@ body {
   height: 100vh;
   overflow: hidden;
   position: absolute;
+  transition: 0.7s;
   width: 280px;
   z-index: 50;
+
+  &--hide {
+    width: 0;
+  }
 
   &__cbp-logo {
     background: $primary;
@@ -69,7 +74,7 @@ body {
   }
 
   &__menu {
-    height:inherit;
+    height:calc(100% - 50px);;
     overflow: scroll;
     overflow-x: hidden;
     padding-bottom: 2em;
