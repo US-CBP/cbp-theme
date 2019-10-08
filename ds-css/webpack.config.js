@@ -1,11 +1,10 @@
 
-
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack'); // to access built-in plugins
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   devtool: 'source-map', // any "source-map"-like devtool is possible
@@ -13,8 +12,15 @@ module.exports = {
   // controls the devServer process and localhost port
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    index: 'index.html',
+    watchContentBase: true,
     compress: true,
-    port: 9000
+    port: 9000,
+    open: true,
+    overlay: {
+      warnings: true,
+      errors: true
+    }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -63,6 +69,8 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.ProgressPlugin(), // show build progress details
+    new CleanWebpackPlugin(),  // keeps track of all files in dist/
 
     new HtmlWebpackPlugin({
       hash: false, // set to 'true' if needing unique ID's at end of file name

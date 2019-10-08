@@ -1,116 +1,12 @@
 @charset "utf-8";
 
-// GLOBAL VARIABLES
+// Custom Styles
+@import "../styles/custom/utilities/all";
 
-// INTRODUCTION: for customizations to Bulma for matching up with the CBP Global Variables.
+// Vendor Styles
 
-// Everything is in alphabetical order w/in each section
-
-// ** Only global variables, nothing pertaining to a specific element/component/object
-// Note: For all customizations to non-gelobal variables, need to find inside those more specific files.
-
-// ** NOTE ** Usage of the !default flag rules:
-// Only use the !default flag on a variable's value if it has not already been set Beforehand
-
-// Reason to use the !default flag carefully is because: 
-   // 1.  If the variable already has an assignment, it will not be re-assigned
-   // 2.  Variables with null value will be considered unassigned and will be assigned with !default
-
-// Usage of !default Benefit:
-  // The !default flag is extremely useful when creating plug-in type code and with Mixins.
-
-  ////////////////////////// **************************** /////////////////////////
-
-//   ***  Table of Contents  ***
-
-// #1 PRIMARY COLORS
-// #2 NOTIFICATION/Alert/Message COLORS
-// #3 NOTIFICATION/Alert/Message BORDER Colors
-// #4 NOTIFICATION/Alert/Message) TEXT Colors
-// #5 (DOM Element) BACKGROUND Colors
-// #6 LINK Color
-// #7 STATE Color
-
-// Beginning of Customizations
-
-// (#1) -- CBP Brand (Primary) Colors
-
-// Overidden variables 
-// (* w/in the /initial-variables.sass Bulma file)
-$grey:                              #555555;
-$grey-dark:                         #333333;
-$grey-darker:                       #222222; 
-$grey-light:                        #aaaaaa;
-$grey-lighter:                      #eeeeee;
-$white:                             #ffffff;
-
-// New variables (that are Similar & Extend) current global Bulma variables
-
-$grey-base:                         #000000;
-$grey-lightest:                     #f6f6f6;
-$grey-medium:                       #808080;
-
-//////////////////////////////////////////////////////////////
-
-// (#2) CBP Brand (Notification/Alert/Message) Colors
-
-// New variables
-$cbp-danger:                        #a00000;
-$cbp-default:                       #ffffff;
-$cbp-info:                          #1460aa;
-$cbp-live:                          #FFEB7A;
-$cbp-primary:                       #00416A;
-$cbp-success:                       #008000;
-$cbp-warning:                       #f09511;
-
-// New variables (not yet in use w/in Bulma)
-$default:                           $cbp-default;
-$live:                              $cbp-live;
-
-// Overidden values
-// (* w/in the /derived-variables.sass Bulma file)
-$danger:                            $cbp-danger;
-$info:                              $cbp-info;
-$primary:                           $cbp-primary;
-$success:                           $cbp-success;
-$warning:                           $cbp-warning;
-
-// (#3) CBP Brand (Notification/Alert/Message) BORDER Colors
-// (* w/in the /derived-variables.sass Bulma file)
-
-// New variables
-$cbp-danger-border:                #aa0000;
-$cbp-default-border:               #adadad;
-$cbp-info-border:                  #0f4880;
-$cbp-live-border:                  #E6D261;
-$cbp-primary-border:               #0A3055;
-$cbp-success-border:               #134d13;
-$cbp-warning-border:               #4a2e1f;
-
-// (#4) CBP Brand (Notification/Alert/Message) TEXT Colors
-
-// New variables
-$cbp-warning-text:                 #A44900; 
-
-// (#5) CBP Brand (DOM Element) BACKGROUND Colors
-// (* w/in the /derived-variables.sass Bulma file)
-
-// Overidden
-$background:                        $white;
-
-// (#6) CBP Brand LINK Color
-
-// Overidden variables
-$link:                              $cbp-primary;
-
-// (#7) CBP Brand STATE Colors
-
-// Overidden variables
-$link-hover:                      #001B44;
-
-
+// Import needed Bulma SASS
 @import "~bulma/bulma";
-
 
 // @ Import only what we need from Bulma goes here
 

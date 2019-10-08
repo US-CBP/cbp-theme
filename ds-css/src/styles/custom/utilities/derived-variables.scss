@@ -1,0 +1,50 @@
+@charset "utf-8";
+// GLOBAL VARIABLES
+
+// INTRODUCTION:
+
+// Everything is in alphabetical order w/in each section
+
+// ** Only global variables, nothing pertaining to a specific element/component/object
+// Note: For all customizations to non-gelobal variables, need to find inside those more specific files.
+
+// "Updates" are for customizations to Bulma for matching up with the CBP Global Variables.
+
+  ////////////////////////// **************************** /////////////////////////
+
+//   ***  Table of Contents  ***
+
+// #1 PRIMARY COLORS
+// #2 NOTIFICATION/Alert/Message COLORS
+// #3 NOTIFICATION/Alert/Message BORDER Colors
+// #4 NOTIFICATION/Alert/Message) TEXT Colors
+// #5 (DOM Element) BACKGROUND Colors
+// #6 LINK Color
+// #7 STATE Color
+
+// Beginning of Customizations
+
+
+
+// (#2) CBP Brand (Notification/Alert/Message) Colors
+
+// Updates Bulma's Global Variables in their /utilities/initial-variables.scss file
+$danger:                            $cbp-danger;
+$info:                              $cbp-info;
+$primary:                           $cbp-primary;
+$success:                           $cbp-success;
+$warning:                           $cbp-warning;
+
+// Custom Variables
+$default:                           $cbp-default;
+$live:                              $cbp-live;
+
+// (#5) CBP Brand (DOM Element) BACKGROUND Colors
+
+// Updates Bulma's Global Variables in their /utilities/derived-variables.scss file
+$background:                        $white;
+
+// (#6) CBP Brand LINK Color
+
+// Updates Bulma's Global Variables in their /utilities/derived-variables.scss file
+$link:                              $cbp-primary;
