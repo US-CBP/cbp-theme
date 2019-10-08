@@ -2,6 +2,8 @@
  const navBar = document.querySelector('.cbp-side-nav');
  const mainGrid = document.querySelector('.cbp-ds-grid');
 
+ /* Hamburger menu open/close code START */
+ 
  hamburger.addEventListener( 'click', function(e) {
    
   if(navBar.classList.contains('cbp-side-nav--hide')) {
@@ -13,3 +15,5 @@
   }
 
  });
+
+ /* Hamburger menu open/close code START */

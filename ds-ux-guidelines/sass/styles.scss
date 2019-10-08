@@ -10,7 +10,8 @@ $primary-bg: #ECF1F4;
 $info-bg: #EDF3F9;
 $danger-bg: #F8ECEC;
 
-
+/* Menu Animation Speed */
+$menuSpeed: 0.5s; // Menu open and close speed.
 
 body {
   font-family: 'Roboto', 'Calibri', 'Tahoma', 'Arial', sans-serif;
@@ -45,18 +46,19 @@ body {
 .is-primary{ background: $primary }
 
 /* CBP DS SIDE NAV START */
+
 .cbp-side-nav {
   background: $primary-bg;
   height: 100vh;
   left: 0;
   overflow: hidden;
   position: absolute;
-  transition: 0.7s;
+  transition: $menuSpeed;
   width: 280px;
   z-index: 50;
 
   &--hide {
-    transition: 0.7s;
+    transition: $menuSpeed;
     left: -280px;
   }
 
@@ -76,43 +78,60 @@ body {
   }
 
   &__menu {
-    height:calc(100% - 50px);;
+    height:calc(100% - 50px);
     overflow: scroll;
     overflow-x: hidden;
     padding-bottom: 2em;
 
-    li {
-      cursor: pointer;
+    &__item {
       display: block;
-      font-size: 1.231em;
-      display: block;
-      padding: .5em 0;
-      
-      a { 
-        color: #000;
-        padding-left: 2em
+      font-size: 1rem;
+      font-weight: 200;
+      // padding: .3em 0;
+
+      a {
+        box-sizing: border-box;
+        color: inherit;
+        display: block;
+        padding: .5em .5em .5em 1.5em;
+
+        &:hover {
+          background: $primary;
+          color: #fff;  
+        }
       }
     }
 
-    li:hover {
-      background: $info-bg;
+    &__item--category {
+      font-size: 1.385em;
+      font-weight: 600;
+      padding: .5em;
     }
-  }  
+
+    &__item--sub {
+      padding-left: 1rem;
+    }
+
+    // li:hover {
+    //   background: $info-bg;
+    // }
+  }
 
 }
 
-li.cbp-side-nav__menu--category {
-  font-size: 1.385em;
-  font-weight: 600;
-  margin: .75em 0 0.385em 0;
-  padding: 0 0 0 1em;
-}
+// li.cbp-side-nav__menu--category {
+//   font-size: 1.385em;
+//   font-weight: 600;
+//   margin: .75em 0 0.385em 0;
+//   padding: 0 0 0 1em;
+// }
+
 /* CBP DS SIDE NAV END */
 
 /* CBP MAIN SECTION START */
 
 .cbp-ds-grid {
-  transition: .7s;
+  transition: $menuSpeed;
 
   &--margin-left {
     margin-left: 280px;

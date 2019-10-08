@@ -1,5 +1,6 @@
 /* CBP Primary Color Palette */
 /* CBP Subtle Color Palette */
+/* Menu Animation Speed */
 body {
   font-family: 'Roboto', 'Calibri', 'Tahoma', 'Arial', sans-serif;
   font-size: 13px;
@@ -44,15 +45,15 @@ body {
   left: 0;
   overflow: hidden;
   position: absolute;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: 280px;
   z-index: 50;
 }
 
 .cbp-side-nav--hide {
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   left: -280px;
 }
 
@@ -79,35 +80,40 @@ body {
   padding-bottom: 2em;
 }
 
-.cbp-side-nav__menu li {
-  cursor: pointer;
+.cbp-side-nav__menu__item {
   display: block;
-  font-size: 1.231em;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.cbp-side-nav__menu__item a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
   display: block;
-  padding: .5em 0;
+  padding: .5em .5em .5em 1.5em;
 }
 
-.cbp-side-nav__menu li a {
-  color: #000;
-  padding-left: 2em;
+.cbp-side-nav__menu__item a:hover {
+  background: #00416A !important;
+  color: #fff;
 }
 
-.cbp-side-nav__menu li:hover {
-  background: #EDF3F9;
-}
-
-li.cbp-side-nav__menu--category {
+.cbp-side-nav__menu__item--category {
   font-size: 1.385em;
   font-weight: 600;
-  margin: .75em 0 0.385em 0;
-  padding: 0 0 0 1em;
+  padding: .5em;
+}
+
+.cbp-side-nav__menu__item--sub {
+  padding-left: 1rem;
 }
 
 /* CBP DS SIDE NAV END */
 /* CBP MAIN SECTION START */
 .cbp-ds-grid {
-  -webkit-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .cbp-ds-grid--margin-left {
