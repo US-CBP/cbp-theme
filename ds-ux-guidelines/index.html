@@ -17,7 +17,7 @@
   <div id="cbp-ds">
 
 
-    <nav class="cbp-side-nav"> <!--  cbp-side-nav--hide -->
+    <nav class="cbp-side-nav cbp-side-nav--hide"> <!--  cbp-side-nav--hide -->
      <a href="#" class="cbp-side-nav__cbp-logo">
         <strong>CBP</strong>&nbsp;
         <span>Style Guide</span>
@@ -26,7 +26,7 @@
      <ul class="cbp-side-nav__menu">
        <!--FOUNDATION Menu items  -->
        <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--category">Foundation</li>
-       <li class="cbp-side-nav__menu__item">
+       <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--active">
          <a href="#">Colors</a>
         <ul>
           <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
@@ -55,91 +55,91 @@
        </li>
 
        <!--COMPONENTS Menu items  -->
-       <!-- <li class="cbp-side-nav__menu--category">Components</li>
-       <li>
+       <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--category">Components</li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Accordion</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Breadcrumbs</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Buttons</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Cards</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Form Controls</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="" class="">Forms</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Labels and Badges</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Menus</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Modals</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Notifications</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Pagination</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Popovers</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Progress and Loading</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Security Banner</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Tables</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Tabs</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Tags</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="">Tooltips</a>
-       </li> -->
+       </li>
 
        <!--PATTERNS Menu items  -->
-       <!-- <li class="cbp-side-nav__menu--category">Patterns</li>
-       <li>
+       <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--category">Patterns</li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Headers</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Data Formats</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Data Visualization</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">File Upload</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Filters</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Help</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Search</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Tours</a>
        </li>
-       <li>
+       <li class="cbp-side-nav__menu__item">
          <a href="#">Wizards</a>
-       </li> -->
+       </li>
      </ul>
     </nav>
 
@@ -147,7 +147,9 @@
       <header class="cbp-header">
         <nav class="navbar is-primary">
           <div class="navbar-brand">
-            <i class="fas fa-bars"></i>
+            <a href="#" id="main-content">
+              <i class="fas fa-bars"></i>
+            </a>
           </div>
   
           <div class="navbar-menu">
@@ -164,6 +166,11 @@
           </div>
         </nav>
       </header>
+
+      <section id="main-content">
+        <h2>CBP Style Guide Library</h2>
+        <p>This design library covers foundational styles, individual components, and more complex patterns. They define how interactions behave, what they look like, and how they might be implemented.</p>
+      </section>
     </div>
 
   </div>

@@ -1,7 +1,7 @@
 /* CBP Primary Color Palette */
-$danger: #A00000;
-$primary: #00416A !important;
-$info: #1460AA;
+$danger: #a00000;
+$primary: #00416a !important;
+$info: #1460aa;
 $success: #008000;
 $warning: #f09511;
 
@@ -57,11 +57,13 @@ body {
   width: 280px;
   z-index: 50;
 
+  /* .cbp-side-nav--hide */
   &--hide {
     transition: $menuSpeed;
     left: -280px;
   }
 
+  /* .cbp-side-nav__cbp-logo */
   &__cbp-logo {
     background: $primary;
     box-sizing: border-box;
@@ -77,17 +79,29 @@ body {
     }
   }
 
+  /* .cbp-side-nav__menu */
   &__menu {
     height:calc(100% - 50px);
     overflow: scroll;
     overflow-x: hidden;
     padding-bottom: 2em;
 
+    /* .cbp-side-nav__menu__item */
     &__item {
       display: block;
       font-size: 1rem;
       font-weight: 200;
-      // padding: .3em 0;
+
+      /* .cbp-side-nav__menu__item--active */
+      &--active {
+        background: lighten(#00416a, 8%);
+        color: #fff;
+
+        ~ a:hover {
+          color: inherit;
+          background: $primary-bg;
+        }
+      }
 
       a {
         box-sizing: border-box;
@@ -102,29 +116,24 @@ body {
       }
     }
 
+    /* .cbp-side-nav__item--category */
     &__item--category {
       font-size: 1.385em;
       font-weight: 600;
       padding: .5em;
     }
 
+    /* .cbp-side-nav__item--sub */
     &__item--sub {
-      padding-left: 1rem;
+      
+      a {
+        padding-left: 2rem;
+      }
+
     }
 
-    // li:hover {
-    //   background: $info-bg;
-    // }
-  }
-
+  }  
 }
-
-// li.cbp-side-nav__menu--category {
-//   font-size: 1.385em;
-//   font-weight: 600;
-//   margin: .75em 0 0.385em 0;
-//   padding: 0 0 0 1em;
-// }
 
 /* CBP DS SIDE NAV END */
 
@@ -166,17 +175,5 @@ body {
   span {
     font-weight: 300;
   }
-
-
-  /*
-  &__main-header {
-    background-color: $primary;
-    box-sizing: border-box;
-    color: #fff;
-    height: 50px;
-    padding: 1em;
-    text-align: center;
-  }*/
-
 
 }

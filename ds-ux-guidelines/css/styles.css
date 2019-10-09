@@ -17,7 +17,7 @@ body {
 }
 
 .cbp-skipnav:focus {
-  color: #00416A !important;
+  color: #00416a !important;
   top: 0;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -35,7 +35,7 @@ body {
 }
 
 .is-primary {
-  background: #00416A !important;
+  background: #00416a !important;
 }
 
 /* CBP DS SIDE NAV START */
@@ -49,6 +49,9 @@ body {
   transition: 0.5s;
   width: 280px;
   z-index: 50;
+  /* .cbp-side-nav--hide */
+  /* .cbp-side-nav__cbp-logo */
+  /* .cbp-side-nav__menu */
 }
 
 .cbp-side-nav--hide {
@@ -58,7 +61,7 @@ body {
 }
 
 .cbp-side-nav__cbp-logo {
-  background: #00416A !important;
+  background: #00416a !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
@@ -78,12 +81,26 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   padding-bottom: 2em;
+  /* .cbp-side-nav__menu__item */
+  /* .cbp-side-nav__item--category */
+  /* .cbp-side-nav__item--sub */
 }
 
 .cbp-side-nav__menu__item {
   display: block;
   font-size: 1rem;
   font-weight: 200;
+  /* .cbp-side-nav__menu__item--active */
+}
+
+.cbp-side-nav__menu__item--active {
+  background: #005a93;
+  color: #fff;
+}
+
+.cbp-side-nav__menu__item--active ~ a:hover {
+  color: inherit;
+  background: #ECF1F4;
 }
 
 .cbp-side-nav__menu__item a {
@@ -95,7 +112,7 @@ body {
 }
 
 .cbp-side-nav__menu__item a:hover {
-  background: #00416A !important;
+  background: #00416a !important;
   color: #fff;
 }
 
@@ -105,8 +122,8 @@ body {
   padding: .5em;
 }
 
-.cbp-side-nav__menu__item--sub {
-  padding-left: 1rem;
+.cbp-side-nav__menu__item--sub a {
+  padding-left: 2rem;
 }
 
 /* CBP DS SIDE NAV END */
@@ -123,18 +140,9 @@ body {
 /* CBP MAIN SECTION END*/
 /* CBP HEADER START */
 .cbp-header {
-  background: #00416A !important;
+  background: #00416a !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /*
-  &__main-header {
-    background-color: $primary;
-    box-sizing: border-box;
-    color: #fff;
-    height: 50px;
-    padding: 1em;
-    text-align: center;
-  }*/
 }
 
 .cbp-header nav {
