@@ -170,4 +170,17 @@ body {
 .cbp-header span {
   font-weight: 300;
 }
+
+.cbp-ds-main {
+  margin: 2em auto 0 auto;
+  max-width: 600px;
+}
+
+.cbp-ds-main__header {
+  font-size: 1.846em;
+}
+
+.cbp-ds-main__body-txt {
+  font-size: 1em;
+}
 /*# sourceMappingURL=styles.css.map */
