@@ -185,9 +185,15 @@ body {
 
   &__header {
     font-size: 1.846em;
+    margin: 1.385em 0 0.692em;
   }
 
   &__body-txt {
-    font-size: 1em;
+    font-size: 1.231em;
+  }
+
+  &__sub-header {
+    color: $primary;
+    font-size: 1.538rem;
   }
 }

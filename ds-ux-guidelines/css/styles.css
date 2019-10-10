@@ -178,9 +178,15 @@ body {
 
 .cbp-ds-main__header {
   font-size: 1.846em;
+  margin: 1.385em 0 0.692em;
 }
 
 .cbp-ds-main__body-txt {
-  font-size: 1em;
+  font-size: 1.231em;
+}
+
+.cbp-ds-main__sub-header {
+  color: #00416a !important;
+  font-size: 1.538rem;
 }
 /*# sourceMappingURL=styles.css.map */
