@@ -14,37 +14,38 @@
 
 //   ***  Table of Contents  ***
 
-// #1 PRIMARY COLORS
-// #2 NOTIFICATION/Alert/Message COLORS
-// #3 NOTIFICATION/Alert/Message BORDER Colors
-// #4 NOTIFICATION/Alert/Message) TEXT Colors
-// #5 (DOM Element) BACKGROUND Colors
-// #6 LINK Color
-// #7 STATE Color
+// #1 Brand COLOR PALETTES
+    // 1A - Primary
+    // 1B - Subtle
+    // 1C - Gray Color Palette
+    // 1D - Borders
+    // 1E - Text
+    // 1F - Links
+
+// #2 BULMA COLORS
+// (Note: These colors only pertain to Bulma, not tied to a specific component/element)
+  // 2A - Background
 
 // Beginning of Customizations
 
-
-
-// (#2) CBP Brand (Notification/Alert/Message) Colors
-
-// Updates Bulma's Global Variables in their /utilities/initial-variables.scss file
+  // (1A) -- PRIMARY
+  // Updates Bulma's Global Variables in their /utilities/initial-variables.scss file
 $danger:                            $cbp-danger;
 $info:                              $cbp-info;
 $primary:                           $cbp-primary;
 $success:                           $cbp-success;
 $warning:                           $cbp-warning;
 
-// Custom Variables
+  // Custom Variables
 $default:                           $cbp-default;
 $live:                              $cbp-live;
 
-// (#5) CBP Brand (DOM Element) BACKGROUND Colors
-
-// Updates Bulma's Global Variables in their /utilities/derived-variables.scss file
-$background:                        $white;
-
-// (#6) CBP Brand LINK Color
-
-// Updates Bulma's Global Variables in their /utilities/derived-variables.scss file
+  // (1F) -- LINKS
+  // Updates Bulma's Global Variables in their /utilities/derived-variables.scss file
 $link:                              $cbp-primary;
+
+// #2 BULMA COLORS
+
+  //(2A) -- BACKGROUND
+  // Updates Bulma's Global Variables in their /utilities/derived-variables.scss file
+$background:                        $white;
