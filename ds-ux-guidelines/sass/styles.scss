@@ -153,9 +153,32 @@ body {
 .cbp-header {
   background: $primary;
   box-sizing: border-box;
+  height: 52PX;
+  
+  /* cbp-header__top-nav */
+  &__top-nav {
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+    width: 100%;
 
-  nav {
-    height: 100%;
+    & div:last-child {
+      margin-left: auto;
+      margin-right: 1em;
+    }
+
+    &__hamburger {
+      a {
+        padding: 8px 2px;
+      }
+    }
+    
+    /* cbp-header__top-nav__nav-items */
+    &__nav-items {
+      padding: 17px 0 17px 5px;
+
+      .fab { padding: 0; }
+    }
 
     .navbar-brand { font-size: 1.538em }
     
@@ -169,6 +192,8 @@ body {
 
   a {
     color: #fff;
+    display: block;
+    height: 100%;
     text-decoration: none;
   }
 
@@ -182,6 +207,7 @@ body {
 .cbp-ds-main {
   margin: 2em auto 0 auto;
   max-width: 600px;
+  padding: 0 2em;
 
   &__header {
     font-size: 1.846em;

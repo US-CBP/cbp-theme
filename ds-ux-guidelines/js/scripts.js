@@ -1,4 +1,4 @@
- const hamburger = document.querySelector('.navbar-brand');
+ const hamburger = document.querySelector('#main-content');
  const navBar = document.querySelector('.cbp-side-nav');
  const mainGrid = document.querySelector('.cbp-ds-grid');
 
