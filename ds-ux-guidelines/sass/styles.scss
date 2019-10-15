@@ -1,14 +1,9 @@
 /* CBP Primary Color Palette */
-$danger: #a00000;
-$primary: #00416a !important;
-$info: #1460aa;
-$success: #008000;
-$warning: #f09511;
+
+$ds-primary: #00416a;
 
 /* CBP Subtle Color Palette */
-$primary-bg: #ECF1F4;
-$info-bg: #EDF3F9;
-$danger-bg: #F8ECEC;
+$ds-primary-bg: #ECF1F4;
 
 /* Menu Animation Speed */
 $menuSpeed: 0.5s; // Menu open and close speed.
@@ -21,7 +16,6 @@ body {
 
 .cbp-skipnav {
   background: #fff;
-
   left: 0;
   padding: .5rem 1rem;
   position: absolute;
@@ -29,7 +23,6 @@ body {
   z-index: 100;
   
   &:focus {
-    color: $primary;
     top: 0;
     transition: all .2s ease-in-out;
   }
@@ -43,12 +36,9 @@ body {
   height: 100vh;
 }
 
-.is-primary{ background: $primary }
-
 /* CBP DS SIDE NAV START */
 
 .cbp-side-nav {
-  background: $primary-bg;
   height: 100vh;
   left: 0;
   overflow: hidden;
@@ -65,7 +55,6 @@ body {
 
   /* .cbp-side-nav__cbp-logo */
   &__cbp-logo {
-    background: $primary;
     box-sizing: border-box;
     color: #fff;
     display: block;
@@ -99,7 +88,7 @@ body {
 
         ~ a:hover {
           color: inherit;
-          background: $primary-bg;
+          background: $ds-primary-bg;
         }
       }
 
@@ -110,7 +99,7 @@ body {
         padding: .5em .5em .5em 1.5em;
 
         &:hover {
-          background: $primary;
+          background: $ds-primary;
           color: #fff;  
         }
       }
@@ -151,7 +140,7 @@ body {
 
 /* CBP HEADER START */
 .cbp-header {
-  background: $primary;
+  background: $ds-primary;
   box-sizing: border-box;
   height: 52PX;
   
@@ -219,7 +208,7 @@ body {
   }
 
   &__sub-header {
-    color: $primary;
+    color: $ds-primary;
     font-size: 1.538rem;
   }
 }
