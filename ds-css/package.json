@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "description": "This is the CSS offering built upon the CBP UX Guidelines.  The CSS can be used with any web user interface or framework.",
   "main": "webpack.config.js",
-  "scripts": {
-    "clean": "rimraf dist",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "local": "webpack-dev-server --mode development"
-  },
   "author": "Creative Services",
+  "license": "ISC",
   "contributors": [
     {
       "name": "David Y. Hodge",
@@ -24,7 +19,13 @@
       "email": "ray.robertson@associates.cbp.dhs.gov"
     }
   ],
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/US-CBP/cbp-theme/tree/design-system/ds-css"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-runtime": "^7.6.2",
@@ -33,15 +34,39 @@
     "bulma": "^0.7.5",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
     "eslint-loader": "^3.0.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "resolve-url-loader": "^3.1.0",
     "sass-loader": "^8.0.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.11.1",
+    "stylelint-webpack-plugin": "^1.0.2",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
+  },
+
+"scripts": {
+  "clean": "rimraf dist",
+  "lint:scss": "> tests/linting/stylelint-errors.log && stylelint \"src/styles/custom/**/*.scss\" --fix --output-file tests/linting/stylelint-errors.log",
+  "dev": "webpack --mode development",
+  "build": "npm run clean && webpack --mode production && npm run lint:scss",
+  "local": "webpack-dev-server --mode development",
+  "sourcemap": "scss ./dist/css/cbp-ds.min.css ./dist/css/cbp-ds.min.css",
+  "lint": "npm run lint:scss"
+},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint",
+      "pre-push": "npm lint"
+    }
   }
+
 }
