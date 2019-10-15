@@ -55,7 +55,7 @@
 
 "scripts": {
   "clean": "rimraf dist",
-  "lint:scss": "> tests/linting/stylelint-errors.log && stylelint \"src/styles/custom/**/*.scss\" --fix --output-file tests/linting/stylelint-errors.log",
+  "lint:scss": "stylelint > stylelint-errors.log \"src/styles/custom/**/*.scss\" --fix --output-file stylelint-errors.log",
   "dev": "webpack --mode development",
   "build": "npm run clean && webpack --mode production && npm run lint:scss",
   "local": "webpack-dev-server --mode development",
