@@ -27,7 +27,7 @@ module.exports = {
     filename: 'js/cbp-ds-bundle.js'
   },
 
-  watch: true,
+  watch: false,
 
   module: {
     rules: [
