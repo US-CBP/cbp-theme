@@ -6,7 +6,7 @@ before_script:
 - npm run init-cbp-ds 
 script:
 - npm run build-cbp-theme
-- npm run build-ds-css
+- npm run build-cbp-ds
 after_success:
 - bash publish.sh
 notifications:
