@@ -1,86 +1,66 @@
 @charset "utf-8";
 // GLOBAL VARIABLES
-
 // INTRODUCTION:
-
 // Everything is in alphabetical order w/in each section
-
 // ** Only global variables, nothing pertaining to a specific element/component/object
 // Note: For all customizations to non-gelobal variables, need to find inside those more specific files.
-
 // "Updates" are for customizations to Bulma for matching up with the CBP Global Variables.
-
-  ////////////////////////// **************************** /////////////////////////
-
+////////////////////////// **************************** /////////////////////////
 //   ***  Table of Contents  ***
-
 // #1 Brand COLOR PALETTES
-    // 1A - Primary
-    // 1B - Subtle
-    // 1C - Gray Color Palette
-    // 1D - Borders
-    // 1E - Text
-    // 1F - Links
-
+// 1A - Primary
+// 1B - Subtle
+// 1C - Gray Color Palette
+// 1D - Borders
+// 1E - Text
+// 1F - Links
 // #2 BULMA COLORS
 // (Note: These colors only pertain to Bulma, not tied to a specific component/element)
-  // 2A - Background
-
-// *** End of Table of Contents *** 
-
+// 2A - Background
+// *** End of Table of Contents ***
 // Customizations
-
 // (#1) -- COLOR PALETTES
-
-  // (1A) -- Primary 
-  // Custom Variables
+// (1A) -- Primary
+// Custom Variables
 $cbp-danger:                        #a00000;
-$cbp-default:                       #ffffff;
+$cbp-default:                       #fff;
 $cbp-info:                          #1460aa;
 $cbp-live:                          #ffeb7a;
 $cbp-primary:                       #00416a;
 $cbp-success:                       #008000;
 $cbp-warning:                       #f09511;
 $universal-header:                  #003e65;
-
-  // (1B) -- Subtle
-  // Custom Variables
+// (1B) -- Subtle
+// Custom Variables
 $subtle-danger:                     #f8eced;
 $subtle-info:                       #edf3f9;
 $subtle-primary:                    #ecf1f4;
 $subtle-success:                    #ecf5ec;
 $subtle-warning:                    #fef7ed;
-
-  // (1C) -- Grey Palette
-  // Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
-$grey:                              #555555;
-$grey-dark:                         #333333;
-$grey-darker:                       #222222; 
-$grey-light:                        #aaaaaa;
-$grey-lighter:                      #eeeeee;
-$white:                             #ffffff;
-
-  // Custom Variables
-$grey-base:                         #000000;
+// (1C) -- Grey Palette
+// Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
+$grey:                              #555;
+$grey-dark:                         #333;
+$grey-darker:                       #222;
+$grey-light:                        #aaa;
+$grey-lighter:                      #eee;
+$white:                             #fff;
+// Custom Variables
+$grey-base:                         #000;
 $grey-lightest:                     #f6f6f6;
 $grey-medium:                       #808080;
-
-  // (1D) -- BORDERS 
-  // Custom Variables
-$cbp-danger-border:                #aa0000;
+// (1D) -- BORDERS
+// Custom Variables
+$cbp-danger-border:                #a00;
 $cbp-default-border:               #adadad;
 $cbp-info-border:                  #0f4880;
 $cbp-live-border:                  #e6d261;
 $cbp-primary-border:               #0a3055;
 $cbp-success-border:               #134d13;
 $cbp-warning-border:               #4a2e1f;
-
-  // (1E) -- TEXT 
-  // Custom Variables
-$cbp-warning-text:                 #a44900; 
-
-  // (1F) -- LINKS
-  // Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
+// (1E) -- TEXT
+// Custom Variables
+$cbp-warning-text:                 #a44900;
+// (1F) -- LINKS
+// Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
 $link-hover:                      #001b44;
-
-
