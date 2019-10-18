@@ -42,6 +42,8 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "pa11y-ci": "^2.3.0",
+    "pa11y-ci-reporter-html": "^1.2.0",
     "resolve-url-loader": "^3.1.0",
     "sass-loader": "^8.0.0",
     "stylelint": "^11.0.0",
@@ -52,21 +54,23 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
   },
-
-"scripts": {
-  "clean": "rimraf dist",
-  "lint:scss": "stylelint > stylelint-errors.log \"src/styles/**/*.scss\" --fix --output-file stylelint-errors.log",
-  "dev": "webpack --mode development",
-  "build": "npm run clean && webpack --mode production && npm run lint:scss",
-  "local": "webpack-dev-server --mode development",
-  "sourcemap": "scss ./dist/css/cbp-ds.min.css ./dist/css/cbp-ds.min.css",
-  "lint": "npm run lint:scss"
-},
+  "scripts": {
+    "clean": "rimraf dist",
+    "build-local": "rm -rf node_modules && npm i && npm run build && npm run local",
+    "lint:scss": "stylelint > stylelint-errors.log \"src/styles/**/*.scss\" --fix --output-file stylelint-errors.log",
+    "dev": "webpack --mode development",
+    "build": "npm run clean && webpack --mode production && npm run lint:scss",
+    "local": "webpack-dev-server --mode development",
+    "sourcemap": "scss ./dist/css/cbp-ds.min.css ./dist/css/cbp-ds.min.css",
+    "lint": "npm run lint:scss",
+    "pa11y-ci": "./node_modules/.bin/pa11y-ci",
+    "pa11y-test": "pa11y-ci --json > pa11y-ci-results.json",
+    "pa11y-report": "pa11y-ci-reporter-html && open localhost-9000.html"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
       "pre-push": "npm run lint"
     }
   }
-
 }
