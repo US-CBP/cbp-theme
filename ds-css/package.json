@@ -64,8 +64,8 @@
     "sourcemap": "scss ./dist/css/cbp-ds.min.css ./dist/css/cbp-ds.min.css",
     "lint": "npm run lint:scss",
     "pa11y-ci": "./node_modules/.bin/pa11y-ci",
-    "508-test": "pa11y-ci --json > pa11y-ci-results.json",
-    "508-report": "pa11y-ci-reporter-html && open localhost-9000.html"
+    "pa11y-test": "pa11y-ci --json > pa11y-ci-results.json",
+    "pa11y-report": "pa11y-ci-reporter-html && open localhost-9000.html"
   },
   "husky": {
     "hooks": {
