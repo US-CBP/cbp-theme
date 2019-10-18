@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Style Guide - CBP Style Guide</title>
-  <link rel="stylesheet" href="../ds-css/dist/css/cbp-ds.min.css">
+  <link rel="stylesheet" href="../../ds-css/dist/css/cbp-ds.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <!-- Skip navigation for accessibility -->
@@ -18,7 +18,7 @@
 
 
     <nav class="cbp-side-nav cbp-side-nav--hide has-background-light">
-     <a href="#" class="cbp-side-nav__cbp-logo has-background-primary">
+     <a href="/ds-ux-guidelines/" class="cbp-side-nav__cbp-logo has-background-primary">
         <strong>CBP</strong>&nbsp;
         <span>Style Guide</span>
      </a>
@@ -26,26 +26,26 @@
      <ul class="cbp-side-nav__menu">
        <!--FOUNDATION Menu items  -->
        <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--category">Foundation</li>
-       <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--active">
-         <a href="#">Colors</a>
-        <ul>
-          <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
-            <a href="#">Color Palette</a>
-          </li>
-          <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
-            <a href="#">Section 508 Color Combinations</a>
-          </li>
-          <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
-            <a href="#">Data Visualization Palette</a>
-          </li>
-        </ul>
-         
+       <li class="cbp-side-nav__menu__item">
+         <a href="#">Colors</a>         
        </li>
        <li class="cbp-side-nav__menu__item">
          <a href="#">Grid</a>
        </li>
-       <li class="cbp-side-nav__menu__item">
-         <a href="foundation/icons.html">Icons</a>
+       <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--active">
+         <a href="#">Icons</a>
+
+         <ul>
+          <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
+            <a href="#">Colors and Sizes</a>
+          </li>
+          <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
+            <a href="#">Usage</a>
+          </li>
+          <li class="cbp-side-nav__menu__item cbp-side-nav__menu__item--sub">
+            <a href="#">CBP Universal Icons</a>
+          </li>
+        </ul>
        </li>
        <li class="cbp-side-nav__menu__item">
          <a href="#">Layouts</a>
@@ -169,34 +169,40 @@
       </header>
 
       <section id="main-content" class="columns is-mobile is-centered cbp-ds-main">
-        <div class="column is-6">
-
-          <h3 class="cbp-ds-main__header">CBP <b>Style Guide</b> Library</h3>
+          <div class="column is-11">
+  
+              <div class="columns">
+                <div class="column is-full">
+                  <h3>Icons</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur perspiciatis facilis earum recusandae ut aperiam. Explicabo reprehenderit ipsam ducimus, ullam, reiciendis at cumque est porro nemo veritatis dolore vero voluptas.</p>
+                </div>
+              </div>
+        
+              <div class="columns">
+                <div class="column is-full">
+                    <h3>Colors and Sizes</h3>
+                </div>
+              </div>
+        
+              <div class="columns">
+                <div class="column is-full">
+                    <h3>Usage</h3>
+                </div>
+              </div>
       
-          <p class="cbp-ds-main__body-txt">This design library covers foundational styles, individual components, and more complex patterns. They define how interactions behave, what they look like, and how they might be implemented.</p>
-          
-          <hr>
-          
-          <h4 class="cbp-ds-main__sub-header has-text-primary">
-            Contribute a Feature, Requests, Feedback
-          </h4>
+              <div class="columns">
+                <div class="column is-full">
+                    <h3>CBP Universal Icons</h3>
+                </div>
+              </div>
   
-          <hr>
-  
-          <p class="cbp-ds-main__body-txt">
-            For more information: <br>
-            <a href="">CBP Theme on GitHub</a><br>
-            This is a product of the U.S. Customs and Border Protection.
-  
-          </p>
-
-        </div>
-      </section>
+          </div>
+        </section>
 
     </div>
 
   </div>
 
-  <script src="js/scripts.js"></script>
+  <script src="../js/scripts.js"></script>
 </body>
 </html>
