@@ -1,0 +1,28 @@
+{
+  "name": "cbp-design-system",
+  "version": "0.1.0",
+  "description": "CBP Design System",
+  "main": "index.js",
+  "scripts": {
+    "init-cbp-theme" : "cd cbp-theme && npm install",
+    "build-cbp-theme" : "cd cbp-theme && npm run build",
+    "init-cbp-ds": "cd ds-css && npm install",
+    "build-cbp-ds": "cd ds-css && npm run build",
+    "copy-ds-to-cbp-theme": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && cp -rf ds-ux-guidelines/. cbp-theme/kitchensink/design-system"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/US-CBP/cbp-theme"
+  },
+  "keywords": [
+    "CBP Theme",
+    "CBP Style Guide",
+    "CBP Design System"
+  ],
+  "author": "Creative Services",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/US-CBP/cbp-theme/issues"
+  },
+  "homepage": "https://us-cbp.github.io/cbp-theme"
+}
