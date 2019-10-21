@@ -105,7 +105,7 @@ body {
 }
 
 .cbp-side-nav__menu__item a:hover {
-  background: #00416a !important;
+  background: #00416a;
   color: #fff;
 }
 
@@ -133,6 +133,7 @@ body {
 /* CBP MAIN SECTION END*/
 /* CBP HEADER START */
 .cbp-header {
+  background: #00416a;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 52PX;
@@ -192,12 +193,6 @@ body {
   font-weight: 300;
 }
 
-.cbp-ds-main {
-  margin: 2em auto 0 auto;
-  max-width: 600px;
-  padding: 0 2em;
-}
-
 .cbp-ds-main__header {
   font-size: 1.846em;
   margin: 1.385em 0 0.692em;
@@ -208,6 +203,11 @@ body {
 }
 
 .cbp-ds-main__sub-header {
+  color: #00416a;
   font-size: 1.538rem;
+}
+
+.cbp-block {
+  padding: 40px 40px 0 40px;
 }
 /*# sourceMappingURL=styles.css.map */
