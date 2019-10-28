@@ -24,7 +24,6 @@
        "scss/operator-no-newline-before": true,
        "scss/operator-no-newline-after": true,
        "scss/operator-no-unspaced": true,
-       "scss/selector-nest-combinators": "always",
        
 
     "at-rule-empty-line-before": [ "always", {
@@ -59,7 +58,6 @@
     "declaration-block-semicolon-newline-after": "always-multi-line",
     "declaration-block-semicolon-space-after": "always-single-line",
     "declaration-block-semicolon-space-before": "never",
-    "declaration-block-single-line-max-declarations": 1,
     "declaration-block-trailing-semicolon": "always",
     "declaration-colon-newline-after": "always-multi-line",
     "declaration-colon-space-after": "always-single-line",

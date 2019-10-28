@@ -1,9 +1,15 @@
 {
 	"defaults": {
-		"timeout": 100000
+		"timeout": 100000,
+		"useIncognitoBrowserContext": true
 	},
 	"urls": [
-		"http://localhost:9000/"
+		"http://localhost:9000/",
+		"../ds-ux-guidelines/",
+		{
+		"url": "../ds-ux-guidelines/index.html",
+		"screenCapture": "ds-index-capture.png"	
+		}
 	
 	]
 }
