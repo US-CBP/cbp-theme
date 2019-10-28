@@ -92,6 +92,8 @@ module.exports = {
       }
   }),
     new MiniCssExtractPlugin({ // extracts CSS into separate files per JS file that contains CSS
+      // also generates a min.css.map file
+      // note: this is not creating the unminified .css file, another tool does that for now
       ignoreOrder: false, // enable to remove warnings about any possible conflict
       filename: 'css/cbp-ds.min.css'
     }),
