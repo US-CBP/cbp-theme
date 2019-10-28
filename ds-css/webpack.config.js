@@ -2,7 +2,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack'); // to access built-in plugins
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -96,24 +96,24 @@ module.exports = {
       filename: 'css/cbp-ds.min.css'
     }),
 
-    new OptimizeCssAssetsPlugin({ // optimizes/minifies all CSS assets
-      assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'),
-      cssProcessorPluginOptions: {
-        preset: ['default', { 
+    // new OptimizeCssAssetsPlugin({ // optimizes/minifies all CSS assets
+    //   assetNameRegExp: /\.css$/g,
+    //   cssProcessor: require('cssnano'),
+    //   cssProcessorPluginOptions: {
+    //     preset: ['default', { 
           
-          discardComments: { 
-          removeAll: true },
+    //       discardComments: { 
+    //       removeAll: true },
 
-          cssDeclarationSorter: {
-            order: 'alphabetically' // formats properties in alphabetical order
-          },
-          normalizeWhitespace: true
+    //       cssDeclarationSorter: {
+    //         order: 'alphabetically' // formats properties in alphabetical order
+    //       },
+    //       normalizeWhitespace: true
 
-        }],
-      },
-      canPrint: true
-    }),
+    //     }],
+    //   },
+    //   canPrint: true
+    // }),
 
     new StylelintPlugin({
 
