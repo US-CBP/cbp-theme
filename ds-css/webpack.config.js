@@ -11,7 +11,8 @@ module.exports = {
   entry: './src/js/index.js', // entry module that injects dependent files
   // controls the devServer process and localhost port
   // devServer is short for 'webpack-dev-server'
-  devServer: {      
+  devServer: { // note: when running this, it will initially hide the /div/ 
+    // folder by default, after which you can just run 'npm run build-webpack' to see the /dist/ folder locally      
     contentBase: path.join(__dirname, 'dist'), // where to serve content from
     watchContentBase: true, // dev-server watches for changes to served files
     index: 'index.html', // considered the the index file
