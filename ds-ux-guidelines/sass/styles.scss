@@ -194,9 +194,6 @@ body {
 
 
 .cbp-ds-main {
-  margin: 2em auto 0 auto;
-  max-width: 600px;
-  padding: 0 2em;
 
   &__header {
     font-size: 1.846em;
@@ -211,4 +208,8 @@ body {
     color: $ds-primary;
     font-size: 1.538rem;
   }
+}
+
+.cbp-block {
+  padding: 40px 40px 0 40px; 
 }

@@ -78,7 +78,7 @@
     "pa11y-report": "pa11y-ci-reporter-html && open index.html",
     "pa11y-all": "npm run pa11y-test && npm run pa11y-report",
     "sourcemap-framework": "scss \"./src/styles/cbp-ds.scss\" \"./dist/css/cbp-ds.css\"",
-    "sourcemap-guide": "scss \"../ds-ux-guidelines/sass/styles.scss\" \"../ds-ux-guidelines/css/styles.css\"",
+    "sourcemap-guide": "scss \"../ds-ux-guidelines/sass/styles.scss\" \"../ds-ux-guidelines/css/styles.css\" || exit 0",
     "unmin": "cssunminifier \"dist/css/cbp-ds.min.css\" \"dist/css/cbp-ds.css\" || exit 0"
   },
   "husky": {
