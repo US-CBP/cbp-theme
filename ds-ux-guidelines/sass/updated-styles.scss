@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.cbp-ds-grid {
+  display: grid;
+  grid-template-rows: 55px calc(100vh - 55px);  /* height limitation on second row */
+  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-areas: "header header" 
+                       "side-nav content";
+}
+
+.cbp-sidenav {
+  background: #f5f5f5;
+  grid-area: side-nav;
+  overflow-y: auto;
+  
+  &__item {
+    display: block;
+    font-size: 1rem;
+    font-weight: 200;
+    
+    a {
+      box-sizing: border-box;
+      color: inherit;
+      display: block;
+      padding: .5em .5em .5em 1.5em;
+
+      &:hover {
+        background: #00416a;
+        color: #fff;  
+      }
+    }
+    
+    &--category {
+      font-size: 1.385em;
+      font-weight: 600;
+      padding: .5em;  
+    }
+ 
+    &--active { 
+      background: lighten(#00416a, 8%);
+      color: #fff;
+    }
+    
+    &--sub {      
+      a {
+        padding-left: 2rem;
+      }
+    }
+  }
+  
+  
+}
+
+.cbp-header {
+  background: #00416a;
+  color: #fff;
+  grid-area: header;
+  padding: 0px 1em;  
+  
+  & a {
+    color: #fff;
+  }
+  
+  &__skipnav {
+    background: #fff;
+    color: #00416a !important;
+    left: 0;
+    padding: .5rem 1rem;
+    position: absolute;
+    top: -3.8rem;
+    z-index: 100;
+
+    &:focus {
+      top: 0;
+      transition: all .2s ease-in-out;
+    }
+  }
+  
+  &__main,
+  &__sub {
+    height: 52px;
+  }
+}
+
+.cbp-logo {
+  color: #fff;
+  
+  &:hover {
+    color: #fff;
+  }
+  
+  span {
+    font-weight: 300;
+  }
+}
+
+.cbp-content {
+  // background-color: red;  
+  grid-area: content;
+  overflow: auto;
+
+  &__header {
+    background: rgb(255, 255, 255);
+    position: fixed;
+    max-width:  calc(100% - 295px); /* Need to revisit this calc function. */
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+article {
+  height: 1000px;
+  margin-top: 130px;
+  padding: 0 1em 1em 1em                                /* height set on child; triggers scroll */
+}
+
+.cbp-code {
+  iframe {
+    height: 360px;
+  }
+}
