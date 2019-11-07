@@ -20,8 +20,9 @@ body {
   display: grid;
   grid-template-rows: 55px calc(100vh - 55px);  /* height limitation on second row */
   grid-template-columns: 280px minmax(0, 1fr);
-  grid-template-areas: "header header" 
-                       "side-nav content";
+  grid-template-areas: 
+  "header header"
+  "side-nav content";
 }
 
 .cbp-sidenav {

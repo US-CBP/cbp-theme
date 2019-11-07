@@ -23,7 +23,7 @@ body {
   /* height limitation on second row */
   -ms-grid-columns: 280px minmax(0, 1fr);
       grid-template-columns: 280px minmax(0, 1fr);
-      grid-template-areas: "header header"  "side-nav content";
+      grid-template-areas: "header header" "side-nav content";
 }
 
 .cbp-sidenav {
