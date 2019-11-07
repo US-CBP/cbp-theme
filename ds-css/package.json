@@ -33,7 +33,6 @@
     "babel-loader": "^8.0.6",
     "bulma": "^0.7.5",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "cssunminifier": "https://github.com/HIGGO36/cssunminifier/tarball/master",
     "eslint": "^6.5.1",

@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map', // creates /dis/js/cbp-ds-bundle.js.map
@@ -109,14 +108,6 @@ module.exports = {
         collapseWhitespace: false
     }
 }),
-
-// new CopyPlugin([
-//   { from: 'css/cbp-ds.min.css', to: '../.././ds-css/dist/css/' },
-// ]),
-
-// new CopyPlugin([
-//   { from: 'css/cbp-ds.min.css', to: '.././ds-css/dist/css/' },
-// ]),
 
 new HtmlWebpackTagsPlugin({ tags: ['../css/styles.css', '../js/scripts.js'], append: true }), 
 
