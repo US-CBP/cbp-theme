@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap');
 
+html, body, .cbp-content {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -105,27 +111,30 @@ body {
 }
 
 .cbp-content {
-  // background-color: red;  
+  display: flex;
+  flex-direction: column;
   grid-area: content;
-  overflow: auto;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;  
+
 
   &__header {
     background: rgb(255, 255, 255);
-    position: fixed;
-    max-width:  calc(100% - 295px); /* Need to revisit this calc function. */
-    width: 100%;
-    z-index: 1;
+    flex: 1;
+  }
+
+  article {
+    flex: 8;
+    overflow-y: scroll; 
+    padding: 2em 2em 0 2em;                              /* height set on child; triggers scroll */
+  }
+  
+  .cbp-code {
+    iframe {
+      height: 360px;
+    }
   }
 }
 
-article {
-  height: 1000px;
-  margin-top: 130px;
-  padding: 0 1em 1em 1em                                /* height set on child; triggers scroll */
-}
 
-.cbp-code {
-  iframe {
-    height: 360px;
-  }
-}
