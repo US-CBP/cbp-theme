@@ -70,7 +70,6 @@
     "css-dist-rebuild": "rm -rf dist/css && mkdir dist && mkdir dist/css ",
     "clean-all": "rm package-lock.json && npm run node-clean && npm run dist-clean",
     "build-local": "npm run build && npm run local",
-    "css2sass": "sass \"./dist/css/cbp-ds.min.css\" \"src/styles/cbp-ds.ugly.scss\"",
     "lint:all": "rm -rf ../ds-ux-guidelines/dist/lint && mkdir ../ds-ux-guidelines/dist/lint  && npm run lint-framework-sass && npm run lint-framework-css && npm run lint-guide",
     "lint-framework-sass": "stylelint > ../ds-ux-guidelines/dist/lint/stylelint-sass-errors.log \"src/styles/**/*.scss\" --fix --output-file ../ds-ux-guidelines/dist/lint/stylelint-sass-errors.log",
     "lint-framework-css": "stylelint > ../ds-ux-guidelines/dist/lint/stylelint-css-errors.log \"dist/css/cbp-ds.css\" --fix --output-file ../ds-ux-guidelines/dist/lint/stylelint-css-errors.log || exit 0",
