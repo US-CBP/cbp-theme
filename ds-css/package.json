@@ -33,13 +33,16 @@
     "babel-loader": "^8.0.6",
     "bulma": "^0.7.5",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
+    "cssunminifier": "https://github.com/HIGGO36/cssunminifier/tarball/master",
     "eslint": "^6.5.1",
     "eslint-loader": "^3.0.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fibers": "^4.0.2",
-    "https-proxy-agent": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "https-proxy-agent": "^3.0.0",
     "husky": "^3.0.9",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
@@ -54,37 +57,40 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.11.1",
     "stylelint-webpack-plugin": "^1.0.2",
-    "cssunminifier": "https://github.com/HIGGO36/cssunminifier/tarball/master",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
   },
   "scripts": {
-    "build": "npm run build-webpack && npm run unmin && npm run sourcemap-guide && npm run lint-framework && npm run lint-guide && npm run pa11y-test && npm run pa11y-report",
+    "build": "npm run build-webpack && npm run unmin && npm run sourcemap-guide && npm run cp-cssmap-guide && npm run cp-cssmin-dist && npm run lint:all && npm run pa11y:all",
     "build-webpack": "npm run dist-clean && npm run dist-build",
     "dev": "webpack --mode development",
     "dist-clean": "rimraf dist",
     "dist-build": "webpack --mode production",
+    "css-dist-rebuild": "rm -rf dist/css && mkdir dist && mkdir dist/css ",
     "clean-all": "rm package-lock.json && npm run node-clean && npm run dist-clean",
     "build-local": "npm run build && npm run local",
     "css2sass": "sass \"./dist/css/cbp-ds.min.css\" \"src/styles/cbp-ds.ugly.scss\"",
-    "lint-all": "npm run lint-framework && npm run lint-guide",
-    "lint-framework": "stylelint > stylelint-errors.log \"src/styles/**/*.scss\" --fix --output-file stylelint-errors.log",
-    "lint-guide": "stylelint > stylelint-guide-errors.log \"../ds-ux-guidelines/sass/styles.scss\" --fix --output-file stylelint-guide-errors.log || exit 0",
+    "lint:all": "rm -rf ../ds-ux-guidelines/dist/lint && mkdir ../ds-ux-guidelines/dist/lint  && npm run lint-framework-sass && npm run lint-framework-css && npm run lint-guide",
+    "lint-framework-sass": "stylelint > ../ds-ux-guidelines/dist/lint/stylelint-sass-errors.log \"src/styles/**/*.scss\" --fix --output-file ../ds-ux-guidelines/dist/lint/stylelint-sass-errors.log",
+    "lint-framework-css": "stylelint > ../ds-ux-guidelines/dist/lint/stylelint-css-errors.log \"dist/css/cbp-ds.css\" --fix --output-file ../ds-ux-guidelines/dist/lint/stylelint-css-errors.log || exit 0",
+    "lint-guide": "stylelint > ../ds-ux-guidelines/dist/lint/stylelint-guide-errors.log \"../ds-ux-guidelines/sass/styles.scss\" --fix --output-file ../ds-ux-guidelines/dist/lint/stylelint-guide-errors.log || exit 0",
     "local": "webpack-dev-server --mode development",
     "local-prod": "webpack-dev-server --mode production",
     "node-clean": "rm -rf node_modules && npm i",
     "pa11y-test": "pa11y-ci --json > pa11y-ci-results.json || exit 0",
     "pa11y-report": "pa11y-ci-reporter-html && open index.html",
-    "pa11y-all": "npm run pa11y-test && npm run pa11y-report",
-    "sourcemap-framework": "scss \"./src/styles/cbp-ds.scss\" \"./dist/css/cbp-ds.css\"",
+    "pa11y:all": "npm run pa11y-test && npm run pa11y-report",
+    "sourcemap-framework": "scss \"./src/styles/cbp-ds.scss\" \"dist/css/cbp-ds.css\" || exit 0",
     "sourcemap-guide": "scss \"../ds-ux-guidelines/sass/styles.scss\" \"../ds-ux-guidelines/css/styles.css\" || exit 0",
-    "unmin": "cssunminifier \"dist/css/cbp-ds.min.css\" \"dist/css/cbp-ds.css\" || exit 0"
+    "unmin": "npm run css-dist-rebuild && cssunminifier \"../ds-ux-guidelines/dist/css/cbp-ds.min.css\" \"./dist/css/cbp-ds.css\" || exit 0",
+    "cp-cssmin-dist": "cp \"../ds-ux-guidelines/dist/css/cbp-ds.min.css\" \"dist/css/cbp-ds.min.css\"",
+    "cp-cssmap-guide": "cp \"../ds-ux-guidelines/dist/css/cbp-ds.min.css.map\" \"./dist/css/cbp-ds.min.css.map\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-all && npm run pa11y-all ",
-      "pre-push": "npm run lint-all && npm run pa11y-all"
+      "pre-commit": "npm run lint:all && npm run pa11y:all ",
+      "pre-push": "npm run lint:all && npm run pa11y:all"
     }
   }
 }
