@@ -1,0 +1,61 @@
+{
+  "name": "cbp-ds-ux-guidelines",
+  "version": "1.0.0",
+  "description": "This is the CBP UX Guidelines",
+  "main": "webpack.config.js",
+  "author": "Creative Services",
+  "license": "ISC",
+  "contributors": [
+    {
+      "name": "David Y. Hodge",
+      "email": "david.y.hodge@cbp.dhs.gov"
+    },
+    {
+      "name": "John D. Higgins",
+      "email": "john.d.higgins@associates.cbp.dhs.gov"
+    },
+    {
+      "name": "Ray Robertson",
+      "email": "ray.robertson@associates.cbp.dhs.gov"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/US-CBP/cbp-theme/tree/design-system/ds-ux-guidelines"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "husky": "^3.0.9",
+    "node-sass": "^4.13.0",
+    "pa11y-ci": "^2.3.0",
+    "pa11y-ci-reporter-html": "^1.2.0",
+    "puppeteer": "^1.20.0",
+    "sass": "^1.23.1",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.11.1"
+  },
+  "scripts": {
+    "build-guide": "npm run css && npm run cp-min && npm run lint-guide && npm run pa11y:all && npm run local",
+    "cp-min": "cp \"../ds-css/dist/css/cbp-ds.min.css\" \"css/cbp-ds.min.css\"",
+    "css": "scss \"./sass/styles.scss\" \"./css/styles.css\"",
+    "dist-clean": "rimraf dist",
+    "lint-clean": "rimraf lint && mkdir lint",
+    "lint-guide": "npm run lint-clean && stylelint > lint/stylelint-scss-errors.log \"./sass/styles.scss\" --fix --output-file lint/stylelint-guide-errors.log && stylelint > lint/stylelint-css-errors.log \"./css/styles.css\" --fx --output-file lint/stylelint-css-errors.log || exit 0",
+    "local": "browser-sync start --server '../ds-ux-guidelines' --files '../ds-ux-guidelines'",
+    "node-clean": "rm -rf node_modules && npm i",
+    "pa11y-clean": "rimraf pa11y && mkdir pa11y",
+    "pa11y-test": "pa11y-ci --json > \"pa11y/pa11y-ci-results.json\" || exit 0",
+    "pa11y-report": "pa11y-ci-reporter-html -s \"./pa11y/pa11y-ci-results.json\" -d \"./pa11y\" && open \"pa11y/index.html\"",
+    "pa11y:all": "npm run pa11y-clean && npm run pa11y-test && npm run pa11y-report || exit 0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-guide && npm run pa11y:all",
+      "pre-push": "npm run lint-guide && npm run pa11y:all"
+    }
+  }
+}

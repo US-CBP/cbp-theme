@@ -13,7 +13,5 @@
     navBar.classList.add('cbp-side-nav--hide');
     mainGrid.classList.remove('cbp-ds-grid--margin-left');
   }
-
  });
-
  /* Hamburger menu open/close code START */
