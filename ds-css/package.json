@@ -1,5 +1,5 @@
 {
-  "name": "ds-css",
+  "name": "cbp-ds-css",
   "version": "1.0.0",
   "description": "This is the CSS offering built upon the CBP UX Guidelines.  The CSS can be used with any web user interface or framework.",
   "main": "webpack.config.js",
@@ -53,22 +53,22 @@
     "webpack-command": "^0.5.0"
   },
   "scripts": {
-    "build": "npm run dist-clean && npm run webpack && npm run cp-unminify && npm run minify && npm run lint-css",
-    "clean:all": "npm run node-clean && npm run dist-clean",
-    "cp-minified": "cp \"dist/css/cbp-ds.min.css\" \"../ds-ux-guidelines/css/cbp-ds.min.css\"",
-    "cp-unminify": "cp \"dist/css/cbp-ds.min.css\" \"dist/css/cbp-ds.css\"",
-    "dist-clean": "rimraf dist",
-    "lint-css": "stylelint > lint/stylelint-sass-errors.log \"src/styles/**/*.scss\" --fix --output-file lint/stylelint-sass-errors.log && stylelint > lint/stylelint-css-errors.log  \"dist/css/cbp-ds.css\" --fix --output-file lint/stylelint-css-errors.log || exit 0",
+    "build": "npm run dist:clean && npm run webpack && npm run cp:unminify && npm run minify && npm run lint:css",
+    "clean:all": "npm run node:clean && npm run dist:clean",
+    "cp:minified": "cp \"dist/css/cbp-ds.min.css\" \"../ds-ux-guidelines/css/cbp-ds.min.css\"",
+    "cp:unminify": "cp \"dist/css/cbp-ds.min.css\" \"dist/css/cbp-ds.css\"",
+    "dist:clean": "rimraf dist",
+    "lint:css": "stylelint > lint/stylelint-sass-errors.log \"src/styles/**/*.scss\" --fix --output-file lint/stylelint-sass-errors.log && stylelint > lint/stylelint-css-errors.log  \"dist/css/cbp-ds.css\" --fix --output-file lint/stylelint-css-errors.log || exit 0",
     "minify": "postcss \"dist/css/cbp-ds.min.css\" -o \"dist/css/cbp-ds.min.css\"",
-    "node-clean": "rm package-lock.json && rm -rf node_modules && npm i",
+    "node:clean": "rm package-lock.json && rm -rf node_modules && npm i",
     "watch": "webpack --mode production --watch",
-    "webpack-dev": "webpack --mode development",
+    "webpack:dev": "webpack --mode development",
     "webpack": "webpack --mode production"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-css",
-      "pre-push": "npm run lint-css"
+      "pre:commit": "npm run lint:css",
+      "pre:push": "npm run lint:css"
     }
   }
 }
