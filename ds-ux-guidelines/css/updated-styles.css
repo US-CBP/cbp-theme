@@ -1,3 +1,8 @@
+/* Notes for styling and styling and naming conventnions. Search
+  below comments.
+  
+  1. Review class name
+*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap");
 html, body, .cbp-content {
   margin: 0;
@@ -18,8 +23,8 @@ body {
 .cbp-ds-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 55px calc(100vh - 55px);
-      grid-template-rows: 55px calc(100vh - 55px);
+  -ms-grid-rows: auto calc(100vh - 55px);
+      grid-template-rows: auto calc(100vh - 55px);
   /* height limitation on second row */
   -ms-grid-columns: 280px minmax(0, 1fr);
       grid-template-columns: 280px minmax(0, 1fr);
@@ -69,17 +74,19 @@ body {
 }
 
 .cbp-header {
-  background: #00416a;
   color: #fff;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: header;
-  padding: 0px 1em;
 }
 
 .cbp-header a {
   color: #fff;
+}
+
+.cbp-header .tabs a {
+  color: #00416a;
 }
 
 .cbp-header__skipnav {
@@ -99,7 +106,30 @@ body {
 }
 
 .cbp-header__main, .cbp-header__sub {
-  height: 52px;
+  height: 50px;
+  margin-bottom: 0 !important;
+  padding: 0 1em;
+}
+
+.cbp-header__main {
+  background: #00416a;
+}
+
+.cbp-header__main .level-item {
+  padding: 0 1em;
+}
+
+.cbp-header__sub {
+  background: #eeeeee;
+  color: #000;
+}
+
+.cbp-header__sub a {
+  color: #00416a;
+}
+
+.cbp-header__sub .level-item {
+  padding: 18px;
 }
 
 .cbp-logo {
@@ -128,6 +158,9 @@ body {
   margin: 0;
   height: 100%;
   min-height: 100%;
+  /* Review class name (Might want to update, move or remove this class name.) 
+    Added as a block holder for any code snippets.
+  */
 }
 
 .cbp-content__header {

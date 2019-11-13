@@ -1,3 +1,9 @@
+/* Notes for styling and styling and naming conventnions. Search
+  below comments.
+  
+  1. Review class name
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap');
 
 html, body, .cbp-content {
@@ -18,7 +24,7 @@ body {
 
 .cbp-ds-grid {
   display: grid;
-  grid-template-rows: 55px calc(100vh - 55px);  /* height limitation on second row */
+  grid-template-rows: auto calc(100vh - 55px);  /* height limitation on second row */
   grid-template-columns: 280px minmax(0, 1fr);
   grid-template-areas: 
   "header header"
@@ -69,15 +75,19 @@ body {
 }
 
 .cbp-header {
-  background: #00416a;
+  // background: #00416a;
   color: #fff;
   grid-area: header;
-  padding: 0px 1em;  
+  // padding: 0px 1em;  
   
-  & a {
+  a {
     color: #fff;
   }
   
+  .tabs a {
+    color: #00416a;
+  }
+
   &__skipnav {
     background: #fff;
     color: #00416a !important;
@@ -92,10 +102,32 @@ body {
       transition: all .2s ease-in-out;
     }
   }
-  
+
   &__main,
   &__sub {
-    height: 52px;
+    height: 50px;
+    margin-bottom: 0 !important;
+    padding: 0 1em;
+  }
+
+  &__main {
+    background: #00416a;
+    .level-item {
+      padding: 0 1em;
+    }
+  }
+
+  &__sub {
+    background: rgb(238, 238, 238);
+    color: #000;
+
+    a {
+      color: #00416a;
+    }
+
+    .level-item {
+      padding: 18px;
+    }
   }
 }
 
@@ -131,6 +163,9 @@ body {
     padding: 2em 2em 0 2em;                              /* height set on child; triggers scroll */
   }
   
+  /* Review class name (Might want to update, move or remove this class name.) 
+    Added as a block holder for any code snippets.
+  */
   .cbp-code {
     iframe {
       height: 360px;
