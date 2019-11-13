@@ -115,6 +115,10 @@ body {
   background: #00416a;
 }
 
+.cbp-header__main .level-right .level-item:first-child {
+  display: none;
+}
+
 .cbp-header__main .level-item {
   padding: 0 1em;
 }
@@ -122,6 +126,8 @@ body {
 .cbp-header__sub {
   background: #eeeeee;
   color: #000;
+  opacity: 0;
+  /* temp */
 }
 
 .cbp-header__sub a {
@@ -181,5 +187,35 @@ body {
 
 .cbp-content .cbp-code iframe {
   height: 360px;
+}
+
+@media screen and (max-width: 768px) {
+  .cbp-header__main.level,
+  .cbp-header__main .level-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cbp-header__main .level-left .level-item:not(:first-child) {
+    display: none;
+  }
+  .cbp-header__main .level-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: .75rem;
+  }
+  .cbp-header__main .level-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+  }
+  .cbp-header__main .level-right .level-item:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cbp-header__main .level-right .level-item:not(:first-child) {
+    display: none;
+  }
 }
 /*# sourceMappingURL=updated-styles.css.map */

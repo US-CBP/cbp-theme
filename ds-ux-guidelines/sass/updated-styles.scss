@@ -112,6 +112,13 @@ body {
 
   &__main {
     background: #00416a;
+
+    .level-right {
+      .level-item:first-child {
+        display: none;
+      }
+    }
+
     .level-item {
       padding: 0 1em;
     }
@@ -120,7 +127,7 @@ body {
   &__sub {
     background: rgb(238, 238, 238);
     color: #000;
-
+opacity: 0; /* temp */
     a {
       color: #00416a;
     }
@@ -128,6 +135,7 @@ body {
     .level-item {
       padding: 18px;
     }
+    
   }
 }
 
@@ -172,5 +180,38 @@ body {
     }
   }
 }
+//.level-right { opacity: 0; }
+@media screen and (max-width: 768px) {
+  .cbp-header__main {
+    &.level,
+    .level-left {
+     display: flex; 
+    }
 
+    .level-left {
+      .level-item:not(:first-child) {
+        display: none;
+      }
+    }
 
+    .level-item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: .75rem;
+    }
+
+    .level-right {
+
+      display: flex;
+      margin-top: 0;
+
+      .level-item:first-child {
+        display: flex;
+      }
+
+      .level-item:not(:first-child) {
+        display: none;
+      }
+    }
+
+  }
+}
