@@ -58,7 +58,7 @@
     "cp:minified": "cp \"dist/css/cbp-ds.min.css\" \"../ds-ux-guidelines/css/cbp-ds.min.css\"",
     "cp:unminify": "cp \"dist/css/cbp-ds.min.css\" \"dist/css/cbp-ds.css\"",
     "dist:clean": "rimraf dist",
-    "lint:css": "stylelint > lint/stylelint-sass-errors.log \"src/styles/**/*.scss\" --fix --output-file lint/stylelint-sass-errors.log && stylelint > lint/stylelint-css-errors.log  \"dist/css/cbp-ds.css\" --fix --output-file lint/stylelint-css-errors.log || exit 0",
+    "lint:css": "stylelint > \"lint/stylelint-sass-errors.log\" \"src/styles/**/*.scss\" --fix --output-file \"lint/stylelint-sass-errors.log\" && stylelint > \"lint/stylelint-css-errors.log\"  \"dist/css/cbp-ds.css\" --fix --output-file \"lint/stylelint-css-errors.log\" || exit 0",
     "minify": "postcss \"dist/css/cbp-ds.min.css\" -o \"dist/css/cbp-ds.min.css\"",
     "node:clean": "rm package-lock.json && rm -rf node_modules && npm i",
     "watch": "webpack --mode production --watch",
