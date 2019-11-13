@@ -39,12 +39,14 @@
     "stylelint-scss": "^3.11.1"
   },
   "scripts": {
-    "build:guide": "npm run css && npm run cp:min && npm run lint:guide && npm run pa11y:all && npm run local",
+    "build:guide": "npm run css && npm run cp:min && npm run lint:all && npm run pa11y:all && npm run local",
     "cp:min": "cp \"../ds-css/dist/css/cbp-ds.min.css\" \"css/cbp-ds.min.css\"",
     "css": "scss \"./sass/styles.scss\" \"./css/styles.css\"",
     "dist:clean": "rimraf dist",
     "lint:clean": "rimraf lint && mkdir lint",
-    "lint:guide": "npm run lint:clean && stylelint > lint/stylelint-scss-errors.log \"./sass/styles.scss\" --fix --output-file lint/stylelint-guide-errors.log && stylelint > lint/stylelint-css-errors.log \"./css/styles.css\" --fx --output-file lint/stylelint-css-errors.log || exit 0",
+    "lint:guide": "npm run lint:clean && stylelint > lint/stylelint-scss-errors.log \"./sass/styles.scss\" --fix --output-file lint/stylelint-scss-errors.log || exit 0",
+    "lint:css": "stylelint > lint/stylelint-css-errors.log \"./css/styles.css\" --fix --output-file lint/stylelint-css-errors.log || exit 0",
+    "lint:all": "npm run lint:guide && npm run lint:css",
     "local": "browser-sync start --server \"../ds-ux-guidelines\" --files '../ds-ux-guidelines'",
     "node:clean": "rm -rf node_modules && npm i",
     "pa11y:clean": "rimraf pa11y && mkdir pa11y",
