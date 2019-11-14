@@ -38,7 +38,8 @@
     "stylelint-scss": "^3.11.1"
   },
   "scripts": {
-    "build:guide": "npm run css && npm run cp:min && npm run lint:all && npm run pa11y:all && npm run local",
+    "build:guide": "npm run css && npm run cp:min && npm run lint:all",
+    "build:guide-dev": "npm run css && npm run cp:min && npm run lint:all && npm run pa11y:all && npm run local",
     "cp:min": "cp \"../ds-css/dist/css/cbp-ds.min.css\" \"css/cbp-ds.min.css\"",
     "css": "sass \"./sass/styles.scss\" \"./css/styles.css\"",
     "dist:clean": "rimraf dist",
