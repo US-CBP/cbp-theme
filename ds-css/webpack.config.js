@@ -42,7 +42,6 @@ module.exports = {
             }
           },
         ]
-
     },
     {
       test: /\.m?js$/,
