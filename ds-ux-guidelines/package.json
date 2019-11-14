@@ -40,7 +40,7 @@
   "scripts": {
     "build:guide": "npm run css && npm run cp:min && npm run lint:all && npm run pa11y:all && npm run local",
     "cp:min": "cp \"../ds-css/dist/css/cbp-ds.min.css\" \"css/cbp-ds.min.css\"",
-    "css": "scss \"./sass/styles.scss\" \"./css/styles.css\"",
+    "css": "scss ./sass/styles.scss ./css/styles.css",
     "dist:clean": "rimraf dist",
     "lint:clean": "rimraf lint && mkdir lint",
     "lint:guide": "npm run lint:clean && stylelint > \"lint/stylelint-scss-errors.log\" \"./sass/styles.scss\" --fix --output-file \"lint/stylelint-scss-errors.log\" || exit 0",
