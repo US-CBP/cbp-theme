@@ -1,75 +1,48 @@
-
+const path = require('path'); // this node module provides 
+// utilities for working with file and directory paths
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack'); // to access built-in plugins
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
-
-// const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  devtool: 'source-map',
-   // this creates the /dis/js/cbp-ds-bundle.js.map file
-  entry: './src/js/index.js',
-  // controls the devServer process and localhost port
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    index: 'index.html',
-    watchOptions: {
-      poll: true
-      // this controls active watch mode for file changes
-    },
-    watchContentBase: true,
-    compress: true,
-    port: 9000,
-    open: true,
-    overlay: {
-      warnings: true,
-      errors: true
+  performance: {
+    hints: "error", // enum
+    maxAssetSize: 200000, // int (in bytes),
+    maxEntrypointSize: 400000, // int (in bytes)
+    assetFilter: function(assetFilename) {
+      // Function predicate that provides asset filenames
+      return assetFilename.endsWith('.css') || assetFilename.endsWith('.js');
     }
   },
+  devtool: 'source-map', // creates || updates 'dist/css/cbp-ds.min.css.map' & js/cbp-ds-bundle.js.map' files
+  entry: './src/js/index.js', // entry module that injects dependent files
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/cbp-ds-bundle.js'
+    path: path.resolve(__dirname, 'dist'), // directory location for output files
+    filename: "../js/cbp-ds-bundle.js"
   },
-
-
-  // watch: true,
-
 
   module: {
     rules: [
       {
-      // below test covers both sass and css file types
-      test: /\.(sa|sc|c)ss$/,
-      use: [
-          
-          MiniCssExtractPlugin.loader,
-          
+      test: /\.(sa|sc|c)ss$/, // test covers both sass and css file types
+      use: [ 
+          MiniCssExtractPlugin.loader, 
           {
-            loader: 'css-loader',
-            // options: {
-            //   sourceMap: true
-            // }
+            loader: 'css-loader', // interprets @import and url() like import/require() and will resolve them
           },
           {
-            loader: 'resolve-url-loader',
-            // provides the "url rewriting" that Sass is missing.
-            options: { // options...
-            }
+            loader: 'resolve-url-loader', // provides the "url rewriting" that Sass is missing
           },
           {
-            loader: 'sass-loader',
+            loader: 'sass-loader', // Loads a Sass/SCSS file and compiles it to CSS
             options: {
-              sourceMap: true
+              sourceMap: true,
+              implementation: require('sass'), // Prefer `dart-sass`
             }
           },
-
         ]
     },
-   
     {
       test: /\.m?js$/,
       exclude: /(node_modules|bower_components)/,
@@ -89,46 +62,22 @@ module.exports = {
     new webpack.ProgressPlugin(), // show build progress details
     new CleanWebpackPlugin(),  // keeps track of all files in dist/
 
-    new HtmlWebpackPlugin({
-      entry: './src/index.html',
-      hash: false, // set to 'true' if needing unique ID's at end of file name
-      title: 'CBP-DS Theme Website',
-      template: './src/index.html', // this will auto parse template as well
-      inject: true,
-      minify: {
-          removeComments: false,
-          collapseWhitespace: false
-      }
-  }),
-    new MiniCssExtractPlugin({
-      ignoreOrder: false, //enable to remove warnings about any possible conflict
-      filename: 'css/cbp-ds.min.css'
-      // chunkFilename: 'css/cbp-ds.min.css.map'
+    new MiniCssExtractPlugin({ // extracts CSS into separate files per JS file that contains CSS
+      // also generates a min.css.map file
+      // note: this is not creating the unminified .css file, another tool does that for now
+      ignoreOrder: false, // enable to remove warnings about any possible conflict
+      //CSS in separate location for distribution
+      filename: "css/cbp-ds.min.css",
     }),
 
-    new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'),
-      cssProcessorPluginOptions: {
-        preset: ['default', { 
-          
-          discardComments: { 
-          removeAll: true } 
-        }],
-      },
-      canPrint: true
-    }),
-
-    new StylelintPlugin({
+new StylelintPlugin({
 
   "options": {
     config: '.stylelintrc',
-    files: './src/styles/custom/**/*.scss',
+    files: '**/*.s?(a|c)ss',
     formatter: 'string',
     cache: true, // only changed files get linted
-    cacheLocation: './tests/',
     reportInvalidScopeDisables: true,
-    // ignorePath: './.stylelintignore',
     syntax: 'scss',
     fix: true,
     output: true,
@@ -136,6 +85,5 @@ module.exports = {
   }
 
   })
-
 ]
 }
