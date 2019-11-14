@@ -29,7 +29,6 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "husky": "^3.0.9",
-    "node-sass": "^4.13.0",
     "pa11y-ci": "^2.3.0",
     "pa11y-ci-reporter-html": "^1.2.0",
     "puppeteer": "^1.20.0",
