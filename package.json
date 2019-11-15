@@ -10,7 +10,7 @@
     "build-cbp-ds": "cd ds-css && npm run build",
     "init-cbp-ds-ux": "cd ds-ux-guidelines && npm install",
     "build-cbp-ds-ux": "cd ds-ux-guidelines && npm run build:guide",
-    "copy-ds-to-cbp-theme": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && cp -rf ds-ux-guidelines/. cbp-theme/kitchensink/design-system"
+    "copy-ds-to-cbp-theme": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/ cbp-theme/kitchensink/design-system/"
   },
   "repository": {
     "type": "git",
