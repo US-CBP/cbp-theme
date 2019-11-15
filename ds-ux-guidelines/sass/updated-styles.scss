@@ -127,7 +127,7 @@ body {
   &__sub {
     background: rgb(238, 238, 238);
     color: #000;
-opacity: 0; /* temp */
+// opacity: 0; /* temp */
     a {
       color: #00416a;
     }
@@ -135,6 +135,8 @@ opacity: 0; /* temp */
     .level-item {
       padding: 18px;
     }
+
+    .cbp-app-mobile { display: none; }
     
   }
 }
@@ -182,10 +184,16 @@ opacity: 0; /* temp */
 }
 //.level-right { opacity: 0; }
 @media screen and (max-width: 768px) {
+
+  /* Overwrites some Bulma breakpoint styles for the header.  */
   .cbp-header__main {
     &.level,
     .level-left {
      display: flex; 
+    }
+
+    .cbp-mobile-menu {
+      cursor: pointer;
     }
 
     .level-left {
@@ -213,5 +221,27 @@ opacity: 0; /* temp */
       }
     }
 
+  }
+
+  .cbp-header__sub {
+    overflow-y: hidden;
+    transition: height .5;
+
+    .cbp-tabs-mobile {
+      width: 100%;
+
+      * { width: 100%; }
+
+      ul {
+        flex-direction: column;
+      }
+
+    }
+
+    .cbp-app-mobile { display: block; }
+
+    &--open {
+     height: auto;
+    }
   }
 }

@@ -126,8 +126,6 @@ body {
 .cbp-header__sub {
   background: #eeeeee;
   color: #000;
-  opacity: 0;
-  /* temp */
 }
 
 .cbp-header__sub a {
@@ -136,6 +134,10 @@ body {
 
 .cbp-header__sub .level-item {
   padding: 18px;
+}
+
+.cbp-header__sub .cbp-app-mobile {
+  display: none;
 }
 
 .cbp-logo {
@@ -190,11 +192,15 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  /* Overwrites some Bulma breakpoint styles for the header.  */
   .cbp-header__main.level,
   .cbp-header__main .level-left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .cbp-header__main .cbp-mobile-menu {
+    cursor: pointer;
   }
   .cbp-header__main .level-left .level-item:not(:first-child) {
     display: none;
@@ -216,6 +222,29 @@ body {
   }
   .cbp-header__main .level-right .level-item:not(:first-child) {
     display: none;
+  }
+  .cbp-header__sub {
+    overflow-y: hidden;
+    -webkit-transition: height .5;
+    transition: height .5;
+  }
+  .cbp-header__sub .cbp-tabs-mobile {
+    width: 100%;
+  }
+  .cbp-header__sub .cbp-tabs-mobile * {
+    width: 100%;
+  }
+  .cbp-header__sub .cbp-tabs-mobile ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cbp-header__sub .cbp-app-mobile {
+    display: block;
+  }
+  .cbp-header__sub--open {
+    height: auto;
   }
 }
 /*# sourceMappingURL=updated-styles.css.map */
