@@ -16,6 +16,12 @@ body {
   margin: 0;
 }
 
+/* Temp Button class */
+.sub-menu-btn {
+  display: none;
+}
+
+/* Temp Button class */
 .no-scroll {
   overflow-y: hidden;
 }
@@ -75,10 +81,13 @@ body {
 
 .cbp-header {
   color: #fff;
+  -webkit-box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: header;
+  z-index: 100;
 }
 
 .cbp-header a {
@@ -108,11 +117,18 @@ body {
 .cbp-header__main, .cbp-header__sub {
   height: 50px;
   margin-bottom: 0 !important;
+  overflow: hidden;
   padding: 0 1em;
 }
 
 .cbp-header__main {
   background: #00416a;
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+
+.cbp-header__main--hidden {
+  height: 0;
 }
 
 .cbp-header__main .level-right .level-item:first-child {
@@ -192,6 +208,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  /* Temp Button class */
+  .sub-menu-btn {
+    display: block;
+  }
+  /* Temp Button class */
   /* Overwrites some Bulma breakpoint styles for the header.  */
   .cbp-header__main.level,
   .cbp-header__main .level-left {
