@@ -194,5 +194,13 @@ body {
 }
 
 .cbp-block {
-  padding: 40px 40px 0 40px;
+  background: #ffffff;
+  box-sizing: border-box;
+  margin: 40px;
+  padding: 40px;
+}
+
+.container {
+  background: olive;
+  min-height: 300px;
 }
