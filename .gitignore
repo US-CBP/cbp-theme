@@ -73,6 +73,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+pa11y/
+ds-css/dist/font-awesome
+ds-css/dist/roboto-fontface
+ds-ux-guidelines/pa11y
 
 # TypeScript v1 declaration files
 typings/
