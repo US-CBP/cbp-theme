@@ -6,29 +6,31 @@
 const mainHeader = document.querySelector('.cbp-header__main'); 
 const hideBtn = document.querySelector('.hide-btn');
 
-hideBtn.addEventListener('click', (e) => {
+ if(hideBtn) {  
+   hideBtn.addEventListener('click', (e) => {
 
-  if(mainHeader.classList.contains('cbp-header__main--hidden')) {
-    mainHeader.classList.remove('cbp-header__main--hidden');
-  } else {
-    mainHeader.classList.add('cbp-header__main--hidden');
-  }
+    if(mainHeader.classList.contains('cbp-header__main--hidden')) {
+      mainHeader.classList.remove('cbp-header__main--hidden');
+    } else {
+      mainHeader.classList.add('cbp-header__main--hidden');
+    }
 
-});
+  });
 
- /* App mainmenu open/close END */
+  /* App mainmenu open/close END */
 
- /* App submenu open/close START */
- const subHeader = document.querySelector('.cbp-header__sub');
- const subBtn = document.querySelector('.sub-menu-btn');
+  /* App submenu open/close START */
+  const subHeader = document.querySelector('.cbp-header__sub');
+  const subBtn = document.querySelector('.sub-menu-btn');
 
- subBtn.addEventListener('click', (e) => {
-  if(subHeader.classList.contains('cbp-header__sub--open')) {
-    subHeader.classList.remove('cbp-header__sub--open');
-  } else {
-    subHeader.classList.add('cbp-header__sub--open');
-  }
- });
+  subBtn.addEventListener('click', (e) => {
+    if(subHeader.classList.contains('cbp-header__sub--open')) {
+      subHeader.classList.remove('cbp-header__sub--open');
+    } else {
+      subHeader.classList.add('cbp-header__sub--open');
+    }
+  });
+}
  /* App submenu open/close END */
 
  /* Hamburger menu open/close code START */
