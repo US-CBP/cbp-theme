@@ -1,0 +1,96 @@
+/* CBP Typography Variables */
+
+/* Font Mixins */
+@mixin dark {
+  color: $grey-lightest;
+}
+
+/* Font Sizes Styling */
+.cbp-masthead-1 {
+  font-size: 2.566rem;
+  font-weight: $cbp-weight-thin;
+  line-height: $cbp-height-44;
+  letter-spacing: $cbp-font-spacing;
+
+  &--dark {
+    @include dark;
+  }
+
+}
+
+.cbp-masthead-2 {
+  font-size: 2.281rem;
+  font-weight: $cbp-weight-thin;
+  line-height: $cbp-height-40;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
+
+.cbp-heading-1 {
+  font-size: 2.027rem;
+  font-weight: $cbp-weight-light;
+  line-height: $cbp-height-40;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
+
+.cbp-heading-2 {
+  font-size: 1.802rem;
+  font-weight: $cbp-weight-regular;
+  line-height: $cbp-height-32;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
+
+.cbp-heading-3 {
+  font-size: 1.602rem;
+  font-weight: $cbp-weight-regular;
+  line-height: $cbp-height-28;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
+
+.cbp-heading-4 {
+  font-size: 1.424rem;
+  font-weight: $cbp-weight-medium;
+  line-height: $cbp-height-28;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
+
+.cbp-heading-5 {
+  font-size: 1.266rem;
+  font-weight: $cbp-weight-medium;
+  line-height: $cbp-height-24;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
+
+.cbp-heading-6 {
+  font-size: 1.125rem;
+  font-weight: $cbp-weight-bold;
+  line-height: $cbp-height-20;
+  letter-spacing: $cbp-font-spacing;
+  
+  &--dark {
+    @include dark;
+  }
+}
