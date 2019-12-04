@@ -16,6 +16,11 @@
 // #2 BULMA COLORS
 // (Note: These colors only pertain to Bulma, not tied to a specific component/element)
   // 2A - Background
+// #3 Brand TYPOGRAPHY
+    // 3A - Default Font Family
+    // 3B - Font Weights
+    // 3C - Font Spacing
+    // 3D - Font Heights 
 // *** End of Table of Contents ***
 // Customizations
 // (#1) -- COLOR PALETTES
@@ -63,3 +68,27 @@ $cbp-warning-text:                 #a44900;
   // (1F) -- LINKS
   // Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
 $link-hover:                      #001b44;
+// Typography
+/* CBP Default Font Family */
+$family-sans-serif: "Roboto", "Calibri", "Tahoma", sans-serif;
+/* CBP Font Weights 
+  One new variable declared, and the rest derivd from Bulma default font weights
+*/
+$cbp-weight-thin: 100;
+$cbp-weight-light: 300;
+$cbp-weight-regular: 400;
+$cbp-weight-medium: 500;
+$cbp-weight-bold: 700;
+/* CBP Font Spacing
+  Defines spacing between each font character
+*/
+$cbp-font-spacing: 0.12px;
+/* CBP Line Heights
+  Defined line heights for header text elements
+*/
+$cbp-height-20: 20px;
+$cbp-height-24: 24px;
+$cbp-height-28: 28px;
+$cbp-height-32: 32px;
+$cbp-height-40: 40px;
+$cbp-height-44: 44px;

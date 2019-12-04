@@ -1,1 +1,9 @@
-// no empty source file allowed fix
+/* CBP Bulma overides */
+$body-font-size: 14px;
+
+html {
+  color: $grey-darker;
+  font-size: $body-font-size;
+  letter-spacing: $cbp-font-spacing;
+  line-height: $cbp-height-20;
+}
