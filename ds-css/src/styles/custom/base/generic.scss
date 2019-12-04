@@ -1,4 +1,5 @@
 /* CBP Bulma overides */
+<<<<<<< HEAD
 $body-size: 14px;
 $body-font-size: 1em;
 
@@ -11,4 +12,13 @@ html {
 
 body {
   font-size: $body-font-size;
+=======
+$body-font-size: 14px;
+
+html {
+  color: $grey-darker;
+  font-size: $body-font-size;
+  letter-spacing: $cbp-font-spacing;
+  line-height: $cbp-height-20;
+>>>>>>> 29cef0e... Intial css updates based on Typography Recommendations
 }
