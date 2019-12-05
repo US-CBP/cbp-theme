@@ -71,6 +71,20 @@ $link-hover:                      #001b44;
 // Typography
 /* CBP Default Font Family */
 $family-sans-serif: "Roboto", "Calibri", "Tahoma", sans-serif;
+/* CBP Font Sizes
+
+*/
+$cbp-masthead-1: 2.566rem;
+$cbp-masthead-2: 2.281rem;
+$cbp-size-1: 2.027rem;
+$cbp-size-2: 1.802rem;
+$cbp-size-3: 1.602rem;
+$cbp-size-4: 1.424rem;
+$cbp-size-5: 1.266rem;
+$cbp-size-6: 1.125rem;
+$cbp-body-text: 1rem;
+$cbp-subhead-text: 0.889rem;
+
 /* CBP Font Weights 
   One new variable declared, and the rest derivd from Bulma default font weights
 */
