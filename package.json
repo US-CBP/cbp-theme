@@ -10,7 +10,11 @@
     "build-cbp-ds": "cd ds-css && npm run build",
     "init-cbp-ds-ux": "cd ds-ux-guidelines && npm install",
     "build-cbp-ds-ux": "cd ds-ux-guidelines && npm run build:guide",
-    "copy-ds-to-cbp-theme": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/ cbp-theme/kitchensink/design-system/"
+    "copy-ds-to-cbp-theme": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/ cbp-theme/kitchensink/design-system/",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "local:run": "serve ds-ux-guidelines --no-clipboard --listen 3000",
+    "tests:e2e": "start-server-and-test local:run http://localhost:3000 cypress:run"
   },
   "repository": {
     "type": "git",
@@ -26,5 +30,11 @@
   "bugs": {
     "url": "https://github.com/US-CBP/cbp-theme/issues"
   },
-  "homepage": "https://us-cbp.github.io/cbp-theme"
+  "homepage": "https://us-cbp.github.io/cbp-theme",
+  "devDependencies": {
+    "cypress": "^3.7.0",
+    "serve": "^11.2.0",
+    "start-server-and-test": "^1.10.6"
+  },
+  "dependencies": {}
 }
