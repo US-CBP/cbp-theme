@@ -5,26 +5,25 @@
       "extends": "stylelint-config-recommended",
 
   "rules": {
-
-       "scss/at-extend-no-missing-placeholder": true,
-       "scss/at-function-parentheses-space-before": "always",
-       "scss/at-if-no-null": true,
-       "scss/at-mixin-argumentless-call-parentheses": "always",
-       "scss/at-mixin-named-arguments": "always",
-       "scss/at-mixin-parentheses-space-before": "always",
-       "scss/dimension-no-non-numeric-values": true,
-       "scss/dollar-variable-colon-space-after": "at-least-one-space",
-       "scss/dollar-variable-no-missing-interpolation": true,
-       "scss/double-slash-comment-empty-line-before": "never",
-       "scss/double-slash-comment-whitespace-inside": "always",
-       "scss/function-quote-no-quoted-strings-inside": true,
-       "scss/function-unquote-no-unquoted-strings-inside": true,
-       "scss/map-keys-quotes": "always",
-       "scss/media-feature-value-dollar-variable": "always",
-       "scss/operator-no-newline-before": true,
-       "scss/operator-no-newline-after": true,
-       "scss/operator-no-unspaced": true,
-       "scss/selector-nest-combinators": "always",
+      "scss/at-rule-no-unknown": true,
+      "scss/at-extend-no-missing-placeholder": true,
+      "scss/at-function-parentheses-space-before": "always",
+      "scss/at-if-no-null": true,
+      "scss/at-mixin-named-arguments": "always",
+      "scss/at-mixin-parentheses-space-before": "always",
+      "scss/dimension-no-non-numeric-values": true,
+      "scss/dollar-variable-colon-space-after": "at-least-one-space",
+      "scss/dollar-variable-no-missing-interpolation": true,
+      "scss/double-slash-comment-empty-line-before": "never",
+      "scss/double-slash-comment-whitespace-inside": "always",
+      "scss/function-quote-no-quoted-strings-inside": true,
+      "scss/function-unquote-no-unquoted-strings-inside": true,
+      "scss/map-keys-quotes": "always",
+      "scss/media-feature-value-dollar-variable": "always",
+      "scss/operator-no-newline-before": true,
+      "scss/operator-no-newline-after": true,
+      "scss/operator-no-unspaced": true,
+      "scss/selector-nest-combinators": "always",
        
 
     "at-rule-empty-line-before": [ "always", {
@@ -32,6 +31,7 @@
       "ignore": ["after-comment", "first-nested", "blockless-after-blockless", "blockless-after-same-name-blockless"],
     } ],
 
+    "at-rule-no-unknown": null,
     "at-rule-name-space-after": "always",
     "at-rule-semicolon-newline-after": "always",
     "at-rule-semicolon-space-before": "never",
@@ -49,9 +49,6 @@
     ],
     "color-hex-length": "long",
     "color-no-invalid-hex": true,
-
-    "comment-empty-line-before": "never",
-    "comment-whitespace-inside": "always",
 
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
