@@ -9,6 +9,7 @@ script:
 - npm run build-cbp-theme
 - npm run build-cbp-ds
 - npm run build-cbp-ds-ux
+- npm run tests:e2e
 after_success:
 - bash publish.sh
 notifications:
