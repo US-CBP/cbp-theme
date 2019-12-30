@@ -36,5 +36,7 @@
     "serve": "^11.2.0",
     "start-server-and-test": "^1.10.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sass": "^1.24.0"
+  }
 }
