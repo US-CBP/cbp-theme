@@ -1,0 +1,123 @@
+CSS Naming System - for the 'CBP Design System'
+
+Primary Naming Methodology --> [Block]__[Element]--[Modifier]
+Secondary (Specialized) Naming Method --> Object Oriented CSS 
+
+Introduction:
+  We created a well defined CSS Naming System to meet our goal in providing an efficient and effective process for creating/sharing reusable components. 
+
+  By themselves, BEM and OOCSS are mainly naming methods that provide general outlines to be further defined by the end-user in fitting with their specific use cases.  So in saying this, we created a more defined set of rules for best applying our chosen CSS naming system.
+
+Base Rules that are universally applied for using either w/ BEM or OOCSS:
+
+1. Only 'Class' selectors are used
+2. Cannot use any 'ID' or DOM Element "Tag" selectors
+
+Additional Rules:
+
+1. CBP DS CSS Formatting
+
+"CBP prefix"-"Use Case prefix"-[Block]__[Element]--[Modifier]
+
+2. Always reference the [Block] in all classes
+ex's: 'cbp-table-simple'  (or) 'cbp-table-simple__header' 
+
+
+3. Not every [Block] requires a child [Element]
+ex: native <button>'s do not contain Child Elements
+
+4. Only use the "cbp" pref w/ the parent [Block] classes
+(We believe this will help with: code readability, code reduction, simplified debugging, component packaging, etc.. )
+
+5. Every [Element] must be pref'd w/ it's parent [Block]
+(This is essential in keeping with the BEM process)
+
+6. Provide the proper "Use Case" prefix on every [Block] & [Element]
+("Use Case" prefixes will allow for better code organization, while enhancing both debugging and readability)
+Current options for uses: (These can be added onto in the future)
+(t) - Theme
+(o) - Object
+(c) - Component
+(u) - Utility
+
+
+7. [Block] classes can be more verbose in naming to allow more flexibility in working w/ multiple similar DOM structures
+ex's: '.cbp-c-simple-table'
+      '.cbp-c-complex-table'
+      '.cbp-t-main-section-container'
+
+8. "Use Case" prefixes (discussed above) are only supposed to be used on the [Block] class names
+(This is to improve code readability, debugging and packaging)
+
+9. [Modifier] rule sets should be as inclusive/verbose/collective as possible.
+
+** Correct Usage:
+On [Element] use ex's: '.simple-table__body--theme-1'
+                       '.simple-table__body--desktop'
+                       '.simple-table__body--mobile'
+* Incorrect Usage:
+(Try not to write [Modifier] classes that only handle one specific task.)
+ex's: '.simple-table__body--border-dark'
+      '.simple-table__header--shadow'
+      '.simple-table__cell--inner-shadow'
+
+10. If the [Block] has several child [Element]s, do not try to represent each level in the same class name.
+( Don't include more than one child [Element] in a class name)
+
+** Correct Usage:  '.simple-table__row'
+                  '.simple-table__cell'
+
+* Incorrect Usage:  '.simple-table__row__cell'
+                    '.simple-table__body__row'
+
+11.  Modify entire [Block]'s (components) is more useful in most cases.
+(* When possible, try to use [Modifier]s on the [Block] directly)
+
+- As last resort should we attach [Modifier] to the child [Element]same
+ex: [Block]+[Modifier]
+
+    ex:  "class='cbp-c-simple-table simple-table--desktop'"
+
+
+*** OOCSS will be used in some case ***
+
+12. 'State Hooks' applied to [Block]s or [Element]s will remain generic to allow for full flexibility for any JS dev.
+(Meaning, we do not want to attach classes for state changes to every single component and their child elements, because the amount of 
+code needed to translate that into usage via JS accross multiple elements would become quite cumbersome and complicated)
+
+** Correct Usage: '.is-active' 
+                  '.is-disabled'  , etc...
+
+* Incorrect Usage: '.simple-table__link--is-active'
+                   '.simple-table__link--is-disabled'
+
+                   12.  CSS Usage Best Practices
+                   for [Block] & [Element]s
+                   - try to write code that applies Univeral Rows
+                   for [Modifier]s
+                   - try to write code for specific uses & group as much into each one as possible.
+
+--------//---------------//----------------//----------------//---------------
+
+Full Example of our custom naming system being used on a simple table:
+
+<table class="cbp-c-simple-table simple-table--desktop">
+    <caption class="c-simple-table__caption"></caption>
+    <thead class="c-simple-table__header">
+    <tr>
+     <th scope="col" class="c-simple-table__th">Last Name</th>
+     <th scope="col" class="c-simple-table__th">First Name</th>
+     <th scope="col" class="c-simple-table__th">City Name</th>
+ </tr></thead>
+    <tbody class="c-simple-table__body">
+     <tr class="c-simple-table__tr">
+      <td class="c-simple-table__td">Thorton</td>
+      <td class="c-simple-table__td">Bill Bob</td>
+      <td class="c-simple-table__td">Phoenix</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+

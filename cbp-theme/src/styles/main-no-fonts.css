@@ -1,0 +1,54 @@
+/*
+Error: File to import not found or unreadable: material-design-lite/src/resets/_resets.
+       Load path: /Users/minjungbin/Desktop/design-system/cbp-theme/cbp-theme/src/styles
+        on line 3 of /Users/minjungbin/Desktop/design-system/cbp-theme/cbp-theme/src/styles/main-no-fonts.scss
+
+1: 
+2: 
+3: @import "material-design-lite/src/resets/_resets";
+4: 
+5: @import "custom/variables"; // Bootstrap and our variables!!!
+6: @import "vendor/bootstrap"; // apply variables to bootstrap!
+7: @import "vendor/material";
+8: 
+
+Backtrace:
+/Users/minjungbin/Desktop/design-system/cbp-theme/cbp-theme/src/styles/main-no-fonts.scss:3
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:44:in `import'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:37:in `css_import?'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `load'
+/private/var/folders/v8/15rxlgqs33l48r669bjj39bw0000gn/T/AppTranslocation/5B49F090-8BED-4F32-939B-AFFA91F10879/d/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: material-design-lite/src/resets/_resets.\A        Load path: /Users/minjungbin/Desktop/design-system/cbp-theme/cbp-theme/src/styles\A         on line 3 of /Users/minjungbin/Desktop/design-system/cbp-theme/cbp-theme/src/styles/main-no-fonts.scss\A \A 1: \A 2: \A 3: @import \"material-design-lite/src/resets/_resets\";\A 4: \A 5: @import \"custom/variables\"; // Bootstrap and our variables!!!\A 6: @import \"vendor/bootstrap\"; // apply variables to bootstrap!\A 7: @import \"vendor/material\";\A 8: "; }

@@ -1,0 +1,183 @@
+/* CBP Primary Color Palette */
+/* CBP Subtle Color Palette */
+/* Menu Animation Speed */
+body {
+  font-family: "Roboto", "Calibri", "Tahoma", "Arial", sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+.cbp-skipnav {
+  background: #ffffff;
+  left: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: -3.8rem;
+  z-index: 100;
+}
+.cbp-skipnav:focus {
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.cbp-ds-grid {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  height: 100vh;
+}
+
+/* CBP DS SIDE NAV START */
+.cbp-side-nav {
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: 0.5s;
+  width: 280px;
+  z-index: 50;
+  /* .cbp-side-nav--hide */
+  /* .cbp-side-nav__cbp-logo */
+  /* .cbp-side-nav__menu */
+}
+.cbp-side-nav--hide {
+  transition: 0.5s;
+  left: -280px;
+}
+.cbp-side-nav__cbp-logo {
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  font-size: 1.538em;
+  height: 52px;
+  padding: 0.5em;
+  width: inherit;
+}
+.cbp-side-nav__cbp-logo:hover {
+  color: #ffffff;
+}
+.cbp-side-nav__menu {
+  height: calc(100% - 50px);
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-bottom: 2em;
+  /* .cbp-side-nav__menu__item */
+  /* .cbp-side-nav__item--category */
+  /* .cbp-side-nav__item--sub */
+}
+.cbp-side-nav__menu__item {
+  display: block;
+  font-size: 1rem;
+  font-weight: 200;
+  /* .cbp-side-nav__menu__item--active */
+}
+.cbp-side-nav__menu__item--active {
+  background: #005a93;
+  color: #ffffff;
+}
+.cbp-side-nav__menu__item--active ~ a:hover {
+  color: inherit;
+  background: #ecf1f4;
+}
+.cbp-side-nav__menu__item a {
+  box-sizing: border-box;
+  color: inherit;
+  display: block;
+  padding: 0.5em 0.5em 0.5em 1.5em;
+}
+.cbp-side-nav__menu__item a:hover {
+  background: #00416a;
+  color: #ffffff;
+}
+.cbp-side-nav__menu__item--category {
+  font-size: 1.385em;
+  font-weight: 600;
+  padding: 0.5em;
+}
+.cbp-side-nav__menu__item--sub a {
+  padding-left: 2rem;
+}
+
+/* CBP DS SIDE NAV END */
+/* CBP MAIN SECTION START */
+.cbp-ds-grid {
+  transition: 0.5s;
+}
+.cbp-ds-grid--margin-left {
+  margin-left: 280px;
+}
+
+/* CBP MAIN SECTION END */
+/* CBP HEADER START */
+.cbp-header {
+  background: #00416a;
+  box-sizing: border-box;
+  height: 52PX;
+  /* cbp-header__top-nav */
+}
+.cbp-header__top-nav {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  width: 100%;
+  /* cbp-header__top-nav__nav-items */
+}
+.cbp-header__top-nav div:last-child {
+  margin-left: auto;
+  margin-right: 1em;
+}
+.cbp-header__top-nav__hamburger a {
+  padding: 8px 2px;
+}
+.cbp-header__top-nav__nav-items {
+  padding: 17px 0 17px 5px;
+}
+.cbp-header__top-nav__nav-items .fab {
+  padding: 0;
+}
+.cbp-header__top-nav .navbar-brand {
+  font-size: 1.538em;
+}
+.cbp-header__top-nav i {
+  cursor: pointer;
+  padding: 0.75em;
+}
+.cbp-header__top-nav .navbar-menu {
+  height: inherit;
+}
+.cbp-header a {
+  color: #ffffff;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+.cbp-header span {
+  font-weight: 300;
+}
+
+.cbp-ds-main__header {
+  font-size: 1.846em;
+  margin: 1.385em 0 0.692em;
+}
+.cbp-ds-main__body-txt {
+  font-size: 1.231em;
+}
+.cbp-ds-main__sub-header {
+  color: #00416a;
+  font-size: 1.538rem;
+}
+
+.cbp-block {
+  background: #ffffff;
+  box-sizing: border-box;
+  margin: 40px;
+  padding: 40px;
+}
+
+.container {
+  background: olive;
+  min-height: 300px;
+}
+
+/*# sourceMappingURL=styles.css.map */
