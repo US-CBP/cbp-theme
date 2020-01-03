@@ -206,6 +206,16 @@
   height: 360px;
 }
 
+.tables-usage--box {
+  height: 200px;
+}
+
+@media screen and (max-width: 1090px){
+  .tables-usage--box{
+    height: 300px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* Temp Button class */
   .sub-menu-btn {
