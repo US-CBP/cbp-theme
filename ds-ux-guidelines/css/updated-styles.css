@@ -78,6 +78,7 @@
   padding-left: 2rem;
   opacity: 0.8;
   font-size: 13px;
+
 }
 
 .cbp-header {
@@ -279,19 +280,5 @@
     height: auto;
   }
 }
-
-/* Override Bulma specification for menu, will add to design system later */
-.menu {
-  overflow-y: hidden;
-  padding: 1rem; 
-  background-color: rgba(245, 245, 245, 0.4); 
-  font-size: 1rem;
-}
-
-.menu-label {
-  font-size: 1rem;
-}
-
-
 
 /*# sourceMappingURL=updated-styles.css.map */

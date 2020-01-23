@@ -2,14 +2,9 @@ language: node_js
 node_js:
 - '8'
 before_script:
-- npm run init-cbp-theme
-- npm run init-cbp-ds 
-- npm run init-cbp-ds-ux
+- npm install
 script:
-- npm run build-cbp-theme
-- npm run build-cbp-ds
-- npm run build-cbp-ds-ux
-- npm run tests:e2e
+- npm run build
 after_success:
 - bash publish.sh
 notifications:
