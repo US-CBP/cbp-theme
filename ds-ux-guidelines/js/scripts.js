@@ -48,12 +48,12 @@ const hideBtn = document.querySelector('.hide-btn');
  });
 }
  /* Hamburger menu open/close code START */
-
- var dropdown = document.querySelector('.dropdown');
-dropdown.addEventListener('click', function(event) {
-  event.stopPropagation();
-  dropdown.classList.toggle('is-active');
-});
+// this is causing the cypress check to fail in index.js 
+//  var dropdown = document.querySelector('.dropdown');
+// dropdown.addEventListener('click', function(event) {
+//   event.stopPropagation();
+//   dropdown.classList.toggle('is-active');
+// });
 
 //Tab functionality on the component pages.
 //Currently have Code and Design Guidelines
