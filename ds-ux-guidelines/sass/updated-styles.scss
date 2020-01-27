@@ -1,206 +1,271 @@
-/* CBP Primary Color Palette */
+/* Notes for styling and styling and naming conventnions. Search
+  below comments.
+  
+  1. Review class name
+*/
 
-$ds-primary: #00416a;
-/* CBP Subtle Color Palette */
-$ds-primary-bg: #ecf1f4;
-/* Menu Animation Speed */
-$menuSpeed: 0.5s; // Menu open and close speed.
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap");
+@import "../../ds-css/src/styles/custom/utilities/initial-variables";
 
-body {
-  font-family: "Roboto", "Calibri", "Tahoma", "Arial", sans-serif;
-  font-size: 13px;
+.cbp-content {
   margin: 0;
+  height: 100%;
+  min-height: 100%;
 }
+/* Temp Button class */
+.sub-menu-btn {
+  display: none;
+}
+/* Temp Button class */
 
-.cbp-skipnav {
-  background: #ffffff;
-  left: 0;
-  padding: 0.5rem 1rem;
-  position: absolute;
-  top: -3.8rem;
-  z-index: 100;
-
-  &:focus {
-    top: 0;
-    transition: all 0.2s ease-in-out;
-  }
+.no-scroll {
+  overflow-y: hidden;
 }
 
 .cbp-ds-grid {
   display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-columns: 1fr;
-  grid-gap: 1em;
-  height: 100vh;
+  grid-template-rows: auto calc(100vh - 55px);
+  /* height limitation on second row */
+  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-areas:
+    "header header"
+    "side-nav content";
 }
-/* CBP DS SIDE NAV START */
+/**
+ * Old Custom Sidebar Menu-- Currently using Bulma
+*/
+// .cbp-sidenav {
+//   background: #f5f5f5;
+//   grid-area: side-nav;
+//   overflow-y: auto;
+//   &__item {
+//     display: block;
+//     font-size: 1rem;
+//     font-weight: 200;
+//     a {
+//       box-sizing: border-box;
+//       color: inherit;
+//       display: block;
+//       padding: .5em .5em .5em 1.5em;
+//       &:hover {
+//         background: #f6f6f6;
+//         color: #fff;  
+//       }
+//     }
+//     &--category {
+//       font-size: 1.385em;
+//       font-weight: 600;
+//       padding: .5em;  
+//     }
+//     &--active { 
+//       background: lighten(#00416a, 8%);
+//       color: #fff;
+//     }
+//     &--sub {      
+//       a {
+//         padding-left: 2rem;
+//       }
+//     }
+//   }
+// }
 
-.cbp-side-nav {
-  height: 100vh;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  transition: $menuSpeed;
-  width: 280px;
-  z-index: 50;
-  /* .cbp-side-nav--hide */
-  &--hide {
-    transition: $menuSpeed;
-    left: -280px;
-  }
-  /* .cbp-side-nav__cbp-logo */
-  &__cbp-logo {
-    box-sizing: border-box;
-    color: #ffffff;
-    display: block;
-    font-size: 1.538em;
-    height: 52px;
-    padding: 0.5em;
-    width: inherit;
-
-    &:hover {
-      color: #ffffff;
-    }
-  }
-  /* .cbp-side-nav__menu */
-  &__menu {
-    height: calc(100% - 50px);
-    overflow: scroll;
-    overflow-x: hidden;
-    padding-bottom: 2em;
-    /* .cbp-side-nav__menu__item */
-    &__item {
-      display: block;
-      font-size: 1rem;
-      font-weight: 200;
-      /* .cbp-side-nav__menu__item--active */
-      &--active {
-        background: lighten(#00416a, 8%);
-        color: #ffffff;
-
-        ~ a:hover {
-          color: inherit;
-          background: $ds-primary-bg;
-        }
-      }
-
-      a {
-        box-sizing: border-box;
-        color: inherit;
-        display: block;
-        padding: 0.5em 0.5em 0.5em 1.5em;
-
-        &:hover {
-          background: $ds-primary;
-          color: #ffffff;
-        }
-      }
-    }
-    /* .cbp-side-nav__item--category */
-    &__item--category {
-      font-size: 1.385em;
-      font-weight: 600;
-      padding: 0.5em;
-    }
-    /* .cbp-side-nav__item--sub */
-    &__item--sub {
-
-      a {
-        padding-left: 2rem;
-      }
-
-    }
-
-  }
-}
-/* CBP DS SIDE NAV END */
-/* CBP MAIN SECTION START */
-
-.cbp-ds-grid {
-  transition: $menuSpeed;
-
-  &--margin-left {
-    margin-left: 280px;
-  }
-}
-/* CBP MAIN SECTION END */
-/* CBP HEADER START */
 .cbp-header {
-  background: $ds-primary;
-  box-sizing: border-box;
-  height: 52PX;
-  /* cbp-header__top-nav */
-  &__top-nav {
-    display: flex;
-    height: inherit;
-    justify-content: space-between;
-    width: 100%;
-
-    & div:last-child {
-      margin-left: auto;
-      margin-right: 1em;
-    }
-
-    &__hamburger {
-      a {
-        padding: 8px 2px;
-      }
-    }
-    /* cbp-header__top-nav__nav-items */
-    &__nav-items {
-      padding: 17px 0 17px 5px;
-
-      .fab { padding: 0; }
-    }
-
-    .navbar-brand { font-size: 1.538em; }
-
-    i {
-      cursor: pointer;
-      padding: 0.75em;
-    }
-
-    .navbar-menu { height: inherit; }
-  }
+  color: $cbp-default;
+  box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
+  grid-area: header;
+  z-index: 100;
 
   a {
-    color: #ffffff;
-    display: block;
-    height: 100%;
-    text-decoration: none;
+    color: $cbp-default;
   }
 
+  .tabs a {
+    color: $cbp-primary;
+  }
+
+  &__skipnav {
+    background: $cbp-default;
+    color: $cbp-primary !important;
+
+    left: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: -3.8rem;
+    z-index: 100;
+
+    &:focus {
+      top: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__main,
+  &__sub {
+    height: 50px;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    padding: 0 1em;
+  }
+
+  &__main {
+    background: $universal-header;
+    transition: height 0.2s;
+    &--hidden {
+      height: 0;
+    }
+
+    .level-right {
+      .level-item:first-child {
+        display: none;
+      }
+    }
+
+    .level-item {
+      padding: 0 1em;
+    }
+  }
+
+  &__sub {
+
+    background: $grey-lightest;
+    color: $grey-base;
+
+    a {
+      color: $cbp-primary;
+    }
+
+    .level-item {
+      padding: 18px;
+    }
+
+    .cbp-app-mobile {
+      display: none;
+    }
+  }
+}
+
+.cbp-logo {
+  color: $cbp-default;
+
+  &:hover {
+    color: $cbp-default;
+  }
   span {
     font-weight: 300;
   }
-
 }
 
-.cbp-ds-main {
+.cbp-content {
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
 
   &__header {
-    font-size: 1.846em;
-    margin: 1.385em 0 0.692em;
+    background: $cbp-default;
+
+    flex: 1;
   }
 
-  &__body-txt {
-    font-size: 1.231em;
+  article {
+    flex: 8;
+    overflow-y: scroll;
+    padding: 2em 2em 0 2em;
+    /* height set on child; triggers scroll */
   }
-
-  &__sub-header {
-    color: $ds-primary;
-    font-size: 1.538rem;
+  /* Review class name (Might want to update, move or remove this class name.) 
+    Added as a block holder for any code snippets.
+  */
+  .cbp-code {
+    iframe {
+      height: 360px;
+    }
   }
 }
 
-.cbp-block {
-  background: #ffffff;
-  box-sizing: border-box;
-  margin: 40px;
-  padding: 40px;
+.tables-usage--box {
+  height: 200px;
+  @media screen and (max-width: 1090px) {
+    height: 300px;
+  }
 }
 
-.container {
-  background: olive;
-  min-height: 300px;
+@media screen and (max-width: 768px) {
+  /* Temp Button class */
+  .sub-menu-btn {
+    display: block;
+  }
+  /* Temp Button class */
+  /* Overwrites some Bulma breakpoint styles for the header.  */
+  .cbp-header__main {
+    &.level,
+    .level-left {
+      display: flex;
+
+    }
+
+    .cbp-mobile-menu {
+      cursor: pointer;
+    }
+
+    .level-left {
+      .level-item:not(:first-child) {
+        display: none;
+      }
+    }
+
+    .level-item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 0.75rem;
+    }
+
+    .level-right {
+
+      display: flex;
+      margin-top: 0;
+
+      .level-item:first-child {
+        display: flex;
+      }
+
+      .level-item:not(:first-child) {
+        display: none;
+      }
+    }
+
+  }
+
+  .cbp-header__sub {
+    overflow-y: hidden;
+    transition: height 0.5;
+
+    .cbp-tabs-mobile {
+      width: 100%;
+      * {
+        width: 100%;
+      }
+
+      ul {
+        flex-direction: column;
+      }
+
+    }
+
+    .cbp-app-mobile {
+      display: block;
+    }
+
+    &--open {
+      height: auto;
+    }
+  }
 }
+
+.tab--active {
+  font-weight: $cbp-weight-bold;
+  color: $cbp-info;
+}
+
+
