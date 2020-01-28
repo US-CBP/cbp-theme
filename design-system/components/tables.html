@@ -27,14 +27,15 @@
               &nbsp;
               <span>Style Guide</span>
             </a>
-            <a href="#" class="is-size-7">&nbsp; Changelog</a>
           </div>
         </div>
 
         <div class="level-right">
+          <a href="#" class="is-size-7">&nbsp; Changelog</a>
+          &nbsp; &nbsp; &nbsp;
           <a href="#" class="is-size-7">
             <i class="fab fa-github"></i>
-            &nbsp; View on Github
+            View on Github
           </a>
         </div>
       </nav>
@@ -48,143 +49,102 @@
       </nav> -->
     </header>
 
-    <aside class="cbp-sidenav">
-      <ul class="cbp-sidenav__items">
-        <li class="cbp-sidenav__item cbp-sidenav__item--category">
-          Foundation
-        </li>
-        <li class="cbp-sidenav__item cbp-sidenav__item--active">
+    <aside class="menu">
+
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu" style="width: 100%">
+            <span>Version 2.0</span>
+            &nbsp; <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">1.0</a>
+            <a href="#" class="dropdown-item">0.5</a>
+          </div>
+        </div>
+      </div>
+
+
+      <p class="menu-label">Foundation</p>
+      <ul class="menu-list">
+        <li>
           <a href="#">Colors</a>
-          <ul>
-            <li class="cbp-sidenav__item--sub">
+          <ul style="border-left: solid 1px #aaaaaa98">
+            <li>
               <a href="#">Color Palette</a>
             </li>
-            <li class="cbp-sidenav__item--sub">
+            <li>
               <a href="#">Section 508 Color Combinations</a>
             </li>
-            <li class="cbp-sidenav__item--sub">
+            <li>
               <a href="#">Data Visualization Palette</a>
             </li>
           </ul>
         </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Grid</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Icons</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Layouts</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Typography</a>
-        </li>
-        <li class="cbp-sidenav__item cbp-sidenav__item--category">
-          Components
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Accordian</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Breadcrumbs</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Buttons</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Cards</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Form Controls</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Forms</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Labels and Badges</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Menus</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Modals</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Notifications</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Pagination</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Popovers</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Progress and Loading</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Security Banner</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Tables</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Tabs</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Tags</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Tooltips</a>
-        </li>
-        <li class="cbp-sidenav__item cbp-sidenav__item--category">
-          Patterns
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Headers</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Data Formats</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Data Visualization</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">File Upload</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Filters</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Help</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Search</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Tours</a>
-        </li>
-        <li class="cbp-sidenav__item">
-          <a href="#">Wizards</a>
-        </li>
+
+        <li><a href="#">Grid</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Typography</a></li>
+      </ul>
+      <br />
+
+      <p class="menu-label">Components</p>
+      <ul class="menu-list">
+        <li><a href="#">Accordian</a></li>
+        <li><a href="#">Breadcrumbs</a></li>
+        <li><a href="buttons.html">Buttons</a></li>
+        <li><a href="#">Cards</a></li>
+        <li><a href="#">Form Controls</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Labels & Badges</a></li>
+        <li><a href="#">Menus</a></li>
+        <li><a href="#">Modals</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Pagination</a></li>
+        <li><a href="#">Popovers</a></li>
+        <li><a href="#">Progress & Loading</a></li>
+        <li><a href="#">Security Banner</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="#">Tabs</a></li>
+        <li><a href="#">Tags</a></li>
+        <li><a href="#">Tooltips</a></li>
+
+        <br />
+
+        <p class="menu-label">Patterns</p>
+        <ul class="menu-list">
+          <li><a href="#">Headers</a></li>
+          <li><a href="#">Data Formats</a></li>
+          <li><a href="#">Data Visualization</a></li>
+          <li><a href="#">File Upload</a></li>
+          <li><a href="#">Filters</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">Wizards</a></li>
+        </ul>
       </ul>
 
-      <!--     <div class="sd-nav">
-        Side nav
-      </div> -->
     </aside>
 
     <section class="cbp-content">
       <div class="cbp-content__header">
-        <h1 class="cbp-heading-1 temp-spacing">Tables</h1>
+        <h1 class="cbp-heading-1" style="padding: 1.5rem">Tables</h1>
 
-        <div class="tabs temp-spacing">
+        <div class="tabs is-boxed" style="padding: 10px">
           <ul>
-            <li><a href="#usage">Design Guidelines</a></li>
-            <li><a href="#ds-code">Code</a></li>
+            <li id="code"><a onclick="moveTab('code')" href="#ds-code"><i class="fas fa-code"
+                  style="font-size: 70%">&nbsp;</i> Code</a></li>
+            <li id="design"><a onclick="moveTab('design')" href="#usage"><i class="fas fa-paint-brush"
+                  style="font-size: 70%">&nbsp;</i>Design Guidelines</a></li>
           </ul>
         </div>
-
       </div>
+
+      <br />
 
       <article>
         <div id="description" class="container">
@@ -403,10 +363,6 @@
             </p>
             <br />
           </section>
-
-
-
-
 
       </article>
     </section>

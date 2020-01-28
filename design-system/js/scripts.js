@@ -2,6 +2,7 @@
  const navBar = document.querySelector('.cbp-side-nav');
  const mainGrid = document.querySelector('.cbp-ds-grid');
 
+ var tabType;
  /* App mainmenu open/close START */
 const mainHeader = document.querySelector('.cbp-header__main'); 
 const hideBtn = document.querySelector('.hide-btn');
@@ -47,3 +48,31 @@ const hideBtn = document.querySelector('.hide-btn');
  });
 }
  /* Hamburger menu open/close code START */
+//code below is causing cypress error on index.js
+//  var dropdown = document.querySelector('.dropdown');
+// dropdown.addEventListener('click', function(event) {
+//   event.stopPropagation();
+//   dropdown.classList.toggle('is-active');
+// });
+
+//Tab functionality on the component pages.
+//Currently have Code and Design Guidelines
+//@TODO: Swap if-else into switch statement if additional sections are added
+function moveTab(type){
+  let currentTab;
+  document.getElementById('code').classList.remove('is-active', 'tab--active');
+  document.getElementById('design').classList.remove('is-active', 'tab--active');
+
+  if(type === 'code'){
+    currentTab = document.getElementById('code');
+    currentTab.classList.add('is-active', 'tab--active');
+    tabType = 'code';
+  }
+  else{
+    currentTab = document.getElementById('design');
+    currentTab.classList.add('is-active', 'tab--active')
+    tabType = 'design';
+  }
+
+  return;
+}
