@@ -1,20 +1,25 @@
 {
-  "name": "cbp-design-system",
-  "version": "0.1.0",
+  "name": "cbp-ds",
+  "version": "2.0.0",
   "description": "CBP Design System",
   "main": "index.js",
   "scripts": {
-    "init-cbp-theme": "cd cbp-theme && npm install",
-    "build-cbp-theme": "cd cbp-theme && npm run build",
-    "init-cbp-ds": "cd ds-css && npm install",
-    "build-cbp-ds": "cd ds-css && npm run build",
-    "init-cbp-ds-ux": "cd ds-ux-guidelines && npm install",
-    "build-cbp-ds-ux": "cd ds-ux-guidelines && npm run build:guide",
-    "copy-ds-to-cbp-theme": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/ cbp-theme/kitchensink/design-system/",
+    "clean": "rm -rf dist",
+    "theme:init": "cd cbp-theme && npm install",
+    "theme:build": "cd cbp-theme && npm run build",
+    "css:init": "cd ds-css && npm install",
+    "css:build": "cd ds-css && npm run build",
+    "css:dist": "cp -rf ds-css/dist/css dist && cp README.MD dist && cp ds-css/package.json dist && replace '@VERSION' $npm_package_version ./dist/package.json",
+    "website:init": "cd ds-ux-guidelines && npm install",
+    "website:build": "cd ds-ux-guidelines && npm run build:guide",
+    "website:prepare": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/ cbp-theme/kitchensink/design-system/",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "local:run": "serve ds-ux-guidelines --no-clipboard --listen 3000",
-    "tests:e2e": "start-server-and-test local:run http://localhost:3000 cypress:run"
+    "tests:e2e": "start-server-and-test local:run http://localhost:3000 cypress:run",
+    "preversion": "npm run clean",
+    "version": "npm run css:init && npm run css:build && npm run css:dist",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -33,6 +38,7 @@
   "homepage": "https://us-cbp.github.io/cbp-theme",
   "devDependencies": {
     "cypress": "^3.7.0",
+    "replace": "^1.1.5",
     "serve": "^11.2.0",
     "start-server-and-test": "^1.10.6"
   },

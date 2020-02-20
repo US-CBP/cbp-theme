@@ -16,7 +16,7 @@ cp -rf cbp-theme/dist cbp-theme/kitchensink/
 # Copy DS CSS and Style Guide
 mkdir cbp-theme/kitchensink/design-system
 mkdir -p cbp-theme/kitchensink/ds-css/dist
-npm run copy-ds-to-cbp-theme
+npm run website:prepare
 
 cd cbp-theme/kitchensink
 
