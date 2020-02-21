@@ -1,6 +1,6 @@
 {
   "name": "cbp-ds",
-  "version": "0",
+  "version": "0.0.0",
   "description": "This is the CSS offering built upon the CBP UX Guidelines.  The CSS can be used with any web user interface or framework.",
   "main": "webpack.config.js",
   "author": "Creative Services",
