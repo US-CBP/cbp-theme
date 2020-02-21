@@ -9,7 +9,7 @@
     "theme:build": "cd cbp-theme && npm run build",
     "css:init": "cd ds-css && npm install",
     "css:build": "cd ds-css && npm run build",
-    "css:dist": "cp -rf ds-css/dist/css dist && cp README.MD dist && cp ds-css/package.json dist && replace '@VERSION' $npm_package_version ./dist/package.json",
+    "css:dist": "cp -rf ds-css/dist/css dist && cp README.MD dist && cp ds-css/package.json dist && replace-json-property ./dist/package.json version $npm_package_version",
     "website:init": "cd ds-ux-guidelines && npm install",
     "website:build": "cd ds-ux-guidelines && npm run build:guide",
     "website:prepare": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/ cbp-theme/kitchensink/design-system/",
@@ -38,7 +38,7 @@
   "homepage": "https://us-cbp.github.io/cbp-theme",
   "devDependencies": {
     "cypress": "^3.7.0",
-    "replace": "^1.1.5",
+    "replace-json-property": "^1.4.3",
     "serve": "^11.2.0",
     "start-server-and-test": "^1.10.6"
   },
