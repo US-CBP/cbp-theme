@@ -1,8 +1,9 @@
 module.exports = {
+  pathPrefix: `/cbp-theme/design-system`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `CBP Design System`,
+    description: `CBP Design System.`,
+    author: `Creative Services`,
   },
   plugins: [
     `gatsby-plugin-sass`,

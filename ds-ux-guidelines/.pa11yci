@@ -6,21 +6,6 @@
 	},
 		
 	"urls": [
-		
-		{
-		"url": "../ds-ux-guidelines/index.html",
-		  "actions": [
-			  "click element .cbp-header__top-nav__hamburger"
-		  ]
-		},
-		{
-		"url": "../ds-ux-guidelines/foundation/icons.html",
-		  "actions": [
-			  "click element .cbp-header__top-nav__hamburger"
-		  ]
-		},
-		
-		"../ds-ux-guidelines/components/buttons.html"
-
+		"../ds-ux-guidelines/public/index.html"
 	]  
 }

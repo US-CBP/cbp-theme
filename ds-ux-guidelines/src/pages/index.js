@@ -2,7 +2,7 @@ import React from "react"
 /* import { Link } from "gatsby" */
 
 import Layout from "../ds-components/layout/layout"
-import ContentHeader from "../ds-components/content-header/contenHeader"
+import ContentHeader from "../ds-components/content-header/contentHeader"
 /* import Image from "../ds-components/image" */
 import SEO from "../ds-components/seo"
 
