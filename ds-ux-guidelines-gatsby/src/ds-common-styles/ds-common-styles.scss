@@ -1,0 +1,26 @@
+/* 
+  Common styles shared across Design System site.
+*/
+
+/* Color variables */
+$cbp-default: #ffffff;
+$cbp-primary: #00416a;
+$universal-header: #003e65;
+$grey-base: #000000;
+$grey-lightest: #f6f6f6;
+
+/* iFrame style for height. Need to revisit this. */
+iFrame {
+  height: 358px !important;
+}
+/* iFrame style for height. Need to revisit this. */
+
+/* Temporary class until grid sizing, padding guidance is completed */
+.one-half-pad-temp {
+  padding: 1.5rem;
+}
+
+.li-margin {
+  margin-left: 1em;
+}
+/* Temporary class until grid sizing, padding guidance is completed */

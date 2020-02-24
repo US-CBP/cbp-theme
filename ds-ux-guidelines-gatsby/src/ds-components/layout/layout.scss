@@ -1,0 +1,52 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
+@import url('https://us-cbp.github.io/cbp-theme/design-system/css/cbp-ds.min.css');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap");
+//@import url('https://us-cbp.github.io/cbp-theme/design-system/css/updated-styles.css');
+@import '../../ds-common-styles/ds-common-styles.scss';
+/*
+  !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!! 
+  Import all scss files under the Imports comment below.  
+*/
+
+/* 
+
+ 1. CSS Grid layout created using .cbp-ds-grid class.
+ 2. .no-scroll class added to <html> tag to prevent double scroll bars.
+ 3. .cbp-content class styles main content page information.  
+
+*/
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.cbp-ds-grid {
+  display: grid;
+  grid-template-rows: auto calc(100vh - 55px);
+  /* height limitation on second row */
+  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-areas:
+    "header header"
+    "side-nav content";
+}
+
+.cbp-content {
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+
+  article {
+    flex: 8;
+    overflow-y: scroll;
+    padding: 2em 2em 0 2em;
+    /* height set on child; triggers scroll */
+  }
+
+}
+
+/* SCSS IMPORTS */
+@import '../header/header';
+@import '../content-header/contenHeader';

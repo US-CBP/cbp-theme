@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="no-scroll">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Style Guide - CBP Style Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/cbp-ds.min.css" />
+  <link rel="stylesheet" href="../css/updated-styles.css" />
+</head>
+
+<body>
+  <div class="cbp-ds-grid">
+    <!-- 
+      CBP header element for branding and navigation. Also may contain sub navigation.
+    -->
+    <header class="cbp-header">
+      <a class="cbp-header__skipnav" href="#main-content">Skip to main content</a>
+      <nav class="cbp-header__main level">
+        <div class="level-left">
+          <div class="level-item">
+            <!-- CBP Logo  -->
+            <a href="/" class="cbp-logo">
+              <strong>CBP</strong>
+              &nbsp;
+              <span>Style Guide</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="level-right">
+          <a href="#" class="is-size-7">&nbsp; Changelog</a>
+          &nbsp; &nbsp; &nbsp;
+          <a href="#" class="is-size-7">
+            <i class="fab fa-github"></i>
+            View on Github
+          </a>
+        </div>
+      </nav>
+      <!-- <nav class="cbp-header__sub level">
+        <div class="level-left">
+          <div class="level-item">Sub Header</div>
+        </div>
+        <div class="level-right">
+          <div class="level-item"></div>
+        </div>
+      </nav> -->
+    </header>
+
+    <aside class="menu">
+
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu" style="width: 100%">
+            <span>Version 2.0</span>
+            &nbsp; <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">1.0</a>
+            <a href="#" class="dropdown-item">0.5</a>
+          </div>
+        </div>
+      </div>
+
+
+      <p class="menu-label">Foundation</p>
+      <ul class="menu-list">
+        <li>
+          <a href="#">Colors</a>
+          <ul style="border-left: solid 1px #aaaaaa98">
+            <li>
+              <a href="#">Color Palette</a>
+            </li>
+            <li>
+              <a href="#">Section 508 Color Combinations</a>
+            </li>
+            <li>
+              <a href="#">Data Visualization Palette</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="#">Grid</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Typography</a></li>
+      </ul>
+      <br />
+
+      <p class="menu-label">Components</p>
+      <ul class="menu-list">
+        <li><a href="#">Accordian</a></li>
+        <li><a href="#">Breadcrumbs</a></li>
+        <li><a href="buttons.html">Buttons</a></li>
+        <li><a href="#">Cards</a></li>
+        <li><a href="#">Form Controls</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Labels & Badges</a></li>
+        <li><a href="#">Menus</a></li>
+        <li><a href="#">Modals</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Pagination</a></li>
+        <li><a href="#">Popovers</a></li>
+        <li><a href="#">Progress & Loading</a></li>
+        <li><a href="#">Security Banner</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="#">Tabs</a></li>
+        <li><a href="#">Tags</a></li>
+        <li><a href="#">Tooltips</a></li>
+
+        <br />
+
+        <p class="menu-label">Patterns</p>
+        <ul class="menu-list">
+          <li><a href="#">Headers</a></li>
+          <li><a href="#">Data Formats</a></li>
+          <li><a href="#">Data Visualization</a></li>
+          <li><a href="#">File Upload</a></li>
+          <li><a href="#">Filters</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">Wizards</a></li>
+        </ul>
+      </ul>
+
+    </aside>
+
+    <section class="cbp-content">
+      <div class="cbp-content__header">
+        <h1 class="cbp-heading-1" style="padding: 1.5rem">Tables</h1>
+
+        <div class="tabs is-boxed" style="padding: 10px">
+          <ul>
+            <li id="code"><a onclick="moveTab('code')" href="#ds-code"><i class="fas fa-code"
+                  style="font-size: 70%">&nbsp;</i> Code</a></li>
+            <li id="design"><a onclick="moveTab('design')" href="#usage"><i class="fas fa-paint-brush"
+                  style="font-size: 70%">&nbsp;</i>Design Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <br />
+
+      <article>
+        <div id="description" class="container">
+          <h2 class="cbp-heading-2">Description</h2>
+          <br />
+          <p>
+            Tables are used to help users scan & compare large amounts of data
+            at a glance. When implementing tables into your project, make sure
+            to consider other alternatives that may be optimal for the data
+            you want to display.
+          </p>
+        </div>
+
+        <br /><br />
+
+        <div id="code" class="container cbp-code">
+          <h2 class="cbp-heading-2" id="ds-code">Code</h2>
+          <br />
+
+          <div id="table">
+            <table class="table is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th scope="col">Page Updated</th>
+                  <th scope="col">Data Field</th>
+                  <th scope="col">Previous Value</th>
+                  <th scope="col">New Value</th>
+                  <th scope="col">Time</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td scope="row">08/12/19 10:00:01 EST</td>
+                  <td>
+                    User Profile
+                  </td>
+                  <td>Seller's First Name</td>
+                  <td>Thomas</td>
+                  <td>Bill</td>
+                </tr>
+
+                <tr>
+                  <td scope="row">10/07/19 02:34:11 EST</td>
+                  <td>
+                    Product Information
+                  </td>
+                  <td>Date</td>
+                  <td>04/02/18</td>
+                  <td>04/04/18</td>
+                </tr>
+
+                <tr>
+                  <td scope="row">12/12/19 11:05:49 EST</td>
+                  <td>
+                    Product Information
+                  </td>
+                  <td>Seller's First Name</td>
+                  <td>Samantha</td>
+                  <td>Sam</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="codepen" data-height="357" data-theme-id="light" data-default-tab="html"
+              data-user="KtowneCreative" data-slug-hash="mdyWGWN"
+              style="height: 357px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+              data-pen-title="Table- DSUX">
+              <span>See the Pen <a href="https://codepen.io/KtowneCreative/pen/mdyWGWN">
+                  Table- DSUX</a> by Creative Services (<a href="https://codepen.io/KtowneCreative">@KtowneCreative</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          </div>
+
+          <br /><br />
+          <h3 class="cbp-heading-3">Modifiers</h3><br />
+          <div class="modifiers">
+            <table class="table is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <code>is-bordered</code>
+                  </th>
+                  <td>
+                    Adds a border to all the cells
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <code>is-hoverable</code>
+                  </th>
+                  <td>
+                    Gives hover effect over data cells
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <code>is-narrow</code>
+                  </th>
+                  <td>
+                    Condenses table height
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <code>is-striped</code>
+                  </th>
+                  <td>
+                    Alternates color
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <code>full-width</code>
+                  </th>
+                  <td>
+                    Makes table fill up the max-width of page
+                  </td>
+                </tr>
+
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <br /><br />
+
+          <section id="usage">
+            <h2 id="usage" class="cbp-heading-2">Design Guidelines</h2>
+            <br />
+
+            <h2 class="cbp-heading-3">General</h2>
+            <br />
+            <ol>
+              <li style="margin-left: 15px;">For nominal/non-numeric data (e.g., room numbers, zip codes, names),
+                <strong>left-align text.</strong></li>
+              <li style="margin-left: 15px;">For data that involves quantity (e.g., counts, currency, percentages),
+                <strong>right-align text.</strong></li>
+              <li style="margin-left: 15px;">Each table header should have the <code> th </code> tag. </li>
+
+              <li style="margin-left: 15px;">If the number of rows for data exceed 30, implement pagination on the top
+                and bottom of the table to reduce scrolling.</li>
+              <li style="margin-left: 15px;">When there is no data to display in a cell, use placeholder text such as
+                <strong>"--"</strong> or <strong>"N/A"</strong> to indicate that the empty state is not a technical bug
+                or glitch.</li>
+            </ol>
+            </p>
+            <br /><br />
+
+            <h2 class="cbp-heading-3">Usage</h2>
+
+            <br />
+            <div class="columns">
+              <div class="column">
+                <div class="box tables-usage--box">
+                  <p><span class="is-size-5"><strong>✅ Consider using a table if:</strong></span>
+                    <br /><br />
+                    <ol>
+                      <li style="margin-left: 15px;">You have a large quantity of data</li>
+                      <li style="margin-left: 15px;">You want to implement features such as sorting or filtering</li>
+                      <li style="margin-left: 15px;">The user needs to easily compare data quickly & efficiently</li>
+                    </ol>
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="column">
+                <div class="box tables-usage--box">
+                  <p><span class="is-size-5"><strong>❌ You should NOT use a table if:</strong></span>
+                    <br /><br />
+                    <ol>
+                      <li style="margin-left: 15px;">You do not have a lot of data to display</li>
+                      <div style="margin-left: 15px">
+
+                        👉 In this case, consider using a list component.
+
+                      </div>
+                      <br />
+                      <li style="margin-left: 15px;">You want to display a summary of your data</li>
+                      <div style="margin-left: 15px">
+
+                        👉 In this case, consider using graphs or charts.
+
+                      </div>
+                    </ol>
+
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <h2 class="cbp-heading-3">Accessibility</h2>
+            <br />
+            <ol>
+              <li style="margin-left: 15px;">Each header cell should have the <code>scope="col"</code> or
+                <code>scope="row"</code> attribute.</li>
+              <li style="margin-left: 15px;">When adding a title to a table, include it in a <code>caption</code> tag
+                inside of the <code>table</code> element.</li>
+              <li style="margin-left: 15px;">Each table header should have the <code> th </code> tag. </li>
+            </ol>
+            </p>
+            <br />
+          </section>
+
+      </article>
+    </section>
+  </div>
+
+  <script src="../js/scripts.js"></script>
+</body>
+
+</html>
