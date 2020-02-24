@@ -6,32 +6,6 @@
   "main": "./dist/cbp-theme.umd.js",
   "module": "./dist/cbp-theme.esm5.js",
   "browser": "./dist/cbp-theme.browser.bundle.umd.js",
-  "contributors": [
-    {
-      "name": "Kianoosh Raika",
-      "email": "kianoosh.raika@cbp.dhs.gov"
-    },
-    {
-      "name": "Amit Daya",
-      "email": "amitdaya@in-di-go.com"
-    },
-    {
-      "name": "David Y. Hodge",
-      "email": "david.y.hodge@cbp.dhs.gov"
-    },
-    {
-      "name": "Abhinav Pobbati",
-      "email": "abhinav.pobbati@cbp.dhs.gov"
-    },
-    {
-      "name": "Josue Acosta",
-      "email": "josue.acosta@associates.cbp.dhs.gov"
-    },
-    {
-      "name": "John D. Higgins",
-      "email": "unisys4dev@gmail.com"
-    }
-  ],
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
