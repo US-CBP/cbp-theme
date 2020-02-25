@@ -51,7 +51,7 @@
     "node:clean": "rm -rf node_modules && npm i",
     "pa11y:clean": "rimraf pa11y && mkdir pa11y",
     "pa11y:test": "pa11y-ci --json > \"pa11y/pa11y-ci-results.json\" || exit 0",
-    "pa11y:report": "pa11y-ci-reporter-html -s \"./pa11y/pa11y-ci-results.json\" -d \"./pa11y\" && open \"pa11y/index.html\"",
+    "pa11y:report": "pa11y-ci-reporter-html -s \"./pa11y/pa11y-ci-results.json\" -d \"./pa11y\"",
     "pa11y:all": "npm run pa11y:clean && npm run pa11y:test && npm run pa11y:report || exit 0"
   },
   "husky": {
