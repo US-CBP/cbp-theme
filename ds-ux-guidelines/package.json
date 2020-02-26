@@ -23,6 +23,8 @@
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-smoothscroll": "^1.0.4",
     "node-sass": "^4.13.1",
+    "pa11y-ci": "^2.3.0",
+    "pa11y-ci-reporter-html": "^2.0.0",
     "prettier": "^1.19.1",
     "react-router-hash-link": "^1.2.2"
   },
@@ -32,11 +34,15 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "pa11y:clean": "rimraf pa11y && mkdir pa11y",
+    "pa11y:test": "pa11y-ci --json > \"pa11y/pa11y-ci-results.json\" || exit 0",
+    "pa11y:report": "pa11y-ci-reporter-html -s \"./pa11y/pa11y-ci-results.json\" -d \"./pa11y\"",
+    "pa11y:all": "npm run pa11y:clean && npm run pa11y:test && npm run pa11y:report || exit 0",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
