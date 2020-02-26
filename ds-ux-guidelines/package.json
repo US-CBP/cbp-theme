@@ -41,7 +41,10 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "lint:guide": "npm run lint:clean && stylelint > \"lint/stylelint-scss-errors.log\" \"./sass/styles.scss\" --fix --output-file \"lint/stylelint-scss-errors.log\" || exit 0",
+    "lint:clean": "rimraf lint && mkdir lint",
+    "lint:guide": "npm run lint:clean && stylelint > \"lint/stylelint-scss-errors.log\" \"./src/ds-components/layout/layout.scss\" --fix --output-file \"lint/stylelint-scss-errors.log\" || exit 0",
+    "lint:css": "stylelint > \"lint/stylelint-css-errors.log\" \"./public/*.css\" --fix --output-file \"lint/stylelint-css-errors.log\" || exit 0",
+    "lint:all": "npm run clean && npm run build && npm run lint:guide && npm run lint:css",
     "pa11y:clean": "rimraf pa11y && mkdir pa11y",
     "pa11y:test": "pa11y-ci --json > \"pa11y/pa11y-ci-results.json\" || exit 0",
     "pa11y:report": "pa11y-ci-reporter-html -s \"./pa11y/pa11y-ci-results.json\" -d \"./pa11y\"",
@@ -52,12 +55,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "npm run lint:guide"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/US-CBP/cbp-theme/tree/design-system/ds-ux-guidelines"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
