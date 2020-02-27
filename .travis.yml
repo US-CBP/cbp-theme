@@ -9,7 +9,6 @@ script:
 - npm run theme:build
 - npm run css:build
 - npm run website:build
-
 after_success:
 - bash publish.sh
 notifications:
