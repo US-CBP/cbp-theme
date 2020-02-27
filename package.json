@@ -12,7 +12,7 @@
     "css:dist": "cp -rf ds-css/dist/css dist && cp README.MD dist && cp ds-css/package.json dist && replace-json-property ./dist/package.json version $npm_package_version",
     "website:init": "cd ds-ux-guidelines && npm install",
     "website:build": "cd ds-ux-guidelines && npm run build",
-    "website:prepare": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/public cbp-theme/kitchensink/design-system/",
+    "website:prepare": "cp -rf ds-css/dist cbp-theme/kitchensink/ds-css && rsync -av --progress --exclude='node_modules' ds-ux-guidelines/public/ cbp-theme/kitchensink/design-system/",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "local:run": "cd ds-ux-guidelines && npm start",
