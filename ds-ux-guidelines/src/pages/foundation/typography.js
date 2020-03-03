@@ -57,7 +57,7 @@ const TypographyPage = () => (
 
     <section class="section-spacing">
       <h2 class="cbp-heading-2 section-pad-temp">Specifications</h2>
-      <table className="table is-hoverable is-fullwidth">
+      <table className="table is-fullwidth">
         <caption style={{textAlign: "left", marginBottom: "1rem", fontWeight: "bold"}}>CBP Design System Type Scale</caption>
             <thead>
               <tr>
@@ -73,7 +73,7 @@ const TypographyPage = () => (
 
             <tbody>
               <tr>
-                <td>Masthead 1</td>
+                <td class="cbp-masthead-1">Masthead 1</td>
                 <td><code>.cbp-masthead-1</code></td>
                 <td>36px</td>
                 <td>100</td>
@@ -83,7 +83,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Masthead 2</td>
+                <td class="cbp-masthead-2">Masthead 2</td>
                 <td><code>.cbp-masthead-2</code></td>
                 <td>32px</td>
                 <td>100</td>
@@ -93,7 +93,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Heading 1</td>
+                <td class="cbp-heading-1">Heading 1</td>
                 <td><code>.cbp-heading-1</code></td>
                 <td>28px</td>
                 <td>300</td>
@@ -103,7 +103,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Heading 2</td>
+                <td class="cbp-heading-2">Heading 2</td>
                 <td><code>.cbp-heading-2</code></td>
                 <td>25px</td>
                 <td>400</td>
@@ -113,7 +113,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Heading 3</td>
+                <td class="cbp-heading-3">Heading 3</td>
                 <td><code>.cbp-heading-3</code></td>
                 <td>22px</td>
                 <td>400</td>
@@ -123,7 +123,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Heading 4</td>
+                <td class="cbp-heading-4">Heading 4</td>
                 <td><code>.cbp-heading-2</code></td>
                 <td>20px</td>
                 <td>500</td>
@@ -133,7 +133,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Heading 5</td>
+                <td class="cbp-heading-5">Heading 5</td>
                 <td><code>.cbp-heading-5</code></td>
                 <td>20px</td>
                 <td>500</td>
@@ -143,7 +143,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Heading 6</td>
+                <td class="cbp-heading-6">Heading 6</td>
                 <td><code>.cbp-heading-6</code></td>
                 <td>16px</td>
                 <td>700</td>
@@ -153,7 +153,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Body</td>
+                <td class="cbp-body">Body</td>
                 <td><code>.cbp-body</code></td>
                 <td>14px</td>
                 <td>400</td>
@@ -166,7 +166,7 @@ const TypographyPage = () => (
 
           <br/><br/>
 
-          <table class="table is-hoverable is-fullwidth">
+          <table class="table is-fullwidth">
             <caption style={{textAlign: "left", marginBottom: "1rem", fontWeight: "bold"}}>Support Type Classes</caption>
             <thead>
               <tr>
@@ -181,7 +181,7 @@ const TypographyPage = () => (
             </thead>
             <tbody>
               <tr>
-                <td>Button Text</td>
+                <td class="cbp-button-text">Button Text</td>
                 <td><code>.cbp-button-text</code></td>
                 <td>14px</td>
                 <td>500</td>
@@ -191,7 +191,7 @@ const TypographyPage = () => (
               </tr>
 
               <tr>
-                <td>Subhead</td>
+                <td class="cbp-subhead-text">Subhead</td>
                 <td><code>.cbp-subhead-text</code></td>
                 <td>12px</td>
                 <td>500</td>
