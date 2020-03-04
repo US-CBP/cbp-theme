@@ -16,6 +16,15 @@ iFrame {
 /* iFrame style for height. Need to revisit this. */
 
 /* Temporary class until grid sizing, padding guidance is completed */
+
+.heading-pad-temp {
+  padding: 5rem 2rem 3rem 2rem;
+}
+
+.section-pad-temp {
+  padding-bottom: 3rem;
+}
+
 .one-half-pad-temp {
   padding: 1.5rem;
 }
@@ -23,4 +32,12 @@ iFrame {
 .li-margin {
   margin-left: 1em;
 }
+
+.tables-usage--box {
+  height: 200px;
+  @media screen and (max-width: 1090px) {
+    height: 300px;
+  }
+}
+
 /* Temporary class until grid sizing, padding guidance is completed */

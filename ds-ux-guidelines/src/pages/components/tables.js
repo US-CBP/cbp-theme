@@ -2,7 +2,8 @@ import React from "react"
 /* import { Link } from "gatsby" */
 
 import Layout from "../../ds-components/layout/layout"
-import ContentHeader from "../../ds-components/content-header/contenHeader"
+import ContentHeader from "../../ds-components/content-header/contentHeader"
+
 /* import Image from "../../ds-components/image" */
 import SEO from "../../ds-components/seo"
 
@@ -10,12 +11,10 @@ const TableComponentPage = () => (
 
   <Layout>
     <SEO title="CBP Design System | Tables" />
-    <ContentHeader title="Tables" />
+    <ContentHeader title="Tables" contentType="component"/>
     <article>
 
-      <div id="description" className="container">
-        <h2 id="description" className="cbp-heading-2">Description</h2>
-        <br/>
+      <div id="description" className="container section-pad-temp">
         <p>
           Tables are used to help users scan &amp; compare large amounts of data
           at a glance. When implementing tables into your project, make sure
@@ -23,11 +22,9 @@ const TableComponentPage = () => (
           you want to display.
         </p>
       </div>
-      <br/><br/>
 
       <div id="code" className="container cbp-code">
-        <div id="code" className="cbp-heading-2">Code</div>
-        <br/>
+        <div id="code" className="cbp-heading-2 section-pad-temp">Code</div>
 
         <div id="table">
 
@@ -74,6 +71,7 @@ const TableComponentPage = () => (
               </tr>
             </tbody>
           </table>
+          <br/>
 
           <iframe height="358" style={{width: "100%"}} scrolling="no" title="Table- DSUX" src="https://codepen.io/KtowneCreative/embed/mdyWGWN?height=358&theme-id=light&default-tab=html" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
             See the Pen <a href='https://codepen.io/KtowneCreative/pen/mdyWGWN'>Table- DSUX</a> by Creative Services
@@ -89,7 +87,7 @@ const TableComponentPage = () => (
         </div>
         <br/><br/>
         
-        <h3 id="modifiers" className="cbp-heading-3">Modifiers</h3>
+        <h3 id="modifiers" className="cbp-heading-3 section-pad-temp">Modifiers</h3>
         <div className="modifiers">
           <table className="table is-hoverable is-fullwidth">
             
@@ -154,17 +152,16 @@ const TableComponentPage = () => (
         <br/><br/>
 
         <section id="usage">
-          <h2 className="cbp-heading-2">Design Guideline</h2>
-          <br/>
+          <h2 className="cbp-heading-2 section-pad-temp">Design Guideline</h2>
 
           <h2 id="general" className="cbp-heading-3">General</h2>
           <br/>
 
           <ol>
             <li className="li-margin">For nominal/non-numeric data (e.g., room numbers, zip codes, names),
-              <strong>left-align text.</strong></li>
+              <strong> left-align text.</strong></li>
             <li className="li-margin">For data that involves quantity (e.g., counts, currency, percentages),
-              <strong>right-align text.</strong></li>
+              <strong> right-align text.</strong></li>
             <li className="li-margin">Each table header should have the <code> th </code> tag. </li>
 
             <li className="li-margin">If the number of rows for data exceed 30, implement pagination on the top
@@ -204,14 +201,14 @@ const TableComponentPage = () => (
                     <li className="li-margin">You do not have a lot of data to display</li>
                     <div className="li-margin">
 
-                      <span role="img" aria-label="Finger pointing right.">👉</span> In this case, consider using a list component.
+                    <em>In this case, consider using a list component.</em>
 
                     </div>
                     <br />
                     <li className="li-margin">You want to display a summary of your data</li>
                     <div className="li-margin">
 
-                    <span role="img" aria-label="Finger pointing right.">👉</span> In this case, consider using graphs or charts.
+                    <em>In this case, consider using graphs or charts.</em>
 
                     </div>
                   </ol>
