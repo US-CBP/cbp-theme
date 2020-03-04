@@ -10,7 +10,7 @@ const TypographyPage = () => (
     <ContentHeader title="Typography" contentType="foundation"/>
 
     <article>
-      <p class="cbp-body">
+      <p class="cbp-body section-pad-temp">
         Having a well thought-out and managed typography system drives retention
         and understanding of information, and helps our users make the informed
         decisions that keep our country safe. This isn't simply what typeface we

@@ -10,7 +10,7 @@ const LayoutPage = () => (
         <ContentHeader title="Layouts" contentType="foundation"/>   
 
         <article>
-      <p class="cbp-body">
+      <p class="cbp-body section-pad-temp">
         We need more paper products need full resourcing and support from a
         cross-functional team in order to be built, maintained, and evolved.
         Bleeding edge. It's about managing expectations overcome key issues to
