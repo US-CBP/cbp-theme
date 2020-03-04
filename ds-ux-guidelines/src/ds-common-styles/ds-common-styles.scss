@@ -33,4 +33,11 @@ iFrame {
   margin-left: 1em;
 }
 
+.tables-usage--box {
+  height: 200px;
+  @media screen and (max-width: 1090px) {
+    height: 300px;
+  }
+}
+
 /* Temporary class until grid sizing, padding guidance is completed */
