@@ -101,6 +101,14 @@ class Navigation extends Component {
     ],
   }
 
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClose);
+  };
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClose);
+  };
+
   menuList = () => {
     /*     return (
       <li>WORKING</li>
@@ -149,14 +157,21 @@ class Navigation extends Component {
   }
 
   //toggle function for dropdown
-  toggleDropdown = event => {
-    event.preventDefault()
+  toggleDropdown = (e) => {
+    e.preventDefault();
+    const currentState = this.state.showDropdown;
+    this.setState({ showDropdown: !currentState });
+    return;
+  };
 
-    const currentState = this.state.showDropdown
-    this.setState({
-      showDropdown: !currentState,
-    })
-  }
+  //dropdown handle close when clicked outside of dropdown
+  handleClose = event => {
+    if(this.node && !this.node.contains(event.target)){
+      this.setState({ showDropdown: false }); 
+    };
+    
+    return;
+  };
 
   render() {
     return (
@@ -164,6 +179,7 @@ class Navigation extends Component {
         {/* cbp-ds-grid class is the main grid holder. */}
         <aside className="menu">
           <div
+            ref={node => this.node = node}
             className={`dropdown ${
               this.state.showDropdown ? "is-active" : null
             }`}
