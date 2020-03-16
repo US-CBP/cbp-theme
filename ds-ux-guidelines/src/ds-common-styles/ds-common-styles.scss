@@ -40,6 +40,15 @@ iFrame {
   }
 }
 
+section {
+  margin: 1.5rem auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 /* Temporary class until grid sizing, padding guidance is completed */
 
 .img-frame {
