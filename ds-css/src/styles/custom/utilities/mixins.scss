@@ -1,1 +1,25 @@
-// no empty source file allowed fix
+// Responsiveness
+@mixin tablet-portrait-view {
+  @media only screen and (min-width: 600px) {
+    
+    @content;
+
+  }
+  
+}
+
+@mixin tablet-landscape-view {
+  @media only screen and (min-width: 1024px) {
+    @content;
+
+  }
+
+}
+
+@mixin large-desktop-view {
+  @media only screen and (min-width: 1440px) {
+    @content;
+
+  }
+
+}

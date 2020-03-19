@@ -8,7 +8,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 module.exports = {
   performance: {
     hints: "error", // enum
-    maxAssetSize: 200000, // int (in bytes),
+    maxAssetSize: 2000000, // int (in bytes),** Increased this by adding a 0 temporarily **
     maxEntrypointSize: 400000, // int (in bytes)
     assetFilter: function(assetFilename) {
       // Function predicate that provides asset filenames
