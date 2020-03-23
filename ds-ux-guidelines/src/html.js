@@ -21,6 +21,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script src="https://cdn.jsdelivr.net/npm/@khanacademy/tota11y@0.2.0/dist/tota11y.min.js"></script>
       </body>
     </html>
   )
