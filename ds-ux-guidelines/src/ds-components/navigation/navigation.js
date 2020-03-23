@@ -205,7 +205,7 @@ class Navigation extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  CBP THEME VERSION 1.11.18
+                  CBP THEME VERSION 1.11.0
                 </a>
               </div>
             </div>
