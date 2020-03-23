@@ -72,6 +72,8 @@
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -180,6 +182,7 @@
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -353,13 +356,11 @@ textarea {
   *,
   *:before,
   *:after,
-  *:first-letter,
-  *:first-line {
+  *:first-letter {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
-    text-shadow: none !important;
   }
   a,
   a:visited {
@@ -8867,6 +8868,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -8975,6 +8978,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 .mdl-ripple {
   background: rgb(0,0,0);
   border-radius: 50%;
@@ -9055,6 +9059,8 @@ button.close {
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -9163,6 +9169,7 @@ button.close {
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -9386,6 +9393,8 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -9494,6 +9503,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -9518,7 +9528,9 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   font-size: 13px;
   line-height: 24px;
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
+  height: 24px;
   margin: 0;
   padding-left: 0;
 }
@@ -9583,13 +9595,13 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   transition-duration: 0.28s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform;
-  transform: scale3d(0, 0, 0);
+  transform: scale(0, 0);
   border-radius: 50%;
   background: #1460aa;
 }
 
 .mdl-radio.is-checked .mdl-radio__inner-circle {
-  transform: scale3d(1, 1, 1);
+  transform: scale(1, 1);
 }
 
 fieldset[disabled] .mdl-radio .mdl-radio__inner-circle,
@@ -9698,6 +9710,8 @@ fieldset[disabled] .mdl-radio .mdl-radio__ripple-container .mdl-ripple,
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -9806,6 +9820,7 @@ fieldset[disabled] .mdl-radio .mdl-radio__ripple-container .mdl-ripple,
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -9853,6 +9868,10 @@ fieldset[disabled] .mdl-radio .mdl-radio__ripple-container .mdl-ripple,
   min-width: 32px;
   width: auto;
   min-height: 32px;
+}
+
+.mdl-textfield--expandable .mdl-button--icon {
+  top: 16px;
 }
 
 .mdl-textfield__input {
@@ -9914,13 +9933,18 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
   text-align: left;
 }
 
-.mdl-textfield.is-dirty .mdl-textfield__label, .mdl-textfield.mdl-selectfield.mdl-selectfield--multiple .mdl-textfield__label {
+.mdl-textfield.is-dirty .mdl-textfield__label, .mdl-textfield.mdl-selectfield.mdl-selectfield--multiple .mdl-textfield__label,
+.mdl-textfield.has-placeholder .mdl-textfield__label {
   visibility: hidden;
 }
 
 .mdl-textfield--floating-label .mdl-textfield__label {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+  transition: none;
 }
 
 fieldset[disabled] .mdl-textfield .mdl-textfield__label,
@@ -9930,7 +9954,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
-.mdl-textfield--floating-label.mdl-selectfield.mdl-selectfield--multiple .mdl-textfield__label {
+.mdl-textfield--floating-label.mdl-selectfield.mdl-selectfield--multiple .mdl-textfield__label,
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
   color: #1460aa;
   font-size: 13px;
   top: 1px;
@@ -9939,7 +9964,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 
 .mdl-textfield--floating-label.is-focused .mdl-textfield__expandable-holder .mdl-textfield__label,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__expandable-holder .mdl-textfield__label,
-.mdl-textfield--floating-label.mdl-selectfield.mdl-selectfield--multiple .mdl-textfield__expandable-holder .mdl-textfield__label {
+.mdl-textfield--floating-label.mdl-selectfield.mdl-selectfield--multiple .mdl-textfield__expandable-holder .mdl-textfield__label,
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__expandable-holder .mdl-textfield__label {
   top: -19px;
 }
 
@@ -10060,6 +10086,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
  * -----Data table
  * -----Dialog
  * -----Snackbar
+ * -----Tooltip
+ * -----Chip
  *
  * Even though all variables have the `!default` directive, most of them
  * should not be changed as they are dependent one another. This can cause
@@ -10168,6 +10196,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 /* DIALOG */
 /* SNACKBAR */
 /* TOOLTIP */
+/* CHIP */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
@@ -10262,12 +10291,11 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   box-sizing: border-box;
 }
 
-.mdl-data-table th .mdl-data-table__header--sorted-ascending, .table th .mdl-data-table__header--sorted-ascending, .table-selectable th .mdl-data-table__header--sorted-ascending, .mdl-data-table th .mdl-data-table__header--sorted-descending, .table th .mdl-data-table__header--sorted-descending, .table-selectable th .mdl-data-table__header--sorted-descending {
+.mdl-data-table th.mdl-data-table__header--sorted-ascending, .table th.mdl-data-table__header--sorted-ascending, .table-selectable th.mdl-data-table__header--sorted-ascending, .mdl-data-table th.mdl-data-table__header--sorted-descending, .table th.mdl-data-table__header--sorted-descending, .table-selectable th.mdl-data-table__header--sorted-descending {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.mdl-data-table th .mdl-data-table__header--sorted-ascending:before, .table th .mdl-data-table__header--sorted-ascending:before, .table-selectable th .mdl-data-table__header--sorted-ascending:before, .mdl-data-table th .mdl-data-table__header--sorted-descending:before, .table th .mdl-data-table__header--sorted-descending:before, .table-selectable th .mdl-data-table__header--sorted-descending:before {
-  font-size: 16px;
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:before, .table th.mdl-data-table__header--sorted-ascending:before, .table-selectable th.mdl-data-table__header--sorted-ascending:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:before, .table th.mdl-data-table__header--sorted-descending:before, .table-selectable th.mdl-data-table__header--sorted-descending:before {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -10280,13 +10308,21 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-}
-
-.mdl-data-table th .mdl-data-table__header--sorted-ascending:before, .table th .mdl-data-table__header--sorted-ascending:before, .table-selectable th .mdl-data-table__header--sorted-ascending:before {
+  font-size: 16px;
   content: "\e5d8";
+  margin-right: 5px;
+  vertical-align: sub;
 }
 
-.mdl-data-table th .mdl-data-table__header--sorted-descending:before, .table th .mdl-data-table__header--sorted-descending:before, .table-selectable th .mdl-data-table__header--sorted-descending:before {
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:hover, .table th.mdl-data-table__header--sorted-ascending:hover, .table-selectable th.mdl-data-table__header--sorted-ascending:hover, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover, .table th.mdl-data-table__header--sorted-descending:hover, .table-selectable th.mdl-data-table__header--sorted-descending:hover {
+  cursor: pointer;
+}
+
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:hover:before, .table th.mdl-data-table__header--sorted-ascending:hover:before, .table-selectable th.mdl-data-table__header--sorted-ascending:hover:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover:before, .table th.mdl-data-table__header--sorted-descending:hover:before, .table-selectable th.mdl-data-table__header--sorted-descending:hover:before {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.mdl-data-table th.mdl-data-table__header--sorted-descending:before, .table th.mdl-data-table__header--sorted-descending:before, .table-selectable th.mdl-data-table__header--sorted-descending:before {
   content: "\e5db";
 }
 
@@ -10871,13 +10907,17 @@ label {
   background: #FFF;
   font-size: 13px;
   text-align: left;
-  color: inherit;
   border: none;
   border-bottom: 1px solid rgba(0,0,0, 0.12);
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
+}
+
+.mdl-selectfield__select::-ms-expand {
+  display: none;
 }
 
 .mdl-selectfield.is-focused .mdl-selectfield__select {
@@ -10973,6 +11013,34 @@ fieldset[disabled] .mdl-selectfield .mdl-selectfield__label,
 
 .mdl-selectfield.is-invalid .mdl-selectfield__error {
   visibility: visible;
+}
+
+.mdl-selectfield__icon {
+  bottom: 20px;
+  cursor: pointer;
+  color: rgba(0,0,0, 0.26);
+  padding: 6px 0;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  pointer-events: none;
+}
+
+.mdl-selectfield__icon > i {
+  outline: 0;
+}
+
+.mdl-selectfield.is-dirty .mdl-selectfield__icon, .mdl-selectfield.mdl-selectfield--multiple .mdl-selectfield__icon {
+  color: inherit;
+}
+
+fieldset[disabled] .mdl-selectfield .mdl-selectfield__icon,
+.mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__icon {
+  color: rgba(0,0,0, 0.26);
+}
+
+.mdl-selectfield--floating-label.is-invalid .mdl-selectfield__icon {
+  color: rgb(222, 50, 38);
 }
 
 .ui-datepicker {
