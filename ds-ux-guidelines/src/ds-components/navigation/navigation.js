@@ -113,7 +113,7 @@ class Navigation extends Component {
     const menuList = this.state.categories.map(cat => {
       return (
         <>
-          <span className="menu-label">{cat.name}</span>
+          <span className="menu-label" style={{fontSize: "1rem"}}>{cat.name}</span>
           <ul className="menu-list">
             {cat.subcategory.map(subCat => {
               return (
