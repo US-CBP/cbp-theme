@@ -1,7 +1,6 @@
 // Responsiveness
 @mixin tablet-portrait-view {
   @media only screen and (min-width: 600px) {
-    
     @content;
 
   }
