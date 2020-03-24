@@ -1450,253 +1450,1695 @@ const TypographyPage = () => (
         <strong style={{ color: "red" }}>[**image of text hierarchy**]</strong>
       </section>
 
-      {/* <section>
-        <h2 className="cbp-heading-2 pad-bottom"> Usage </h2>
+      <br />
 
-        <h5 className="cbp-heading-5">Using the 14px Base Scale</h5>
+      <section>
+        <h2 className="cbp-heading-2">Horizontal Rhythm</h2>
         <br />
-
-        <h6 className="cbp-heading-6">Pros</h6>
-        <br />
-        <ul>
-          <li>- Minimal disruption to existing site architectures.</li>
-          <li>- A lot of heading values sync up with existing theme values.</li>
-          <li>
-            - Keeps base value on the low end of the equation to help our more
-            dense applications.
-          </li>
-        </ul>
+        <p className="cbp-body">
+          While vertical rhythm techniques focus on hierarchy, horizontal rhythm
+          is all about legibility. How far apart is each individua l character
+          is from its neighbors, line length, and alignment all impact user
+          retention of information.
+  </p>
 
         <br />
-
-        <h6 className="cbp-heading-6">Cons</h6>
         <br />
-        <ul className="pad-bottom">
-          <li>
-            - Because the base value is on the lower side (default is 16px),
-            some of our users might become dependent on zoom features.
-          </li>
-          <li>
-            - There is still not a lot of size variation between text levels
-            (Although this can be both a pro and a con to have them match up).
-          </li>
-        </ul>
 
-        <h5 className="cbp-heading-5">Line Height</h5>
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>[**Image Here (maybe)**]</strong>
+      </section>
+
+      <br />
+
+      <section>
+        <h3 className="cbp-heading-3">Line Length</h3>
         <br />
-        <p className="cbp-body pad-bottom">
-          Human beings operate on identifying patterns. The Principle of
-          Repetition brings familiarity to different items in a layout. It gives
-          the layout structure. When we mix this with typography, we enhance
-          overall legibility because the user's eye is allowed to flow smoothly
-          and is not interrupted by unexpected and jarring relationships between
-          items in the layout.
-          <br />
-          <br />
-          This is mostly manifested in what is referred to as the "Baseline
-          Grid". This grid is different from the various other terms referred to
-          as grid in web design in that it specifically refers to a set of
-          "invisible" lines that go down the page to which all layout elements
-          are aligned. Because communication of information is at the heart of
-          all websites and applications, this grid is tightly tied to our
-          typography settings. Specifically to the line-height of body copy
-          (because it is the base unit in our typographical system).
-          <br />
-          <br />
-          Earlier we established that our body copy will be 14px. It's a good
-          industry standard practice to use a 4px baseline grid, meaning all
-          spacing will be a multiple or factor of 4.
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**image of line length good and bad**]
+  </strong>
+
+        <br />
+        <br />
+
+        <p className="cbp-body">
+          When it comes to large blocks of text there have been several studies
+          showing that people definitely have a limit to how wide a block of
+          text should be. It's partly to do with how our eyes work mechanically,
+          but also just how we scan content. There have been many studies on
+          this subject where a general rule of between 45-85 characters fits the
+          typical users needs. Any longer and it can be tiring on our eyes. Any
+          shorter and reading comprehension can suffer because sentences no
+          longer flow naturally. If lines are too long, readers tend to
+          accidentally read the same length multiple times (also known as
+          "doubling"). Essentially this has to do with our body copy classes as
+          this should be the only instances where we are dealing with long
+          blocks of text and multiple paragraphs. Headings should be limited in
+          length by their very nature.
+  </p>
+
+        <br />
+
+        <p className="cbp-body">
+          We can control control line length in two ways; the container width
+          and the max-width property. When we think of responsive layouts, text
+          boxes are aligned to a number of grid columns. In a situation where a
+          block of paragraph text is in the context of a large screen, assigning
+          col-12 (essentially full screen) would not be a great idea. The line
+          length would just be too long. Choosing a smaller amount of columns
+          like 4 or 5 would be much more reasonable and would result in a much
+          better measure. When the viewport gets to a smaller form factor like
+          phones, the text box should be 4-col (full screen) by default as
+          anything less would just be too short and would result in the user not
+          having a great experience. For our body copy classes we have built in
+          a safety mechanism with assigning a max-width of 75em. Why em? Because
+          line length essentially has nothing to do with our root settings and
+          everything to do with the exact type class we're working with.
+  </p>
+
+        <br />
+
+        <p className="cbp-subhead-text">
+          <em>
+            Learn more about the CBP Design System's grid settings under the
+      Spacing, grid, layout section in foundations.{" "}
+            <strong style={{ color: "red" }}>[**link**]</strong>
+          </em>
         </p>
       </section>
 
-      <section className="section-spacing">
-        <h2 className="cbp-heading-2 pad-bottom">Specifications</h2>
-        <table classNameName="table is-fullwidth">
-          <caption
-            style={{
-              textAlign: "left",
-              marginBottom: "1rem",
-              fontWeight: "bold",
-            }}
+      <br />
+
+      <section>
+        <h3 className="cbp-heading-3">
+          Columns, Paragraphs, and Logical Reading Order
+  </h3>
+        <br />
+        <br />
+
+        <h4 className="cbp-heading-4">Logical Reading Order</h4>
+        <br />
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**image of what logical reading order / maybe eye F patterns**]
+  </strong>
+
+        <br />
+        <br />
+
+        <p className="cbp-body">
+          People naturally read content in a certain pattern in western
+          civilizations. We start at the top-left of the page and read
+          left-to-right down the page. When designing your layouts keep in mind
+          how your user’s eyes will flow down the page and consume your content.
+          When considering when and if to break large amounts of text up into
+          columns you should keep in mind that your layouts don’t exist in a
+          static viewport size. Pages essentially can scroll infinitely.
+    <br />
+          <br />
+          We recommend you go through each of the major breakpoints (see more in
+          the Spacing, Grid, and Layout section of foundations) and address the
+          following questions:
+  </p>
+
+        <div className="content">
+          <ul>
+            <li>
+              Would it be frustrating for the user read a single long column of
+              text and have to scroll a long ways back up the page to get to the
+              next relevant area of the page?
+      </li>
+            <li>Does the order of your content make sense?</li>
+            <li>Are you keeping line length principles in mind?</li>
+          </ul>
+        </div>
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**image of logical reading order**]
+  </strong>
+      </section>
+
+      <br />
+
+      <section>
+        <h3 className="cbp-heading-3">Letter Spacing</h3>
+        <br />
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**image explaining why this is important**]
+  </strong>
+
+        <br />
+        <br />
+
+        <p className="cbp-body">
+          The spaces between the letters are just as important as the words
+          themselves. While reading, the spacing betweenindividual letters (aka
+          kerning) and words is super important. If the kerning is too tight,
+          letters may overlap and generally legibility is hindered. Too far
+          apart and words start to blend together. The Font-kerning property
+          applies certain amounts of space between individual character
+          combinations. For example, when capital V and A are next to each
+          other. In general we keep this property set to “normal” which means it
+          applies tighter kerning at larger sizes and not on smaller sizes, but
+          they also don’t have a consensus about where these boundaries are
+          across browsers. In general we try to control these settings with the
+          letter-spacing property. Letter- spacing (also known as tracking)
+          applies space between characters uniformly. For body copy we keep this
+          set to normal, as this will allow ligatures to appear. As the sizing
+          of our heading classes grows however, negative letter-spacing may be
+          added to keep characters from drifting from each other.
+  </p>
+      </section>
+
+      <br />
+
+      <section>
+        <h3 className="cbp-heading-3">Alignment</h3>
+        <br />
+
+        <p className="cbp-body">
+          Alignment refers to which vertical axis type is aligned to. Alignment
+          allows a user’s eye to have a reference to return to as they finish
+          each line of text. In general there are 4 alignment types.
+  </p>
+      </section>
+
+      <br />
+
+      <section>
+        <h4 className="cbp-heading-4">Left-Aligned (Rag Right)</h4>'
+  <br />
+        <p className="cbp-body">
+          This is pretty standard stuff. Fits how western style cultures read.
+          The vast majority of what we do should feature this style alignment.
+  </p>
+        <br />
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**example of left aligned text**]
+  </strong>
+      </section>
+
+      <br />
+
+      <section>
+        <h4 className="cbp-heading-4">Center Aligned</h4>
+        <br />
+        <p className="cbp-body">
+          This should have very limited applications. Should be a special use
+          case.
+  </p>
+        <br />
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**example of center aligned text**]
+  </strong>
+      </section>
+
+      <br />
+
+      <section>
+        <h4 className="cbp-heading-4">Right Aligned (Rag Left)</h4>
+        <br />
+        <p className="cbp-body">
+          This should probably be avoided if not only used in a very special use
+          case.
+  </p>
+        <br />
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**example of right aligned text**]
+  </strong>
+      </section>
+
+      <br />
+
+      <section>
+        <h4 className="cbp-heading-4">Justified (DO NOT USE)</h4>
+        <br />
+        <p className="cbp-body">
+          Oh dear. Just never, ever do this. On top of looking awful, it is very
+          inaccessible. Justified text can be difficult to read for people with
+    certain disabilities like dyslexia. <br />
+          <strong>DO NOT USE JUSTIFIED.</strong>
+        </p>
+        <br />
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**example of justified text**]
+  </strong>
+      </section>
+
+      <br />
+
+      {/*PERFORMANCE*/}
+      <section>
+        <h2 className="cbp-heading-2">
+          Performance
+    <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
           >
-            CBP Design System Type Scale
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Selector Name</th>
-              <th scope="col">Size</th>
-              <th scope="col">Font Weight</th>
-              <th scope="col">Line Height</th>
-              <th scope="col">Aliasing</th>
-              <th scope="col">Letter Spacing</th>
-            </tr>
-          </thead>
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h2>
+        <br />
+        <p className="cbp-body">
+          Application load times are an important consideration for CBP. While
+          we may not have to worry about things like customer conversion rates
+          (when users just get tired of waiting for the page to load and
+          bounce), we do have to worry about how poor optimization leads to
+          latency in how CBP conducts business. Not to mention how this
+          frustrates our users trying to do their jobs. To learn more about our
+          approach to performance, please see the Performance section of
+          foundations.
+  </p>
+      </section>
 
-          <tbody>
-            <tr>
-              <td className="cbp-masthead-1">Masthead 1</td>
-              <td>
-                <code>.cbp-masthead-1</code>
-              </td>
-              <td>36px</td>
-              <td>100</td>
-              <td>44px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+      <br />
 
-            <tr>
-              <td className="cbp-masthead-2">Masthead 2</td>
-              <td>
-                <code>.cbp-masthead-2</code>
-              </td>
-              <td>32px</td>
-              <td>100</td>
-              <td>40px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+      <section>
+        <section>
+          <h3 className="cbp-heading-3">File Type Support & Self Hosting</h3>
+          <br />
+          <p className="cbp-body">
+            One "lesson learned" from our previous effort with the CBP Theme, is
+            that in not centrally hosting our font files, we often forced the
+            page to have to load multiple copies of the same asset. One widget
+            referenced a copy of the font files, the page referenced it, then
+            maybe another asset did again. This would pile on and cause our apps
+            to suffer. This is not to mention that we effectively forced our
+            development teams to self-host a copy. For our internal CBP
+            development teams we host centralized copies of our font files so
+            everything can be accessed once and allow our users to be able to
+            properly cache these files.
+    </p>
 
-            <tr>
-              <td className="cbp-heading-1">Heading 1</td>
-              <td>
-                <code>.cbp-heading-1</code>
-              </td>
-              <td>28px</td>
-              <td>300</td>
-              <td>40px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+          <br />
 
-            <tr>
-              <td className="cbp-heading-2">Heading 2</td>
-              <td>
-                <code>.cbp-heading-2</code>
-              </td>
-              <td>25px</td>
-              <td>400</td>
-              <td>32px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+          <p className="cbp-body">
+            We support two font file types. The .woff filetype is provided to
+            give compatibility with some older versions of browsers (at some
+            point in the future this may be retired). The .woff2 filetype is
+            what modern browsers use. All other filetypes are not supported or
+            endorsed for use with the CBP Design System. For those who are
+            self-hosting be especially wary of the .eot filetype. It is somewhat
+            sticky with users who for whatever reason are still using Internet
+            Explorer, if it is mentioned in the stylesheet or is simply present
+            for it to reference the browser will use it. Eot files have
+            notoriously poor aliasing rules and will appear fuzzy and will tend
+            to fill in negative spaces in certain characters. For the sake of
+            legibility avoid this file type.
+    </p>
+        </section>
 
-            <tr>
-              <td className="cbp-heading-3">Heading 3</td>
-              <td>
-                <code>.cbp-heading-3</code>
-              </td>
-              <td>22px</td>
-              <td>400</td>
-              <td>28px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+        <br />
 
-            <tr>
-              <td className="cbp-heading-4">Heading 4</td>
-              <td>
-                <code>.cbp-heading-2</code>
-              </td>
-              <td>20px</td>
-              <td>500</td>
-              <td>28px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+        <section>
+          <h4 className="cbp-heading-4">File Types Provided</h4>
 
-            <tr>
-              <td className="cbp-heading-5">Heading 5</td>
-              <td>
-                <code>.cbp-heading-5</code>
-              </td>
-              <td>20px</td>
-              <td>500</td>
-              <td>24px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+          <br />
+          <br />
 
-            <tr>
-              <td className="cbp-heading-6">Heading 6</td>
-              <td>
-                <code>.cbp-heading-6</code>
-              </td>
-              <td>16px</td>
-              <td>700</td>
-              <td>20px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+          <h5 className="cbp-heading-5">TTF - TrueType Files (provided)</h5>
+          <br />
+          <p className="cbp-body">
+            This is a traditional desktop font file-type. We will provide these
+            to developers for local development purposes. Each weight is housed
+            in a separate file. Holds up to 210 characters per file.
+    </p>
 
-            <tr>
-              <td className="cbp-body">Body</td>
-              <td>
-                <code>.cbp-body</code>
-              </td>
-              <td>14px</td>
-              <td>400</td>
-              <td>20px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
-          </tbody>
-        </table>
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">
+            OTF - OpenType Files (not available for Roboto)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            This is the new hotness when it comes to desktop standard fonts. All
+            characters are hosted inside of a single file. Holds up to 65,536
+            characters. Extensive language and feature support. Sadly Roboto is
+            not yet available in this format.
+    </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">
+            WOFF - Web Open Font Format v1 (provided)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            This is basically the same thing as the TTF or OTF file types but
+            allows for compression and optimized for use in browsers. We will
+            include this file as part of the system because it allows support
+            for deprecated browsers.
+    </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">
+            WOFF2 - Web Open Font Format v2 (provided)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            This is WOFF v1 but with 30% better compression. This is the new
+            standard going forward and will be included with the system. The
+            inclusion of WOFF v1 is basically an IE tax and will at some point
+            be deprecated.
+    </p>
+        </section>
+      </section>
+
+      <br />
+
+      <section>
+        <h4 className="cbp-heading-4">Text Loading</h4>
+        <br />
+        <p className="cbp-body">
+          There are few different approaches to handling the loading of text.
+          When it comes to loading the specific font asset, ie Roboto, there are
+          few different philosophies. We prefer the FOUT method. The reason is
+          because with centrally hosting these font assets and the fact that
+          most of our users with have them cached we really only have to worry
+          about the content itself loading not the font. When it comes to
+          content we prefer our applications to use skeleton states and
+          progressive loading techniques.
+  </p>
 
         <br />
         <br />
 
-        <table className="table is-fullwidth">
-          <caption
-            style={{
-              textAlign: "left",
-              marginBottom: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            Support Type classNamees
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Selector Name</th>
-              <th scope="col">Size</th>
-              <th scope="col">Font Weight</th>
-              <th scope="col">Line Height</th>
-              <th scope="col">Aliasing</th>
-              <th scope="col">Letter Spacing</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="cbp-button-text">Button Text</td>
-              <td>
-                <code>.cbp-button-text</code>
-              </td>
-              <td>14px</td>
-              <td>500</td>
-              <td>normal</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>[**Insert Image of FOUT**]</strong>
 
-            <tr>
-              <td className="cbp-subhead-text">Subhead</td>
-              <td>
-                <code>.cbp-subhead-text</code>
-              </td>
-              <td>12px</td>
-              <td>500</td>
-              <td>20px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
-          </tbody>
-        </table>
         <br />
         <br />
-      </section> */}
+
+        <h5 className="cbp-heading-5">FOUT: Flash of Unstyled Text.</h5>
+        <br />
+        <p className="cbp-body">
+          Basically in the period between when a user hits a page and when the
+          font file kicks in and renders. Sometimes this can be very noticeable
+          and a jarring experience for users depending on how long this
+          experience is. With modern caching abilities, tweaking the load order
+          of file, as well as taking a comprehensive approach to loading
+          (skeleton states, progressive loading, etc) this can be mitigated or
+          eliminated.
+  </p>
+
+        <br />
+        <br />
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>[**Insert Image of FOIT**]</strong>
+
+        <br />
+        <br />
+
+        <h5 className="cbp-heading-5">FOIT: Flash of Invisible Text</h5>
+        <br />
+        <p className="cbp-body">
+          This is an approach to dealing with FOUT by telling the browser not to
+          display text at all until the font file is rendered. The issue is if
+          for any reason the font file doesn’t load, the text will NEVER load.
+          This runs antithetical to having fall-back fonts. Probably an approach
+          to be avoided.
+  </p>
+
+        <br />
+        <br />
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>[**Insert Image of FOFT**]</strong>
+
+        <br />
+        <br />
+
+        <h5 className="cbp-heading-5">FOFT: Flash of Faux Text</h5>
+        <br />
+        <p className="cbp-body">
+          This refers to loading fonts in a particular sequence. Starting with
+          Body text, then headings, etc. Until they load a web safe font like
+          Georgia is rendered. This messes with the default browser settings and
+          has been known to at times to crash browsers. Best to just take a
+          better approach to page loading and deal with FOUT.
+  </p>
+
+        <br />
+        <br />
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**Insert Image of Progressive Loading**]
+  </strong>
+
+        <br />
+        <br />
+
+        <h5 className="cbp-heading-5">Progressive Loading</h5>
+        <br />
+        <p className="cbp-body">
+          Instead of waiting to render the page until the whole thing loads. Go
+          one by one down the page, or segment and prioritize elements above the
+          fold.
+  </p>
+
+        <br />
+        <br />
+
+        {/* @TODO: Delete after content is received */}
+        <strong style={{ color: "red" }}>
+          [**Insert Image of Skeleton UI**]
+  </strong>
+
+        <br />
+        <br />
+
+        <h5 className="cbp-heading-5">Skeleton UI</h5>
+        <br />
+        <p className="cbp-body">
+          This is where a dummy placeholder box is placed to let the user know
+          that content is being loaded but is taking longer than anticipated.
+  </p>
+      </section>
+
+      <br />
+
+      <section>
+        <section>
+          <h2 className="cbp-heading-2">Micro-Typography</h2>
+          <br />
+          <p className="cbp-body">
+            As people tend to say, “the devil is in the details.” The following
+            topics may come across as trivial to some, but when careful thought
+            is given to these subjects, we can create much better designed
+            experiences for our users.
+    </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Ligatures</h3>
+          <br />
+          {/* @TODO: Delete after content is received */}
+          <strong style={{ color: "red" }}>
+            [**image examples of ligatures**]
+    </strong>
+
+          <br />
+
+          <p className="cbp-body">
+            Ligatures began in the illuminated manuscripts days. By connecting
+            certain common letter combinations together this helped those monks
+            save time in copying their books. These letter combinations were
+            also tricky for them because they would often run into each other
+            causing legibility issues. By standardizing how these letters could
+            run together they ended up saving time and improving overall
+            legibility by keeping horizontal rhythm consistent. Common ligatures
+            are ones like ff, fi, fl, ffi, ffl, and th. Enabled by default on
+            most browsers on smaller text sizes (this is defined differently by
+            each browser unfortunately).
+      <code>Text-rendering: optimizeLegibility;</code>
+            will enable ligatures and kerning but can add to load time (we
+            believe this is negligible. If you set letter spacing at all in your
+            text though, ligatures will be stripped out (this is why body copy
+            is set to normal). Ligatures aren’t as necessary for headings
+            because there shouldn't be long blocks of text.
+      <br />
+            <br />
+            Discretionary ligatures are non standard and don’t significantly
+            contribute to legibility, but offer a more stylistic approach. ch,
+            ck , ct, st. Avoid using these.
+      <br />
+            <br />
+            Contextual ligatures come with script style typefaces to help
+            combine letters to make the appearance of a single pen stroke. We
+            don’t use script style so these should also be avoided.
+      <br />
+            <br />
+            Enabling common ligatures across browsers: this class is found in
+            the CBP DS Core CSS file.
+      <br />
+            <br />
+            <br />
+            <div className="code-snippet">
+              <h5 className="cbp-heading-5">Ligature Code</h5>
+              <br />
+              <deckgo-highlight-code language="css" highlight-lines="2,2">
+                <code>
+                  {`p {`}
+                  <br />
+                  &emsp;&emsp;{`font-feature-settings: "liga";`}
+                  <br />
+                  &emsp;&emsp;{`-webkit-font-feature-settings: "liga";`}
+                  <br />
+                  &emsp;&emsp;{'-moz-font-feature-settings: "liga";'}
+                  <br />
+                  &emsp;&emsp;{"text-rendering: optimizeLegibility;"}
+                  <br />
+                  {"}"}
+                </code>
+              </deckgo-highlight-code>
+            </div>
+          </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Small Caps</h3>
+          <br />
+          <p className="cbp-body">
+            Small caps are smaller versions of capital letters so that they
+            merge better inside of body text. These are great for acronyms and
+            abbreviations. REGULAR ALL CAPS text inside of a block of text can
+            cause disruption to overall horizontal rhythm as well as give the
+            user a false indication that this text might be interactive.
+      <br />
+            <br />
+            "Fake small caps" (created by css) which just reduce the font size
+            (including stroke width) is not a good solution because it
+            interrupts flow. If your font does not have genuine small caps
+            included, do not turn on this feature.
+      <br />
+            <br />
+            This results in the need for a special type class for small caps.
+            This class should be applied to acronyms and abbreviations (whether
+      or not it has periods between letters) by enclosing the text in a{" "}
+            <code>&lt;span></code> (if inside of a larger block of text) and
+      applying the following class (<code>.small-cap</code>). This class
+            is found in the CBP DS Core CSS file.
+    </p>
+
+          <br />
+          <br />
+          {/* @TODO: Delete after content is received */}
+          <strong style={{ color: "red" }}>
+            [**image of small caps and example of fake small caps**]
+    </strong>
+
+          <br />
+          <br />
+          <br />
+          <div className="code-snippet">
+            <h5 className="cbp-heading-5">Small Caps Code</h5>
+            <br />
+            <deckgo-highlight-code language="css" highlight-lines="2,2">
+              <code>
+                {`p {`}
+                <br />
+                &emsp;&emsp;{`//change only lowercase to small caps`}
+                <br />
+                &emsp;&emsp;{`font-variant-caps: small-caps;`}
+                <br />
+                &emsp;&emsp;{`font-feature-settings: "smcp";`}
+                <br />
+                <br />
+                &emsp;&emsp;{`//change all letters into small caps`}
+                <br />
+                &emsp;&emsp;{`font-variant-caps: all-small-caps;`}
+                <br />
+                &emsp;&emsp;{`font-feature-settings: "c2sc", "smcp";`}
+                <br />
+                {"}"}
+              </code>
+            </deckgo-highlight-code>
+          </div>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Punctuation</h3>
+          <br />
+          {/* @TODO: Delete after content is received */}
+          <strong style={{ color: "red" }}>
+            [**table of punctuation name, html tag, use case, hotkeys**]
+    </strong>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">
+            The Character Viewer on your Computer
+    </h3>
+          <br />
+          <p className="cbp-body">
+            This window shows all “glyphs” available in the particular font you
+            have selected on your desktop. It it for use on your PC, use HTML
+            codes for calling these glyphs in your code.
+    </p>
+
+          <br />
+
+          <section>
+            <h5 className="cbp-heading-5">
+              How to open the Character Viewer on your Mac:{" "}
+            </h5>
+
+            <div className="content">
+              <ol>
+                <li>System Preferences → Keyboard</li>
+                <li>
+                  Check the box “Show Keyboard, Emoji & Symbol Viewers in menu
+                  bar”
+          </li>
+                <li>
+                  Click the keyboard icon next to the clock in your menu bar and
+                  select “Show Emoji & Symbols”
+          </li>
+              </ol>
+            </div>
+          </section>
+
+          <section>
+            <h5 className="cbp-heading-5">
+              How to open the Character Viewer on your Windows PC:{" "}
+            </h5>
+
+            <div className="content">
+              <ol>
+                <li>
+                  Click the Start button and type “character map” into the
+                  search box
+          </li>
+                <li>In the list of results, click “Character Map”</li>
+              </ol>
+            </div>
+          </section>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Dashes</h3>
+          {/* @TODO: Show Examples */}
+          <strong style={{ color: "red" }}>[Provide samples]</strong>
+          <br />
+          <p className="cbp-body">
+            The differences between the minus, hyphen, en dash, and em dash may
+            not seem like much, but using the correct one can be important for
+            screen readers to correctly interpret what’s on the screen even
+            though sighted user may not notice much of a difference.
+    </p>
+
+          <br />
+
+          <section>
+            <h5 className="cbp-heading-5">– em dash (&emdash)</h5>
+            <br />
+            <p className="cbp-body">
+              The main use of the em dash is to indicate the source of a quote
+              or narrative placed in front of the speaker’s name. Em dashes can
+              also be used in place of parentheses, or in place of a colon where
+              a comma may be too little of a pause, but a period may be too
+              much. This character matches the width of the capital “M” in the
+              font. Ideally, the em dash should be followed by a “thin space.”
+        <br />
+              <br />(<strong>MAC:</strong> OPTION + - ) (
+        <strong>WINDOWS:</strong> ALT + 0151)
+      </p>
+          </section>
+
+          <br />
+
+          <section>
+            <h5 className="cbp-heading-5">— en dash (&endash)</h5>
+            <br />
+            <p className="cbp-body">
+              En Dashes are exactly half of the width of an em dash. Their main
+              purpose is to replace the words “to” or “through” when used to
+              indicate ranges of values or of time. For example instead of 6 to
+              9pm you put 6–9pm, or instead of Los Angeles to New York (Los
+              Angeles-New York). There should not be any spaces between this
+              symbol and its accompanying text.
+        <br />
+              <br />(<strong>MAC:</strong> OPTION + SHIFT + - ) (
+        <strong>WINDOWS:</strong> ALT + 0150)
+      </p>
+          </section>
+
+          <br />
+
+          <section>
+            <h5 className="cbp-heading-5">- minus (&minus)</h5>
+            <br />
+            <p className="cbp-body">
+              The minus symbol should only for mathematical uses.
+        <br />
+              <br />(<strong>MAC:</strong> Use character viewer ) (
+        <strong>WINDOWS:</strong> Use character viewer)
+      </p>
+          </section>
+
+          <br />
+
+          <section>
+            <h5 className="cbp-heading-5">- hyphen (&minus)</h5>
+            <br />
+            <p className="cbp-body">
+              1/4 the width of an em dash. primarily used for hyphenating words.
+              five-dollar bill etc.
+        <br />
+              <br />(<strong>MAC:</strong> OPTION + - ) (
+        <strong>WINDOWS:</strong> Use character viewer)
+      </p>
+
+            <br />
+
+            <p className="cbp-subhead-text">
+              Fun fact: the button on your keyboard next to the “0” numeral is
+              neither a hyphen or a minus symbol, but a “hyphen-minus” which is
+              a hold over from the typewriter. It is generally accepted as a
+              hyphen, but is technically a different symbol.
+      </p>
+          </section>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">"Dumb" vs. "Smart" Quotes</h3>
+          {/* @TODO: Add Example here */}
+          <strong style={{ color: "red" }}>[Show Examples]</strong>
+          <br />
+          <br />
+          <p className="cbp-body">
+            Dumb quotes are the default mark on your keyboard (straight up and
+            down marks), but for actually quoting someone you should only use
+            smart quotes. Dumb quotes are for code only. Quotes should never be
+            used to denote emphasis (ie. I “totally” took the trash out
+            already.). Here’s an easy way to remember which is which: l/r (means
+            left/right), d/s (means double/single), quo (quotation mark).
+      <br />
+            <br />
+            & + l/r + d/s + quo + ;
+      <br />
+            <br />‘ ‘ ’ ’ “ “ ” ”
+    </p>
+
+          <br />
+
+          <p className="cbp-body">
+            <strong>&lsquo; Left Single Quote ({`&lsquo`}): </strong>
+            Used to show the beginning of a quote within another quote ie.
+      “Jessica said ‘i like oranges’ to me earlier.”{" "}
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + ] ) (<strong>WINDOWS: </strong>{" "}
+              ALT + 0145)
+      </span>
+          </p>
+
+          <br />
+
+          <p className="cbp-body">
+            <strong>&rsquo; Right Single Quote ({`&rsquo`}): </strong>
+            Used to show the end of a quote within another quote ie. “Jessica
+            said ‘i like oranges’ to me earlier.” This is also the exact same
+      character as the apostrophe so they are interchangeable.{" "}
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
+        <strong>WINDOWS: </strong> ALT + 0146)
+      </span>
+          </p>
+
+          <br />
+
+          <p className="cbp-body">
+            <strong>&ldquo; Left Double Quote ({`&ldquo`}): </strong>
+            Used to show the start of a quote.
+      <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + [ ) (<strong>WINDOWS: </strong>{" "}
+              ALT + 0147)
+      </span>
+          </p>
+
+          <br />
+
+          <p className="cbp-body">
+            <strong>&ldquo; Right Double Quote ({`&rdquo`}): </strong>
+            Used to show the end of a quote.
+      <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + SHIFT + [ ) (
+        <strong>WINDOWS: </strong> ALT + 0148)
+      </span>
+          </p>
+
+          <br />
+
+          <p className="cbp-body">
+            Not sure if you’re using the right symbol? Does the tail on the
+            symbol go straight or is it curved? Straight tails are for “dumb
+            quotes” curved are for “smart quotes.”
+    </p>
+
+          <br />
+          <br />
+
+          <div className="code-snippet">
+            <h5 className="cbp-heading-5">Code for Quotes</h5>
+            <br />
+
+            <deckgo-highlight-code language="css" highlight-lines="2,2">
+              <code>
+                {`<p>&ldquo;He left yesterday.&rdquo;</p> // Double quot. Marks`}
+                <br />
+                {`<p>&lsquo;He left yesterday.&rsquo;</p> // Single quot. Marks`}
+              </code>
+            </deckgo-highlight-code>
+          </div>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Measurement (Prime) Marks</h3>
+          {/* @TODO: Add Example here */}
+          <strong style={{ color: "red" }}>[Show Examples]</strong>
+
+          <br />
+
+          <p className="cbp-body">
+            For distance measurements like feet and inches you should use "prime
+            marks" which are slightly skewed versions of dumb quotes. for
+            example not 6'4", but 6′4″. These are entirely different symbols
+            from dumb or smart quotes and mean completely different things.
+    </p>
+
+          <section>
+            <p className="cbp-body">
+              <strong>′ Single Prime Mark (&prime): </strong>
+              This is cap sensitive. Used to indicate a measurement in feet (US
+              Imperial system) or in latitude/longitude it is used to indicate
+        “hours” as in degrees/hours/minutes.{" "}
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> use character viewer ) (
+          <strong>WINDOWS: </strong> ALT + 8242)
+        </span>
+            </p>
+
+            <br />
+
+            <p className="cbp-body">
+              <strong>″ Double Prime Mark (&Prime): </strong>
+              This is cap sensitive. Used to indicate a measurement in inches
+              (US Imperial system) or in latitude/longitude it is used to
+        indicate “minutes” as in degrees/hours/minutes.{" "}
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> use character viewer ) (
+          <strong>WINDOWS: </strong> ALT + 8243)
+        </span>
+            </p>
+          </section>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Special Spaces</h3>
+          {/* @TODO: Add Example here */}
+          <strong style={{ color: "red" }}>[Show Examples]</strong>
+
+          <br />
+
+          <p className="cbp-body">
+            <strong>&hairsp: </strong>Hair space - often used alongside dashes.
+      <br />
+            <br />
+            <strong>&thinsp: </strong>Thin space - often used in combination
+            with dashes width is equal to 1/5 or 1/6 of em dash.
+      <br />
+            <br />
+            <strong>&nbsp: </strong>Non-breaking space - these are useful for
+            preventing widows (when a single small word is left on a line all by
+            itself. it forces a word to the next line without putting an actual
+            space in there.
+    </p>
+
+          <br />
+          {/* @TODO: Add Example here */}
+          <strong style={{ color: "red" }}>
+            [Image for different kinds of spaces]
+    </strong>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">
+            Miscellaneous Commonly Misued Symbols
+    </h3>
+          <br />
+          {/* @TODO: Add Example here */}
+          <strong style={{ color: "red" }}>[Provide Examples]</strong>
+
+          <h5 className="cbp-heading-5">… (&hellip) Ellipsis</h5>
+          <br />
+          <p className="cbp-body">
+            This is not the same as three periods, this will not be interpreted
+            the same by assistive technologies. The proper use of an ellipsis is
+            when omitting non-pertinent content from the middle of a paragraph
+            or quote. It can be used at the end of a sentence where it is
+            commonly used to indicate a speaker trailing off or when a speaker
+      is interrupted. <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + ; ) (<strong>WINDOWS: </strong>
+              ALT + 0133)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">’ Apostrophe (&lsquo)</h5>
+          <br />
+          <p className="cbp-body">
+            This is technically the same symbol as a single right quote. It is
+            used when indicating possession or with contractions. It is also
+            acceptable on occasions to use it to pluralize items which are not
+            technically full words like the 2000’s. Or I need 8 A’s to make
+            dean’s list this quarter. In these cases adding the “s” to the word
+            would change its meaning. Using a dumb quote, or prime mark is not
+      an acceptable substitute. <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
+        <strong>WINDOWS: </strong>
+              ALT + 0146)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">✖ (&times)- Dimension</h5>
+          <br />
+          <p className="cbp-body">
+            Use this symbol to indicate multiplication not (*).
+      <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> use character viewer ) (
+        <strong>WINDOWS: </strong>
+              ALT + 0215)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">➗ (&divide)- Division</h5>
+          <br />
+          <p className="cbp-body">
+            Use this symbol to indicate division not (/)
+      <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
+              ALT + 0247)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">≠ ($ne)- Not Equal</h5>
+          <br />
+          <p className="cbp-body">
+            Just like it looks.
+      <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
+              ALT + 8800)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">© (&copy)- Copyright</h5>
+          <br />
+          <p className="cbp-body">
+            This is for original works of literature, drama, music, art or
+            intellectual property. Copyrights do not cover titles, names,
+            phrases or slogans, symbols, designs, ideas, procedures, methods,
+            concepts or discoveries. There should be a space separating this
+            symbol from the copyrighted language and should never be
+            superscript.
+      <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + g ) (<strong>WINDOWS: </strong>
+              ALT + 0169)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">™ (&trade)- Trademark</h5>
+          <br />
+          <p className="cbp-body">
+            Trademarks are for words, symbols, devices or names that are used to
+            distinguish the goods of one manufacturer or seller from that of
+            another. There should not be any extra space between the trademarked
+            text and the symbol and should be always be superscript. If not
+      automatically formatting correctly to superscript, use the{" "}
+            <code>{`<sup>`}</code> tag.
+      <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + 2 ) (<strong>WINDOWS: </strong>
+              ALT + 0153)
+      </span>
+          </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">® (&reg)- Registered Trademark</h5>
+          <br />
+          <p className="cbp-body">
+            With a registration, a trademark is protected against another
+            company’s use of the name or image. A registered trademark is a
+            federal and legal registration of the mark. There should not be any
+            extra space between the registered text and the symbol and should be
+            always be superscript. If not automatically formatting correctly to
+      superscript, use the <code>{`<sup>`}</code> tag
+      <br />
+            <span className="cbp-subhead-text">
+              (<strong>MAC: </strong> OPTION + r ) (<strong>WINDOWS: </strong>
+              ALT + 0174)
+      </span>
+          </p>
+        </section>
+
+        <br />
+        <br />
+
+        <h3 className="cbp-heading-3">Font-Aliasing</h3>
+        <br />
+        <p className="cbp-body">
+          Font-aliasing helps dark headers really pop on light backgrounds. In
+          our “light” heading classes we have Font-smoothing: anti-aliased
+          applied to help them stand out on the page. However, on dark
+          backgrounds this effect creates a sort of halo effect which is
+          non-desirable. Which is why this property is not applied to our “dark”
+          heading classes.
+  </p>
+
+        <br />
+        {/* @TODO: Add Example here */}
+        <strong style={{ color: "red" }}>[Image of Anti-Aliasing]</strong>
+      </section>
+
+      <br />
+
+      <section>
+        <h2 className="cbp-heading-2">Units of Measurement in Typography</h2>
+        <br />
+        {/* @TODO: Add Example here */}
+        <strong style={{ color: "red" }}>[Image Explanation]</strong>
+        <br />
+
+        <p className="cbp-body">
+          All of the sizing in the typographic classes of the CBP Design System
+          are sized in REM (relative EMs). Any development team that needs to
+          create custom typographic classes should use rem values relative to
+          the root font-size of 14px.
+    <br />
+          <br />
+          What are REM units? REM allows you to set the font-size property with
+          a percentage value of font-size set to the HTML selector. If we set
+          our root to 14px and size our h1 element to 3rem then the size of h1
+          will be 42px (3 x 14px) etc.
+    <br />
+          <br />
+          When is it ok to use EM units? Only when the sizing of a property is
+          directly related to the element you’re working with and will not
+          disturb vertical rhythm. For example the max-length property on our
+          body copy class is set to 75em. This is because it is directly related
+          to that particular font, at that particular size. It just so happens
+          that body copy is the same REM size as the root. However, when using
+          REMs for max-length with a font class at another size may have
+          undesirable results.
+    <br />
+          <br />
+          In order to maintain a consistent 4px baseline grid, all line-height
+          settings should be expressed in intervals of 4px. Spacing between
+          lines of text inside the same text box should be defined with the
+          line-height property.
+    <br />
+          <br />
+          In order to maintain a consistent 4px baseline grid, all line-height
+          settings should be expressed in intervals of 4px. Spacing between
+          lines of text inside the same text box should be defined with the
+          line-height property.
+    <br />
+          <br />
+          Spacing between text boxes should be defined using the spacing system
+          prescribed in the Spacing, Grid, and Layout section of Foundations.
+  </p>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">General Sizing Units</h3>
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">Pixels- px (aka CSS Pixels)</h5>
+          <br />
+          <p className="cbp-body">
+            This no longer refers to the physical pixels in the device’s screen,
+            but rather is the space equal to 1/96th of 1 inch. This means that
+            no matter how pixel-dense your device’s screen is an object will
+            appear the same relative size optically.
+    </p>
+
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">EMs -em</h5>
+          <br />
+          <p className="cbp-body">
+            This is an implicit, flexible unit that the browser converts into
+            pixels by multiplying the em value by the value of its parent
+            element. This is not recommended to be used for assigning text
+            sizing because of its inheritance issues.
+    </p>
+
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">REMs - rem (Relative EMs)</h5>
+          <br />
+          <p className="cbp-body">
+            This is an explicit, flexible unit that the browser converts into
+            pixels by multiplying the rem value by the value assigned to HTML.
+      This is the preferred method for assigning text sizing.{" "}
+          </p>
+
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">Points - pt (iOS ecosystem)</h5>
+          <br />
+          <p className="cbp-body">
+            An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
+            independent just like the sp on android. They usually convert out
+            evenly as the true resolution is hidden.
+      <br />
+            <br />
+            <strong>1sp = 1pt = 1rem</strong>
+          </p>
+          <br />
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">
+            Density Independent Pixels -dp (Android ecosystem)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            The density- independent pixel is equivalent to one physical pixel
+            on a 160 dpi screen, which is the baseline density assumed by the
+            system for a “medium” density screen. The conversion of dp units to
+            screen pixels is simple: px = dp * (dpi / 160). For example, on a
+            240 dpi screen, 1 dp equals 1.5 physical pixels. Android has a
+            separate unit for prescribing text sizing, sp. Please use that unit
+            for native Android development.
+    </p>
+
+          <br />
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">
+            Scalable Independent Pixels - sp (Android Ecosystem)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            SP is the same thing as dp but used for font sizing on android,
+            while the dp is used for everything but fonts.
+    </p>
+
+          <br />
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">
+            Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            These settings are fluid type layouts (which should be a very rare
+            occurrence within the CBP enterprise). The sizing unit is based off
+            of view-port height and view-port width respectively.
+      <br />
+            <br />
+            <strong>
+              1vh = 1% of view-port height 1vw = 1% of view-port width
+      </strong>
+            <br />
+            <br />
+            This is not widely supported yet in browsers, and is not great for
+            productive type applications.
+    </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Font Relative Lengths</h3>
+          <br />
+          <br />
+          <h5 className="cbp-heading-5">ex (Height of Font’s x-height)</h5>
+          <br />
+          <p className="cbp-body">
+            We use this to apply letter-spacing to small caps because the
+            characters height in small caps are aligned to the x-height setting.
+            X-height refers to the height of the lower-case letter “x”.
+    </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">
+            cap (height of font’s capital letters)
+    </h5>
+          <br />
+          <p className="cbp-body">
+            This is used to set letter-spacing of UPPERCASE text. The preference
+            of the CBP Design System is to use small-caps for acronyms and
+            abbreviations so follow the guidance for small caps where
+            applicable.
+    </p>
+
+          <br />
+          <br />
+
+          <h5 className="cbp-heading-5">ch (width of font’s 0 character)</h5>
+          <br />
+          <p className="cbp-body">
+            This is used to set letter-spacing for monotype fonts like Roboto
+            Mono. Characters in monotype are “fixed-width” and occupy an equal
+            amount of space no matter which character. The zero (0) character is
+            the mostly evenly designed and therefore makes a good reference
+            point in this scenario.
+    </p>
+        </section>
+      </section>
+
+      <br />
+
+      <section>
+        {/* @TODO: Add Collapsible sections for WCAG Details */}
+        <h2 className="cbp-heading-2">
+          Accessibility Concerns with Typography
+  </h2>
+        <br />
+        <p className="cbp-body">
+          Typography is the heart of any design system. At CBP we follow the DHS
+          Trusted Tester Guidelines which aligns to the WCAG 2.0 AA
+          requirements. We try to meet AAA rules whenever possible. To get a
+          comprehensive view of how we approach accessibility in the CBP Design
+          System please see that section in the foundations area. You should be
+          aware of the following concepts when working with typography in the
+          CBP Design System:
+  </p>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">
+            Using Semantic Elements to identify blocks of text.
+    </h3>
+          <br />
+          <p className="cbp-body">
+            No matter which elements you are adding to your pages, the correct
+            corresponding semantic HTML element should always be utilized.
+            Properly tagging text elements on the page will allow assistive
+            technologies to correctly interpret all the information on the page.
+    </p>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.3.1 Info and Relationships Level A
+      <br />
+            Information, structure, and relationships conveyed through
+            presentation can be programmatically determined or are available in
+            text.
+      <br />
+            <br />
+            1.3.2 Meaningful Sequence Level A <br />
+            When the sequence in which content is presented affects its meaning,
+            a correct reading sequence can be programmatically determined.
+    </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">
+            Maintaining Proper Heading Structure
+    </h3>
+          <br />
+          <p className="cbp-body">
+            The headings on your page should be semantically tagged and appear
+            in descending order. Theoretically, there should only be a single H1
+            element on the page (the first item present in your page’s main
+            content UI region). Headings should not skip a level in descending
+            order (h1 > h2 > h3 > h4 > h5 >h6). Sibling heading elements should
+            use the same level semantic tag. The heading styling classes are
+            named to be synonymous with the semantic heading structure. For
+            example h1 should be paired with heading1, h2 with heading2, etc.
+            This is with the notable exception of the masthead classes which are
+            designed to stand in for heading 1 when you have a need to style
+            your page’s title more flamboyantly. The reason we do not style the
+            semantic tags directly is because we have a need to create more than
+            one version of a heading class depending on its contrasting
+            background color.
+    </p>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.3.1 Info and Relationships Level A
+      <br />
+            Information, structure, and relationships conveyed through
+            presentation can be programmatically determined or are available in
+            text.
+      <br />
+            <br />
+            1.3.2 Meaningful Sequence Level A <br />
+            When the sequence in which content is presented affects its meaning,
+            a correct reading sequence can be programmatically determined.
+    </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Consistency of Presentation</h3>
+          <br />
+          <p className="cbp-body">
+            This is basically when you are styling two items of equal weight in
+            your content. For example, you have two text elements (h3 for
+            example) on the page that are siblings. These h3 elements must be
+            styled identically. Doing so means using the same font-weight,
+            color, and other styling attributes.
+    </p>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.3.1 Info and Relationships Level A
+      <br />
+            Information, structure, and relationships conveyed through
+            presentation can be programmatically determined or are available in
+            text.
+      <br />
+            <br />
+            1.3.2 Meaningful Sequence Level A <br />
+            When the sequence in which content is presented affects its meaning,
+            a correct reading sequence can be programmatically determined.
+    </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Line Height, Line Width</h3>
+          <br />
+          <p className="cbp-body">
+            WCAG 2.0 accessibility rules state that there should be a least 1.5x
+            line height when one paragraph immediately follows another. In this
+            case, our line height for body copy is 20px and therefore the
+            spacing between paragraphs must be at least 32px (rounded up from
+            30px to match our baseline grid). We also implement a 75em max-width
+            restriction on body copy to comply with maximum character
+            requirements. NOTE: as stated earlier, justified text is just bad,
+            don’t do it.
+    </p>
+
+          <br />
+
+          <div className="code-snippet">
+            <h5 className="cbp-heading-5">P + P</h5>
+            <br />
+
+            <deckgo-highlight-code language="css" highlight-lines="2,2">
+              <code>
+                {`p + p {`}
+                <br />
+                &emsp;&emsp;{`text-indent: 1.6rem; //32 divided by 20`}
+                <br />
+                {`}`}
+              </code>
+            </deckgo-highlight-code>
+          </div>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.4.8 Visual Presentation Level AAA
+      <br />
+            For the visual presentation of blocks of text, a mechanism is
+            available to achieve the following:
+      <br />
+            <div className="content">
+              <ol>
+                <li>
+                  Foreground and background colors can be selected by the user.
+                  (not doing)
+          </li>
+                <li>
+                  Width is no more than 80 characters or glyphs (40 if CJK).
+          </li>
+                <li>
+                  Text is not justified (aligned to both the left and the right
+                  margins).
+          </li>
+                <li>
+                  Line spacing (leading) is at least space-and-a-half within
+                  paragraphs, and paragraph spacing is at least 1.5 times larger
+                  than the line spacing.
+          </li>
+                <li>
+                  Text can be resized without assistive technology up to 200
+                  percent in a way that does not require the user to scroll
+            horizontally to read a line of text{" "}
+                  <a
+                    href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#fullscreenwindowdef"
+                    target="__blank"
+                  >
+                    on a full-screen window.
+            </a>
+                </li>
+              </ol>
+            </div>
+          </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Color and Contrast</h3>
+          <br />
+          <p className="cbp-body">
+            Color when it applies to text should be supplementary when it has
+            specific meaning. For example if you have a link within a paragraph,
+            simply making it blue is not sufficient. You need another visual cue
+            that explains what meaning that color is trying to represent. Making
+            that text into a heavier weight like bold and italicizing it would
+            be sufficient however (as long as this approach is consistent across
+            the enterprise). In order to keep text legible, text should meet
+            minimum contrast ratios with the color around it. Consider using the
+            ANDI browser extension to test the text on your page to ensure it
+            meets minimum contrast values.
+    </p>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.4.1 Use of Color Level A
+      <br />
+            Color is not used as the only visual means of conveying information,
+            indicating an action, prompting a response, or distinguishing a
+            visual element.
+      <br />
+            <br />
+            1.4.3 Contrast (Minimum) Level AA
+      <br />
+            The visual presentation of text and images of text has a contrast
+            ratio of at least 4.5:1, except for the following: Hide full
+            description
+      <div className="content">
+              <ul>
+                <li>
+                  <strong>Large Text: </strong> Large-scale text and images of
+                  large-scale text have a contrast ratio of at least 3:1;
+          </li>
+                <li>
+                  <strong>Incidental: </strong>Text or images of text that are
+                  part of an inactive user interface component, that are pure
+                  decoration, that are not visible to anyone, or that are part
+                  of a picture that contains significant other visual content,
+                  have no contrast requirement.
+          </li>
+                <li>
+                  <strong>Logotypes: </strong>Text that is part of a logo or
+                  brand name has no contrast requirement.
+          </li>
+              </ul>
+            </div>
+          </p>
+
+          <br />
+          <p className="cbp-body">
+            The ANDI extension can be found here:{" "}
+            <a
+              href="https://www.ssa.gov/accessibility/andi/help/install.html"
+              target="__blank"
+            >
+              https://www.ssa.gov/accessibility/andi/help/install.html
+      </a>
+          </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">Resizing of Text</h3>
+          <br />
+          <p className="cbp-body">
+            The construction of our sites and applications should not interfere
+            with a user's ability to use the native functionality of the browser
+            to zoom up to 200%.
+    </p>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.4.4 Resize text Level AA
+      <br />
+            Except for captions and images of text, text can be resized without
+            assistive technology up to 200% without loss of content or
+            functionality.
+    </p>
+        </section>
+
+        <br />
+
+        <section>
+          <h3 className="cbp-heading-3">
+            Images of Text
+      <a
+              href="#toTop"
+              className="cbp-heading-6"
+              style={{ position: "relative", float: "right", right: "3rem" }}
+            >
+              Back to Top <i className="fas fa-arrow-up"></i>
+            </a>
+          </h3>
+          <br />
+          <p className="cbp-body">
+            Having embedded images on your page with important text needs to be
+            understandable for the end user. You should provide complete alt
+            text descriptions on these images. The alt text should give an
+            equitable explanation of the content illustrated in the image. Also,
+            consider other means of presenting this information rather than
+            having it embedded on an image, if possible. If you are displaying a
+            logo, alt text for the image should describe that it is a logo and
+            the text contained within.
+    </p>
+
+          <br />
+
+          <p className="cbp-subhead-text">
+            <strong>WCAG Details</strong> <br />
+            <br />
+            1.4.5 Images of Text Level AA
+      <br />
+            If the technologies being used can achieve the visual presentation,
+            text is used to convey information rather than images of text except
+            for the following:
+      <div className="content">
+              <ul>
+                <li>
+                  <strong>Customizable: </strong>The image of text can be
+                  visually customized to the user's requirements
+          </li>
+                <li>
+                  <strong>Essential: </strong>A particular presentation of text
+                  is essential to the information being conveyed.
+          </li>
+              </ul>
+            </div>
+          </p>
+        </section>
+      </section>
+
+      <br />
+
+      <section>
+        <h2 className="cbp-heading-2">Note</h2>
+        <br />
+        <p className="cbp-body">
+          <em>
+            Just because the Design System is built with Accessibility in mind
+            does not mean that your site will automatically be compliant with
+            DHS Trusted Tester rules. Diligence is required to make sure that
+            these concepts are front of mind when you are building with the CBP
+            Design System. This will ensure that your products remain
+            accessible.
+      <br />
+            <br />
+            Learn more about accessibility at DHS by visiting the following
+            resources:
+      <br />
+            <br />
+            To learn more about the <strong>
+              DHS Trusted Tester program{" "}
+            </strong>{" "}
+            click here:{" "}
+            <a href="https://www.dhs.gov/trusted-tester" target="__blank">
+              https://www.dhs.gov/trusted-tester
+      </a>
+            <br />
+            To learn more about how to earn a{" "}
+            <strong>DHS Trusted Tester certification </strong>
+            click here:{" "}
+            <a href="https://training.section508testing.net/" target="__blank">
+              https://training.section508testing.net/
+      </a>
+            <br />
+            To learn more about <strong>WCAG guidelines </strong> click here:{" "}
+            <a
+              href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0"
+              target="__blank"
+            >
+              https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0
+      </a>
+          </em>
+        </p>
+      </section>
+
+
     </article>
   </Layout>
 )

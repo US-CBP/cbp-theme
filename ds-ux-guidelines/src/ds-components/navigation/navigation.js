@@ -192,7 +192,7 @@ class Navigation extends Component {
                 aria-controls="dropdown-menu"
                 style={{ width: "100%" }}
               >
-                <span>version 2.0</span>
+                <span>CBP Theme Version 2.0</span>
                 &nbsp; <i className="fas fa-angle-down" aria-hidden="true"></i>
               </button>
             </div>
@@ -205,7 +205,7 @@ class Navigation extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  1.10.18
+                  CBP THEME VERSION 1.11.0
                 </a>
               </div>
             </div>

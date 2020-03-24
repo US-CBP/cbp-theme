@@ -62,3 +62,8 @@ section {
   border-radius: 3px;
   padding: 25px 20px 15px 20px; 
 }
+
+.dropdown-content, .dropdown-trigger {
+  position: relative;
+  bottom: 15px;
+}

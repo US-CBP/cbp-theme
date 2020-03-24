@@ -7,10 +7,6 @@
 }
 
 @include tablet-portrait-view {
-  body {
-    // background-color: red;
-  }
-
   .cbp-grid {
     gap: 28px;
     grid-template-columns: repeat(8, 1fr);
@@ -19,10 +15,6 @@
 }
 
 @include tablet-landscape-view {
-  body {
-    // background-color: yellow;
-  }
-
   .cbp-grid {
     gap: 28px;
     grid-template-columns: repeat(12, 1fr);
@@ -31,10 +23,6 @@
 }
 
 @include large-desktop-view {
-  body {
-    // background-color: green;
-  }
-
   .cbp-grid {
     gap: 28px;
     margin: 0 44px;
