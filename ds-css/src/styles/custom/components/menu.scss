@@ -1,11 +1,14 @@
 .menu {
   overflow-y: auto;
-  padding: 24px;
+  // padding: 24px;
   background-color: $grey-lightest;
   font-size: $cbp-body-text;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-list {
+  font-size: 1rem;
   > li {
     a {
       &:hover {
@@ -18,5 +21,9 @@
 }
 
 .menu-label {
-  font-size: $cbp-size-6;
+  display:block;
+  position: relative;
+  left: 28px;
+  font-weight: bold;
+  margin-top: 10px;
 }
