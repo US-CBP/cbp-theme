@@ -67,3 +67,26 @@ section {
   position: relative;
   bottom: 15px;
 }
+
+.menu {
+  overflow-y: auto;
+  padding: 24px;
+  background-color: $grey-lightest;
+  font-size: $cbp-body-text;
+}
+
+.menu-list {
+  > li {
+    a {
+      &:hover {
+        background-color: $grey-lighter;
+        color: $cbp-info;
+        font-weight: $cbp-weight-medium;
+      }
+    }
+  }
+}
+
+.menu-label {
+  font-size: $cbp-size-6;
+}
