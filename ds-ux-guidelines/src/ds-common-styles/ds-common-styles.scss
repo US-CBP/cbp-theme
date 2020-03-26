@@ -65,5 +65,16 @@ section {
 
 .dropdown-content, .dropdown-trigger {
   position: relative;
-  bottom: 15px;
+  left: 18px;
+  top: 5px;
+
+}
+
+.dropdown-container {
+  margin-bottom: 2rem;
+}
+
+.menu-text {
+  position: relative;
+  left: 18px;
 }

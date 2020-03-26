@@ -19,7 +19,7 @@ const Header = ({ title }) => (
     
       <div className="level-right">
         <a href="#noId" className="is-size-7">
-          &nbsp; Changelog
+          &nbsp; &nbsp; Changelog
         </a>
         &nbsp;
         <a href="#noId" className="is-size-7">
