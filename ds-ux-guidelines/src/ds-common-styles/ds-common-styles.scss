@@ -2,12 +2,14 @@
   Common styles shared across Design System site.
 */
 
+@import "../../../ds-css/src/styles/custom/utilities/initial-variables.scss";
+
 /* Color variables */
-$cbp-default: #ffffff;
-$cbp-primary: #00416a;
-$universal-header: #003e65;
-$grey-base: #000000;
-$grey-lightest: #f6f6f6;
+// $cbp-default: #ffffff;
+// $cbp-primary: #00416a;
+// $universal-header: #003e65;
+// $grey-base: #000000;
+// $grey-lightest: #f6f6f6;
 
 /* iFrame style for height. Need to revisit this. */
 iFrame {
@@ -81,7 +83,6 @@ section {
 
 .menu {
   overflow-y: auto;
-  // padding: 24px;
   background-color: $grey-lightest;
   font-size: $cbp-body-text;
   padding: 0;
