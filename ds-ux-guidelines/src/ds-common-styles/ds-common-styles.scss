@@ -1,13 +1,15 @@
-/* 
+/*
   Common styles shared across Design System site.
 */
 
+@import "../../../ds-css/src/styles/custom/utilities/initial-variables.scss";
+
 /* Color variables */
-$cbp-default: #ffffff;
-$cbp-primary: #00416a;
-$universal-header: #003e65;
-$grey-base: #000000;
-$grey-lightest: #f6f6f6;
+// $cbp-default: #ffffff;
+// $cbp-primary: #00416a;
+// $universal-header: #003e65;
+// $grey-base: #000000;
+// $grey-lightest: #f6f6f6;
 
 /* iFrame style for height. Need to revisit this. */
 iFrame {
@@ -60,10 +62,49 @@ section {
 ;
   width: 80%;
   border-radius: 3px;
-  padding: 25px 20px 15px 20px; 
+  padding: 25px 20px 15px 20px;
 }
 
 .dropdown-content, .dropdown-trigger {
   position: relative;
-  bottom: 15px;
+  left: 18px;
+  top: 5px;
+
+}
+
+.dropdown-container {
+  margin-bottom: 2rem;
+}
+
+.menu-text {
+  position: relative;
+  left: 18px;
+}
+
+.menu {
+  overflow-y: auto;
+  background-color: $grey-lightest;
+  font-size: $cbp-body-text;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list {
+  font-size: 1rem;
+  > li {
+    a {
+      &:hover {
+        background-color: $grey-lighter;
+        color: $cbp-info;
+        font-weight: $cbp-weight-medium;
+      }
+    }
+  }
+}
+
+.menu-label {
+  position: relative;
+  left: 28px;
+  font-weight: bold;
+  margin-top: 10px;
 }
