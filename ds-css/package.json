@@ -49,7 +49,10 @@
     "node:clean": "rm package-lock.json && rm -rf node_modules && npm i",
     "watch": "webpack --mode production --watch",
     "webpack:dev": "webpack --mode development",
-    "webpack": "webpack --mode production"
+    "webpack": "webpack --mode production",
+    "preversion": "npm run clean:all'",
+    "version": "npm install && npm run build",
+    "postversion": "git push && git push --tags"
   },
   "husky": {
     "hooks": {
