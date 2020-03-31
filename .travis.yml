@@ -18,10 +18,10 @@ env:
   global:
     secure: c+5Nm6cbXYjyvidKpoGQhvoF91Sv1b73SvDcsNKLv1wd1Ve7E8LPD1YozkDbrYc9iHrzmVsqSPt+unbnOyGRgCAx32wxtRfJCGf7ReqqEbdDLjQeuLz87Xq8qGPNRL18kkAt/hO6fQFxXSIwdIZQiEomj39HWw3aKzG7KpdJRsWRj3NDGs0mT9aKpHTwdaS2NzubXCXwVFuOVAEdJNLBHlogsyOFPpouvF06Ydw5sddPVwItYYNvtwSs6WrurzYk8Q89rPFFI7g5Gg7YnnjuWF1OYaD3wgXYj0eZ7fTQqelIYmQkI6IqLdEJOMUBfkkgwmP12SuZGToPk7Gsq7aOshPS3FhdMfTkp8vffXG3MB92ZoYrdNAf0vXOmotWWBSVIqOU9uWaeVNvAh5psl7TiMOTXJCMre9c5n7uZMztQcxOinhWuw3MCU/XT5W/x2OyA1ZmQCVvLphIVDMldTwYzHaJYKXfGdKBylZHRu5vyiEl0+/fFvabtwNDk0nCrv4Q2q9ExciNdV4LRki/7wEg3NxPWyltKHBvu1Ux08hAnwjGL1gZKL9IpMSSzXLbb9SS8fXSXvt5mWT6/EgKcEehZHIhSU4poenid8KbZkrXOnedLNk+JZ9lQh9soas9WjotIfPS/R+s3llZ8d828osoTI1gLb5YBz/cSH7Q+7NxrQs=
 deploy:
-  provider: npm
+  provider: script
   email: "$NPM_EMAIL"
   api_key: "$NPM_TOKEN"
-  script: "npm publish ds-css/dist --tag next"
+  script: "cp .npmrc.template $HOME/.npmrc && npm publish ds-css/dist --tag next"
   on:
     tags: true
   skip_cleanup: true
