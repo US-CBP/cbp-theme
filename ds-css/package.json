@@ -1,6 +1,6 @@
 {
   "name": "cbp-ds",
-  "version": "2.0.2",
+  "version": "0.0.0",
   "description": "This is the CSS offering built upon the CBP UX Guidelines.  The CSS can be used with any web user interface or framework.",
   "main": "webpack.config.js",
   "author": "Creative Services",
@@ -49,10 +49,7 @@
     "node:clean": "rm package-lock.json && rm -rf node_modules && npm i",
     "watch": "webpack --mode production --watch",
     "webpack:dev": "webpack --mode development",
-    "webpack": "webpack --mode production",
-    "preversion": "npm run clean:all",
-    "version": "npm install && npm run build",
-    "postversion": "git push && git push --tags"
+    "webpack": "webpack --mode production"
   },
   "husky": {
     "hooks": {

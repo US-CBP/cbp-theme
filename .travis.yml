@@ -21,7 +21,7 @@ deploy:
   provider: npm
   email: "$NPM_EMAIL"
   api_key: "$NPM_TOKEN"
+  script: "npm publish ds-css/dist --tag next"
   on:
     tags: true
   skip_cleanup: true
-  tag: beta
