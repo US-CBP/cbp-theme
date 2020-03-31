@@ -21,7 +21,7 @@ deploy:
   provider: script
   email: "$NPM_EMAIL"
   api_key: "$NPM_TOKEN"
-  script: "cp .npmrc.template $HOME/.npmrc && npm publish ds-css/dist --tag next"
+  script: "cp .npmrc.template $HOME/.npmrc && npm publish dist --tag next"
   on:
     tags: true
   skip_cleanup: true
