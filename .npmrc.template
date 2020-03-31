@@ -1,0 +1,3 @@
+always-auth=true
+email=${NPM_EMAIL}
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}

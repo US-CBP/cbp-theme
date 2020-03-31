@@ -18,11 +18,8 @@ env:
   global:
     secure: c+5Nm6cbXYjyvidKpoGQhvoF91Sv1b73SvDcsNKLv1wd1Ve7E8LPD1YozkDbrYc9iHrzmVsqSPt+unbnOyGRgCAx32wxtRfJCGf7ReqqEbdDLjQeuLz87Xq8qGPNRL18kkAt/hO6fQFxXSIwdIZQiEomj39HWw3aKzG7KpdJRsWRj3NDGs0mT9aKpHTwdaS2NzubXCXwVFuOVAEdJNLBHlogsyOFPpouvF06Ydw5sddPVwItYYNvtwSs6WrurzYk8Q89rPFFI7g5Gg7YnnjuWF1OYaD3wgXYj0eZ7fTQqelIYmQkI6IqLdEJOMUBfkkgwmP12SuZGToPk7Gsq7aOshPS3FhdMfTkp8vffXG3MB92ZoYrdNAf0vXOmotWWBSVIqOU9uWaeVNvAh5psl7TiMOTXJCMre9c5n7uZMztQcxOinhWuw3MCU/XT5W/x2OyA1ZmQCVvLphIVDMldTwYzHaJYKXfGdKBylZHRu5vyiEl0+/fFvabtwNDk0nCrv4Q2q9ExciNdV4LRki/7wEg3NxPWyltKHBvu1Ux08hAnwjGL1gZKL9IpMSSzXLbb9SS8fXSXvt5mWT6/EgKcEehZHIhSU4poenid8KbZkrXOnedLNk+JZ9lQh9soas9WjotIfPS/R+s3llZ8d828osoTI1gLb5YBz/cSH7Q+7NxrQs=
 deploy:
-  provider: npm
-  email: "david.hodge@lucidtechnics.com"
-  on: 
+  provider: script
+  script: "cp .npmrc.template $HOME/.npmrc && ls -ltra ds-css/dist && cd $TRAVIS_BUILD_DIR && ls -ltra && mkdir dist && ls -ltra && npm run css:dist && ls -ltra && npm publish dist --tag $NPM_TAG"
+  on:
     tags: true
   skip_cleanup: true
-  tag: beta
-  api_key:
-    secure: GOzR0wrCJpxD7i5jJ9HJA2GTaOOxt5KoRsH7PaE6BAQBgwirHF4D1pVRA3chfW8Gb5g7gVf8LkiTnKTM/MvWW4m7aN5SskhlbOf3mV0va6CmvKY5tkbGn1hW9eU+MadGX8Ssksdwh6mFOKBxtxttiDul0nuwOKbWr5UUTfBtJVoQ5BJYojRrKRoL9vg//seAwrJ/9CySM/T06xRLPid3f3FPToUOlo0MH5PTO82yyeWsO7ETY5Vi3AkErqGEGd0vmi0EEcdlYFGhE3e4Pm1uo6I2BR2x5q6ptyhj/EwZia7Y4gurGBB4F3FH1Bi/D35kcDD2/eB/MwaLArPsj/0lu1l7tUYwpLW2XHBXJjwYPkVWicjz5Zo87RTRtjeNJyNkxNimq9/SJ5UDhmbHJUb/O3S31qGfuPo5tqPm9ly/0o3Pk4/B3aZgvIESIS+xlFq1v686rKtdTV6KoEOWzGKt3e0MMeh36TaOMQgf5dFJBEBLw1W9PE62DH3nLbogOLWiVc3CqtQKPL5NxBiKu+CU64zZLHoSTBLDTA2HxOzJnPgcyTvm6N3qNZZrne5LoZa9przxFUxrwd/Jx7jfur850a8ayj3s/h5GfwBVfLGBClk2vofwl8CWJAwxyeVazZ0Sqq34rj1aYEWDbZ/k/K0gD+3ghXhakn2exlEAzPvn1E0=
