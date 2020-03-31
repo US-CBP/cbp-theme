@@ -1989,6 +1989,7 @@ const TypographyPage = () => (
             Enabling common ligatures across browsers: this class is found in
             the CBP DS Core CSS file.
       <br />
+      </p>
             <br />
             <br />
             <div className="code-snippet">
@@ -2010,7 +2011,7 @@ const TypographyPage = () => (
                 </code>
               </deckgo-highlight-code>
             </div>
-          </p>
+        
         </section>
 
         <br />

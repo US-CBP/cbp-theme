@@ -23,7 +23,7 @@ const TableComponentPage = () => (
         </p>
       </div>
 
-      <div id="code" className="container cbp-code">
+      <div id="Code" className="container cbp-code">
         <div id="code" className="cbp-heading-2 section-pad-temp">Code</div>
 
         <div id="table">
@@ -151,7 +151,7 @@ const TableComponentPage = () => (
         </div>
         <br/><br/>
 
-        <section id="usage">
+        <section id="Design Guidelines">
           <h2 className="cbp-heading-2 section-pad-temp">Design Guideline</h2>
 
           <h2 id="general" className="cbp-heading-3">General</h2>

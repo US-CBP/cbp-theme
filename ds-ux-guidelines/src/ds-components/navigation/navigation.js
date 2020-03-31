@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
 import React, { Component } from "react"
 
-if (typeof window !== "undefined") {
-  // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
-}
+// if (typeof window !== "undefined") {
+//   // eslint-disable-next-line global-require
+//   require("smooth-scroll")('a[href*="#"]')
+// }
 
 class Navigation extends Component {
   state = {
@@ -102,17 +102,14 @@ class Navigation extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleClose);
-  };
+    document.addEventListener("mousedown", this.handleClose)
+  }
 
   componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClose);
-  };
+    document.removeEventListener("mousedown", this.handleClose)
+  }
 
   menuList = () => {
-    /*     return (
-      <li>WORKING</li>
-    ) */
     const menuList = this.state.categories.map(cat => {
       return (
         <>
@@ -120,7 +117,7 @@ class Navigation extends Component {
           <ul className="menu-list">
             {cat.subcategory.map(subCat => {
               return (
-                <li>
+                <li key={`.${subCat.name}-main`}>
                   <Link to={subCat.link}>{subCat.name}</Link>
 
                   {subCat.anchors !== undefined ||
@@ -128,22 +125,13 @@ class Navigation extends Component {
                     <ul style={{ borderLeft: "solid 1px #aaaa98" }}>
                       {subCat.anchors.map(anchor => {
                         return (
-                          //key prop wip
                           <li key={`.${anchor.name.replace(/\s/g, "")}`}>
-                            <Link
-                              to={anchor.id}
-                              key={`.${anchor.name.replace(/\s/g, "")}-item`}
-                            >
-                              {anchor.name}
-                            </Link>
+                            <Link to={anchor.id}>{anchor.name}</Link>
                           </li>
                         )
                       })}
                     </ul>
                   ) : null}
-                  {/*                       <ul style={{borderLeft: "solid 1px #aaaa98"}}>
-
-                      </ul> */}
                 </li>
               )
             })}
@@ -157,21 +145,21 @@ class Navigation extends Component {
   }
 
   //toggle function for dropdown
-  toggleDropdown = (e) => {
-    e.preventDefault();
-    const currentState = this.state.showDropdown;
-    this.setState({ showDropdown: !currentState });
-    return;
-  };
+  toggleDropdown = e => {
+    e.preventDefault()
+    const currentState = this.state.showDropdown
+    this.setState({ showDropdown: !currentState })
+    return
+  }
 
   //dropdown handle close when clicked outside of dropdown
   handleClose = event => {
-    if(this.node && !this.node.contains(event.target)){
-      this.setState({ showDropdown: false }); 
-    };
-    
-    return;
-  };
+    if (this.node && !this.node.contains(event.target)) {
+      this.setState({ showDropdown: false })
+    }
+
+    return
+  }
 
   render() {
     return (
@@ -179,7 +167,7 @@ class Navigation extends Component {
         {/* cbp-ds-grid class is the main grid holder. */}
         <aside className="menu">
           <div
-            ref={node => this.node = node}
+            ref={node => (this.node = node)}
             className={`dropdown ${
               this.state.showDropdown ? "is-active" : null
             }`}
