@@ -6,7 +6,6 @@ import SEO from "../../ds-components/seo"
 //WIP
 // import ScrollTop from "../../ds-components/layout/scrollToTop";
 
-
 const TypographyPage = () => (
   <Layout>
     <SEO title="CBP Design System | Typography" />
@@ -14,7 +13,7 @@ const TypographyPage = () => (
 
     <article>
       <section>
-        <h2 id="toTop" className="cbp-heading-2">
+        <h2 id="Basics" className="cbp-heading-2">
           Why is Typography important in the CBP Design System?
         </h2>
 
@@ -783,7 +782,7 @@ const TypographyPage = () => (
       <br />
       <br />
 
-      <section>
+      <section id="Research & References">
         <h2 className="cbp-heading-2">
           Where we came from.
           <a
@@ -1460,7 +1459,7 @@ const TypographyPage = () => (
           is all about legibility. How far apart is each individua l character
           is from its neighbors, line length, and alignment all impact user
           retention of information.
-  </p>
+        </p>
 
         <br />
         <br />
@@ -1477,7 +1476,7 @@ const TypographyPage = () => (
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**image of line length good and bad**]
-  </strong>
+        </strong>
 
         <br />
         <br />
@@ -1496,7 +1495,7 @@ const TypographyPage = () => (
           this should be the only instances where we are dealing with long
           blocks of text and multiple paragraphs. Headings should be limited in
           length by their very nature.
-  </p>
+        </p>
 
         <br />
 
@@ -1515,14 +1514,14 @@ const TypographyPage = () => (
           a safety mechanism with assigning a max-width of 75em. Why em? Because
           line length essentially has nothing to do with our root settings and
           everything to do with the exact type class we're working with.
-  </p>
+        </p>
 
         <br />
 
         <p className="cbp-subhead-text">
           <em>
             Learn more about the CBP Design System's grid settings under the
-      Spacing, grid, layout section in foundations.{" "}
+            Spacing, grid, layout section in foundations.{" "}
             <strong style={{ color: "red" }}>[**link**]</strong>
           </em>
         </p>
@@ -1533,7 +1532,7 @@ const TypographyPage = () => (
       <section>
         <h3 className="cbp-heading-3">
           Columns, Paragraphs, and Logical Reading Order
-  </h3>
+        </h3>
         <br />
         <br />
 
@@ -1543,7 +1542,7 @@ const TypographyPage = () => (
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**image of what logical reading order / maybe eye F patterns**]
-  </strong>
+        </strong>
 
         <br />
         <br />
@@ -1556,12 +1555,12 @@ const TypographyPage = () => (
           When considering when and if to break large amounts of text up into
           columns you should keep in mind that your layouts don’t exist in a
           static viewport size. Pages essentially can scroll infinitely.
-    <br />
+          <br />
           <br />
           We recommend you go through each of the major breakpoints (see more in
           the Spacing, Grid, and Layout section of foundations) and address the
           following questions:
-  </p>
+        </p>
 
         <div className="content">
           <ul>
@@ -1569,7 +1568,7 @@ const TypographyPage = () => (
               Would it be frustrating for the user read a single long column of
               text and have to scroll a long ways back up the page to get to the
               next relevant area of the page?
-      </li>
+            </li>
             <li>Does the order of your content make sense?</li>
             <li>Are you keeping line length principles in mind?</li>
           </ul>
@@ -1578,7 +1577,7 @@ const TypographyPage = () => (
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**image of logical reading order**]
-  </strong>
+        </strong>
       </section>
 
       <br />
@@ -1590,7 +1589,7 @@ const TypographyPage = () => (
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**image explaining why this is important**]
-  </strong>
+        </strong>
 
         <br />
         <br />
@@ -1612,7 +1611,7 @@ const TypographyPage = () => (
           set to normal, as this will allow ligatures to appear. As the sizing
           of our heading classes grows however, negative letter-spacing may be
           added to keep characters from drifting from each other.
-  </p>
+        </p>
       </section>
 
       <br />
@@ -1625,23 +1624,23 @@ const TypographyPage = () => (
           Alignment refers to which vertical axis type is aligned to. Alignment
           allows a user’s eye to have a reference to return to as they finish
           each line of text. In general there are 4 alignment types.
-  </p>
+        </p>
       </section>
 
       <br />
 
       <section>
         <h4 className="cbp-heading-4">Left-Aligned (Rag Right)</h4>'
-  <br />
+        <br />
         <p className="cbp-body">
           This is pretty standard stuff. Fits how western style cultures read.
           The vast majority of what we do should feature this style alignment.
-  </p>
+        </p>
         <br />
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**example of left aligned text**]
-  </strong>
+        </strong>
       </section>
 
       <br />
@@ -1652,12 +1651,12 @@ const TypographyPage = () => (
         <p className="cbp-body">
           This should have very limited applications. Should be a special use
           case.
-  </p>
+        </p>
         <br />
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**example of center aligned text**]
-  </strong>
+        </strong>
       </section>
 
       <br />
@@ -1668,12 +1667,12 @@ const TypographyPage = () => (
         <p className="cbp-body">
           This should probably be avoided if not only used in a very special use
           case.
-  </p>
+        </p>
         <br />
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**example of right aligned text**]
-  </strong>
+        </strong>
       </section>
 
       <br />
@@ -1684,14 +1683,14 @@ const TypographyPage = () => (
         <p className="cbp-body">
           Oh dear. Just never, ever do this. On top of looking awful, it is very
           inaccessible. Justified text can be difficult to read for people with
-    certain disabilities like dyslexia. <br />
+          certain disabilities like dyslexia. <br />
           <strong>DO NOT USE JUSTIFIED.</strong>
         </p>
         <br />
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**example of justified text**]
-  </strong>
+        </strong>
       </section>
 
       <br />
@@ -1700,7 +1699,7 @@ const TypographyPage = () => (
       <section>
         <h2 className="cbp-heading-2">
           Performance
-    <a
+          <a
             href="#toTop"
             className="cbp-heading-6"
             style={{ position: "relative", float: "right", right: "3rem" }}
@@ -1718,7 +1717,7 @@ const TypographyPage = () => (
           frustrates our users trying to do their jobs. To learn more about our
           approach to performance, please see the Performance section of
           foundations.
-  </p>
+        </p>
       </section>
 
       <br />
@@ -1738,7 +1737,7 @@ const TypographyPage = () => (
             development teams we host centralized copies of our font files so
             everything can be accessed once and allow our users to be able to
             properly cache these files.
-    </p>
+          </p>
 
           <br />
 
@@ -1755,7 +1754,7 @@ const TypographyPage = () => (
             notoriously poor aliasing rules and will appear fuzzy and will tend
             to fill in negative spaces in certain characters. For the sake of
             legibility avoid this file type.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -1772,49 +1771,49 @@ const TypographyPage = () => (
             This is a traditional desktop font file-type. We will provide these
             to developers for local development purposes. Each weight is housed
             in a separate file. Holds up to 210 characters per file.
-    </p>
+          </p>
 
           <br />
           <br />
 
           <h5 className="cbp-heading-5">
             OTF - OpenType Files (not available for Roboto)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             This is the new hotness when it comes to desktop standard fonts. All
             characters are hosted inside of a single file. Holds up to 65,536
             characters. Extensive language and feature support. Sadly Roboto is
             not yet available in this format.
-    </p>
+          </p>
 
           <br />
           <br />
 
           <h5 className="cbp-heading-5">
             WOFF - Web Open Font Format v1 (provided)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             This is basically the same thing as the TTF or OTF file types but
             allows for compression and optimized for use in browsers. We will
             include this file as part of the system because it allows support
             for deprecated browsers.
-    </p>
+          </p>
 
           <br />
           <br />
 
           <h5 className="cbp-heading-5">
             WOFF2 - Web Open Font Format v2 (provided)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             This is WOFF v1 but with 30% better compression. This is the new
             standard going forward and will be included with the system. The
             inclusion of WOFF v1 is basically an IE tax and will at some point
             be deprecated.
-    </p>
+          </p>
         </section>
       </section>
 
@@ -1832,7 +1831,7 @@ const TypographyPage = () => (
           about the content itself loading not the font. When it comes to
           content we prefer our applications to use skeleton states and
           progressive loading techniques.
-  </p>
+        </p>
 
         <br />
         <br />
@@ -1853,7 +1852,7 @@ const TypographyPage = () => (
           of file, as well as taking a comprehensive approach to loading
           (skeleton states, progressive loading, etc) this can be mitigated or
           eliminated.
-  </p>
+        </p>
 
         <br />
         <br />
@@ -1872,7 +1871,7 @@ const TypographyPage = () => (
           for any reason the font file doesn’t load, the text will NEVER load.
           This runs antithetical to having fall-back fonts. Probably an approach
           to be avoided.
-  </p>
+        </p>
 
         <br />
         <br />
@@ -1891,7 +1890,7 @@ const TypographyPage = () => (
           Georgia is rendered. This messes with the default browser settings and
           has been known to at times to crash browsers. Best to just take a
           better approach to page loading and deal with FOUT.
-  </p>
+        </p>
 
         <br />
         <br />
@@ -1899,7 +1898,7 @@ const TypographyPage = () => (
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**Insert Image of Progressive Loading**]
-  </strong>
+        </strong>
 
         <br />
         <br />
@@ -1910,7 +1909,7 @@ const TypographyPage = () => (
           Instead of waiting to render the page until the whole thing loads. Go
           one by one down the page, or segment and prioritize elements above the
           fold.
-  </p>
+        </p>
 
         <br />
         <br />
@@ -1918,7 +1917,7 @@ const TypographyPage = () => (
         {/* @TODO: Delete after content is received */}
         <strong style={{ color: "red" }}>
           [**Insert Image of Skeleton UI**]
-  </strong>
+        </strong>
 
         <br />
         <br />
@@ -1928,7 +1927,7 @@ const TypographyPage = () => (
         <p className="cbp-body">
           This is where a dummy placeholder box is placed to let the user know
           that content is being loaded but is taking longer than anticipated.
-  </p>
+        </p>
       </section>
 
       <br />
@@ -1942,7 +1941,7 @@ const TypographyPage = () => (
             topics may come across as trivial to some, but when careful thought
             is given to these subjects, we can create much better designed
             experiences for our users.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -1953,7 +1952,7 @@ const TypographyPage = () => (
           {/* @TODO: Delete after content is received */}
           <strong style={{ color: "red" }}>
             [**image examples of ligatures**]
-    </strong>
+          </strong>
 
           <br />
 
@@ -1968,50 +1967,49 @@ const TypographyPage = () => (
             are ones like ff, fi, fl, ffi, ffl, and th. Enabled by default on
             most browsers on smaller text sizes (this is defined differently by
             each browser unfortunately).
-      <code>Text-rendering: optimizeLegibility;</code>
+            <code>Text-rendering: optimizeLegibility;</code>
             will enable ligatures and kerning but can add to load time (we
             believe this is negligible. If you set letter spacing at all in your
             text though, ligatures will be stripped out (this is why body copy
             is set to normal). Ligatures aren’t as necessary for headings
             because there shouldn't be long blocks of text.
-      <br />
+            <br />
             <br />
             Discretionary ligatures are non standard and don’t significantly
             contribute to legibility, but offer a more stylistic approach. ch,
             ck , ct, st. Avoid using these.
-      <br />
+            <br />
             <br />
             Contextual ligatures come with script style typefaces to help
             combine letters to make the appearance of a single pen stroke. We
             don’t use script style so these should also be avoided.
-      <br />
+            <br />
             <br />
             Enabling common ligatures across browsers: this class is found in
             the CBP DS Core CSS file.
-      <br />
-      </p>
             <br />
+          </p>
+          <br />
+          <br />
+          <div className="code-snippet">
+            <h5 className="cbp-heading-5">Ligature Code</h5>
             <br />
-            <div className="code-snippet">
-              <h5 className="cbp-heading-5">Ligature Code</h5>
-              <br />
-              <deckgo-highlight-code language="css" highlight-lines="2,2">
-                <code>
-                  {`p {`}
-                  <br />
-                  &emsp;&emsp;{`font-feature-settings: "liga";`}
-                  <br />
-                  &emsp;&emsp;{`-webkit-font-feature-settings: "liga";`}
-                  <br />
-                  &emsp;&emsp;{'-moz-font-feature-settings: "liga";'}
-                  <br />
-                  &emsp;&emsp;{"text-rendering: optimizeLegibility;"}
-                  <br />
-                  {"}"}
-                </code>
-              </deckgo-highlight-code>
-            </div>
-        
+            <deckgo-highlight-code language="css" highlight-lines="2,2">
+              <code>
+                {`p {`}
+                <br />
+                &emsp;&emsp;{`font-feature-settings: "liga";`}
+                <br />
+                &emsp;&emsp;{`-webkit-font-feature-settings: "liga";`}
+                <br />
+                &emsp;&emsp;{'-moz-font-feature-settings: "liga";'}
+                <br />
+                &emsp;&emsp;{"text-rendering: optimizeLegibility;"}
+                <br />
+                {"}"}
+              </code>
+            </deckgo-highlight-code>
+          </div>
         </section>
 
         <br />
@@ -2025,28 +2023,28 @@ const TypographyPage = () => (
             abbreviations. REGULAR ALL CAPS text inside of a block of text can
             cause disruption to overall horizontal rhythm as well as give the
             user a false indication that this text might be interactive.
-      <br />
+            <br />
             <br />
             "Fake small caps" (created by css) which just reduce the font size
             (including stroke width) is not a good solution because it
             interrupts flow. If your font does not have genuine small caps
             included, do not turn on this feature.
-      <br />
+            <br />
             <br />
             This results in the need for a special type class for small caps.
             This class should be applied to acronyms and abbreviations (whether
-      or not it has periods between letters) by enclosing the text in a{" "}
+            or not it has periods between letters) by enclosing the text in a{" "}
             <code>&lt;span></code> (if inside of a larger block of text) and
-      applying the following class (<code>.small-cap</code>). This class
+            applying the following class (<code>.small-cap</code>). This class
             is found in the CBP DS Core CSS file.
-    </p>
+          </p>
 
           <br />
           <br />
           {/* @TODO: Delete after content is received */}
           <strong style={{ color: "red" }}>
             [**image of small caps and example of fake small caps**]
-    </strong>
+          </strong>
 
           <br />
           <br />
@@ -2085,7 +2083,7 @@ const TypographyPage = () => (
           {/* @TODO: Delete after content is received */}
           <strong style={{ color: "red" }}>
             [**table of punctuation name, html tag, use case, hotkeys**]
-    </strong>
+          </strong>
         </section>
 
         <br />
@@ -2093,13 +2091,13 @@ const TypographyPage = () => (
         <section>
           <h3 className="cbp-heading-3">
             The Character Viewer on your Computer
-    </h3>
+          </h3>
           <br />
           <p className="cbp-body">
             This window shows all “glyphs” available in the particular font you
             have selected on your desktop. It it for use on your PC, use HTML
             codes for calling these glyphs in your code.
-    </p>
+          </p>
 
           <br />
 
@@ -2114,11 +2112,11 @@ const TypographyPage = () => (
                 <li>
                   Check the box “Show Keyboard, Emoji & Symbol Viewers in menu
                   bar”
-          </li>
+                </li>
                 <li>
                   Click the keyboard icon next to the clock in your menu bar and
                   select “Show Emoji & Symbols”
-          </li>
+                </li>
               </ol>
             </div>
           </section>
@@ -2133,7 +2131,7 @@ const TypographyPage = () => (
                 <li>
                   Click the Start button and type “character map” into the
                   search box
-          </li>
+                </li>
                 <li>In the list of results, click “Character Map”</li>
               </ol>
             </div>
@@ -2152,7 +2150,7 @@ const TypographyPage = () => (
             not seem like much, but using the correct one can be important for
             screen readers to correctly interpret what’s on the screen even
             though sighted user may not notice much of a difference.
-    </p>
+          </p>
 
           <br />
 
@@ -2166,10 +2164,10 @@ const TypographyPage = () => (
               a comma may be too little of a pause, but a period may be too
               much. This character matches the width of the capital “M” in the
               font. Ideally, the em dash should be followed by a “thin space.”
-        <br />
+              <br />
               <br />(<strong>MAC:</strong> OPTION + - ) (
-        <strong>WINDOWS:</strong> ALT + 0151)
-      </p>
+              <strong>WINDOWS:</strong> ALT + 0151)
+            </p>
           </section>
 
           <br />
@@ -2184,10 +2182,10 @@ const TypographyPage = () => (
               9pm you put 6–9pm, or instead of Los Angeles to New York (Los
               Angeles-New York). There should not be any spaces between this
               symbol and its accompanying text.
-        <br />
+              <br />
               <br />(<strong>MAC:</strong> OPTION + SHIFT + - ) (
-        <strong>WINDOWS:</strong> ALT + 0150)
-      </p>
+              <strong>WINDOWS:</strong> ALT + 0150)
+            </p>
           </section>
 
           <br />
@@ -2197,10 +2195,10 @@ const TypographyPage = () => (
             <br />
             <p className="cbp-body">
               The minus symbol should only for mathematical uses.
-        <br />
+              <br />
               <br />(<strong>MAC:</strong> Use character viewer ) (
-        <strong>WINDOWS:</strong> Use character viewer)
-      </p>
+              <strong>WINDOWS:</strong> Use character viewer)
+            </p>
           </section>
 
           <br />
@@ -2211,10 +2209,10 @@ const TypographyPage = () => (
             <p className="cbp-body">
               1/4 the width of an em dash. primarily used for hyphenating words.
               five-dollar bill etc.
-        <br />
+              <br />
               <br />(<strong>MAC:</strong> OPTION + - ) (
-        <strong>WINDOWS:</strong> Use character viewer)
-      </p>
+              <strong>WINDOWS:</strong> Use character viewer)
+            </p>
 
             <br />
 
@@ -2223,7 +2221,7 @@ const TypographyPage = () => (
               neither a hyphen or a minus symbol, but a “hyphen-minus” which is
               a hold over from the typewriter. It is generally accepted as a
               hyphen, but is technically a different symbol.
-      </p>
+            </p>
           </section>
         </section>
 
@@ -2242,23 +2240,23 @@ const TypographyPage = () => (
             used to denote emphasis (ie. I “totally” took the trash out
             already.). Here’s an easy way to remember which is which: l/r (means
             left/right), d/s (means double/single), quo (quotation mark).
-      <br />
+            <br />
             <br />
             & + l/r + d/s + quo + ;
-      <br />
+            <br />
             <br />‘ ‘ ’ ’ “ “ ” ”
-    </p>
+          </p>
 
           <br />
 
           <p className="cbp-body">
             <strong>&lsquo; Left Single Quote ({`&lsquo`}): </strong>
             Used to show the beginning of a quote within another quote ie.
-      “Jessica said ‘i like oranges’ to me earlier.”{" "}
+            “Jessica said ‘i like oranges’ to me earlier.”{" "}
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + ] ) (<strong>WINDOWS: </strong>{" "}
               ALT + 0145)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2267,11 +2265,11 @@ const TypographyPage = () => (
             <strong>&rsquo; Right Single Quote ({`&rsquo`}): </strong>
             Used to show the end of a quote within another quote ie. “Jessica
             said ‘i like oranges’ to me earlier.” This is also the exact same
-      character as the apostrophe so they are interchangeable.{" "}
+            character as the apostrophe so they are interchangeable.{" "}
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
-        <strong>WINDOWS: </strong> ALT + 0146)
-      </span>
+              <strong>WINDOWS: </strong> ALT + 0146)
+            </span>
           </p>
 
           <br />
@@ -2279,10 +2277,10 @@ const TypographyPage = () => (
           <p className="cbp-body">
             <strong>&ldquo; Left Double Quote ({`&ldquo`}): </strong>
             Used to show the start of a quote.
-      <span className="cbp-subhead-text">
+            <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + [ ) (<strong>WINDOWS: </strong>{" "}
               ALT + 0147)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2290,10 +2288,10 @@ const TypographyPage = () => (
           <p className="cbp-body">
             <strong>&ldquo; Right Double Quote ({`&rdquo`}): </strong>
             Used to show the end of a quote.
-      <span className="cbp-subhead-text">
+            <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + SHIFT + [ ) (
-        <strong>WINDOWS: </strong> ALT + 0148)
-      </span>
+              <strong>WINDOWS: </strong> ALT + 0148)
+            </span>
           </p>
 
           <br />
@@ -2302,7 +2300,7 @@ const TypographyPage = () => (
             Not sure if you’re using the right symbol? Does the tail on the
             symbol go straight or is it curved? Straight tails are for “dumb
             quotes” curved are for “smart quotes.”
-    </p>
+          </p>
 
           <br />
           <br />
@@ -2335,18 +2333,18 @@ const TypographyPage = () => (
             marks" which are slightly skewed versions of dumb quotes. for
             example not 6'4", but 6′4″. These are entirely different symbols
             from dumb or smart quotes and mean completely different things.
-    </p>
+          </p>
 
           <section>
             <p className="cbp-body">
               <strong>′ Single Prime Mark (&prime): </strong>
               This is cap sensitive. Used to indicate a measurement in feet (US
               Imperial system) or in latitude/longitude it is used to indicate
-        “hours” as in degrees/hours/minutes.{" "}
+              “hours” as in degrees/hours/minutes.{" "}
               <span className="cbp-subhead-text">
                 (<strong>MAC: </strong> use character viewer ) (
-          <strong>WINDOWS: </strong> ALT + 8242)
-        </span>
+                <strong>WINDOWS: </strong> ALT + 8242)
+              </span>
             </p>
 
             <br />
@@ -2355,11 +2353,11 @@ const TypographyPage = () => (
               <strong>″ Double Prime Mark (&Prime): </strong>
               This is cap sensitive. Used to indicate a measurement in inches
               (US Imperial system) or in latitude/longitude it is used to
-        indicate “minutes” as in degrees/hours/minutes.{" "}
+              indicate “minutes” as in degrees/hours/minutes.{" "}
               <span className="cbp-subhead-text">
                 (<strong>MAC: </strong> use character viewer ) (
-          <strong>WINDOWS: </strong> ALT + 8243)
-        </span>
+                <strong>WINDOWS: </strong> ALT + 8243)
+              </span>
             </p>
           </section>
         </section>
@@ -2375,23 +2373,23 @@ const TypographyPage = () => (
 
           <p className="cbp-body">
             <strong>&hairsp: </strong>Hair space - often used alongside dashes.
-      <br />
+            <br />
             <br />
             <strong>&thinsp: </strong>Thin space - often used in combination
             with dashes width is equal to 1/5 or 1/6 of em dash.
-      <br />
+            <br />
             <br />
             <strong>&nbsp: </strong>Non-breaking space - these are useful for
             preventing widows (when a single small word is left on a line all by
             itself. it forces a word to the next line without putting an actual
             space in there.
-    </p>
+          </p>
 
           <br />
           {/* @TODO: Add Example here */}
           <strong style={{ color: "red" }}>
             [Image for different kinds of spaces]
-    </strong>
+          </strong>
         </section>
 
         <br />
@@ -2399,7 +2397,7 @@ const TypographyPage = () => (
         <section>
           <h3 className="cbp-heading-3">
             Miscellaneous Commonly Misued Symbols
-    </h3>
+          </h3>
           <br />
           {/* @TODO: Add Example here */}
           <strong style={{ color: "red" }}>[Provide Examples]</strong>
@@ -2412,11 +2410,11 @@ const TypographyPage = () => (
             when omitting non-pertinent content from the middle of a paragraph
             or quote. It can be used at the end of a sentence where it is
             commonly used to indicate a speaker trailing off or when a speaker
-      is interrupted. <br />
+            is interrupted. <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + ; ) (<strong>WINDOWS: </strong>
               ALT + 0133)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2431,12 +2429,12 @@ const TypographyPage = () => (
             technically full words like the 2000’s. Or I need 8 A’s to make
             dean’s list this quarter. In these cases adding the “s” to the word
             would change its meaning. Using a dumb quote, or prime mark is not
-      an acceptable substitute. <br />
+            an acceptable substitute. <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
-        <strong>WINDOWS: </strong>
+              <strong>WINDOWS: </strong>
               ALT + 0146)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2446,12 +2444,12 @@ const TypographyPage = () => (
           <br />
           <p className="cbp-body">
             Use this symbol to indicate multiplication not (*).
-      <br />
+            <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> use character viewer ) (
-        <strong>WINDOWS: </strong>
+              <strong>WINDOWS: </strong>
               ALT + 0215)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2461,11 +2459,11 @@ const TypographyPage = () => (
           <br />
           <p className="cbp-body">
             Use this symbol to indicate division not (/)
-      <br />
+            <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
               ALT + 0247)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2475,11 +2473,11 @@ const TypographyPage = () => (
           <br />
           <p className="cbp-body">
             Just like it looks.
-      <br />
+            <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
               ALT + 8800)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2494,11 +2492,11 @@ const TypographyPage = () => (
             concepts or discoveries. There should be a space separating this
             symbol from the copyrighted language and should never be
             superscript.
-      <br />
+            <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + g ) (<strong>WINDOWS: </strong>
               ALT + 0169)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2511,13 +2509,13 @@ const TypographyPage = () => (
             distinguish the goods of one manufacturer or seller from that of
             another. There should not be any extra space between the trademarked
             text and the symbol and should be always be superscript. If not
-      automatically formatting correctly to superscript, use the{" "}
+            automatically formatting correctly to superscript, use the{" "}
             <code>{`<sup>`}</code> tag.
-      <br />
+            <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + 2 ) (<strong>WINDOWS: </strong>
               ALT + 0153)
-      </span>
+            </span>
           </p>
 
           <br />
@@ -2531,12 +2529,12 @@ const TypographyPage = () => (
             federal and legal registration of the mark. There should not be any
             extra space between the registered text and the symbol and should be
             always be superscript. If not automatically formatting correctly to
-      superscript, use the <code>{`<sup>`}</code> tag
-      <br />
+            superscript, use the <code>{`<sup>`}</code> tag
+            <br />
             <span className="cbp-subhead-text">
               (<strong>MAC: </strong> OPTION + r ) (<strong>WINDOWS: </strong>
               ALT + 0174)
-      </span>
+            </span>
           </p>
         </section>
 
@@ -2552,7 +2550,7 @@ const TypographyPage = () => (
           backgrounds this effect creates a sort of halo effect which is
           non-desirable. Which is why this property is not applied to our “dark”
           heading classes.
-  </p>
+        </p>
 
         <br />
         {/* @TODO: Add Example here */}
@@ -2573,13 +2571,13 @@ const TypographyPage = () => (
           are sized in REM (relative EMs). Any development team that needs to
           create custom typographic classes should use rem values relative to
           the root font-size of 14px.
-    <br />
+          <br />
           <br />
           What are REM units? REM allows you to set the font-size property with
           a percentage value of font-size set to the HTML selector. If we set
           our root to 14px and size our h1 element to 3rem then the size of h1
           will be 42px (3 x 14px) etc.
-    <br />
+          <br />
           <br />
           When is it ok to use EM units? Only when the sizing of a property is
           directly related to the element you’re working with and will not
@@ -2589,23 +2587,23 @@ const TypographyPage = () => (
           that body copy is the same REM size as the root. However, when using
           REMs for max-length with a font class at another size may have
           undesirable results.
-    <br />
+          <br />
           <br />
           In order to maintain a consistent 4px baseline grid, all line-height
           settings should be expressed in intervals of 4px. Spacing between
           lines of text inside the same text box should be defined with the
           line-height property.
-    <br />
+          <br />
           <br />
           In order to maintain a consistent 4px baseline grid, all line-height
           settings should be expressed in intervals of 4px. Spacing between
           lines of text inside the same text box should be defined with the
           line-height property.
-    <br />
+          <br />
           <br />
           Spacing between text boxes should be defined using the spacing system
           prescribed in the Spacing, Grid, and Layout section of Foundations.
-  </p>
+        </p>
 
         <br />
 
@@ -2620,7 +2618,7 @@ const TypographyPage = () => (
             but rather is the space equal to 1/96th of 1 inch. This means that
             no matter how pixel-dense your device’s screen is an object will
             appear the same relative size optically.
-    </p>
+          </p>
 
           <br />
           <br />
@@ -2631,7 +2629,7 @@ const TypographyPage = () => (
             pixels by multiplying the em value by the value of its parent
             element. This is not recommended to be used for assigning text
             sizing because of its inheritance issues.
-    </p>
+          </p>
 
           <br />
           <br />
@@ -2640,7 +2638,7 @@ const TypographyPage = () => (
           <p className="cbp-body">
             This is an explicit, flexible unit that the browser converts into
             pixels by multiplying the rem value by the value assigned to HTML.
-      This is the preferred method for assigning text sizing.{" "}
+            This is the preferred method for assigning text sizing.{" "}
           </p>
 
           <br />
@@ -2651,7 +2649,7 @@ const TypographyPage = () => (
             An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
             independent just like the sp on android. They usually convert out
             evenly as the true resolution is hidden.
-      <br />
+            <br />
             <br />
             <strong>1sp = 1pt = 1rem</strong>
           </p>
@@ -2661,7 +2659,7 @@ const TypographyPage = () => (
 
           <h5 className="cbp-heading-5">
             Density Independent Pixels -dp (Android ecosystem)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             The density- independent pixel is equivalent to one physical pixel
@@ -2671,41 +2669,41 @@ const TypographyPage = () => (
             240 dpi screen, 1 dp equals 1.5 physical pixels. Android has a
             separate unit for prescribing text sizing, sp. Please use that unit
             for native Android development.
-    </p>
+          </p>
 
           <br />
           <br />
           <br />
           <h5 className="cbp-heading-5">
             Scalable Independent Pixels - sp (Android Ecosystem)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             SP is the same thing as dp but used for font sizing on android,
             while the dp is used for everything but fonts.
-    </p>
+          </p>
 
           <br />
           <br />
           <br />
           <h5 className="cbp-heading-5">
             Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             These settings are fluid type layouts (which should be a very rare
             occurrence within the CBP enterprise). The sizing unit is based off
             of view-port height and view-port width respectively.
-      <br />
+            <br />
             <br />
             <strong>
               1vh = 1% of view-port height 1vw = 1% of view-port width
-      </strong>
+            </strong>
             <br />
             <br />
             This is not widely supported yet in browsers, and is not great for
             productive type applications.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -2720,21 +2718,21 @@ const TypographyPage = () => (
             We use this to apply letter-spacing to small caps because the
             characters height in small caps are aligned to the x-height setting.
             X-height refers to the height of the lower-case letter “x”.
-    </p>
+          </p>
 
           <br />
           <br />
 
           <h5 className="cbp-heading-5">
             cap (height of font’s capital letters)
-    </h5>
+          </h5>
           <br />
           <p className="cbp-body">
             This is used to set letter-spacing of UPPERCASE text. The preference
             of the CBP Design System is to use small-caps for acronyms and
             abbreviations so follow the guidance for small caps where
             applicable.
-    </p>
+          </p>
 
           <br />
           <br />
@@ -2747,7 +2745,7 @@ const TypographyPage = () => (
             amount of space no matter which character. The zero (0) character is
             the mostly evenly designed and therefore makes a good reference
             point in this scenario.
-    </p>
+          </p>
         </section>
       </section>
 
@@ -2757,7 +2755,7 @@ const TypographyPage = () => (
         {/* @TODO: Add Collapsible sections for WCAG Details */}
         <h2 className="cbp-heading-2">
           Accessibility Concerns with Typography
-  </h2>
+        </h2>
         <br />
         <p className="cbp-body">
           Typography is the heart of any design system. At CBP we follow the DHS
@@ -2767,21 +2765,21 @@ const TypographyPage = () => (
           System please see that section in the foundations area. You should be
           aware of the following concepts when working with typography in the
           CBP Design System:
-  </p>
+        </p>
 
         <br />
 
         <section>
           <h3 className="cbp-heading-3">
             Using Semantic Elements to identify blocks of text.
-    </h3>
+          </h3>
           <br />
           <p className="cbp-body">
             No matter which elements you are adding to your pages, the correct
             corresponding semantic HTML element should always be utilized.
             Properly tagging text elements on the page will allow assistive
             technologies to correctly interpret all the information on the page.
-    </p>
+          </p>
 
           <br />
 
@@ -2789,16 +2787,16 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.3.1 Info and Relationships Level A
-      <br />
+            <br />
             Information, structure, and relationships conveyed through
             presentation can be programmatically determined or are available in
             text.
-      <br />
+            <br />
             <br />
             1.3.2 Meaningful Sequence Level A <br />
             When the sequence in which content is presented affects its meaning,
             a correct reading sequence can be programmatically determined.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -2806,7 +2804,7 @@ const TypographyPage = () => (
         <section>
           <h3 className="cbp-heading-3">
             Maintaining Proper Heading Structure
-    </h3>
+          </h3>
           <br />
           <p className="cbp-body">
             The headings on your page should be semantically tagged and appear
@@ -2823,7 +2821,7 @@ const TypographyPage = () => (
             semantic tags directly is because we have a need to create more than
             one version of a heading class depending on its contrasting
             background color.
-    </p>
+          </p>
 
           <br />
 
@@ -2831,16 +2829,16 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.3.1 Info and Relationships Level A
-      <br />
+            <br />
             Information, structure, and relationships conveyed through
             presentation can be programmatically determined or are available in
             text.
-      <br />
+            <br />
             <br />
             1.3.2 Meaningful Sequence Level A <br />
             When the sequence in which content is presented affects its meaning,
             a correct reading sequence can be programmatically determined.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -2854,7 +2852,7 @@ const TypographyPage = () => (
             example) on the page that are siblings. These h3 elements must be
             styled identically. Doing so means using the same font-weight,
             color, and other styling attributes.
-    </p>
+          </p>
 
           <br />
 
@@ -2862,16 +2860,16 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.3.1 Info and Relationships Level A
-      <br />
+            <br />
             Information, structure, and relationships conveyed through
             presentation can be programmatically determined or are available in
             text.
-      <br />
+            <br />
             <br />
             1.3.2 Meaningful Sequence Level A <br />
             When the sequence in which content is presented affects its meaning,
             a correct reading sequence can be programmatically determined.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -2888,7 +2886,7 @@ const TypographyPage = () => (
             restriction on body copy to comply with maximum character
             requirements. NOTE: as stated earlier, justified text is just bad,
             don’t do it.
-    </p>
+          </p>
 
           <br />
 
@@ -2913,38 +2911,38 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.4.8 Visual Presentation Level AAA
-      <br />
+            <br />
             For the visual presentation of blocks of text, a mechanism is
             available to achieve the following:
-      <br />
+            <br />
             <div className="content">
               <ol>
                 <li>
                   Foreground and background colors can be selected by the user.
                   (not doing)
-          </li>
+                </li>
                 <li>
                   Width is no more than 80 characters or glyphs (40 if CJK).
-          </li>
+                </li>
                 <li>
                   Text is not justified (aligned to both the left and the right
                   margins).
-          </li>
+                </li>
                 <li>
                   Line spacing (leading) is at least space-and-a-half within
                   paragraphs, and paragraph spacing is at least 1.5 times larger
                   than the line spacing.
-          </li>
+                </li>
                 <li>
                   Text can be resized without assistive technology up to 200
                   percent in a way that does not require the user to scroll
-            horizontally to read a line of text{" "}
+                  horizontally to read a line of text{" "}
                   <a
                     href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#fullscreenwindowdef"
                     target="__blank"
                   >
                     on a full-screen window.
-            </a>
+                  </a>
                 </li>
               </ol>
             </div>
@@ -2967,7 +2965,7 @@ const TypographyPage = () => (
             minimum contrast ratios with the color around it. Consider using the
             ANDI browser extension to test the text on your page to ensure it
             meets minimum contrast values.
-    </p>
+          </p>
 
           <br />
 
@@ -2975,34 +2973,34 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.4.1 Use of Color Level A
-      <br />
+            <br />
             Color is not used as the only visual means of conveying information,
             indicating an action, prompting a response, or distinguishing a
             visual element.
-      <br />
+            <br />
             <br />
             1.4.3 Contrast (Minimum) Level AA
-      <br />
+            <br />
             The visual presentation of text and images of text has a contrast
             ratio of at least 4.5:1, except for the following: Hide full
             description
-      <div className="content">
+            <div className="content">
               <ul>
                 <li>
                   <strong>Large Text: </strong> Large-scale text and images of
                   large-scale text have a contrast ratio of at least 3:1;
-          </li>
+                </li>
                 <li>
                   <strong>Incidental: </strong>Text or images of text that are
                   part of an inactive user interface component, that are pure
                   decoration, that are not visible to anyone, or that are part
                   of a picture that contains significant other visual content,
                   have no contrast requirement.
-          </li>
+                </li>
                 <li>
                   <strong>Logotypes: </strong>Text that is part of a logo or
                   brand name has no contrast requirement.
-          </li>
+                </li>
               </ul>
             </div>
           </p>
@@ -3015,7 +3013,7 @@ const TypographyPage = () => (
               target="__blank"
             >
               https://www.ssa.gov/accessibility/andi/help/install.html
-      </a>
+            </a>
           </p>
         </section>
 
@@ -3028,7 +3026,7 @@ const TypographyPage = () => (
             The construction of our sites and applications should not interfere
             with a user's ability to use the native functionality of the browser
             to zoom up to 200%.
-    </p>
+          </p>
 
           <br />
 
@@ -3036,11 +3034,11 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.4.4 Resize text Level AA
-      <br />
+            <br />
             Except for captions and images of text, text can be resized without
             assistive technology up to 200% without loss of content or
             functionality.
-    </p>
+          </p>
         </section>
 
         <br />
@@ -3048,7 +3046,7 @@ const TypographyPage = () => (
         <section>
           <h3 className="cbp-heading-3">
             Images of Text
-      <a
+            <a
               href="#toTop"
               className="cbp-heading-6"
               style={{ position: "relative", float: "right", right: "3rem" }}
@@ -3066,7 +3064,7 @@ const TypographyPage = () => (
             having it embedded on an image, if possible. If you are displaying a
             logo, alt text for the image should describe that it is a logo and
             the text contained within.
-    </p>
+          </p>
 
           <br />
 
@@ -3074,20 +3072,20 @@ const TypographyPage = () => (
             <strong>WCAG Details</strong> <br />
             <br />
             1.4.5 Images of Text Level AA
-      <br />
+            <br />
             If the technologies being used can achieve the visual presentation,
             text is used to convey information rather than images of text except
             for the following:
-      <div className="content">
+            <div className="content">
               <ul>
                 <li>
                   <strong>Customizable: </strong>The image of text can be
                   visually customized to the user's requirements
-          </li>
+                </li>
                 <li>
                   <strong>Essential: </strong>A particular presentation of text
                   is essential to the information being conveyed.
-          </li>
+                </li>
               </ul>
             </div>
           </p>
@@ -3107,11 +3105,11 @@ const TypographyPage = () => (
             these concepts are front of mind when you are building with the CBP
             Design System. This will ensure that your products remain
             accessible.
-      <br />
+            <br />
             <br />
             Learn more about accessibility at DHS by visiting the following
             resources:
-      <br />
+            <br />
             <br />
             To learn more about the <strong>
               DHS Trusted Tester program{" "}
@@ -3119,14 +3117,14 @@ const TypographyPage = () => (
             click here:{" "}
             <a href="https://www.dhs.gov/trusted-tester" target="__blank">
               https://www.dhs.gov/trusted-tester
-      </a>
+            </a>
             <br />
             To learn more about how to earn a{" "}
             <strong>DHS Trusted Tester certification </strong>
             click here:{" "}
             <a href="https://training.section508testing.net/" target="__blank">
               https://training.section508testing.net/
-      </a>
+            </a>
             <br />
             To learn more about <strong>WCAG guidelines </strong> click here:{" "}
             <a
@@ -3134,12 +3132,10 @@ const TypographyPage = () => (
               target="__blank"
             >
               https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0
-      </a>
+            </a>
           </em>
         </p>
       </section>
-
-
     </article>
   </Layout>
 )

@@ -17,6 +17,7 @@ const ContentHeader = ({ title, contentType }) => {
     return (
       <div className="cbp-content__header">
         <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
+        <MenuTab tabContent={["Basics", "Research & References"]} />
       </div>
     )
   }
