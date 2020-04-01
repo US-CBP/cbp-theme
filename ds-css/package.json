@@ -57,6 +57,10 @@
     }
   },
   "files": [
-    "dist"
+    "cbp-ds.css",
+    "cbp-ds.min.css",
+    "cbp-ds.min.css.map",
+    "README.md",
+    "package.json"
   ]
 }
