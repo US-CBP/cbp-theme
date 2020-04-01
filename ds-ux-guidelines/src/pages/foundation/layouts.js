@@ -2,14 +2,25 @@ import React from "react"
 import Layout from "../../ds-components/layout/layout"
 import ContentHeader from "../../ds-components/content-header/contentHeader"
 import SEO from "../../ds-components/seo"
+import CodeSnippet from "../../ds-components/codeSnippet/codeSnippet"
+
+const code =
+` p {
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga";
+    text-rendering: optimizeLegibility;
+  }
+`.trim()
 
 
 const LayoutPage = () => (
     <Layout>
         <SEO title="CBP Design System | Layouts" />
-        <ContentHeader title="Layouts" contentType="foundation"/>   
+        <ContentHeader title="Layouts" contentType="foundation"/>
 
         <article>
+          <CodeSnippet />
       <p class="cbp-body section-pad-temp">
         We need more paper products need full resourcing and support from a
         cross-functional team in order to be built, maintained, and evolved.
@@ -40,7 +51,7 @@ const LayoutPage = () => (
           feel you would bring to the table if you were hired for this position.
         </p>
       </section>
-    </article> 
+    </article>
     </Layout>
 );
 

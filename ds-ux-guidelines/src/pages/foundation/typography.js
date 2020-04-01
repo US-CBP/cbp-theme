@@ -3,8 +3,15 @@ import Layout from "../../ds-components/layout/layout"
 import ContentHeader from "../../ds-components/content-header/contentHeader"
 import SEO from "../../ds-components/seo"
 
-//WIP
-// import ScrollTop from "../../ds-components/layout/scrollToTop";
+const code =
+`
+  p {
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga";
+    text-rendering: optimizeLegibility;
+  }
+`
 
 
 const TypographyPage = () => (
@@ -1994,9 +2001,10 @@ const TypographyPage = () => (
             <div className="code-snippet">
               <h5 className="cbp-heading-5">Ligature Code</h5>
               <br />
-              <deckgo-highlight-code language="css" highlight-lines="2,2">
-                <code>
-                  {`p {`}
+              <pre>
+                <code className="language-css">
+                  { code }
+                  {/* {`p {`}
                   <br />
                   &emsp;&emsp;{`font-feature-settings: "liga";`}
                   <br />
@@ -2006,9 +2014,9 @@ const TypographyPage = () => (
                   <br />
                   &emsp;&emsp;{"text-rendering: optimizeLegibility;"}
                   <br />
-                  {"}"}
+                  {"}"} */}
                 </code>
-              </deckgo-highlight-code>
+                </pre>
             </div>
           </p>
         </section>
@@ -2053,8 +2061,8 @@ const TypographyPage = () => (
           <div className="code-snippet">
             <h5 className="cbp-heading-5">Small Caps Code</h5>
             <br />
-            <deckgo-highlight-code language="css" highlight-lines="2,2">
-              <code>
+            <pre className="language-css">
+              <code className="language-css">
                 {`p {`}
                 <br />
                 &emsp;&emsp;{`//change only lowercase to small caps`}
@@ -2072,7 +2080,7 @@ const TypographyPage = () => (
                 <br />
                 {"}"}
               </code>
-            </deckgo-highlight-code>
+              </pre>
           </div>
         </section>
 

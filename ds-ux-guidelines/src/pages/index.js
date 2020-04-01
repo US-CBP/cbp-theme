@@ -14,7 +14,7 @@ const IndexPage = () => (
     <article>
       <h1 className="cbp-masthead-1">CBP <b>Design System</b> Library</h1>
     </article>
-    
+
   </Layout>
 )
 
