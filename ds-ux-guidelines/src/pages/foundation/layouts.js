@@ -4,8 +4,7 @@ import ContentHeader from "../../ds-components/content-header/contentHeader"
 import SEO from "../../ds-components/seo"
 import CodeSnippet from "../../ds-components/codeSnippet/codeSnippet"
 
-const code =
-` p {
+const ligatureCode = ` p {
     font-feature-settings: "liga";
     -webkit-font-feature-settings: "liga";
     -moz-font-feature-settings: "liga";
@@ -13,14 +12,13 @@ const code =
   }
 `.trim()
 
-
 const LayoutPage = () => (
-    <Layout>
-        <SEO title="CBP Design System | Layouts" />
-        <ContentHeader title="Layouts" contentType="foundation"/>
+  <Layout>
+    <SEO title="CBP Design System | Layouts" />
+    <ContentHeader title="Layouts" contentType="foundation" />
 
-        <article>
-          <CodeSnippet />
+    <article>
+      <CodeSnippet code={ligatureCode} language="language-css" />
       <p class="cbp-body section-pad-temp">
         We need more paper products need full resourcing and support from a
         cross-functional team in order to be built, maintained, and evolved.
@@ -52,7 +50,7 @@ const LayoutPage = () => (
         </p>
       </section>
     </article>
-    </Layout>
-);
+  </Layout>
+)
 
-export default LayoutPage;
+export default LayoutPage

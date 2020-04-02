@@ -1,26 +1,16 @@
 import React from "react"
-import Prism from "prismjs";
-
-const code =
-` p {
-    font-feature-settings: "liga";
-    -webkit-font-feature-settings: "liga";
-    -moz-font-feature-settings: "liga";
-    text-rendering: optimizeLegibility;
-  }
-`.trim()
+import Prism from "prismjs"
+import "./prism.css"
 
 export default class CodeSnippet extends React.Component {
-  componentDidMount(){
+  componentDidMount() {
     setTimeout(() => Prism.highlightAll(), 0)
   }
 
   render() {
     return (
       <pre className="line-numbers">
-        <code className="language-css">
-          {code}
-        </code>
+        <code className={this.props.language}>{this.props.code}</code>
       </pre>
     )
   }
