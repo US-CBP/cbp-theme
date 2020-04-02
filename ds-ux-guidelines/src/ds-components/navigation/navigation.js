@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
 import React, { Component } from "react"
 
-if (typeof window !== "undefined") {
-  // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
-}
+// if (typeof window !== "undefined") {
+//   // eslint-disable-next-line global-require
+//   require("smooth-scroll")('a[href*="#"]')
+// }
 
 class Navigation extends Component {
   state = {
@@ -113,19 +113,22 @@ class Navigation extends Component {
     const menuList = this.state.categories.map(cat => {
       return (
         <>
-          <span className="menu-label" style={{fontSize: "1rem"}}>{cat.name}</span>
+          <span className="menu-label" style={{ fontSize: "1rem" }}>
+            {cat.name}
+          </span>
           <ul className="menu-list">
             {cat.subcategory.map(subCat => {
               return (
                 <li>
-                  <Link to={subCat.link}><span className="menu-text">{subCat.name}</span></Link>
+                  <Link to={subCat.link}>
+                    <span className="menu-text">{subCat.name}</span>
+                  </Link>
 
                   {subCat.anchors !== undefined ||
                   subCat.anchors !== undefined ? (
                     <ul style={{ borderLeft: "solid 1px #aaaa98" }}>
                       {subCat.anchors.map(anchor => {
                         return (
-                          //key prop wip
                           <li key={`.${anchor.name.replace(/\s/g, "")}`}>
                             <Link
                               to={anchor.id}

@@ -1,42 +1,25 @@
-/* import { Link } from "gatsby" */
 import PropTypes from "prop-types"
 import React from "react"
+import MenuTab from "../ds-tabs/tabs"
 
-
-//So far there is only contentType = component or 'none' (has no tabs). 
-//Need to ditch the if/else statement if we implement additional types
+// import { Tab, Tabs, TabList } from "react-tabs"
+// import "react-tabs/style/react-tabs.scss"
 
 const ContentHeader = ({ title, contentType }) => {
-  if(contentType === "component"){
+  if (contentType === "component") {
     return (
       <div className="cbp-content__header">
         <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
-        <div className="tabs is-boxed">
-          <ul>
-            <li>
-              <a href="#noID">
-                <i className="fas fa-code fa-xs">&nbsp;</i>
-                Code
-              </a>
-            </li>
-            <li>
-              <a href="#noID">
-                <i className="fas fa-paint-brush fa-xs">&nbsp;</i>
-                Design Guidelines
-              </a>
-            </li>
-          </ul>
-        </div>
+        <MenuTab tabContent={["Code", "Design Guidelines"]} />
       </div>
-    );
-
+    )
   } else {
-    //Omit the Code/Design tabs. 
     return (
       <div className="cbp-content__header">
         <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
+        <MenuTab tabContent={["Basics", "Research & References"]} />
       </div>
-    );
+    )
   }
 }
 
