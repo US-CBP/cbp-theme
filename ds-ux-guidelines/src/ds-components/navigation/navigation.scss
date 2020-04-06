@@ -8,18 +8,27 @@
 
 .nav-wrapper {
   background-color: $grey-lightest;
-  padding: 0 2rem;
-}
-
-.dropdown-content,
-.dropdown-trigger {
-  position: relative;
-  left: 18px;
-  top: 5px;
+  padding-left: 2rem;
 }
 
 .dropdown-container {
   margin-bottom: 2rem;
+  margin-top: 8px;
+}
+
+.dropdown-menu {
+  padding-left: 1px;
+  padding-top: 2px;
+}
+
+.dropdown-content {
+  padding-bottom: .25rem;
+  padding-top: .25rem;
+}
+
+a.dropdown-item {
+  font-weight: 700;
+  padding-right: 0em;
 }
 
 .menu {
@@ -32,6 +41,16 @@
 .menu-list {
   li>a {
     padding-left: 0;
+
+    &:hover {
+      background-color: $grey-lighter;
+      color: $cbp-info;
+      font-weight: $cbp-weight-medium;
+    }
+  }
+
+  .sub-category {
+    font-style: italic;
   }
 
   li>ul {
@@ -39,28 +58,3 @@
   }
 }
 
-// .menu-text {
-//   position: relative;
-//   left: 18px;
-// }
-
-// .menu-list {
-//   font-size: 1rem;
-//   > li {
-//     a {
-//       &:hover {
-//         background-color: $grey-lighter;
-//         color: $cbp-info;
-//         font-weight: $cbp-weight-medium;
-//       }
-//     }
-//   }
-// }
-
-.menu-label {
-  font-weight: bold;
-  // left: 28px;
-  // margin-top: 10px;
-  // position: relative;
-  @include menu-label-overide();
-}

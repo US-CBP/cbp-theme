@@ -113,12 +113,12 @@ class Navigation extends Component {
     const menuList = this.state.categories.map(cat => {
       return (
         <>
-          <span className="menu-label">{cat.name}</span>
+          <span className="cbp-heading-6">{cat.name}</span>
           <ul className="menu-list">
             {cat.subcategory.map(subCat => {
               return (
                 <li>
-                  <Link to={subCat.link}><span className="menu-text">{subCat.name}</span></Link>
+                  <Link to={subCat.link}><span className="menu-text cbp-body">{subCat.name}</span></Link>
 
                   {subCat.anchors !== undefined ||
                   subCat.anchors !== undefined ? (
@@ -131,7 +131,7 @@ class Navigation extends Component {
                               to={anchor.id}
                               key={`.${anchor.name.replace(/\s/g, "")}-item`}
                             >
-                              <span className="menu-text">{anchor.name}</span>
+                              <span className="menu-text sub-category">{anchor.name}</span>
                             </Link>
                           </li>
                         )
@@ -185,7 +185,7 @@ class Navigation extends Component {
                     className="button is-small"
                     aria-haspopup="true"
                     aria-controls="dropdown-menu"
-                    style={{ width: "100%" }}
+                    
                   >
                     <span>CBP Theme Version 2.0</span>
                     &nbsp;{" "}
@@ -197,7 +197,7 @@ class Navigation extends Component {
                   <div className="dropdown-content">
                     <a
                       href="https://us-cbp.github.io/cbp-style-guide/docs/index.html"
-                      className="dropdown-item"
+                      className="dropdown-item cbp-body"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
