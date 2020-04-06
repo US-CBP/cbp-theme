@@ -7,7 +7,7 @@
 }
 
 .nav-wrapper {
-  background-color: $grey-lightest;
+  background-color: var(--grey-lightest);
   padding-left: 2rem;
 }
 
@@ -33,7 +33,7 @@ a.dropdown-item {
 
 .menu {
   overflow-y: auto;
-  font-size: $cbp-body-text;
+  font-size: var(--cbp-body-text);
   padding: 0;
   margin: 0;
 }
@@ -43,9 +43,9 @@ a.dropdown-item {
     padding-left: 0;
 
     &:hover {
-      background-color: $grey-lighter;
-      color: $cbp-info;
-      font-weight: $cbp-weight-medium;
+      background-color: var(--grey-lighter);
+      color: var(--cbp-info);
+      // font-weight: var(--cbp-weight-bold);
     }
   }
 

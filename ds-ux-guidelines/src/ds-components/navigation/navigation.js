@@ -122,7 +122,7 @@ class Navigation extends Component {
 
                   {subCat.anchors !== undefined ||
                   subCat.anchors !== undefined ? (
-                    <ul style={{ borderLeft: "solid 1px #aaaa98" }}>
+                    <ul style={{ borderLeft: "solid 1px #4a4a4a" }}>
                       {subCat.anchors.map(anchor => {
                         return (
                           //key prop wip
