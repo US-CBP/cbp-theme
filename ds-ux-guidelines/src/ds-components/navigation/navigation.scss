@@ -1,0 +1,60 @@
+@mixin menu-list-ul-overide {
+  margin-left: 0 !important;
+}
+
+@mixin menu-label-overide {
+  font-size: 1em !important;
+}
+
+.nav-wrapper {
+  background-color: var(--grey-lightest);
+  padding-left: 2rem;
+}
+
+.dropdown-container {
+  margin-bottom: 2rem;
+  margin-top: 8px;
+}
+
+.dropdown-menu {
+  padding-left: 1px;
+  padding-top: 2px;
+}
+
+.dropdown-content {
+  padding-bottom: .25rem;
+  padding-top: .25rem;
+}
+
+a.dropdown-item {
+  font-weight: 700;
+  padding-right: 0em;
+}
+
+.menu {
+  overflow-y: auto;
+  font-size: var(--cbp-body-text);
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list {
+  li>a {
+    padding-left: 0;
+
+    &:hover {
+      background-color: var(--grey-lighter);
+      color: var(--cbp-info);
+      // font-weight: var(--cbp-weight-bold);
+    }
+  }
+
+  .sub-category {
+    font-style: italic;
+  }
+
+  li>ul {
+    @include menu-list-ul-overide();
+  }
+}
+

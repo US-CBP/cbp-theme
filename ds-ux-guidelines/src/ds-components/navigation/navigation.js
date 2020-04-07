@@ -113,20 +113,16 @@ class Navigation extends Component {
     const menuList = this.state.categories.map(cat => {
       return (
         <>
-          <span className="menu-label" style={{ fontSize: "1rem" }}>
-            {cat.name}
-          </span>
+          <span className="cbp-heading-6">{cat.name}</span>
           <ul className="menu-list">
             {cat.subcategory.map(subCat => {
               return (
                 <li>
-                  <Link to={subCat.link}>
-                    <span className="menu-text">{subCat.name}</span>
-                  </Link>
+                  <Link to={subCat.link}><span className="menu-text cbp-body">{subCat.name}</span></Link>
 
                   {subCat.anchors !== undefined ||
                   subCat.anchors !== undefined ? (
-                    <ul style={{ borderLeft: "solid 1px #aaaa98" }}>
+                    <ul style={{ borderLeft: "solid 1px #4a4a4a" }}>
                       {subCat.anchors.map(anchor => {
                         return (
                           <li key={`.${anchor.name.replace(/\s/g, "")}`}>
@@ -134,7 +130,7 @@ class Navigation extends Component {
                               to={anchor.id}
                               key={`.${anchor.name.replace(/\s/g, "")}-item`}
                             >
-                              <span className="menu-text">{anchor.name}</span>
+                              <span className="menu-text sub-category">{anchor.name}</span>
                             </Link>
                           </li>
                         )
@@ -173,45 +169,47 @@ class Navigation extends Component {
     return (
       <>
         {/* cbp-ds-grid class is the main grid holder. */}
-        <aside className="menu">
-          <div className="dropdown-container">
-            <div
-              ref={node => (this.node = node)}
-              className={`dropdown ${
-                this.state.showDropdown ? "is-active" : null
-              }`}
-            >
-              <div className="dropdown-trigger">
-                <button
-                  onClick={this.toggleDropdown}
-                  className="button is-small"
-                  aria-haspopup="true"
-                  aria-controls="dropdown-menu"
-                  style={{ width: "100%" }}
-                >
-                  <span>CBP Theme Version 2.0</span>
-                  &nbsp;{" "}
-                  <i className="fas fa-angle-down" aria-hidden="true"></i>
-                </button>
-              </div>
-
-              <div className="dropdown-menu" id="dropdown-menu" role="menu">
-                <div className="dropdown-content">
-                  <a
-                    href="https://us-cbp.github.io/cbp-style-guide/docs/index.html"
-                    className="dropdown-item"
-                    target="_blank"
-                    rel="noopener noreferrer"
+        <div className="nav-wrapper">
+          <aside className="menu">
+            <div className="dropdown-container">
+              <div
+                ref={node => (this.node = node)}
+                className={`dropdown ${
+                  this.state.showDropdown ? "is-active" : null
+                }`}
+              >
+                <div className="dropdown-trigger">
+                  <button
+                    onClick={this.toggleDropdown}
+                    className="button is-small"
+                    aria-haspopup="true"
+                    aria-controls="dropdown-menu"
+                    
                   >
-                    CBP THEME VERSION 1.11.0
-                  </a>
+                    <span>CBP Theme Version 2.0</span>
+                    &nbsp;{" "}
+                    <i className="fas fa-angle-down" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <div className="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div className="dropdown-content">
+                    <a
+                      href="https://us-cbp.github.io/cbp-style-guide/docs/index.html"
+                      className="dropdown-item cbp-body"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      CBP THEME VERSION 1.11.0
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {this.menuList()}
-        </aside>
+            {this.menuList()}
+          </aside>
+        </div>
       </>
     )
   }
