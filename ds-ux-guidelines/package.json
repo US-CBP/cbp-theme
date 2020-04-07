@@ -12,6 +12,7 @@
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.4.3",
+    "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -20,6 +21,7 @@
     "smooth-scroll": "^16.1.2"
   },
   "devDependencies": {
+    "babel-plugin-prismjs": "^2.0.1",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-smoothscroll": "^1.0.4",
     "husky": "^4.2.3",
