@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
 import React, { Component } from "react"
 
-if (typeof window !== "undefined") {
-  // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
-}
+// if (typeof window !== "undefined") {
+//   // eslint-disable-next-line global-require
+//   require("smooth-scroll")('a[href*="#"]')
+// }
 
 class Navigation extends Component {
   state = {
@@ -125,7 +125,6 @@ class Navigation extends Component {
                     <ul style={{ borderLeft: "solid 1px #4a4a4a" }}>
                       {subCat.anchors.map(anchor => {
                         return (
-                          //key prop wip
                           <li key={`.${anchor.name.replace(/\s/g, "")}`}>
                             <Link
                               to={anchor.id}
