@@ -170,7 +170,7 @@ class Navigation extends Component {
       <>
         {/* cbp-ds-grid class is the main grid holder. */}
         <div className="nav-wrapper">
-        <div className="dropdown-container">
+          <div className="dropdown-container">
               <div
                 ref={node => (this.node = node)}
                 className={`dropdown ${
