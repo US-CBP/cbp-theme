@@ -1,7 +1,4 @@
 @charset "utf-8";
-// Import needed Bulma SASS
-@import "~bulma/bulma";
-// @ Import only what we need from Bulma goes here
 // Custom Styles
 @import "custom/utilities/all";
 @import "custom/base/all";
@@ -9,3 +6,6 @@
 @import "custom/components/all";
 @import "custom/grid/all";
 // Vendor Styles
+// Import needed Bulma SASS
+@import "~bulma/bulma";
+// @ Import only what we need from Bulma goes here
