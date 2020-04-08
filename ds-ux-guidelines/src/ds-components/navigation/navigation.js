@@ -170,8 +170,7 @@ class Navigation extends Component {
       <>
         {/* cbp-ds-grid class is the main grid holder. */}
         <div className="nav-wrapper">
-          <aside className="menu">
-            <div className="dropdown-container">
+        <div className="dropdown-container">
               <div
                 ref={node => (this.node = node)}
                 className={`dropdown ${
@@ -206,7 +205,7 @@ class Navigation extends Component {
                 </div>
               </div>
             </div>
-
+          <aside className="menu">
             {this.menuList()}
           </aside>
         </div>
