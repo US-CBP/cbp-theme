@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{RXBc:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),c=a("Dt0B"),r=a("zJqo"),m=a("3NRZ");t.default=function(){return l.a.createElement(c.a,null,l.a.createElement(m.a,{title:"CBP Design System | Home"}),l.a.createElement(r.a,{title:"Home Page"}),l.a.createElement("article",null,l.a.createElement("h1",{className:"cbp-masthead-1"},"CBP ",l.a.createElement("b",null,"Design System")," Library")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-97803ce814c06228dd0a.js.map
