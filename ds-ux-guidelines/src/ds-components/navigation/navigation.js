@@ -12,6 +12,10 @@ class Navigation extends Component {
 
     categories: [
       {
+        name: "Get Started",
+        link: "/get-started/getStarted",
+      },
+      {
         name: "Foundation",
         subcategory: [
           {
@@ -113,33 +117,44 @@ class Navigation extends Component {
     const menuList = this.state.categories.map(cat => {
       return (
         <>
-          <span className="cbp-heading-6">{cat.name}</span>
-          <ul className="menu-list">
-            {cat.subcategory.map(subCat => {
-              return (
-                <li>
-                  <Link to={subCat.link}><span className="menu-text cbp-body">{subCat.name}</span></Link>
+          {/* Checks to see if there is subcategory, if not make the label a link. */}
+          {!cat.subcategory ? (
+            <Link to={cat.link}>
+              <span className="cbp-heading-6">{cat.name}</span>
+            </Link>
+          ) : (
+            <span className="cbp-heading-6">{cat.name}</span>
+          )}
 
-                  {subCat.anchors !== undefined ||
-                  subCat.anchors !== undefined ? (
-                    <ul style={{ borderLeft: "solid 1px #4a4a4a" }}>
-                      {subCat.anchors.map(anchor => {
-                        return (
-                          <li key={`.${anchor.name.replace(/\s/g, "")}`}>
-                            <Link
-                              to={anchor.id}
-                              key={`.${anchor.name.replace(/\s/g, "")}-item`}
-                            >
-                              <span className="menu-text sub-category">{anchor.name}</span>
-                            </Link>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                  ) : null}
-                </li>
-              )
-            })}
+          <ul className="menu-list">
+            {cat.subcategory &&
+              cat.subcategory.map(subCat => {
+                return (
+                  <li>
+                    <Link to={subCat.link}>
+                      <span className="menu-text cbp-body">{subCat.name}</span>
+                    </Link>
+
+                    {subCat.anchors !== undefined ||
+                    subCat.anchors !== undefined ? (
+                      <ul style={{ borderLeft: "solid 1px #4a4a4a" }}>
+                        {subCat.anchors.map(anchor => {
+                          return (
+                            <li key={`.${anchor.name.replace(/\s/g, "")}`}>
+                              <Link
+                                to={anchor.id}
+                                key={`.${anchor.name.replace(/\s/g, "")}-item`}
+                              >
+                                <span className="menu-text sub-category">{anchor.name}</span>
+                              </Link>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    ) : null}
+                  </li>
+                )
+              })}
           </ul>
           <br />
         </>
