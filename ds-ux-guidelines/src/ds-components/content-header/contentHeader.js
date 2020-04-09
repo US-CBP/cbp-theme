@@ -13,11 +13,17 @@ const ContentHeader = ({ title, contentType }) => {
         <MenuTab tabContent={["Code", "Design Guidelines"]} />
       </div>
     )
-  } else {
+  } else if (contentType === "foundation") {
     return (
       <div className="cbp-content__header">
         <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
         <MenuTab tabContent={["Basics", "Research & References"]} />
+      </div>
+    )
+  } else {
+    return (
+      <div className="cbp-content__header">
+        <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
       </div>
     )
   }
