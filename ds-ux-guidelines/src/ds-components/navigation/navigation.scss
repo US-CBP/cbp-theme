@@ -1,3 +1,5 @@
+/* Added important because, Bulma isn't allowing us to overwrite these particular styles.. 
+*/
 @mixin menu-list-ul-overide {
   margin-left: var(--cbp-sm-space) !important;
   padding-left: 0 !important;
