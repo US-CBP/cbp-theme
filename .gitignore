@@ -92,6 +92,9 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# VS Code settings
+.vscode/
+
 # Optional REPL history
 .node_repl_history
 
@@ -130,6 +133,7 @@ public/
 .dynamodb/
 
 ### VisualStudioCode ###
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
