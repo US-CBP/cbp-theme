@@ -4,35 +4,22 @@
 
 @import "../../../ds-css/src/styles/custom/utilities/initial-variables.scss";
 
-/* Color variables */
-// $cbp-default: #ffffff;
-// $cbp-primary: #00416a;
-// $universal-header: #003e65;
-// $grey-base: #000000;
-// $grey-lightest: #f6f6f6;
-
 /* iFrame style for height. Need to revisit this. */
-iFrame {
+iframe {
   height: 358px !important;
 }
 /* iFrame style for height. Need to revisit this. */
 
-/* Temporary class until grid sizing, padding guidance is completed */
-
-.heading-pad-temp {
-  padding: 5rem 2rem 3rem 2rem;
+.margin--lg {
+  margin-top: $cbp-lg-space;
 }
 
-.section-pad-temp {
-  padding-bottom: 3rem;
+.margin--reg {
+  margin-top: $cbp-reg-space;
 }
 
-.one-half-pad-temp {
-  padding: 1.5rem;
-}
-
-.li-margin {
-  margin-left: 1em;
+.margin--sm {
+  margin-top: $cbp-sm-space;
 }
 
 .tables-usage--box {
@@ -40,10 +27,6 @@ iFrame {
   @media screen and (max-width: 1090px) {
     height: 300px;
   }
-}
-
-section {
-  margin: 1.5rem auto;
 }
 
 .wrapper {
@@ -54,12 +37,9 @@ section {
 /* Temporary class until grid sizing, padding guidance is completed */
 
 .img-frame {
-  box-shadow:
-  0 3.3px 2.7px rgba(0, 0, 0, 0.03),
-  0 10px 6.9px rgba(0, 0, 0, 0.031),
-  0 22.7px 14.2px rgba(0, 0, 0, 0.023),
-  0 47.4px 29.2px rgba(0, 0, 0, 0.018),
-;
+  box-shadow: 0 3.3px 2.7px rgba(0, 0, 0, 0.03),
+    0 10px 6.9px rgba(0, 0, 0, 0.031), 0 22.7px 14.2px rgba(0, 0, 0, 0.023),
+    0 47.4px 29.2px rgba(0, 0, 0, 0.018);
   width: 80%;
   border-radius: 3px;
   padding: 25px 20px 15px 20px;

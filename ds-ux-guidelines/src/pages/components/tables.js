@@ -1,17 +1,55 @@
 import React from "react"
 import Layout from "../../ds-components/layout/layout"
 import ContentHeader from "../../ds-components/content-header/contentHeader"
-
-/* import Image from "../../ds-components/image" */
 import SEO from "../../ds-components/seo"
+import CodeSnippet from "../../ds-components/codeSnippet/codeSnippet"
+
+const tableExample = `
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Page Updated</th>
+        <th scope="col">Data Field</th>
+        <th scope="col">Previous Value</th>
+        <th scope="col">New Value</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td scope="row">08/12/19 10:00:01 EST</td>
+        <td>User Profile</td>
+        <td>Seller's First Name</td>
+        <td>Thomas</td>
+        <td>Bill</td>
+      </tr>
+
+      <tr>
+        <td scope="row">10/07/19 02:34:11 EST</td>
+        <td>Product Information</td>
+        <td>Date</td>
+        <td>04/02/18</td>
+        <td>04/04/18</td>
+      </tr>
+
+      <tr>
+        <td scope="row">12/12/19 11:05:49 EST</td>
+        <td>Product Information</td>
+        <td>Seller's First Name</td>
+        <td>Samantha</td>
+        <td>Sam</td>
+      </tr>
+    </tbody>
+  </table>`
 
 const TableComponentPage = () => (
   <Layout>
     <SEO title="CBP Design System | Tables" />
     <ContentHeader title="Tables" contentType="component" />
     <article>
-      <div id="description" className="container section-pad-temp">
-        <p>
+      <div id="description" className="container margin--lg">
+        <h2 className="cbp-heading-2">Description</h2>
+        <p className="cbp-body margin--reg">
           Tables are used to help users scan &amp; compare large amounts of data
           at a glance. When implementing tables into your project, make sure to
           consider other alternatives that may be optimal for the data you want
@@ -20,11 +58,11 @@ const TableComponentPage = () => (
       </div>
 
       <div id="Code" className="container cbp-code">
-        <div id="code" className="cbp-heading-2 section-pad-temp">
-          Code
+        <div id="code" className="margin--lg">
+          <h2 className="cbp-heading-2">Code</h2>
         </div>
 
-        <div id="table">
+        <div id="table" className="margin--reg">
           <table className="table is-hoverable is-fullwidth">
             <thead>
               <tr>
@@ -62,7 +100,8 @@ const TableComponentPage = () => (
               </tr>
             </tbody>
           </table>
-          <br />
+
+          {/* <CodeSnippet language="language-html" code={tableExample} /> */}
 
           <iframe
             height="358"
@@ -82,21 +121,13 @@ const TableComponentPage = () => (
             <a href="https://codepen.io/KtowneCreative">@KtowneCreative</a>) on{" "}
             <a href="https://codepen.io">CodePen</a>.
           </iframe>
-
-          {/*           <p className="codepen" data-height="357" data-theme-id="light" data-default-tab="html" data-user="KtowneCreative" data-slug-hash="mdyWGWN" style={{height: '357px', boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em 0', padding: '1em'}} data-pen-title="Table- DSUX">
-            <span>
-              See the Pen <a href="https://codepen.io/KtowneCreative/pen/mdyWGWN"> Table- DSUX</a> by Creative Services (<a href="https://codepen.io/KtowneCreative">@KtowneCreative</a>) on <a href="https://codepen.io">CodePen</a>.
-            </span>
-          </p>        
-          <script async src="https://static.codepen.io/assets/embed/ei.js"></script> */}
         </div>
-        <br />
-        <br />
 
-        <h3 id="modifiers" className="cbp-heading-3 section-pad-temp">
+        <h3 id="modifiers" className="cbp-heading-3 margin--lg">
           Modifiers
         </h3>
-        <div className="modifiers">
+
+        <div className="margin--reg">
           <table className="table is-hoverable is-fullwidth">
             <thead>
               <tr>
@@ -143,134 +174,116 @@ const TableComponentPage = () => (
             </tbody>
           </table>
         </div>
-        <br />
-        <br />
 
         <section id="Design Guidelines">
-          <h2 className="cbp-heading-2 section-pad-temp">Design Guideline</h2>
+          <h2 className="cbp-heading-2 margin--lg">Design Guidelines</h2>
 
-          <h2 id="general" className="cbp-heading-3">
-            General
-          </h2>
-          <br />
+          <div className="margin--lg">
+            <h3 id="general" className="cbp-heading-3">
+              General
+            </h3>
 
-          <ol>
-            <li className="li-margin">
-              For nominal/non-numeric data (e.g., room numbers, zip codes,
-              names),
-              <strong> left-align text.</strong>
-            </li>
-            <li className="li-margin">
-              For data that involves quantity (e.g., counts, currency,
-              percentages),
-              <strong> right-align text.</strong>
-            </li>
-            <li className="li-margin">
-              Each table header should have the <code> th </code> tag.{" "}
-            </li>
+            <div className="content">
+              <ol>
+                <li>
+                  For nominal/non-numeric data (e.g., room numbers, zip codes,
+                  names),
+                  <strong> left-align text.</strong>
+                </li>
+                <li>
+                  For data that involves quantity (e.g., counts, currency,
+                  percentages),
+                  <strong> right-align text.</strong>
+                </li>
+                <li>
+                  Each table header should have the <code> th </code> tag.{" "}
+                </li>
 
-            <li className="li-margin">
-              If the number of rows for data exceed 30, implement pagination on
-              the top and bottom of the table to reduce scrolling.
-            </li>
-            <li className="li-margin">
-              When there is no data to display in a cell, use placeholder text
-              such as
-              <strong>"--"</strong> or <strong>"N/A"</strong> to indicate that
-              the empty state is not a technical bug or glitch.
-            </li>
-          </ol>
+                <li>
+                  If the number of rows for data exceed 30, implement pagination
+                  on the top and bottom of the table to reduce scrolling.
+                </li>
+                <li>
+                  When there is no data to display in a cell, use placeholder
+                  text such as
+                  <strong>"--"</strong> or <strong>"N/A"</strong> to indicate
+                  that the empty state is not a technical bug or glitch.
+                </li>
+              </ol>
+            </div>
+          </div>
 
-          <br />
-          <br />
-
-          <h2 id="usage" className="cbp-heading-3">
+          <h3 id="usage" className="cbp-heading-3 margin--lg">
             Usage
-          </h2>
-          <br />
+          </h3>
 
           <div className="columns">
-            <div className="column">
+            <div className="column margin--reg">
               <div className="box tables-usage--box">
                 <p>
                   <span className="is-size-5">
-                    <strong>
-                      {" "}
-                      <span role="img" aria-label="Check mark.">
-                        ✅
-                      </span>{" "}
-                      Consider using a table if:
-                    </strong>
+                    <strong>Consider using a table if:</strong>
                   </span>
                 </p>
-                <br />
-                <ol>
-                  <li className="li-margin">
-                    You have a large quantity of data
-                  </li>
-                  <li className="li-margin">
-                    You want to implement features such as sorting or filtering
-                  </li>
-                  <li className="li-margin">
-                    The user needs to easily compare data quickly & efficiently
-                  </li>
-                </ol>
+
+                <div className="content">
+                  <ol>
+                    <li>You have a large quantity of data</li>
+                    <li>
+                      You want to implement features such as sorting or
+                      filtering
+                    </li>
+                    <li>
+                      The user needs to easily compare data quickly &
+                      efficiently
+                    </li>
+                  </ol>
+                </div>
               </div>
             </div>
 
-            <div className="column">
+            <div className="column margin--reg">
               <div className="box tables-usage--box">
                 <p>
                   <span className="is-size-5">
-                    <strong>
-                      {" "}
-                      <span role="img" aria-label="X Mark.">
-                        ❌
-                      </span>{" "}
-                      You should NOT use a table if:
-                    </strong>
+                    <strong>You should NOT use a table if:</strong>
                   </span>
                 </p>
 
-                <br />
-                <ol>
-                  <li className="li-margin">
-                    You do not have a lot of data to display
-                  </li>
-                  <div className="li-margin">
+                <div className="content">
+                  <ol>
+                    <li>You do not have a lot of data to display</li>
                     <em>In this case, consider using a list component.</em>
-                  </div>
-                  <br />
-                  <li className="li-margin">
-                    You want to display a summary of your data
-                  </li>
-                  <div className="li-margin">
+                    <div className="margin--reg"></div>
+                    <li>You want to display a summary of your data</li>
                     <em>In this case, consider using graphs or charts.</em>
-                  </div>
-                </ol>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
 
-          <h2 id="accessibility" className="cbp-heading-3">
+          <h3 id="accessibility" className="cbp-heading-3 margin--lg">
             Accessibility
-          </h2>
-          <br />
-          <ol>
-            <li className="li-margin">
-              Each header cell should have the <code>scope="col"</code> or
-              <code>scope="row"</code> attribute.
-            </li>
-            <li className="li-margin">
-              When adding a title to a table, include it in a{" "}
-              <code>caption</code> tag inside of the <code>table</code> element.
-            </li>
-            <li className="li-margin">
-              Each table header should have the <code> th </code> tag.{" "}
-            </li>
-          </ol>
+          </h3>
+
+          <div className="content">
+            <ol>
+              <li>
+                Each header cell should have the <code>scope="col"</code> or
+                <code>scope="row"</code> attribute.
+              </li>
+              <li>
+                When adding a title to a table, include it in a{" "}
+                <code>caption</code> tag inside of the <code>table</code>{" "}
+                element.
+              </li>
+              <li>
+                Each table header should have the <code> th </code> tag.{" "}
+              </li>
+            </ol>
+          </div>
         </section>
-        <br />
       </div>
     </article>
   </Layout>

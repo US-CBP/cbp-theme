@@ -41,10 +41,9 @@
   article {
     flex: 8;
     overflow-y: scroll;
-    padding: 2em 2em 0 2em;
+    padding: $cbp-reg-space;
     /* height set on child; triggers scroll */
   }
-
 }
 /* SCSS IMPORTS */
 @import "../header/header";

@@ -15,3 +15,18 @@
 .apply-border-radius {
   border-radius: 7px;
 }
+
+span {
+  &.tag {
+    background-color: transparent;
+    font-size: 1rem;
+  }
+}
+
+code {
+  background-color: transparent !important;
+  color: #0a3055;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.25em 0.5em 0.25em;
+}
