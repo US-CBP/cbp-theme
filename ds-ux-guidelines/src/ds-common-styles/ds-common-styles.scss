@@ -10,6 +10,10 @@ iframe {
 }
 /* iFrame style for height. Need to revisit this. */
 
+.main-header {
+  margin: $cbp-lg-space $cbp-reg-space;
+}
+
 .margin--lg {
   margin-top: $cbp-lg-space;
 }
