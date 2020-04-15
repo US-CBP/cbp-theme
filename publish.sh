@@ -2,9 +2,9 @@
 
 set -o errexit -o nounset
 
-if [ "$TRAVIS_BRANCH" != "design-system" ]
+if [ "$TRAVIS_BRANCH" != "master" ]
 then
-  echo "This commit was made against the $TRAVIS_BRANCH and not the design-system branch! No deploy!"
+  echo "This commit was made against the $TRAVIS_BRANCH and not the master branch, no deploy necessary"
   exit 0
 fi
 

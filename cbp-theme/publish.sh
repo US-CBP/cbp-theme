@@ -15,8 +15,6 @@ cp -rf ./dist ./kitchensink/
 cd ./kitchensink
 
 git init
-git config user.name "David Hodge"
-git config user.email "david.hodge@lucidtechnics.com"
 
 git remote add upstream "https://$GH_TOKEN@github.com/US-CBP/cbp-theme.git"
 git fetch upstream
