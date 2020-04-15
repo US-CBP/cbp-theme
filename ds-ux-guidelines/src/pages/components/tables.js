@@ -2,51 +2,12 @@ import React from "react"
 import Layout from "../../ds-components/layout/layout"
 import ContentHeader from "../../ds-components/content-header/contentHeader"
 import SEO from "../../ds-components/seo"
-import CodeSnippet from "../../ds-components/codeSnippet/codeSnippet"
-
-const tableExample = `
-    <thead>
-      <tr>
-        <th scope="col">Time</th>
-        <th scope="col">Page Updated</th>
-        <th scope="col">Data Field</th>
-        <th scope="col">Previous Value</th>
-        <th scope="col">New Value</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td scope="row">08/12/19 10:00:01 EST</td>
-        <td>User Profile</td>
-        <td>Seller's First Name</td>
-        <td>Thomas</td>
-        <td>Bill</td>
-      </tr>
-
-      <tr>
-        <td scope="row">10/07/19 02:34:11 EST</td>
-        <td>Product Information</td>
-        <td>Date</td>
-        <td>04/02/18</td>
-        <td>04/04/18</td>
-      </tr>
-
-      <tr>
-        <td scope="row">12/12/19 11:05:49 EST</td>
-        <td>Product Information</td>
-        <td>Seller's First Name</td>
-        <td>Samantha</td>
-        <td>Sam</td>
-      </tr>
-    </tbody>
-  </table>`
 
 const TableComponentPage = () => (
   <Layout>
     <SEO title="CBP Design System | Tables" />
     <ContentHeader title="Tables" contentType="component" />
-    <article>
+    <article className="spacing-wrapper">
       <div id="description" className="container margin--lg">
         <h2 className="cbp-heading-2">Description</h2>
         <p className="cbp-body margin--reg">
