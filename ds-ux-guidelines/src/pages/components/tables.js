@@ -46,6 +46,7 @@ const TableComponentPage = () => (
   <Layout>
     <SEO title="CBP Design System | Tables" />
     <ContentHeader title="Tables" contentType="component" />
+
     <article>
       <div id="description" className="container margin--lg">
         <h2 className="cbp-heading-2">Description</h2>
