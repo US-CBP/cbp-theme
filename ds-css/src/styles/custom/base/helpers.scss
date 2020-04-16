@@ -15,7 +15,6 @@
   &--dark {
     @include dark;
   }
-
 }
 
 .cbp-masthead-2 {
@@ -23,7 +22,7 @@
   font-weight: $cbp-weight-thin;
   line-height: $cbp-height-40;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -34,7 +33,7 @@
   font-weight: $cbp-weight-light;
   line-height: $cbp-height-36;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -45,7 +44,7 @@
   font-weight: $cbp-weight-regular;
   line-height: $cbp-height-32;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -56,7 +55,7 @@
   font-weight: $cbp-weight-regular;
   line-height: $cbp-height-28;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -67,7 +66,7 @@
   font-weight: $cbp-weight-medium;
   line-height: $cbp-height-28;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -78,7 +77,7 @@
   font-weight: $cbp-weight-medium;
   line-height: $cbp-height-24;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -89,7 +88,7 @@
   font-weight: $cbp-weight-bold;
   line-height: $cbp-height-20;
   letter-spacing: $cbp-font-spacing;
-  
+
   &--dark {
     @include dark;
   }
@@ -118,13 +117,124 @@
   }
 }
 
-  .cbp-button-text {
-    font-size: 0.889rem;
-    font-weight: $cbp-weight-medium;
-    letter-spacing: 1.08px;
-    text-transform: uppercase;
-  
-    &--dark {
-      @include dark;
-    }
+.cbp-button-text {
+  font-size: 0.889rem;
+  font-weight: $cbp-weight-medium;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+
+  &--dark {
+    @include dark;
   }
+}
+
+/* Spacing sizes */
+
+/* Square Inset */
+.cbp-spacing-square {
+  &--micro {
+    padding: $cbp-micro-space;
+  }
+  &--xsmall {
+    padding: $cbp-extra-sm-space;
+  }
+  &--small {
+    padding: $cbp-sm-space;
+  }
+  &--regular {
+    padding: $cbp-reg-space;
+  }
+  &--large {
+    padding: $cbp-lg-space;
+  }
+  &--xlarge {
+    padding: $cbp-extra-lg-space;
+  }
+}
+
+/* Squish Inset */
+.cbp-spacing-squish {
+  &--micro {
+    padding: $cbp-micro-space $cbp-extra-sm-space;
+  }
+  &--xsmall {
+    padding: $cbp-extra-sm-space $cbp-sm-space;
+  }
+  &--small {
+    padding: $cbp-sm-space $cbp-reg-space;
+  }
+  &--regular {
+    padding: $cbp-reg-space $cbp-lg-space;
+  }
+  &--large {
+    padding: $cbp-lg-space $cbp-extra-lg-space;
+  }
+}
+
+/* Stretch Inset */
+.cbp-spacing-stretch {
+  &--micro {
+    padding: $cbp-extra-sm-space $cbp-micro-space;
+  }
+  &--xsmall {
+    padding: $cbp-sm-space $cbp-extra-sm-space;
+  }
+  &--small {
+    padding: $cbp-reg-space $cbp-sm-space;
+  }
+  &--regular {
+    padding: $cbp-lg-space $cbp-reg-space;
+  }
+  &--large {
+    padding: $cbp-extra-lg-space $cbp-lg-space;
+  }
+}
+
+/* Stack Spacing */
+.cbp-spacing-stack {
+  &--micro {
+    padding-bottom: $cbp-micro-space;
+  }
+  &--xsmall {
+    padding-bottom: $cbp-extra-sm-space;
+  }
+  &--small {
+    padding-bottom: $cbp-sm-space;
+  }
+  &--regular {
+    padding-bottom: $cbp-reg-space;
+  }
+  &--large {
+    padding-bottom: $cbp-lg-space;
+  }
+  &--xlarge {
+    padding-bottom: $cbp-extra-lg-space;
+  }
+}
+
+/* Inline Spacing */
+.cbp-spacing-inline {
+  &--micro {
+    padding-right: $cbp-micro-space;
+  }
+
+  &--xsmall {
+    padding-right: $cbp-extra-sm-space;
+  }
+
+  &--small {
+    padding-right: $cbp-sm-space;
+  }
+
+  &--regular {
+    padding-right: $cbp-reg-space;
+  }
+
+  &--large {
+    padding-right: $cbp-lg-space;
+  }
+
+  &--xlarge {
+    padding-right: $cbp-extra-lg-space;
+  }
+}

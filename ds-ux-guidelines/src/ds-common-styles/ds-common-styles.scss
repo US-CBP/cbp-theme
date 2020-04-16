@@ -2,36 +2,46 @@
   Common styles shared across Design System site.
 */
 
-@import "../../../ds-css/src/styles/custom/utilities/initial-variables.scss";
+@import "../../../ds-css/src/styles/cbp-ds.scss";
 
 /* iFrame style for height. Need to revisit this. */
 iframe {
   height: 358px !important;
 }
+
 /* iFrame style for height. Need to revisit this. */
 
-.main-header {
-  margin: $cbp-lg-space $cbp-reg-space;
+.spacing-wrapper {
+  h2,
+  h3 {
+    @extend .cbp-spacing-stack--regular;
+  }
+
+  p {
+    @extend .cbp-spacing-stack--small;
+    padding-bottom: $cbp-sm-space;
+  }
+
+  &:last-child {
+    @extend .cbp-spacing-stack--large;
+  }
 }
 
-.margin--lg {
-  margin-top: $cbp-lg-space;
-}
+// .margin--lg {
+//   margin-top: $cbp-lg-space;
+// }
 
-.margin--xl {
-  margin-top: $cbp-extra-lg-space;
-}
+// .margin--reg {
+//   margin-top: $cbp-reg-space;
+// }
 
-.margin--reg {
-  margin-top: $cbp-reg-space;
-}
-
-.margin--sm {
-  margin-top: $cbp-sm-space;
-}
+// .margin--sm {
+//   margin-top: $cbp-sm-space;
+// }
 
 .tables-usage--box {
   height: 200px;
+
   @media screen and (max-width: 1090px) {
     height: 300px;
   }
