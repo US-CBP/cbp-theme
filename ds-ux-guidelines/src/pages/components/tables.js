@@ -88,53 +88,51 @@ const TableComponentPage = () => (
           Modifiers
         </h3>
 
-        <div className="">
-          <table className="table is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th scope="col">Class</th>
-                <th scope="col">Description</th>
-              </tr>
-            </thead>
+        <table className="table is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
 
-            <tbody>
-              <tr>
-                <th scope="row">
-                  <code>is-bordered</code>
-                </th>
-                <td>Adds a border to all the cells</td>
-              </tr>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <code>is-bordered</code>
+              </th>
+              <td>Adds a border to all the cells</td>
+            </tr>
 
-              <tr>
-                <th scope="row">
-                  <code>is-hoverable</code>
-                </th>
-                <td>Gives hover effect over data cells</td>
-              </tr>
+            <tr>
+              <th scope="row">
+                <code>is-hoverable</code>
+              </th>
+              <td>Gives hover effect over data cells</td>
+            </tr>
 
-              <tr>
-                <th scope="row">
-                  <code>is-narrow</code>
-                </th>
-                <td>Condenses table height</td>
-              </tr>
+            <tr>
+              <th scope="row">
+                <code>is-narrow</code>
+              </th>
+              <td>Condenses table height</td>
+            </tr>
 
-              <tr>
-                <th scope="row">
-                  <code>is-striped</code>
-                </th>
-                <td>Alternates color</td>
-              </tr>
+            <tr>
+              <th scope="row">
+                <code>is-striped</code>
+              </th>
+              <td>Alternates color</td>
+            </tr>
 
-              <tr>
-                <th scope="row">
-                  <code>full-width</code>
-                </th>
-                <td>Makes table fill up the max-width of page</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <tr>
+              <th scope="row">
+                <code>full-width</code>
+              </th>
+              <td>Makes table fill up the max-width of page</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section id="Design Guidelines">
@@ -217,7 +215,7 @@ const TableComponentPage = () => (
                   <ol>
                     <li>You do not have a lot of data to display</li>
                     <em>In this case, consider using a list component.</em>
-                    <div className=""></div>
+
                     <li>You want to display a summary of your data</li>
                     <em>In this case, consider using graphs or charts.</em>
                   </ol>

@@ -21,13 +21,15 @@ const TypographyPage = () => (
           elements and what you’re left with is raw content. Having a well
           thought-out and managed typography system drives retention and
           understanding of information, and helps our users focus on the
-          informed decisions that keep our country safe. This isn’t simply what
-          typeface we would like to use, but also the hierarchy, treatments,
-          spacial relationships, and other refinements which augment legibility.
-          The typographic settings we create have consequences for every
-          component and page we build. At its core, the CBP Design System values
-          consistency, accessibility, and legibility above all other style
-          considerations.
+          informed decisions that keep our country safe.
+        </p>
+        <p className="cbp-body">
+          This isn’t simply what typeface we would like to use, but also the
+          hierarchy, treatments, spacial relationships, and other refinements
+          which augment legibility. The typographic settings we create have
+          consequences for every component and page we build. At its core, the
+          CBP Design System values consistency, accessibility, and legibility
+          above all other style considerations.
         </p>
       </section>
 
@@ -150,22 +152,31 @@ const TypographyPage = () => (
           receive assistance with calling assets from our servers (sorry we
           can't put this link on the open web). Internal CBP applications should
           never be directly referencing the Google&trade; directory when calling
-          font files. For local installation, please download the following
-          folder of .ttf(truetype) formatted files and install them on your
-          machine (you may require assistance from your IT dept. in some
-          instances to install local files).
+          font files.
+        </p>
+
+        <p className="cbp-body">
+          For local installation, please download the following folder of
+          .ttf(truetype) formatted files and install them on your machine (you
+          may require assistance from your IT dept. in some instances to install
+          local files).
           {/* @TODO: Delete after content is received */}
           <strong style={{ color: "red" }}>
             [**Download link here**] [**special callout styling of some sort**]
           </strong>
+        </p>
+
+        <p className="cbp-body">
           Because Google&trade; is constantly revising and improving these files
           you can visit the Google&trade; Fonts website to follow the
           instructions for downloading the most up-to-date font files. This will
           keep your local files up-to-date. We will periodically update the
           files hosted on our CDN and the folder above to make sure we are
           taking advantage of new efficiencies.
-          <strong> Remember to download the complete font families.</strong>A
-          note for CBP Design System users who are self-hosting font files.
+          <strong> Remember to download the complete font families.</strong>
+        </p>
+        <p>
+          A note for CBP Design System users who are self-hosting font files.
           Please remember to only provide the .woff (IE 9+ compatibility) and
           .woff2 (all modern browsers) file types when hosting. Remove any
           reference to extraneous filetypes like .eot, .svg, etc. as this can
@@ -280,20 +291,46 @@ const TypographyPage = () => (
           For Roboto Mono the following weights are included:
         </p>
 
-        <div className="" style={{ fontFamily: "Roboto Mono, monospace" }}>
-          <ul>
-            <li className="cbp-masthead-2">Thin (100)</li>
+        <ul>
+          <li
+            className="cbp-masthead-2"
+            style={{ fontFamily: "Roboto Mono, monospace" }}
+          >
+            Thin (100)
+          </li>
 
-            <li className="cbp-heading-1">Light (300)</li>
+          <li
+            className="cbp-heading-1"
+            style={{ fontFamily: "Roboto Mono, monospace" }}
+          >
+            Light (300)
+          </li>
 
-            <li className="cbp-heading-3">Regular (400)</li>
-            <li className="cbp-heading-5">Medium (500)</li>
-            <li className="cbp-heading-6">Bold (700)</li>
-            <li className="cbp-heading-6" style={{ fontWeight: "900" }}>
-              Black (900)
-            </li>
-          </ul>
-        </div>
+          <li
+            className="cbp-heading-3"
+            style={{ fontFamily: "Roboto Mono, monospace" }}
+          >
+            Regular (400)
+          </li>
+          <li
+            className="cbp-heading-5"
+            style={{ fontFamily: "Roboto Mono, monospace" }}
+          >
+            Medium (500)
+          </li>
+          <li
+            className="cbp-heading-6"
+            style={{ fontFamily: "Roboto Mono, monospace" }}
+          >
+            Bold (700)
+          </li>
+          <li
+            className="cbp-heading-6"
+            style={{ fontFamily: "Roboto Mono, monospace", fontWeight: "900" }}
+          >
+            Black (900)
+          </li>
+        </ul>
 
         <p className="cbp-body">
           <strong>Note: </strong>Roboto Mono should only be used in instances
@@ -355,13 +392,11 @@ const TypographyPage = () => (
       <section>
         <h3 className="cbp-heading-3">Units of Measurement</h3>
 
-        <div className="">
-          <img
-            src="https://www.elmastudio.de/wp-content/uploads/2012/07/css-rem-01.jpg"
-            style={{ maxHeight: "200px", padding: "1rem" }}
-            alt="Chart showing difference between REM and EM CSS values"
-          ></img>
-        </div>
+        <img
+          src="https://www.elmastudio.de/wp-content/uploads/2012/07/css-rem-01.jpg"
+          style={{ maxHeight: "200px", padding: "1rem" }}
+          alt="Chart showing difference between REM and EM CSS values"
+        ></img>
 
         <p className="cbp-body">
           Our root base font size is 14px (CSS Pixels) and is set in the
@@ -709,13 +744,16 @@ const TypographyPage = () => (
           difference between headings, hierarchy can be difficult to
           distinguish. There some noticeable oversights in not optimizing line
           height, line length, and other micro-typography settings to enhance
-          legibility. The existing type-scale follows a more traditional
-          diatonic format (think Microsoft word or email editors), which
-          normally moves up the scale in a “step-like fashion”. Starting with
-          adding 1px between steps, then 2px, and so forth. Always with even
-          steps. Ours has some noticeable differences at the ends of the scale.
-          +3 at the beginning and +6 at the top create a disturbance in that
-          natural progression.
+          legibility.
+        </p>
+
+        <p className="cbp-body">
+          The existing type-scale follows a more traditional diatonic format
+          (think Microsoft word or email editors), which normally moves up the
+          scale in a “step-like fashion”. Starting with adding 1px between
+          steps, then 2px, and so forth. Always with even steps. Ours has some
+          noticeable differences at the ends of the scale. +3 at the beginning
+          and +6 at the top create a disturbance in that natural progression.
         </p>
 
         <p className="cbp-subhead-text">
@@ -845,23 +883,30 @@ const TypographyPage = () => (
           applications you want a smaller type scale and settings that reflect
           the hierarchy needed to make that flow work (productive). In more
           informationa l sites like blogs a larger ratio exists between type
-          steps (Expressive). In productive sites the relationship between
-          elements on a page becomes a lot more important because it impacts the
-          intended work-flow. Therefore having wild gaps in type steps may cause
-          too great a disruption when re-flowing the page between breakpoints
-          and across devices. In expressive sites the pages usually have a lot
-          more text content and may rely more heavily on size relationships to
-          create hierarchy and pull special emphasis to certain type areas.
-          Having smaller text across the board in an editorial style site can
-          actually hurt legibility because the hierarchy may not be immediately
-          discernible. In a system that may need to exist across these
-          boundaries do we maintain two different sets of type scales and
-          special type classes for each side of the coin? Or do we maintain a
-          consistent set of standards regardless of site purpose? Usually the
-          simplest answer is best. For now we present a single set of
-          typographic choices with a the addition of two"Masthead" type classes
-          to help account for the instances in which we need larger typographic
-          choices.
+          steps (Expressive).
+        </p>
+        <p className="cbp-body">
+          In productive sites the relationship between elements on a page
+          becomes a lot more important because it impacts the intended
+          work-flow. Therefore having wild gaps in type steps may cause too
+          great a disruption when re-flowing the page between breakpoints and
+          across devices.
+        </p>
+        <p className="cbp-body">
+          In expressive sites the pages usually have a lot more text content and
+          may rely more heavily on size relationships to create hierarchy and
+          pull special emphasis to certain type areas. Having smaller text
+          across the board in an editorial style site can actually hurt
+          legibility because the hierarchy may not be immediately discernible.
+        </p>
+        <p className="cbp-body">
+          In a system that may need to exist across these boundaries do we
+          maintain two different sets of type scales and special type classes
+          for each side of the coin? Or do we maintain a consistent set of
+          standards regardless of site purpose? Usually the simplest answer is
+          best. For now we present a single set of typographic choices with a
+          the addition of two"Masthead" type classes to help account for the
+          instances in which we need larger typographic choices.
         </p>
       </section>
 
@@ -903,32 +948,44 @@ const TypographyPage = () => (
           at arm's length. This same principle applies to products like
           billboards which must be legible at a great distance and often at high
           speeds. In this case this means that text must be much bigger by
-          comparison in order to remain legible. In an enterprise like CBP where
-          the number of devices a digital product can appear on continues to
-          grow beyond traditional desktop computers into mobile devices,
-          wearables, and large wall- mounted displays we have to craft a system
-          that remains legible in different sorts of scenarios. Is the industry
-          standard 16px right for our needs? In the case of these studies they
-          want to remain relevant in a world that is increasingly mobile-first
-          so the recommendation of 16px is directly related to viewing content
-          on mobile handheld devices and the distances generally associated with
-          holding them. But these studies are also more centered on expressive
-          type applications and sites. Productive systems (which are the vast
-          majority of CBP systems) are much more space- conscious, and much more
-          sensitive to wild swings in responsive behavior when reflowing content
-          up and down the viewport width range. This gives a little flexibility
-          when choosing a base font size that fits our particular needs as an
-          enterprise. During our initial research, we tested a range of base
-          font sizes from 13px (the CBP Theme 1.X base font size), through the
-          industry standard 16px to see how this might affect a typical
-          application design. Remember we want to build bridges to systems that
-          were originally built with the CBP Theme. What we found was that our
-          old 13px system just didn't hold up legibility wise, and 15px and 16px
-          size effectively broke layouts and did not reduce as well on smaller
-          breakpoints. That made our decision easy because only 1 option was
-          left, 14px. A fitting compromise since it's not that far off from the
-          existing 13px setting and gets us closer to the industry standard
-          16px. See below for some of our experimentation.
+          comparison in order to remain legible.
+        </p>
+
+        <p className="cbp-body">
+          In an enterprise like CBP where the number of devices a digital
+          product can appear on continues to grow beyond traditional desktop
+          computers into mobile devices, wearables, and large wall- mounted
+          displays we have to craft a system that remains legible in different
+          sorts of scenarios.
+        </p>
+
+        <p className="cbp-body">
+          Is the industry standard 16px right for our needs? In the case of
+          these studies they want to remain relevant in a world that is
+          increasingly mobile-first so the recommendation of 16px is directly
+          related to viewing content on mobile handheld devices and the
+          distances generally associated with holding them. But these studies
+          are also more centered on expressive type applications and sites.
+          Productive systems (which are the vast majority of CBP systems) are
+          much more space- conscious, and much more sensitive to wild swings in
+          responsive behavior when reflowing content up and down the viewport
+          width range.
+        </p>
+
+        <p className="cbp-body">
+          This gives a little flexibility when choosing a base font size that
+          fits our particular needs as an enterprise. During our initial
+          research, we tested a range of base font sizes from 13px (the CBP
+          Theme 1.X base font size), through the industry standard 16px to see
+          how this might affect a typical application design. Remember we want
+          to build bridges to systems that were originally built with the CBP
+          Theme. What we found was that our old 13px system just didn't hold up
+          legibility wise, and 15px and 16px size effectively broke layouts and
+          did not reduce as well on smaller breakpoints. That made our decision
+          easy because only 1 option was left, 14px. A fitting compromise since
+          it's not that far off from the existing 13px setting and gets us
+          closer to the industry standard 16px. See below for some of our
+          experimentation.
           {/* @TODO: Delete after content is received */}
           <strong style={{ color: "red" }}>
             [**type scale experiments with individual notes**]
@@ -1072,23 +1129,30 @@ const TypographyPage = () => (
           gives the layout structure. When we mix this with typography we
           enhance overall legibility because the user’s eye is allowed to flow
           smoothly, it is not interrupted by unexpected and jarring
-          relationships between items in the layout. This is mostly manifested
-          in what is referred to as the “Baseline Grid.” This grid is different
-          from the various other terms referred to as grid in web design in that
-          it specifically refers to a set of “invisible” lines that go down the
-          page to which all layout elements are aligned. Because communication
-          of information is at the heart of all websites and applications, this
-          grid is tightly tied to our typography settings. Specifically to the
-          line-height of body copy (because it is the base unit in our
-          typographical system). To get started, we first need to figure out
-          what our line-height will be for our body copy. Earlier we established
-          that our body copy will be 14px. It’s a good industry standard
-          practice to use a 4px baseline grid meaning all spacing will be a
-          multiple or factor of 4 (almost all device viewport widths are in
-          multiples of 4 for some reason). 20px for the Body Copy line-height
-          seems to be a good fit. This is legible and gives a good starting
-          point for our spacing system (for more information on the spacing
-          system please see its section under foundations).
+          relationships between items in the layout.
+        </p>
+
+        <p className="cbp-body">
+          This is mostly manifested in what is referred to as the “Baseline
+          Grid.” This grid is different from the various other terms referred to
+          as grid in web design in that it specifically refers to a set of
+          “invisible” lines that go down the page to which all layout elements
+          are aligned. Because communication of information is at the heart of
+          all websites and applications, this grid is tightly tied to our
+          typography settings. Specifically to the line-height of body copy
+          (because it is the base unit in our typographical system).
+        </p>
+
+        <p className="cbp-body">
+          To get started, we first need to figure out what our line-height will
+          be for our body copy. Earlier we established that our body copy will
+          be 14px. It’s a good industry standard practice to use a 4px baseline
+          grid meaning all spacing will be a multiple or factor of 4 (almost all
+          device viewport widths are in multiples of 4 for some reason). 20px
+          for the Body Copy line-height seems to be a good fit. This is legible
+          and gives a good starting point for our spacing system (for more
+          information on the spacing system please see its section under
+          foundations).
           {/* @TODO: Delete after content is received */}
           <strong style={{ color: "red" }}>
             [**The Baseline Grid image line height body copy + good rhythm bad
@@ -1107,6 +1171,9 @@ const TypographyPage = () => (
           digital design however, this line falls directly between lines of
           text. Earlier we arrived at a line- height of 20px for our body copy.
           Now we need to set line-height values for our other type classes.
+        </p>
+
+        <p className="cbp-body">
           Headings should rarely have many lines of text (if you do then you
           should reconsider this copy). So in order to keep them from appearing
           as if they are drifting apart with their increased size, you need to
@@ -1141,16 +1208,19 @@ const TypographyPage = () => (
           the RIGHT spacing value between different elements is important
           because it creates, or breaks a contextual bond. The closer they are
           together the more likely they are interrelated, and conversely the
-          further they are apart the less they are connected. With this in mind,
-          we need to create a hierarchy that is able to communicate a few things
-          with our typography. Show that one text box is a child of another (ie
-          a header and its supporting paragraph). Communicate that two text
-          boxes are siblings of each other (two headers of equal weight but are
-          placed together sometimes to form a sort of list). And also so that
-          the user can tell that two text boxes are not immediately related to
-          each other like the spacing between a preceding paragraph and the
-          header of the next section. This does not replace line height within
-          the text box.
+          further they are apart the less they are connected.
+        </p>
+
+        <p className="cbp-body">
+          With this in mind, we need to create a hierarchy that is able to
+          communicate a few things with our typography. Show that one text box
+          is a child of another (ie a header and its supporting paragraph).
+          Communicate that two text boxes are siblings of each other (two
+          headers of equal weight but are placed together sometimes to form a
+          sort of list). And also so that the user can tell that two text boxes
+          are not immediately related to each other like the spacing between a
+          preceding paragraph and the header of the next section. This does not
+          replace line height within the text box.
         </p>
       </section>
 
@@ -1613,9 +1683,14 @@ const TypographyPage = () => (
           this is negligible. If you set letter spacing at all in your text
           though, ligatures will be stripped out (this is why body copy is set
           to normal). Ligatures aren’t as necessary for headings because there
-          shouldn't be long blocks of text. Discretionary ligatures are non
-          standard and don’t significantly contribute to legibility, but offer a
-          more stylistic approach. ch, ck , ct, st. Avoid using these.
+          shouldn't be long blocks of text.
+        </p>
+        <p className="cbp-body">
+          Discretionary ligatures are non standard and don’t significantly
+          contribute to legibility, but offer a more stylistic approach. ch, ck
+          , ct, st. Avoid using these.
+        </p>
+        <p className="cbp-body">
           Contextual ligatures come with script style typefaces to help combine
           letters to make the appearance of a single pen stroke. We don’t use
           script style so these should also be avoided. Enabling common
@@ -1623,20 +1698,16 @@ const TypographyPage = () => (
           file.
         </p>
 
-        <div className="code-snippet">
-          <h5 className="cbp-heading-5">Ligature Code</h5>
-
-          <deckgo-highlight-code language="css" highlight-lines="2,2">
-            <code>
-              {`p {`}
-              &emsp;&emsp;{`font-feature-settings:"liga";`}
-              &emsp;&emsp;{`-webkit-font-feature-settings:"liga";`}
-              &emsp;&emsp;{'-moz-font-feature-settings:"liga";'}
-              &emsp;&emsp;{"text-rendering: optimizeLegibility;"}
-              {"}"}
-            </code>
-          </deckgo-highlight-code>
-        </div>
+        <h5 className="cbp-heading-5">Ligature Code</h5>
+        <CodeSnippet
+          code={`p {
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga";
+  text-rendering: optimizeLegibility;
+}`}
+          language={"language-css"}
+        />
       </section>
 
       <section>
@@ -1664,22 +1735,20 @@ const TypographyPage = () => (
           [**image of small caps and example of fake small caps**]
         </strong>
 
-        <div className="code-snippet">
-          <h5 className="cbp-heading-5">Small Caps Code</h5>
+        <h5 className="cbp-heading-5">Small Caps Code</h5>
 
-          <deckgo-highlight-code language="css" highlight-lines="2,2">
-            <code>
-              {`p {`}
-              &emsp;&emsp;{`//change only lowercase to small caps`}
-              &emsp;&emsp;{`font-variant-caps: small-caps;`}
-              &emsp;&emsp;{`font-feature-settings:"smcp";`}
-              &emsp;&emsp;{`//change all letters into small caps`}
-              &emsp;&emsp;{`font-variant-caps: all-small-caps;`}
-              &emsp;&emsp;{`font-feature-settings:"c2sc","smcp";`}
-              {"}"}
-            </code>
-          </deckgo-highlight-code>
-        </div>
+        <CodeSnippet
+          code={`.small-cap{
+  //change only lowercase to small caps
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
+
+  //change all letters into small caps
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "c2sc", "smcp";
+}`}
+          language={"language-css"}
+        />
       </section>
 
       <section>
@@ -1865,17 +1934,15 @@ const TypographyPage = () => (
           curved are for “smart quotes.”
         </p>
 
-        <div className="code-snippet">
-          <h5 className="cbp-heading-5">Code for Quotes</h5>
+        <h5 className="cbp-heading-5">Code for Quotes</h5>
 
-          <deckgo-highlight-code language="css" highlight-lines="2,2">
-            <code>
-              {`<p>&ldquo;He left yesterday.&rdquo;</p> // Double quot. Marks`}
-
-              {`<p>&lsquo;He left yesterday.&rsquo;</p> // Single quot. Marks`}
-            </code>
-          </deckgo-highlight-code>
-        </div>
+        <CodeSnippet
+          code={`
+<p>&ldquo;He left yesterday.&rdquo;</p> //Double quotation marks
+<p>&lsquo;He left yesterday.&rsquo;</p> //Single quotation marks
+          `}
+          language={"language-html"}
+        />
       </section>
 
       <section>
@@ -1943,113 +2010,130 @@ const TypographyPage = () => (
           {/* @TODO: Add Example here */}
           <strong style={{ color: "red" }}>[Provide Examples]</strong>
 
-          <h5 className="cbp-heading-5">… (&hellip) Ellipsis</h5>
+          <section>
+            <h5 className="cbp-heading-5">… (&hellip) Ellipsis</h5>
 
-          <p className="cbp-body">
-            This is not the same as three periods, this will not be interpreted
-            the same by assistive technologies. The proper use of an ellipsis is
-            when omitting non-pertinent content from the middle of a paragraph
-            or quote. It can be used at the end of a sentence where it is
-            commonly used to indicate a speaker trailing off or when a speaker
-            is interrupted.
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + ; ) (<strong>WINDOWS: </strong>
-              ALT + 0133)
-            </span>
-          </p>
+            <p className="cbp-body">
+              This is not the same as three periods, this will not be
+              interpreted the same by assistive technologies. The proper use of
+              an ellipsis is when omitting non-pertinent content from the middle
+              of a paragraph or quote. It can be used at the end of a sentence
+              where it is commonly used to indicate a speaker trailing off or
+              when a speaker is interrupted.
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + ; ) (<strong>WINDOWS: </strong>
+                ALT + 0133)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">’ Apostrophe (&lsquo)</h5>
+          <section>
+            <h5 className="cbp-heading-5">’ Apostrophe (&lsquo)</h5>
 
-          <p className="cbp-body">
-            This is technically the same symbol as a single right quote. It is
-            used when indicating possession or with contractions. It is also
-            acceptable on occasions to use it to pluralize items which are not
-            technically full words like the 2000’s. Or I need 8 A’s to make
-            dean’s list this quarter. In these cases adding the “s” to the word
-            would change its meaning. Using a dumb quote, or prime mark is not
-            an acceptable substitute.
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
-              <strong>WINDOWS: </strong>
-              ALT + 0146)
-            </span>
-          </p>
+            <p className="cbp-body">
+              This is technically the same symbol as a single right quote. It is
+              used when indicating possession or with contractions. It is also
+              acceptable on occasions to use it to pluralize items which are not
+              technically full words like the 2000’s. Or I need 8 A’s to make
+              dean’s list this quarter. In these cases adding the “s” to the
+              word would change its meaning. Using a dumb quote, or prime mark
+              is not an acceptable substitute.
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
+                <strong>WINDOWS: </strong>
+                ALT + 0146)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">✖ (&times)- Dimension</h5>
+          <section>
+            <h5 className="cbp-heading-5">✖ (&times)- Dimension</h5>
 
-          <p className="cbp-body">
-            Use this symbol to indicate multiplication not (*).
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> use character viewer ) (
-              <strong>WINDOWS: </strong>
-              ALT + 0215)
-            </span>
-          </p>
+            <p className="cbp-body">
+              Use this symbol to indicate multiplication not (*).
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> use character viewer ) (
+                <strong>WINDOWS: </strong>
+                ALT + 0215)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">➗ (&divide)- Division</h5>
+          <section>
+            <h5 className="cbp-heading-5">➗ (&divide)- Division</h5>
 
-          <p className="cbp-body">
-            Use this symbol to indicate division not (/)
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
-              ALT + 0247)
-            </span>
-          </p>
+            <p className="cbp-body">
+              Use this symbol to indicate division not (/)
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
+                ALT + 0247)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">≠ ($ne)- Not Equal</h5>
+          <section>
+            <h5 className="cbp-heading-5">≠ ($ne)- Not Equal</h5>
 
-          <p className="cbp-body">
-            Just like it looks.
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
-              ALT + 8800)
-            </span>
-          </p>
+            <p className="cbp-body">
+              Just like it looks.
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
+                ALT + 8800)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">© (&copy)- Copyright</h5>
+          <section>
+            <h5 className="cbp-heading-5">© (&copy)- Copyright</h5>
 
-          <p className="cbp-body">
-            This is for original works of literature, drama, music, art or
-            intellectual property. Copyrights do not cover titles, names,
-            phrases or slogans, symbols, designs, ideas, procedures, methods,
-            concepts or discoveries. There should be a space separating this
-            symbol from the copyrighted language and should never be
-            superscript.
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + g ) (<strong>WINDOWS: </strong>
-              ALT + 0169)
-            </span>
-          </p>
+            <p className="cbp-body">
+              This is for original works of literature, drama, music, art or
+              intellectual property. Copyrights do not cover titles, names,
+              phrases or slogans, symbols, designs, ideas, procedures, methods,
+              concepts or discoveries. There should be a space separating this
+              symbol from the copyrighted language and should never be
+              superscript.
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + g ) (<strong>WINDOWS: </strong>
+                ALT + 0169)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">™ (&trade)- Trademark</h5>
+          <section>
+            <h5 className="cbp-heading-5">™ (&trade)- Trademark</h5>
 
-          <p className="cbp-body">
-            Trademarks are for words, symbols, devices or names that are used to
-            distinguish the goods of one manufacturer or seller from that of
-            another. There should not be any extra space between the trademarked
-            text and the symbol and should be always be superscript. If not
-            automatically formatting correctly to superscript, use the{""}
-            <code>{`<sup>`}</code> tag.
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + 2 ) (<strong>WINDOWS: </strong>
-              ALT + 0153)
-            </span>
-          </p>
+            <p className="cbp-body">
+              Trademarks are for words, symbols, devices or names that are used
+              to distinguish the goods of one manufacturer or seller from that
+              of another. There should not be any extra space between the
+              trademarked text and the symbol and should be always be
+              superscript. If not automatically formatting correctly to
+              superscript, use the{""}
+              <code>{`<sup>`}</code> tag.
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + 2 ) (<strong>WINDOWS: </strong>
+                ALT + 0153)
+              </span>
+            </p>
+          </section>
 
-          <h5 className="cbp-heading-5">® (&reg)- Registered Trademark</h5>
+          <section>
+            <h5 className="cbp-heading-5">® (&reg)- Registered Trademark</h5>
 
-          <p className="cbp-body">
-            With a registration, a trademark is protected against another
-            company’s use of the name or image. A registered trademark is a
-            federal and legal registration of the mark. There should not be any
-            extra space between the registered text and the symbol and should be
-            always be superscript. If not automatically formatting correctly to
-            superscript, use the <code>{`<sup>`}</code> tag
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> OPTION + r ) (<strong>WINDOWS: </strong>
-              ALT + 0174)
-            </span>
-          </p>
+            <p className="cbp-body">
+              With a registration, a trademark is protected against another
+              company’s use of the name or image. A registered trademark is a
+              federal and legal registration of the mark. There should not be
+              any extra space between the registered text and the symbol and
+              should be always be superscript. If not automatically formatting
+              correctly to superscript, use the <code>{`<sup>`}</code> tag
+              <span className="cbp-subhead-text">
+                (<strong>MAC: </strong> OPTION + r ) (<strong>WINDOWS: </strong>
+                ALT + 0174)
+              </span>
+            </p>
+          </section>
         </section>
 
         <section>
@@ -2079,136 +2163,177 @@ const TypographyPage = () => (
           All of the sizing in the typographic classes of the CBP Design System
           are sized in REM (relative EMs). Any development team that needs to
           create custom typographic classes should use rem values relative to
-          the root font-size of 14px. What are REM units? REM allows you to set
-          the font-size property with a percentage value of font-size set to the
-          HTML selector. If we set our root to 14px and size our h1 element to
-          3rem then the size of h1 will be 42px (3 x 14px) etc. When is it ok to
-          use EM units? Only when the sizing of a property is directly related
-          to the element you’re working with and will not disturb vertical
-          rhythm. For example the max-length property on our body copy class is
-          set to 75em. This is because it is directly related to that particular
-          font, at that particular size. It just so happens that body copy is
-          the same REM size as the root. However, when using REMs for max-length
-          with a font class at another size may have undesirable results. In
-          order to maintain a consistent 4px baseline grid, all line-height
+          the root font-size of 14px.
+        </p>
+
+        <p className="cbp-body">
+          What are REM units? REM allows you to set the font-size property with
+          a percentage value of font-size set to the HTML selector. If we set
+          our root to 14px and size our h1 element to 3rem then the size of h1
+          will be 42px (3 x 14px) etc.
+        </p>
+
+        <p className="cbp-body">
+          When is it ok to use EM units? Only when the sizing of a property is
+          directly related to the element you’re working with and will not
+          disturb vertical rhythm. For example the max-length property on our
+          body copy class is set to 75em. This is because it is directly related
+          to that particular font, at that particular size. It just so happens
+          that body copy is the same REM size as the root. However, when using
+          REMs for max-length with a font class at another size may have
+          undesirable results.
+        </p>
+
+        <p className="cbp-body">
+          In order to maintain a consistent 4px baseline grid, all line-height
           settings should be expressed in intervals of 4px. Spacing between
           lines of text inside the same text box should be defined with the
           line-height property. In order to maintain a consistent 4px baseline
           grid, all line-height settings should be expressed in intervals of
           4px. Spacing between lines of text inside the same text box should be
-          defined with the line-height property. Spacing between text boxes
-          should be defined using the spacing system prescribed in the Spacing,
-          Grid, and Layout section of Foundations.
+          defined with the line-height property.
+        </p>
+
+        <p className="cbp-body">
+          Spacing between text boxes should be defined using the spacing system
+          prescribed in the Spacing, Grid, and Layout section of Foundations.
         </p>
       </section>
 
       <section>
         <h3 className="cbp-heading-3">General Sizing Units</h3>
 
-        <h5 className="cbp-heading-5">Pixels- px (aka CSS Pixels)</h5>
+        <section>
+          <h5 className="cbp-heading-5">Pixels- px (aka CSS Pixels)</h5>
 
-        <p className="cbp-body">
-          This no longer refers to the physical pixels in the device’s screen,
-          but rather is the space equal to 1/96th of 1 inch. This means that no
-          matter how pixel-dense your device’s screen is an object will appear
-          the same relative size optically.
-        </p>
+          <p className="cbp-body">
+            This no longer refers to the physical pixels in the device’s screen,
+            but rather is the space equal to 1/96th of 1 inch. This means that
+            no matter how pixel-dense your device’s screen is an object will
+            appear the same relative size optically.
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">EMs -em</h5>
+        <section>
+          <h5 className="cbp-heading-5">EMs -em</h5>
 
-        <p className="cbp-body">
-          This is an implicit, flexible unit that the browser converts into
-          pixels by multiplying the em value by the value of its parent element.
-          This is not recommended to be used for assigning text sizing because
-          of its inheritance issues.
-        </p>
+          <p className="cbp-body">
+            This is an implicit, flexible unit that the browser converts into
+            pixels by multiplying the em value by the value of its parent
+            element. This is not recommended to be used for assigning text
+            sizing because of its inheritance issues.
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">REMs - rem (Relative EMs)</h5>
+        <section>
+          <h5 className="cbp-heading-5">REMs - rem (Relative EMs)</h5>
 
-        <p className="cbp-body">
-          This is an explicit, flexible unit that the browser converts into
-          pixels by multiplying the rem value by the value assigned to HTML.
-          This is the preferred method for assigning text sizing.{""}
-        </p>
+          <p className="cbp-body">
+            This is an explicit, flexible unit that the browser converts into
+            pixels by multiplying the rem value by the value assigned to HTML.
+            This is the preferred method for assigning text sizing.{""}
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">Points - pt (iOS ecosystem)</h5>
+        <section>
+          <h5 className="cbp-heading-5">Points - pt (iOS ecosystem)</h5>
 
-        <p className="cbp-body">
-          An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
-          independent just like the sp on android. They usually convert out
-          evenly as the true resolution is hidden.
-          <strong>1sp = 1pt = 1rem</strong>
-        </p>
+          <p className="cbp-body">
+            An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
+            independent just like the sp on android. They usually convert out
+            evenly as the true resolution is hidden.
+          </p>
+          <p className="cbp-body">
+            <strong>1sp = 1pt = 1rem</strong>
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">
-          Density Independent Pixels -dp (Android ecosystem)
-        </h5>
+        <section>
+          <h5 className="cbp-heading-5">
+            Density Independent Pixels -dp (Android ecosystem)
+          </h5>
 
-        <p className="cbp-body">
-          The density- independent pixel is equivalent to one physical pixel on
-          a 160 dpi screen, which is the baseline density assumed by the system
-          for a “medium” density screen. The conversion of dp units to screen
-          pixels is simple: px = dp * (dpi / 160). For example, on a 240 dpi
-          screen, 1 dp equals 1.5 physical pixels. Android has a separate unit
-          for prescribing text sizing, sp. Please use that unit for native
-          Android development.
-        </p>
+          <p className="cbp-body">
+            The density- independent pixel is equivalent to one physical pixel
+            on a 160 dpi screen, which is the baseline density assumed by the
+            system for a “medium” density screen. The conversion of dp units to
+            screen pixels is simple: px = dp * (dpi / 160). For example, on a
+            240 dpi screen, 1 dp equals 1.5 physical pixels. Android has a
+            separate unit for prescribing text sizing, sp. Please use that unit
+            for native Android development.
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">
-          Scalable Independent Pixels - sp (Android Ecosystem)
-        </h5>
+        <section>
+          <h5 className="cbp-heading-5">
+            Scalable Independent Pixels - sp (Android Ecosystem)
+          </h5>
 
-        <p className="cbp-body">
-          SP is the same thing as dp but used for font sizing on android, while
-          the dp is used for everything but fonts.
-        </p>
+          <p className="cbp-body">
+            SP is the same thing as dp but used for font sizing on android,
+            while the dp is used for everything but fonts.
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">
-          Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
-        </h5>
+        <section>
+          <h5 className="cbp-heading-5">
+            Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
+          </h5>
 
-        <p className="cbp-body">
-          These settings are fluid type layouts (which should be a very rare
-          occurrence within the CBP enterprise). The sizing unit is based off of
-          view-port height and view-port width respectively.
-          <strong>
-            1vh = 1% of view-port height 1vw = 1% of view-port width
-          </strong>
-          This is not widely supported yet in browsers, and is not great for
-          productive type applications.
-        </p>
+          <p className="cbp-body">
+            These settings are fluid type layouts (which should be a very rare
+            occurrence within the CBP enterprise). The sizing unit is based off
+            of view-port height and view-port width respectively.
+          </p>
+          <p className="cbp-body">
+            <strong>
+              1vh = 1% of view-port height 1vw = 1% of view-port width
+            </strong>
+          </p>
+          <p className="cbp-body">
+            This is not widely supported yet in browsers, and is not great for
+            productive type applications.
+          </p>
+        </section>
       </section>
 
       <section>
         <h3 className="cbp-heading-3">Font Relative Lengths</h3>
 
-        <h5 className="cbp-heading-5">ex (Height of Font’s x-height)</h5>
+        <section>
+          <h5 className="cbp-heading-5">ex (Height of Font’s x-height)</h5>
 
-        <p className="cbp-body">
-          We use this to apply letter-spacing to small caps because the
-          characters height in small caps are aligned to the x-height setting.
-          X-height refers to the height of the lower-case letter “x”.
-        </p>
+          <p className="cbp-body">
+            We use this to apply letter-spacing to small caps because the
+            characters height in small caps are aligned to the x-height setting.
+            X-height refers to the height of the lower-case letter “x”.
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">
-          cap (height of font’s capital letters)
-        </h5>
+        <section>
+          <h5 className="cbp-heading-5">
+            cap (height of font’s capital letters)
+          </h5>
 
-        <p className="cbp-body">
-          This is used to set letter-spacing of UPPERCASE text. The preference
-          of the CBP Design System is to use small-caps for acronyms and
-          abbreviations so follow the guidance for small caps where applicable.
-        </p>
+          <p className="cbp-body">
+            This is used to set letter-spacing of UPPERCASE text. The preference
+            of the CBP Design System is to use small-caps for acronyms and
+            abbreviations so follow the guidance for small caps where
+            applicable.
+          </p>
+        </section>
 
-        <h5 className="cbp-heading-5">ch (width of font’s 0 character)</h5>
+        <section>
+          <h5 className="cbp-heading-5">ch (width of font’s 0 character)</h5>
 
-        <p className="cbp-body">
-          This is used to set letter-spacing for monotype fonts like Roboto
-          Mono. Characters in monotype are “fixed-width” and occupy an equal
-          amount of space no matter which character. The zero (0) character is
-          the mostly evenly designed and therefore makes a good reference point
-          in this scenario.
-        </p>
+          <p className="cbp-body">
+            This is used to set letter-spacing for monotype fonts like Roboto
+            Mono. Characters in monotype are “fixed-width” and occupy an equal
+            amount of space no matter which character. The zero (0) character is
+            the mostly evenly designed and therefore makes a good reference
+            point in this scenario.
+          </p>
+        </section>
       </section>
 
       <section>
@@ -2314,22 +2439,18 @@ const TypographyPage = () => (
           don’t do it.
         </p>
 
-        <div className="code-snippet">
-          <h5 className="cbp-heading-5">P + P</h5>
-
-          <deckgo-highlight-code language="css" highlight-lines="2,2">
-            <code>
-              {`p + p {`}
-              &emsp;&emsp;{`text-indent: 1.6rem; //32 divided by 20`}
-              {`}`}
-            </code>
-          </deckgo-highlight-code>
-        </div>
+        <h5 className="cbp-heading-5">P + P</h5>
+        <CodeSnippet
+          code={`text-indent: 1.6rem; //32 divided by 20`}
+          language={"language-css"}
+        />
 
         <p className="cbp-subhead-text">
-          <strong>WCAG Details</strong>
-          1.4.8 Visual Presentation Level AAA For the visual presentation of
-          blocks of text, a mechanism is available to achieve the following:
+          <strong>WCAG Details</strong> 1.4.8 Visual Presentation Level AAA
+          <p className="cbp-subhead-text">
+            For the visual presentation of blocks of text, a mechanism is
+            available to achieve the following:
+          </p>
           <div className="content">
             <ol>
               <li>
@@ -2381,13 +2502,14 @@ const TypographyPage = () => (
         </p>
 
         <p className="cbp-subhead-text">
-          <strong>WCAG Details</strong>
-          1.4.1 Use of Color Level A Color is not used as the only visual means
-          of conveying information, indicating an action, prompting a response,
-          or distinguishing a visual element. 1.4.3 Contrast (Minimum) Level AA
-          The visual presentation of text and images of text has a contrast
-          ratio of at least 4.5:1, except for the following: Hide full
-          description
+          <strong>WCAG Details</strong> 1.4.1 Use of Color Level A
+          <p className="cbp-subhead-text">
+            Color is not used as the only visual means of conveying information,
+            indicating an action, prompting a response, or distinguishing a
+            visual element. 1.4.3 Contrast (Minimum) Level AA The visual
+            presentation of text and images of text has a contrast ratio of at
+            least 4.5:1, except for the following:
+          </p>
           <div className="content">
             <ul>
               <li>
@@ -2430,10 +2552,12 @@ const TypographyPage = () => (
         </p>
 
         <p className="cbp-subhead-text">
-          <strong>WCAG Details</strong>
-          1.4.4 Resize text Level AA Except for captions and images of text,
-          text can be resized without assistive technology up to 200% without
-          loss of content or functionality.
+          <strong>WCAG Details</strong> 1.4.4 Resize text Level AA{" "}
+          <p className="cbp-subhead-text">
+            Except for captions and images of text, text can be resized without
+            assistive technology up to 200% without loss of content or
+            functionality.
+          </p>
         </p>
       </section>
 
@@ -2452,10 +2576,12 @@ const TypographyPage = () => (
         </p>
 
         <p className="cbp-subhead-text">
-          <strong>WCAG Details</strong>
-          1.4.5 Images of Text Level AA If the technologies being used can
-          achieve the visual presentation, text is used to convey information
-          rather than images of text except for the following:
+          <strong>WCAG Details</strong> 1.4.5 Images of Text Level AA
+          <p className="cbp-subhead-text">
+            If the technologies being used can achieve the visual presentation,
+            text is used to convey information rather than images of text except
+            for the following:
+          </p>
           <div className="content">
             <ul>
               <li>
@@ -2482,35 +2608,38 @@ const TypographyPage = () => (
           </a>
           Note
         </h2>
+        <p className="cbp-body">
+          Just because the Design System is built with Accessibility in mind
+          does not mean that your site will automatically be compliant with DHS
+          Trusted Tester rules. Diligence is required to make sure that these
+          concepts are front of mind when you are building with the CBP Design
+          System. This will ensure that your products remain accessible. Learn
+          more about accessibility at DHS by visiting the following resources:
+        </p>
+        <p className="cbp-body">
+          To learn more about the <strong>DHS Trusted Tester program </strong>{" "}
+          click here:{" "}
+          <a href="https://www.dhs.gov/trusted-tester" target="__blank">
+            https://www.dhs.gov/trusted-tester
+          </a>
+        </p>
+        <p className="cbp-body">
+          To learn more about how to earn a{" "}
+          <strong>DHS Trusted Tester certification </strong>
+          click here:{" "}
+          <a href="https://training.section508testing.net/" target="__blank">
+            https://training.section508testing.net/
+          </a>
+        </p>
 
         <p className="cbp-body">
-          <em>
-            Just because the Design System is built with Accessibility in mind
-            does not mean that your site will automatically be compliant with
-            DHS Trusted Tester rules. Diligence is required to make sure that
-            these concepts are front of mind when you are building with the CBP
-            Design System. This will ensure that your products remain
-            accessible. Learn more about accessibility at DHS by visiting the
-            following resources: To learn more about the{""}
-            <strong>DHS Trusted Tester program </strong> click here:{""}
-            <a href="https://www.dhs.gov/trusted-tester" target="__blank">
-              https://www.dhs.gov/trusted-tester
-            </a>
-            To learn more about how to earn a{""}
-            <strong>DHS Trusted Tester certification </strong>
-            click here:{""}
-            <a href="https://training.section508testing.net/" target="__blank">
-              https://training.section508testing.net/
-            </a>
-            To learn more about <strong>WCAG guidelines </strong> click here:
-            {""}
-            <a
-              href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0"
-              target="__blank"
-            >
-              https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0
-            </a>
-          </em>
+          To learn more about <strong>WCAG guidelines </strong> click here:{" "}
+          <a
+            href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0"
+            target="__blank"
+          >
+            https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0
+          </a>
         </p>
       </section>
     </article>

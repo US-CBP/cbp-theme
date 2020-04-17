@@ -3,7 +3,6 @@
 */
 
 @import "../../../ds-css/src/styles/cbp-ds.scss";
-
 /* iFrame style for height. Need to revisit this. */
 iframe {
   height: 358px !important;
@@ -12,6 +11,8 @@ iframe {
 /* iFrame style for height. Need to revisit this. */
 
 .spacing-wrapper {
+  padding: $cbp-lg-space $cbp-reg-space !important;
+
   //heading for main sections
   h2 {
     @extend .cbp-spacing-stack--large;
