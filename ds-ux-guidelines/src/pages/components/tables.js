@@ -8,7 +8,7 @@ const TableComponentPage = () => (
     <SEO title="CBP Design System | Tables" />
     <ContentHeader title="Tables" contentType="component" />
     <article className="spacing-wrapper">
-      <div id="description" className="container">
+      <section id="description">
         <h2 className="cbp-heading-2">Description</h2>
         <p className="cbp-body ">
           Tables are used to help users scan &amp; compare large amounts of data
@@ -16,12 +16,10 @@ const TableComponentPage = () => (
           consider other alternatives that may be optimal for the data you want
           to display.
         </p>
-      </div>
+      </section>
 
-      <div id="Code" className="container cbp-code">
-        <h2 id="code" className="cbp-heading-2">
-          Code
-        </h2>
+      <section id="Code" className="cbp-code">
+        <h2 className="cbp-heading-2">Code</h2>
 
         <div id="table">
           <table className="table is-hoverable is-fullwidth">
@@ -83,7 +81,9 @@ const TableComponentPage = () => (
             <a href="https://codepen.io">CodePen</a>.
           </iframe>
         </div>
+      </section>
 
+      <section>
         <h3 id="modifiers" className="cbp-heading-3 ">
           Modifiers
         </h3>
@@ -135,45 +135,47 @@ const TableComponentPage = () => (
             </tbody>
           </table>
         </div>
+      </section>
 
-        <section id="Design Guidelines">
-          <h2 className="cbp-heading-2 ">Design Guidelines</h2>
+      <section id="Design Guidelines">
+        <h2 className="cbp-heading-2 ">Design Guidelines</h2>
 
-          <div className="">
-            <h3 id="general" className="cbp-heading-3">
-              General
-            </h3>
+        <section>
+          <h3 id="general" className="cbp-heading-3">
+            General
+          </h3>
 
-            <div className="content">
-              <ol>
-                <li>
-                  For nominal/non-numeric data (e.g., room numbers, zip codes,
-                  names),
-                  <strong> left-align text.</strong>
-                </li>
-                <li>
-                  For data that involves quantity (e.g., counts, currency,
-                  percentages),
-                  <strong> right-align text.</strong>
-                </li>
-                <li>
-                  Each table header should have the <code> th </code> tag.{" "}
-                </li>
+          <div className="content">
+            <ol>
+              <li>
+                For nominal/non-numeric data (e.g., room numbers, zip codes,
+                names),
+                <strong> left-align text.</strong>
+              </li>
+              <li>
+                For data that involves quantity (e.g., counts, currency,
+                percentages),
+                <strong> right-align text.</strong>
+              </li>
+              <li>
+                Each table header should have the <code> th </code> tag.{" "}
+              </li>
 
-                <li>
-                  If the number of rows for data exceed 30, implement pagination
-                  on the top and bottom of the table to reduce scrolling.
-                </li>
-                <li>
-                  When there is no data to display in a cell, use placeholder
-                  text such as
-                  <strong>"--"</strong> or <strong>"N/A"</strong> to indicate
-                  that the empty state is not a technical bug or glitch.
-                </li>
-              </ol>
-            </div>
+              <li>
+                If the number of rows for data exceed 30, implement pagination
+                on the top and bottom of the table to reduce scrolling.
+              </li>
+              <li>
+                When there is no data to display in a cell, use placeholder text
+                such as
+                <strong>"--"</strong> or <strong>"N/A"</strong> to indicate that
+                the empty state is not a technical bug or glitch.
+              </li>
+            </ol>
           </div>
+        </section>
 
+        <section>
           <h3 id="usage" className="cbp-heading-3 ">
             Usage
           </h3>
@@ -223,7 +225,9 @@ const TableComponentPage = () => (
               </div>
             </div>
           </div>
+        </section>
 
+        <section>
           <h3 id="accessibility" className="cbp-heading-3 ">
             Accessibility
           </h3>
@@ -245,7 +249,7 @@ const TableComponentPage = () => (
             </ol>
           </div>
         </section>
-      </div>
+      </section>
     </article>
   </Layout>
 )

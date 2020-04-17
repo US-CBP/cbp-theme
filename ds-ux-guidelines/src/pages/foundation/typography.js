@@ -454,216 +454,223 @@ const TypographyPage = () => (
           </tbody>
         </table>
 
-        <h3 className="cbp-heading-3">Heading Classes</h3>
+        <section>
+          <h3 className="cbp-heading-3">Heading Classes</h3>
 
-        <p className="cbp-body">
-          These are used in conjunction with semantic heading tags (ie. h1).
-          Classes ending in"light" for lighter backgrounds,"dark" for darker
-          colored backgrounds (see Reference & Research for more information).
-        </p>
+          <p className="cbp-body">
+            These are used in conjunction with semantic heading tags (ie. h1).
+            Classes ending in"light" for lighter backgrounds,"dark" for darker
+            colored backgrounds (see Reference & Research for more information).
+          </p>
 
-        <table className="table is-fullwidth">
-          <caption
-            style={{
-              textAlign: "left",
-              marginBottom: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            CBP Design System Type Scale- Heading Classes
-          </caption>
+          <table className="table is-fullwidth">
+            <caption
+              style={{
+                textAlign: "left",
+                marginBottom: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              CBP Design System Type Scale- Heading Classes
+            </caption>
 
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Selector Name</th>
-              <th scope="col">Size</th>
-              <th scope="col">Font Weight</th>
-              <th scope="col">Line Height</th>
-              <th scope="col">Aliasing</th>
-              <th scope="col">Letter Spacing</th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Selector Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">Font Weight</th>
+                <th scope="col">Line Height</th>
+                <th scope="col">Aliasing</th>
+                <th scope="col">Letter Spacing</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <td className="cbp-heading-1">Heading 1</td>
-              <td>
-                <code>.cbp-heading-1</code>
-              </td>
-              <td>28px</td>
-              <td>300</td>
-              <td>40px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className="cbp-heading-1">Heading 1</td>
+                <td>
+                  <code>.cbp-heading-1</code>
+                </td>
+                <td>28px</td>
+                <td>300</td>
+                <td>40px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
 
-            <tr>
-              <td className="cbp-heading-2">Heading 2</td>
-              <td>
-                <code>.cbp-heading-2</code>
-              </td>
-              <td>25px</td>
-              <td>400</td>
-              <td>32px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+              <tr>
+                <td className="cbp-heading-2">Heading 2</td>
+                <td>
+                  <code>.cbp-heading-2</code>
+                </td>
+                <td>25px</td>
+                <td>400</td>
+                <td>32px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
 
-            <tr>
-              <td className="cbp-heading-3">Heading 3</td>
-              <td>
-                <code>.cbp-heading-3</code>
-              </td>
-              <td>22px</td>
-              <td>400</td>
-              <td>28px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+              <tr>
+                <td className="cbp-heading-3">Heading 3</td>
+                <td>
+                  <code>.cbp-heading-3</code>
+                </td>
+                <td>22px</td>
+                <td>400</td>
+                <td>28px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
 
-            <tr>
-              <td className="cbp-heading-4">Heading 4</td>
-              <td>
-                <code>.cbp-heading-2</code>
-              </td>
-              <td>20px</td>
-              <td>500</td>
-              <td>28px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+              <tr>
+                <td className="cbp-heading-4">Heading 4</td>
+                <td>
+                  <code>.cbp-heading-2</code>
+                </td>
+                <td>20px</td>
+                <td>500</td>
+                <td>28px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
 
-            <tr>
-              <td className="cbp-heading-5">Heading 5</td>
-              <td>
-                <code>.cbp-heading-5</code>
-              </td>
-              <td>20px</td>
-              <td>500</td>
-              <td>24px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+              <tr>
+                <td className="cbp-heading-5">Heading 5</td>
+                <td>
+                  <code>.cbp-heading-5</code>
+                </td>
+                <td>20px</td>
+                <td>500</td>
+                <td>24px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
 
-            <tr>
-              <td className="cbp-heading-6">Heading 6</td>
-              <td>
-                <code>.cbp-heading-6</code>
-              </td>
-              <td>16px</td>
-              <td>700</td>
-              <td>20px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <td className="cbp-heading-6">Heading 6</td>
+                <td>
+                  <code>.cbp-heading-6</code>
+                </td>
+                <td>16px</td>
+                <td>700</td>
+                <td>20px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-        <h3 className="cbp-heading-3">Body Copy Classes</h3>
+        <section>
+          <h3 className="cbp-heading-3">Body Copy Classes</h3>
 
-        <p className="cbp-body">
-          These are the default text classes for paragraphs of text and are
-          directly linked to the semantic"p" tag. Classes ending in"light" for
-          lighter backgrounds,"dark" for darker colored backgrounds (see
-          Reference & Research for more information).
-        </p>
+          <p className="cbp-body">
+            These are the default text classes for paragraphs of text and are
+            directly linked to the semantic"p" tag. Classes ending in"light" for
+            lighter backgrounds,"dark" for darker colored backgrounds (see
+            Reference & Research for more information).
+          </p>
 
-        <table className="table is-fullwidth">
-          <caption
-            style={{
-              textAlign: "left",
-              marginBottom: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            CBP Design System Type Scale- Body Copy Classes
-          </caption>
+          <table className="table is-fullwidth">
+            <caption
+              style={{
+                textAlign: "left",
+                marginBottom: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              CBP Design System Type Scale- Body Copy Classes
+            </caption>
 
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Selector Name</th>
-              <th scope="col">Size</th>
-              <th scope="col">Font Weight</th>
-              <th scope="col">Line Height</th>
-              <th scope="col">Aliasing</th>
-              <th scope="col">Letter Spacing</th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Selector Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">Font Weight</th>
+                <th scope="col">Line Height</th>
+                <th scope="col">Aliasing</th>
+                <th scope="col">Letter Spacing</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <td className="cbp-body">Body (p)</td>
-              <td>
-                <code>.cbp-body</code>
-              </td>
-              <td>14px</td>
-              <td>400</td>
-              <td>20px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
-          </tbody>
-        </table>
+            <tbody>
+              <tr>
+                <td className="cbp-body">Body (p)</td>
+                <td>
+                  <code>.cbp-body</code>
+                </td>
+                <td>14px</td>
+                <td>400</td>
+                <td>20px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-        <h3 className="cbp-heading-3">Supporting Text Classes</h3>
+        <section>
+          <h3 className="cbp-heading-3">Supporting Text Classes</h3>
 
-        <p className="cbp-body">
-          These are text classes with special functions. Each supporting class
-          may have a different semantic tag associated with it. This section may
-          grow over time to accommodate special text classes that are added.
-        </p>
+          <p className="cbp-body">
+            These are text classes with special functions. Each supporting class
+            may have a different semantic tag associated with it. This section
+            may grow over time to accommodate special text classes that are
+            added.
+          </p>
 
-        <table className="table is-fullwidth">
-          <caption
-            style={{
-              textAlign: "left",
-              marginBottom: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            CBP Design System Type Scale- Supporting Text Classes
-          </caption>
+          <table className="table is-fullwidth">
+            <caption
+              style={{
+                textAlign: "left",
+                marginBottom: "1rem",
+                fontWeight: "bold",
+              }}
+            >
+              CBP Design System Type Scale- Supporting Text Classes
+            </caption>
 
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Selector Name</th>
-              <th scope="col">Size</th>
-              <th scope="col">Font Weight</th>
-              <th scope="col">Line Height</th>
-              <th scope="col">Aliasing</th>
-              <th scope="col">Letter Spacing</th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Selector Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">Font Weight</th>
+                <th scope="col">Line Height</th>
+                <th scope="col">Aliasing</th>
+                <th scope="col">Letter Spacing</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <td className="cbp-button-text">Button Text</td>
-              <td>
-                <code>.cbp-button-text</code>
-              </td>
-              <td>14px</td>
-              <td>500</td>
-              <td>normal</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className="cbp-button-text">Button Text</td>
+                <td>
+                  <code>.cbp-button-text</code>
+                </td>
+                <td>14px</td>
+                <td>500</td>
+                <td>normal</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
 
-            <tr>
-              <td className="cbp-subhead-text">Subhead</td>
-              <td>
-                <code>.cbp-subhead-text</code>
-              </td>
-              <td>12px</td>
-              <td>500</td>
-              <td>20px</td>
-              <td>TBD</td>
-              <td>0.12 (TBD)</td>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <td className="cbp-subhead-text">Subhead</td>
+                <td>
+                  <code>.cbp-subhead-text</code>
+                </td>
+                <td>12px</td>
+                <td>500</td>
+                <td>20px</td>
+                <td>TBD</td>
+                <td>0.12 (TBD)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </section>
 
       <section>

@@ -58,8 +58,8 @@ class Navigation extends Component {
         name: "Components",
         subcategory: [
           {
-            name: "Accordian",
-            link: "/components/accordian",
+            name: "Accordion",
+            link: "/components/accordion",
           },
           {
             name: "Tables",
