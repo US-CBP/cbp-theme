@@ -8,9 +8,9 @@ const TableComponentPage = () => (
     <SEO title="CBP Design System | Tables" />
     <ContentHeader title="Tables" contentType="component" />
     <article className="spacing-wrapper">
-      <div id="description" className="container margin--lg">
+      <div id="description" className="container">
         <h2 className="cbp-heading-2">Description</h2>
-        <p className="cbp-body margin--reg">
+        <p className="cbp-body ">
           Tables are used to help users scan &amp; compare large amounts of data
           at a glance. When implementing tables into your project, make sure to
           consider other alternatives that may be optimal for the data you want
@@ -19,11 +19,11 @@ const TableComponentPage = () => (
       </div>
 
       <div id="Code" className="container cbp-code">
-        <div id="code" className="margin--lg">
-          <h2 className="cbp-heading-2">Code</h2>
-        </div>
+        <h2 id="code" className="cbp-heading-2">
+          Code
+        </h2>
 
-        <div id="table" className="margin--reg">
+        <div id="table">
           <table className="table is-hoverable is-fullwidth">
             <thead>
               <tr>
@@ -84,11 +84,11 @@ const TableComponentPage = () => (
           </iframe>
         </div>
 
-        <h3 id="modifiers" className="cbp-heading-3 margin--lg">
+        <h3 id="modifiers" className="cbp-heading-3 ">
           Modifiers
         </h3>
 
-        <div className="margin--reg">
+        <div className="">
           <table className="table is-hoverable is-fullwidth">
             <thead>
               <tr>
@@ -137,9 +137,9 @@ const TableComponentPage = () => (
         </div>
 
         <section id="Design Guidelines">
-          <h2 className="cbp-heading-2 margin--lg">Design Guidelines</h2>
+          <h2 className="cbp-heading-2 ">Design Guidelines</h2>
 
-          <div className="margin--lg">
+          <div className="">
             <h3 id="general" className="cbp-heading-3">
               General
             </h3>
@@ -174,12 +174,12 @@ const TableComponentPage = () => (
             </div>
           </div>
 
-          <h3 id="usage" className="cbp-heading-3 margin--lg">
+          <h3 id="usage" className="cbp-heading-3 ">
             Usage
           </h3>
 
           <div className="columns">
-            <div className="column margin--reg">
+            <div className="column ">
               <div className="box tables-usage--box">
                 <p>
                   <span className="is-size-5">
@@ -203,7 +203,7 @@ const TableComponentPage = () => (
               </div>
             </div>
 
-            <div className="column margin--reg">
+            <div className="column ">
               <div className="box tables-usage--box">
                 <p>
                   <span className="is-size-5">
@@ -215,7 +215,7 @@ const TableComponentPage = () => (
                   <ol>
                     <li>You do not have a lot of data to display</li>
                     <em>In this case, consider using a list component.</em>
-                    <div className="margin--reg"></div>
+                    <div className=""></div>
                     <li>You want to display a summary of your data</li>
                     <em>In this case, consider using graphs or charts.</em>
                   </ol>
@@ -224,7 +224,7 @@ const TableComponentPage = () => (
             </div>
           </div>
 
-          <h3 id="accessibility" className="cbp-heading-3 margin--lg">
+          <h3 id="accessibility" className="cbp-heading-3 ">
             Accessibility
           </h3>
 

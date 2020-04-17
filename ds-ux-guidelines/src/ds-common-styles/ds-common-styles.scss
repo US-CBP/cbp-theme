@@ -12,32 +12,52 @@ iframe {
 /* iFrame style for height. Need to revisit this. */
 
 .spacing-wrapper {
-  h2,
-  h3 {
+  //heading for main sections
+  h2 {
+    @extend .cbp-spacing-stack--large;
+  }
+
+  h3,
+  h4 {
     @extend .cbp-spacing-stack--regular;
+  }
+
+  h5,
+  h6 {
+    @extend .cbp-spacing-stack--small;
   }
 
   p {
     @extend .cbp-spacing-stack--small;
-    padding-bottom: $cbp-sm-space;
+  }
+
+  section {
+    @extend .cbp-spacing-stack--large;
+  }
+
+  ol,
+  ul {
+    margin-top: 0 !important;
+    @extend .cbp-spacing-stack--regular;
+  }
+
+  img,
+  .table {
+    @extend .cbp-spacing-stack--small;
+  }
+
+  .cbp-subhead-text {
+    padding: 0;
+
+    &:last-child {
+      @extend .cbp-spacing-stack--regular;
+    }
   }
 
   &:last-child {
     @extend .cbp-spacing-stack--large;
   }
 }
-
-// .margin--lg {
-//   margin-top: $cbp-lg-space;
-// }
-
-// .margin--reg {
-//   margin-top: $cbp-reg-space;
-// }
-
-// .margin--sm {
-//   margin-top: $cbp-sm-space;
-// }
 
 .tables-usage--box {
   height: 200px;
