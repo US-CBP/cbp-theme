@@ -1,0 +1,18 @@
+/* CBP Bulma overides */
+$body-size: 14px;
+$body-font-size: 1em;
+$tabs-border-bottom-color: $grey-light;
+$tabs-boxed-link-active-border-color: $grey-light;
+$tabs-boxed-link-hover-border-bottom-color: $grey-light;
+$tabs-boxed-link-active-border-color: $grey-light;
+
+html {
+  color: $grey-darker;
+  font-size: $body-size;
+  letter-spacing: $cbp-font-spacing;
+  line-height: $cbp-height-20;
+}
+
+body {
+  font-size: $body-font-size;
+}

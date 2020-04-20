@@ -1,0 +1,11 @@
+{
+
+	"defaults": {
+		"timeout": 100000,
+		"ignore": []
+	},
+		
+	"urls": [
+		"../ds-ux-guidelines/public/index.html"
+	]  
+}

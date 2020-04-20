@@ -1,0 +1,32 @@
+/* CSS taken from PrismJS with a few modifications */
+
+.code-toolbar {
+  display: inline-block;
+}
+
+.toolbar-item {
+  padding: 7px;
+}
+
+.code-snippet-container {
+  max-width: 700px;
+}
+
+.apply-border-radius {
+  border-radius: 7px;
+}
+
+span {
+  &.tag {
+    background-color: transparent;
+    font-size: 1rem;
+  }
+}
+
+code {
+  background-color: transparent !important;
+  color: #0a3055;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.25em 0.5em 0.25em;
+}

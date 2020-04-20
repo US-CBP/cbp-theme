@@ -4,19 +4,23 @@ set -o errexit -o nounset
 
 if [ "$TRAVIS_BRANCH" != "master" ]
 then
-  echo "This commit was made against the $TRAVIS_BRANCH and not the master! No deploy!"
+  echo "This commit was made against the $TRAVIS_BRANCH and not the master branch, no deploy necessary"
   exit 0
 fi
 
 rev=$(git rev-parse --short HEAD)
 
-# Directory of Generated Files
-cp -rf ./dist ./kitchensink/
-cd ./kitchensink
+# Copy Directory of Generated Files from CBP Theme
+cp -rf cbp-theme/dist cbp-theme/kitchensink/
+
+# Copy DS CSS and Style Guide
+mkdir cbp-theme/kitchensink/design-system
+mkdir -p cbp-theme/kitchensink/ds-css/dist
+npm run website:prepare
+
+cd cbp-theme/kitchensink
 
 git init
-git config user.name "David Hodge"
-git config user.email "david.hodge@lucidtechnics.com"
 
 git remote add upstream "https://$GH_TOKEN@github.com/US-CBP/cbp-theme.git"
 git fetch upstream
