@@ -2,48 +2,70 @@
   Common styles shared across Design System site.
 */
 
-@import "../../../ds-css/src/styles/custom/utilities/initial-variables.scss";
-
-/* Color variables */
-// $cbp-default: #ffffff;
-// $cbp-primary: #00416a;
-// $universal-header: #003e65;
-// $grey-base: #000000;
-// $grey-lightest: #f6f6f6;
-
+@import "../../../ds-css/src/styles/cbp-ds.scss";
 /* iFrame style for height. Need to revisit this. */
-iFrame {
+iframe {
   height: 358px !important;
 }
+
 /* iFrame style for height. Need to revisit this. */
 
-/* Temporary class until grid sizing, padding guidance is completed */
+.spacing-wrapper {
+  padding: $cbp-lg-space $cbp-reg-space !important;
 
-.heading-pad-temp {
-  padding: 5rem 2rem 3rem 2rem;
-}
+  //heading for main sections
+  h2 {
+    @extend .cbp-spacing-stack--large;
+  }
 
-.section-pad-temp {
-  padding-bottom: 3rem;
-}
+  h3,
+  h4 {
+    @extend .cbp-spacing-stack--regular;
+  }
 
-.one-half-pad-temp {
-  padding: 1.5rem;
-}
+  h5,
+  h6 {
+    @extend .cbp-spacing-stack--small;
+  }
 
-.li-margin {
-  margin-left: 1em;
+  p {
+    @extend .cbp-spacing-stack--small;
+  }
+
+  section {
+    @extend .cbp-spacing-stack--large;
+  }
+
+  ol,
+  ul {
+    margin-top: 0 !important;
+    @extend .cbp-spacing-stack--regular;
+  }
+
+  img,
+  .table {
+    @extend .cbp-spacing-stack--small;
+  }
+
+  .cbp-subhead-text {
+    padding: 0;
+
+    &:last-child {
+      @extend .cbp-spacing-stack--regular;
+    }
+  }
+
+  &:last-child {
+    @extend .cbp-spacing-stack--large;
+  }
 }
 
 .tables-usage--box {
   height: 200px;
+
   @media screen and (max-width: 1090px) {
     height: 300px;
   }
-}
-
-section {
-  margin: 1.5rem auto;
 }
 
 .wrapper {
@@ -54,12 +76,9 @@ section {
 /* Temporary class until grid sizing, padding guidance is completed */
 
 .img-frame {
-  box-shadow:
-  0 3.3px 2.7px rgba(0, 0, 0, 0.03),
-  0 10px 6.9px rgba(0, 0, 0, 0.031),
-  0 22.7px 14.2px rgba(0, 0, 0, 0.023),
-  0 47.4px 29.2px rgba(0, 0, 0, 0.018),
-;
+  box-shadow: 0 3.3px 2.7px rgba(0, 0, 0, 0.03),
+    0 10px 6.9px rgba(0, 0, 0, 0.031), 0 22.7px 14.2px rgba(0, 0, 0, 0.023),
+    0 47.4px 29.2px rgba(0, 0, 0, 0.018);
   width: 80%;
   border-radius: 3px;
   padding: 25px 20px 15px 20px;

@@ -9,21 +9,21 @@ const ContentHeader = ({ title, contentType }) => {
   if (contentType === "component") {
     return (
       <div className="cbp-content__header">
-        <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
+        <h1 className="cbp-masthead-1 cbp-spacing-stretch--regular">{title}</h1>
         <MenuTab tabContent={["Code", "Design Guidelines"]} />
       </div>
     )
   } else if (contentType === "foundation") {
     return (
       <div className="cbp-content__header">
-        <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
+        <h1 className="cbp-masthead-1 cbp-spacing-stretch--regular">{title}</h1>
         <MenuTab tabContent={["Basics", "Research & References"]} />
       </div>
     )
   } else {
     return (
       <div className="cbp-content__header">
-        <h1 className="cbp-masthead-1 heading-pad-temp">{title}</h1>
+        <h1 className="cbp-masthead-1 cbp-spacing-stretch--regular">{title}</h1>
       </div>
     )
   }
