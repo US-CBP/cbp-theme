@@ -11,48 +11,57 @@ iframe {
 /* iFrame style for height. Need to revisit this. */
 
 .spacing-wrapper {
-  padding: $cbp-lg-space $cbp-reg-space !important;
+  padding: 0 $cbp-reg-space $cbp-lg-space $cbp-reg-space !important;
 
   //heading for main sections
   h2 {
     @extend .cbp-spacing-stack--large;
+    padding-top: $cbp-lg-space;
   }
 
   h3,
   h4 {
     @extend .cbp-spacing-stack--regular;
+    padding-top: $cbp-reg-space;
   }
 
   h5,
   h6 {
     @extend .cbp-spacing-stack--small;
+    padding-top: $cbp-sm-space;
   }
 
-  p {
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  h5 + p,
+  h6 + p {
     @extend .cbp-spacing-stack--small;
   }
 
-  section {
-    @extend .cbp-spacing-stack--large;
-  }
-
-  ol,
-  ul {
-    margin-top: 0 !important;
-    @extend .cbp-spacing-stack--regular;
-  }
-
-  img,
-  .table {
-    @extend .cbp-spacing-stack--small;
+  .cbp-body + .cbp-body {
+    padding-bottom: 1.6rem;
   }
 
   .cbp-subhead-text {
     padding: 0;
+  }
 
-    &:last-child {
-      @extend .cbp-spacing-stack--regular;
-    }
+  figure,
+  .table {
+    @extend .cbp-spacing-stack--small;
+    padding-top: $cbp-sm-space;
+  }
+
+  //This has to be margin due to Bulma's custom styling.
+  ol,
+  ul {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .padding-bottom {
+    @extend .cbp-spacing-stack--small;
   }
 
   &:last-child {

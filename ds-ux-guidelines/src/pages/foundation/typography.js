@@ -10,8 +10,8 @@ const TypographyPage = () => (
     <ContentHeader title="Typography" contentType="foundation" />
 
     <article className="spacing-wrapper">
-      <section id="toTop">
-        <h2 id="Basics" className="cbp-heading-2">
+      <section id="Basics">
+        <h2 className="cbp-heading-2">
           Why is Typography important in the CBP Design System?
         </h2>
 
@@ -23,6 +23,7 @@ const TypographyPage = () => (
           understanding of information, and helps our users focus on the
           informed decisions that keep our country safe.
         </p>
+
         <p className="cbp-body">
           This isn’t simply what typeface we would like to use, but also the
           hierarchy, treatments, spacial relationships, and other refinements
@@ -31,9 +32,8 @@ const TypographyPage = () => (
           CBP Design System values consistency, accessibility, and legibility
           above all other style considerations.
         </p>
-      </section>
+        {/*  */}
 
-      <section>
         <h2 className="cbp-heading-2">Nuggets of Knowledge</h2>
         <div className="content">
           <ul>
@@ -92,27 +92,36 @@ const TypographyPage = () => (
             </li>
           </ul>
         </div>
-      </section>
 
-      <section>
-        <h2 className="cbp-heading-2">Type Family</h2>
+        <h2 className="cbp-heading-2">
+          Type Family
+          <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
+          >
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h2>
         <h3 className="cbp-heading-3">Roboto</h3>
 
         {/* @TODO: Insert Image Here (Current one is a placeholder) */}
-        <img
-          style={{ maxHeight: "100px", width: "auto" }}
-          src="https://imgs3.fontbrain.com/imgs/3e/1a/f3ef546b9e6ecef9f3ba197bf7d2/sa-720x400-333333@2x.png"
-          alt="Roboto Typeface"
-        ></img>
+        <figure>
+          <img
+            style={{ maxHeight: "100px", width: "auto" }}
+            src="https://imgs3.fontbrain.com/imgs/3e/1a/f3ef546b9e6ecef9f3ba197bf7d2/sa-720x400-333333@2x.png"
+            alt="Roboto Typeface"
+          ></img>
+        </figure>
 
-        <p className="cbp-body">
+        <p className="cbp-body padding-bottom">
           The official typeface for CBP applications is <strong>Roboto</strong>.
           We use this font exclusively in our products. Other typefaces should
           not be used in CBP applications with the small exception of Roboto
           Mono in certain, specific contexts.
         </p>
 
-        <p className="cbp-subhead-text ">
+        <p className="cbp-subhead-text">
           <em>
             See the Google&trade; Specifications for Roboto here:{""}
             <a href="https://fonts.google.com/specimen/Roboto">
@@ -136,9 +145,7 @@ const TypographyPage = () => (
             </a>
           </em>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">
           Download Instructions + Installing on your machine
         </h3>
@@ -160,10 +167,7 @@ const TypographyPage = () => (
           .ttf(truetype) formatted files and install them on your machine (you
           may require assistance from your IT dept. in some instances to install
           local files).
-          {/* @TODO: Delete after content is received */}
-          <strong style={{ color: "red" }}>
-            [**Download link here**] [**special callout styling of some sort**]
-          </strong>
+          {/* @TODO: Add download link here */}
         </p>
 
         <p className="cbp-body">
@@ -183,9 +187,7 @@ const TypographyPage = () => (
           affect how the font is rendered on the page
           <em> (we're looking at you .eot 0_0). </em>
         </p>
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>[**Note styling**]</strong>
-        {/* @TODO: Insert Image Here (Current one is a placeholder) */}
+
         <figure>
           <img
             style={{ maxHeight: "200px", width: "auto" }}
@@ -194,7 +196,7 @@ const TypographyPage = () => (
           ></img>
           <figcaption className="cbp-subhead-text">
             <strong>
-              Typography and Browser Compatibility:{""}
+              Typography and Browser Compatibility:{" "}
               <a href="https://blog.prototypr.io/typography-and-cross-browser-compatibility-fc1fa3b8fa9a">
                 source
               </a>
@@ -204,7 +206,7 @@ const TypographyPage = () => (
         <div>
           <p className="cbp-subhead-text">
             <em>
-              Roboto Family:{""}
+              Roboto Family:{" "}
               <a href="https://fonts.google.com/specimen/Roboto?selection.family=Roboto">
                 https://fonts.google.com/specimen/Roboto?selection.family=Roboto
               </a>
@@ -212,16 +214,14 @@ const TypographyPage = () => (
           </p>
           <p className="cbp-subhead-text">
             <em>
-              Roboto Mono Family:{""}
+              Roboto Mono Family:{" "}
               <a href="https://fonts.google.com/specimen/Roboto+Mono">
                 https://fonts.google.com/specimen/Roboto+Mono
               </a>
             </em>
           </p>
         </div>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Font Fallback Stack</h3>
         <p className="cbp-body">
           The CBP Design System Fallback stack is ( font-family: roboto,
@@ -235,9 +235,7 @@ const TypographyPage = () => (
             this stack as a replacement for Roboto.
           </strong>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Font Weights Included</h3>
 
         <p className="cbp-body">
@@ -260,7 +258,7 @@ const TypographyPage = () => (
             </ul>
           </div>
 
-          <div>
+          <div className="padding-bottom">
             <ul>
               <li className="cbp-masthead-2">
                 <em>Thin Italic (100 Italic)</em>
@@ -291,46 +289,51 @@ const TypographyPage = () => (
           For Roboto Mono the following weights are included:
         </p>
 
-        <ul>
-          <li
-            className="cbp-masthead-2"
-            style={{ fontFamily: "Roboto Mono, monospace" }}
-          >
-            Thin (100)
-          </li>
+        <div className="padding-bottom">
+          <ul>
+            <li
+              className="cbp-masthead-2"
+              style={{ fontFamily: "Roboto Mono, monospace" }}
+            >
+              Thin (100)
+            </li>
 
-          <li
-            className="cbp-heading-1"
-            style={{ fontFamily: "Roboto Mono, monospace" }}
-          >
-            Light (300)
-          </li>
+            <li
+              className="cbp-heading-1"
+              style={{ fontFamily: "Roboto Mono, monospace" }}
+            >
+              Light (300)
+            </li>
 
-          <li
-            className="cbp-heading-3"
-            style={{ fontFamily: "Roboto Mono, monospace" }}
-          >
-            Regular (400)
-          </li>
-          <li
-            className="cbp-heading-5"
-            style={{ fontFamily: "Roboto Mono, monospace" }}
-          >
-            Medium (500)
-          </li>
-          <li
-            className="cbp-heading-6"
-            style={{ fontFamily: "Roboto Mono, monospace" }}
-          >
-            Bold (700)
-          </li>
-          <li
-            className="cbp-heading-6"
-            style={{ fontFamily: "Roboto Mono, monospace", fontWeight: "900" }}
-          >
-            Black (900)
-          </li>
-        </ul>
+            <li
+              className="cbp-heading-3"
+              style={{ fontFamily: "Roboto Mono, monospace" }}
+            >
+              Regular (400)
+            </li>
+            <li
+              className="cbp-heading-5"
+              style={{ fontFamily: "Roboto Mono, monospace" }}
+            >
+              Medium (500)
+            </li>
+            <li
+              className="cbp-heading-6"
+              style={{ fontFamily: "Roboto Mono, monospace" }}
+            >
+              Bold (700)
+            </li>
+            <li
+              className="cbp-heading-6"
+              style={{
+                fontFamily: "Roboto Mono, monospace",
+                fontWeight: "900",
+              }}
+            >
+              Black (900)
+            </li>
+          </ul>
+        </div>
 
         <p className="cbp-body">
           <strong>Note: </strong>Roboto Mono should only be used in instances
@@ -345,11 +348,11 @@ const TypographyPage = () => (
           <div style={{ margin: "auto" }}>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Roboto_Mono_pangram.svg"
-              style={{ height: "250px" }}
+              style={{ height: "200px" }}
             ></img>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Roboto_Pangram.svg"
-              style={{ height: "250px" }}
+              style={{ height: "200px" }}
               alt="Roboto Mono Font"
             ></img>
             <figcaption className="cbp-subhead-text">
@@ -361,9 +364,7 @@ const TypographyPage = () => (
             </figcaption>
           </div>
         </figure>
-      </section>
 
-      <section>
         <h2 className="cbp-heading-2">
           Modular Scale{""}
           <a
@@ -387,9 +388,7 @@ const TypographyPage = () => (
           Design System utilizes a ratio on the lower end of the spectrum, Major
           Second (1.125).
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Units of Measurement</h3>
 
         <img
@@ -407,14 +406,6 @@ const TypographyPage = () => (
           update documentation in the future.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [** according to their respective styles. explanatory language should
-          be styled the same across the scale **]
-        </strong>
-      </section>
-
-      <section>
         <h3 className="cbp-heading-3">Special Heading Classes</h3>
 
         <p className="cbp-body">
@@ -439,7 +430,7 @@ const TypographyPage = () => (
           </ul>
         </div>
 
-        <table className="table is-fullwidth">
+        <table className="table">
           <caption
             style={{
               textAlign: "left",
@@ -489,226 +480,217 @@ const TypographyPage = () => (
           </tbody>
         </table>
 
-        <section>
-          <h3 className="cbp-heading-3">Heading Classes</h3>
+        <h3 className="cbp-heading-3">Heading Classes</h3>
 
-          <p className="cbp-body">
-            These are used in conjunction with semantic heading tags (ie. h1).
-            Classes ending in"light" for lighter backgrounds,"dark" for darker
-            colored backgrounds (see Reference & Research for more information).
-          </p>
+        <p className="cbp-body">
+          These are used in conjunction with semantic heading tags (ie. h1).
+          Classes ending in"light" for lighter backgrounds,"dark" for darker
+          colored backgrounds (see Reference & Research for more information).
+        </p>
 
-          <table className="table is-fullwidth">
-            <caption
-              style={{
-                textAlign: "left",
-                marginBottom: "1rem",
-                fontWeight: "bold",
-              }}
-            >
-              CBP Design System Type Scale- Heading Classes
-            </caption>
+        <table className="table">
+          <caption
+            style={{
+              textAlign: "left",
+              marginBottom: "1rem",
+              fontWeight: "bold",
+            }}
+          >
+            CBP Design System Type Scale- Heading Classes
+          </caption>
 
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Selector Name</th>
-                <th scope="col">Size</th>
-                <th scope="col">Font Weight</th>
-                <th scope="col">Line Height</th>
-                <th scope="col">Aliasing</th>
-                <th scope="col">Letter Spacing</th>
-              </tr>
-            </thead>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Selector Name</th>
+              <th scope="col">Size</th>
+              <th scope="col">Font Weight</th>
+              <th scope="col">Line Height</th>
+              <th scope="col">Aliasing</th>
+              <th scope="col">Letter Spacing</th>
+            </tr>
+          </thead>
 
-            <tbody>
-              <tr>
-                <td className="cbp-heading-1">Heading 1</td>
-                <td>
-                  <code>.cbp-heading-1</code>
-                </td>
-                <td>28px</td>
-                <td>300</td>
-                <td>40px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
+          <tbody>
+            <tr>
+              <td className="cbp-heading-1">Heading 1</td>
+              <td>
+                <code>.cbp-heading-1</code>
+              </td>
+              <td>28px</td>
+              <td>300</td>
+              <td>40px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
 
-              <tr>
-                <td className="cbp-heading-2">Heading 2</td>
-                <td>
-                  <code>.cbp-heading-2</code>
-                </td>
-                <td>25px</td>
-                <td>400</td>
-                <td>32px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
+            <tr>
+              <td className="cbp-heading-2">Heading 2</td>
+              <td>
+                <code>.cbp-heading-2</code>
+              </td>
+              <td>25px</td>
+              <td>400</td>
+              <td>32px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
 
-              <tr>
-                <td className="cbp-heading-3">Heading 3</td>
-                <td>
-                  <code>.cbp-heading-3</code>
-                </td>
-                <td>22px</td>
-                <td>400</td>
-                <td>28px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
+            <tr>
+              <td className="cbp-heading-3">Heading 3</td>
+              <td>
+                <code>.cbp-heading-3</code>
+              </td>
+              <td>22px</td>
+              <td>400</td>
+              <td>28px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
 
-              <tr>
-                <td className="cbp-heading-4">Heading 4</td>
-                <td>
-                  <code>.cbp-heading-2</code>
-                </td>
-                <td>20px</td>
-                <td>500</td>
-                <td>28px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
+            <tr>
+              <td className="cbp-heading-4">Heading 4</td>
+              <td>
+                <code>.cbp-heading-2</code>
+              </td>
+              <td>20px</td>
+              <td>500</td>
+              <td>28px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
 
-              <tr>
-                <td className="cbp-heading-5">Heading 5</td>
-                <td>
-                  <code>.cbp-heading-5</code>
-                </td>
-                <td>20px</td>
-                <td>500</td>
-                <td>24px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
+            <tr>
+              <td className="cbp-heading-5">Heading 5</td>
+              <td>
+                <code>.cbp-heading-5</code>
+              </td>
+              <td>20px</td>
+              <td>500</td>
+              <td>24px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
 
-              <tr>
-                <td className="cbp-heading-6">Heading 6</td>
-                <td>
-                  <code>.cbp-heading-6</code>
-                </td>
-                <td>16px</td>
-                <td>700</td>
-                <td>20px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+            <tr>
+              <td className="cbp-heading-6">Heading 6</td>
+              <td>
+                <code>.cbp-heading-6</code>
+              </td>
+              <td>16px</td>
+              <td>700</td>
+              <td>20px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <section>
-          <h3 className="cbp-heading-3">Body Copy Classes</h3>
+        <h3 className="cbp-heading-3">Body Copy Classes</h3>
 
-          <p className="cbp-body">
-            These are the default text classes for paragraphs of text and are
-            directly linked to the semantic"p" tag. Classes ending in"light" for
-            lighter backgrounds,"dark" for darker colored backgrounds (see
-            Reference & Research for more information).
-          </p>
+        <p className="cbp-body">
+          These are the default text classes for paragraphs of text and are
+          directly linked to the semantic"p" tag. Classes ending in"light" for
+          lighter backgrounds,"dark" for darker colored backgrounds (see
+          Reference & Research for more information).
+        </p>
 
-          <table className="table is-fullwidth">
-            <caption
-              style={{
-                textAlign: "left",
-                marginBottom: "1rem",
-                fontWeight: "bold",
-              }}
-            >
-              CBP Design System Type Scale- Body Copy Classes
-            </caption>
+        <table className="table">
+          <caption
+            style={{
+              textAlign: "left",
+              marginBottom: "1rem",
+              fontWeight: "bold",
+            }}
+          >
+            CBP Design System Type Scale- Body Copy Classes
+          </caption>
 
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Selector Name</th>
-                <th scope="col">Size</th>
-                <th scope="col">Font Weight</th>
-                <th scope="col">Line Height</th>
-                <th scope="col">Aliasing</th>
-                <th scope="col">Letter Spacing</th>
-              </tr>
-            </thead>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Selector Name</th>
+              <th scope="col">Size</th>
+              <th scope="col">Font Weight</th>
+              <th scope="col">Line Height</th>
+              <th scope="col">Aliasing</th>
+              <th scope="col">Letter Spacing</th>
+            </tr>
+          </thead>
 
-            <tbody>
-              <tr>
-                <td className="cbp-body">Body (p)</td>
-                <td>
-                  <code>.cbp-body</code>
-                </td>
-                <td>14px</td>
-                <td>400</td>
-                <td>20px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+          <tbody>
+            <tr>
+              <td className="cbp-body">Body (p)</td>
+              <td>
+                <code>.cbp-body</code>
+              </td>
+              <td>14px</td>
+              <td>400</td>
+              <td>20px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <section>
-          <h3 className="cbp-heading-3">Supporting Text Classes</h3>
+        <h3 className="cbp-heading-3">Supporting Text Classes</h3>
 
-          <p className="cbp-body">
-            These are text classes with special functions. Each supporting class
-            may have a different semantic tag associated with it. This section
-            may grow over time to accommodate special text classes that are
-            added.
-          </p>
+        <p className="cbp-body">
+          These are text classes with special functions. Each supporting class
+          may have a different semantic tag associated with it. This section may
+          grow over time to accommodate special text classes that are added.
+        </p>
 
-          <table className="table is-fullwidth">
-            <caption
-              style={{
-                textAlign: "left",
-                marginBottom: "1rem",
-                fontWeight: "bold",
-              }}
-            >
-              CBP Design System Type Scale- Supporting Text Classes
-            </caption>
+        <table className="table">
+          <caption
+            style={{
+              textAlign: "left",
+              marginBottom: "1rem",
+              fontWeight: "bold",
+            }}
+          >
+            CBP Design System Type Scale- Supporting Text Classes
+          </caption>
 
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Selector Name</th>
-                <th scope="col">Size</th>
-                <th scope="col">Font Weight</th>
-                <th scope="col">Line Height</th>
-                <th scope="col">Aliasing</th>
-                <th scope="col">Letter Spacing</th>
-              </tr>
-            </thead>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Selector Name</th>
+              <th scope="col">Size</th>
+              <th scope="col">Font Weight</th>
+              <th scope="col">Line Height</th>
+              <th scope="col">Aliasing</th>
+              <th scope="col">Letter Spacing</th>
+            </tr>
+          </thead>
 
-            <tbody>
-              <tr>
-                <td className="cbp-button-text">Button Text</td>
-                <td>
-                  <code>.cbp-button-text</code>
-                </td>
-                <td>14px</td>
-                <td>500</td>
-                <td>normal</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
+          <tbody>
+            <tr>
+              <td className="cbp-button-text">Button Text</td>
+              <td>
+                <code>.cbp-button-text</code>
+              </td>
+              <td>14px</td>
+              <td>500</td>
+              <td>normal</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
 
-              <tr>
-                <td className="cbp-subhead-text">Subhead</td>
-                <td>
-                  <code>.cbp-subhead-text</code>
-                </td>
-                <td>12px</td>
-                <td>500</td>
-                <td>20px</td>
-                <td>TBD</td>
-                <td>0.12 (TBD)</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </section>
+            <tr>
+              <td className="cbp-subhead-text">Subhead</td>
+              <td>
+                <code>.cbp-subhead-text</code>
+              </td>
+              <td>12px</td>
+              <td>500</td>
+              <td>20px</td>
+              <td>TBD</td>
+              <td>0.12 (TBD)</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <section>
         <h3 className="cbp-heading-3">OpenType Features</h3>
 
         <p className="cbp-body">
@@ -765,9 +747,7 @@ const TypographyPage = () => (
             </a>
           </em>
         </p>
-      </section>
 
-      <section>
         <h2 className="cbp-heading-2">
           Building a Bridge to the CBP Design System.
         </h2>
@@ -785,9 +765,7 @@ const TypographyPage = () => (
           change. This was a big part of the decision we made to create a new
           Design System rather than continue to iterate in place.
         </p>
-      </section>
 
-      <section>
         <h2 className="cbp-heading-2">
           Roboto. If it ain't broke, don't fix it.
         </h2>
@@ -805,17 +783,23 @@ const TypographyPage = () => (
           users we will continue to offer the .woff file type, but will focus on
           the .woff2 as it is widely accepted in modern browsers.
         </p>
-      </section>
 
-      <section>
         <h2 className="cbp-heading-2">Crafting a balanced system.</h2>
 
-        <img
-          src="https://betterwebtype.com/assets/img/triangle/triangle-paragraph-explained.jpg"
-          style={{ maxHeight: "200px", position: "static", right: "60px" }}
-        ></img>
+        <figure>
+          <img
+            src="https://betterwebtype.com/assets/img/triangle/triangle-paragraph-explained.jpg"
+            style={{
+              width: "350px",
+            }}
+          ></img>
+          <figcaption className="cbp-subhead-text">
+            Source:{" "}
+            <a href="https://betterwebtype.com/triangle/">Better Web Type</a>
+          </figcaption>
+        </figure>
 
-        <p className="cbp-body">
+        <p className="cbp-body padding-bottom">
           In his book, "A Better Web Typography", Matej Latin proposes that for
           optimal legibility, the “holy trinity” of font size, line-height, and
           line length all need to be in “balance.” If any of the 3 have too much
@@ -837,9 +821,7 @@ const TypographyPage = () => (
             role in the background research conducted.
           </em>
         </p>
-      </section>
 
-      <section>
         <h2 className="cbp-heading-2">
           A modular approach.
           <a
@@ -851,10 +833,7 @@ const TypographyPage = () => (
           </a>
         </h2>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of diatonic scale + musical scale**]
-        </strong>
+        {/* @TODO: image of diatonic scale + musical scale */}
 
         <p className="cbp-body">
           Modular scales are expressed as ratios between one step and the next.
@@ -867,15 +846,10 @@ const TypographyPage = () => (
           are more closely linked to the types of scales you might find in sheet
           music.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Productive vs. Expressive</h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of expressive vs. productive sites**]
-        </strong>
+        {/* @TODO: image of expressive vs. productive sites */}
 
         <p className="cbp-body">
           This particular concept has a lot to do with whether or not your type
@@ -908,9 +882,7 @@ const TypographyPage = () => (
           the addition of two"Masthead" type classes to help account for the
           instances in which we need larger typographic choices.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Choosing a scale.</h3>
 
         <p className="cbp-body">
@@ -923,19 +895,11 @@ const TypographyPage = () => (
           Major Second (ratio of 1.125), and Minor Third (ratio of 1.2).
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of scale comparisons**]
-        </strong>
-      </section>
+        {/* @TODO: image of scale comparisons */}
 
-      <section>
         <h3 className="cbp-heading-3">Choosing a base font size.</h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of arms length comparisons maybe**]
-        </strong>
+        {/* @TODO: image of arms length comparisons maybe */}
 
         <p className="cbp-body">
           There have been a lot of studies in recent years about what the
@@ -986,39 +950,54 @@ const TypographyPage = () => (
           it's not that far off from the existing 13px setting and gets us
           closer to the industry standard 16px. See below for some of our
           experimentation.
-          {/* @TODO: Delete after content is received */}
-          <strong style={{ color: "red" }}>
-            [**type scale experiments with individual notes**]
-          </strong>
+          {/* @TODO: type scale experiments with individual notes */}
         </p>
-      </section>
 
-      <section>
         <h4 className="cbp-heading-4">CBP Theme existing Base: 13px</h4>
-
         <p className="cbp-body">
           Obviously this base value is included because it is the current base
           value in the CBP Theme. Because we want to craft a bridge to existing
           users of the CBP Theme we want to explore whether this base value with
           a scale is viable in the new design system.
-          <strong> 1.067 Minor Second Scale: </strong> The scale here just
-          doesn’t work. There’s not enough variation in sizing between headers
-          for this to be effective.
-          <strong> 1.125 Major Second Scale: </strong> This scale is a little
-          better but still too small. The upper end of the scale <code>h1</code>
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.067 Minor Second Scale:{" "}
+          </strong>{" "}
+          The scale here just doesn’t work. There’s not enough variation in
+          sizing between headers for this to be effective.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.125 Major Second Scale:{" "}
+          </strong>{" "}
+          This scale is a little better but still too small. The upper end of
+          the scale <code>h1</code>
           {""}
-          is too large of a delta from the existing theme. (4px)
-          <strong> 1.200 Minor Third Scale: </strong> Whoa. What a difference a
-          move up the scale makes. This blows past our upper part of the scale.
-          This also doesn’t work for our productive scale.
+          is too large of a delta from the existing theme. (4px){" "}
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.200 Minor Third Scale:{" "}
+          </strong>{" "}
+          Whoa. What a difference a move up the scale makes. This blows past our
+          upper part of the scale. This also doesn’t work for our productive
+          scale.
+        </p>
+
+        <p className="cbp-body">
           <em>
             {""}
             <strong> Conclusion: This base value won’t work. </strong>
           </em>
         </p>
-      </section>
 
-      <section>
         <h4 className="cbp-heading-4">
           Adjusting the base ever so slightly: 14px
         </h4>
@@ -1027,18 +1006,38 @@ const TypographyPage = () => (
           13px seemed to be a bust overall. Applying a scale to it just didn’t
           end up with a similar enough set of endpoints to keep the system in
           working order.
-          <strong> 1.067 Minor Second Scale: </strong> This won’t work. Too
-          small.
-          <strong> 1.125 Major Second Scale: </strong> This one might be a
-          contender. You lose 2px on the upper end of scale (<code>h1</code>).
-          But this aligns pretty closely with what’s in the scale already.
-          <strong> 1.200 Minor Third Scale: </strong> Oops. This just won’t work
-          for productive sites. But might work for our expressive scale if major
-          second works out as our productive scale.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.067 Minor Second Scale:{" "}
+          </strong>{" "}
+          This won’t work. Too small.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.125 Major Second Scale:{" "}
+          </strong>{" "}
+          This one might be a contender. You lose 2px on the upper end of scale
+          (<code>h1</code>). But this aligns pretty closely with what’s in the
+          scale already.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.200 Minor Third Scale:{" "}
+          </strong>{" "}
+          Oops. This just won’t work for productive sites. But might work for
+          our expressive scale if major second works out as our productive
+          scale.
+        </p>
+        <p className="cbp-body">
           <em>
-            {""}
             <strong>
-              {""}
               Conclusion: Major Second with 14px base is a something to evaluate
               more closely for our productive scale. If it works then minor
               third may be a good option for our expressive scale as well
@@ -1046,9 +1045,7 @@ const TypographyPage = () => (
             </strong>
           </em>
         </p>
-      </section>
 
-      <section>
         <h4 className="cbp-heading-4">
           Getting closer to the industry default: 15px
         </h4>
@@ -1057,19 +1054,38 @@ const TypographyPage = () => (
           Fun fact, the original version of the CBP Theme had 15px as its base
           value before it was changed to 13px to accommodate extra application
           density.
-          <strong> 1.067 Minor Second Scale: </strong> This won’t work. Too
-          small. Still.
-          <strong> 1.125 Major Second Scale: </strong> This scale perfectly
-          aligns with our <code>h1</code> from the CBP Theme, but there is the
-          trade off of having the base value 2px larger. Still this warrants
-          further exploration.
-          <strong> 1.200 Minor Third Scale: </strong> Not gonna work for our
-          productive scale obviously, but there may be some value for it to be
-          used for expressive sites.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.067 Minor Second Scale:{" "}
+          </strong>{" "}
+          This won’t work. Too small. Still.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.125 Major Second Scale:{" "}
+          </strong>{" "}
+          This scale perfectly aligns with our <code>h1</code> from the CBP
+          Theme, but there is the trade off of having the base value 2px larger.
+          Still this warrants further exploration.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.200 Minor Third Scale:{" "}
+          </strong>{" "}
+          Not gonna work for our productive scale obviously, but there may be
+          some value for it to be used for expressive sites.
+        </p>
+
+        <p className="cbp-body">
           <em>
-            {""}
             <strong>
-              {""}
               Conclusion: Major Second with 15px base is a something to evaluate
               more closely for our productive scale. If it works then minor
               third may be a good option for our expressive scale as well
@@ -1077,9 +1093,7 @@ const TypographyPage = () => (
             </strong>
           </em>
         </p>
-      </section>
 
-      <section>
         <h4 className="cbp-heading-4">Industry Default: 16px</h4>
 
         <p className="cbp-body">
@@ -1088,22 +1102,41 @@ const TypographyPage = () => (
           lot of research out there that says this is the optimal base value for
           legibility. But those studies are also biased towards enterprise
           systems that are more expressive.
-          <strong> 1.067 Minor Second Scale: </strong> This won’t work. Too
-          small. Shrug.
-          <strong> 1.125 Major Second Scale: </strong> The upper end of this
-          scale is within tolerances of our existing theme, but 16px body is
-          just too large for our client’s systems to accommodate.
-          <strong> 1.200 Minor Third Scale: </strong> Not gonna work for our
-          productive scale obviously, but there may be some value for it to be
-          used for expressive sites.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.067 Minor Second Scale:{" "}
+          </strong>{" "}
+          This won’t work. Too small. Shrug.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.125 Major Second Scale:{" "}
+          </strong>{" "}
+          The upper end of this scale is within tolerances of our existing
+          theme, but 16px body is just too large for our client’s systems to
+          accommodate.
+        </p>
+
+        <p className="cbp-body">
+          <strong role="heading" aria-level="5">
+            {" "}
+            1.200 Minor Third Scale:{" "}
+          </strong>{" "}
+          Not gonna work for our productive scale obviously, but there may be
+          some value for it to be used for expressive sites.
+        </p>
+
+        <p className="cbp-body">
           <em>
-            {""}
             <strong> Conclusion: This base value won’t work.</strong>
           </em>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">
           <strong>The stronger candidate: 14px - 1.125 (Major Second)</strong>
         </h3>
@@ -1118,10 +1151,17 @@ const TypographyPage = () => (
           economical use of space that will not impede the current design trends
           across our suite of applications.
         </p>
-      </section>
 
-      <section>
-        <h2 className="cbp-heading-2">Vertical Rhythm</h2>
+        <h2 className="cbp-heading-2">
+          Vertical Rhythm
+          <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
+          >
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h2>
 
         <p className="cbp-body">
           Human beings operate on identifying patterns. The"Principle of
@@ -1153,15 +1193,10 @@ const TypographyPage = () => (
           and gives a good starting point for our spacing system (for more
           information on the spacing system please see its section under
           foundations).
-          {/* @TODO: Delete after content is received */}
-          <strong style={{ color: "red" }}>
-            [**The Baseline Grid image line height body copy + good rhythm bad
-            rhythm image**]
-          </strong>
+          {/* @TODO: [**The Baseline Grid image line height body copy + good rhythm bad
+            rhythm image**] */}
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Line Height Exploration</h3>
 
         <p className="cbp-body">
@@ -1183,24 +1218,16 @@ const TypographyPage = () => (
           established our 4px baseline grid so we know that our line-height
           values will have to be rounded up the nearest multiple of 4. In this
           case 24px or 32px.
-          {/* @TODO: Delete after content is received */}
-          <strong style={{ color: "red" }}>
-            [**image of heading table and differences in line height
+          {/* @TODO: **image of heading table and differences in line height
             understanding between web and print instances**] [**images for line
-            height exploration**]
-          </strong>
+            height exploration**] */}
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">
           How spacing affects hierarchy in typography.
         </h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image showing bad vs good spacing relationships**]
-        </strong>
+        {/* @TODO: image showing bad vs good spacing relationships */}
 
         <p className="cbp-bpdy">
           The “Law of Proximity” states that when objects are close to each
@@ -1222,9 +1249,7 @@ const TypographyPage = () => (
           preceding paragraph and the header of the next section. This does not
           replace line height within the text box.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Text Spacing Hierarchy</h3>
 
         <p className="cbp-body">
@@ -1261,12 +1286,18 @@ const TypographyPage = () => (
           </ol>
         </div>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>[**image of text hierarchy**]</strong>
-      </section>
+        {/* @TODO:**image of text hierarchy**] */}
 
-      <section>
-        <h2 className="cbp-heading-2">Horizontal Rhythm</h2>
+        <h2 className="cbp-heading-2">
+          Horizontal Rhythm
+          <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
+          >
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h2>
 
         <p className="cbp-body">
           While vertical rhythm techniques focus on hierarchy, horizontal rhythm
@@ -1275,17 +1306,9 @@ const TypographyPage = () => (
           retention of information.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>[**Image Here (maybe)**]</strong>
-      </section>
-
-      <section>
         <h3 className="cbp-heading-3">Line Length</h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of line length good and bad**]
-        </strong>
+        {/* @TODO: [**image of line length good and bad**] */}
 
         <p className="cbp-body">
           When it comes to large blocks of text there have been several studies
@@ -1323,23 +1346,18 @@ const TypographyPage = () => (
         <p className="cbp-subhead-text">
           <em>
             Learn more about the CBP Design System's grid settings under the
-            Spacing, grid, layout section in foundations.{""}
-            <strong style={{ color: "red" }}>[**link**]</strong>
+            <a href="./layouts"> Spacing, Grid & Layout section</a> in
+            foundations.{""}
           </em>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">
           Columns, Paragraphs, and Logical Reading Order
         </h3>
 
         <h4 className="cbp-heading-4">Logical Reading Order</h4>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of what logical reading order / maybe eye F patterns**]
-        </strong>
+        {/* @TODO:  [**image of what logical reading order / maybe eye F patterns**]*/}
 
         <p className="cbp-body">
           People naturally read content in a certain pattern in western
@@ -1366,19 +1384,11 @@ const TypographyPage = () => (
           </ul>
         </div>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of logical reading order**]
-        </strong>
-      </section>
+        {/* @TODO: [**image of logical reading order**] */}
 
-      <section>
         <h3 className="cbp-heading-3">Letter Spacing</h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image explaining why this is important**]
-        </strong>
+        {/* @TODO: [**image explaining why this is important** */}
 
         <p className="cbp-body">
           The spaces between the letters are just as important as the words
@@ -1398,9 +1408,7 @@ const TypographyPage = () => (
           of our heading classes grows however, negative letter-spacing may be
           added to keep characters from drifting from each other.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Alignment</h3>
 
         <p className="cbp-body">
@@ -1408,50 +1416,35 @@ const TypographyPage = () => (
           allows a user’s eye to have a reference to return to as they finish
           each line of text. In general there are 4 alignment types.
         </p>
-      </section>
 
-      <section>
-        <h4 className="cbp-heading-4">Left-Aligned (Rag Right)</h4>
+        <h4 className="cbp-heading-4">Types of Alignment</h4>
+
+        <h5 className="cbp-heading-5">Left-Aligned (Rag Right)</h5>
         <p className="cbp-body">
           This is pretty standard stuff. Fits how western style cultures read.
           The vast majority of what we do should feature this style alignment.
         </p>
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**example of left aligned text**]
-        </strong>
-      </section>
+        {/* @TODO: [**example of left aligned text**] */}
 
-      <section>
-        <h4 className="cbp-heading-4">Center Aligned</h4>
+        <h5 className="cbp-heading-5">Center Aligned</h5>
 
         <p className="cbp-body">
           This should have very limited applications. Should be a special use
           case.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**example of center aligned text**]
-        </strong>
-      </section>
+        {/* @TODO: [**example of center aligned text**]*/}
 
-      <section>
-        <h4 className="cbp-heading-4">Right Aligned (Rag Left)</h4>
+        <h5 className="cbp-heading-5">Right Aligned (Rag Left)</h5>
 
         <p className="cbp-body">
           This should probably be avoided if not only used in a very special use
           case.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**example of right aligned text**]
-        </strong>
-      </section>
+        {/* @TODO: [**example of right aligned text**] */}
 
-      <section>
-        <h4 className="cbp-heading-4">Justified (DO NOT USE)</h4>
+        <h5 className="cbp-heading-5">Justified (DO NOT USE)</h5>
 
         <p className="cbp-body">
           Oh dear. Just never, ever do this. On top of looking awful, it is very
@@ -1460,13 +1453,8 @@ const TypographyPage = () => (
           <strong>DO NOT USE JUSTIFIED.</strong>
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**example of justified text**]
-        </strong>
-      </section>
+        {/* @TODO: [**example of justified text**] */}
 
-      <section>
         <h2 className="cbp-heading-2">
           Performance
           <a
@@ -1488,9 +1476,7 @@ const TypographyPage = () => (
           approach to performance, please see the Performance section of
           foundations.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">File Type Support & Self Hosting</h3>
 
         <p className="cbp-body">
@@ -1520,9 +1506,7 @@ const TypographyPage = () => (
           in certain characters. For the sake of legibility avoid this file
           type.
         </p>
-      </section>
 
-      <section>
         <h4 className="cbp-heading-4">File Types Provided</h4>
 
         <h5 className="cbp-heading-5">TTF - TrueType Files (provided)</h5>
@@ -1565,9 +1549,7 @@ const TypographyPage = () => (
           inclusion of WOFF v1 is basically an IE tax and will at some point be
           deprecated.
         </p>
-      </section>
 
-      <section>
         <h4 className="cbp-heading-4">Text Loading</h4>
 
         <p className="cbp-body">
@@ -1581,8 +1563,7 @@ const TypographyPage = () => (
           progressive loading techniques.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>[**Insert Image of FOUT**]</strong>
+        {/* @TODO:[**Insert Image of FOUT**] */}
 
         <h5 className="cbp-heading-5">FOUT: Flash of Unstyled Text.</h5>
 
@@ -1596,8 +1577,7 @@ const TypographyPage = () => (
           eliminated.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>[**Insert Image of FOIT**]</strong>
+        {/* @TODO: Insert Image of FOIT */}
 
         <h5 className="cbp-heading-5">FOIT: Flash of Invisible Text</h5>
 
@@ -1609,8 +1589,7 @@ const TypographyPage = () => (
           to be avoided.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>[**Insert Image of FOFT**]</strong>
+        {/* @TODO: [**Insert Image of FOFT**] */}
 
         <h5 className="cbp-heading-5">FOFT: Flash of Faux Text</h5>
 
@@ -1622,10 +1601,7 @@ const TypographyPage = () => (
           better approach to page loading and deal with FOUT.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**Insert Image of Progressive Loading**]
-        </strong>
+        {/* @TODO: [**Insert Image of Progressive Loading**] */}
 
         <h5 className="cbp-heading-5">Progressive Loading</h5>
 
@@ -1635,10 +1611,7 @@ const TypographyPage = () => (
           fold.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**Insert Image of Skeleton UI**]
-        </strong>
+        {/* @TODO: [**Insert Image of Skeleton UI**] */}
 
         <h5 className="cbp-heading-5">Skeleton UI</h5>
 
@@ -1646,10 +1619,17 @@ const TypographyPage = () => (
           This is where a dummy placeholder box is placed to let the user know
           that content is being loaded but is taking longer than anticipated.
         </p>
-      </section>
 
-      <section>
-        <h2 className="cbp-heading-2">Micro-Typography</h2>
+        <h2 className="cbp-heading-2">
+          Micro-Typography
+          <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
+          >
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h2>
 
         <p className="cbp-body">
           As people tend to say, “the devil is in the details.” The following
@@ -1657,15 +1637,10 @@ const TypographyPage = () => (
           given to these subjects, we can create much better designed
           experiences for our users.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Ligatures</h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image examples of ligatures**]
-        </strong>
+        {/* @TODO:  [**image examples of ligatures**] */}
 
         <p className="cbp-body">
           Ligatures began in the illuminated manuscripts days. By connecting
@@ -1708,9 +1683,7 @@ const TypographyPage = () => (
 }`}
           language={"language-css"}
         />
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Small Caps</h3>
 
         <p className="cbp-body">
@@ -1730,10 +1703,7 @@ const TypographyPage = () => (
           found in the CBP DS Core CSS file.
         </p>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**image of small caps and example of fake small caps**]
-        </strong>
+        {/* @TODO:  [**image of small caps and example of fake small caps**] */}
 
         <h5 className="cbp-heading-5">Small Caps Code</h5>
 
@@ -1749,26 +1719,19 @@ const TypographyPage = () => (
 }`}
           language={"language-css"}
         />
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Punctuation</h3>
 
-        {/* @TODO: Delete after content is received */}
-        <strong style={{ color: "red" }}>
-          [**table of punctuation name, html tag, use case, hotkeys**]
-        </strong>
-      </section>
+        {/* @TODO: [**table of punctuation name, html tag, use case, hotkeys**] */}
 
-      <h3 className="cbp-heading-3">The Character Viewer on your Computer</h3>
+        <h3 className="cbp-heading-3">The Character Viewer on your Computer</h3>
 
-      <p className="cbp-body">
-        This window shows all “glyphs” available in the particular font you have
-        selected on your desktop. It it for use on your PC, use HTML codes for
-        calling these glyphs in your code.
-      </p>
+        <p className="cbp-body">
+          This window shows all “glyphs” available in the particular font you
+          have selected on your desktop. It it for use on your PC, use HTML
+          codes for calling these glyphs in your code.
+        </p>
 
-      <section>
         <h5 className="cbp-heading-5">
           How to open the Character Viewer on your Mac:{""}
         </h5>
@@ -1785,9 +1748,7 @@ const TypographyPage = () => (
             </li>
           </ol>
         </div>
-      </section>
 
-      <section>
         <h5 className="cbp-heading-5">
           How to open the Character Viewer on your Windows PC:{""}
         </h5>
@@ -1801,13 +1762,9 @@ const TypographyPage = () => (
             <li>In the list of results, click “Character Map”</li>
           </ol>
         </div>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Dashes</h3>
-        {/* @TODO: Show Examples */}
-        <strong style={{ color: "red" }}>[Provide samples]</strong>
-
+        {/* @TODO: Provide Examples */}
         <p className="cbp-body">
           The differences between the minus, hyphen, en dash, and em dash may
           not seem like much, but using the correct one can be important for
@@ -1815,67 +1772,55 @@ const TypographyPage = () => (
           sighted user may not notice much of a difference.
         </p>
 
-        <section>
-          <h5 className="cbp-heading-5">– em dash (&emdash)</h5>
+        <h5 className="cbp-heading-5">– em dash (&emdash)</h5>
 
-          <p className="cbp-body">
-            The main use of the em dash is to indicate the source of a quote or
-            narrative placed in front of the speaker’s name. Em dashes can also
-            be used in place of parentheses, or in place of a colon where a
-            comma may be too little of a pause, but a period may be too much.
-            This character matches the width of the capital “M” in the font.
-            Ideally, the em dash should be followed by a “thin space.” (
-            <strong>MAC:</strong> OPTION + - ) (<strong>WINDOWS:</strong> ALT +
-            0151)
-          </p>
-        </section>
+        <p className="cbp-body">
+          The main use of the em dash is to indicate the source of a quote or
+          narrative placed in front of the speaker’s name. Em dashes can also be
+          used in place of parentheses, or in place of a colon where a comma may
+          be too little of a pause, but a period may be too much. This character
+          matches the width of the capital “M” in the font. Ideally, the em dash
+          should be followed by a “thin space.” (<strong>MAC:</strong> OPTION +
+          - ) (<strong>WINDOWS:</strong> ALT + 0151)
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">— en dash (&endash)</h5>
+        <h5 className="cbp-heading-5">— en dash (&endash)</h5>
 
-          <p className="cbp-body">
-            En Dashes are exactly half of the width of an em dash. Their main
-            purpose is to replace the words “to” or “through” when used to
-            indicate ranges of values or of time. For example instead of 6 to
-            9pm you put 6–9pm, or instead of Los Angeles to New York (Los
-            Angeles-New York). There should not be any spaces between this
-            symbol and its accompanying text. (<strong>MAC:</strong> OPTION +
-            SHIFT + - ) (<strong>WINDOWS:</strong> ALT + 0150)
-          </p>
-        </section>
+        <p className="cbp-body">
+          En Dashes are exactly half of the width of an em dash. Their main
+          purpose is to replace the words “to” or “through” when used to
+          indicate ranges of values or of time. For example instead of 6 to 9pm
+          you put 6–9pm, or instead of Los Angeles to New York (Los Angeles-New
+          York). There should not be any spaces between this symbol and its
+          accompanying text. (<strong>MAC:</strong> OPTION + SHIFT + - ) (
+          <strong>WINDOWS:</strong> ALT + 0150)
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">- minus (&minus)</h5>
+        <h5 className="cbp-heading-5">- minus (&minus)</h5>
 
-          <p className="cbp-body">
-            The minus symbol should only for mathematical uses. (
-            <strong>MAC:</strong> Use character viewer ) (
-            <strong>WINDOWS:</strong> Use character viewer)
-          </p>
-        </section>
+        <p className="cbp-body">
+          The minus symbol should only for mathematical uses. (
+          <strong>MAC:</strong> Use character viewer ) (
+          <strong>WINDOWS:</strong> Use character viewer)
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">- hyphen (&minus)</h5>
+        <h5 className="cbp-heading-5">- hyphen (&minus)</h5>
 
-          <p className="cbp-body">
-            1/4 the width of an em dash. primarily used for hyphenating words.
-            five-dollar bill etc. (<strong>MAC:</strong> OPTION + - ) (
-            <strong>WINDOWS:</strong> Use character viewer)
-          </p>
+        <p className="cbp-body">
+          1/4 the width of an em dash. primarily used for hyphenating words.
+          five-dollar bill etc. (<strong>MAC:</strong> OPTION + - ) (
+          <strong>WINDOWS:</strong> Use character viewer)
+        </p>
 
-          <p className="cbp-subhead-text">
-            Fun fact: the button on your keyboard next to the “0” numeral is
-            neither a hyphen or a minus symbol, but a “hyphen-minus” which is a
-            hold over from the typewriter. It is generally accepted as a hyphen,
-            but is technically a different symbol.
-          </p>
-        </section>
-      </section>
+        <p className="cbp-subhead-text">
+          Fun fact: the button on your keyboard next to the “0” numeral is
+          neither a hyphen or a minus symbol, but a “hyphen-minus” which is a
+          hold over from the typewriter. It is generally accepted as a hyphen,
+          but is technically a different symbol.
+        </p>
 
-      <section>
         <h3 className="cbp-heading-3">"Dumb" vs."Smart" Quotes</h3>
-        {/* @TODO: Add Example here */}
-        <strong style={{ color: "red" }}>[Show Examples]</strong>
+        {/* @TODO: [Show Examples]*/}
 
         <p className="cbp-body">
           Dumb quotes are the default mark on your keyboard (straight up and
@@ -1943,12 +1888,9 @@ const TypographyPage = () => (
           `}
           language={"language-html"}
         />
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Measurement (Prime) Marks</h3>
-        {/* @TODO: Add Example here */}
-        <strong style={{ color: "red" }}>[Show Examples]</strong>
+        {/* @TODO: Show Example here */}
 
         <p className="cbp-body">
           For distance measurements like feet and inches you should use"prime
@@ -1957,207 +1899,182 @@ const TypographyPage = () => (
           smart quotes and mean completely different things.
         </p>
 
-        <section>
-          <p className="cbp-body">
-            <strong>′ Single Prime Mark (&prime): </strong>
-            This is cap sensitive. Used to indicate a measurement in feet (US
-            Imperial system) or in latitude/longitude it is used to indicate
-            “hours” as in degrees/hours/minutes.{""}
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> use character viewer ) (
-              <strong>WINDOWS: </strong> ALT + 8242)
-            </span>
-          </p>
+        <p className="cbp-body">
+          <strong>′ Single Prime Mark (&prime): </strong>
+          This is cap sensitive. Used to indicate a measurement in feet (US
+          Imperial system) or in latitude/longitude it is used to indicate
+          “hours” as in degrees/hours/minutes.{""}
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> use character viewer ) (
+            <strong>WINDOWS: </strong> ALT + 8242)
+          </span>
+        </p>
 
-          <p className="cbp-body">
-            <strong>″ Double Prime Mark (&Prime): </strong>
-            This is cap sensitive. Used to indicate a measurement in inches (US
-            Imperial system) or in latitude/longitude it is used to indicate
-            “minutes” as in degrees/hours/minutes.{""}
-            <span className="cbp-subhead-text">
-              (<strong>MAC: </strong> use character viewer ) (
-              <strong>WINDOWS: </strong> ALT + 8243)
-            </span>
-          </p>
-        </section>
+        <p className="cbp-body">
+          <strong>″ Double Prime Mark (&Prime): </strong>
+          This is cap sensitive. Used to indicate a measurement in inches (US
+          Imperial system) or in latitude/longitude it is used to indicate
+          “minutes” as in degrees/hours/minutes.{""}
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> use character viewer ) (
+            <strong>WINDOWS: </strong> ALT + 8243)
+          </span>
+        </p>
 
-        <section>
-          <h3 className="cbp-heading-3">Special Spaces</h3>
-          {/* @TODO: Add Example here */}
-          <strong style={{ color: "red" }}>[Show Examples]</strong>
+        <h3 className="cbp-heading-3">Special Spaces</h3>
+        {/* @TODO: Show Example here */}
 
-          <p className="cbp-body">
-            <strong>&hairsp: </strong>Hair space - often used alongside dashes.
-            <strong>&thinsp: </strong>Thin space - often used in combination
-            with dashes width is equal to 1/5 or 1/6 of em dash.
-            <strong>&nbsp: </strong>Non-breaking space - these are useful for
-            preventing widows (when a single small word is left on a line all by
-            itself. it forces a word to the next line without putting an actual
-            space in there.
-          </p>
+        <p className="cbp-body">
+          <strong>&hairsp: </strong>Hair space - often used alongside dashes.
+          <strong>&thinsp: </strong>Thin space - often used in combination with
+          dashes width is equal to 1/5 or 1/6 of em dash.
+          <strong>&nbsp: </strong>Non-breaking space - these are useful for
+          preventing widows (when a single small word is left on a line all by
+          itself. it forces a word to the next line without putting an actual
+          space in there.
+        </p>
 
-          {/* @TODO: Add Example here */}
-          <strong style={{ color: "red" }}>
-            [Image for different kinds of spaces]
-          </strong>
-        </section>
+        {/* @TODO:[Image for different kinds of spaces] */}
 
-        <section>
-          <h3 className="cbp-heading-3">
-            Miscellaneous Commonly Misued Symbols
-          </h3>
+        <h3 className="cbp-heading-3">
+          Miscellaneous Commonly Misused Symbols
+        </h3>
 
-          {/* @TODO: Add Example here */}
-          <strong style={{ color: "red" }}>[Provide Examples]</strong>
+        {/* @TODO: [Provide Examples] */}
 
-          <section>
-            <h5 className="cbp-heading-5">… (&hellip) Ellipsis</h5>
+        <h5 className="cbp-heading-5">… (&hellip) Ellipsis</h5>
 
-            <p className="cbp-body">
-              This is not the same as three periods, this will not be
-              interpreted the same by assistive technologies. The proper use of
-              an ellipsis is when omitting non-pertinent content from the middle
-              of a paragraph or quote. It can be used at the end of a sentence
-              where it is commonly used to indicate a speaker trailing off or
-              when a speaker is interrupted.
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + ; ) (<strong>WINDOWS: </strong>
-                ALT + 0133)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          This is not the same as three periods, this will not be interpreted
+          the same by assistive technologies. The proper use of an ellipsis is
+          when omitting non-pertinent content from the middle of a paragraph or
+          quote. It can be used at the end of a sentence where it is commonly
+          used to indicate a speaker trailing off or when a speaker is
+          interrupted.
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + ; ) (<strong>WINDOWS: </strong>
+            ALT + 0133)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">’ Apostrophe (&lsquo)</h5>
+        <h5 className="cbp-heading-5">’ Apostrophe (&lsquo)</h5>
 
-            <p className="cbp-body">
-              This is technically the same symbol as a single right quote. It is
-              used when indicating possession or with contractions. It is also
-              acceptable on occasions to use it to pluralize items which are not
-              technically full words like the 2000’s. Or I need 8 A’s to make
-              dean’s list this quarter. In these cases adding the “s” to the
-              word would change its meaning. Using a dumb quote, or prime mark
-              is not an acceptable substitute.
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
-                <strong>WINDOWS: </strong>
-                ALT + 0146)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          This is technically the same symbol as a single right quote. It is
+          used when indicating possession or with contractions. It is also
+          acceptable on occasions to use it to pluralize items which are not
+          technically full words like the 2000’s. Or I need 8 A’s to make dean’s
+          list this quarter. In these cases adding the “s” to the word would
+          change its meaning. Using a dumb quote, or prime mark is not an
+          acceptable substitute.
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + SHIFT + ] ) (
+            <strong>WINDOWS: </strong>
+            ALT + 0146)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">✖ (&times)- Dimension</h5>
+        <h5 className="cbp-heading-5">✖ (&times)- Dimension</h5>
 
-            <p className="cbp-body">
-              Use this symbol to indicate multiplication not (*).
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> use character viewer ) (
-                <strong>WINDOWS: </strong>
-                ALT + 0215)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          Use this symbol to indicate multiplication not (*).
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> use character viewer ) (
+            <strong>WINDOWS: </strong>
+            ALT + 0215)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">➗ (&divide)- Division</h5>
+        <h5 className="cbp-heading-5">➗ (&divide)- Division</h5>
 
-            <p className="cbp-body">
-              Use this symbol to indicate division not (/)
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
-                ALT + 0247)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          Use this symbol to indicate division not (/)
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
+            ALT + 0247)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">≠ ($ne)- Not Equal</h5>
+        <h5 className="cbp-heading-5">≠ ($ne)- Not Equal</h5>
 
-            <p className="cbp-body">
-              Just like it looks.
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
-                ALT + 8800)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          Just like it looks.
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
+            ALT + 8800)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">© (&copy)- Copyright</h5>
+        <h5 className="cbp-heading-5">© (&copy)- Copyright</h5>
 
-            <p className="cbp-body">
-              This is for original works of literature, drama, music, art or
-              intellectual property. Copyrights do not cover titles, names,
-              phrases or slogans, symbols, designs, ideas, procedures, methods,
-              concepts or discoveries. There should be a space separating this
-              symbol from the copyrighted language and should never be
-              superscript.
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + g ) (<strong>WINDOWS: </strong>
-                ALT + 0169)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          This is for original works of literature, drama, music, art or
+          intellectual property. Copyrights do not cover titles, names, phrases
+          or slogans, symbols, designs, ideas, procedures, methods, concepts or
+          discoveries. There should be a space separating this symbol from the
+          copyrighted language and should never be superscript.
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + g ) (<strong>WINDOWS: </strong>
+            ALT + 0169)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">™ (&trade)- Trademark</h5>
+        <h5 className="cbp-heading-5">™ (&trade)- Trademark</h5>
 
-            <p className="cbp-body">
-              Trademarks are for words, symbols, devices or names that are used
-              to distinguish the goods of one manufacturer or seller from that
-              of another. There should not be any extra space between the
-              trademarked text and the symbol and should be always be
-              superscript. If not automatically formatting correctly to
-              superscript, use the{""}
-              <code>{`<sup>`}</code> tag.
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + 2 ) (<strong>WINDOWS: </strong>
-                ALT + 0153)
-              </span>
-            </p>
-          </section>
+        <p className="cbp-body">
+          Trademarks are for words, symbols, devices or names that are used to
+          distinguish the goods of one manufacturer or seller from that of
+          another. There should not be any extra space between the trademarked
+          text and the symbol and should be always be superscript. If not
+          automatically formatting correctly to superscript, use the{""}
+          <code>{`<sup>`}</code> tag.
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + 2 ) (<strong>WINDOWS: </strong>
+            ALT + 0153)
+          </span>
+        </p>
 
-          <section>
-            <h5 className="cbp-heading-5">® (&reg)- Registered Trademark</h5>
+        <h5 className="cbp-heading-5">® (&reg)- Registered Trademark</h5>
 
-            <p className="cbp-body">
-              With a registration, a trademark is protected against another
-              company’s use of the name or image. A registered trademark is a
-              federal and legal registration of the mark. There should not be
-              any extra space between the registered text and the symbol and
-              should be always be superscript. If not automatically formatting
-              correctly to superscript, use the <code>{`<sup>`}</code> tag
-              <span className="cbp-subhead-text">
-                (<strong>MAC: </strong> OPTION + r ) (<strong>WINDOWS: </strong>
-                ALT + 0174)
-              </span>
-            </p>
-          </section>
-        </section>
+        <p className="cbp-body">
+          With a registration, a trademark is protected against another
+          company’s use of the name or image. A registered trademark is a
+          federal and legal registration of the mark. There should not be any
+          extra space between the registered text and the symbol and should be
+          always be superscript. If not automatically formatting correctly to
+          superscript, use the <code>{`<sup>`}</code> tag
+          <span className="cbp-subhead-text">
+            (<strong>MAC: </strong> OPTION + r ) (<strong>WINDOWS: </strong>
+            ALT + 0174)
+          </span>
+        </p>
 
-        <section>
-          <h3 className="cbp-heading-3">Font-Aliasing</h3>
+        <h3 className="cbp-heading-3">Font-Aliasing</h3>
 
-          <p className="cbp-body">
-            Font-aliasing helps dark headers really pop on light backgrounds. In
-            our “light” heading classes we have Font-smoothing: anti-aliased
-            applied to help them stand out on the page. However, on dark
-            backgrounds this effect creates a sort of halo effect which is
-            non-desirable. Which is why this property is not applied to our
-            “dark” heading classes.
-          </p>
-        </section>
+        <p className="cbp-body">
+          Font-aliasing helps dark headers really pop on light backgrounds. In
+          our “light” heading classes we have{" "}
+          <code>Font-smoothing: anti-aliased</code>
+          applied to help them stand out on the page. However, on dark
+          backgrounds this effect creates a sort of halo effect which is
+          non-desirable. Which is why this property is not applied to our “dark”
+          heading classes.
+        </p>
 
         {/* @TODO: Add Example here */}
-        <strong style={{ color: "red" }}>[Image of Anti-Aliasing]</strong>
-      </section>
 
-      <section>
-        <h2 className="cbp-heading-2">Units of Measurement in Typography</h2>
+        <h2 className="cbp-heading-2">
+          Units of Measurement in Typography
+          <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
+          >
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h2>
 
-        {/* @TODO: Add Example here */}
-        <strong style={{ color: "red" }}>[Image Explanation]</strong>
+        {/* @TODO:[Image Explanation] */}
 
         <p className="cbp-body">
           All of the sizing in the typographic classes of the CBP Design System
@@ -2198,148 +2115,128 @@ const TypographyPage = () => (
           Spacing between text boxes should be defined using the spacing system
           prescribed in the Spacing, Grid, and Layout section of Foundations.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">General Sizing Units</h3>
 
-        <section>
-          <h5 className="cbp-heading-5">Pixels- px (aka CSS Pixels)</h5>
+        <h5 className="cbp-heading-5">Pixels- px (aka CSS Pixels)</h5>
 
-          <p className="cbp-body">
-            This no longer refers to the physical pixels in the device’s screen,
-            but rather is the space equal to 1/96th of 1 inch. This means that
-            no matter how pixel-dense your device’s screen is an object will
-            appear the same relative size optically.
-          </p>
-        </section>
+        <p className="cbp-body">
+          This no longer refers to the physical pixels in the device’s screen,
+          but rather is the space equal to 1/96th of 1 inch. This means that no
+          matter how pixel-dense your device’s screen is an object will appear
+          the same relative size optically.
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">EMs -em</h5>
+        <h5 className="cbp-heading-5">EMs -em</h5>
 
-          <p className="cbp-body">
-            This is an implicit, flexible unit that the browser converts into
-            pixels by multiplying the em value by the value of its parent
-            element. This is not recommended to be used for assigning text
-            sizing because of its inheritance issues.
-          </p>
-        </section>
+        <p className="cbp-body">
+          This is an implicit, flexible unit that the browser converts into
+          pixels by multiplying the em value by the value of its parent element.
+          This is not recommended to be used for assigning text sizing because
+          of its inheritance issues.
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">REMs - rem (Relative EMs)</h5>
+        <h5 className="cbp-heading-5">REMs - rem (Relative EMs)</h5>
 
-          <p className="cbp-body">
-            This is an explicit, flexible unit that the browser converts into
-            pixels by multiplying the rem value by the value assigned to HTML.
-            This is the preferred method for assigning text sizing.{""}
-          </p>
-        </section>
+        <p className="cbp-body">
+          This is an explicit, flexible unit that the browser converts into
+          pixels by multiplying the rem value by the value assigned to HTML.
+          This is the preferred method for assigning text sizing.{""}
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">Points - pt (iOS ecosystem)</h5>
+        <h5 className="cbp-heading-5">Points - pt (iOS ecosystem)</h5>
 
-          <p className="cbp-body">
-            An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
-            independent just like the sp on android. They usually convert out
-            evenly as the true resolution is hidden.
-          </p>
-          <p className="cbp-body">
-            <strong>1sp = 1pt = 1rem</strong>
-          </p>
-        </section>
+        <p className="cbp-body">
+          An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
+          independent just like the sp on android. They usually convert out
+          evenly as the true resolution is hidden.
+        </p>
+        <p className="cbp-body">
+          <strong>1sp = 1pt = 1rem</strong>
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">
-            Density Independent Pixels -dp (Android ecosystem)
-          </h5>
+        <h5 className="cbp-heading-5">
+          Density Independent Pixels -dp (Android ecosystem)
+        </h5>
 
-          <p className="cbp-body">
-            The density- independent pixel is equivalent to one physical pixel
-            on a 160 dpi screen, which is the baseline density assumed by the
-            system for a “medium” density screen. The conversion of dp units to
-            screen pixels is simple: px = dp * (dpi / 160). For example, on a
-            240 dpi screen, 1 dp equals 1.5 physical pixels. Android has a
-            separate unit for prescribing text sizing, sp. Please use that unit
-            for native Android development.
-          </p>
-        </section>
+        <p className="cbp-body">
+          The density- independent pixel is equivalent to one physical pixel on
+          a 160 dpi screen, which is the baseline density assumed by the system
+          for a “medium” density screen. The conversion of dp units to screen
+          pixels is simple: px = dp * (dpi / 160). For example, on a 240 dpi
+          screen, 1 dp equals 1.5 physical pixels. Android has a separate unit
+          for prescribing text sizing, sp. Please use that unit for native
+          Android development.
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">
-            Scalable Independent Pixels - sp (Android Ecosystem)
-          </h5>
+        <h5 className="cbp-heading-5">
+          Scalable Independent Pixels - sp (Android Ecosystem)
+        </h5>
 
-          <p className="cbp-body">
-            SP is the same thing as dp but used for font sizing on android,
-            while the dp is used for everything but fonts.
-          </p>
-        </section>
+        <p className="cbp-body">
+          SP is the same thing as dp but used for font sizing on android, while
+          the dp is used for everything but fonts.
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">
-            Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
-          </h5>
+        <h5 className="cbp-heading-5">
+          Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
+        </h5>
 
-          <p className="cbp-body">
-            These settings are fluid type layouts (which should be a very rare
-            occurrence within the CBP enterprise). The sizing unit is based off
-            of view-port height and view-port width respectively.
-          </p>
-          <p className="cbp-body">
-            <strong>
-              1vh = 1% of view-port height 1vw = 1% of view-port width
-            </strong>
-          </p>
-          <p className="cbp-body">
-            This is not widely supported yet in browsers, and is not great for
-            productive type applications.
-          </p>
-        </section>
-      </section>
+        <p className="cbp-body">
+          These settings are fluid type layouts (which should be a very rare
+          occurrence within the CBP enterprise). The sizing unit is based off of
+          view-port height and view-port width respectively.
+        </p>
+        <p className="cbp-body">
+          <strong>
+            1vh = 1% of view-port height 1vw = 1% of view-port width
+          </strong>
+        </p>
+        <p className="cbp-body">
+          This is not widely supported yet in browsers, and is not great for
+          productive type applications.
+        </p>
 
-      <section>
         <h3 className="cbp-heading-3">Font Relative Lengths</h3>
 
-        <section>
-          <h5 className="cbp-heading-5">ex (Height of Font’s x-height)</h5>
+        <h5 className="cbp-heading-5">ex (Height of Font’s x-height)</h5>
 
-          <p className="cbp-body">
-            We use this to apply letter-spacing to small caps because the
-            characters height in small caps are aligned to the x-height setting.
-            X-height refers to the height of the lower-case letter “x”.
-          </p>
-        </section>
+        <p className="cbp-body">
+          We use this to apply letter-spacing to small caps because the
+          characters height in small caps are aligned to the x-height setting.
+          X-height refers to the height of the lower-case letter “x”.
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">
-            cap (height of font’s capital letters)
-          </h5>
+        <h5 className="cbp-heading-5">
+          cap (height of font’s capital letters)
+        </h5>
 
-          <p className="cbp-body">
-            This is used to set letter-spacing of UPPERCASE text. The preference
-            of the CBP Design System is to use small-caps for acronyms and
-            abbreviations so follow the guidance for small caps where
-            applicable.
-          </p>
-        </section>
+        <p className="cbp-body">
+          This is used to set letter-spacing of UPPERCASE text. The preference
+          of the CBP Design System is to use small-caps for acronyms and
+          abbreviations so follow the guidance for small caps where applicable.
+        </p>
 
-        <section>
-          <h5 className="cbp-heading-5">ch (width of font’s 0 character)</h5>
+        <h5 className="cbp-heading-5">ch (width of font’s 0 character)</h5>
 
-          <p className="cbp-body">
-            This is used to set letter-spacing for monotype fonts like Roboto
-            Mono. Characters in monotype are “fixed-width” and occupy an equal
-            amount of space no matter which character. The zero (0) character is
-            the mostly evenly designed and therefore makes a good reference
-            point in this scenario.
-          </p>
-        </section>
-      </section>
+        <p className="cbp-body">
+          This is used to set letter-spacing for monotype fonts like Roboto
+          Mono. Characters in monotype are “fixed-width” and occupy an equal
+          amount of space no matter which character. The zero (0) character is
+          the mostly evenly designed and therefore makes a good reference point
+          in this scenario.
+        </p>
 
-      <section>
         {/* @TODO: Add Collapsible sections for WCAG Details */}
         <h2 className="cbp-heading-2">
           Accessibility Concerns with Typography
+          <a
+            href="#toTop"
+            className="cbp-heading-6"
+            style={{ position: "relative", float: "right", right: "3rem" }}
+          >
+            Back to Top <i className="fas fa-arrow-up"></i>
+          </a>
         </h2>
 
         <p className="cbp-body">
@@ -2351,9 +2248,7 @@ const TypographyPage = () => (
           aware of the following concepts when working with typography in the
           CBP Design System:
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">
           Using Semantic Elements to identify blocks of text.
         </h3>
@@ -2373,9 +2268,7 @@ const TypographyPage = () => (
           When the sequence in which content is presented affects its meaning, a
           correct reading sequence can be programmatically determined.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Maintaining Proper Heading Structure</h3>
 
         <p className="cbp-body">
@@ -2402,9 +2295,7 @@ const TypographyPage = () => (
           When the sequence in which content is presented affects its meaning, a
           correct reading sequence can be programmatically determined.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Consistency of Presentation</h3>
 
         <p className="cbp-body">
@@ -2423,9 +2314,7 @@ const TypographyPage = () => (
           When the sequence in which content is presented affects its meaning, a
           correct reading sequence can be programmatically determined.
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Line Height, Line Width</h3>
 
         <p className="cbp-body">
@@ -2483,9 +2372,7 @@ const TypographyPage = () => (
             </ol>
           </div>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Color and Contrast</h3>
 
         <p className="cbp-body">
@@ -2540,9 +2427,7 @@ const TypographyPage = () => (
             https://www.ssa.gov/accessibility/andi/help/install.html
           </a>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Resizing of Text</h3>
 
         <p className="cbp-body">
@@ -2559,9 +2444,7 @@ const TypographyPage = () => (
             functionality.
           </p>
         </p>
-      </section>
 
-      <section>
         <h3 className="cbp-heading-3">Images of Text</h3>
 
         <p className="cbp-body">
@@ -2595,9 +2478,7 @@ const TypographyPage = () => (
             </ul>
           </div>
         </p>
-      </section>
 
-      <section>
         <h2 className="cbp-heading-2">
           <a
             href="#toTop"
