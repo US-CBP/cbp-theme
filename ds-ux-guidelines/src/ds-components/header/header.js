@@ -16,17 +16,17 @@ const Header = ({ title }) => (
           </Link>
         </div>
       </div>
-    
+
       <div className="level-right">
         <a href="#noId" className="is-size-7">
           &nbsp; &nbsp; Changelog
         </a>
         &nbsp;
-        <a href="#noId" className="is-size-7">
+        <a href="https://github.com/US-CBP/cbp-theme" className="is-size-7">
           <i className="fab fa-github"></i>
           &nbsp; View on Github
         </a>
-      </div>    
+      </div>
     </nav>
   </header>
 )
