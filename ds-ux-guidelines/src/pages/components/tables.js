@@ -171,9 +171,7 @@ const TableComponentPage = () => (
               </li>
             </ol>
           </div>
-        </section>
 
-        <section>
           <h3 id="usage" className="cbp-heading-3 ">
             Usage
           </h3>
@@ -225,28 +223,25 @@ const TableComponentPage = () => (
           </div>
         </section>
 
-        <section>
-          <h3 id="accessibility" className="cbp-heading-3 ">
-            Accessibility
-          </h3>
+        <h3 id="accessibility" className="cbp-heading-3 ">
+          Accessibility
+        </h3>
 
-          <div className="content">
-            <ol>
-              <li>
-                Each header cell should have the <code>scope="col"</code> or
-                <code>scope="row"</code> attribute.
-              </li>
-              <li>
-                When adding a title to a table, include it in a{" "}
-                <code>caption</code> tag inside of the <code>table</code>{" "}
-                element.
-              </li>
-              <li>
-                Each table header should have the <code> th </code> tag.{" "}
-              </li>
-            </ol>
-          </div>
-        </section>
+        <div className="content">
+          <ol>
+            <li>
+              Each header cell should have the <code>scope="col"</code> or
+              <code>scope="row"</code> attribute.
+            </li>
+            <li>
+              When adding a title to a table, include it in a{" "}
+              <code>caption</code> tag inside of the <code>table</code> element.
+            </li>
+            <li>
+              Each table header should have the <code> th </code> tag.{" "}
+            </li>
+          </ol>
+        </div>
       </section>
     </article>
   </Layout>
