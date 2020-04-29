@@ -1450,7 +1450,7 @@ const TypographyPage = () => (
           Oh dear. Just never, ever do this. On top of looking awful, it is very
           inaccessible. Justified text can be difficult to read for people with
           certain disabilities like dyslexia.
-          <strong>DO NOT USE JUSTIFIED.</strong>
+          <strong> DO NOT USE JUSTIFIED.</strong>
         </p>
 
         {/* @TODO: [**example of justified text**] */}
@@ -1673,7 +1673,7 @@ const TypographyPage = () => (
           file.
         </p>
 
-        <h5 className="cbp-heading-5">Ligature Code</h5>
+        <h4 className="cbp-heading-4">Ligature Code</h4>
         <CodeSnippet
           code={`p {
   font-feature-settings: "liga";
@@ -1705,7 +1705,7 @@ const TypographyPage = () => (
 
         {/* @TODO:  [**image of small caps and example of fake small caps**] */}
 
-        <h5 className="cbp-heading-5">Small Caps Code</h5>
+        <h4 className="cbp-heading-4">Small Caps Code</h4>
 
         <CodeSnippet
           code={`.small-cap{
@@ -1732,9 +1732,9 @@ const TypographyPage = () => (
           codes for calling these glyphs in your code.
         </p>
 
-        <h5 className="cbp-heading-5">
+        <h4 className="cbp-heading-4">
           How to open the Character Viewer on your Mac:{""}
-        </h5>
+        </h4>
 
         <div className="content">
           <ol>
@@ -1772,9 +1772,10 @@ const TypographyPage = () => (
           sighted user may not notice much of a difference.
         </p>
 
-        <h5 className="cbp-heading-5">– em dash (&emdash)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>– em dash (&emdash): </strong>
+          </span>
           The main use of the em dash is to indicate the source of a quote or
           narrative placed in front of the speaker’s name. Em dashes can also be
           used in place of parentheses, or in place of a colon where a comma may
@@ -1784,9 +1785,10 @@ const TypographyPage = () => (
           - ) (<strong>WINDOWS:</strong> ALT + 0151)
         </p>
 
-        <h5 className="cbp-heading-5">— en dash (&endash)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>— en dash (&endash): </strong>
+          </span>
           En Dashes are exactly half of the width of an em dash. Their main
           purpose is to replace the words “to” or “through” when used to
           indicate ranges of values or of time. For example instead of 6 to 9pm
@@ -1796,17 +1798,19 @@ const TypographyPage = () => (
           <strong>WINDOWS:</strong> ALT + 0150)
         </p>
 
-        <h5 className="cbp-heading-5">- minus (&minus)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>- minus (&minus): </strong>
+          </span>
           The minus symbol should only for mathematical uses. (
           <strong>MAC:</strong> Use character viewer ) (
           <strong>WINDOWS:</strong> Use character viewer)
         </p>
 
-        <h5 className="cbp-heading-5">- hyphen (&minus)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>- hyphen (&minus): </strong>
+          </span>
           1/4 the width of an em dash. primarily used for hyphenating words.
           five-dollar bill etc. (<strong>MAC:</strong> OPTION + - ) (
           <strong>WINDOWS:</strong> Use character viewer)
@@ -1879,12 +1883,15 @@ const TypographyPage = () => (
           curved are for “smart quotes.”
         </p>
 
-        <h5 className="cbp-heading-5">Code for Quotes</h5>
+        <h4 className="cbp-heading-4">Code for Quotes</h4>
 
         <CodeSnippet
           code={`
-<p>&ldquo;He left yesterday.&rdquo;</p> //Double quotation marks
-<p>&lsquo;He left yesterday.&rsquo;</p> //Single quotation marks
+<!-- Double quotation marks -->
+<p>&ldquo;He left yesterday.&rdquo;</p> 
+
+<!-- Single quotation marks -->
+<p>&lsquo;He left yesterday.&rsquo;</p> 
           `}
           language={"language-html"}
         />
@@ -1942,9 +1949,10 @@ const TypographyPage = () => (
 
         {/* @TODO: [Provide Examples] */}
 
-        <h5 className="cbp-heading-5">… (&hellip) Ellipsis</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>… (&hellip) Ellipsis: </strong>
+          </span>
           This is not the same as three periods, this will not be interpreted
           the same by assistive technologies. The proper use of an ellipsis is
           when omitting non-pertinent content from the middle of a paragraph or
@@ -1957,9 +1965,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">’ Apostrophe (&lsquo)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>’ Apostrophe (&lsquo): </strong>
+          </span>
           This is technically the same symbol as a single right quote. It is
           used when indicating possession or with contractions. It is also
           acceptable on occasions to use it to pluralize items which are not
@@ -1974,9 +1983,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">✖ (&times)- Dimension</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>✖ (&times)- Dimension: </strong>
+          </span>
           Use this symbol to indicate multiplication not (*).
           <span className="cbp-subhead-text">
             (<strong>MAC: </strong> use character viewer ) (
@@ -1985,9 +1995,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">➗ (&divide)- Division</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>➗ (&divide)- Division: </strong>
+          </span>
           Use this symbol to indicate division not (/)
           <span className="cbp-subhead-text">
             (<strong>MAC: </strong> OPTION + / ) (<strong>WINDOWS: </strong>
@@ -1995,9 +2006,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">≠ ($ne)- Not Equal</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>≠ ($ne)- Not Equal: </strong>
+          </span>
           Just like it looks.
           <span className="cbp-subhead-text">
             (<strong>MAC: </strong> OPTION + = ) (<strong>WINDOWS: </strong>
@@ -2005,9 +2017,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">© (&copy)- Copyright</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>© (&copy)- Copyright: </strong>
+          </span>
           This is for original works of literature, drama, music, art or
           intellectual property. Copyrights do not cover titles, names, phrases
           or slogans, symbols, designs, ideas, procedures, methods, concepts or
@@ -2019,9 +2032,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">™ (&trade)- Trademark</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>™ (&trade)- Trademark: </strong>
+          </span>
           Trademarks are for words, symbols, devices or names that are used to
           distinguish the goods of one manufacturer or seller from that of
           another. There should not be any extra space between the trademarked
@@ -2034,9 +2048,10 @@ const TypographyPage = () => (
           </span>
         </p>
 
-        <h5 className="cbp-heading-5">® (&reg)- Registered Trademark</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>® (&reg)- Registered Trademark: </strong>
+          </span>
           With a registration, a trademark is protected against another
           company’s use of the name or image. A registered trademark is a
           federal and legal registration of the mark. There should not be any
@@ -2118,48 +2133,50 @@ const TypographyPage = () => (
 
         <h3 className="cbp-heading-3">General Sizing Units</h3>
 
-        <h5 className="cbp-heading-5">Pixels- px (aka CSS Pixels)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>Pixels- px (aka CSS Pixels): </strong>
+          </span>
           This no longer refers to the physical pixels in the device’s screen,
           but rather is the space equal to 1/96th of 1 inch. This means that no
           matter how pixel-dense your device’s screen is an object will appear
           the same relative size optically.
         </p>
 
-        <h5 className="cbp-heading-5">EMs -em</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>EMs -em: </strong>
+          </span>
           This is an implicit, flexible unit that the browser converts into
           pixels by multiplying the em value by the value of its parent element.
           This is not recommended to be used for assigning text sizing because
           of its inheritance issues.
         </p>
 
-        <h5 className="cbp-heading-5">REMs - rem (Relative EMs)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>REMs - rem (Relative EMs): </strong>
+          </span>
           This is an explicit, flexible unit that the browser converts into
           pixels by multiplying the rem value by the value assigned to HTML.
           This is the preferred method for assigning text sizing.{""}
         </p>
 
-        <h5 className="cbp-heading-5">Points - pt (iOS ecosystem)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>Points - pt (iOS ecosystem): </strong>
+          </span>
           An iOS pt is equal to 1 pixel on a 163 ppi screen. It’s density
           independent just like the sp on android. They usually convert out
-          evenly as the true resolution is hidden.
-        </p>
-        <p className="cbp-body">
-          <strong>1sp = 1pt = 1rem</strong>
+          evenly as the true resolution is hidden. (1sp = 1pt = 1rem)
         </p>
 
-        <h5 className="cbp-heading-5">
-          Density Independent Pixels -dp (Android ecosystem)
-        </h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>
+              Density Independent Pixels -dp (Android ecosystem):{" "}
+            </strong>
+          </span>
           The density- independent pixel is equivalent to one physical pixel on
           a 160 dpi screen, which is the baseline density assumed by the system
           for a “medium” density screen. The conversion of dp units to screen
@@ -2169,57 +2186,55 @@ const TypographyPage = () => (
           Android development.
         </p>
 
-        <h5 className="cbp-heading-5">
-          Scalable Independent Pixels - sp (Android Ecosystem)
-        </h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>
+              Scalable Independent Pixels - sp (Android Ecosystem):{" "}
+            </strong>
+          </span>
           SP is the same thing as dp but used for font sizing on android, while
           the dp is used for everything but fonts.
         </p>
 
-        <h5 className="cbp-heading-5">
-          Viewport Height / Viewport Width - vh/vw (Fully fluid layouts only)
-        </h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>
+              Viewport Height / Viewport Width - vh/vw (Fully fluid layouts
+              only):{" "}
+            </strong>
+          </span>
           These settings are fluid type layouts (which should be a very rare
           occurrence within the CBP enterprise). The sizing unit is based off of
-          view-port height and view-port width respectively.
-        </p>
-        <p className="cbp-body">
-          <strong>
-            1vh = 1% of view-port height 1vw = 1% of view-port width
-          </strong>
-        </p>
-        <p className="cbp-body">
-          This is not widely supported yet in browsers, and is not great for
-          productive type applications.
+          view-port height and view-port width respectively (1vh = 1% of
+          view-port height 1vw = 1% of view-port width). This is not widely
+          supported yet in browsers, and is not great for productive type
+          applications.
         </p>
 
         <h3 className="cbp-heading-3">Font Relative Lengths</h3>
 
-        <h5 className="cbp-heading-5">ex (Height of Font’s x-height)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>ex (Height of Font’s x-height): </strong>
+          </span>
           We use this to apply letter-spacing to small caps because the
           characters height in small caps are aligned to the x-height setting.
           X-height refers to the height of the lower-case letter “x”.
         </p>
 
-        <h5 className="cbp-heading-5">
-          cap (height of font’s capital letters)
-        </h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>cap (height of font’s capital letters): </strong>
+          </span>
           This is used to set letter-spacing of UPPERCASE text. The preference
           of the CBP Design System is to use small-caps for acronyms and
           abbreviations so follow the guidance for small caps where applicable.
         </p>
 
-        <h5 className="cbp-heading-5">ch (width of font’s 0 character)</h5>
-
         <p className="cbp-body">
+          <span role="heading" aria-level="4">
+            <strong>ch (width of font’s 0 character): </strong>
+          </span>
           This is used to set letter-spacing for monotype fonts like Roboto
           Mono. Characters in monotype are “fixed-width” and occupy an equal
           amount of space no matter which character. The zero (0) character is
@@ -2328,9 +2343,9 @@ const TypographyPage = () => (
           don’t do it.
         </p>
 
-        <h5 className="cbp-heading-5">P + P</h5>
+        <h4 className="cbp-heading-4">P + P</h4>
         <CodeSnippet
-          code={`text-indent: 1.6rem; //32 divided by 20`}
+          code={`text-indent: 1.6rem; /* 32 divided by 20 */ `}
           language={"language-css"}
         />
 

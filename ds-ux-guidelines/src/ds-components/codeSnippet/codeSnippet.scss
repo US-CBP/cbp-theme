@@ -28,5 +28,18 @@ code {
   color: #0a3055;
   font-size: 1em;
   font-weight: normal;
-  padding: 0.25em 0.5em 0.25em;
+  padding: 0;
+}
+
+.token {
+  padding: 0 !important;
+
+  &.entity {
+    background-color: transparent !important;
+    cursor: inherit;
+  }
+
+  &.string {
+    background-color: transparent !important;
+  }
 }
