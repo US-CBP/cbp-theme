@@ -45,7 +45,7 @@ class Navigation extends Component {
             link: "/foundation/icons",
           },
           {
-            name: "Layouts",
+            name: "Layouts, Grid, Spacing",
             link: "/foundation/layouts",
           },
           {
@@ -145,7 +145,9 @@ class Navigation extends Component {
                                 to={anchor.id}
                                 key={`.${anchor.name.replace(/\s/g, "")}-item`}
                               >
-                                <span className="menu-text sub-category">{anchor.name}</span>
+                                <span className="menu-text sub-category">
+                                  {anchor.name}
+                                </span>
                               </Link>
                             </li>
                           )
@@ -186,43 +188,40 @@ class Navigation extends Component {
         {/* cbp-ds-grid class is the main grid holder. */}
         <div className="nav-wrapper">
           <div className="dropdown-container">
-              <div
-                ref={node => (this.node = node)}
-                className={`dropdown ${
-                  this.state.showDropdown ? "is-active" : null
-                }`}
-              >
-                <div className="dropdown-trigger">
-                  <button
-                    onClick={this.toggleDropdown}
-                    className="button is-small"
-                    aria-haspopup="true"
-                    aria-controls="dropdown-menu"
-                    
-                  >
-                    <span>CBP Theme Version 2.0</span>
-                    &nbsp;{" "}
-                    <i className="fas fa-angle-down" aria-hidden="true"></i>
-                  </button>
-                </div>
+            <div
+              ref={node => (this.node = node)}
+              className={`dropdown ${
+                this.state.showDropdown ? "is-active" : null
+              }`}
+            >
+              <div className="dropdown-trigger">
+                <button
+                  onClick={this.toggleDropdown}
+                  className="button is-small"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu"
+                >
+                  <span>CBP Theme Version 2.0</span>
+                  &nbsp;{" "}
+                  <i className="fas fa-angle-down" aria-hidden="true"></i>
+                </button>
+              </div>
 
-                <div className="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div className="dropdown-content">
-                    <a
-                      href="https://us-cbp.github.io/cbp-style-guide/docs/index.html"
-                      className="dropdown-item cbp-body"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      CBP THEME VERSION 1.11.0
-                    </a>
-                  </div>
+              <div className="dropdown-menu" id="dropdown-menu" role="menu">
+                <div className="dropdown-content">
+                  <a
+                    href="https://us-cbp.github.io/cbp-style-guide/docs/index.html"
+                    className="dropdown-item cbp-body"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    CBP THEME VERSION 1.11.0
+                  </a>
                 </div>
               </div>
             </div>
-          <aside className="menu">
-            {this.menuList()}
-          </aside>
+          </div>
+          <aside className="menu">{this.menuList()}</aside>
         </div>
       </>
     )
