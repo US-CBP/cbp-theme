@@ -1709,11 +1709,11 @@ const TypographyPage = () => (
 
         <CodeSnippet
           code={`.small-cap{
-  //change only lowercase to small caps
+  /*change only lowercase to small caps*/
   font-variant-caps: small-caps;
   font-feature-settings: "smcp";
 
-  //change all letters into small caps
+  /*change all letters into small caps*/
   font-variant-caps: all-small-caps;
   font-feature-settings: "c2sc", "smcp";
 }`}
