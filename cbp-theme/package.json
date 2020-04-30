@@ -101,7 +101,7 @@
   "dependencies": {
     "bootstrap-sass": "3.4.1",
     "font-awesome": "4.6.3",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "material-design-lite": "1.1.1",
     "mdl-selectfield": "1.0.2",
     "roboto-fontface": "0.10.0"
