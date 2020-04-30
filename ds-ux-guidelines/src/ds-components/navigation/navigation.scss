@@ -26,13 +26,12 @@
 }
 
 .dropdown-content {
-  padding-bottom: .25rem;
-  padding-top: .25rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
 }
 
 a.dropdown-item {
   font-weight: 700;
-  padding-right: 0em;
 }
 
 .menu {
@@ -47,7 +46,7 @@ a.dropdown-item {
 }
 
 .menu-list {
-  li>a {
+  li > a {
     padding-left: 0;
 
     &:hover {
@@ -61,8 +60,7 @@ a.dropdown-item {
     font-style: italic;
   }
 
-  li>ul {
+  li > ul {
     @include menu-list-ul-overide();
   }
 }
-

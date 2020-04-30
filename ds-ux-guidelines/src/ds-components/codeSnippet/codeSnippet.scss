@@ -16,6 +16,9 @@
   border-radius: 7px;
 }
 
+//The following code below is a temporary override to Bulma's custom css code, for it to work with
+//PrismJS code blocks.
+
 span {
   &.tag {
     background-color: transparent;
@@ -24,9 +27,23 @@ span {
 }
 
 code {
-  background-color: transparent !important;
+  background-color: transparent;
   color: #0a3055;
   font-size: 1em;
   font-weight: normal;
-  padding: 0.25em 0.5em 0.25em;
+  padding: 0;
+}
+
+.token {
+  //padding override for HTML tags
+  padding: 0 !important;
+
+  &.entity {
+    background-color: transparent;
+    cursor: inherit;
+  }
+
+  &.string {
+    background-color: transparent;
+  }
 }
