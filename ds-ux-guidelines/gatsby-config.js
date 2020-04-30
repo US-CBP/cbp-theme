@@ -6,7 +6,14 @@ module.exports = {
     author: `Creative Services`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: [
+          require('path').resolve(__dirname, 'node_modules')
+        ]
+      }
+    },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
     {
