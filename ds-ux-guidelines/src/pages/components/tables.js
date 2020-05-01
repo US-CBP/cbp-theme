@@ -35,7 +35,7 @@ const TableComponentPage = () => (
 
             <tbody>
               <tr>
-                <td>Bars</td>
+                <td>08/12/19 10:00:01 EST</td>
                 <td>User Profile</td>
                 <td>Seller's First Name</td>
                 <td>Thomas</td>
