@@ -41,8 +41,8 @@ class Navigation extends Component {
             link: "/foundation/grid",
           },
           {
-            name: "Icons",
-            link: "/foundation/icons",
+            name: "Iconography",
+            link: "/foundation/iconography",
           },
           {
             name: "Layouts, Grid, Spacing",
