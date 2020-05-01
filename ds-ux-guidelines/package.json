@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Creative Services",
   "dependencies": {
+    "cbp-ds": "^2.0.14",
     "gatsby": "^2.20.10",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.3.3",
@@ -35,9 +36,9 @@
     "stylelint-scss": "^3.14.2"
   },
   "keywords": [
-    "gatsby"
+    "cbp design system,cbp theme,gatsby"
   ],
-  "license": "MIT",
+  "license": "CC0-1.0",
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "clean": "gatsby clean",

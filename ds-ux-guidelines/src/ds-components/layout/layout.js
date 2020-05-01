@@ -11,7 +11,24 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header/header"
 import Navigation from "../navigation/navigation"
-import "./layout.scss"
+
+// Development is set when running gatsby
+// gastby develop - sets the environment to development
+// gatsby build and serve - sets the environment to production
+if (process.env.NODE_ENV === `development`) {
+  try {
+    require("./layout-development.scss")
+  } catch (e) {
+    console.log(e)
+  }
+} else {
+  try {
+    require("./layout.scss")
+  } catch (e) {
+    console.log(e)
+  }
+}
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
