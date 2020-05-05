@@ -21,7 +21,7 @@ const TableComponentPage = () => (
       <section id="Code" className="cbp-code">
         <h2 className="cbp-heading-2">Code</h2>
 
-        <div id="table">
+        <div className="table">
           <table className="table is-hoverable is-fullwidth">
             <thead>
               <tr>

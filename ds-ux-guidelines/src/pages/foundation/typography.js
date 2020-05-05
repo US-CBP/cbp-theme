@@ -51,8 +51,7 @@ const TypographyPage = () => (
 
             <li>
               There should only be <code>h1</code> element on the page and it
-              should match the"title" listed in
-              <code>head</code>.
+              should match the"title" listed in <code>head</code>.
             </li>
 
             <li>
@@ -74,10 +73,9 @@ const TypographyPage = () => (
             </li>
 
             <li>
-              Masthead classes are available as a substitution for{""}
+              Masthead classes are available as a substitution for{" "}
               <code>cbp-heading-1</code> in situations where you need something
-              bigger, but still must have an
-              <code>h1</code> tag.
+              bigger, but still must have an <code>h1</code> tag.
             </li>
 
             <li>
@@ -1888,12 +1886,12 @@ const TypographyPage = () => (
         <CodeSnippet
           code={`
 <!-- Double quotation marks -->
-<p>&ldquo;He left yesterday.&rdquo;</p> 
+<p>&ldquo;He left yesterday.&rdquo;</p>
 
 <!-- Single quotation marks -->
-<p>&lsquo;He left yesterday.&rsquo;</p> 
+<p>&lsquo;He left yesterday.&rsquo;</p>
           `}
-          language={"language-html"}
+          language={"language-markup"}
         />
 
         <h3 className="cbp-heading-3">Measurement (Prime) Marks</h3>
