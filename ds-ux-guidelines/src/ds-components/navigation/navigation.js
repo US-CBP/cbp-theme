@@ -37,10 +37,6 @@ class Navigation extends Component {
             ],
           },
           {
-            name: "Grid",
-            link: "/foundation/grid",
-          },
-          {
             name: "Iconography",
             link: "/foundation/iconography",
           },

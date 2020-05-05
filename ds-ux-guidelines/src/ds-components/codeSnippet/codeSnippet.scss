@@ -16,9 +16,16 @@
   border-radius: 7px;
 }
 
-//The following code below is a temporary override to Bulma's custom css code, for it to work with
-//PrismJS code blocks.
+//For plain <code></code> references in text that are not code examples. Overrides from bulma CSS
+code {
+  background-color: transparent;
+  color: #0a3055;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0;
+}
 
+//Modifies prismJS highlighting
 span {
   &.tag {
     background-color: transparent;
@@ -26,23 +33,26 @@ span {
   }
 }
 
-code {
-  background-color: transparent;
-  color: #0a3055;
-  font-size: 1em;
-  font-weight: normal;
-  padding: 0;
-}
-
 .token {
-  //padding override for HTML tags
-  padding: 0 !important;
+  //removes the left & right padding of tags, i.e. <p>, <div>, etc. for HTML code
+  &.tag {
+    padding: 0 !important;
+  }
 
+  //if the HTML tag has a class, this will add a slight left padding before "class".
+  //example: <i class="fas fa-chevron-down"></i>
+  &.attr-name {
+    padding-left: 10.5px;
+  }
+
+  //removes the white background from special characters such as &lsquo.
   &.entity {
     background-color: transparent;
     cursor: inherit;
   }
 
+  //removes the white background from words in quotes, such as class names.
+  //example: <div class="container">
   &.string {
     background-color: transparent;
   }

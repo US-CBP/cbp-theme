@@ -4,7 +4,7 @@ import "./codeSnippet.scss"
 
 export default class CodeSnippet extends React.Component {
   componentDidMount() {
-    setTimeout(() => Prism.highlightAll(), 0)
+    Prism.highlightAll()
   }
 
   render() {
