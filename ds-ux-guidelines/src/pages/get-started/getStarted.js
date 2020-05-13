@@ -10,8 +10,8 @@ const getStarted = () => (
   <Layout>
     <SEO title="CBP Design System | Get Started" />
     <ContentHeader title="Get Started" contentType="" />
-    <article>
-      <section className="section-pad-temp">
+    <article className="spacing-wrapper">
+      <section>
         <div id="description">
           <p className="cbp-body">
             This is the successor to the{" "}
@@ -27,12 +27,9 @@ const getStarted = () => (
           </p>
         </div>
 
-        <br />
-        <br />
-
         <h2 className="cbp-heading-2 section-pad-temp">Quick Start</h2>
         <h3 className="cbp-heading-3">Installation</h3>
-        <br />
+
         <p className="cbp-body">
           The recommended way to get the latest CBP DS CSS is by saving as a
           dependency via{" "}
@@ -47,11 +44,9 @@ const getStarted = () => (
           From your npm project, simply run:
         </p>
         <CodeSnippet language="language-bash" code={npmInstall} />
-      </section>
 
-      <section className="section-pad-temp">
         <h2 className="cbp-heading-2">Contributing</h2>
-        <br />
+
         <p className="cbp-body">
           We welcome contributions, please see our{" "}
           <a
@@ -60,14 +55,11 @@ const getStarted = () => (
           >
             Contribution Policy.
           </a>
-          <br />
           To get started developing, see Developer-README.md.
         </p>
-      </section>
 
-      <section className="section-pad-temp">
         <h2 className="cbp-heading-2">License</h2>
-        <br />
+
         <p className="cbp-body">
           Please refer to{" "}
           <a

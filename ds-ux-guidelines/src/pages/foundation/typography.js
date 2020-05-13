@@ -4,7 +4,6 @@ import ContentHeader from "../../ds-components/content-header/contentHeader"
 import SEO from "../../ds-components/seo"
 import CodeSnippet from "../../ds-components/codeSnippet/codeSnippet"
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs"
-import "react-tabs/style/react-tabs.css"
 
 const TypographyPage = () => (
   <Layout>
@@ -12,15 +11,19 @@ const TypographyPage = () => (
     <ContentHeader title="Typography" contentType="foundation" />
 
     <Tabs style={{ overflowY: "auto" }}>
-      <TabList
-        style={{ position: "fixed", backgroundColor: "white", width: "100%" }}
-      >
-        <Tab selectedClassName="is-active">Basics</Tab>
-        <Tab selectedClassName="is-active">Reference & Research</Tab>
-      </TabList>
+      <div className="tabs is-boxed margin--tab">
+        <TabList>
+          <Tab selectedClassName="is-active">
+            <a href="#">Basics</a>
+          </Tab>
+          <Tab selectedClassName="is-active">
+            <a href="#">Reference & Research</a>
+          </Tab>
+        </TabList>
+      </div>
 
       <article className="spacing-wrapper">
-        <TabPanel style={{ paddingTop: "2rem" }}>
+        <TabPanel>
           <section id="Basics">
             <h2 className="cbp-heading-2">
               Why is Typography important in the CBP Design System?
@@ -715,18 +718,9 @@ const TypographyPage = () => (
             </p>
           </section>
         </TabPanel>
-        <TabPanel style={{ paddingTop: "2rem" }}>
+        <TabPanel>
           <section id="Research & References">
-            <h2 className="cbp-heading-2">
-              Where we came from.
-              <a
-                href="#toTop"
-                className="cbp-heading-6"
-                style={{ position: "relative", float: "right", right: "3rem" }}
-              >
-                Back to Top <i className="fas fa-arrow-up"></i>
-              </a>
-            </h2>
+            <h2 className="cbp-heading-2">Where we came from.</h2>
 
             <p className="cbp-body">
               When the original CBP Theme 1.X was created there was a conscious
