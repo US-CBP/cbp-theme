@@ -18,6 +18,4 @@ const MenuTab = props => {
   )
 }
 
-MenuTab.tabsRole = "Tab"
-
 export default MenuTab

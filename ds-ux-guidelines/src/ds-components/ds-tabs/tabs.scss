@@ -5,3 +5,13 @@
 .is-active {
   font-weight: bold;
 }
+
+
+//custom config of react-tabs
+//@TODO: adjust right padding
+.react-tabs__tab-list {
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+}

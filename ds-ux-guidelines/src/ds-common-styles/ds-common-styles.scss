@@ -3,6 +3,7 @@
 */
 
 @import "../../../ds-css/src/styles/cbp-ds.scss";
+
 /* iFrame style for height. Need to revisit this. */
 iframe {
   height: 358px !important;
@@ -12,6 +13,9 @@ iframe {
 
 .spacing-wrapper {
   padding: 0 $cbp-reg-space $cbp-lg-space $cbp-reg-space !important;
+
+  //hides the default scroll bar from react-tabs TabPanel
+  overflow: hidden !important;
 
   //heading for main sections
   h2 {
@@ -31,15 +35,15 @@ iframe {
     padding-top: $cbp-sm-space;
   }
 
-  h2 + p,
-  h3 + p,
-  h4 + p,
-  h5 + p,
-  h6 + p {
+  h2+p,
+  h3+p,
+  h4+p,
+  h5+p,
+  h6+p {
     @extend .cbp-spacing-stack--small;
   }
 
-  .cbp-body + .cbp-body {
+  .cbp-body+.cbp-body {
     padding-bottom: 1.6rem;
   }
 
