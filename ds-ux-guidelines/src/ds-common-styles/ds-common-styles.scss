@@ -13,6 +13,8 @@ iframe {
 
 .spacing-wrapper {
   padding: 0 $cbp-reg-space $cbp-lg-space $cbp-reg-space !important;
+  max-width: 75em;
+
 
   //hides the default scroll bar from react-tabs TabPanel
   overflow: hidden !important;

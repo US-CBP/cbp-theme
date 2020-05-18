@@ -99,6 +99,7 @@
   font-weight: $cbp-weight-regular;
   line-height: $cbp-height-20;
   letter-spacing: $cbp-font-spacing;
+  max-width: 75em;
 
   &--dark {
     @include dark;
@@ -135,18 +136,23 @@
   &--micro {
     padding: $cbp-micro-space;
   }
+
   &--xsmall {
     padding: $cbp-extra-sm-space;
   }
+
   &--small {
     padding: $cbp-sm-space;
   }
+
   &--regular {
     padding: $cbp-reg-space;
   }
+
   &--large {
     padding: $cbp-lg-space;
   }
+
   &--xlarge {
     padding: $cbp-extra-lg-space;
   }
@@ -157,15 +163,19 @@
   &--micro {
     padding: $cbp-micro-space $cbp-extra-sm-space;
   }
+
   &--xsmall {
     padding: $cbp-extra-sm-space $cbp-sm-space;
   }
+
   &--small {
     padding: $cbp-sm-space $cbp-reg-space;
   }
+
   &--regular {
     padding: $cbp-reg-space $cbp-lg-space;
   }
+
   &--large {
     padding: $cbp-lg-space $cbp-extra-lg-space;
   }
@@ -176,15 +186,19 @@
   &--micro {
     padding: $cbp-extra-sm-space $cbp-micro-space;
   }
+
   &--xsmall {
     padding: $cbp-sm-space $cbp-extra-sm-space;
   }
+
   &--small {
     padding: $cbp-reg-space $cbp-sm-space;
   }
+
   &--regular {
     padding: $cbp-lg-space $cbp-reg-space;
   }
+
   &--large {
     padding: $cbp-extra-lg-space $cbp-lg-space;
   }
@@ -195,18 +209,23 @@
   &--micro {
     padding-bottom: $cbp-micro-space;
   }
+
   &--xsmall {
     padding-bottom: $cbp-extra-sm-space;
   }
+
   &--small {
     padding-bottom: $cbp-sm-space;
   }
+
   &--regular {
     padding-bottom: $cbp-reg-space;
   }
+
   &--large {
     padding-bottom: $cbp-lg-space;
   }
+
   &--xlarge {
     padding-bottom: $cbp-extra-lg-space;
   }
