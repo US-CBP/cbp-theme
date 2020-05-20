@@ -1,6 +1,6 @@
 {
   "name": "cbp-ds",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "CBP Design System",
   "main": "index.js",
   "scripts": {
