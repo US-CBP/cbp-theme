@@ -5,8 +5,8 @@
   "author": "Creative Services",
   "dependencies": {
     "cbp-ds": "^2.0.14",
-    "gatsby": "^2.20.10",
-    "gatsby-image": "^2.2.39",
+    "gatsby": "^2.23.0",
+    "gatsby-image": "^2.4.6",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",

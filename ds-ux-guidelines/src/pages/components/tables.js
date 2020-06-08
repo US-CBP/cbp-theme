@@ -13,10 +13,10 @@ const TableComponentPage = () => (
       <div className="tabs is-boxed margin--tab">
         <TabList>
           <Tab selectedClassName="is-active">
-            <a href="#">Basics</a>
+            <a href="#">Code</a>
           </Tab>
           <Tab selectedClassName="is-active">
-            <a href="#">Reference & Research</a>
+            <a href="#">Design Guidelines</a>
           </Tab>
         </TabList>
       </div>
@@ -24,7 +24,7 @@ const TableComponentPage = () => (
       <article className="spacing-wrapper">
         <TabPanel>
           <section id="description">
-            <h2 className="cbp-heading-2">Description</h2>
+            <h2 className="cbp-heading-2">Introduction</h2>
             <p className="cbp-body ">
               Tables are used to help users scan &amp; compare large amounts of
               data at a glance. When implementing tables into your project, make
@@ -152,7 +152,7 @@ const TableComponentPage = () => (
         </TabPanel>
 
         <TabPanel>
-          <section id="Design Guidelines">
+          <section id="Design">
             <h2 className="cbp-heading-2 ">Design Guidelines</h2>
 
             <section>
