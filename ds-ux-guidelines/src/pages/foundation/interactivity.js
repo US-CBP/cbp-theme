@@ -574,7 +574,7 @@ export default () => (
               tap. This would apply to components like sliders.
             </p>
 
-            <h4 classNae="cbp-heading-4">Pinch</h4>
+            <h4 className="cbp-heading-4">Pinch</h4>
             <p className="cbp-body">
               This gesture allows the user to zoom in and out of content where
               appropriate. Most commonly used with maps.
@@ -1207,7 +1207,7 @@ export default () => (
             Items that are Aligned Together are Associated Together - Gestalt
             Law of Continuation
           </h4>
-          <p classNam="cbp-body">
+          <p className="cbp-body">
             Alignment matters. Items arranged in a continual line, either
             straight or curved, will be associated together. People's eyes tend
             to follow paths until they are interrupted.
