@@ -19,22 +19,26 @@ class Navigation extends Component {
         name: "Foundation",
         subcategory: [
           {
+            name: "Interactivity",
+            link: "/foundation/interactivity",
+          },
+          {
             name: "Colors",
             link: "/foundation/colors",
-            anchors: [
-              {
-                name: "Color Palette",
-                id: "/#palette",
-              },
-              {
-                name: "Section 508 Color Combinations",
-                id: "/#section508",
-              },
-              {
-                name: "Data Visualization Palette",
-                id: "/#dataVisual",
-              },
-            ],
+            // anchors: [
+            //   {
+            //     name: "Color Palette",
+            //     id: "/#palette",
+            //   },
+            //   {
+            //     name: "Section 508 Color Combinations",
+            //     id: "/#section508",
+            //   },
+            //   {
+            //     name: "Data Visualization Palette",
+            //     id: "/#dataVisual",
+            //   },
+            // ],
           },
           {
             name: "Iconography",

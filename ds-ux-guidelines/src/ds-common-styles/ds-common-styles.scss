@@ -1,7 +1,6 @@
 /*
   Common styles shared across Design System site.
 */
-
 @import "../../../ds-css/src/styles/cbp-ds.scss";
 
 /* iFrame style for height. Need to revisit this. */
@@ -12,7 +11,6 @@ iframe {
 /* iFrame style for height. Need to revisit this. */
 
 .spacing-wrapper {
-  padding: 0 $cbp-reg-space $cbp-lg-space $cbp-reg-space !important;
   max-width: 75em;
 
 
@@ -25,16 +23,17 @@ iframe {
     padding-top: $cbp-lg-space;
   }
 
-  h3,
-  h4 {
+  h3 {
     @extend .cbp-spacing-stack--regular;
-    padding-top: $cbp-reg-space;
+    padding-top: $cbp-lg-space;
   }
 
+  h4,
   h5,
   h6 {
     @extend .cbp-spacing-stack--small;
     padding-top: $cbp-sm-space;
+    color: $grey-dark;
   }
 
   h2+p,
@@ -54,7 +53,8 @@ iframe {
   }
 
   figure,
-  .table {
+  .table,
+  img {
     @extend .cbp-spacing-stack--small;
     padding-top: $cbp-sm-space;
   }
@@ -75,6 +75,15 @@ iframe {
   }
 }
 
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: $grey-lighter;
+  height: 2px;
+}
+
 .tables-usage--box {
   height: 200px;
 
@@ -82,6 +91,17 @@ iframe {
     height: 300px;
   }
 }
+
+.tabs--scroll {
+  overflow-y: scroll;
+  z-index: 100;
+  // -ms-overflow-style: none;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
 
 .wrapper {
   display: grid;

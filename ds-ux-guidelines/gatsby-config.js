@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   pathPrefix: `/cbp-theme/design-system`,
   siteMetadata: {
@@ -9,10 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: [
-          require('path').resolve(__dirname, 'node_modules')
-        ]
-      }
+        includePaths: [require("path").resolve(__dirname, "node_modules")],
+      },
     },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
