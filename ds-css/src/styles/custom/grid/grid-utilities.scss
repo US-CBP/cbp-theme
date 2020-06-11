@@ -1,0 +1,43 @@
+@mixin cbpGridColSpan ($start, $sz: "") {
+
+  @for $i from 1 through 13 {
+      
+    @if $start < $i {
+        
+      .#{$sz}cbp-grid-#{$start}-#{$i} {
+        grid-column: #{$start} / #{$i};
+      }
+
+    }
+    
+  }
+  
+}
+
+@for $i from 1 through 12 {
+  @include cbpGridColSpan($start:$i);
+}
+
+@include tablet-portrait-view {
+
+  @for $i from 1 through 12 {
+    @include cbpGridColSpan($start:$i, $sz:"md\\:");
+  }
+
+}
+
+@include tablet-landscape-view {
+
+  @for $i from 1 through 12 {
+    @include cbpGridColSpan($start:$i, $sz:"lg\\:");
+  }
+
+}
+
+@include large-desktop-view {
+
+  @for $i from 1 through 12 {
+    @include cbpGridColSpan ($start:$i, $sz:"xl\\:");
+  }
+  
+}
