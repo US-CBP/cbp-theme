@@ -11,8 +11,7 @@ iframe {
 /* iFrame style for height. Need to revisit this. */
 
 .spacing-wrapper {
-  max-width: 75em;
-
+  margin: $cbp-reg-space$cbp-extra-lg-space;
 
   //hides the default scroll bar from react-tabs TabPanel
   overflow: hidden !important;
@@ -57,6 +56,7 @@ iframe {
   img {
     @extend .cbp-spacing-stack--small;
     padding-top: $cbp-sm-space;
+    max-width: 70vw;
   }
 
   //This has to be margin due to Bulma's custom styling.
@@ -64,6 +64,8 @@ iframe {
   ul {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    max-width: 75rem;
+
   }
 
   .padding-bottom {
@@ -79,9 +81,10 @@ hr {
   border: 0;
   clear: both;
   display: block;
-  width: 96%;
+  width: 80%;
   background-color: $grey-lighter;
   height: 2px;
+
 }
 
 .tables-usage--box {
@@ -93,14 +96,18 @@ hr {
 }
 
 .tabs--scroll {
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 100;
-  // -ms-overflow-style: none;
-
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
 }
+
+.tabs__container {
+  position: fixed;
+  z-Index: 120;
+  background-color: white;
+  width: 100%;
+}
+
+
 
 
 .wrapper {

@@ -1,17 +1,36 @@
-.margin--tab {
-  margin: 0 2em - 1em;
-}
+@import "../../../node_modules/react-tabs/style/react-tabs.scss";
 
 .is-active {
   font-weight: bold;
 }
 
+//override Bulma default
+.tabs {
+  li {
+    //to make all tabs display in one row.
+    display: inline-block;
+    padding: 0;
+
+    //fixes small pixel movement of border-bottom on hover
+    border: 1px solid transparent;
+  }
+}
 
 //custom config of react-tabs
-//@TODO: adjust right padding
 .react-tabs__tab-list {
-  position: fixed;
+  position: inherit;
   background-color: white;
-  z-index: 50;
-  width: 80%;
+  z-index: 100;
+
+  //align first tab with main heading
+  margin-left: 5rem;
+
+  //adjust border-bottom width of the box-tab
+  width: 75vw;
+}
+
+//adjusts padding-top spacing for the first heading in each tabpanel section.
+.react-tabs__tab-panel {
+  position: relative;
+  top: 2em;
 }
