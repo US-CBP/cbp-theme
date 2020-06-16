@@ -11,8 +11,8 @@ iframe {
 /* iFrame style for height. Need to revisit this. */
 
 .spacing-wrapper {
-  margin: $cbp-reg-space$cbp-extra-lg-space;
-
+  // @TODO: Change this to make it more responsive
+  margin: $cbp-lg-space $cbp-extra-lg-space;
   //hides the default scroll bar from react-tabs TabPanel
   overflow: hidden !important;
 

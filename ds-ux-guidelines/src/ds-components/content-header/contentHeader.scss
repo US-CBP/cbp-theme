@@ -10,9 +10,9 @@
   }
 }
 
+// @TODO: Change this to make it more responsive
 .heading--main {
-  @extend .cbp-spacing-square--large;
-  margin-left: 3rem;
+  margin: 60px 80px 40px 80px;
 }
 
 .tab--text {

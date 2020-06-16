@@ -22,15 +22,12 @@
   background-color: white;
   z-index: 100;
 
+  // @TODO: Change this to make it more responsive
   //align first tab with main heading
-  margin-left: 5rem;
+  margin-left: 80px;
 
   //adjust border-bottom width of the box-tab
   width: 75vw;
 }
 
 //adjusts padding-top spacing for the first heading in each tabpanel section.
-.react-tabs__tab-panel {
-  position: relative;
-  top: 2em;
-}
