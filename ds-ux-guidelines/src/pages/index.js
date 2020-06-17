@@ -11,7 +11,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="CBP Design System | Home" />
     <ContentHeader title="Home Page" />
-    <article>
+    <article className="spacing-wrapper">
       <h1 className="cbp-masthead-1">
         CBP <b>Design System</b> Library
       </h1>

@@ -2,23 +2,17 @@ import React from "react"
 import Layout from "../../ds-components/layout/layout"
 import ContentHeader from "../../ds-components/content-header/contentHeader"
 import SEO from "../../ds-components/seo"
-import { Tabs, TabList, Tab, TabPanel } from "react-tabs"
+import { Tabs, TabPanel } from "react-tabs"
+import CustomTabList from "../../ds-components/ds-tabs/tabs"
 
 const TableComponentPage = () => (
   <Layout>
     <SEO title="CBP Design System | Tables" />
     <ContentHeader title="Tables" contentType="component" />
 
-    <Tabs style={{ overflowY: "auto" }}>
-      <div className="tabs is-boxed margin--tab">
-        <TabList>
-          <Tab selectedClassName="is-active">
-            <a href="#">Code</a>
-          </Tab>
-          <Tab selectedClassName="is-active">
-            <a href="#">Design Guidelines</a>
-          </Tab>
-        </TabList>
+    <Tabs className="tabs--scroll">
+      <div className="tabs is-boxed tabs__container">
+        {CustomTabList(["Code", "Design Guidelines"])}
       </div>
 
       <article className="spacing-wrapper">

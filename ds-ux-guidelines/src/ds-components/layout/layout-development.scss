@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
 @import url('https://us-cbp.github.io/cbp-theme/design-system/css/updated-styles.css');
 @import "../../ds-common-styles/ds-common-styles.scss";
+
+
 /*
   !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!!
   Import all scss files under the Imports comment below.
@@ -39,12 +41,10 @@
   height: 100%;
   min-height: 100%;
   width: 100%;
-  padding: 0 0 $cbp-lg-space $cbp-extra-lg-space !important;
 
   article {
     flex: 8;
     overflow-y: scroll;
-    padding: $cbp-reg-space;
     /* height set on child; triggers scroll */
   }
 }
