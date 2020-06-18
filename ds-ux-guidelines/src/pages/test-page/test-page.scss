@@ -1,0 +1,17 @@
+$blue: rgba(160, 174, 192, 1);
+$liteBlue: rgba(160, 174, 192, .5);
+
+.liteBlue {
+  background-color: $liteBlue;
+}
+
+.test {
+
+  background-color: greenyellow;
+
+  div {
+    background: $blue;
+    text-align: center;
+  }
+
+}
