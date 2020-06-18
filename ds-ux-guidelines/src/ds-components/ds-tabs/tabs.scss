@@ -8,12 +8,18 @@
 .tabs {
   li {
     //to make all tabs display in one row.
-    display: inline-block;
+    display: block;
     padding: 0;
+
 
     //fixes small pixel movement of border-bottom on hover
     border: 1px solid transparent;
   }
+}
+
+.tablist-container {
+  width: inherit;
+  overflow-x: hidden;
 }
 
 //custom config of react-tabs
@@ -21,13 +27,14 @@
   position: inherit;
   background-color: white;
   z-index: 100;
+  margin-bottom: 0;
 
   // @TODO: Change this to make it more responsive
   //align first tab with main heading
   margin-left: 80px;
 
   //adjust border-bottom width of the box-tab
-  width: 75vw;
+  width: 60vw;
 }
 
 //adjusts padding-top spacing for the first heading in each tabpanel section.

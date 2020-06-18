@@ -10,16 +10,25 @@ iframe {
 
 /* iFrame style for height. Need to revisit this. */
 
+
 .spacing-wrapper {
   // @TODO: Change this to make it more responsive
-  margin: $cbp-lg-space $cbp-extra-lg-space;
-  //hides the default scroll bar from react-tabs TabPanel
-  overflow: hidden !important;
+
+  position: relative;
+  // overflow-y: auto;
+  // height: 100vh;
+
+  margin-right: 0;
+
+  section {
+    margin: 0 $cbp-extra-lg-space;
+  }
 
   //heading for main sections
   h2 {
     @extend .cbp-spacing-stack--large;
     padding-top: $cbp-lg-space;
+    font-weight: 500;
   }
 
   h3 {
@@ -81,8 +90,8 @@ hr {
   border: 0;
   clear: both;
   display: block;
-  width: 80%;
-  background-color: $grey-lighter;
+  width: 50vw;
+  background-color: $grey-lightest;
   height: 2px;
 
 }
@@ -97,14 +106,18 @@ hr {
 
 .tabs--scroll {
   overflow-y: auto;
-  z-index: 100;
+  display: flex;
+  flex-direction: column;
 }
 
 .tabs__container {
-  position: fixed;
+  position: relative;
   z-Index: 120;
   background-color: white;
   width: 100%;
+
+  //override bulma tabs margin default (mixins.sass)
+  margin-bottom: 0 !important;
 }
 
 
