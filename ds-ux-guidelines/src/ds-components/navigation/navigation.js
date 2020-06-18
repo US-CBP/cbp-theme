@@ -19,11 +19,7 @@ class Navigation extends Component {
         name: "Foundation",
         subcategory: [
           {
-            name: "Interactivity",
-            link: "/foundation/interactivity",
-          },
-          {
-            name: "Colors",
+            name: "Colors*",
             link: "/foundation/colors",
             // anchors: [
             //   {
@@ -45,6 +41,10 @@ class Navigation extends Component {
             link: "/foundation/iconography",
           },
           {
+            name: "Interactivity",
+            link: "/foundation/interactivity",
+          },
+          {
             name: "Layouts, Grid, Spacing",
             link: "/foundation/layouts",
           },
@@ -57,10 +57,10 @@ class Navigation extends Component {
       {
         name: "Components",
         subcategory: [
-          {
-            name: "Accordion",
-            link: "/components/accordion",
-          },
+          // {
+          //   name: "Accordion",
+          //   link: "/components/accordion",
+          // },
           {
             name: "Tables",
             link: "/components/tables",
@@ -97,7 +97,7 @@ class Navigation extends Component {
         name: "Patterns",
         subcategory: [
           {
-            name: "Headers",
+            name: "Headers*",
             link: "/patterns/applicationHeaders",
           },
         ],
