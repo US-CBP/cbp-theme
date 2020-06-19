@@ -15,13 +15,16 @@ const TestPage = () => (
   
 
     <div className="test cbp-grid">
-      <div className="cbp-grid-1-5  md:cbp-grid-1-6 lg:cbp-grid-3-11">
-        Full Row
+      <div className="cbp-col-1-2  cbp-col-md-2-4 cbp-col-lg-3-6">
+        Indented Row.
+      </div>
+      <div className="cbp-col-full">
+        Full Row.
       </div>
 
-      {/* <div className="cbp-grid-2-12">
-        Partial Row
-      </div> */}
+      <div class="cbp-col-2-12">
+        Indented two columns.
+      </div>
     </div>
 
 
