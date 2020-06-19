@@ -12,7 +12,7 @@ const TypographyPage = () => (
     <ContentHeader title="Typography" contentType="foundation" />
 
     <Tabs className="tabs--scroll">
-      <div className="tabs is-boxed tabs__container">
+      <div className="tabs tabs__container">
         {CustomTabList(["Basics", "Research & References"])}
       </div>
 

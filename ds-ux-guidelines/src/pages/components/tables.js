@@ -11,7 +11,7 @@ const TableComponentPage = () => (
     <ContentHeader title="Tables" contentType="component" />
 
     <Tabs className="tabs--scroll">
-      <div className="tabs is-boxed tabs__container">
+      <div className="tabs tabs__container">
         {CustomTabList(["Code", "Design Guidelines"])}
       </div>
 
