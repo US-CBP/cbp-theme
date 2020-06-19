@@ -42,11 +42,10 @@
 
   article {
     flex: 8;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* height set on child; triggers scroll */
   }
 }
-
 /* SCSS IMPORTS */
 @import "../header/header";
 @import "../content-header/contentHeader";
