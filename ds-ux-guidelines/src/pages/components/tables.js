@@ -149,91 +149,88 @@ const TableComponentPage = () => (
           <section id="Design">
             <h2 className="cbp-heading-2 ">Design Guidelines</h2>
 
-            <section>
-              <h3 id="general" className="cbp-heading-3">
-                General
-              </h3>
+            <h3 id="general" className="cbp-heading-3">
+              General
+            </h3>
 
-              <div className="content">
-                <ol>
-                  <li>
-                    For nominal/non-numeric data (e.g., room numbers, zip codes,
-                    names),
-                    <strong> left-align text.</strong>
-                  </li>
-                  <li>
-                    For data that involves quantity (e.g., counts, currency,
-                    percentages),
-                    <strong> right-align text.</strong>
-                  </li>
-                  <li>
-                    Each table header should have the <code> th </code> tag.{" "}
-                  </li>
+            <div className="content">
+              <ol>
+                <li>
+                  For nominal/non-numeric data (e.g., room numbers, zip codes,
+                  names),
+                  <strong> left-align text.</strong>
+                </li>
+                <li>
+                  For data that involves quantity (e.g., counts, currency,
+                  percentages),
+                  <strong> right-align text.</strong>
+                </li>
+                <li>
+                  Each table header should have the <code> th </code> tag.{" "}
+                </li>
 
-                  <li>
-                    If the number of rows for data exceed 30, implement
-                    pagination on the top and bottom of the table to reduce
-                    scrolling.
-                  </li>
-                  <li>
-                    When there is no data to display in a cell, use placeholder
-                    text such as
-                    <strong>"--"</strong> or <strong>"N/A"</strong> to indicate
-                    that the empty state is not a technical bug or glitch.
-                  </li>
-                </ol>
-              </div>
+                <li>
+                  If the number of rows for data exceed 30, implement pagination
+                  on the top and bottom of the table to reduce scrolling.
+                </li>
+                <li>
+                  When there is no data to display in a cell, use placeholder
+                  text such as
+                  <strong>"--"</strong> or <strong>"N/A"</strong> to indicate
+                  that the empty state is not a technical bug or glitch.
+                </li>
+              </ol>
+            </div>
 
-              <h3 id="usage" className="cbp-heading-3 ">
-                Usage
-              </h3>
+            <h3 id="usage" className="cbp-heading-3 ">
+              Usage
+            </h3>
 
-              <div className="columns">
-                <div className="column ">
-                  <div className="box tables-usage--box">
-                    <p>
-                      <span className="is-size-5">
-                        <strong>Consider using a table if:</strong>
-                      </span>
-                    </p>
+            <div className="columns">
+              <div className="column ">
+                <div className="box tables-usage--box">
+                  <p>
+                    <span className="is-size-5">
+                      <strong>Consider using a table if:</strong>
+                    </span>
+                  </p>
 
-                    <div className="content">
-                      <ol>
-                        <li>You have a large quantity of data</li>
-                        <li>
-                          You want to implement features such as sorting or
-                          filtering
-                        </li>
-                        <li>
-                          The user needs to easily compare data quickly &
-                          efficiently
-                        </li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="column ">
-                  <div className="box tables-usage--box">
-                    <p>
-                      <span className="is-size-5">
-                        <strong>You should NOT use a table if:</strong>
-                      </span>
-                    </p>
-
-                    <div className="content">
-                      <ol>
-                        <li>You do not have a lot of data to display</li>
-                        <em>In this case, consider using a list component.</em>
-
-                        <li>You want to display a summary of your data</li>
-                        <em>In this case, consider using graphs or charts.</em>
-                      </ol>
-                    </div>
+                  <div className="content">
+                    <ol>
+                      <li>You have a large quantity of data</li>
+                      <li>
+                        You want to implement features such as sorting or
+                        filtering
+                      </li>
+                      <li>
+                        The user needs to easily compare data quickly &
+                        efficiently
+                      </li>
+                    </ol>
                   </div>
                 </div>
               </div>
-            </section>
+
+              <div className="column ">
+                <div className="box tables-usage--box">
+                  <p>
+                    <span className="is-size-5">
+                      <strong>You should NOT use a table if:</strong>
+                    </span>
+                  </p>
+
+                  <div className="content">
+                    <ol>
+                      <li>You do not have a lot of data to display</li>
+                      <em>In this case, consider using a list component.</em>
+
+                      <li>You want to display a summary of your data</li>
+                      <em>In this case, consider using graphs or charts.</em>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <h3 id="accessibility" className="cbp-heading-3 ">
               Accessibility
