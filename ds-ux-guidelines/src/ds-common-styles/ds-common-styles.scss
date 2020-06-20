@@ -108,10 +108,14 @@ hr {
 }
 
 .tabs__container {
-  position: relative;
   z-Index: 120;
   background-color: white;
   width: 100%;
+
+  //compatibility with safari
+  overflow: visible;
+  height: 3rem;
+  display: block;
 
   //override bulma tabs margin default (mixins.sass)
   margin-bottom: 0 !important;
