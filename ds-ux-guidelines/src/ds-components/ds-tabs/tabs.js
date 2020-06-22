@@ -14,15 +14,17 @@ import "./tabs.scss"
 
 function CustomTabs(category) {
   return (
-    <TabList>
-      {category.map(name => {
-        return (
-          <Tab selectedClassName="is-active">
-            <a href="#">{name}</a>
-          </Tab>
-        )
-      })}
-    </TabList>
+    <div className="tablist-container">
+      <TabList>
+        {category.map(name => {
+          return (
+            <Tab selectedClassName="is-active">
+              <a href="#">{name}</a>
+            </Tab>
+          )
+        })}
+      </TabList>
+    </div>
   )
 }
 CustomTabs.tabsRole = "TabList"

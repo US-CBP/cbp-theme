@@ -11,7 +11,7 @@ export default () => (
     <SEO title="Interactivity" />
     <ContentHeader title="Interactivity" contentType="foundation" />
     <Tabs className="tabs--scroll">
-      <div className="tabs is-boxed tabs__container">
+      <div className="tabs tabs__container">
         {CustomTabList(["Basics", "Research & References"])}
       </div>
 
