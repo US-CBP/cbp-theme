@@ -1,7 +1,6 @@
 /*
   Common styles shared across Design System site.
 */
-
 @import "../../../ds-css/src/styles/cbp-ds.scss";
 
 /* iFrame style for height. Need to revisit this. */
@@ -11,30 +10,35 @@ iframe {
 
 /* iFrame style for height. Need to revisit this. */
 
+
 .spacing-wrapper {
-  padding: 0 $cbp-reg-space $cbp-lg-space $cbp-reg-space !important;
-  max-width: 75em;
+  // @TODO: Change this to make it more responsive
 
+  position: relative;
+  margin-right: 0;
 
-  //hides the default scroll bar from react-tabs TabPanel
-  overflow: hidden !important;
+  section {
+    margin: 0 $cbp-extra-lg-space;
+  }
 
   //heading for main sections
   h2 {
     @extend .cbp-spacing-stack--large;
     padding-top: $cbp-lg-space;
+    font-weight: 500;
   }
 
-  h3,
-  h4 {
+  h3 {
     @extend .cbp-spacing-stack--regular;
-    padding-top: $cbp-reg-space;
+    padding-top: $cbp-lg-space;
   }
 
+  h4,
   h5,
   h6 {
     @extend .cbp-spacing-stack--small;
     padding-top: $cbp-sm-space;
+    color: $grey-dark;
   }
 
   h2+p,
@@ -54,9 +58,11 @@ iframe {
   }
 
   figure,
-  .table {
+  .table,
+  img {
     @extend .cbp-spacing-stack--small;
     padding-top: $cbp-sm-space;
+    max-width: 70vw;
   }
 
   //This has to be margin due to Bulma's custom styling.
@@ -64,6 +70,8 @@ iframe {
   ul {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    max-width: 75rem;
+
   }
 
   .padding-bottom {
@@ -75,6 +83,16 @@ iframe {
   }
 }
 
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 50vw;
+  background-color: $grey-lightest;
+  height: 2px;
+
+}
+
 .tables-usage--box {
   height: 200px;
 
@@ -82,6 +100,29 @@ iframe {
     height: 300px;
   }
 }
+
+.tabs--scroll {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs__container {
+  z-Index: 120;
+  background-color: white;
+  width: 100%;
+
+  //compatibility with safari
+  overflow: visible;
+  height: 3rem;
+  display: block;
+
+  //override bulma tabs margin default (mixins.sass)
+  margin-bottom: 0 !important;
+}
+
+
+
 
 .wrapper {
   display: grid;

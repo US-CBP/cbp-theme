@@ -19,26 +19,30 @@ class Navigation extends Component {
         name: "Foundation",
         subcategory: [
           {
-            name: "Colors",
+            name: "Colors*",
             link: "/foundation/colors",
-            anchors: [
-              {
-                name: "Color Palette",
-                id: "/#palette",
-              },
-              {
-                name: "Section 508 Color Combinations",
-                id: "/#section508",
-              },
-              {
-                name: "Data Visualization Palette",
-                id: "/#dataVisual",
-              },
-            ],
+            // anchors: [
+            //   {
+            //     name: "Color Palette",
+            //     id: "/#palette",
+            //   },
+            //   {
+            //     name: "Section 508 Color Combinations",
+            //     id: "/#section508",
+            //   },
+            //   {
+            //     name: "Data Visualization Palette",
+            //     id: "/#dataVisual",
+            //   },
+            // ],
           },
           {
             name: "Iconography",
             link: "/foundation/iconography",
+          },
+          {
+            name: "Interactivity",
+            link: "/foundation/interactivity",
           },
           {
             name: "Layouts, Grid, Spacing",
@@ -53,10 +57,10 @@ class Navigation extends Component {
       {
         name: "Components",
         subcategory: [
-          {
-            name: "Accordion",
-            link: "/components/accordion",
-          },
+          // {
+          //   name: "Accordion",
+          //   link: "/components/accordion",
+          // },
           {
             name: "Tables",
             link: "/components/tables",
@@ -93,7 +97,7 @@ class Navigation extends Component {
         name: "Patterns",
         subcategory: [
           {
-            name: "Headers",
+            name: "Headers*",
             link: "/patterns/applicationHeaders",
           },
         ],

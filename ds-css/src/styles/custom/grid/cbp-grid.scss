@@ -1,14 +1,14 @@
 .cbp-grid {
   display: grid;
-  gap: 16px;
+  gap: 0 16px;
   grid-template-columns: repeat(4, 1fr);
-  height: 100vh;
+  // height: 100vh;
   margin: 0 20px;
 }
 
 @include tablet-portrait-view {
   .cbp-grid {
-    gap: 28px;
+    gap: 0 28px;
     grid-template-columns: repeat(8, 1fr);
     margin: 0 32px;
   }
@@ -16,7 +16,7 @@
 
 @include tablet-landscape-view {
   .cbp-grid {
-    gap: 28px;
+    gap: 0 28px;
     grid-template-columns: repeat(12, 1fr);
     margin: 0 32px;
   }
@@ -24,7 +24,7 @@
 
 @include large-desktop-view {
   .cbp-grid {
-    gap: 28px;
+    gap: 0 28px;
     margin: 0 44px;
   }
 }

@@ -4,7 +4,9 @@ import React from "react"
 
 const Header = ({ title }) => (
   <header className="cbp-header">
-    <a className="cbp-header__skipnav" href="#main-content">Skip to main content</a>
+    <a className="cbp-header__skipnav" href="#main-content">
+      Skip to main content
+    </a>
     <nav className="cbp-header__main level">
       <div className="level-left">
         <div className="level-item">

@@ -38,11 +38,11 @@
   margin: 0;
   height: 100%;
   min-height: 100%;
+  width: 100%;
 
   article {
     flex: 8;
-    overflow-y: scroll;
-    padding: $cbp-reg-space;
+    overflow-y: auto;
     /* height set on child; triggers scroll */
   }
 }

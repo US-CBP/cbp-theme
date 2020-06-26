@@ -11,10 +11,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="CBP Design System | Home" />
     <ContentHeader title="Home Page" />
-    <article>
-      <h1 className="cbp-masthead-1">CBP <b>Design System</b> Library</h1>
+    <article className="spacing-wrapper">
+      <section name="main" id="main">
+        <h1 className="cbp-masthead-1">
+          CBP <b>Design System</b> Library
+        </h1>
+      </section>
     </article>
-    
   </Layout>
 )
 

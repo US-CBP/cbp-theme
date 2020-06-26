@@ -30,7 +30,7 @@
     "CBP Style Guide",
     "CBP Design System"
   ],
-  "author": "Creative Services",
+  "author": "Creative Services <CreativeServices@cbp.dhs.gov>",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/US-CBP/cbp-theme/issues"

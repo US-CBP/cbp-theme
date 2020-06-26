@@ -8,23 +8,20 @@ import gridLg from "../../images/layout-grid-large.jpg"
 import gridXL from "../../images/layout-grid-xl.jpg"
 import spacingSystem from "../../images/layout-spacing-system.jpg"
 import CodeSnippet from "../../ds-components/codeSnippet/codeSnippet"
-import { Tabs, TabList, Tab, TabPanel } from "react-tabs"
+import { Tabs, TabPanel } from "react-tabs"
+import CustomTabList from "../../ds-components/ds-tabs/tabs"
 
 const LayoutPage = () => (
   <Layout>
     <SEO title="CBP Design System | Layouts" />
-    <ContentHeader title="Layouts" contentType="foundation" />
+    <ContentHeader
+      title="Layouts, Grids, and Spacing"
+      contentType="foundation"
+    />
 
-    <Tabs style={{ overflowY: "auto" }}>
-      <div className="tabs is-boxed margin--tab">
-        <TabList>
-          <Tab selectedClassName="is-active">
-            <a href="#">Basics</a>
-          </Tab>
-          <Tab selectedClassName="is-active">
-            <a href="#">Reference & Research</a>
-          </Tab>
-        </TabList>
+    <Tabs className="tabs--scroll">
+      <div className="tabs tabs__container">
+        {CustomTabList(["Basics", "Research & References"])}
       </div>
 
       <article className="spacing-wrapper">
