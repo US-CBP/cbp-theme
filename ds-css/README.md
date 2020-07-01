@@ -6,7 +6,7 @@ This README will be updated in the future to reflect ongoing development.
 
 > **⚠️ The CBP Design System (2.0) is still in a stage of very active development.** As such, much of the code base is still somewhat fragile and may break at any time. While we encourage you to explore our offerings, please do so with the knowledge that the codebase in these repositories will change rapidly and with little warning. Use at your own risk. We will communicate when a stable release will be made available.
 
-# Usage
+# Additional Dependencies
 
 - Icons - Font Awesome 5
 
