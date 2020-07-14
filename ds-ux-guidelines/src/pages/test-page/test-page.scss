@@ -1,17 +1,126 @@
 $blue: rgba(160, 174, 192, 1);
 $liteBlue: rgba(160, 174, 192, .5);
 
+input {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
 .liteBlue {
   background-color: $liteBlue;
 }
 
+.green {
+  background-color: var(--cbp-success);
+  margin-left: var(--cbp-micro-space);
+}
+
+.blue {
+  background-color: var(--cbp-primary);
+  margin: 0 var(--cbp-micro-space);
+}
+
+.fas {
+  padding-right: var(--cbp-micro-space);
+}
+
+.cbp-button-text {
+  display: inline-block;
+  padding: 4px;
+
+  i {
+    display: inline;
+  }
+}
+
+$elRadius: 25px;
+
+.cbp-circle {
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  height: $elRadius;
+  line-height: $elRadius;
+  text-align: center;
+  width: $elRadius;
+}
+
+.cbp-grid {
+  grid-template-rows: auto 40px;
+  height: 100vh;
+}
+
+.top-border {
+  border-top: 1px var(--grey-dark) solid;
+}
+
+.top-margin {
+  display: block;
+  margin-top: var(--cbp-lg-space);
+}
+
 .test {
+  // background-color: greenyellow;
 
-  background-color: greenyellow;
-
-  div {
-    background: $blue;
-    text-align: center;
+  .cbp-heading-1 {
+    padding: var(--cbp-sm-space) 0;
   }
 
+  .cbp-spacing-small-bottom {
+    padding: var(--cbp-extra-sm-space) 0 0;
+  }
+
+  .bottom-border {
+    border-bottom: 1px var(--grey-dark) solid;
+  }
+
+  .back-to {
+    padding: var(--cbp-extra-sm-space) 0;
+  }
+
+  .duration {
+    background: rgb(241, 244, 247);
+    padding: var(--cbp-extra-sm-space) 0;
+  }
+
+  .input-elements {
+
+    margin-top: var(--cbp-lg-space);
+
+    > div {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: var(--cbp-sm-space);
+      }
+
+      &:nth-child(2) {
+        margin-left: var(--cbp-sm-space);
+      }
+    }
+    
+    .fas {
+      position: absolute;
+    }
+
+    input {
+      padding-left: var(--cbp-reg-space);
+    }
+  }
+
+  footer {
+    background: rgb(241, 244, 247);
+    padding: var(--cbp-micro-space);
+    text-align: right;
+
+    button {
+      margin-right: var(--cbp-sm-space);
+      
+      &.active {
+        background-color: var(--cbp-primary);
+        color: #fff;
+      }
+    }
+  }
 }
