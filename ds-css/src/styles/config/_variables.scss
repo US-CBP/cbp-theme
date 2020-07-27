@@ -1,0 +1,120 @@
+@charset "utf-8";
+// GLOBAL VARIABLES
+// INTRODUCTION:
+// Everything is in alphabetical order w/in each section
+// ** Only global variables, nothing pertaining to a specific element/component/object
+// Note: For all customizations to non-gelobal variables, need to find inside those more specific files.
+// "Updates" are for customizations to Bulma for matching up with the CBP Global Variables.
+//  ***  Table of Contents  ***
+// #1 Brand COLOR PALETTES
+// 1A - Primary
+// 1B - Subtle
+// 1C - Gray Color Palette
+// 1D - Borders
+// 1E - Text
+// 1F - Links
+// #2 BULMA COLORS
+// (Note: These colors only pertain to Bulma, not tied to a specific component/element)
+// 2A - Background
+// #3 Brand TYPOGRAPHY
+// 3A - Default Font Family
+// 3B - Font Weights
+// 3C - Font Spacing
+// 3D - Font Heights
+// *** End of Table of Contents ***
+// Customizations
+// (#1) -- COLOR PALETTES
+// (1A) -- Primary
+// Custom Variables
+$cbp-danger: #a00000;
+$cbp-default: #ffffff;
+$cbp-info: #1460aa;
+$cbp-live: #ffeb7a;
+$cbp-primary: #00416a;
+$cbp-success: #008000;
+$cbp-warning: #f09511;
+$universal-header: #003e65;
+// (1B) -- Subtle
+// Custom Variables
+$subtle-danger: #f8eced;
+$subtle-info: #edf3f9;
+$subtle-primary: #ecf1f4;
+$subtle-success: #ecf5ec;
+$subtle-warning: #fef7ed;
+// (1C) -- Grey Palette
+// Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
+$grey: #555555;
+$grey-dark: #333333;
+$grey-darker: #222222;
+$grey-light: #aaaaaa;
+$grey-lighter: #eeeeee;
+$white: #ffffff;
+// Custom Variables
+$grey-base: #000000;
+$grey-lightest: #f6f6f6;
+$grey-medium: #808080;
+// (1D) -- BORDERS
+// Custom Variables
+$cbp-danger-border: #aa0000;
+$cbp-default-border: #adadad;
+$cbp-info-border: #0f4880;
+$cbp-live-border: #e6d261;
+$cbp-primary-border: #0a3055;
+$cbp-success-border: #134d13;
+$cbp-warning-border: #4a2e1f;
+// (1E) -- TEXT
+// Custom Variables
+$cbp-warning-text: #a44900;
+// (1F) -- LINKS
+// Updates Bulma's Global Variables in their node_modules/bulma/sass/utilities/initial-variables.scss file
+$link-hover: #001b44;
+// Typography
+/* CBP Default Font Family */
+$family-sans-serif: "Roboto",
+"Calibri",
+"Tahoma",
+sans-serif;
+/* CBP Font Sizes
+
+*/
+$cbp-masthead-1: 2.566rem;
+$cbp-masthead-2: 2.281rem;
+$cbp-size-1: 2.027rem;
+$cbp-size-2: 1.802rem;
+$cbp-size-3: 1.602rem;
+$cbp-size-4: 1.424rem;
+$cbp-size-5: 1.266rem;
+$cbp-size-6: 1.125rem;
+$cbp-body-text: 1rem;
+$cbp-subhead-text: 0.889rem;
+
+/* CBP Font Weights
+  One new variable declared, and the rest derivd from Bulma default font weights
+*/
+$cbp-weight-thin: 100;
+$cbp-weight-light: 300;
+$cbp-weight-regular: 400;
+$cbp-weight-medium: 500;
+$cbp-weight-bold: 700;
+/* CBP Font Spacing
+  Defines spacing between each font character
+*/
+$cbp-font-spacing: 0.12px;
+/* CBP Line Heights
+  Defined line heights for header text elements
+*/
+$cbp-height-20: 20px;
+$cbp-height-24: 24px;
+$cbp-height-28: 28px;
+$cbp-height-32: 32px;
+$cbp-height-36: 36px;
+$cbp-height-40: 40px;
+$cbp-height-44: 44px;
+
+/* CBP Spacing Variable */
+$cbp-micro-space: 8px;
+$cbp-extra-sm-space: 12px;
+$cbp-sm-space: 16px;
+$cbp-reg-space: 20px;
+$cbp-lg-space: 40px;
+$cbp-extra-lg-space: 80px;

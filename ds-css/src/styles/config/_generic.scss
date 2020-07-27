@@ -1,3 +1,5 @@
+@use "variables";
+
 /* CBP Bulma overides */
 $body-size: 14px;
 $body-font-size: 1rem;
@@ -9,10 +11,10 @@ $body-font-size: 1rem;
 $tabs-border-bottom-width: 2px;
 
 html {
-  color: $grey-darker;
+  color: variables.$grey-darker;
   font-size: $body-size;
-  letter-spacing: $cbp-font-spacing;
-  line-height: $cbp-height-20;
+  letter-spacing: variables.$cbp-font-spacing;
+  line-height: variables.$cbp-height-20;
 }
 
 body {
