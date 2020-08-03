@@ -1,0 +1,62 @@
+{
+  "color": {
+    "text": {
+      "lightest": {
+        "value": "{ color.base.gray.1.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "lighter": {
+        "value": "{ color.base.gray.5.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "light": {
+        "value": "{ color.base.gray.20.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "base": {
+        "value": "{ color.base.gray.30.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "dark": {
+        "value": "{ color.base.gray.50.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "darker": {
+        "value": "{ color.base.gray.70.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "darkest": {
+        "value": "{ color.base.gray.90.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      }
+    },
+    "info": {
+      "lighter": {
+        "value": "{ color.base.cyan.10.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "light": {
+        "value": "{ color.base.cyan.30.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "base": {
+        "value": "{ color.base.cyan.50.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "dark": {
+        "value": "{ color.base.cyan.60.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "darker": {
+        "value": "{ color.base.cyan.70.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      }
+    }
+  }
+}
