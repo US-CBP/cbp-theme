@@ -47,6 +47,16 @@
         }
       ]
     },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "src/styles/globals/",
+      "files": [
+        {
+          "format": "css/variables",
+          "destination": "variables.css"
+        }
+      ]
+    },
     "android": {
       "transformGroup": "android",
       "buildPath": "src/styles/globals/android/",
