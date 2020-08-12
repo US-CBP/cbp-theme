@@ -1,4 +1,6 @@
-/* 
+@use "../utilities/mixins";
+
+/*
   This class allows element to span all coloumns
   for all breakpoints.
 */
@@ -10,62 +12,51 @@
   This mixin generates all gris utility classes
   for all responsive sizes.
 */
-@mixin cbpGridColSpan ($start, $sz: "") {
-  
-  $columnCount: 12; /* Max column width is twelve. */
-  $offset: 1; /* Offset used as cssgrids goes from 1 - 13 | 1 - 9 | 1-5 */
-  $size: $sz; /* Passed in size argument for responsive size. */
+@mixin cbpGridColSpan ($start, $sz:"") {
+  /* Max column width is twelve. */
+  $columnCount: 12;
+  /* Offset used as cssgrids goes from 1 - 13 | 1 - 9 | 1-5 */
+  $offset: 1;
+  /* Passed in size argument for responsive size. */
+  $size: $sz;
   @for $i from 1 through $columnCount {
-      
     @if $start < 2 {
-        
       .cbp-col#{$sz}-#{$i} {
         grid-column: #{$start} / span #{$i} !important;
       }
-      
     }
     @else {
       .cbp-col#{$sz}-#{($start - $offset)}-#{$i} {
-
         @if $i <= $columnCount - ($start - $offset) {
           grid-column: #{$start} / span #{$i} !important;
-
         }
         @else {
           grid-column: #{$start} / -1 !important;
         }
       }
-      
     }
-    
   }
-  
+
 }
 
 @for $i from 1 through 12 {
-  @include cbpGridColSpan($start:$i);
+  @include cbpGridColSpan($start: $i);
 }
 
-@include tablet-portrait-view {
-
+@include mixins.tablet-portrait-view {
   @for $i from 1 through 12 {
-    @include cbpGridColSpan($start:$i, $sz:"-md");
+    @include cbpGridColSpan($start: $i, $sz: "-md");
   }
-
 }
 
-@include tablet-landscape-view {
-
+@include mixins.tablet-landscape-view {
   @for $i from 1 through 12 {
-    @include cbpGridColSpan($start:$i, $sz:"-lg");
+    @include cbpGridColSpan($start: $i, $sz: "-lg");
   }
-
 }
 
-@include large-desktop-view {
-
+@include mixins.large-desktop-view {
   @for $i from 1 through 12 {
-    @include cbpGridColSpan ($start:$i, $sz:"-xl");
+    @include cbpGridColSpan($start: $i, $sz: "-xl");
   }
-  
 }

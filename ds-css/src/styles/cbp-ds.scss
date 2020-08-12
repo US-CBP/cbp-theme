@@ -7,11 +7,10 @@
 // @import "custom/grid/all";
 // Vendor Styles
 // Import needed Bulma SASS
-// @import "~bulma/bulma";
+@import "~bulma/bulma";
 // @ Import only what we need from Bulma goes here
-
-// @use "base";
-// @use "components";
+@use "base";
 @use "config";
 @use "utilities";
 @use "grid";
+@use "components";

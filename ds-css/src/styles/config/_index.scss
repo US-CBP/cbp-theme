@@ -1,8 +1,7 @@
 // @import "generic.scss";
 // @import "helpers.scss";
 // @import "cbp-css-variables.scss"
-
 // @forward "cbp-css-variables.scss";
 @forward "variables";
-@forward "generic";
-@forward "helpers";
+@forward "spacing";
+@forward "typography";

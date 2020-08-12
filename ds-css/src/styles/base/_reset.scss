@@ -27,7 +27,7 @@ h6 {
   padding: 0;
 }
 
-// Headings
+/* Headings */
 h1,
 h2,
 h3,
@@ -38,12 +38,12 @@ h6 {
   font-weight: normal;
 }
 
-// List
+/* List */
 ul {
   list-style: none;
 }
 
-// Form
+/* Form */
 button,
 input,
 select,
@@ -51,7 +51,7 @@ textarea {
   margin: 0;
 }
 
-// Box sizing
+/* Box sizing */
 html {
   box-sizing: border-box;
 }
@@ -62,19 +62,19 @@ html {
   box-sizing: inherit;
 }
 
-// Media
+/* Media */
 img,
 video {
   height: auto;
   max-width: 100%;
 }
 
-// Iframe
+/* Iframe */
 iframe {
   border: 0;
 }
 
-// Table
+/* Table */
 table {
   border-collapse: collapse;
   border-spacing: 0;

@@ -1,26 +1,27 @@
 /*
-  !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!! 
+  !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!!
 
 */
+@use "../../../ds-css/src/styles/cbp-ds.scss" as cbp-theme;
 
 
 .cbp-header {
-  color: $cbp-default;
+  color: cbp-theme.$cbp-default;
   box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
   grid-area: header;
   z-index: 100;
 
   a {
-    color: $cbp-default;
+    color: cbp-theme.$cbp-default;
   }
 
   .tabs a {
-    color: $cbp-primary;
+    color: cbp-theme.$cbp-primary;
   }
 
   &__skipnav {
-    background: $cbp-default;
-    color: $cbp-primary !important;
+    background: cbp-theme.$cbp-default;
+    color: cbp-theme.$cbp-primary !important;
 
     left: 0;
     padding: 0.5rem 1rem;
@@ -43,7 +44,7 @@
   }
 
   &__main {
-    background: $universal-header;
+    background: cbp-theme.$universal-header;
     transition: height 0.2s;
     &--hidden {
       height: 0;
@@ -62,11 +63,11 @@
 
   &__sub {
 
-    background: $grey-lightest;
-    color: $grey-base;
+    background: cbp-theme.$grey-lightest;
+    color: cbp-theme.$grey-base;
 
     a {
-      color: $cbp-primary;
+      color: cbp-theme.$cbp-primary;
     }
 
     .level-item {
