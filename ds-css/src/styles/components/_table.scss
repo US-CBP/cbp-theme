@@ -1,7 +1,9 @@
+@use "../config/variables";
+
 thead {
     tr {
         &:first-child {
-            background-color: $grey-lighter;
+            background-color: variables.$grey-lighter;
         }
     }
 }

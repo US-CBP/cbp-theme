@@ -1,9 +1,9 @@
+@use "../../../../ds-css/src/styles/cbp-ds.scss" as cbp-theme;
+
 /*
   !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!!
 
 */
-@use "../../../ds-css/src/styles/cbp-ds.scss" as cbp-theme;
-
 
 .cbp-header {
   color: cbp-theme.$cbp-default;
