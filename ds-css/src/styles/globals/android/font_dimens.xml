@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Do not edit directly
+  Generated on Mon, 03 Aug 2020 20:48:28 GMT
+-->
+<resources>
+  <dimen name="size_font_body">224.00sp</dimen><!-- Default text class for paragraphs of text, and are directly linked to the semantic <p> tag. -->
+  <dimen name="size_font_heading_6">256.00sp</dimen>
+  <dimen name="size_font_heading_5">320.00sp</dimen>
+  <dimen name="size_font_heading_4">320.00sp</dimen>
+  <dimen name="size_font_heading_3">352.00sp</dimen>
+  <dimen name="size_font_heading_2">400.00sp</dimen>
+  <dimen name="size_font_heading_1">448.00sp</dimen>
+  <dimen name="size_font_masthead_2">512.00sp</dimen>
+  <dimen name="size_font_masthead_1">576.00sp</dimen>
+  
+</resources>

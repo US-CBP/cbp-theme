@@ -1,0 +1,82 @@
+{
+  "color": {
+    "base": {
+      "primary": {
+        "lighter": {
+          "value": "{ color.base.blue-cool.10.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "light": {
+          "value": "{ color.base.blue-cool.30.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "base": {
+          "value": "{ color.base.blue-cool.50.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "dark": {
+          "value": "{ color.base.blue-cool.60.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "darker": {
+          "value": "{ color.base.blue-cool.70.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        }
+      },
+
+      "secondary": {
+        "lighter": {
+          "value": "{ color.base.mint-cool.10.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "light": {
+          "value": "{ color.base.mint-cool.30.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "base": {
+          "value": "{ color.base.mint-cool.50.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "dark": {
+          "value": "{ color.base.mint-cool.60.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "darker": {
+          "value": "{ color.base.mint-cool.70.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        }
+      },
+
+      "neutral": {
+        "lightest": {
+          "value": "{ color.base.gray-cool.4.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "lighter": {
+          "value": "{ color.base.gray-cool.10.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "light": {
+          "value": "{ color.base.gray-cool.30.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "base": {
+          "value": "{ color.base.gray-cool.50.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "dark": {
+          "value": "{ color.base.gray-cool.60.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "darker": {
+          "value": "{ color.base.gray-cool.80.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "darkest": {
+          "value": "{ color.base.gray-cool.90.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        }
+      }
+    }
+  }
+}

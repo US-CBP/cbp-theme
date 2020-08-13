@@ -1,0 +1,44 @@
+// Variables for use as CSS variables
+// CBP CSS Variables
+:root {
+
+  /* CBP Color CSS Variables */
+  // CBP Primary Color Palette
+  --cbp-danger: #{$cbp-danger};
+  --cbp-default: #{$cbp-default};
+  --cbp-info: #{$cbp-info};
+  --cbp-live: #{$cbp-live};
+  --cbp-primary: #{$cbp-primary};
+  --cbp-success: #{$cbp-success};
+  --cbp-warning: #{$cbp-warning};
+  --cbp-universal-header: #{$universal-header};
+  // CBP Subtle Color Palette
+  --subtle-danger: #{$subtle-danger};
+  --subtle-info: #{$subtle-info};
+  --subtle-primary: #{$subtle-primary};
+  --subtle-success: #{$subtle-success};
+  --subtle-warning: #{$subtle-warning};
+  // CBP Gray Color Palette
+  --grey: #{$grey};
+  --grey-dark: #{$grey-dark};
+  --grey-darker: #{$grey-darker};
+  --grey-light: #{$grey-light};
+  --grey-lighter: #{$grey-lighter};
+  --white: #{$white};
+  --grey-base: #{$grey-base};
+  --grey-lightest: #{$grey-lightest};
+  --grey-medium: #{$grey-medium};
+  /* CBP Spacing CSS Variables */
+  --cbp-micro-space: #{$cbp-micro-space};
+  --cbp-extra-sm-space: #{$cbp-extra-sm-space};
+  --cbp-sm-space: #{$cbp-sm-space};
+  --cbp-reg-space: #{$cbp-reg-space};
+  --cbp-lg-space: #{$cbp-lg-space};
+  --cbp-extra-lg-space: #{$cbp-extra-lg-space};
+  /* CBP Font Weight CSS Variables */
+  --cbp-weight-thin: #{$cbp-weight-thin};
+  --cbp-weight-light: #{$cbp-weight-light};
+  --cbp-weight-regular: #{$cbp-weight-regular};
+  --cbp-weight-medium: #{$cbp-weight-medium};
+  --cbp-weight-bold: #{$cbp-weight-bold};
+}
