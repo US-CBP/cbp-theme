@@ -1,10 +1,9 @@
-@import "../../../../ds-css/dist/css/cbp-ds.min.css";
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
-@import url('https://us-cbp.github.io/cbp-theme/design-system/css/updated-styles.css');
+@import "../../../../ds-css/dist/css/cbp-ds.min.css";
 
+// @import url('https://us-cbp.github.io/cbp-theme/design-system/css/updated-styles.css');
 
 /*
   !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!!
@@ -49,6 +48,8 @@
 }
 
 /* SCSS IMPORTS */
+@import "../../ds-common-styles/ds-common-styles.scss";
 @import "../header/header";
 @import "../content-header/contentHeader";
-@import "../navigation/navigation.scss";
+@import "../navigation/navigation";
+

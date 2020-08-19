@@ -1,22 +1,15 @@
 @use "../config/variables";
 
-/* CBP Bulma overides */
-$body-size: 14px;
-$body-font-size: 1rem;
-// Overrides default Bulma border color for box tabs into a darker grey.
-// $tabs-border-bottom-color: #c7c7c7;
-// $tabs-boxed-link-active-border-color: #c7c7c7;
-// $tabs-boxed-link-hover-border-bottom-color: #c7c7c7;
-// $tabs-boxed-link-active-border-color: #c7c7c7;
-$tabs-border-bottom-width: 2px;
+/* Moved most of the default html & body selector properties into _vendor.scss, because Bulma already has set base variables that can be overriden.
+When we start moving off of Bulma, set selector variables here. */
 
 html {
-  color: variables.$grey-darker;
-  font-size: $body-size;
+  // color: variables.$grey-darker;
+  // font-size: 14px;
   letter-spacing: variables.$cbp-font-spacing;
-  line-height: variables.$cbp-height-20;
+  // line-height: variables.$cbp-height-20;
 }
-
-body {
-  font-size: $body-font-size;
-}
+// body {
+// font-family: "Roboto", "Calibri", "Tahoma", sans-serif;
+// font-size: 1rem;
+// }

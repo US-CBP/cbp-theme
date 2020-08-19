@@ -12,6 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: [require("path").resolve(__dirname, "node_modules")],
+        implementation: require("sass")
       },
     },
     `gatsby-plugin-smoothscroll`,

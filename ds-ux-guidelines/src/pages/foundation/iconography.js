@@ -851,7 +851,7 @@ const IconographyPage = () => (
 
             <h2 className="cbp-heading-2">Affordances</h2>
             <p className="cbp-body">
-              n the past, interfaces for digital products used designs that very
+              In the past, interfaces for digital products used designs that very
               closely related to the physical world. Buttons looked like real,
               physical buttons with complex gradients and pressed states that
               mimicked the action of pressing an actual button. This

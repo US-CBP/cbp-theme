@@ -3,8 +3,6 @@ import React from "react"
 
 import Layout from "../ds-components/layout/layout"
 import ContentHeader from "../ds-components/content-header/contentHeader"
-
-/* import Image from "../ds-components/image" */
 import SEO from "../ds-components/seo"
 
 const IndexPage = () => (

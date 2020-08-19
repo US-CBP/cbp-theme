@@ -1,27 +1,26 @@
-@use "../../../../ds-css/src/styles/cbp-ds.scss" as cbp-theme;
-
 /*
   !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!!
 
 */
+@use "../../../../ds-css/src/styles/config";
 
 .cbp-header {
-  color: cbp-theme.$cbp-default;
+  color: config.$cbp-default;
   box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
   grid-area: header;
   z-index: 100;
 
   a {
-    color: cbp-theme.$cbp-default;
+    color: config.$cbp-default;
   }
 
   .tabs a {
-    color: cbp-theme.$cbp-primary;
+    color: config.$cbp-primary;
   }
 
   &__skipnav {
-    background: cbp-theme.$cbp-default;
-    color: cbp-theme.$cbp-primary !important;
+    background: config.$cbp-default;
+    color: config.$cbp-primary !important;
 
     left: 0;
     padding: 0.5rem 1rem;
@@ -44,7 +43,7 @@
   }
 
   &__main {
-    background: cbp-theme.$universal-header;
+    background: config.$universal-header;
     transition: height 0.2s;
     &--hidden {
       height: 0;
@@ -63,11 +62,11 @@
 
   &__sub {
 
-    background: cbp-theme.$grey-lightest;
-    color: cbp-theme.$grey-base;
+    background: config.$grey-lightest;
+    color: config.$grey-base;
 
     a {
-      color: cbp-theme.$cbp-primary;
+      color: config.$cbp-primary;
     }
 
     .level-item {
