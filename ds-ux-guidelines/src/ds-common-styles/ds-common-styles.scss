@@ -1,7 +1,7 @@
 /*
   Common styles shared across Design System site.
 */
-@import "../../../ds-css/src/styles/cbp-ds.scss";
+@use ".../../../../../ds-css/src/styles/config";
 
 /* iFrame style for height. Need to revisit this. */
 iframe {
@@ -18,27 +18,27 @@ iframe {
   margin-right: 0;
 
   section {
-    margin: 0 $cbp-extra-lg-space;
+    margin: 0 config.$cbp-extra-lg-space;
   }
 
   //heading for main sections
   h2 {
     @extend .cbp-spacing-stack--large;
-    padding-top: $cbp-lg-space;
+    padding-top: config.$cbp-lg-space;
     font-weight: 500;
   }
 
   h3 {
     @extend .cbp-spacing-stack--regular;
-    padding-top: $cbp-lg-space;
+    padding-top: config.$cbp-lg-space;
   }
 
   h4,
   h5,
   h6 {
     @extend .cbp-spacing-stack--small;
-    padding-top: $cbp-sm-space;
-    color: $grey-dark;
+    padding-top: config.$cbp-sm-space;
+    color: config.$grey-dark;
   }
 
   h2+p,
@@ -46,7 +46,7 @@ iframe {
   h4+p,
   h5+p,
   h6+p {
-    @extend .cbp-spacing-stack--small;
+    @extend .cbp-spacing-stack--small
   }
 
   .cbp-body+.cbp-body {
@@ -61,7 +61,7 @@ iframe {
   .table,
   img {
     @extend .cbp-spacing-stack--small;
-    padding-top: $cbp-sm-space;
+    padding-top: config.$cbp-sm-space;
     max-width: 70vw;
   }
 
@@ -88,7 +88,7 @@ hr {
   clear: both;
   display: block;
   width: 50vw;
-  background-color: $grey-lightest;
+  background-color: config.$grey-lightest;
   height: 2px;
 
 }
@@ -120,9 +120,6 @@ hr {
   //override bulma tabs margin default (mixins.sass)
   margin-bottom: 0 !important;
 }
-
-
-
 
 .wrapper {
   display: grid;

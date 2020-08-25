@@ -1,0 +1,7 @@
+@use "../config/variables";
+
+.button {
+  font-weight: variables.$cbp-weight-medium;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,130 @@
+@use "variables";
+
+/* Spacing sizes */
+
+/* Square Inset */
+.cbp-spacing-square {
+  &--micro {
+    padding: variables.$cbp-micro-space;
+  }
+
+  &--xsmall {
+    padding: variables.$cbp-extra-sm-space;
+  }
+
+  &--small {
+    padding: variables.$cbp-sm-space;
+  }
+
+  &--regular {
+    padding: variables.$cbp-reg-space;
+  }
+
+  &--large {
+    padding: variables.$cbp-lg-space;
+  }
+
+  &--xlarge {
+    padding: variables.$cbp-extra-lg-space;
+  }
+}
+
+/* Squish Inset */
+.cbp-spacing-squish {
+  &--micro {
+    padding: variables.$cbp-micro-space variables.$cbp-extra-sm-space;
+  }
+
+  &--xsmall {
+    padding: variables.$cbp-extra-sm-space variables.$cbp-sm-space;
+  }
+
+  &--small {
+    padding: variables.$cbp-sm-space variables.$cbp-reg-space;
+  }
+
+  &--regular {
+    padding: variables.$cbp-reg-space variables.$cbp-lg-space;
+  }
+
+  &--large {
+    padding: variables.$cbp-lg-space variables.$cbp-extra-lg-space;
+  }
+}
+
+/* Stretch Inset */
+.cbp-spacing-stretch {
+  &--micro {
+    padding: variables.$cbp-extra-sm-space variables.$cbp-micro-space;
+  }
+
+  &--xsmall {
+    padding: variables.$cbp-sm-space variables.$cbp-extra-sm-space;
+  }
+
+  &--small {
+    padding: variables.$cbp-reg-space variables.$cbp-sm-space;
+  }
+
+  &--regular {
+    padding: variables.$cbp-lg-space variables.$cbp-reg-space;
+  }
+
+  &--large {
+    padding: variables.$cbp-extra-lg-space variables.$cbp-lg-space;
+  }
+}
+
+/* Stack Spacing */
+.cbp-spacing-stack {
+  &--micro {
+    padding-bottom: variables.$cbp-micro-space;
+  }
+
+  &--xsmall {
+    padding-bottom: variables.$cbp-extra-sm-space;
+  }
+
+  &--small {
+    padding-bottom: variables.$cbp-sm-space;
+  }
+
+  &--regular {
+    padding-bottom: variables.$cbp-reg-space;
+  }
+
+  &--large {
+    padding-bottom: variables.$cbp-lg-space;
+  }
+
+  &--xlarge {
+    padding-bottom: variables.$cbp-extra-lg-space;
+  }
+}
+
+/* Inline Spacing */
+.cbp-spacing-inline {
+  &--micro {
+    padding-right: variables.$cbp-micro-space;
+  }
+
+  &--xsmall {
+    padding-right: variables.$cbp-extra-sm-space;
+  }
+
+  &--small {
+    padding-right: variables.$cbp-sm-space;
+  }
+
+  &--regular {
+    padding-right: variables.$cbp-reg-space;
+  }
+
+  &--large {
+    padding-right: variables.$cbp-lg-space;
+  }
+
+  &--xlarge {
+    padding-right: variables.$cbp-extra-lg-space;
+  }
+}

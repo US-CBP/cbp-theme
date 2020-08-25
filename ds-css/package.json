@@ -30,6 +30,7 @@
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.23.1",
     "sass-loader": "^8.0.0",
+    "style-dictionary": "^2.10.1",
     "stylelint": "^11.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.11.1",
@@ -48,7 +49,8 @@
     "node:clean": "rm package-lock.json && rm -rf node_modules && npm i",
     "watch": "webpack --mode production --watch",
     "webpack:dev": "webpack --mode development",
-    "webpack": "webpack --mode production"
+    "webpack": "webpack --mode production",
+    "style-dictionary": "style-dictionary build"
   },
   "husky": {
     "hooks": {
