@@ -3,13 +3,25 @@
 // StyleDictionary.swift
 //
 // Do not edit directly
-// Generated on Mon, 03 Aug 2020 20:48:28 GMT
+// Generated on Thu, 03 Sep 2020 13:56:58 GMT
 //
 
 
 import UIKit
 
 public class StyleDictionary {
+    public static let assetFontRobotoBlackItalicTtf = "/fonts/Roboto-BlackItalic.ttf"
+    public static let assetFontRobotoBlackTtf = "/fonts/Roboto-Black.ttf"
+    public static let assetFontRobotoBoldItalicTtf = "/fonts/Roboto-BoldItalic.ttf"
+    public static let assetFontRobotoBoldTtf = "/fonts/Roboto-Bold.ttf"
+    public static let assetFontRobotoItalicTtf = "/fonts/Roboto-Italic.ttf"
+    public static let assetFontRobotoLightItalicTtf = "/fonts/Roboto-LightItalic.ttf"
+    public static let assetFontRobotoLightTtf = "/fonts/Roboto-Light.ttf"
+    public static let assetFontRobotoMediumItalicTtf = "/fonts/Roboto-MediumItalic.ttf"
+    public static let assetFontRobotoMediumTtf = "/fonts/Roboto-Medium.ttf"
+    public static let assetFontRobotoRegularTtf = "/fonts/Roboto-Regular.ttf"
+    public static let assetFontRobotoThinItalicTtf = "/fonts/Roboto-ThinItalic.ttf"
+    public static let assetFontRobotoThinTtf = "/fonts/Roboto-Thin.ttf"
     public static let colorBaseBlack = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha:1)
     public static let colorBaseBlue10 = UIColor(red: 0.812, green: 0.910, blue: 1.000, alpha:1)
     public static let colorBaseBlue20 = UIColor(red: 0.631, green: 0.827, blue: 1.000, alpha:1)

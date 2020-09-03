@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Aug 2020 15:51:52 GMT
+ * Generated on Thu, 03 Sep 2020 13:56:58 GMT
  */
 
 :root {
@@ -301,6 +301,18 @@
   --color-ui-danger-base: #d54309;
   --color-ui-danger-dark: #9c3d10;
   --color-ui-danger-darker: #63340f;
+  --asset-font-roboto-bold-ttf: "/fonts/Roboto-Bold.ttf";
+  --asset-font-roboto-bold-italic-ttf: "/fonts/Roboto-BoldItalic.ttf";
+  --asset-font-roboto-black-ttf: "/fonts/Roboto-Black.ttf";
+  --asset-font-roboto-black-italic-ttf: "/fonts/Roboto-BlackItalic.ttf";
+  --asset-font-roboto-italic-ttf: "/fonts/Roboto-Italic.ttf";
+  --asset-font-roboto-light-ttf: "/fonts/Roboto-Light.ttf";
+  --asset-font-roboto-light-italic-ttf: "/fonts/Roboto-LightItalic.ttf";
+  --asset-font-roboto-medium-ttf: "/fonts/Roboto-Medium.ttf";
+  --asset-font-roboto-medium-italic-ttf: "/fonts/Roboto-MediumItalic.ttf";
+  --asset-font-roboto-regular-ttf: "/fonts/Roboto-Regular.ttf";
+  --asset-font-roboto-thin-ttf: "/fonts/Roboto-Thin.ttf";
+  --asset-font-roboto-thin-italic-ttf: "/fonts/Roboto-ThinItalic.ttf";
   --size-font-body: 14rem; /* Default text class for paragraphs of text, and are directly linked to the semantic <p> tag. */
   --size-font-heading-6: 16rem;
   --size-font-heading-5: 20rem;

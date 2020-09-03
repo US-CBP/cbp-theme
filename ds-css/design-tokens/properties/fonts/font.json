@@ -1,0 +1,44 @@
+{
+  "asset": {
+    "font": {
+      "roboto": {
+        "bold": {
+          "ttf" : { "value": "/fonts/Roboto-Bold.ttf" }
+        },
+        "bold-italic": {
+          "ttf" : { "value": "/fonts/Roboto-BoldItalic.ttf" }
+        },
+        "black": {
+          "ttf" : { "value": "/fonts/Roboto-Black.ttf" }
+        },
+        "black-italic": {
+          "ttf" : { "value": "/fonts/Roboto-BlackItalic.ttf" }
+        },
+        "italic": {
+          "ttf" : { "value": "/fonts/Roboto-Italic.ttf" }
+        },
+        "light": {
+          "ttf" : { "value": "/fonts/Roboto-Light.ttf" }
+        },
+        "light-italic": {
+          "ttf" : { "value": "/fonts/Roboto-LightItalic.ttf" }
+        },
+        "medium": {
+          "ttf" : { "value": "/fonts/Roboto-Medium.ttf" }
+        },
+        "medium-italic": {
+          "ttf" : { "value": "/fonts/Roboto-MediumItalic.ttf" }
+        },
+        "regular": {
+          "ttf" : { "value": "/fonts/Roboto-Regular.ttf" }
+        },
+        "thin": {
+          "ttf" : { "value": "/fonts/Roboto-Thin.ttf" }
+        },
+        "thin-italic": {
+          "ttf" : { "value": "/fonts/Roboto-ThinItalic.ttf" }
+        }
+      }
+    }
+  }
+}
