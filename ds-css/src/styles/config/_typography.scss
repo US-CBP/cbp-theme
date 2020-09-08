@@ -2,11 +2,7 @@
 @use "variables";
 @use "../globals/scss/variables" as font;
 
-/* Font Mixins */
-@mixin dark {
-  color: variables.$grey-lightest;
-}
-
+/* Roboto Regular */
 @font-face {
   font-family: "Roboto";
   src: url(font.$asset-font-roboto-regular-ttf) format("truetype");
@@ -26,6 +22,29 @@
   src: url(font.$asset-font-roboto-bold-ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(font.$asset-font-roboto-black-ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Roboto Mono */
+@font-face {
+  font-family: "RobotoMono";
+  src: url(font.$asset-font-roboto-mono-regular-ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url(font.$asset-font-roboto-mono-italic-ttf) format("truetype");
+}
+
+/* Font Mixins */
+@mixin dark {
+  color: variables.$grey-lightest;
 }
 
 /* Font Sizes Styling */

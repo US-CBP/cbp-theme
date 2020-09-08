@@ -3,6 +3,7 @@
 */
 @use ".../../../../../ds-css/src/styles/config";
 
+
 /* iFrame style for height. Need to revisit this. */
 iframe {
   height: 358px !important;
@@ -81,6 +82,10 @@ iframe {
   &:last-child {
     @extend .cbp-spacing-stack--large;
   }
+}
+
+.monospace-text {
+  font-family: "RobotoMono", monospace;
 }
 
 hr {

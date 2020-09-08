@@ -3,7 +3,7 @@
 // fontSizes.m
 //
 // Do not edit directly
-// Generated on Thu, 03 Sep 2020 13:56:58 GMT
+// Generated on Tue, 08 Sep 2020 16:45:31 GMT
 //
 
 #import "FontSize.h"

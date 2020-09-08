@@ -3,42 +3,52 @@
     "font": {
       "roboto": {
         "bold": {
-          "ttf" : { "value": "/fonts/Roboto-Bold.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Bold.ttf" }
         },
         "bold-italic": {
-          "ttf" : { "value": "/fonts/Roboto-BoldItalic.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-BoldItalic.ttf" }
         },
         "black": {
-          "ttf" : { "value": "/fonts/Roboto-Black.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Black.ttf" }
         },
         "black-italic": {
-          "ttf" : { "value": "/fonts/Roboto-BlackItalic.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-BlackItalic.ttf" }
         },
         "italic": {
-          "ttf" : { "value": "/fonts/Roboto-Italic.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Italic.ttf" }
         },
         "light": {
-          "ttf" : { "value": "/fonts/Roboto-Light.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Light.ttf" }
         },
         "light-italic": {
-          "ttf" : { "value": "/fonts/Roboto-LightItalic.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-LightItalic.ttf" }
         },
         "medium": {
-          "ttf" : { "value": "/fonts/Roboto-Medium.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Medium.ttf" }
         },
         "medium-italic": {
-          "ttf" : { "value": "/fonts/Roboto-MediumItalic.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-MediumItalic.ttf" }
         },
         "regular": {
-          "ttf" : { "value": "/fonts/Roboto-Regular.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Regular.ttf" }
         },
         "thin": {
-          "ttf" : { "value": "/fonts/Roboto-Thin.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-Thin.ttf" }
         },
         "thin-italic": {
-          "ttf" : { "value": "/fonts/Roboto-ThinItalic.ttf" }
+          "ttf" : { "value": "/fonts/Roboto/Roboto-ThinItalic.ttf" }
         }
-      }
+      },
+
+      "robotoMono": {
+        "italic": {
+          "ttf" : { "value": "/fonts/RobotoMono/RobotoMono-Italic.ttf" }
+        },
+        "regular": {
+          "ttf" : { "value": "/fonts/RobotoMono/RobotoMono.ttf" }
+        }
     }
   }
 }
+}
+

@@ -302,8 +302,7 @@ const TypographyPage = () => (
             <div className="padding-bottom">
               <ul>
                 <li
-                  className="cbp-masthead-2"
-                  style={{ fontFamily: "Roboto Mono, monospace" }}
+                  className="cbp-masthead-2 monospace-text"
                 >
                   Thin (100)
                 </li>
