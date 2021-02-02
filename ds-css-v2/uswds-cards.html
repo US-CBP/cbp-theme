@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USWDS Cards Page</title>
+    <link rel="stylesheet" href="dist/styles.css" /></head
+  ><style>
+    @media screen and (max-width: 63em) {
+      .cbp-app-header {
+        display: block;
+      }
+    }
+
+    input[type='checkbox'] {
+      display: none;
+    }
+
+    label {
+      color: black;
+      font-weight: 700;
+      margin-top: 10px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    label:after {
+      content: 'MORE';
+    }
+
+    input:checked ~ label:after {
+      content: 'LESS';
+    }
+
+    .inner {
+      max-height: 100px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      width: inherit;
+    }
+
+    input:checked + .inner {
+      max-height: 500px;
+    }
+  </style>
+  <body>
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--extended">
+      <div style="background: #003366">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="extended-logo">
+            <em class="usa-logo__text"
+              ><a href="/" title="Home" aria-label="Home"
+                ><img
+                  src="assets/images/cbp-logo-white.svg"
+                  style="max-width: 6em" /></a
+            ></em>
+          </div>
+          <button class="usa-menu-btn">Menu</button>
+        </div>
+        <nav aria-label="Primary navigation" class="usa-nav">
+          <div class="usa-nav__inner">
+            <button class="usa-nav__close">
+              <img src="/assets/images/close.svg" role="img" alt="close" />
+            </button>
+            <div class="cbp-app-header display-flex grid-row">
+              <span
+                class="font-sans-lg grid-col-2 flex-align-self-center text-medium"
+                >Card Archetype</span
+              >
+              <ul class="usa-nav__primary usa-accordion grid-col-fill">
+                <li class="usa-nav__primary-item">
+                  <a class="usa-nav__link" href="javascript:void(0)"
+                    ><span>Child 1</span></a
+                  >
+                </li>
+                <li class="usa-nav__primary-item">
+                  <a class="usa-nav__link" href="javascript:void(0)"
+                    ><span>Child 2</span></a
+                  >
+                </li>
+                <li class="usa-nav__primary-item">
+                  <button
+                    class="usa-accordion__button usa-nav__link"
+                    aria-expanded="false"
+                    aria-controls="extended-nav-section-two"
+                  >
+                    <span>Child 3</span>
+                  </button>
+                  <ul id="extended-nav-section-two" class="usa-nav__submenu">
+                    <li class="usa-nav__submenu-item">
+                      <a href="#" class="">Navigation link</a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href="#" class="">Navigation link</a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href="#" class="">Navigation link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="usa-nav__primary-item">
+                  <a class="usa-nav__link" href="javascript:void(0)"
+                    ><span>Child 4</span></a
+                  >
+                </li>
+              </ul>
+              <form
+                class="usa-search usa-search--small flex-align-center grid-col-fill"
+                role="search"
+              >
+                <label class="usa-sr-only" for="extended-search-field-small"
+                  >Search small</label
+                ><input
+                  class="usa-input"
+                  id="extended-search-field-small"
+                  type="search"
+                  name="search"
+                /><button class="usa-button" type="submit">
+                  <span class="usa-sr-only">Search</span>
+                </button>
+              </form>
+            </div>
+            <div class="usa-nav__secondary">
+              <ul class="usa-nav__secondary-links">
+                <li class="usa-nav__secondary-item">
+                  <a href=""
+                    ><span class="text-white"
+                      ><i class="fas fa-th-large margin-right-05"></i>Card
+                      Archetype</span
+                    ></a
+                  >
+                </li>
+                <li class="usa-nav__secondary-item">
+                  <a href=""
+                    ><span class="text-white"
+                      ><i class="fas fa-comment margin-right-05"></i
+                      >Feedback</span
+                    ></a
+                  >
+                </li>
+                <li class="usa-nav__secondary-item">
+                  <a href=""
+                    ><span class="text-white"
+                      ><i class="fas fa-user margin-right-05"></i>User
+                      Name</span
+                    ></a
+                  >
+                </li>
+              </ul>
+              <div style="height: 40px"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" style="background: #fcfcfc">
+      <div class="grid-container margin-top-4">
+        <h1>All Applications</h1>
+        <div class="grid-row">
+          <div class="font-sans-3xs tablet:grid-col-fill margin-bottom-2">
+            <span class="margin-right-2"
+              ><i class="fas fa-circle" style="color: #009ec1"></i
+              ><em class="margin-left-1">Recently Updated</em></span
+            ><span
+              ><i class="fas fa-square" style="color: #4d8055"></i
+              ><em class="margin-left-1">Recently Added</em></span
+            >
+          </div>
+          <button
+            class="usa-button usa-button--outline desktop:grid-col-1 tablet:grid-col-2 grid-col-5"
+          >
+            <i
+              class="fas fa-filter font-sans-xs margin-right-1"
+              style="display: inline"
+            ></i
+            ><span>FILTER</span>
+          </button>
+        </div>
+        <hr
+          style="border-top: 3px solid #005ea2"
+          class="margin-top-205 margin-bottom-205"
+        />
+        <ul class="usa-card-group">
+          <li class="desktop:grid-col-3 tablet:grid-col-4 usa-card">
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">
+                  <i
+                    class="fas fa-circle margin-right-1"
+                    style="color: #009ec1"
+                  ></i
+                  >Card Title 1
+                </h2>
+              </header>
+              <div class="usa-card__body">
+                <div class="outer">
+                  <input type="checkbox" id="readmore" />
+                  <div class="inner">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Quaerat quisquam, eaque eius sequi fuga, assumenda tempora
+                    officia fugiat nobis libero expedita alias quas possimus
+                    blanditiis quo veritatis. Natus aliquam voluptas atque
+                    reprehenderit delectus blanditiis necessitatibus debitis
+                    maiores quos aut illum, quo eligendi corrupti incidunt,
+                    doloremque earum, quod corporis a quae sunt dignissimos.
+                    Velit consectetur, at similique dolores esse eum suscipit
+                    voluptatum. Nostrum, ut facilis? At reprehenderit, eveniet
+                    impedit labore similique ratione. Enim vero facere mollitia,
+                    reiciendis vitae omnis voluptas a voluptatem minima quod
+                    nesciunt ab modi amet eligendi aut et sequi quos eos
+                    tenetur? Debitis libero molestias nam necessitatibus ipsa
+                    qui aut, deleniti cum odit! Vitae voluptate recusandae, non
+                    illo incidunt quibusdam ad vero numquam assumenda facere
+                    dicta, quidem nam perspiciatis, dignissimos ipsum nobis
+                    minima illum et. Omnis cumque esse corporis ad id enim natus
+                    optio sint blanditiis, veniam sit explicabo quod asperiores
+                    facere eos nisi quibusdam. Reiciendis unde dicta quae veniam
+                    fugiat! Consequatur enim laboriosam ipsa voluptatibus
+                    aliquid! Vitae deleniti ipsam, eaque rem asperiores ipsa
+                    fugit neque! Et nulla tempore fugit quae officiis beatae
+                    aliquam mollitia odit, quam consequuntur. Placeat ipsam
+                    totam eveniet architecto sequi deserunt adipisci nostrum
+                    temporibus facere incidunt. Esse, itaque repellendus quae
+                    consequuntur suscipit magni error dolorem accusamus minus
+                    quasi molestias ab quis possimus voluptatum. Quia
+                    accusantium dolores iste ut explicabo dolorum magnam
+                    repellendus dolore. Velit nihil explicabo tempore harum
+                    voluptatum itaque consectetur necessitatibus, reiciendis ad
+                    odit ipsum veritatis aperiam rerum amet minima dolor placeat
+                    quis perspiciatis inventore unde? Eaque suscipit asperiores
+                    quis possimus, aut aliquam ex animi voluptatum error fugiat
+                    ipsum, doloremque fugit sit, eveniet reprehenderit enim
+                    corporis soluta harum tenetur qui earum similique! Ipsa
+                    porro dolores sed illo? Aperiam mollitia laudantium labore
+                    corporis exercitationem id consequuntur maxime fugit,
+                    dolorem optio, molestias perspiciatis molestiae, eius quam.
+                    Dolore sint quos libero quibusdam porro, vero nulla facere
+                    necessitatibus adipisci totam nesciunt deserunt rerum?
+                    Impedit fugit eos a sint, soluta praesentium voluptate
+                    recusandae architecto corporis doloremque similique
+                    distinctio. Corporis quam, nesciunt nisi fuga autem, nostrum
+                    impedit unde ducimus nam animi, similique alias beatae
+                    doloremque voluptatem aperiam nulla recusandae dolores.
+                    Eaque vero repellendus voluptate unde inventore harum, quod
+                    ex architecto fugit amet praesentium repellat enim
+                    aspernatur similique maxime sint molestias voluptates ea
+                    quaerat officia consectetur deleniti quibusdam. A veniam
+                    fugit at vel perferendis fugiat repellendus nihil magni et
+                    rem in laboriosam nobis quo odio voluptas placeat, omnis
+                    eveniet corporis inventore distinctio optio magnam sapiente
+                    consequatur officia. Ullam facere et pariatur, soluta eum
+                    excepturi impedit magnam corrupti nesciunt error quia vero
+                    quibusdam rerum consequatur fugiat quisquam illum fuga
+                    aspernatur id doloremque aperiam, deleniti recusandae
+                    laudantium! Hic eligendi itaque ab optio maxime quia
+                    similique vel ducimus nemo rerum. Accusamus eaque laudantium
+                    ducimus reprehenderit placeat sunt vitae voluptatum, nihil
+                    suscipit provident corrupti optio quia, velit eius beatae
+                    consectetur illum dolor nisi distinctio quam amet est
+                    aliquid. Soluta eligendi reprehenderit veritatis quibusdam
+                    sed nostrum facilis aperiam tempore assumenda fugit!
+                    Delectus optio harum quod nostrum praesentium saepe.
+                    Excepturi dolorum laudantium officiis culpa sunt
+                    voluptatibus. Consequuntur blanditiis quis eius pariatur ea
+                    libero? Commodi, repudiandae neque.
+                  </div>
+                  <label for="readmore"></label>
+                </div>
+              </div>
+              <div
+                class="usa-card__footer grid-row padding-top-3"
+                style="border-top: 2px solid #dfe1e2"
+              >
+                <button class="usa-button usa-button--outline grid-col">
+                  <i class="fas fa-info-circle margin-right-1"></i>Info
+                </button>
+                <button class="usa-button grid-col">
+                  <i class="fas fa-external-link-alt margin-right-1"></i>Go to
+                  app
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="desktop:grid-col-3 tablet:grid-col-4 usa-card">
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Card with media</h2>
+              </header>
+              <div class="usa-card__media">
+                <div class="usa-card__img">
+                  <img
+                    src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
+                    alt="A placeholder image"
+                  />
+                </div>
+              </div>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae. Excepturi nobis dolores molestias ! Quas quisquam
+                  a officia eos.
+                </p>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button">Visit Florida Keys</button>
+              </div>
+            </div>
+          </li>
+          <li
+            class="desktop:grid-col-3 tablet:grid-col-4 usa-card usa-card--header-first"
+          >
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Media and header first</h2>
+              </header>
+              <div class="usa-card__media">
+                <div class="usa-card__img">
+                  <img
+                    src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
+                    alt="A placeholder image"
+                  />
+                </div>
+              </div>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae.
+                </p>
+              </div>
+              <div
+                class="usa-card__footer grid-row padding-top-3"
+                style="border-top: 2px solid #dfe1e2"
+              >
+                <button class="usa-button usa-button--outline grid-col">
+                  <i class="fas fa-info-circle margin-right-1"></i>Info
+                </button>
+                <button class="usa-button grid-col">
+                  <i class="fas fa-external-link-alt margin-right-1"></i>Go to
+                  app
+                </button>
+              </div>
+            </div>
+          </li>
+          <li
+            class="desktop:grid-col-3 tablet:grid-col-4 usa-card usa-card--header-first"
+          >
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Inset media</h2>
+              </header>
+              <div class="usa-card__media usa-card__media--inset">
+                <div class="usa-card__img">
+                  <img
+                    src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
+                    alt="A placeholder image"
+                  />
+                </div>
+              </div>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae.
+                </p>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button">Visit Florida Keys</button>
+              </div>
+            </div>
+          </li>
+          <li
+            class="desktop:grid-col-3 tablet:grid-col-4 usa-card usa-card--header-first"
+          >
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Exdent media</h2>
+              </header>
+              <div class="usa-card__media usa-card__media--exdent">
+                <div class="usa-card__img">
+                  <img
+                    src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg"
+                    alt="A placeholder image"
+                  />
+                </div>
+              </div>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae.
+                </p>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button">Visit Florida Keys</button>
+              </div>
+            </div>
+          </li>
+          <li class="desktop:grid-col-3 tablet:grid-col-4 usa-card">
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Card</h2>
+              </header>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae. Excepturi nobis dolores molestias ! Quas quisquam
+                  a officia eos.
+                </p>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button">Visit Florida Keys</button>
+              </div>
+            </div>
+          </li>
+          <li class="desktop:grid-col-3 tablet:grid-col-4 usa-card">
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Card</h2>
+              </header>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae. Excepturi nobis dolores molestias ! Quas quisquam
+                  a officia eos.
+                </p>
+              </div>
+              <div
+                class="usa-card__footer grid-row padding-top-3"
+                style="border-top: 2px solid #dfe1e2"
+              >
+                <button class="usa-button usa-button--outline grid-col">
+                  <i class="fas fa-info-circle margin-right-1"></i>Info
+                </button>
+                <button class="usa-button grid-col">
+                  <i class="fas fa-external-link-alt margin-right-1"></i>Go to
+                  app
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="desktop:grid-col-3 tablet:grid-col-4 usa-card">
+            <div class="usa-card__container">
+              <header class="usa-card__header">
+                <h2 class="usa-card__heading">Card</h2>
+              </header>
+              <div class="usa-card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis earum tenetur quo cupiditate, eaque qui officia
+                  recusandae.
+                </p>
+              </div>
+              <div
+                class="usa-card__footer grid-row padding-top-3"
+                style="border-top: 2px solid #dfe1e2"
+              >
+                <button class="usa-button usa-button--outline grid-col">
+                  <i class="fas fa-info-circle margin-right-1"></i>Info
+                </button>
+                <button class="usa-button grid-col">
+                  <i class="fas fa-external-link-alt margin-right-1"></i>Go to
+                  app
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/aa019ad450.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/uswds.min.js"></script>
+  </body>
+</html>

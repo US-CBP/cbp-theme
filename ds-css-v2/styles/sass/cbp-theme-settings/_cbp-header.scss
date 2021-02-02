@@ -1,0 +1,282 @@
+$dhs-blue: #003366;
+
+.cbp-header {
+  background: $dhs-blue;
+  height: 80px;
+
+  //default color and font weight for the universal header
+  &-text {
+    color: white;
+    font-weight: 700;
+  }
+
+  i {
+    margin-right: $cbp-size-1;
+    color: #ffffff;
+  }
+
+  .cbp-container {
+    align-items: center;
+    height: inherit;
+    margin: auto $cbp-size-4;
+  }
+
+  //default button element has usa-button properties
+  button {
+    @extend .usa-button;
+  }
+
+  //changes to USWDS' usa-button class
+  .usa-button {
+    background-color: $dhs-blue;
+
+    &:hover {
+      background: rgb(255, 255, 255, 0.2);
+    }
+  }
+
+  //takes out default underline that comes with
+  //USWDS' usa-button--unstyled class, and adds cbp button text properties (all caps)
+  .cbp-external-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: $cbp-size-2;
+    @include cbp-text-button;
+  }
+
+  //Menu dropdown
+  .cbp-dropdown-item {
+    align-items: center;
+    display: block;
+    font-weight: 500;
+    min-height: $cbp-size-4;
+    height: inherit;
+    justify-content: left;
+    color: #ffffff;
+
+    > a {
+      color: inherit;
+      display: inherit;
+      text-decoration: none;
+      width: inherit;
+
+      &:hover {
+        background: rgb(255, 255, 255, 0.2);
+        color: #ffffff;
+      }
+
+      > span {
+        display: inherit;
+        padding: $cbp-size-1 $cbp-size-2;
+      }
+    }
+  }
+
+  //Recently Visited Applications text
+  &-subtext {
+    display: inline-block;
+    color: $cbp-accent-primary-light;
+    font-style: italic;
+    margin: $cbp-size-2 $cbp-size-2 0 $cbp-size-2;
+  }
+}
+
+.cbp-logo {
+  &-text {
+    color: white;
+    font-weight: 500;
+  }
+
+  &-mobile {
+    display: none;
+  }
+}
+
+.app-directory-btn {
+  width: 170px !important;
+}
+
+//dropdown styling for app directory and user profile.
+//desktop resolution
+.dropdown-content {
+  background: $dhs-blue;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  margin-top: $cbp-size-1;
+  min-width: 12em;
+  max-width: 15em;
+  position: absolute;
+  z-index: 1;
+
+  &.show {
+    display: block;
+  }
+}
+
+ul {
+  padding: 0;
+  margin-top: $cbp-size-1;
+}
+
+li {
+  list-style-type: none;
+  height: auto;
+  min-height: 32px;
+}
+
+//This is the header name for the mobile dropdowns,
+//default is hidden at desktop/tablet resolution.
+.dropdown-header-mobile {
+  display: none;
+
+  .usa-button {
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  //Removes the text in the header so that only the icons show.
+  button,
+  a {
+    > .cbp-header-text {
+      display: none;
+    }
+  }
+
+  //full screen dropdown menu
+  .dropdown-content {
+    background: $dhs-blue;
+    display: none;
+    height: 100vh;
+    left: 0;
+    max-width: 100vw;
+    padding: $cbp-size-4;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  //close button on the mobile dropdown
+  .usa-button {
+    max-width: 100px;
+    text-align: right;
+
+    .cbp-close-icon {
+      color: white;
+      font-size: 16px;
+    }
+  }
+
+  //headers
+  .dropdown-header-mobile {
+    display: flex;
+    & h2 {
+      @include cbp-text-heading-lg;
+      color: #ffffff;
+    }
+  }
+
+  .cbp-dropdown-item {
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+//tablet view (custom)
+@media (max-width: 54em) {
+  ul {
+    margin-left: $cbp-size-3;
+  }
+  .cbp-dropdown-item {
+    justify-content: left;
+  }
+
+  .icons-mobile {
+    display: flex;
+  }
+
+  .cbp-header-subtext {
+    margin: $cbp-size-4 $cbp-size-4 $cbp-size-1 36px;
+  }
+
+  .cbp-external-button {
+    display: block;
+    text-decoration: none;
+    margin: $cbp-size-2 auto auto auto;
+    color: #ffffff;
+  }
+
+  .dropdown-content {
+    margin: 0;
+  }
+
+  .cbp-dropdown-item {
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  //full screen dropdown menu
+  .dropdown-content {
+    background: $dhs-blue;
+    display: none;
+    height: 100vh;
+    left: 0;
+    max-width: 100vw;
+    padding: $cbp-size-4;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  //close button on the mobile dropdown
+  .usa-button {
+    max-width: 100px;
+    text-align: right;
+
+    .cbp-close-icon {
+      color: white;
+      font-size: 16px;
+    }
+  }
+
+  //headers
+  .dropdown-header-mobile {
+    display: flex;
+    & h2 {
+      @include cbp-text-heading-lg;
+      color: #ffffff;
+    }
+  }
+}
+
+//tablet view (USWDS)
+@media (max-width: 599px) {
+  //Changes full logo to meatball logo & CBP text.
+  .cbp-logo {
+    display: none;
+
+    &-mobile {
+      display: flex;
+    }
+    &-text {
+      margin: auto;
+      padding-left: $cbp-size-2;
+      @include cbp-text-heading-sm;
+    }
+  }
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USWDS Profile Page</title>
+    <link rel="stylesheet" href="dist/styles.css" /></head
+  ><style>
+    @media screen and (max-width: 63em) {
+      .cbp-app-header {
+        display: block;
+      }
+    }
+  </style>
+  <body>
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--extended">
+      <div style="background: #003366">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="extended-logo">
+            <em class="usa-logo__text"
+              ><a href="/" title="Home" aria-label="Home"
+                ><img
+                  src="assets/images/cbp-logo-white.svg"
+                  style="max-width: 6em" /></a
+            ></em>
+          </div>
+          <button class="usa-menu-btn">Menu</button>
+        </div>
+        <nav aria-label="Primary navigation" class="usa-nav">
+          <div class="usa-nav__inner">
+            <button class="usa-nav__close">
+              <img src="/assets/images/close.svg" role="img" alt="close" />
+            </button>
+            <div class="cbp-app-header display-flex grid-row">
+              <span
+                class="font-sans-lg grid-col-2 flex-align-self-center text-medium"
+                >Passenger App</span
+              >
+              <ul class="usa-nav__primary usa-accordion grid-col-fill">
+                <li class="usa-nav__primary-item">
+                  <a class="usa-nav__link" href="javascript:void(0)"
+                    ><span>Child 1</span></a
+                  >
+                </li>
+                <li class="usa-nav__primary-item">
+                  <a class="usa-nav__link" href="javascript:void(0)"
+                    ><span>Child 2</span></a
+                  >
+                </li>
+                <li class="usa-nav__primary-item">
+                  <button
+                    class="usa-accordion__button usa-nav__link"
+                    aria-expanded="false"
+                    aria-controls="extended-nav-section-two"
+                  >
+                    <span>Child 3</span>
+                  </button>
+                  <ul id="extended-nav-section-two" class="usa-nav__submenu">
+                    <li class="usa-nav__submenu-item">
+                      <a href="#" class="">Navigation link</a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href="#" class="">Navigation link</a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href="#" class="">Navigation link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="usa-nav__primary-item">
+                  <a class="usa-nav__link" href="javascript:void(0)"
+                    ><span>Child 4</span></a
+                  >
+                </li>
+              </ul>
+              <form
+                class="usa-search usa-search--small flex-align-center grid-col-fill"
+                role="search"
+              >
+                <label class="usa-sr-only" for="extended-search-field-small"
+                  >Search small</label
+                ><input
+                  class="usa-input"
+                  id="extended-search-field-small"
+                  type="search"
+                  name="search"
+                /><button class="usa-button" type="submit">
+                  <span class="usa-sr-only">Search</span>
+                </button>
+              </form>
+            </div>
+            <div class="usa-nav__secondary">
+              <ul class="usa-nav__secondary-links">
+                <li class="usa-nav__secondary-item">
+                  <a href=""
+                    ><span class="text-white"
+                      ><i class="fas fa-th-large margin-right-05"></i>Card
+                      Archetype</span
+                    ></a
+                  >
+                </li>
+                <li class="usa-nav__secondary-item">
+                  <a href=""
+                    ><span class="text-white"
+                      ><i class="fas fa-comment margin-right-05"></i
+                      >Feedback</span
+                    ></a
+                  >
+                </li>
+                <li class="usa-nav__secondary-item">
+                  <a href=""
+                    ><span class="text-white"
+                      ><i class="fas fa-user margin-right-05"></i>User
+                      Name</span
+                    ></a
+                  >
+                </li>
+              </ul>
+              <div style="height: 40px"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" style="background: #fcfcfc">
+      <div class="grid-container margin-top-2 margin-bottom-2">
+        <h1>Smithington, Jonathan</h1>
+        <hr
+          style="border-top: 3px solid #005ea2"
+          class="margin-top-105 margin-bottom-105"
+        />
+        <div class="grid-row">
+          <div class="display-flex grid-col margin-bottom-105">
+            <button class="usa-button usa-button--outline">
+              <i class="fas fa-arrow-left margin-right-1"></i>Back
+            </button>
+          </div>
+          <div class="display-flex flex-justify-end grid-col margin-bottom-105">
+            <button class="usa-button usa-button--outline">
+              <i class="fas fa-arrow-right margin-right-1"></i>Start Encounter
+            </button>
+          </div>
+        </div>
+        <div class="grid-row margin-bottom-105">
+          <div class="tablet:grid-col">
+            <img src="assets/images/profile-page/carousel.png" />
+          </div>
+          <div class="tablet:grid-col">
+            <h3 class="font-heading-lg">Biographic Information</h3>
+            <span class="cbp-text--body display-block"
+              >Last Name: Smithington</span
+            >
+            <span class="cbp-text--body display-block"
+              >First Name: Johnathan</span
+            >
+            <span class="cbp-text--body display-block"
+              >DOB-Age: 11/30/1974 - Age 46 Years Old
+            </span>
+            <span class="cbp-text--body display-block"
+              >Citizenship: United States of America</span
+            >
+            <span class="cbp-text--body display-block"
+              >Place of Birth: New York, NY USA</span
+            >
+            <span class="font-body-3xs display-block"
+              >United Person ID: XXXXXXXXX</span
+            >
+            <span class="cbp-text--body display-block">Sex: Male</span>
+            <span class="cbp-text--body display-block"
+              >Marital Status: Unknown</span
+            >
+            <span class="cbp-text--body display-block"
+              >Occupation: Unknown</span
+            >
+            <span class="cbp-text--body display-block"
+              >Passport #: XXXXXXXXXXXX</span
+            >
+            <span class="cbp-text--body display-block"
+              >Passport Issuer: United States of America</span
+            >
+            <span class="cbp-text--body display-block">VISA FOIL #: N/A</span>
+            <span class="cbp-text--body display-block">A #: N/A</span>
+            <span class="cbp-text--body display-block">FIN #: N/A</span>
+          </div>
+          <div class="tablet:grid-col">
+            <img
+              src="assets/images/profile-page/map.png"
+              class="display-block"
+            />
+            <div
+              class="usa-alert usa-alert--info usa-alert--no-icon margin-top-0"
+            >
+              <div class="usa-alert__body">
+                <p class="usa-alert__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="usa-accordion">
+          <!-- Use the accurate heading level to maintain the document outline -->
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="true"
+              aria-controls="a1"
+            >
+              Travel
+            </button>
+          </h2>
+          <div id="a1" class="usa-accordion__content">
+            <p class="cbp-text-body">
+              <b>[Body Text]</b> Congress shall make no law respecting an
+              establishment of religion, or prohibiting the free exercise
+              thereof; or abridging the freedom of speech, or of the press; or
+              the right of the people peaceably to assemble, and to petition the
+              Government for a redress of grievances.
+            </p>
+            <p class="cbp-text-subhead">
+              <b>[Subhead Text]</b> Congress shall make no law respecting an
+              establishment of religion, or prohibiting the free exercise
+              thereof; or abridging the freedom of speech, or of the press; or
+              the right of the people peaceably to assemble, and to petition the
+              Government for a redress of grievances.
+            </p>
+            <p class="cbp-text-button">Button Text</p>
+            <h1 class="cbp-text-heading-3xl">Heading 3XL</h1>
+            <h1 class="cbp-text-heading-2xl">Heading 2XL</h1>
+            <h1 class="cbp-text-heading-xl">Heading XL</h1>
+            <h1 class="cbp-text-heading-lg">Heading LG</h1>
+            <h2 class="cbp-text-heading-md">Heading MD</h2>
+            <h3 class="cbp-text-heading-sm">Heading SM</h3>
+            <h4 class="cbp-text-heading-xs">Heading XS</h4>
+            <h5 class="cbp-text-heading-2xs">Heading 2XS</h5>
+            <h5 class="cbp-text-heading-3xs">Heading 3XS</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius esse
+              tenetur necessitatibus nostrum officia qui. Ex maiores rem
+              accusamus quis autem molestiae tempora placeat. Esse, dolorum!
+              Repudiandae voluptate et velit veniam quod minima, corporis quas
+              natus vero, voluptates ad inventore illo adipisci. Quibusdam
+              inventore unde fuga, ducimus doloremque non magni illum eligendi
+              magnam nihil amet, porro libero quam alias minima quos cumque
+              soluta ratione ad! Pariatur, illo ipsum ipsa omnis id illum quasi
+              architecto dolores reprehenderit neque similique sunt vero earum
+              nisi magni! Autem quidem repellat, ducimus magnam id nulla, optio
+              quae doloremque quasi deleniti iste quaerat deserunt. Eum facilis
+              modi, inventore blanditiis aut voluptatem consequatur doloribus
+              vel et est voluptatum quod tempore, at quo non aperiam
+              repellendus! Consequuntur quidem magnam ab neque odit quaerat ipsa
+              vitae corrupti saepe, soluta quod, explicabo illum beatae
+              doloremque. Sunt ad rerum tenetur, minus doloremque, soluta
+              adipisci quis veritatis minima, accusantium obcaecati eaque
+              accusamus cum officia reprehenderit quia labore odit suscipit!
+              Reprehenderit sunt, fuga maiores dolore animi rem laudantium eaque
+              aspernatur, ullam accusamus hic. Earum, vitae assumenda? Dolorum
+              iste iusto perferendis, sapiente distinctio excepturi? Ab, omnis
+              veniam delectus repellendus est quis fugiat quam. Architecto in
+              sit molestiae dignissimos necessitatibus voluptas odit, corporis
+              esse nam?
+            </p>
+          </div>
+
+          <!-- Use the accurate heading level to maintain the document outline -->
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="a2"
+            >
+              Adverse Events
+            </button>
+          </h2>
+          <div id="a2" class="usa-accordion__content">
+            <p>
+              A well regulated Militia, being necessary to the security of a
+              free State, the right of the people to keep and bear Arms, shall
+              not be infringed.
+            </p>
+            <ul>
+              <li>This is a list item</li>
+              <li>Another list item</li>
+            </ul>
+          </div>
+
+          <!-- Use the accurate heading level to maintain the document outline -->
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="a3"
+            >
+              Documents
+            </button>
+          </h2>
+          <div id="a3" class="usa-accordion__content">
+            <p>
+              No Soldier shall, in time of peace be quartered in any house,
+              without the consent of the Owner, nor in time of war, but in a
+              manner to be prescribed by law.
+            </p>
+          </div>
+
+          <!-- Use the accurate heading level to maintain the document outline -->
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="a4"
+            >
+              Addresses
+            </button>
+          </h2>
+          <div id="a4" class="usa-accordion__content">
+            <p>
+              The right of the people to be secure in their persons, houses,
+              papers, and effects, against unreasonable searches and seizures,
+              shall not be violated, and no Warrants shall issue, but upon
+              probable cause, supported by Oath or affirmation, and particularly
+              describing the place to be searched, and the persons or things to
+              be seized.
+            </p>
+          </div>
+
+          <!-- Use the accurate heading level to maintain the document outline -->
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="a5"
+            >
+              Phones
+            </button>
+          </h2>
+          <div id="a5" class="usa-accordion__content">
+            <p>
+              No person shall be held to answer for a capital, or otherwise
+              infamous crime, unless on a presentment or indictment of a Grand
+              Jury, except in cases arising in the land or naval forces, or in
+              the Militia, when in actual service in time of War or public
+              danger; nor shall any person be subject for the same offence to be
+              twice put in jeopardy of life or limb; nor shall be compelled in
+              any criminal case to be a witness against himself, nor be deprived
+              of life, liberty, or property, without due process of law; nor
+              shall private property be taken for public use, without just
+              compensation.
+            </p>
+          </div>
+
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="a6"
+            >
+              Emails
+            </button>
+          </h2>
+          <div id="a6" class="usa-accordion__content">
+            <p>
+              No person shall be held to answer for a capital, or otherwise
+              infamous crime, unless on a presentment or indictment of a Grand
+              Jury, except in cases arising in the land or naval forces, or in
+              the Militia, when in actual service in time of War or public
+              danger; nor shall any person be subject for the same offence to be
+              twice put in jeopardy of life or limb; nor shall be compelled in
+              any criminal case to be a witness against himself, nor be deprived
+              of life, liberty, or property, without due process of law; nor
+              shall private property be taken for public use, without just
+              compensation.
+            </p>
+          </div>
+
+          <h2 class="usa-accordion__heading">
+            <button
+              class="usa-accordion__button"
+              aria-expanded="false"
+              aria-controls="a7"
+            >
+              Known Associates
+            </button>
+          </h2>
+          <div id="a7" class="usa-accordion__content">
+            <p>
+              No person shall be held to answer for a capital, or otherwise
+              infamous crime, unless on a presentment or indictment of a Grand
+              Jury, except in cases arising in the land or naval forces, or in
+              the Militia, when in actual service in time of War or public
+              danger; nor shall any person be subject for the same offence to be
+              twice put in jeopardy of life or limb; nor shall be compelled in
+              any criminal case to be a witness against himself, nor be deprived
+              of life, liberty, or property, without due process of law; nor
+              shall private property be taken for public use, without just
+              compensation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/aa019ad450.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/uswds.min.js"></script>
+  </body>
+</html>

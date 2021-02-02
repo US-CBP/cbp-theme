@@ -47,6 +47,9 @@
   }
 }
 /* SCSS IMPORTS */
+/* SCSS Style Guide Components Imports */
 @import "../header/header";
 @import "../content-header/contentHeader";
 @import "../navigation/navigation.scss";
+/* SCSS Components Imports */
+@import "../../components/universal-header/universal-header.scss";

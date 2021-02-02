@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <script
+      src="https://kit.fontawesome.com/aa019ad450.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+
+  <style>
+    .wrapper {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+      overflow: hidden;
+    }
+
+    .wave {
+      width: 900px;
+      height: 950px;
+      position: absolute;
+      top: -25%;
+      left: 50%;
+      margin-left: -500px;
+      margin-top: -500px;
+      border-radius: 35%;
+      background: rgba(255, 255, 255, 0.75);
+      animation: wave 15s infinite linear;
+    }
+
+    @keyframes wave {
+      from {
+        transform: rotate(0deg);
+      }
+      from {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <body style="text-align: center">
+    <div class="wrapper">
+      <div class="grid-container">
+        <h1 class="margin-top-9 text-ls-1" style="color: #003366">Welcome.</h1>
+
+        <h3 class="font-sans-md text-md text-ls-1 text-base-darkest">
+          View Archetype Pages
+        </h3>
+        <div class="margin-bottom-1">
+          <a href="uswds-cards.html" class="usa-link">Card Layout</a>
+        </div>
+        <div>
+          <a href="uswds-profile.html" class="usa-link">Profile Layout (WIP)</a>
+        </div>
+
+        <h3
+          class="font-sans-md text-md text-ls-1 text-base-darkest padding-top-2"
+        >
+          Go to USWDS Test Pages
+        </h3>
+        <div class="margin-bottom-1">
+          <a
+            href="https://uswds-example-ray.herokuapp.com/index.html"
+            class="usa-link"
+            >Click Here</a
+          >
+        </div>
+      </div>
+      <span
+        class="font-sans-3xs text-ls-1 text-base-dark"
+        style="position: absolute; bottom: 10px; right: 30%"
+        >Made with ♥️ by Creative Services</span
+      >
+    </div>
+
+    <div class="wave"></div>
+  </body>
+</html>

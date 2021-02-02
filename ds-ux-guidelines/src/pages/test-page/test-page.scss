@@ -46,6 +46,12 @@ $elRadius: 25px;
   width: $elRadius;
 }
 
+.cbp-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .cbp-grid {
   grid-template-rows: auto 40px;
   height: 100vh;
@@ -58,6 +64,106 @@ $elRadius: 25px;
 .top-margin {
   display: block;
   margin-top: var(--cbp-lg-space);
+}
+/* Universal Header */
+.cbp-universal-header {
+  box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
+  max-height: 104px;
+
+  &__skipnav {
+    background: #fff;
+    color: #00416a !important;
+    left: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: -3.8rem;
+    z-index: 100;
+    
+    &:focus {
+      top: 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  > nav {
+    align-content: center;
+    height: 52px;
+
+    > ul {
+      height: 100%;
+      
+      &.cbp-grid {
+        grid-template-rows: auto;
+      }
+    }
+    
+    li {
+      align-items: center;
+      display: flex;
+      height: 100%;
+
+      &:first-child {
+        b ~ a {
+          margin-left: var(--cbp-lg-space);
+        }
+      }
+
+      &:nth-child(2) {
+        justify-content: flex-end;
+        a { padding-left: var(--cbp-lg-space); }
+      }
+
+    }
+  }
+  
+  &__main {
+    background: #003e65;
+    color: #fff;
+    transition:height 0.3s ease-out;
+
+    a {
+      color: #fff;
+    }
+
+    &.expanded {
+      height: 104px;
+    }
+
+    .uh-lg- {
+      &up,
+      &down {
+        display: flex;
+        height: 52px;
+        justify-content: space-between;
+      }
+
+      &left,
+      &right {
+        display: none;
+      }
+
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .uh-lg- {
+        &up,
+        &down {
+          display: none;
+          height: 52px;
+        }
+
+        &left,
+        &right {
+          display: flex;
+        }
+      }
+    }
+            
+    
+
+  }
+
 }
 
 .test {

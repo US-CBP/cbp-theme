@@ -1,0 +1,6 @@
+@function cbp-column-offset-length($length, $column) {
+  $column-size: 100% / $column;
+  $column-offset-length: $column-size * $length;
+
+  @return $column-offset-length;
+}

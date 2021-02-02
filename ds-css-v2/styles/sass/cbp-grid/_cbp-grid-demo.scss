@@ -1,0 +1,47 @@
+#cbp-grid-demo {
+  &.cbp-grid-container {
+    //changed from 100vh to inherit to fill height of universal header
+    //and align vertically with flex.
+    height: inherit;
+  }
+
+  .cbp-row:first-child {
+    margin-top: 1rem;
+  }
+
+  .cbp-row > div {
+    background-color: #e1e7f1;
+    border: 1px solid;
+    margin-bottom: 1rem !important;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @include cbp-small-grid {
+    span::after {
+      content: '.cbp-grid-col-4-sm';
+    }
+
+    // .cbp-row > div { margin-bottom: 1rem !important; }
+  }
+
+  @include cbp-medium-grid {
+    span::after {
+      content: '.cbp-grid-col-4-md';
+    }
+
+    // .cbp-row > div { margin-bottom: 1rem !important; }
+  }
+
+  @include cbp-large-grid {
+    span::after {
+      content: '.cbp-grid-col-3-lg';
+    }
+  }
+
+  @include cbp-extra-large-grid {
+    span::after {
+      content: '.cbp-grid-col-3-lg';
+    }
+  }
+}
