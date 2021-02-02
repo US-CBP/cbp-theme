@@ -1,0 +1,23 @@
+@mixin cbp-small-grid {
+  @media only screen and (max-width : 599px) {
+    @content;
+  }
+}
+
+@mixin cbp-medium-grid {
+  @media only screen and (min-width : 600px) and (max-width : 1023px) {
+    @content;    
+  }
+}
+
+@mixin cbp-large-grid {
+  @media only screen and (min-width : 1024px) and (max-width : 1439px) {
+    @content;
+  }
+}
+
+@mixin cbp-extra-large-grid {
+  @media only screen and (min-width : 1440px) {
+    @content;
+  }
+}

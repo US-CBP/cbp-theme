@@ -1,0 +1,22 @@
+@mixin grid-cols($num-cols, $margin, $size) {
+  
+  @for $i from 1 through $num-cols {
+    $width: cbp-column-offset-length($i,$num-cols);
+
+    .cbp-grid-col-#{$i}-#{$size} {
+      margin: 0 #{$margin}px !important;
+      width: calc(#{$width} - #{$margin * 2}px) !important;
+    }
+  }
+}
+
+@mixin grid-offset($num-offset, $margin, $size) {
+
+  @for $i from 1 to $num-offset {
+    $offset: cbp-column-offset-length($i,$num-offset);
+    
+    .cbp-grid-offset-#{$i}-#{$size} {
+      margin-left: calc(#{$offset} + #{$margin}px) !important;
+    }
+  }
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Archetype Layout</title>
+    <link rel="stylesheet" href="styles/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/aa019ad450.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="usa-overlay"></div>
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <header class="usa-header usa-header--extended">
+      <div style="background-color: #003366">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="extended-logo">
+            <img
+              src="assets/images/cbp-logo-white.svg"
+              alt="CBP Logo"
+              style="max-width: 6em"
+              class="cbp-logo__desktop"
+            />
+            <div class="cbp-logo__mobile display-flex">
+              <img
+                src="assets/images/cbp-logo-circle.svg"
+                alt="CBP Logo"
+                class="cbp-logo__mobile"
+              /><span
+                class="text-white text-medium font-sans-lg"
+                style="margin: auto"
+                >CBP</span
+              >
+            </div>
+          </div>
+          <div class="margin-right-2 cbp-universal-header--icons">
+            <button
+              class="usa-button usa-button--unstyled cbp-universal-header--icons margin-right-3"
+            >
+              <i class="fas fa-th font-ui-md text-white"></i></button
+            ><button
+              class="usa-button usa-button--unstyled cbp-universal-header--icons margin-right-3"
+            >
+              <i class="fas fa-comment font-ui-md text-white"></i></button
+            ><button
+              onClick="hideAppDrawer();"
+              id="cbp-universal-header--menu"
+              class="usa-menu-btn cbp-universal-header--icons"
+              style="margin-left: -12px"
+            >
+              <i class="fas fa-user margin-right-05 font-ui-md"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cbp-app-header__mobile display-flex">
+        <span class="font-ui-lg text-medium" style="margin: auto 0 auto 1em"
+          >Card Archetype</span
+        ><button onClick="hideUserDrawer()" class="usa-menu-btn cbp-menu-btn">
+          <i class="fas fa-bars text-primary"></i>
+        </button>
+      </div>
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <div class="usa-nav__inner">
+          <button class="usa-nav__close">
+            <img src="/assets/images/close-white.svg" role="img" alt="close" />
+          </button>
+          <ul
+            id="applicationHeaderMobile"
+            class="usa-nav__primary usa-accordion cbp-app-subnav"
+          >
+            <li
+              class="usa-nav__primary-item cbp-app-subnav--header"
+              style="margin: auto 24px auto 1rem"
+            >
+              <span class="font-sans-lg text-medium">Card Archetype</span>
+            </li>
+            <!-- <form
+              class="cbp-mobile-search usa-search usa-search--small flex-align-center"
+              role="search"
+            >
+              <label class="usa-sr-only" for="extended-search-field-small"
+                >Search small</label
+              ><input
+                class="usa-input"
+                id="extended-search-field-small"
+                type="search"
+                name="search"
+              /><button class="usa-button" type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </form> -->
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 1</span></a
+              >
+            </li>
+            <li class="usa-nav__primary-item">
+              <button
+                class="usa-accordion__button usa-nav__link"
+                aria-expanded="false"
+                aria-controls="extended-nav-section-two"
+              >
+                <span>Child 2</span>
+              </button>
+              <ul id="extended-nav-section-two" class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class="">Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class="">Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class="">Navigation link</a>
+                </li>
+              </ul>
+            </li>
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 3</span></a
+              >
+            </li>
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 4</span></a
+              >
+            </li>
+
+            <form
+              class="usa-search usa-search--small flex-align-center"
+              role="search"
+            >
+              <label class="usa-sr-only" for="extended-search-field-small"
+                >Search small</label
+              ><input
+                class="usa-input"
+                id="extended-search-field-small"
+                type="search"
+                name="search"
+              /><button class="usa-button" type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </form>
+          </ul>
+          <div
+            id="userMenuMobile"
+            class="usa-nav__secondary cbp-universal-header--links"
+          >
+            <ul class="usa-nav__primary usa-accordion">
+              <li class="usa-nav__primary-item cbp-universal-header--button">
+                <button
+                  class="usa-accordion__button usa-nav__link cbp-universal-header--button"
+                  aria-expanded="false"
+                  aria-controls="extended-nav-section-one"
+                >
+                  <span class="text-white"
+                    ><i class="fas fa-th-large margin-right-05"></i>Card
+                    Archetype</span
+                  >
+                </button>
+                <ul id="extended-nav-section-one" class="usa-nav__submenu">
+                  <li class="usa-nav__submenu-item">
+                    <span class="text-white" style="opacity: 0.8"
+                      ><hr />
+                      <em>Recently Viewed Applications</em>
+                      <hr
+                    /></span>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#" class="usa-link--external"
+                      >Most Recent Application</a
+                    >
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#" class="usa-link--external"
+                      >Most Recent Application</a
+                    >
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#" class="usa-link--external"
+                      >Most Recent Application</a
+                    >
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#" class="usa-link--external"
+                      >Most Recent Application</a
+                    >
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#" class="usa-link--external"
+                      >Most Recent Application</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="usa-nav__primary usa-accordion flex-justify-end">
+              <li class="usa-nav__primary-item cbp-universal-header--button">
+                <a href="#"
+                  ><span class="text-white"
+                    ><i class="fas fa-comment margin-right-05"></i
+                    >Feedback</span
+                  ></a
+                >
+              </li>
+              <li class="usa-nav__primary-item cbp-universal-header--button">
+                <button
+                  class="usa-accordion__button usa-nav__link cbp-universal-header--button"
+                  aria-expanded="false"
+                  aria-controls="extended-nav-section-three"
+                >
+                  <span class="text-white"
+                    ><i class="fas fa-user margin-right-05"></i>User Name</span
+                  >
+                </button>
+                <ul id="extended-nav-section-three" class="usa-nav__submenu">
+                  <li class="usa-nav__submenu-item">
+                    <a href="#"
+                      ><i class="fas fa-bell margin-right-05"></i
+                      >Notifications</a
+                    >
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#"
+                      ><i class="fas fa-external-link-alt margin-right-05"></i
+                      >User Profile</a
+                    >
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="#"
+                      ><i class="fas fa-sign-out-alt margin-right-05"></i
+                      ><span class="text-heavy">Logout</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <div class="margin-top-205 _grid-container" style="margin: 0 30px">
+        <h1>All Applications</h1>
+        <div class="grid-row" style="margin-top: 0">
+          <div class="font-sans-3xs margin-top-2 grid-col-10">
+            <span class="margin-right-2"
+              ><i class="fas fa-circle" style="color: #009ec1"></i
+              ><em class="margin-left-1">Recently Updated</em></span
+            ><span
+              ><i class="fas fa-square" style="color: #4d8055"></i
+              ><em class="margin-left-1">Recently Added</em></span
+            >
+          </div>
+          <button
+            class="usa-button usa-button--outline grid-col-auto cbp-button--filter"
+          >
+            <i
+              class="fas fa-filter font-sans-xs margin-right-1"
+              style="display: inline"
+            ></i
+            ><span>FILTER</span>
+          </button>
+        </div>
+        <hr style="border: 3px solid #005ea2" class="margin-top-205" />
+      
+        <div class="grid-row cards" style="font-size: 14px; margin-top: 24px;">
+
+        </div>
+      
+      </div>
+      <!--
+      <div class="grid-row cards">
+        <div
+          class="usa-card desktop:grid-col-3 tablet:grid-col-4 mobile-lg:grid-col-6 grid-col-12"
+        >
+          <div class="usa-card__container">
+            <header class="usa-card_header">
+              <h5 class="usa-card__heading">Title</h5>
+            </header>
+            <div class="usa-card__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                provident iure temporibus aperiam delectus ! Nesciunt officia
+                animi molestias non laudantium, sed cupiditate asperiores sint
+                quisquam? Reprehenderit libero totam itaque voluptatem !
+              </p>
+            </div>
+            <div class="usa-card__footer">
+              <button class="usa-button">
+                <i class="fas fa-exclamation-circle"></i>INFO</button
+              ><button class="">
+                <i class="fas fa-external-link-alt"></i>GO TO APP
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+    </main>
+
+    <script src="./js/uswds.min.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="js/mobile-nav.js"></script>
+  </body>
+</html>
