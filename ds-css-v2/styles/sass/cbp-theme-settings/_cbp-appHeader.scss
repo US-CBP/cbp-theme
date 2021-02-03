@@ -1,0 +1,48 @@
+.appHeader {
+  align-items: center;
+  background: #ffffff;
+  display: flex;
+  height: 57px;
+  box-shadow: 0px 4px 5px -4px #c9c9c9;
+}
+
+i {
+  margin-right: $cbp-size-1;
+}
+
+.cbp-grid-container {
+  width: 100%;
+  height: inherit;
+}
+
+.cbp-row {
+  align-items: center;
+  height: inherit;
+}
+
+.appHeader-dropdown {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.appHeader-item {
+  @extend .cbp-text-dark;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  //USWDS default h6 style is set to text-transform: uppercase.
+  text-transform: none;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 3px solid black;
+  }
+}

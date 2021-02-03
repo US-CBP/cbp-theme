@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Header</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <nav class="appHeader">
+      <div class="cbp-grid-container">
+        <ul class="cbp-row">
+          <li class="cbp-grid-col-2-lg cbp-grid-col-2-md cbp-grid-col-3-sm">
+            <h4 class="appHeader-heading cbp-text-heading-sm">
+              Card Archetype
+            </h4>
+          </li>
+
+          <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
+            <a href="#">
+              <button class="appHeader-item usa-button usa-button--unstyled">
+                <h6 class="appHeader-item cbp-text-heading-3xs">Child 1</h6>
+              </button>
+            </a>
+          </li>
+          <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
+            <a href="#">
+              <button class="appHeader-item usa-button usa-button--unstyled">
+                <h6 class="appHeader-item cbp-text-heading-3xs">Child 2</h6>
+              </button>
+            </a>
+          </li>
+          <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
+            <a href="#">
+              <button class="appHeader-item usa-button usa-button--unstyled">
+                <h6 class="appHeader-item cbp-text-heading-3xs">Child 3</h6>
+              </button>
+            </a>
+          </li>
+          <li
+            id="cbpHeaderDropdown"
+            class="dropdown-content cbp-grid-col-1-lg cbp-grid-col-1-md"
+          >
+            <button
+              onClick="showDropdown(this)"
+              class="cbp-header-dropdown usa-button usa-button--unstyled appHeader-dropdown"
+            >
+              <h6 class="appHeader-item cbp-text-heading-3xs">
+                Child 4 <i class="fas fa-chevron-down"></i>
+              </h6>
+            </button>
+          </li>
+
+          <li class="cbp-grid-offset-4-lg cbp-grid-col-2-lg">
+            <form class="usa-search usa-search--small" role="search">
+              <label class="usa-sr-only" for="search-field-en-small"
+                >Search</label
+              >
+              <input
+                class="usa-input"
+                id="search-field-en-small"
+                type="search"
+                name="search"
+              />
+              <button class="usa-button" type="submit">
+                <span class="usa-sr-only">Search</span>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="cbp-grid-container" style="margin-top: 36px">
+      <div class="cbp-row">
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 1</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 2</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 3</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 4</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 5</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 6</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 7</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 8</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 9</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 10</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 11</div>
+        <div class="cbp-grid-col-1-lg" style="background: green">Block 12</div>
+      </div>
+    </div>
+
+    <!-- Required JS for USWDS -->
+    <script src="js/uswds.min.js"></script>
+    <script src="js/universalHeader.js"></script>
+  </body>
+</html>
