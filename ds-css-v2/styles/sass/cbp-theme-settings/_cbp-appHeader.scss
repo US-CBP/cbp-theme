@@ -1,7 +1,7 @@
 .appHeader {
   align-items: center;
   background: #ffffff;
-  display: flex;
+  //display: flex;
   height: 57px;
   box-shadow: 0px 4px 5px -4px #c9c9c9;
 }
@@ -11,7 +11,7 @@ i {
 }
 
 .cbp-grid-container {
-  width: 100%;
+  //width: 100%;
   height: inherit;
 }
 
@@ -33,6 +33,10 @@ ul {
   }
 }
 
+.usa-search {
+  width: fit-content;
+}
+
 .appHeader-item {
   @extend .cbp-text-dark;
   height: 4rem;
@@ -40,9 +44,10 @@ ul {
   align-items: center;
   //USWDS default h6 style is set to text-transform: uppercase.
   text-transform: none;
+  border-bottom: 2px solid transparent;
 
   &:hover {
     text-decoration: none;
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid black;
   }
 }
