@@ -12,44 +12,91 @@
       <div class="cbp-grid-container">
         <ul class="cbp-row">
           <li class="cbp-grid-col-2-lg cbp-grid-col-2-md cbp-grid-col-3-sm">
-            <h4 class="appHeader-heading cbp-text-heading-sm">
+            <span class="appHeader-heading cbp-text-heading-sm">
               Card Archetype
-            </h4>
+            </span>
           </li>
 
           <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
-            <a href="#">
-              <button class="appHeader-item usa-button usa-button--unstyled">
-                <h6 class="appHeader-item cbp-text-heading-3xs">Child 1</h6>
-              </button>
+            <a href="#" class="usa-button usa-button--unstyled">
+              <span class="appHeader-item cbp-text-heading-3xs">Child 1</span>
             </a>
           </li>
           <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
-            <a href="#">
-              <button class="appHeader-item usa-button usa-button--unstyled">
-                <h6 class="appHeader-item cbp-text-heading-3xs">Child 2</h6>
-              </button>
+            <a href="#" class="usa-button usa-button--unstyled">
+              <span class="appHeader-item cbp-text-heading-3xs">Child 2</span>
             </a>
           </li>
           <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
-            <a href="#">
-              <button class="appHeader-item usa-button usa-button--unstyled">
-                <h6 class="appHeader-item cbp-text-heading-3xs">Child 3</h6>
-              </button>
+            <a href="#" class="usa-button usa-button--unstyled">
+              <span class="appHeader-item cbp-text-heading-3xs">Child 3</span>
             </a>
           </li>
-          <li
-            id="cbpHeaderDropdown"
-            class="dropdown-content cbp-grid-col-1-lg cbp-grid-col-1-md"
-          >
+          <li class="cbp-grid-col-1-lg cbp-grid-col-1-md">
             <button
               onClick="showDropdown(this)"
               class="cbp-header-dropdown usa-button usa-button--unstyled appHeader-dropdown"
             >
-              <h6 class="appHeader-item cbp-text-heading-3xs">
+              <span class="appHeader-item cbp-text-heading-3xs">
                 Child 4 <i class="fas fa-chevron-down"></i>
-              </h6>
+              </span>
             </button>
+
+            <div id="cbpHeaderDropdown" class="dropdown-content">
+              <!-- Icon and header text on full-width mobile dropdown -->
+              <div class="dropdown-header-mobile">
+                <h2 class="display-flex flex-align-center flex-2">
+                  <i class="fas fa-th font-ui-lg"></i>
+                  Card Archetype
+                </h2>
+                <button
+                  onClick="closeDropdown()"
+                  class="usa-button--unstyled margin-left-auto"
+                >
+                  <i class="fas fa-times-circle cbp-close-icon"></i>
+                </button>
+              </div>
+
+              <!-- Dropdown content -->
+              <span class="cbp-header-subtext">
+                Recently Visited Applications
+              </span>
+              <ul>
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Most Recent Application </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Next Recent Application </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span
+                      >Next Recent Application that has a really long name
+                    </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span
+                      >Next Recent Application that has a really long name
+                    </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a class="cbp-external-button" href="#" target="_blank"
+                    >View All Apps</a
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
 
           <li class="cbp-grid-col-auto display-flex flex-justify-end">
@@ -67,6 +114,8 @@
                 <span class="usa-sr-only">Search</span>
               </button>
             </form>
+
+            <div class="search-mobile"><i class="fas fa-search"></i></div>
           </li>
         </ul>
       </div>
