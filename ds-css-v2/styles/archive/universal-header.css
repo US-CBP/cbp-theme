@@ -1,0 +1,163 @@
+@media only screen and (min-width: 64em) {
+  .cbp-mobile-search {
+    display: none !important;
+  }
+  .cbp-universal-header--icons {
+    display: none;
+  }
+  .cbp-app-header__mobile {
+    display: none;
+  }
+  .cbp-universal-header--links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 55em;
+    margin-bottom: 1em;
+  }
+  #extended-nav-section-one,
+  #extended-nav-section-three {
+    background-color: #003366;
+  }
+  .usa-nav__primary button[aria-expanded='true'] {
+    background-color: #003366;
+  }
+  .cbp-universal-header--button {
+    background-image: none !important;
+  }
+  .usa-nav__link:hover {
+    background-color: white;
+  }
+  .cbp-logo__mobile {
+    display: none;
+  }
+  .usa-nav__secondary {
+    margin-top: 0;
+  }
+  .usa-accordion + .usa-accordion,
+  .usa-accordion + .usa-accordion--bordered {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cbp-universal-header--icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cbp-universal-header--icons .usa-menu-btn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .cbp-logo__desktop {
+    display: none;
+  }
+  .cbp-logo__mobile {
+    display: visible;
+    max-width: 4.5em;
+    margin-right: 12px;
+  }
+  .cbp-app-subnav--header {
+    padding-bottom: 24px;
+  }
+  .usa-navbar {
+    height: 80px;
+  }
+  .usa-nav {
+    width: 100%;
+    padding: 3em;
+    background-color: #003366;
+  }
+  .usa-nav__primary-item > .usa-nav__link > span,
+  .usa-nav__primary-item > span,
+  .usa-nav__submenu-item > a {
+    color: white;
+  }
+  .cbp-button--filter {
+    margin-top: 12px;
+  }
+  .usa-nav__primary-item,
+  .usa-nav__submenu-item {
+    border: none;
+  }
+  .usa-nav__primary > .usa-search {
+    display: none;
+    margin-top: 16px;
+  }
+  .usa-nav__primary button,
+  .usa-nav__primary button:hover {
+    background-color: transparent;
+  }
+}
+
+#main-content {
+  background-color: #fcfcfc;
+}
+
+.usa-nav__primary > form > .usa-button {
+  background-color: #2672de;
+}
+
+.usa-link--external::after {
+  background-image: url(../../assets/images/external-link-alt-hover.svg);
+}
+
+.cbp-app-header__mobile {
+  height: 56px;
+  width: auto;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-right: 16px;
+}
+
+.usa-header--extended
+.cbp-universal-header--button
+> .usa-nav__link:hover::after {
+  background-color: transparent;
+  border-radius: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0.25rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0;
+}
+
+.cbp-menu-btn {
+  margin: auto 0 auto auto;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #005ea2;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.cbp-menu-btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.cbp-universal-header--icons {
+  background-color: transparent;
+}
+
+.cbp-universal-header--icons:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.usa-nav__submenu-item {
+  font-size: 14px;
+}
+/*# sourceMappingURL=universal-header.css.map */

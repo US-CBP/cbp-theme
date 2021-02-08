@@ -1,0 +1,9 @@
+@use "../config" as variables;
+
+thead {
+    tr {
+        &:first-child {
+            background-color: variables.$grey-lighter;
+        }
+    }
+}

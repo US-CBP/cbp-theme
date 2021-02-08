@@ -1,0 +1,34 @@
+{
+  "size": {
+    "font": {
+      "body": {
+        "value": "14px",
+        "comment": "Default text class for paragraphs of text, and are directly linked to the semantic <p> tag."
+      },
+      "heading-6": {
+        "value": "16px"
+      },
+      "heading-5": {
+        "value": "20px"
+      },
+      "heading-4": {
+        "value": "20px"
+      },
+      "heading-3": {
+        "value": "22px"
+      },
+      "heading-2": {
+        "value": "25px"
+      },
+      "heading-1": {
+        "value": "28px"
+      },
+      "masthead-2": {
+        "value": "32px"
+      },
+      "masthead-1": {
+        "value": "36px"
+      }
+    }
+  }
+}

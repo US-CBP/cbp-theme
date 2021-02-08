@@ -31,6 +31,7 @@
     "pa11y-ci-reporter-html": "^2.0.0",
     "prettier": "^1.19.1",
     "react-router-hash-link": "^1.2.2",
+    "sass": "^1.26.10",
     "stylelint": "^13.2.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.14.2"
