@@ -11,14 +11,20 @@
 
     li {
       list-style-type: none;
+      margin-bottom: 0;
       //default USWDS max width for li tags is 68ex.
       max-width: 100% !important;
     }
   }
 }
+.appHeader-heading {
+  display: inline-block;
+  min-width: 153px;
+}
 
-i {
-  margin-left: $cbp-size-1;
+.appHeader-list {
+  display: flex;
+  min-width: fit-content;
 }
 
 .usa-button--unstyled {
@@ -75,13 +81,50 @@ i {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+.menu-mobile {
+  display: none;
+}
+
+.appHeader-item {
+  margin-right: $cbp-size-3;
+}
+
+.appHeader-text {
+  @extend .cbp-text-dark;
+  align-items: center;
+  display: flex;
+  height: 4rem;
+
+  //USWDS default h6 style is set to text-transform: uppercase.
+  text-transform: none;
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: inset 0 -4px 0 0 $cbp-active-dark;
+  }
+
+  i {
+    margin-left: $cbp-size-1;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
   .search-mobile {
-    display: block;
+    align-items: center;
     border: 2px solid $cbp-ui-primary-dark;
-    height: 40px;
-    width: 40px;
     border-radius: 4px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+    &:hover {
+      color: $cbp-active-dark;
+      border: 2px solid $cbp-active-dark;
+    }
+  }
+
+  .menu-mobile {
+    display: none;
   }
 
   .usa-search {
@@ -89,16 +132,29 @@ i {
   }
 }
 
-.appHeader-item {
-  @extend .cbp-text-dark;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  //USWDS default h6 style is set to text-transform: uppercase.
-  text-transform: none;
+@media only screen and (max-width: 1150px) {
+}
 
-  &:hover {
-    text-decoration: none;
-    box-shadow: inset 0 -4px 0 0 $cbp-active-dark;
+@media only screen and (max-width: 768px) {
+  .appHeader-list {
+    display: none;
+  }
+
+  .menu-mobile {
+    align-items: center;
+    border: 2px solid $cbp-ui-primary-dark;
+    border-radius: 4px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+    &:hover {
+      color: $cbp-active-dark;
+      border: 2px solid $cbp-active-dark;
+    }
+  }
+
+  .search-mobile {
+    display: none;
   }
 }
