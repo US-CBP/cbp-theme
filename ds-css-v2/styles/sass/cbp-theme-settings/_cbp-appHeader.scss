@@ -17,23 +17,6 @@
     }
   }
 }
-.appHeader-heading {
-  display: inline-block;
-  min-width: 153px;
-}
-
-.appHeader-list {
-  display: flex;
-  min-width: fit-content;
-}
-
-.usa-button--unstyled {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
 
 .cbp-grid-container {
   //width: 100%;
@@ -43,6 +26,40 @@
 .cbp-row {
   align-items: center;
   height: inherit;
+}
+
+.appHeader-menu {
+  display: flex;
+  min-width: fit-content;
+}
+
+.appHeader-heading {
+  display: inline-block;
+  min-width: 153px;
+  margin: auto $cbp-size-3 auto 0;
+}
+
+.appHeader-dropdown-item {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: $cbp-size-105;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: hsla(0, 0%, 0%, 0.3);
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.usa-button--unstyled {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .appHeader-dropdown {
@@ -55,7 +72,7 @@
 
 .dropdown-content {
   background: $cbp-ui-primary-darker;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 5px 5px 5px;
   display: none;
   min-width: 12em;
   max-width: 15em;
@@ -78,18 +95,15 @@
   }
 }
 
-.cbp-dropdown-item {
-  display: flex;
-  align-items: center;
-
-  a {
-    margin: $cbp-size-105;
-    text-decoration: none;
+.dropdown-item-active {
+  background: $cbp-ui-primary-darker;
+  span {
+    color: white;
   }
-
-  &:hover {
-    background: hsla(0, 0%, 0%, 0.3);
-    border-radius: 0 0 5px 5px;
+  .appHeader-text {
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
 
@@ -112,10 +126,10 @@
 
 .appHeader-item {
   margin-right: $cbp-size-2;
-  &:hover,
-  &:active {
-    background: $cbp-ui-primary-darker;
-  }
+  // &:hover,
+  // &:active {
+  //   background: $cbp-ui-primary-darker;
+  // }
 }
 
 .appHeader-text {
@@ -128,7 +142,7 @@
   text-transform: none;
 
   &:hover {
-    color: #ffffff;
+    // color: #ffffff;
     text-decoration: none;
     box-shadow: inset 0 -4px 0 0 $cbp-active-dark;
   }
@@ -166,7 +180,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .appHeader-list {
+  .appHeader-item {
     display: none;
   }
 

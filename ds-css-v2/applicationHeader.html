@@ -11,13 +11,11 @@
     <nav class="appHeader">
       <div class="cbp-grid-container">
         <ul class="cbp-row">
-          <li class="cbp-grid-col-2-lg cbp-grid-col-2-md cbp-grid-col-3-sm">
+          <div class="cbp-grid-col-auto appHeader-menu">
             <span class="appHeader-heading cbp-text-heading-sm">
               Card Archetype
             </span>
-          </li>
 
-          <div class="cbp-grid-col-auto appHeader-list">
             <li class="appHeader-item">
               <a href="#" class="usa-button usa-button--unstyled">
                 <span class="appHeader-text cbp-text-heading-3xs"
@@ -40,6 +38,7 @@
               </a>
             </li>
             <li class="appHeader-item">
+              <!-- Add event.stopPropagation(); to add close dropdown functionality when clicking outside -->
               <button
                 onClick="showDropdown(this)"
                 class="cbp-header-dropdown usa-button usa-button--unstyled"
@@ -52,7 +51,7 @@
               <div id="cbpHeaderDropdown" class="dropdown-content">
                 <!-- Dropdown content -->
                 <ul>
-                  <li class="cbp-dropdown-item">
+                  <li class="appHeader-dropdown-item">
                     <a href="#" target="_blank">
                       <span class="cbp-text-heading-3xs">
                         Optional Link 1
@@ -60,7 +59,7 @@
                     </a>
                   </li>
 
-                  <li class="cbp-dropdown-item">
+                  <li class="appHeader-dropdown-item">
                     <a href="#" target="_blank">
                       <span class="cbp-text-heading-3xs">
                         Optional Link 2
@@ -68,14 +67,14 @@
                     </a>
                   </li>
 
-                  <li class="cbp-dropdown-item">
+                  <li class="appHeader-dropdown-item">
                     <a href="#" target="_blank">
                       <span class="cbp-text-heading-3xs"
                         >A slightly longer link
                       </span>
                     </a>
                   </li>
-                  <li class="cbp-dropdown-item">
+                  <li class="appHeader-dropdown-item">
                     <a href="#" target="_blank">
                       <span class="cbp-text-heading-3xs">
                         This is the longest of all the links in the land
