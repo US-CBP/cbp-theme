@@ -77,7 +77,7 @@ Relative font file path
 ----------------------------------------
 */
 
-$theme-font-path: '../../assets/fonts';
+$theme-font-path: "../assets/fonts";
 
 /*
 ----------------------------------------
@@ -123,7 +123,7 @@ names to something more descriptive.
 
 $theme-typeface-tokens: (
   roboto: (
-    display-name: 'Roboto',
+    display-name: "Roboto",
     cap-height: 355px,
   ),
 );
@@ -160,10 +160,10 @@ $theme-font-type-icon: false;
 $theme-font-type-lang: false;
 
 // monospace
-$theme-font-type-mono: 'roboto-mono';
+$theme-font-type-mono: "roboto-mono";
 
 // sans-serif
-$theme-font-type-sans: 'roboto';
+$theme-font-type-sans: "roboto";
 
 // serif
 $theme-font-type-serif: false;
@@ -262,28 +262,28 @@ $theme-font-icon-custom-src: false;
 $theme-font-lang-custom-src: false;
 $theme-font-mono-custom-src: false;
 $theme-font-sans-custom-src: (
-  dir: 'roboto',
+  dir: "roboto",
   roman: (
-    100: 'Roboto-Thin',
+    100: "Roboto-Thin",
     200: false,
-    300: 'Roboto-Light',
-    400: 'Roboto-Regular',
-    500: 'Roboto-Medium',
+    300: "Roboto-Light",
+    400: "Roboto-Regular",
+    500: "Roboto-Medium",
     600: false,
-    700: 'Roboto-Bold',
+    700: "Roboto-Bold",
     800: false,
-    900: 'Roboto-Black',
+    900: "Roboto-Black",
   ),
   italic: (
-    100: 'Roboto-ThinItalic',
+    100: "Roboto-ThinItalic",
     200: false,
-    300: 'Roboto-LightItalic',
-    400: 'Roboto-RegularItalic',
-    500: 'Roboto-MediumItalic',
+    300: "Roboto-LightItalic",
+    400: "Roboto-RegularItalic",
+    500: "Roboto-MediumItalic",
     600: false,
-    700: 'Roboto-BoldItalic',
+    700: "Roboto-BoldItalic",
     800: false,
-    900: 'Roboto-BlackItalic',
+    900: "Roboto-BlackItalic",
   ),
 );
 $theme-font-serif-custom-src: false;
@@ -305,11 +305,11 @@ tokens.
 ----------------------------------------
 */
 
-$theme-font-role-ui: 'sans';
-$theme-font-role-heading: 'sans';
-$theme-font-role-body: 'sans';
-$theme-font-role-code: 'mono';
-$theme-font-role-alt: 'sans';
+$theme-font-role-ui: "sans";
+$theme-font-role-heading: "sans";
+$theme-font-role-body: "sans";
+$theme-font-role-code: "mono";
+$theme-font-role-alt: "sans";
 
 /*
 ----------------------------------------
@@ -413,32 +413,32 @@ none:    none
 */
 
 // Body settings are the equivalent of setting the <body> element
-$theme-body-font-family: 'body';
-$theme-body-font-size: '2xs';
+$theme-body-font-family: "body";
+$theme-body-font-size: "2xs";
 $theme-body-line-height: 4;
 
 // If true, explicitly style the <body> element with the base styles
 $theme-style-body-element: false;
 
 // Headings
-$theme-h1-font-size: '2xl';
-$theme-h2-font-size: 'xl';
-$theme-h3-font-size: 'lg';
-$theme-h4-font-size: 'sm';
-$theme-h5-font-size: 'xs';
-$theme-h6-font-size: '3xs';
+$theme-h1-font-size: "2xl";
+$theme-h2-font-size: "xl";
+$theme-h3-font-size: "lg";
+$theme-h4-font-size: "sm";
+$theme-h5-font-size: "xs";
+$theme-h6-font-size: "3xs";
 $theme-heading-line-height: 2;
-$theme-small-font-size: '2xs';
-$theme-display-font-size: '3xl';
+$theme-small-font-size: "2xs";
+$theme-display-font-size: "3xl";
 
 // Text and prose
 $theme-text-measure-narrow: 1;
 $theme-text-measure: 4;
 $theme-text-measure-wide: 6;
-$theme-prose-font-family: 'body';
+$theme-prose-font-family: "body";
 
 // Lead text
-$theme-lead-font-family: 'heading';
-$theme-lead-font-size: 'lg';
+$theme-lead-font-family: "heading";
+$theme-lead-font-size: "lg";
 $theme-lead-line-height: 6;
 $theme-lead-measure: 6;
