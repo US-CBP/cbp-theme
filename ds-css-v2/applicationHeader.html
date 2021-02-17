@@ -10,83 +10,93 @@
   <body>
     <nav class="appHeader">
       <div class="cbp-grid-container">
-        <ul class="cbp-row">
-          <div class="cbp-grid-col-auto appHeader-menu">
+        <div class="cbp-row">
+          <div class="cbp-grid-col-auto menu-mobile appHeader-menu">
+            <button
+              onClick="closeDropdown()"
+              class="cbp-button-close usa-button--unstyled"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
             <span class="appHeader-heading cbp-text-heading-sm">
               Card Archetype
             </span>
 
-            <li class="appHeader-item">
-              <a href="#" class="usa-button usa-button--unstyled">
-                <span class="appHeader-text cbp-text-heading-3xs"
-                  >Children 1</span
+            <ul>
+              <li class="appHeader-item">
+                <a href="#" class="usa-button usa-button--unstyled">
+                  <span class="appHeader-text cbp-text-heading-3xs"
+                    >Children 1</span
+                  >
+                </a>
+              </li>
+              <li class="appHeader-item">
+                <a href="#" class="usa-button usa-button--unstyled">
+                  <span class="appHeader-text cbp-text-heading-3xs"
+                    >Children 2</span
+                  >
+                </a>
+              </li>
+              <li class="appHeader-item">
+                <a href="#" class="usa-button usa-button--unstyled">
+                  <span class="appHeader-text cbp-text-heading-3xs"
+                    >Children 3</span
+                  >
+                </a>
+              </li>
+              <li class="appHeader-item">
+                <!-- Add event.stopPropagation(); to add close dropdown functionality when clicking outside -->
+                <button
+                  onClick="showDropdown(this)"
+                  class="cbp-header-dropdown usa-button usa-button--unstyled"
                 >
-              </a>
-            </li>
-            <li class="appHeader-item">
-              <a href="#" class="usa-button usa-button--unstyled">
-                <span class="appHeader-text cbp-text-heading-3xs"
-                  >Children 2</span
-                >
-              </a>
-            </li>
-            <li class="appHeader-item">
-              <a href="#" class="usa-button usa-button--unstyled">
-                <span class="appHeader-text cbp-text-heading-3xs"
-                  >Children 3</span
-                >
-              </a>
-            </li>
-            <li class="appHeader-item">
-              <!-- Add event.stopPropagation(); to add close dropdown functionality when clicking outside -->
-              <button
-                onClick="showDropdown(this)"
-                class="cbp-header-dropdown usa-button usa-button--unstyled"
-              >
-                <span class="appHeader-text cbp-text-heading-3xs">
-                  Child 4 <i class="fas fa-chevron-down"></i>
-                </span>
-              </button>
+                  <span class="appHeader-text cbp-text-heading-3xs">
+                    Child 4 <i class="fas fa-chevron-down"></i>
+                  </span>
+                </button>
 
-              <div id="cbpHeaderDropdown" class="dropdown-content">
-                <!-- Dropdown content -->
-                <ul>
-                  <li class="appHeader-dropdown-item">
-                    <a href="#" target="_blank">
-                      <span class="cbp-text-heading-3xs">
-                        Optional Link 1
-                      </span>
-                    </a>
-                  </li>
+                <div id="cbpHeaderDropdown" class="dropdown-content">
+                  <!-- Dropdown content -->
+                  <ul>
+                    <li class="appHeader-dropdown-item">
+                      <a href="#" target="_blank">
+                        <span class="cbp-text-heading-3xs">
+                          Optional Link 1
+                        </span>
+                      </a>
+                    </li>
 
-                  <li class="appHeader-dropdown-item">
-                    <a href="#" target="_blank">
-                      <span class="cbp-text-heading-3xs">
-                        Optional Link 2
-                      </span>
-                    </a>
-                  </li>
+                    <li class="appHeader-dropdown-item">
+                      <a href="#" target="_blank">
+                        <span class="cbp-text-heading-3xs">
+                          Optional Link 2
+                        </span>
+                      </a>
+                    </li>
 
-                  <li class="appHeader-dropdown-item">
-                    <a href="#" target="_blank">
-                      <span class="cbp-text-heading-3xs"
-                        >A slightly longer link
-                      </span>
-                    </a>
-                  </li>
-                  <li class="appHeader-dropdown-item">
-                    <a href="#" target="_blank">
-                      <span class="cbp-text-heading-3xs">
-                        This is the longest of all the links in the land
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+                    <li class="appHeader-dropdown-item">
+                      <a href="#" target="_blank">
+                        <span class="cbp-text-heading-3xs"
+                          >A slightly longer link
+                        </span>
+                      </a>
+                    </li>
+                    <li class="appHeader-dropdown-item">
+                      <a href="#" target="_blank">
+                        <span class="cbp-text-heading-3xs">
+                          This is the longest of all the links in the land
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <li class="cbp-grid-col-auto display-flex flex-justify-end">
+          <li
+            class="search-menu-mobile cbp-grid-col-auto display-flex flex-justify-end"
+          >
             <form class="usa-search usa-search--small" role="search">
               <label class="usa-sr-only" for="search-field-en-small"
                 >Search</label
@@ -104,11 +114,11 @@
             <button class="usa-button usa-button--unstyled search-mobile">
               <i class="fas fa-search"></i>
             </button>
-            <button class="usa-button usa-button--unstyled menu-mobile">
+            <button class="usa-button usa-button--unstyled menu-mobile-btn">
               <i class="fas fa-bars"></i>
             </button>
           </li>
-        </ul>
+        </div>
       </div>
     </nav>
 
