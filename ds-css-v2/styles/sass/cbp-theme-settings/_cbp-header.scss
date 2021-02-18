@@ -42,7 +42,6 @@ $dhs-blue: #003366;
     text-decoration: none;
     color: #ffffff;
     padding: $cbp-size-2;
-    @include cbp-text-button;
   }
 
   //Menu dropdown
@@ -80,6 +79,10 @@ $dhs-blue: #003366;
     font-style: italic;
     margin: $cbp-size-2 $cbp-size-2 0 $cbp-size-2;
   }
+}
+
+button i {
+  pointer-events: none;
 }
 
 .cbp-logo {
@@ -179,7 +182,6 @@ li {
   .dropdown-header-mobile {
     display: flex;
     & h2 {
-      @include cbp-text-heading-lg;
       color: #ffffff;
     }
   }
@@ -258,7 +260,6 @@ li {
   .dropdown-header-mobile {
     display: flex;
     & h2 {
-      @include cbp-text-heading-lg;
       color: #ffffff;
     }
   }
@@ -276,7 +277,6 @@ li {
     &-text {
       margin: auto;
       padding-left: $cbp-size-2;
-      @include cbp-text-heading-sm;
     }
   }
 }
