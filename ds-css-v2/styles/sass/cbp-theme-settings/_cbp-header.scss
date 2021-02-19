@@ -42,7 +42,7 @@ $dhs-blue: #003366;
     text-decoration: none;
     color: #ffffff;
     padding: $cbp-size-2;
-    @include cbp-text-button;
+    // @include cbp-text-button;
   }
 
   //Menu dropdown
@@ -179,7 +179,7 @@ li {
   .dropdown-header-mobile {
     display: flex;
     & h2 {
-      @include cbp-text-heading-lg;
+      // @include cbp-text-heading-lg;
       color: #ffffff;
     }
   }
@@ -258,7 +258,7 @@ li {
   .dropdown-header-mobile {
     display: flex;
     & h2 {
-      @include cbp-text-heading-lg;
+      // @include cbp-text-heading-lg;
       color: #ffffff;
     }
   }
@@ -276,7 +276,7 @@ li {
     &-text {
       margin: auto;
       padding-left: $cbp-size-2;
-      @include cbp-text-heading-sm;
+      // @include cbp-text-heading-sm;
     }
   }
 }
