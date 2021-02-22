@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <nav class="text-right">
+      <input type="checkbox" id="toggle" style="display: none" />
+      <label for="toggle"><i class="fas fa-bars"></i></label>
+
+      <div class="display-flex menu flex-align-center">
+        <div class="cbp-text-heading-sm margin-right-2">Title</div>
+        <div class="menu-item-group">
+          <a href="#">Child 1</a>
+          <a href="#">Child 2</a>
+          <a href="#">Child 3</a>
+          <a href="#">Child 4</a>
+        </div>
+        <form
+          class="usa-search usa-search--small flex-justify-end"
+          role="search"
+        >
+          <label class="usa-sr-only" for="search-field-en-small">Search</label>
+          <input
+            class="usa-input"
+            id="search-field-en-small"
+            type="search"
+            name="search"
+          />
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </form>
+      </div>
+    </nav>
+  </body>
+</html>
