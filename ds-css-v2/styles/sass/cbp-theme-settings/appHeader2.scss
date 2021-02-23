@@ -1,11 +1,36 @@
-nav {
-  height: 56px;
-  border: 2px solid #dfe1e2;
-  line-height: 57px;
-}
+// nav {
+//   height: 56px;
+//   border: 2px solid #dfe1e2;
+//   line-height: 57px;
+// }
 
 //item text group
 .menu-item-group {
   flex-grow: 2;
   text-align: left;
+}
+
+.usa-header--basic .usa-nav {
+  justify-content: space-between;
+}
+
+.usa-menu-btn {
+  background-color: transparent;
+  color: #000000;
+
+  &:hover {
+    @extend .usa-menu-btn;
+  }
+}
+
+@media screen and (min-width: 1023px){
+  .usa-header--basic .usa-navbar {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .usa-navbar {
+    width: 100%;
+  }
 }
