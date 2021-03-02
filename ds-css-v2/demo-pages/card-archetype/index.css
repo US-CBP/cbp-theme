@@ -1,0 +1,127 @@
+/* Some of these classes may need to be added to Design System */
+* {
+  box-sizing: border-box;
+}
+
+.legend-filter {
+  border-bottom: solid 3px #A9AEB1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 16px;
+}
+
+.legend-filter > div {
+  align-items: center;
+  display: flex;
+  flex: 1 0 599px;
+  margin: 16px 0;
+}
+
+/* Circle before icon */
+.circ::before {
+  background-color: #0081A1;
+  border-radius: 7px;
+  content: "";
+  display: inline-block;
+  height: 13px;
+  margin-right: 8px;
+  width: 13px;
+}
+
+/* Square before icon */
+.sq { margin-left: 16px; }
+
+.sq::before {
+  background-color: #0081A1;
+  content: "";
+  display: inline-block;
+  height: 13px;
+  margin-right: 8px;
+  width: 13px;
+}
+
+/* CBP Card Css */
+.cbp-card {
+  align-self: flex-start;
+  border: 2px solid #DFE1E2;
+  margin-bottom: 24px !important;
+}
+
+.cbp-card__header {
+  margin-top: 24px;
+  padding: 0 24px;
+}
+
+.cbp-card__header > i {
+  color: #735FE9;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 27px;
+  width: 100%;
+}
+
+.cbp-card__body {
+  border-bottom: 2px solid #DFE1E2;
+  padding: 0 24px;
+}
+
+.cbp-card__body > button {
+  margin: 16px 0;
+}
+
+.cbp-card__title {
+  margin-top: 0;
+}
+
+.cbp-card__title::before {
+  background-color: #0081A1;
+  border-radius: 13px;
+  content: "";
+  display: inline-block;
+  height: 26px;
+  margin-right: 8px;
+  width: 26px;  
+}
+
+.cbp-card__copy {
+  margin: 12px 0 16px;
+}
+
+.cbp-card__footer {
+  padding: 16px 24px;
+}
+
+/* CBP Card Css END */
+
+/* CBP Tag Css */
+.cbp-tag {
+  background-color: #454540;
+  color: #fff;
+  border-radius: 12px;
+  display: table;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+
+.usa-button {
+  text-align: center;
+  max-width: 130px !important;
+}
+
+.cbp-btn {
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  padding: 16px 4px;
+}
+
+.cbp-btn--dropdown {
+  border: none;
+}
+
+@media only screen and (min-width : 600px) {
+  .legend-filter {
+    justify-content: space-between;
+  }  
+}
