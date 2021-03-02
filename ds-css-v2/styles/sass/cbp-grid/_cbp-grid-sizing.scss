@@ -88,6 +88,6 @@
     margin-right: 16px !important;
   }
 
-  @include grid-cols(12, 16, 'lg');
-  @include grid-offset(12, 16, 'lg');
+  @include grid-cols(12, 16, 'xl');
+  @include grid-offset(12, 16, 'xl');
 }
