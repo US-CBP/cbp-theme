@@ -8,61 +8,43 @@
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
   </head>
   <body>
-    <!-- <nav class="text-right">
-      <div style="margin-left: 16px; margin-right: 16px">
-      <input type="checkbox" id="toggle" style="display: none" />
-      <label for="toggle"><i class="fas fa-bars"></i></label>
-
-      <div class="display-flex menu flex-align-center">
-        <div class="cbp-text-heading-sm margin-right-2">Card Archetype</div>
-        <div class="menu-item-group">
-          <a class="margin-right-2" href="#">Child 1</a>
-          <a class="margin-right-2" href="#">Child 2</a>
-          <a class="margin-right-2" href="#">Child 3</a>
-          <select class="usa-select" name="options" id="options">
-            <option value>Child 4</option>
-            <option value="value1">Option A</option>
-            <option value="value2">Option B</option>
-            <option value="value3">Option C</option>
-          </select>
-        </div>
-        <form
-          class="usa-search usa-search--small flex-justify-end"
-          role="search"
-        >
-          <label class="usa-sr-only" for="search-field-en-small">Search</label>
-          <input
-            class="usa-input"
-            id="search-field-en-small"
-            type="search"
-            name="search"
-          />
-          <button class="usa-button" type="submit">
-            <span class="usa-sr-only">Search</span>
-          </button>
-        </form>
-      </div>
-    </div>
-    </nav> -->
-
     <header class="usa-header usa-header--basic">
-      <div class="display-flex flex-align-center">
+      <div class="cbp-container">
         <div class="usa-navbar">
-          <div class="usa-logo" id="basic-logo" style="margin: 0;">
-            <em class="usa-logo__text"
-              ><a href="/" title="Home" aria-label="Home">Card Archetype</a></em
-            >
+          <div class="usa-logo" id="basic-logo">
+            <span class="cbp-heading-text-sm">Card Archetype </span>
           </div>
-          <button class="usa-menu-btn"><i class="fas fa-bars"></i></button>
+          <button class="usa-menu-btn">
+            <i
+              class="fas fa-bars"
+              style="
+                font-size: 16px;
+                border: 2px solid #0050d8;
+                color: #0050d8;
+                padding: 8px;
+                border-radius: 3px;
+              "
+            ></i>
+          </button>
         </div>
         <nav aria-label="Primary navigation" class="usa-nav">
-          <button class="usa-nav__close">
-            <img src="assets/images/close.svg" role="img" alt="close" />
-          </button>
+          <div class="cbp-mobile-header">
+            <span class="cbp-text-heading-xs" style="margin: auto 0"
+              >Card Archetype</span
+            >
+            <button class="usa-nav__close" style="margin: 0">
+              <!-- <img src="assets/images/close.svg" role="img" alt="close" /> -->
+              <i
+                class="fas fa-times-circle"
+                style="font-size: 16px"
+                alt="close"
+              ></i>
+            </button>
+          </div>
           <ul class="usa-nav__primary usa-accordion">
             <li class="usa-nav__primary-item">
               <button
-                class="usa-accordion__button usa-nav__link usa-current"
+                class="usa-accordion__button usa-nav__link"
                 aria-expanded="false"
                 aria-controls="basic-nav-section-one"
               >
@@ -90,13 +72,24 @@
               </button>
               <ul id="basic-nav-section-two" class="usa-nav__submenu">
                 <li class="usa-nav__submenu-item">
-                  <a href="#" class=""> Navigation link</a>
+                  <a href="#" class="usa-current"> Navigation link</a>
                 </li>
                 <li class="usa-nav__submenu-item">
                   <a href="#" class=""> Navigation link</a>
                 </li>
                 <li class="usa-nav__submenu-item">
                   <a href="#" class=""> Navigation link</a>
+                  <ul class="usa-nav__sublist">
+                    <li class="usa-nav__submenu-item is-active">
+                      <a href=""><span>Grandchild link</span></a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href=""><span>Grandchild link</span></a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href=""><span>Grandchild link</span></a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -105,12 +98,25 @@
                 ><span>Child 3</span></a
               >
             </li>
+
             <li class="usa-nav__primary-item">
               <a class="usa-nav__link" href="javascript:void(0)"
                 ><span>Child 4</span></a
               >
             </li>
           </ul>
+          <button class="usa-search-btn">
+            <i
+              class="fas fa-search"
+              style="
+                font-size: 16px;
+                border: 2px solid #0050d8;
+                color: #0050d8;
+                padding: 8px;
+                border-radius: 3px;
+              "
+            ></i>
+          </button>
           <form class="usa-search usa-search--small" role="search">
             <label class="usa-sr-only" for="basic-search-field-small"
               >Search small</label
