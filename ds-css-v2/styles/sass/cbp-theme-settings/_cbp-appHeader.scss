@@ -1,271 +1,249 @@
-.appHeader {
-  align-items: center;
-  background: #ffffff;
-  //display: flex;
-  height: 57px;
-  box-shadow: 0px 4px 5px -4px #c9c9c9;
+//mobile view, currently set at 'tablet-lg' for demo purposes.
+//you can change the value at the source uswds setting file below.
+//want to be able to set this value manually in the future without
+//having to go to the uswds sheet itself.
+@use "../_uswds-theme-components" as uswds-mobile-breakpoint;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    display: inherit;
+//tablet view, currently set at 870px for demo purposes
+//you can manually set the breakpoint below to match your project's
+//requirements.
+$tablet-breakpoint: 870px;
 
-    li {
-      list-style-type: none;
-      margin-bottom: 0;
-      //default USWDS max width for li tags is 68ex.
-      max-width: 100% !important;
-    }
-  }
+//the container used for the hamburger menu icon and
+//mobile search icon.
+@mixin icon-container {
+  border: 2px solid $cbp-ui-primary-dark;
+  border-radius: 3px;
+  color: $cbp-ui-primary-dark;
+  font-size: 16px;
+  padding: 8px;
 }
 
-// .cbp-button-close {
-//   display: none !important;
-// }
+///////////////////////
+//uswds modifications//
+///////////////////////
 
-.cbp-grid-container {
-  //width: 100%;
-  height: inherit;
+//this section modifies existing uswds classes
+//in order to fit the design of our custom theme.
+
+//adds gray 'shadow' below the header
+.usa-header {
+  border-bottom: 2px solid rgb(0, 0, 0, 0.1);
 }
 
-button i {
-  pointer-events: none;
+.usa-header--basic .usa-nav {
+  justify-content: space-between;
 }
 
-.cbp-row {
-  align-items: center;
-  height: inherit;
-}
-
-.appHeader-menu {
-  display: flex;
-  min-width: fit-content;
-  height: inherit;
-}
-
-.appHeader-heading {
-  display: inline-block;
-  min-width: 153px;
-  margin: auto $cbp-size-3 auto 0;
-}
-
-.appHeader-dropdown-item {
-  display: flex;
-  align-items: center;
-
+//removes the default underline on hover that uswds uses
+.usa-nav__submenu-item {
   a {
-    margin: $cbp-size-105;
-    text-decoration: none;
-  }
-
-  &:hover {
-    background: hsla(0, 0%, 0%, 0.3);
-    border-radius: 0 0 5px 5px;
-  }
-}
-
-.usa-button--unstyled {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.appHeader-dropdown {
-  text-decoration: none;
-}
-
-.usa-search {
-  width: fit-content;
-}
-
-.dropdown-content {
-  background: $cbp-ui-primary-darker;
-  border-radius: 0 5px 5px 5px;
-  display: none;
-  min-width: 12em;
-  max-width: 15em;
-  position: absolute;
-  z-index: 1;
-
-  &.show {
-    display: block;
-  }
-
-  li {
-    list-style-type: none;
-    height: auto;
-    min-height: $cbp-size-3;
-  }
-
-  ul {
-    padding: 0;
-    margin-top: $cbp-size-1;
-  }
-}
-
-.dropdown-item-active {
-  background: $cbp-ui-primary-darker;
-  span {
-    color: white;
-  }
-  .appHeader-text {
     &:hover {
-      box-shadow: none;
+      text-decoration: none !important;
     }
   }
 }
 
-// .dropdown-header-mobile {
-//   display: none;
+//makes active state into italics
+.usa-nav__sublist {
+  list-style: none;
+  margin-top: 8px;
 
-//   .usa-button {
-//     &:hover {
-//       background: transparent;
-//     }
-//   }
-// }
-.search-mobile {
-  display: none;
+  & .usa-nav__submenu-item {
+    &:active {
+      font-style: italic;
+    }
+    &.is-active {
+      font-style: italic;
+    }
+  }
 }
 
-.menu-mobile-btn {
-  display: none;
-}
-
-.appHeader-item {
-  margin-right: $cbp-size-2;
-  // &:hover,
-  // &:active {
-  //   background: $cbp-ui-primary-darker;
-  // }
-}
-
-.appHeader-text {
-  @extend .cbp-text-dark;
-  align-items: center;
-  display: flex;
-  height: 4rem;
-  padding: 0 $cbp-size-1;
-  //USWDS default h6 style is set to text-transform: uppercase.
-  text-transform: none;
+//this is a modification of the USWDS button.
+//hamburger menu at mobile resolution.
+.usa-menu-btn {
+  background-color: transparent;
+  color: #000000;
+  padding: 0;
 
   &:hover {
-    // color: #ffffff;
-    text-decoration: none;
-    box-shadow: inset 0 -4px 0 0 $cbp-active-dark;
+    @extend .usa-menu-btn;
   }
 
   i {
-    margin-left: $cbp-size-1;
+    @include icon-container;
   }
 }
 
-@media only screen and (max-width: 1023px) {
-  .search-mobile {
-    align-items: center;
-    border: 2px solid $cbp-ui-primary-dark;
-    border-radius: 4px;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    width: 40px;
-    &:hover {
-      color: $cbp-active-dark;
-      border: 2px solid $cbp-active-dark;
-    }
-  }
-
-  .cbp-button-close {
-    right: 0;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-  }
-
-  .menu-mobile-btn {
-    display: none;
-  }
-
-  .usa-search {
-    display: none !important;
-  }
+//get rid of default uswds padding for logo
+.usa-logo {
+  margin: 0;
 }
 
-//1150px
-@media only screen and (max-width: 82em) {
+//hides mobile search button by default
+.usa-search-btn {
+  display: none;
 }
 
-//768px
-@media only screen and (max-width: 55em) {
-  .appHeader-item {
-    display: flex;
-    flex-direction: column;
-    margin-right: 0;
-    &:hover,
-    &:focus {
-      background: $cbp-base-lightest;
-    }
-  }
+//default container wrapper for header
+.cbp-container {
+  align-items: center;
+  display: flex;
+  line-height: 56px;
+  margin: 0 $cbp-size-4;
+}
 
-  .appHeader-heading {
-    margin: 0;
-  }
+//hides mobile header shown on the mobile side menu
+//(e.g., Card Archetype title)
+.cbp-mobile-header {
+  display: none;
+}
 
-  .appHeader-menu {
-    flex-direction: column;
-    height: inherit;
-    width: inherit;
-    padding: $cbp-size-2;
-  }
-
-  .appHeader-text {
+@media screen and (min-width: $tablet-breakpoint) {
+  //custom dropdown menu for items at desktop/tablet view.
+  .usa-nav__submenu {
+    border-radius: 0 0 5px 5px;
+    font-weight: 500;
     padding: 0;
-    &:hover,
-    &:focus {
-      border: none;
+  }
+
+  //this is used for the hover effect (fills background color)
+  //for the menu items on desktop/tablet view.
+  .usa-nav__submenu-item {
+    margin: 0 !important;
+
+    a {
+      display: inline-block;
+      margin: 6px 12px;
     }
-  }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
+    &:first-child {
+      a {
+        margin-top: 12px;
+      }
+    }
 
-  .search-menu-mobile {
-    display: none;
-  }
+    &:last-child {
+      a {
+        margin-bottom: 12px;
+      }
+    }
 
-  .menu-mobile-btn {
-    align-items: center;
-    border: 2px solid $cbp-ui-primary-dark;
-    border-radius: 4px;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    width: 40px;
     &:hover {
-      color: $cbp-active-dark;
-      border: 2px solid $cbp-active-dark;
+      background: rgb(0, 0, 0, 0.3);
     }
   }
 
-  .menu-mobile {
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    background: #ffffff;
-    position: fixed;
-    padding: $cbp-size-2;
-    right: 0;
-    top: 0;
+  //modifies margins for the grandchildren items
+  .usa-nav__sublist {
+    margin-top: 0 !important;
+    padding: 0 0 6px 0;
+
+    .usa-nav__submenu-item {
+      a {
+        margin-left: 24px;
+
+        &:first-of-type {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  //hide the search bar at tablet breakpoint to make room
+  //for the search icon
+  .usa-nav {
+    form {
+      &.usa-search {
+        display: none;
+      }
+    }
   }
 
-  .search-mobile {
+  //search icon that replaces the search bar at tablet
+  //breakpoint
+  .usa-search-btn {
+    background-color: transparent;
+    border: none;
+    display: block;
+
+    i {
+      @include icon-container;
+    }
+  }
+}
+
+@media screen and (max-width: 879px) {
+  .usa-navbar {
+    width: 100%;
+  }
+  .usa-nav {
+    //for mobile view, uncomment this for the side mobile menu
+    //to take up the entire width of the screen
+    //width: 100%;
+
+    //shows the nav on left side instead of right (default)
+    bottom: 0;
+    left: 0;
+    top: 0;
+    &.is-visible {
+      //this animation needs to be changed, currently not working.
+      //uswds has a keyframe for slidein-right but needs tweaking.
+      animation: slidein-right 0.3s ease-in-out;
+    }
+  }
+
+  .usa-nav {
+    form {
+      &.usa-search {
+        display: flex;
+      }
+    }
+  }
+
+  //modifies margin for grandchildren
+  .usa-nav__sublist {
+    margin: 0;
+    padding: 0;
+
+    & .usa-nav__submenu-item {
+      margin-bottom: 0;
+      a {
+        span {
+          margin-left: $cbp-size-2;
+        }
+      }
+    }
+  }
+
+  //hides mobile search button
+  .usa-search-btn {
     display: none;
+  }
+
+  // .usa-navbar {
+  //   border-bottom: none;
+  // }
+
+  .usa-nav__primary {
+    height: 100%;
+  }
+
+  .usa-logo {
+    display: block;
+    font-size: 22px;
+  }
+
+  .cbp-container {
+    margin: 0 $cbp-size-2;
+  }
+
+  .cbp-mobile-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $cbp-size-1;
   }
 }

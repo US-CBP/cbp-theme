@@ -3,144 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Application Header</title>
+    <title>Document</title>
     <link rel="stylesheet" href="dist/styles.css" />
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
   </head>
   <body>
-    <nav class="appHeader">
-      <div class="cbp-grid-container">
-        <div class="cbp-row">
-          <div class="cbp-grid-col-auto menu-mobile appHeader-menu">
-            <button
-              onClick="closeDropdown()"
-              class="cbp-button-close usa-button--unstyled"
-            >
-              <i class="fas fa-times-circle"></i>
-            </button>
-            <span class="appHeader-heading cbp-text-heading-sm">
-              Card Archetype
-            </span>
-
-            <ul>
-              <li class="appHeader-item">
-                <a href="#" class="usa-button usa-button--unstyled">
-                  <span class="appHeader-text cbp-text-heading-3xs"
-                    >Children 1</span
-                  >
-                </a>
-              </li>
-              <li class="appHeader-item">
-                <a href="#" class="usa-button usa-button--unstyled">
-                  <span class="appHeader-text cbp-text-heading-3xs"
-                    >Children 2</span
-                  >
-                </a>
-              </li>
-              <li class="appHeader-item">
-                <a href="#" class="usa-button usa-button--unstyled">
-                  <span class="appHeader-text cbp-text-heading-3xs"
-                    >Children 3</span
-                  >
-                </a>
-              </li>
-              <li class="appHeader-item">
-                <!-- Add event.stopPropagation(); to add close dropdown functionality when clicking outside -->
-                <button
-                  onClick="showDropdown(this)"
-                  class="cbp-header-dropdown usa-button usa-button--unstyled"
-                >
-                  <span class="appHeader-text cbp-text-heading-3xs">
-                    Child 4 <i class="fas fa-chevron-down"></i>
-                  </span>
-                </button>
-
-                <div id="cbpHeaderDropdown" class="dropdown-content">
-                  <!-- Dropdown content -->
-                  <ul>
-                    <li class="appHeader-dropdown-item">
-                      <a href="#" target="_blank">
-                        <span class="cbp-text-heading-3xs">
-                          Optional Link 1
-                        </span>
-                      </a>
-                    </li>
-
-                    <li class="appHeader-dropdown-item">
-                      <a href="#" target="_blank">
-                        <span class="cbp-text-heading-3xs">
-                          Optional Link 2
-                        </span>
-                      </a>
-                    </li>
-
-                    <li class="appHeader-dropdown-item">
-                      <a href="#" target="_blank">
-                        <span class="cbp-text-heading-3xs"
-                          >A slightly longer link
-                        </span>
-                      </a>
-                    </li>
-                    <li class="appHeader-dropdown-item">
-                      <a href="#" target="_blank">
-                        <span class="cbp-text-heading-3xs">
-                          This is the longest of all the links in the land
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+    <header class="usa-header usa-header--basic">
+      <div class="cbp-container">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="basic-logo">
+            <span class="cbp-heading-text-sm">Card Archetype </span>
           </div>
-
-          <li
-            class="search-menu-mobile cbp-grid-col-auto display-flex flex-justify-end"
-          >
-            <form class="usa-search usa-search--small" role="search">
-              <label class="usa-sr-only" for="search-field-en-small"
-                >Search</label
-              >
-              <input
-                class="usa-input"
-                id="search-field-en-small"
-                type="search"
-                name="search"
-              />
-              <button class="usa-button" type="submit">
-                <span class="usa-sr-only">Search</span>
-              </button>
-            </form>
-            <button class="usa-button usa-button--unstyled search-mobile">
-              <i class="fas fa-search"></i>
-            </button>
-            <button class="usa-button usa-button--unstyled menu-mobile-btn">
-              <i class="fas fa-bars"></i>
-            </button>
-          </li>
+          <button class="usa-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-      </div>
-    </nav>
+        <nav aria-label="Primary navigation" class="usa-nav">
+          <div class="cbp-mobile-header">
+            <span class="cbp-text-heading-xs" style="margin: auto 0"
+              >Card Archetype</span
+            >
+            <button class="usa-nav__close" style="margin: 0">
+              <i
+                class="fas fa-times-circle"
+                style="font-size: 16px"
+                alt="close"
+              ></i>
+            </button>
+          </div>
+          <ul class="usa-nav__primary usa-accordion">
+            <li class="usa-nav__primary-item">
+              <button
+                class="usa-accordion__button usa-nav__link"
+                aria-expanded="false"
+                aria-controls="basic-nav-section-one"
+              >
+                <span>Child 1</span>
+              </button>
+              <ul id="basic-nav-section-one" class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+              </ul>
+            </li>
+            <li class="usa-nav__primary-item">
+              <button
+                class="usa-accordion__button usa-nav__link"
+                aria-expanded="false"
+                aria-controls="basic-nav-section-two"
+              >
+                <span>Child 2</span>
+              </button>
+              <ul id="basic-nav-section-two" class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class="usa-current"> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <ul class="usa-nav__sublist">
+                  <li class="usa-nav__submenu-item is-active">
+                    <a href=""><span>Grandchild link </span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href=""><span>Grandchild link</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href=""><span>Grandchild link</span></a>
+                  </li>
+                </ul>
+              </ul>
+            </li>
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 3</span></a
+              >
+            </li>
 
-    <div class="cbp-grid-container" style="margin-top: 36px">
-      <div class="cbp-row">
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 1</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 2</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 3</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 4</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 5</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 6</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 7</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 8</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 9</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 10</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 11</div>
-        <div class="cbp-grid-col-1-lg" style="background: green">Block 12</div>
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 4</span></a
+              >
+            </li>
+          </ul>
+          <button class="usa-search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+          <form class="usa-search usa-search--small" role="search">
+            <label class="usa-sr-only" for="basic-search-field-small"
+              >Search small</label
+            >
+            <input
+              class="usa-input"
+              id="basic-search-field-small"
+              type="search"
+              name="search"
+            />
+            <button class="usa-button" type="submit">
+              <span class="usa-sr-only">Search</span>
+            </button>
+          </form>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <!-- Required JS for USWDS -->
     <script src="js/uswds.min.js"></script>
-    <script src="js/universalHeader.js"></script>
   </body>
 </html>
