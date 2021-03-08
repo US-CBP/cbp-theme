@@ -1,4 +1,4 @@
-//mobile view, currently set at 'tablet-lg' for demo purposes.
+//mobile view, currently set at 800px for demo purposes.
 //you can change the value at the source uswds setting file below.
 //want to be able to set this value manually in the future without
 //having to go to the uswds sheet itself.
@@ -8,6 +8,7 @@
 //you can manually set the breakpoint below to match your project's
 //requirements.
 $tablet-breakpoint: 870px;
+$mobile-breakpoint: uswds-mobile-breakpoint.$theme-header-min-width - 1px;
 
 //the container used for the hamburger menu icon and
 //mobile search icon.
@@ -99,7 +100,7 @@ $tablet-breakpoint: 870px;
   display: none;
 }
 
-@media screen and (min-width: $tablet-breakpoint) {
+@media screen and (min-width: $mobile-breakpoint) {
   //custom dropdown menu for items at desktop/tablet view.
   .usa-nav__submenu {
     border-radius: 0 0 5px 5px;
@@ -175,7 +176,7 @@ $tablet-breakpoint: 870px;
   }
 }
 
-@media screen and (max-width: 879px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .usa-navbar {
     width: 100%;
   }
@@ -183,6 +184,9 @@ $tablet-breakpoint: 870px;
     //for mobile view, uncomment this for the side mobile menu
     //to take up the entire width of the screen
     //width: 100%;
+    // @if $mobile-breakpoint < $tablet-breakpoint {
+    //   width: 100%;
+    // }
 
     //shows the nav on left side instead of right (default)
     bottom: 0;
@@ -223,9 +227,9 @@ $tablet-breakpoint: 870px;
     display: none;
   }
 
-  // .usa-navbar {
-  //   border-bottom: none;
-  // }
+  .usa-navbar {
+    border-bottom: none;
+  }
 
   .usa-nav__primary {
     height: 100%;
