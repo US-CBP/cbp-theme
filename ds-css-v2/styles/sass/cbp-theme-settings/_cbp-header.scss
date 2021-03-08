@@ -15,11 +15,11 @@ $dhs-blue: #003366;
     color: #ffffff;
   }
 
-  .cbp-container {
-    align-items: center;
-    height: inherit;
-    margin: auto $cbp-size-4;
-  }
+  // .cbp-container {
+  //   align-items: center;
+  //   height: inherit;
+  //   margin: auto $cbp-size-4;
+  // }
 
   //default button element has usa-button properties
   button {
@@ -42,7 +42,7 @@ $dhs-blue: #003366;
     text-decoration: none;
     color: #ffffff;
     padding: $cbp-size-2;
-    @include cbp-text-button;
+    //@include cbp-text-button;
   }
 
   //Menu dropdown
@@ -80,16 +80,16 @@ $dhs-blue: #003366;
     font-style: italic;
     margin: $cbp-size-2 $cbp-size-2 0 $cbp-size-2;
   }
-}
 
-.cbp-logo {
-  &-text {
-    color: white;
-    font-weight: 500;
-  }
+  .cbp-logo {
+    &-text {
+      color: white;
+      font-weight: 500;
+    }
 
-  &-mobile {
-    display: none;
+    &-mobile {
+      display: none;
+    }
   }
 }
 
@@ -179,7 +179,7 @@ li {
   .dropdown-header-mobile {
     display: flex;
     & h2 {
-      @include cbp-text-heading-lg;
+      //@include cbp-text-heading-lg;
       color: #ffffff;
     }
   }
@@ -258,7 +258,7 @@ li {
   .dropdown-header-mobile {
     display: flex;
     & h2 {
-      @include cbp-text-heading-lg;
+      //@include cbp-text-heading-lg;
       color: #ffffff;
     }
   }
@@ -276,7 +276,6 @@ li {
     &-text {
       margin: auto;
       padding-left: $cbp-size-2;
-      @include cbp-text-heading-sm;
     }
   }
 }
