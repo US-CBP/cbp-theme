@@ -32,8 +32,14 @@ $mobile-breakpoint: uswds-mobile-breakpoint.$theme-header-min-width - 1px;
   border-bottom: 2px solid rgb(0, 0, 0, 0.1);
 }
 
+.usa-header--basic .usa-nav__link:hover::after,
+.usa-header--basic .usa-nav__primary-item > .usa-current::after {
+  bottom: 0;
+}
+
 .usa-header--basic .usa-nav {
   justify-content: space-between;
+  padding-bottom: 0;
 }
 
 //removes the default underline on hover that uswds uses
@@ -93,7 +99,6 @@ $mobile-breakpoint: uswds-mobile-breakpoint.$theme-header-min-width - 1px;
   line-height: 56px;
   margin: 0 $cbp-size-4;
 }
-
 //hides mobile header shown on the mobile side menu
 //(e.g., Card Archetype title)
 .cbp-mobile-header {
