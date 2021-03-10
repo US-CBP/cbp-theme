@@ -14,7 +14,7 @@
         USWDS grid for logo & menu items.
         'cbp-container' class sets the left & right margins for content inside.
       -->
-      <div class="cbp-container">
+      <div class="cbp-container grid-row">
         <!--
           CBP Logo
           USWDS grid set to grid-col-auto
@@ -34,27 +34,17 @@
               alt="CBP Logo"
               height="55"
             />
-            <span class="cbp-logo-text cbp-text-heading-xs">CBP</span>
+            <span class="cbp-logo-text cbp-text-heading-sm">CBP</span>
           </div>
         </div>
 
         <!-- USWDS grid that holds the icons & floats to the right-most side in tablet view -->
-
-        <!-- Application Directory button -->
-        <div class="">
-          <button onClick="showDropdown(this)" class="cbp-header-dropdown">
-            <i class="fas fa-th font-ui-md"></i>
-            <span class="cbp-header-text cbp-header-dropdown">
-              Card Archetype
-            </span>
-          </button>
-
-          <!-- Application Directory Dropdown -->
-          <div id="cbpHeaderDropdown" class="dropdown-content">
-            <!-- Icon and header text on full-width mobile dropdown -->
-            <div class="dropdown-header-mobile">
-              <h2 class="display-flex flex-align-center flex-2">
-                <i class="fas fa-th font-ui-lg"></i>
+        <div class="grid-row grid-col-fill display-flex flex-justify-end">
+          <!-- Application Directory button -->
+          <div class="grid-col desktop:grid-col tablet:grid-col-auto">
+            <button onClick="showDropdown(this)" class="cbp-header-dropdown">
+              <i class="fas fa-th font-ui-md"></i>
+              <span class="cbp-header-text cbp-header-dropdown">
                 Card Archetype
               </h2>
               <button
@@ -65,49 +55,67 @@
               </button>
             </div>
 
-            <!-- Dropdown content -->
-            <span class="cbp-header-subtext">
-              Recently Visited Applications
-            </span>
-            <ul>
-              <li class="cbp-dropdown-item">
-                <a href="#" target="_blank">
-                  <span> Most Recent Application </span>
-                </a>
-              </li>
-
-              <li class="cbp-dropdown-item">
-                <a href="#" target="_blank">
-                  <span> Next Recent Application </span>
-                </a>
-              </li>
-
-              <li class="cbp-dropdown-item">
-                <a href="#" target="_blank">
-                  <span
-                    >Next Recent Application that has a really long name
-                  </span>
-                </a>
-              </li>
-
-              <li class="cbp-dropdown-item">
-                <a href="#" target="_blank">
-                  <span
-                    >Next Recent Application that has a really long name
-                  </span>
-                </a>
-              </li>
-
-              <li class="cbp-dropdown-item">
-                <a class="cbp-external-button" href="#" target="_blank"
-                  ><span class="cbp-text-button">View All Apps</span></a
+            <!-- Application Directory Dropdown -->
+            <div id="cbpHeaderDropdown" class="dropdown-content show">
+              <!-- Icon and header text on full-width mobile dropdown -->
+              <div class="dropdown-header-mobile">
+                <h2
+                  class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
                 >
+                  <i class="fas fa-th font-ui-lg"></i>
+                  Card Archetype
+                </h2>
+                <button
+                  onClick="closeDropdown()"
+                  class="usa-button--unstyled margin-left-auto"
+                >
+                  <i class="fas fa-times-circle cbp-close-icon"></i>
+                </button>
+              </div>
+
+              <li class="cbp-dropdown-item">
+                <a href="#" target="_blank">
+                  <span
+                    >Next Recent Application that has a really long name
+                  </span>
+                </a>
               </li>
-            </ul>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Next Recent Application </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span
+                      >Next Recent Application that has a really long name
+                    </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span
+                      >Next Recent Application that has a really long name
+                    </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a
+                    class="cbp-external-button cbp-text-button"
+                    href="#"
+                    target="_blank"
+                    >View All Apps</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="">
           <!--
             Feedback standalone button (no dropdown)
             USWDS grid to position feedback button
@@ -127,7 +135,7 @@
             USWDS grid to position feedback button
             Evenly spaced out with other items in mobile view, and auto fill for tablet and up
           -->
-          <div class="">
+          <div class="grid-col tablet:grid-col-auto">
             <button onClick="showDropdown(this)" class="cbp-header-dropdown">
               <i class="fas fa-user font-ui-md"></i>
               <span class="cbp-header-text cbp-header-dropdown">
@@ -138,7 +146,9 @@
             <!-- Icon and header text on full-width mobile dropdown -->
             <div id="cbpHeaderDropdown2" class="dropdown-content user-profile">
               <div class="dropdown-header-mobile">
-                <h2 class="display-flex flex-align-center flex-2">
+                <h2
+                  class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
+                >
                   <i class="fas fa-user font-ui-lg"></i>
                   User Name
                 </h2>
