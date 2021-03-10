@@ -1,0 +1,258 @@
+//mobile view, currently set at 800px for demo purposes.
+//you can change the value at the source uswds setting file below.
+//want to be able to set this value manually in the future without
+//having to go to the uswds sheet itself.
+@use "../_uswds-theme-components" as uswds-mobile-breakpoint;
+
+//tablet view, currently set at 870px for demo purposes
+//you can manually set the breakpoint below to match your project's
+//requirements.
+$tablet-breakpoint: 870px;
+$mobile-breakpoint: uswds-mobile-breakpoint.$theme-header-min-width - 1px;
+
+//the container used for the hamburger menu icon and
+//mobile search icon.
+@mixin icon-container {
+  border: 2px solid $cbp-ui-primary-dark;
+  border-radius: 3px;
+  color: $cbp-ui-primary-dark;
+  font-size: 16px;
+  padding: 8px;
+}
+
+///////////////////////
+//uswds modifications//
+///////////////////////
+
+//this section modifies existing uswds classes
+//in order to fit the design of our custom theme.
+
+//adds gray 'shadow' below the header
+.usa-header {
+  border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+}
+
+.usa-header--basic .usa-nav__link:hover::after,
+.usa-header--basic .usa-nav__primary-item > .usa-current::after {
+  bottom: 0;
+}
+
+.usa-header--basic .usa-nav {
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+//removes the default underline on hover that uswds uses
+.usa-nav__submenu-item {
+  a {
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+//makes active state into italics
+.usa-nav__sublist {
+  list-style: none;
+  margin-top: 8px;
+
+  & .usa-nav__submenu-item {
+    &:active {
+      font-style: italic;
+    }
+    &.is-active {
+      font-style: italic;
+    }
+  }
+}
+
+//this is a modification of the USWDS button.
+//hamburger menu at mobile resolution.
+.usa-menu-btn {
+  background-color: transparent;
+  color: #000000;
+  padding: 0;
+
+  &:hover {
+    @extend .usa-menu-btn;
+  }
+
+  i {
+    @include icon-container;
+  }
+}
+
+//get rid of default uswds padding for logo
+.usa-logo {
+  margin: 0;
+}
+
+//hides mobile search button by default
+.usa-search-btn {
+  display: none;
+}
+
+//default container wrapper for header
+.cbp-container {
+  align-items: center;
+  display: flex;
+  line-height: 56px;
+  margin: 0 $cbp-size-4;
+}
+//hides mobile header shown on the mobile side menu
+//(e.g., Card Archetype title)
+.cbp-mobile-header {
+  display: none;
+}
+
+@media screen and (min-width: $mobile-breakpoint) {
+  //custom dropdown menu for items at desktop/tablet view.
+  .usa-nav__submenu {
+    border-radius: 0 0 5px 5px;
+    font-weight: 500;
+    padding: 0;
+  }
+
+  //this is used for the hover effect (fills background color)
+  //for the menu items on desktop/tablet view.
+  .usa-nav__submenu-item {
+    margin: 0 !important;
+
+    a {
+      display: inline-block;
+      margin: 6px 12px;
+    }
+
+    &:first-child {
+      a {
+        margin-top: 12px;
+      }
+    }
+
+    &:last-child {
+      a {
+        margin-bottom: 12px;
+      }
+    }
+
+    &:hover {
+      background: rgb(0, 0, 0, 0.3);
+    }
+  }
+
+  //modifies margins for the grandchildren items
+  .usa-nav__sublist {
+    margin-top: 0 !important;
+    padding: 0 0 6px 0;
+
+    .usa-nav__submenu-item {
+      a {
+        margin-left: 24px;
+
+        &:first-of-type {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  //hide the search bar at tablet breakpoint to make room
+  //for the search icon
+  .usa-nav {
+    form {
+      &.usa-search {
+        display: none;
+      }
+    }
+  }
+
+  //search icon that replaces the search bar at tablet
+  //breakpoint
+  .usa-search-btn {
+    background-color: transparent;
+    border: none;
+    display: block;
+
+    i {
+      @include icon-container;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .usa-navbar {
+    width: 100%;
+  }
+  .usa-nav {
+    //for mobile view, uncomment this for the side mobile menu
+    //to take up the entire width of the screen
+    //width: 100%;
+    // @if $mobile-breakpoint < $tablet-breakpoint {
+    //   width: 100%;
+    // }
+
+    //shows the nav on left side instead of right (default)
+    bottom: 0;
+    left: 0;
+    top: 0;
+    &.is-visible {
+      //this animation needs to be changed, currently not working.
+      //uswds has a keyframe for slidein-right but needs tweaking.
+      animation: slidein-right 0.3s ease-in-out;
+    }
+  }
+
+  .usa-nav {
+    form {
+      &.usa-search {
+        display: flex;
+      }
+    }
+  }
+
+  //modifies margin for grandchildren
+  .usa-nav__sublist {
+    margin: 0;
+    padding: 0;
+
+    & .usa-nav__submenu-item {
+      margin-bottom: 0;
+      a {
+        span {
+          margin-left: $cbp-size-2;
+        }
+      }
+    }
+  }
+
+  //hides mobile search button
+  .usa-search-btn {
+    display: none;
+  }
+
+  .usa-navbar {
+    border-bottom: none;
+  }
+
+  .usa-nav__primary {
+    height: 100%;
+  }
+
+  .usa-logo {
+    display: block;
+    font-size: 22px;
+  }
+
+  .cbp-container {
+    margin: 0 $cbp-size-2;
+  }
+
+  .cbp-mobile-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $cbp-size-1;
+  }
+}
