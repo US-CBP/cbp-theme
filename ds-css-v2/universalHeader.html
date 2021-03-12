@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
   </head>
   <body>
-    <header class="cbp-header">
+    <header class="cbp-universal-header">
       <!--
         USWDS grid for logo & menu items.
         'cbp-container' class sets the left & right margins for content inside.
       -->
-      <div class="cbp-container grid-row">
+      <div class="cbp-container">
         <!--
           CBP Logo
-          USWDS grid set to grid-col-auto
         -->
-        <div class="display-flex margin-right-5">
+        <div class="cbp-logo-container">
           <img
             class="cbp-logo"
             src="assets/images/cbp-logo-white.svg"
@@ -34,29 +33,24 @@
               alt="CBP Logo"
               height="55"
             />
-            <span class="cbp-logo-text cbp-text-heading-sm">CBP</span>
+            <span class="cbp-logo-text cbp-text-heading-xs">CBP</span>
           </div>
         </div>
 
         <!-- USWDS grid that holds the icons & floats to the right-most side in tablet view -->
-        <div class="grid-row grid-col-fill display-flex flex-justify-end">
+
+        <div class="cbp-icon-container">
           <!-- Application Directory button -->
-          <div class="grid-col desktop:grid-col tablet:grid-col-auto">
+          <div>
             <button onClick="showDropdown(this)" class="cbp-header-dropdown">
               <i class="fas fa-th font-ui-md"></i>
               <span class="cbp-header-text cbp-header-dropdown">
                 Card Archetype
-              </h2>
-              <button
-                onClick="closeDropdown()"
-                class="usa-button--unstyled margin-left-auto"
-              >
-                <i class="fas fa-times-circle cbp-close-icon"></i>
-              </button>
-            </div>
+              </span>
+            </button>
 
             <!-- Application Directory Dropdown -->
-            <div id="cbpHeaderDropdown" class="dropdown-content show">
+            <div id="cbpHeaderDropdown" class="dropdown-content app-directory">
               <!-- Icon and header text on full-width mobile dropdown -->
               <div class="dropdown-header-mobile">
                 <h2
@@ -73,13 +67,16 @@
                 </button>
               </div>
 
-              <li class="cbp-dropdown-item">
-                <a href="#" target="_blank">
-                  <span
-                    >Next Recent Application that has a really long name
-                  </span>
-                </a>
-              </li>
+              <!-- Dropdown content -->
+              <span class="cbp-header-subtext">
+                Recently Visited Applications
+              </span>
+              <ul>
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Most Recent Application </span>
+                  </a>
+                </li>
 
                 <li class="cbp-dropdown-item">
                   <a href="#" target="_blank">
@@ -104,102 +101,100 @@
                 </li>
 
                 <li class="cbp-dropdown-item">
-                  <a
-                    class="cbp-external-button cbp-text-button"
-                    href="#"
-                    target="_blank"
-                    >View All Apps</a
+                  <a class="cbp-external-button" href="#" target="_blank"
+                    ><span class="cbp-text-button">View All Apps</span></a
                   >
                 </li>
               </ul>
             </div>
           </div>
-        </div>
 
-          <!--
+          <div class="feedback-user-container">
+            <!--
             Feedback standalone button (no dropdown)
-            USWDS grid to position feedback button
-            Evenly spaced out with other items in mobile view, and auto fill for tablet and up
           -->
-          <div class="">
-            <a href="#">
-              <button>
-                <i class="fas fa-comment font-ui-md"></i>
-                <span class="cbp-header-text text-right"> Feedback </span>
-              </button>
-            </a>
-          </div>
-
-          <!--
-            User profile & dropdown
-            USWDS grid to position feedback button
-            Evenly spaced out with other items in mobile view, and auto fill for tablet and up
-          -->
-          <div class="grid-col tablet:grid-col-auto">
-            <button onClick="showDropdown(this)" class="cbp-header-dropdown">
-              <i class="fas fa-user font-ui-md"></i>
-              <span class="cbp-header-text cbp-header-dropdown">
-                User Name
-              </span>
-            </button>
-
-            <!-- Icon and header text on full-width mobile dropdown -->
-            <div id="cbpHeaderDropdown2" class="dropdown-content user-profile">
-              <div class="dropdown-header-mobile">
-                <h2
-                  class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
-                >
-                  <i class="fas fa-user font-ui-lg"></i>
-                  User Name
-                </h2>
-                <button
-                  onClick="closeDropdown()"
-                  class="usa-button--unstyled margin-left-auto"
-                >
-                  <i class="fas fa-times-circle cbp-close-icon"></i>
+            <div class="">
+              <a href="#">
+                <button>
+                  <i class="fas fa-comment font-ui-md"></i>
+                  <span class="cbp-header-text text-right"> Feedback </span>
                 </button>
+              </a>
+            </div>
+
+            <!--
+            User profile & dropdown
+          -->
+            <div class="">
+              <button onClick="showDropdown(this)" class="cbp-header-dropdown">
+                <i class="fas fa-user font-ui-md"></i>
+                <span class="cbp-header-text cbp-header-dropdown">
+                  User Name
+                </span>
+              </button>
+
+              <!-- Icon and header text on full-width mobile dropdown -->
+              <div
+                id="cbpHeaderDropdown2"
+                class="dropdown-content user-profile"
+              >
+                <div class="dropdown-header-mobile">
+                  <h2
+                    class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
+                  >
+                    <i class="fas fa-user font-ui-lg"></i>
+                    User Name
+                  </h2>
+                  <button
+                    onClick="closeDropdown()"
+                    class="usa-button--unstyled margin-left-auto"
+                  >
+                    <i class="fas fa-times-circle cbp-close-icon"></i>
+                  </button>
+                </div>
+
+                <!-- Dropdown content -->
+                <ul>
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span> Optional Link 1 </span>
+                    </a>
+                  </li>
+
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span> Optional Link 2 </span>
+                    </a>
+                  </li>
+
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span>A slightly longer link </span>
+                    </a>
+                  </li>
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span>
+                        This is the longest of all the links in the land
+                      </span>
+                    </a>
+                  </li>
+                  <li class="cbp-dropdown-item">
+                    <a class="cbp-external-button" href="#" target="_blank">
+                      <span class="cbp-text-button"
+                        ><i class="fas fa-sign-out-alt"></i> Logout</span
+                      >
+                    </a>
+                  </li>
+                </ul>
               </div>
-
-              <!-- Dropdown content -->
-              <ul>
-                <li class="cbp-dropdown-item">
-                  <a href="#" target="_blank">
-                    <span> Optional Link 1 </span>
-                  </a>
-                </li>
-
-                <li class="cbp-dropdown-item">
-                  <a href="#" target="_blank">
-                    <span> Optional Link 2 </span>
-                  </a>
-                </li>
-
-                <li class="cbp-dropdown-item">
-                  <a href="#" target="_blank">
-                    <span>A slightly longer link </span>
-                  </a>
-                </li>
-                <li class="cbp-dropdown-item">
-                  <a href="#" target="_blank">
-                    <span>
-                      This is the longest of all the links in the land
-                    </span>
-                  </a>
-                </li>
-                <li class="cbp-dropdown-item">
-                  <a class="cbp-external-button" href="#" target="_blank">
-                    <i class="fas fa-sign-out-alt"></i>
-                    Logout
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <header class="usa-header usa-header--basic">
+    <nav class="usa-header usa-header--basic">
       <div class="cbp-container">
         <div class="usa-navbar">
           <div class="usa-logo" id="basic-logo">
@@ -305,7 +300,7 @@
           </form>
         </nav>
       </div>
-    </header>
+    </nav>
     <!-- Required JS for USWDS -->
     <script src="js/uswds.min.js"></script>
     <!-- JS for dropdowns -->
