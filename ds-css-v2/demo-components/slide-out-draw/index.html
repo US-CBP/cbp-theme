@@ -4,11 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slide Out Draw</title>
+
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="index.css">
+  <!-- Font awesome loaded locally from assets-->
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
 </head>
 <body>
-  
-  <aside class="cbp-draw">
+  <div class="cbp-grid-container">
+    <div class="cbp-row cbp-filter-cmpt">
+      <!-- Filter component header -->
+      <div class="cbp-grid-col-4-sm
+      cbp-grid-col-4-md
+      cbp-grid-col-4-lg
+      cbp-grid-col-3-xl
+      cbp-filter-cmpt__header">
+        <div>
+          <i class="fas fa-filter"></i>
+          <span class="cbp-text-heading-md">Filter</span>
+        </div>
 
-  </aside>
+        <i class="fas fa-times-circle"></i>
+      </div>
+
+      <!-- Filter Items -->
+      <ul class="cbp-grid-col-4-sm
+      cbp-grid-col-4-md
+      cbp-grid-col-4-lg
+      cbp-grid-col-3-xl
+      cbp-filter-cmpt__items">
+        <li>
+          <button class="cbp-acc__btn active-parent cbp-text-heading-2xs">
+            <span>Category Set 1</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <ul class="cbp-filter-cmpt__sub-items">
+            <li>
+              <button class="active-sub-parent cbp-text-heading-3xs">
+                <span>All Applications</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="cbp-text-heading-3xs">Category Tag1</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="cbp-text-heading-3xs">Category Tag2</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="cbp-text-heading-3xs">Category Tag3</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="cbp-acc__btn">
+            <span class="cbp-text-heading-2xs">Category Set 2</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </li>
+
+      </ul>
+
+
+    </div>
+  </div>
+  
+  <script src="./index.js"></script>
 </body>
 </html>

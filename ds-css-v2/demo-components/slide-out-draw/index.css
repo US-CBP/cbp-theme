@@ -1,0 +1,79 @@
+.cbp-filter-cmpt {
+  flex-direction: column;
+  padding-top: 32px;
+}
+
+.cbp-filter-cmpt ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cbp-filter-cmpt__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cbp-filter-cmpt__header .fas {
+  font-size: 1.5em;
+}
+
+.cbp-filter-cmpt__header .fa-filter{
+  margin-right: 12px;
+}
+
+.cbp-filter-cmpt__items {
+  margin-top: 24px !important;
+}
+
+.cbp-filter-cmpt__items ul,
+.cbp-filter-cmpt__items li {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  max-width: 100%;
+}
+
+.cbp-filter-cmpt__items button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.cbp-filter-cmpt__items button {
+  border-top: 1px solid #DFE1E2;
+}
+
+.cbp-filter-cmpt__items button + ul {
+  display: none;
+}
+
+.cbp-filter-cmpt__items button.active-parent + ul {
+  display: block;
+}
+
+.cbp-filter-cmpt__items button .fa-chevron-right {
+  transition: all 0.2s ease;
+  transform: rotate(0deg);
+}
+
+.cbp-filter-cmpt__items button.active-parent .fa-chevron-right {
+  transform: rotate(90deg);
+}
+
+.active-parent,
+.active-sub-parent {
+  background-color: #F1F3F6 !important;
+  color: #1B2B85;
+  font-style: italic;
+}
+
+.cbp-filter-cmpt__sub-items button {
+  padding-left: 32px;
+}
+/* #DFE1E2 */
