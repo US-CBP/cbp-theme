@@ -136,6 +136,7 @@ input[type=checkbox]:hover+label {
 
 .usa-button {
   text-align: center;
+  margin-right: 0;
   max-width: 130px !important;
 }
 
