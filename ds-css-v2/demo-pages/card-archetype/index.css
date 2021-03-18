@@ -10,7 +10,7 @@
   padding-bottom: 16px;
 }
 
-.legend-filter > div {
+.legend-filter>div {
   align-items: center;
   display: flex;
   flex: 1 0 599px;
@@ -29,7 +29,9 @@
 }
 
 /* Square before icon */
-.sq { margin-left: 16px; }
+.sq {
+  margin-left: 16px;
+}
 
 .sq::before {
   background-color: #0081A1;
@@ -44,6 +46,7 @@
 .cbp-card {
   align-self: flex-start;
   border: 2px solid #DFE1E2;
+  border-radius: 5px;
   margin-bottom: 24px !important;
 }
 
@@ -52,7 +55,7 @@
   padding: 0 24px;
 }
 
-.cbp-card__header > i {
+.cbp-card__header>i {
   color: #735FE9;
   display: flex;
   flex-direction: row-reverse;
@@ -65,7 +68,7 @@
   padding: 0 24px;
 }
 
-.cbp-card__body > button {
+.cbp-card__body>button {
   margin: 16px 0;
 }
 
@@ -73,14 +76,19 @@
   margin-top: 0;
 }
 
-.cbp-card__title::before {
+/* .cbp-card__title::before {
   background-color: #0081A1;
   border-radius: 13px;
   content: "";
   display: inline-block;
   height: 26px;
   margin-right: 8px;
-  width: 26px;  
+  width: 26px;
+} */
+
+.update-icon {
+  font-size: 26px;
+  color: #0081A1;
 }
 
 .cbp-card__copy {
@@ -123,5 +131,5 @@
 @media only screen and (min-width : 600px) {
   .legend-filter {
     justify-content: space-between;
-  }  
+  }
 }
