@@ -76,7 +76,7 @@
   margin-top: 0;
 }
 
-.cbp-card__title::before {
+/* .cbp-card__title::before {
   background-color: #0081A1;
   border-radius: 13px;
   content: "";
@@ -84,6 +84,11 @@
   height: 26px;
   margin-right: 8px;
   width: 26px;
+} */
+
+.update-icon {
+  font-size: 26px;
+  color: #0081A1;
 }
 
 .cbp-card__copy {
