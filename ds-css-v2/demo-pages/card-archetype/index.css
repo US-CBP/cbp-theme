@@ -17,6 +17,28 @@
   margin: 16px 0;
 }
 
+input {
+  display: none;
+}
+
+input[type=checkbox]+label {
+  color: transparent;
+
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  flex-direction: row-reverse;
+  -webkit-text-stroke-color: #454540;
+  -webkit-text-stroke-width: 2px;
+}
+
+input[type=checkbox]:checked+label,
+input[type=checkbox]:hover+label {
+  color: #735FE9;
+  -webkit-text-stroke-color: #735FE9;
+  -webkit-text-stroke-width: 2px;
+}
+
 /* Circle before icon */
 .circ::before {
   background-color: #0081A1;
