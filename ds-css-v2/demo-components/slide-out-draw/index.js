@@ -3,6 +3,7 @@ const activeBtn = document.querySelector('.cbp-filter-cmpt .active-parent');
 
 const CBPSlider = document.querySelector('.cbp-slide-draw');
 const CBPSliderCloseBtn = document.querySelector('.cbp-slide-draw__close-btn');
+const testbtn = document.querySelector('.test-btn');
 
 accordion.forEach(item => {
   item.addEventListener('click', (e) => {
@@ -15,3 +16,4 @@ const toggleSlider = () => {
 }
 
 CBPSliderCloseBtn.addEventListener('click', () => { toggleSlider() });
+testbtn.addEventListener('click', () => { toggleSlider() });
