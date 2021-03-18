@@ -46,6 +46,7 @@
 .cbp-card {
   align-self: flex-start;
   border: 2px solid #DFE1E2;
+  border-radius: 5px;
   margin-bottom: 24px !important;
 }
 
@@ -84,6 +85,7 @@
   margin-right: 8px;
   width: 26px;
 } */
+
 .update-icon {
   font-size: 26px;
   color: #0081A1;
