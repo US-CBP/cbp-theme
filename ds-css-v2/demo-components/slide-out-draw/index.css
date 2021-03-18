@@ -1,16 +1,10 @@
-.test-btn {
-  background-color: thistle;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
 .cbp-slide-draw { 
   background-color: #fff;
+  box-shadow: 5px 0 30px rgba(136, 136, 136, 0.20);
   height: 100vh;
   left: 0;
   padding: 0 20px;
-  position: absolute;
+  position: fixed;
   top: 0;
   transition: all 0.2s ease;
   width: 100%;
@@ -18,7 +12,22 @@
 }
 
 .cbp-slide-draw--closed {
-  left: -400px;
+  left: -650px;
+}
+
+.light-box {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity:  25%;
+  position: absolute;
+  right:0;
+  top: 0;
+  z-index: 9998;
+}
+
+.light-box--hidden {
+  display: none;
 }
 
 .cbp-filter-cmpt {
@@ -78,6 +87,7 @@
 
 .cbp-filter-cmpt__items button {
   border-top: 1px solid #DFE1E2;
+  position: relative;
 }
 
 .cbp-filter-cmpt__items button + ul {
@@ -86,6 +96,16 @@
 
 .cbp-filter-cmpt__items button.active-parent + ul {
   display: block;
+}
+
+.cbp-filter-cmpt__items button.active-parent::before {
+  content: "";
+  background-color: #1B2B85;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  left: 1px;
+  position: absolute;
 }
 
 .cbp-filter-cmpt__items button .fa-chevron-right {
