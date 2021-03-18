@@ -1,6 +1,26 @@
+.cbp-slide-draw { 
+  background-color: #fff;
+  height: 100vh;
+  left: 0;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+  z-index: ;
+}
+
+.cbp-slide-draw--closed {
+  left: -400px;
+}
+
 .cbp-filter-cmpt {
   flex-direction: column;
   padding-top: 32px;
+}
+
+.cbp-slide-draw__close-btn {
+  cursor: pointer;
 }
 
 .cbp-filter-cmpt ul {
@@ -20,6 +40,10 @@
 
 .cbp-filter-cmpt__header .fa-filter{
   margin-right: 12px;
+}
+
+.cbp-filter-cmpt__header .fa-times-circle {
+  cursor: pointer;
 }
 
 .cbp-filter-cmpt__items {
@@ -76,4 +100,28 @@
 .cbp-filter-cmpt__sub-items button {
   padding-left: 32px;
 }
-/* #DFE1E2 */
+
+@media only screen and (max-width : 599px) {
+  .cbp-slide-draw { width: 100%; }
+}
+/* 368 */
+@media only screen and (min-width : 600px) and (max-width : 1023px) {
+  .cbp-slide-draw { 
+    padding: 0 36px;
+    width: 368px; 
+  }      
+}
+
+@media only screen and (min-width : 1024px) and (max-width : 1439px) {
+  .cbp-slide-draw {
+    padding: 0 36px;
+    width: 332px;
+  }  
+}
+
+@media only screen and (min-width : 1440px) {
+  .cbp-slide-draw {
+    padding: 0 44px;
+    width: 358px;
+  }  
+}
