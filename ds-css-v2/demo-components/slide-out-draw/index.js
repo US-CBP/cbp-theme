@@ -1,4 +1,4 @@
-const accordion = document.querySelectorAll('.cbp-filter-cmpt button');
+const accordion = document.querySelectorAll('.cbp-filter-cmpt .cbp-acc__btn');
 const activeBtn = document.querySelector('.cbp-filter-cmpt .active-parent');
 
 const CBPSlider = document.querySelector('.cbp-slide-draw');
