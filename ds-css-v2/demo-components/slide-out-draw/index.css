@@ -77,17 +77,18 @@
   align-items: center;
   background-color: transparent;
   border: none;
+  border-top: 1px solid #DFE1E2;  
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   padding: 16px;
+  position: relative;  
   text-align: left;
   width: 100%;
 }
 
-.cbp-filter-cmpt__items button {
-  border-top: 1px solid #DFE1E2;
-  position: relative;
+.cbp-filter-cmpt__items button:active {
+  color: buttontext;
 }
 
 .cbp-filter-cmpt__items button + ul {
