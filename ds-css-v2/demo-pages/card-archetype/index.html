@@ -6,10 +6,74 @@
     <title>CBP Card Archetype</title>
     <link rel="stylesheet" href="../../dist/styles.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../demo-components/slide-out-draw/index.css">
     <!-- Font awesome loaded locally from assets-->
     <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
   </head>
   <body>
+
+    <!-- Filter Draw & Background Lightbox HTML Start-->
+    <div class="cbp-slide-draw cbp-slide-draw--closed">
+      <div class="cbp-filter-cmpt">
+        <!-- Filter component header -->
+        <div class="cbp-filter-cmpt__header">
+          <div>
+            <i class="fas fa-filter"></i>
+            <span class="cbp-text-heading-md">Filter</span>
+          </div>
+  
+          <i class="fas fa-times-circle cbp-slide-draw__close-btn"></i>
+        </div>
+  
+        <!-- Filter Items -->
+        <ul class="cbp-filter-cmpt__items">
+          <li>
+            <button class="cbp-acc__btn active-parent cbp-text-heading-2xs">
+              <span>Category Set 1</span>
+              <i class="fas fa-chevron-right"></i>
+            </button>
+  
+            <ul class="cbp-filter-cmpt__sub-items">
+              <li>
+                <button class="active-sub-parent cbp-text-heading-3xs">
+                  <span>All Applications</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="cbp-text-heading-3xs">Category Tag1</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="cbp-text-heading-3xs">Category Tag2</span>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <span class="cbp-text-heading-3xs">Category Tag3</span>
+                </button>
+              </li>
+            </ul>
+          </li>
+  
+          <li>
+            <button class="cbp-acc__btn cbp-text-heading-2xs">
+              <span>Category Set 2</span>
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </li>
+  
+        </ul>
+  
+  
+      </div>
+    </div>
+
+    <div class="light-box light-box--hidden"></div>
+    <!-- Filter Draw & Background Lightbox HTML End-->
+
+    <!-- CBP Header / Application Header HTML Start -->
     <header class="cbp-universal-header">
       <!--
         USWDS grid for logo & menu items.
@@ -302,6 +366,7 @@
         </nav>
       </div>
     </nav>
+    <!-- CBP Header / Application Header HTML End -->
 
     <div class="cbp-grid-container">
       <!-- Card Archetype Row One -->
@@ -318,7 +383,7 @@
             <span class="sq">Recently Added</span>
           </div>
 
-          <button class="usa-button usa-button--outline">
+          <button class="usa-button usa-button--outline filter-open">
             <i class="fas fa-filter"></i>
             <span class="cbp-text-button">Filter</span>
           </button>
@@ -829,5 +894,8 @@
     <script src="../../js/uswds.min.js"></script>
     <!-- JS for dropdowns -->
     <script src="../../js/universalHeader.js"></script>
+
+    <!-- JS for filter draw -->
+    <script src="../../demo-components/slide-out-draw/index.js"></script>
   </body>
 </html>
