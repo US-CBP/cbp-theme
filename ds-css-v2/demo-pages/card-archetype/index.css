@@ -151,6 +151,29 @@ input[type=checkbox]:hover+label {
   border: none;
 }
 
+/* CBP Slide out filter start */
+.cbp-filter { 
+  display: flex;
+  flex-direction: column;
+}
+
+.cbp-filter__header {
+  padding-bottom: 24px;
+  padding-top: 32px;
+}
+
+.cbp-filter__btns li {
+  padding: 16px !important;
+}
+
+.block-el {
+  background-color: white;
+  display: fixed;
+  z-index: 100;
+}
+
+/* CBP Slide out filter end */
+
 @media only screen and (min-width : 600px) {
   .legend-filter {
     justify-content: space-between;
