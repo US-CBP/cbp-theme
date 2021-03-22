@@ -1,4 +1,4 @@
-let cardBtn = document.querySelectorAll('.cbp-text-button');
+let cardBtn = document.querySelectorAll('.cbp-card .cbp-btn');
 
 cardBtn.forEach( btn => {
   btn.addEventListener( 'click', (e) => {
