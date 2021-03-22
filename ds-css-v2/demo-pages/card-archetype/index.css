@@ -123,6 +123,13 @@ input[type=checkbox]:hover+label {
 
 /* CBP Card Css END */
 
+.cbp-tags {
+  display: block;
+}
+
+.cbp-tags--hidden {
+  display: none;
+}
 /* CBP Tag Css */
 .cbp-tag {
   background-color: #454540;
@@ -132,7 +139,6 @@ input[type=checkbox]:hover+label {
   margin-bottom: 16px;
   padding: 8px;
 }
-
 
 .usa-button {
   text-align: center;
