@@ -16,7 +16,7 @@
     <div class="cbp-slide-draw cbp-slide-draw--closed">
       <div class="cbp-filter-cmpt">
         <!-- Filter component header -->
-        <div class="cbp-filter-cmpt__header">
+        <div class="cbp-filter-cmpt__header cbp-border-bottom">
           <div>
             <i class="fas fa-filter"></i>
             <span class="cbp-text-heading-md">Filter</span>
@@ -24,48 +24,11 @@
   
           <i class="fas fa-times-circle cbp-slide-draw__close-btn"></i>
         </div>
-  
-        <!-- Filter Items -->
-        <ul class="cbp-filter-cmpt__items">
-          <li>
-            <button class="cbp-acc__btn active-parent cbp-text-heading-2xs">
-              <span>Category Set 1</span>
-              <i class="fas fa-chevron-right"></i>
-            </button>
-  
-            <ul class="cbp-filter-cmpt__sub-items">
-              <li>
-                <button class="active-sub-parent cbp-text-heading-3xs">
-                  <span>All Applications</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="cbp-text-heading-3xs">Category Tag1</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="cbp-text-heading-3xs">Category Tag2</span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  <span class="cbp-text-heading-3xs">Category Tag3</span>
-                </button>
-              </li>
-            </ul>
-          </li>
-  
-          <li>
-            <button class="cbp-acc__btn cbp-text-heading-2xs">
-              <span>Category Set 2</span>
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </li>
-  
-        </ul>
-  
+
+        <form action="" class="cbp-filter-cmpt__form">
+
+        </form>
+
       </div>
     </div>
 
@@ -377,7 +340,7 @@
 
         <!-- Vetting Archetype Full Column Two -->
         <div class="cbp-grid-col-full cbp-btn-group passenger-filters">
-          <button class="usa-button usa-button--outline filter-open">
+          <button class="usa-button usa-button--outline">
             <i class="fas fa-sync-alt"></i>
             <span class="cbp-text-button">Refresh</span>
           </button>
@@ -388,7 +351,7 @@
               <option value="Sort By Something Else">Sort By Something Else</option>
             </select>
             
-            <button class="usa-button usa-button--outline filter-open">
+            <button class="usa-button usa-button--outline filter-open" disabled>
               <i class="fas fa-filter"></i>
               <span class="cbp-text-button">Filter</span>
             </button>
@@ -465,6 +428,7 @@
           <div class="cbp-row-card__header">
             <div class="cbp-row-card__img">
               <i class="fas fa-exclamation-triangle"></i>
+              <div class="img-overlay"></div>
               <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
             </div>
             <div class="cbp-row-card__title">
@@ -954,6 +918,7 @@
 
     <!--  -->
     <script src="./index.js"></script>
+    <script src="../../demo-components/slide-out-draw/index.js"></script>
 
   </body>
 </html>

@@ -1,5 +1,11 @@
 /* Potential universal styling Start */
 /* FCE1D4 */
+
+.cbp-border-bottom {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #DFE1E2;
+}
+
 .cbp-btn {
   background-color: transparent;
   border: 0;
@@ -42,11 +48,11 @@
 .cbp-tag {
   background-color: #0081A1;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 16px;
   display: table;
   margin-bottom: 8px;
   margin-right: 8px;
-  padding: 8px;
+  padding: 8px 16px;
 }
 
 .cbp-tag > .fas {
@@ -60,10 +66,6 @@
 select {
   padding: 8px;
 }
-
-/* #cbp-page-select {
-  padding: 8px;
-} */
 
 .cbp-app-footer {
   align-items: center;
@@ -137,6 +139,10 @@ select {
 }
 /* Potential universal styling End */
 
+.cbp-filter-cmpt__form {
+  margin-top: 16px;
+}
+
 .passenger-filters button {
   margin-right: 0;
 }
@@ -193,6 +199,7 @@ select {
 }
 
 .cbp-row-card {
+  border-bottom: 1px solid #f1f3f6;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -225,6 +232,16 @@ select {
   border-radius: 8px;
 }
 
+.cbp-row-card--alert .img-overlay {
+  background: #D54309;
+  border-radius: 8px;
+  height: 80px;
+  opacity: .5;
+  position: absolute;
+  width: 80px;
+  z-index: 0;
+}
+
 .cbp-row-card--alert .cbp-row-card__img > .fa-exclamation-triangle {
   color: rgba(255, 255, 255, 0.85);
   display: inline-block;
@@ -254,6 +271,15 @@ select {
 }
 
 @media only screen and (min-width : 600px) and (max-width : 1023px) {
+
+  .results-info > div {
+    display: flex;
+    flex: 1 0 50%;
+  }
+
+  .results-info .updated {
+    margin-top: 0;
+  }
 
   .right-filters > select {
     flex: 0;
@@ -302,6 +328,15 @@ select {
 }
 
 @media only screen and (min-width : 1024px) and (max-width : 1439px) {
+
+  .results-info > div {
+    display: flex;
+    flex: 1 0 50%;
+  }
+
+  .results-info .updated {
+    margin-top: 0;
+  }
 
   .right-filters {
     align-items: center;
@@ -367,6 +402,15 @@ select {
 
 @media only screen and (min-width : 1440px) {
 
+  .results-info > div {
+    display: flex;
+    flex: 1 0 50%;
+  }
+
+  .results-info .updated {
+    margin-top: 0;
+  }
+
   .right-filters {
     align-items: center;
     display: flex;
@@ -411,10 +455,8 @@ select {
   }
 
   .cbp-row-card--alert .cbp-row-card__footer button {
-    flex: 1 0 185.88px;
     float: none;
     height: 40px;
-    width: auto;
 }
 
   .cbp-app-footer .cbp-page-list {
