@@ -262,9 +262,29 @@ select {
   flex: 1 0 100%;
 }
 
+.cbp-row-card__body span {
+  display: inline-block;
+  margin-top: 8px;
+}
+
 .right-row-card {
   flex: 1 0 100%;
 }
+
+/* Filter Draw START */
+.cbp-filter-cmpt > .usa-search {
+  margin-top: 16px;
+}
+
+.cbp-filter-cmpt .usa-sr-only,
+.cbp-filter-cmpt .usa-input { 
+  display: inline-block;
+  left: 0;
+  width: 100%;
+}
+
+
+/* Filter Draw STOP */
 
 @media only screen and (max-width : 599px) {
 
@@ -278,7 +298,9 @@ select {
   }
 
   .results-info .updated {
+    display: inline-block;
     margin-top: 0;
+    text-align: right;
   }
 
   .right-filters > select {
@@ -335,7 +357,9 @@ select {
   }
 
   .results-info .updated {
+    display: inline-block;
     margin-top: 0;
+    text-align: right;
   }
 
   .right-filters {
@@ -408,7 +432,9 @@ select {
   }
 
   .results-info .updated {
+    display: inline-block;
     margin-top: 0;
+    text-align: right;
   }
 
   .right-filters {
