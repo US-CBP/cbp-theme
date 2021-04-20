@@ -26,14 +26,126 @@
         </div>
 
         <form class="usa-search usa-search--small" role="search">
-          <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
-          <input class="usa-input" id="basic-search-field-small" type="search" name="search">
-          <button class="usa-button" type="submit">
-            <span class="usa-sr-only">Search</span>
-          </button>
+          <label class="usa-sr-only" for="basic-search-field-small">Search By Name</label>
+          <div>
+            <input class="usa-input" id="basic-search-field-small" type="search" name="search">
+            <button class="usa-button" type="submit">
+              <!-- <span class="usa-sr-only">Search</span> -->
+            </button>
+          </div>
         </form>
 
+        <form class="cbp-filter-form" role="form">
+          <p class="cbp-label">Passenger Sex</p>
+          <span class="cbp-radio-group">
+            <div>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+            <div>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+          </span>
 
+          <label class="cbp-label" for="basic-search-field-small">Passenger Age</label>
+          <div class="cbp-slider">
+            <span>18-41yrs</span>
+            <input type="range" min=18 max=41 value="29" />
+          </div>
+          
+
+          <label class="cbp-label" for="passport-issuer">Country that Issued Passport</label>
+          <select name="" id="cbp-sort-select" class="cbp-select">
+            <option slected value="United States">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="Canada">Mexico</option>
+          </select>
+          
+          <label class="cbp-label" for="depart-port">Port of Departure</label>
+          <select name="" id="cbp-sort-select" class="cbp-select">
+            <option slected value="United States">Any</option>
+            <option value="Canada">Port of New York and New Jersey Port Newark</option>
+            <option value="Canada">Port of Miami</option>
+            <option value="Canada">Port of South Louisiana</option>
+          </select>
+
+          <label class="cbp-label" for="basic-search-field-small">Port of Arrival</label>
+          <select name="" id="cbp-sort-select" class="cbp-select">
+            <option slected value="United States">JFK (XXXX/SM)</option>
+            <option value="Canada">Port of New York and New Jersey Port Newark</option>
+            <option value="Canada">Port of Miami</option>
+            <option value="Canada">Port of South Louisiana</option>
+          </select>
+
+          <p class="cbp-label">Arrival Time From:</p>
+          <div class="date-time">
+            <div class="cbp-date-picker">
+              <label for="cbp-date"></label>
+              <input id="cbp-date" class="cbp-date" type="date" value="2020-11-20" placeholder="11/20/2020" />
+              <i class="fas fa-calendar"></i>
+            </div>
+          
+            <span>at</span>
+          
+            <div class="cbp-time-picker">
+              <label for="cbp-time"></label>
+              <input id="cbp-time" class="cbp-time" type="time" value="10:30:00" />
+              <i class="far fa-clock"></i>
+            </div>
+          </div>
+
+          <p class="cbp-label">Until:</p>
+          <div class="date-time">
+            <div class="cbp-date-picker">
+              <label for="cbp-date"></label>
+              <input id="cbp-date" class="cbp-date" type="date" value="2020-11-20" placeholder="11/20/2020" />
+              <i class="fas fa-calendar"></i>
+            </div>
+          
+            <span>at</span>
+          
+            <div class="cbp-time-picker">
+              <label for="cbp-time"></label>
+              <input id="cbp-time" class="cbp-time" type="time" value="10:30:00" />
+              <i class="far fa-clock"></i>
+            </div>
+          </div>
+
+          <p class="cbp-label">Derogatory Hits</p>
+          <div class=cbp-input-group>
+            <div>
+              <input type="checkbox" id="derogatory-hit-1" name="derogatory-hit-1" value="Detain on Sight">
+              <label for="derogatory-hit-1">Detain on Sight</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="derogatory-hit-1" name="derogatory-hit-1" value="Detain on Sight">
+              <label for="derogatory-hit-1">T-List Hit</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="derogatory-hit-1" name="derogatory-hit-1" value="Detain on Sight">
+              <label for="derogatory-hit-1">AGR Hit</label>
+            </div>
+          </div>
+
+          <div class="cbp-btn-group">
+            <button class="cbp-btn">
+              <i class="fas fa-sync"></i>
+              <span>CLEAR</span>
+            </button>
+
+            <button class="cbp-btn">
+              <i class="fas fa-check"></i>
+              <span>APPLY</span>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -356,7 +468,7 @@
               <option value="Sort By Something Else">Sort By Something Else</option>
             </select>
             
-            <button class="usa-button usa-button--outline filter-open" disabled>
+            <button class="usa-button usa-button--outline filter-open">
               <i class="fas fa-filter"></i>
               <span class="cbp-text-button">Filter</span>
             </button>
