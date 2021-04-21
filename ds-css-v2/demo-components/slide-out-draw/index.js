@@ -19,4 +19,4 @@ const toggleSlider = () => {
 }
 
 CBPSliderCloseBtn.addEventListener('click', () => { toggleSlider() });
-openFilter.addEventListener('click', () => { toggleSlider() });
+openFilter.addEventListener('click', () => { console.log('CLICKED'); toggleSlider() });

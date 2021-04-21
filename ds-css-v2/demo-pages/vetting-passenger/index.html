@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBP Passenger App</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../demo-components/slide-out-draw/index.css">
+    <!-- Font awesome loaded locally from assets-->
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+
+    <!-- Filter Draw & Background Lightbox HTML Start-->
+    <div class="cbp-slide-draw cbp-slide-draw--closed">
+      <div class="cbp-filter-cmpt">
+        <!-- Filter component header -->
+        <div class="cbp-filter-cmpt__header cbp-border-bottom">
+          <div>
+            <i class="fas fa-filter"></i>
+            <span class="cbp-text-heading-md">Filter</span>
+          </div>
+  
+          <i class="fas fa-times-circle cbp-slide-draw__close-btn"></i>
+        </div>
+
+        <form class="usa-search usa-search--small" role="search">
+          <label class="usa-sr-only" for="basic-search-field-small">Search By Name</label>
+          <div>
+            <input class="usa-input" id="basic-search-field-small" type="search" name="search">
+            <button class="usa-button" type="submit">
+              <!-- <span class="usa-sr-only">Search</span> -->
+            </button>
+          </div>
+        </form>
+
+        <form class="cbp-filter-form" role="form">
+          <p class="cbp-label">Passenger Sex</p>
+          <span class="cbp-radio-group">
+            <div>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+            <div>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+          </span>
+
+          <label class="cbp-label" for="basic-search-field-small">Passenger Age</label>
+          <div class="cbp-slider">
+            <span>18-41yrs</span>
+            <input type="range" min=18 max=41 value="29" />
+          </div>
+          
+
+          <label class="cbp-label" for="passport-issuer">Country that Issued Passport</label>
+          <select name="" id="cbp-sort-select" class="cbp-select">
+            <option slected value="United States">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="Canada">Mexico</option>
+          </select>
+          
+          <label class="cbp-label" for="depart-port">Port of Departure</label>
+          <select name="" id="cbp-sort-select" class="cbp-select">
+            <option slected value="United States">Any</option>
+            <option value="Canada">Port of New York and New Jersey Port Newark</option>
+            <option value="Canada">Port of Miami</option>
+            <option value="Canada">Port of South Louisiana</option>
+          </select>
+
+          <label class="cbp-label" for="basic-search-field-small">Port of Arrival</label>
+          <select name="" id="cbp-sort-select" class="cbp-select">
+            <option slected value="United States">JFK (XXXX/SM)</option>
+            <option value="Canada">Port of New York and New Jersey Port Newark</option>
+            <option value="Canada">Port of Miami</option>
+            <option value="Canada">Port of South Louisiana</option>
+          </select>
+
+          <p class="cbp-label">Arrival Time From:</p>
+          <div class="date-time">
+            <div class="cbp-date-picker">
+              <label for="cbp-date"></label>
+              <input id="cbp-date" class="cbp-date" type="date" value="2020-11-20" placeholder="11/20/2020" />
+              <i class="fas fa-calendar"></i>
+            </div>
+          
+            <span>at</span>
+          
+            <div class="cbp-time-picker">
+              <label for="cbp-time"></label>
+              <input id="cbp-time" class="cbp-time" type="time" value="10:30:00" />
+              <i class="far fa-clock"></i>
+            </div>
+          </div>
+
+          <p class="cbp-label">Until:</p>
+          <div class="date-time">
+            <div class="cbp-date-picker">
+              <label for="cbp-date"></label>
+              <input id="cbp-date" class="cbp-date" type="date" value="2020-11-20" placeholder="11/20/2020" />
+              <i class="fas fa-calendar"></i>
+            </div>
+          
+            <span>at</span>
+          
+            <div class="cbp-time-picker">
+              <label for="cbp-time"></label>
+              <input id="cbp-time" class="cbp-time" type="time" value="10:30:00" />
+              <i class="far fa-clock"></i>
+            </div>
+          </div>
+
+          <p class="cbp-label">Derogatory Hits</p>
+          <div class=cbp-input-group>
+            <div>
+              <input type="checkbox" id="derogatory-hit-1" name="derogatory-hit-1" value="Detain on Sight">
+              <label for="derogatory-hit-1">Detain on Sight</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="derogatory-hit-1" name="derogatory-hit-1" value="Detain on Sight">
+              <label for="derogatory-hit-1">T-List Hit</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="derogatory-hit-1" name="derogatory-hit-1" value="Detain on Sight">
+              <label for="derogatory-hit-1">AGR Hit</label>
+            </div>
+          </div>
+
+          <div class="cbp-btn-group">
+            <button class="cbp-btn">
+              <i class="fas fa-sync"></i>
+              <span class="cbp-text-button">CLEAR</span>
+            </button>
+
+            <button class="cbp-btn">
+              <i class="fas fa-check"></i>
+              <span class="cbp-text-button">APPLY</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="light-box light-box--hidden"></div>
+    <!-- Filter Draw & Background Lightbox HTML End-->
+
+    <!-- CBP Header / Application Header HTML Start -->
+    <header class="cbp-universal-header">
+      <!--
+        USWDS grid for logo & menu items.
+        'cbp-container' class sets the left & right margins for content inside.
+      -->
+      <div class="cbp-container">
+        <!--
+          CBP Logo
+        -->
+        <div class="cbp-logo-container">
+          <img
+            class="cbp-logo"
+            src="../../assets/images/cbp-logo-white.svg"
+            alt="CBP Logo"
+            height="55"
+          />
+
+          <!-- Mobile meatball logo - default display set to none, sets to block at 640px (USWDS Tablet width) -->
+          <div class="cbp-logo-mobile">
+            <img
+              src="../../assets/images/cbp-logo-circle.svg"
+              alt="CBP Logo"
+              height="55"
+            />
+            <span class="cbp-logo-text cbp-text-heading-xs">CBP</span>
+          </div>
+        </div>
+
+        <!-- USWDS grid that holds the icons & floats to the right-most side in tablet view -->
+
+        <div class="cbp-icon-container">
+          <!-- Application Directory button -->
+          <div>
+            <button onClick="showDropdown(this)" class="cbp-header-dropdown">
+              <i class="fas fa-th font-ui-md"></i>
+              <span class="cbp-header-text cbp-header-dropdown">
+                Card Archetype
+              </span>
+            </button>
+
+            <!-- Application Directory Dropdown -->
+            <div id="cbpHeaderDropdown" class="dropdown-content app-directory">
+              <!-- Icon and header text on full-width mobile dropdown -->
+              <div class="dropdown-header-mobile">
+                <h2
+                  class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
+                >
+                  <i class="fas fa-th font-ui-lg"></i>
+                  Card Archetype
+                </h2>
+                <button
+                  onClick="closeDropdown()"
+                  class="usa-button--unstyled margin-left-auto"
+                >
+                  <i class="fas fa-times-circle cbp-close-icon"></i>
+                </button>
+              </div>
+
+              <!-- Dropdown content -->
+              <span class="cbp-header-subtext">
+                Recently Visited Applications
+              </span>
+              <ul>
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Most Recent Application </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Next Recent Application </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span
+                      >Next Recent Application that has a really long name
+                    </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span
+                      >Next Recent Application that has a really long name
+                    </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a class="cbp-external-button" href="#" target="_blank"
+                    ><span class="cbp-text-button">View All Apps</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feedback-user-container">
+            <!--
+            Feedback standalone button (no dropdown)
+          -->
+            <div class="">
+              <a href="#">
+                <button>
+                  <i class="fas fa-comment font-ui-md"></i>
+                  <span class="cbp-header-text text-right"> Feedback </span>
+                </button>
+              </a>
+            </div>
+
+            <!--
+            User profile & dropdown
+          -->
+            <div class="">
+              <button onClick="showDropdown(this)" class="cbp-header-dropdown">
+                <i class="fas fa-user font-ui-md"></i>
+                <span class="cbp-header-text cbp-header-dropdown">
+                  User Name
+                </span>
+              </button>
+
+              <!-- Icon and header text on full-width mobile dropdown -->
+              <div
+                id="cbpHeaderDropdown2"
+                class="dropdown-content user-profile"
+              >
+                <div class="dropdown-header-mobile">
+                  <h2
+                    class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
+                  >
+                    <i class="fas fa-user font-ui-lg"></i>
+                    User Name
+                  </h2>
+                  <button
+                    onClick="closeDropdown()"
+                    class="usa-button--unstyled margin-left-auto"
+                  >
+                    <i class="fas fa-times-circle cbp-close-icon"></i>
+                  </button>
+                </div>
+
+                <!-- Dropdown content -->
+                <ul>
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span> Optional Link 1 </span>
+                    </a>
+                  </li>
+
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span> Optional Link 2 </span>
+                    </a>
+                  </li>
+
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span>A slightly longer link </span>
+                    </a>
+                  </li>
+                  <li class="cbp-dropdown-item">
+                    <a href="#" target="_blank">
+                      <span>
+                        This is the longest of all the links in the land
+                      </span>
+                    </a>
+                  </li>
+                  <li class="cbp-dropdown-item">
+                    <a class="cbp-external-button" href="#" target="_blank">
+                      <span class="cbp-text-button"
+                        ><i class="fas fa-sign-out-alt"></i> Logout</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="usa-header usa-header--basic">
+      <div class="cbp-container">
+        <div class="usa-navbar">
+          <div class="usa-logo" id="basic-logo">
+            <span class="cbp-heading-text-sm">Passenger App</span>
+          </div>
+          <button class="usa-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <nav aria-label="Primary navigation" class="usa-nav">
+          <div class="cbp-mobile-header">
+            <span class="cbp-text-heading-xs" style="margin: auto 0"
+              >Passenger Archetype</span
+            >
+            <button class="usa-nav__close" style="margin: 0">
+              <i
+                class="fas fa-times-circle"
+                style="font-size: 16px"
+                alt="close"
+              ></i>
+            </button>
+          </div>
+          <ul class="usa-nav__primary usa-accordion">
+            <li class="usa-nav__primary-item">
+              <button
+                class="usa-accordion__button usa-nav__link"
+                aria-expanded="false"
+                aria-controls="basic-nav-section-one"
+              >
+                <span>Child 1</span>
+              </button>
+              <ul id="basic-nav-section-one" class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+              </ul>
+            </li>
+            <li class="usa-nav__primary-item">
+              <button
+                class="usa-accordion__button usa-nav__link"
+                aria-expanded="false"
+                aria-controls="basic-nav-section-two"
+              >
+                <span>Child 2</span>
+              </button>
+              <ul id="basic-nav-section-two" class="usa-nav__submenu">
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class="usa-current"> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href="#" class=""> Navigation link</a>
+                </li>
+                <ul class="usa-nav__sublist">
+                  <li class="usa-nav__submenu-item is-active">
+                    <a href=""><span>Grandchild link </span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href=""><span>Grandchild link</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href=""><span>Grandchild link</span></a>
+                  </li>
+                </ul>
+              </ul>
+            </li>
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 3</span></a
+              >
+            </li>
+
+            <li class="usa-nav__primary-item">
+              <a class="usa-nav__link" href="javascript:void(0)"
+                ><span>Child 4</span></a
+              >
+            </li>
+          </ul>
+          <button class="usa-search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+          <form class="usa-search usa-search--small" role="search">
+            <label class="usa-sr-only" for="basic-search-field-small"
+              >Search small</label
+            >
+            <input
+              class="usa-input"
+              id="basic-search-field-small"
+              type="search"
+              name="search"
+            />
+            <button class="usa-button" type="submit">
+              <span class="usa-sr-only">Search</span>
+            </button>
+          </form>
+        </nav>
+      </div>
+    </nav>
+    <!-- CBP Header / Application Header HTML End -->
+
+    <div class="cbp-grid-container">
+      <!-- Vetting Archetype Row One -->
+      <div class="cbp-row margin-top-3">
+        <!-- Vetting Archetype Full Column One -->
+        <div class="cbp-grid-col-full cbp-border-bottom cbp-app-name">
+          <h1 class="cbp-text-heading-2xl">Passenger Vettings</h1>
+        </div>
+
+        <!-- Vetting Archetype Full Column Two -->
+        <div class="cbp-grid-col-full cbp-btn-group passenger-filters">
+          <button class="usa-button usa-button--outline">
+            <i class="fas fa-sync-alt"></i>
+            <span class="cbp-text-button">Refresh</span>
+          </button>
+
+          <div class="right-filters">
+            <select name="" id="cbp-sort-select">
+              <option slected value="Sort By Closest to Arrival">Sort By Closest to Arrival</option>
+              <option value="Sort By Something Else">Sort By Something Else</option>
+            </select>
+            
+            <button class="usa-button usa-button--outline filter-open">
+              <i class="fas fa-filter"></i>
+              <span class="cbp-text-button">Filter</span>
+            </button>
+          </div>
+          <!-- <select name="" id="cbp-sort-select">
+            <option slected value="Sort By Closest to Arrival">Sort By Closest to Arrival</option>
+            <option value="Sort By Something Else">Sort By Something Else</option>
+          </select>          
+
+          <button class="usa-button usa-button--outline filter-open">
+            <i class="fas fa-filter"></i>
+            <span class="cbp-text-button">Filter</span>
+          </button> -->
+        </div>
+      </div>
+
+      <!-- App initial row with refresh and filters ** START ** -->
+      <div class="cbp-row">
+        <div class="cbp-grid-col-full results-info">
+          <div class="results-filters">
+            <div class="results">56 Results</div>
+            <div class="filters">3 Filters Applied</div>
+          </div>
+
+          <div class="updated">
+            Updated: 11/20/2020 10:10 EST
+          </div>
+        </div>
+      </div>
+      <!-- App initial row with refresh and filters ** END ** -->
+
+      <!-- App rows START -->
+      <div class="cbp-row">
+        <!-- No Alert Row -->
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>         
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+
+        <!-- Alert Row -->
+        <div class="cbp-row-card cbp-row-card--alert cbp-grid-col-full">
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <div class="img-overlay"></div>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+              
+              <!-- <div class="cbp-tags">
+                <div class="cbp-tag cbp-tag--danger">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  Detain on Sight
+                </div>
+
+                <div class="cbp-tag cbp-tag--danger">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  T List Hit
+                </div>
+
+                <div class="cbp-tag cbp-tag--danger">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  AGR Hit
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="cbp-row-card__footer">
+            <div class="cbp-tags">
+              <div class="cbp-tag cbp-tag--danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                Detain on Sight
+              </div>
+
+              <div class="cbp-tag cbp-tag--danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                T List Hit
+              </div>
+
+              <div class="cbp-tag cbp-tag--danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                AGR Hit
+              </div>
+            </div>
+
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+
+        <!-- For Placement Purposes -->
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+        <div class="cbp-row-card cbp-grid-col-full">
+          
+          <div class="cbp-row-card__header">
+            <div class="cbp-row-card__img">
+              <i class="fas fa-exclamation-triangle"></i>
+              <img src="../../assets/images/profile-page/passenge-photo-v2.jpg" alt="Person Image">
+            </div>
+            <div class="cbp-row-card__title">
+              <p><span class="cbp-text-heading-xs">Smithington, <br>Johnathan</span> <br> <span>Male - Age 46 - USA</span></p>
+              
+            </div>
+          </div>
+
+          <div class="right-row-card">
+            <div class="cbp-tags">
+              <div class="cbp-tag">
+                <i class="fas fa-calendar-check"></i>
+                Arriving in 3 Hours
+              </div>
+            </div>
+
+            <div class="cbp-row-card__body">
+              <b>Flight:</b> Inbound A471 LHR &rarr; JFK (A999/SM)
+              <br>
+              <span>
+                <b>Arrival Time:</b> 11/22/2020 09:48 EST
+              </span>
+            </div>
+          </div>
+
+          <div class="cbp-row-card__footer">
+            <button class="cbp-btn cbp-text-button">
+              <i class="fas fa-clipboard-check"></i>
+              vet Passenger
+            </button>
+          </div>
+          
+        </div>
+
+      </div>
+      <!-- App rows END -->
+
+      <!-- App Footer START -->
+      <div class="cbp-row">
+        <div class="cbp-grid-col-full cbp-app-footer">
+          <div class="cbp-page-list">
+            <select name="" id="cbp-page-select">
+              <option value="1">1/Page</option>
+              <option value="2">2/Page</option>
+              <option value="3">3/Page</option>
+              <option value="4">4/Page</option>
+              <option value="5">5/Page</option>
+              <option value="6">6/Page</option>
+              <option value="7">7/Page</option>
+              <option value="8">8/Page</option>
+              <option value="9">9/Page</option>
+              <option selected value="10">10/Page</option>
+            </select>
+          </div>
+
+          <nav class="cbp-pagination">
+            <div class="cbp-page-list">
+              <select name="" id="cbp-page-select">
+                <option value="1">1 of 5</option>
+                <option value="2">2 of 5</option>
+                <option value="3">3 of 5</option>
+                <option value="4">4 of 5</option>
+                <option value="5">5 of 5</option>
+              </select>
+            </div>
+            <ul class="cbp-pagination-number">
+              <li class="cbp-pagination-down">
+                <button type="button" disabled>
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+              </li>
+              <li>
+                <button class="active">1</button>
+              </li>
+              <li class="additonal-btn"><button>2</button></li>
+              <li class="additonal-btn"><button>3</button></li>
+              <li class="additonal-btn"><button>4</button></li>
+              <li class="additonal-btn"><button>5</button></li>
+              <li class="cbp-pagination-up">
+                <button>
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- App Footer END -->
+
+    </div>
+
+    <!-- Required JS for USWDS -->
+    <script src="../../js/uswds.min.js"></script>
+    <!-- JS for dropdowns -->
+    <script src="../../js/universalHeader.js"></script>
+
+    <!--  -->
+    <script src="./index.js"></script>
+    <script src="../../demo-components/slide-out-draw/index.js"></script>
+
+  </body>
+</html>
