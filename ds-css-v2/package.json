@@ -12,7 +12,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "json-server": "^0.16.3",
-    "postcss": "^8.1.2",
+    "postcss": "^8.2.10",
     "postcss-csso": "^5.0.0",
     "sass": "^1.27.0",
     "uswds": "^2.9.0",
