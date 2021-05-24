@@ -86,13 +86,15 @@ select {
   border: 2px solid #71767A;
   border-radius: 3px;
   flex: 1 0 100%;
-  max-height: 375px;
+  /* max-height: 330px; */
   order: 1;
   position: relative;
   width: 100%;
 }
 
 .image-bio > .image-container > img {
+  float: left;
+  height: inherit;
   width: 100%;
 }
 
@@ -219,6 +221,8 @@ select {
 .cbp-accordion .cbp-accordion-title .cbp-accordion-title-left > .cbp-tag {
   background-color: #0081A1;
   color: #FFF;
+  margin-bottom: 0;
+  margin-right: 0;
 }
 
 .cbp-accordion--danger .cbp-accordion-title .cbp-accordion-title-left > .cbp-tag {
@@ -312,25 +316,6 @@ select {
 .cbp-filter-cmpt__form {
   margin-top: 16px;
 }
-
-/* .passenger-filters button {
-  margin-right: 0;
-} */
-
-/* .passenger-filters > *:nth-child(1){
-  order: 1;
-}
-
-.passenger-filters > *:nth-child(2){
-  display: flex;
-  flex: 1 0 100%;
-  margin-top: 20px;
-  order: 3;  
-}
-
-.passenger-filters > *:nth-child(3){
-  order: 2;  
-} */
 
 .right-filters {
   display: flex;
@@ -429,10 +414,6 @@ select {
 .cbp-filter-cmpt > .usa-search {
   flex-wrap: wrap;
   margin-top: 16px;
-}
-
-.cbp-filter-cmpt > .usa-search * {
-
 }
 
 .cbp-filter-cmpt .usa-sr-only,
@@ -679,6 +660,11 @@ select {
 
 @media only screen and (min-width : 600px) and (max-width : 1023px) {
 
+  .entity-encounter :first-child > span,
+  .entity-encounter .right-items :first-child > span {
+    display: block;
+  }
+
   .right-filters > select {
     flex: 0;
   }
@@ -705,15 +691,6 @@ select {
     min-width: 320px;
   }
 
-  /* .passenger-filters > *:nth-child(2){
-    flex: 0;
-    margin-top: 0;
-    order: 2;  
-  }
-  
-  .passenger-filters > *:nth-child(3){
-    order: 3;  
-  }  */
 
   .cbp-app-footer .cbp-page-list {
     margin-right: 16px;
@@ -723,6 +700,49 @@ select {
     display: list-item;
   }
 
+}
+
+/* Image Bio Specific Breakpoint */
+@media only screen and (min-width: 850px) and (max-width: 1023px) {
+  
+  .image-bio > .image-container {
+    flex: 0 0 50%;
+  }
+
+  .image-bio > .bio-info {
+    flex: 0 0 50%;
+    padding-left: 16px;
+  }
+
+  .image-bio > .bio-info {
+    order: 2;
+  }
+
+  .image-bio > .encounter {
+    height: 36px;
+    order: 3;
+  }
+
+  .image-bio > .encounter .encounter-graphic {
+    font-size: 20px;
+  }
+
+  .image-bio > .encounter .ecounter-text {
+    flex-direction: row;
+  }
+
+  .image-bio > .encounter .ecounter-text span:nth-child(2) {
+    margin-left: 12px;
+  }
+
+  .image-bio > .encounter .ecounter-text span:last-child {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .cbp-accordion-group {
+    margin-top: 16px;
+  }
 }
 
 @media only screen and (min-width : 1024px) and (max-width : 1439px) {
@@ -743,13 +763,6 @@ select {
     flex: 0;
     width: auto;
   }
-
-  /* .passenger-filters > *:nth-child(2){
-    flex: 0;
-    margin-left: 34em;
-    margin-top: 0;
-    order: 2;  
-  } */
 
   .cbp-row-card__header,
   .right-row-card,
@@ -808,13 +821,6 @@ select {
     width: auto;
   }
 
-  /* .passenger-filters > *:nth-child(2){
-    flex: 0;
-    margin-left: 34em;
-    margin-top: 0;
-    order: 2;  
-  } */
-
   .cbp-row-card__header,
   .right-row-card,
   .cbp-row-card__footer {
@@ -847,7 +853,3 @@ select {
     display: list-item;
   }
 }
-
-/* .cbp-border-bottom {
-  border-bottom: solid 3px #A9AEB1;
-} */

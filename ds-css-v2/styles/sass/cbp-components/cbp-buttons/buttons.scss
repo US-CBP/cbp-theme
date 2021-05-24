@@ -70,11 +70,13 @@
 }
 
 .cbp-btn {
+  align-items: center;
   background: #0050D8;
   border: 2px solid transparent;
   border-radius: 3px;
   color: #FFF;
   cursor: pointer;
+  display: flex;
   font-family: "Roboto", sans-serif;
   height: 44px;
   margin: 0;
