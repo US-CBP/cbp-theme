@@ -706,7 +706,12 @@ select {
 @media only screen and (min-width: 850px) and (max-width: 1023px) {
   
   .image-bio > .image-container {
-    flex: 0 0 50%;
+    flex: 0 0 389px;
+    max-height: 389px;
+  }
+
+  .image-bio > .image-container > img {
+    max-height: 385px;
   }
 
   .image-bio > .bio-info {
