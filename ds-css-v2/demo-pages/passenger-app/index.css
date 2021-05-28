@@ -826,14 +826,14 @@ select {
 
   .image-bio > .encounter > img {
     display: inline-block;
-    height: 81%;
+    height: 78%;
     object-fit: cover;
     width: 100%;
   }
 
   .image-bio > .encounter .encounter-graphic,
   .image-bio > .encounter .ecounter-text {
-    height: 72px;
+    height: 84px;
   }
 
   .image-bio > .encounter .ecounter-text span:last-child {
@@ -884,14 +884,14 @@ select {
 
   .image-bio > .encounter > img {
     display: inline-block;
-    height: 81%;
+    height: 78%;
     object-fit: cover;
     width: 100%;
   }
 
   .image-bio > .encounter .encounter-graphic,
   .image-bio > .encounter .ecounter-text {
-    height: 72px;
+    height: 84px;
   }
 
   .image-bio > .encounter .ecounter-text span:last-child {
