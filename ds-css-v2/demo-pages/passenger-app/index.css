@@ -151,6 +151,10 @@ select {
   order: 2;
 }
 
+.encounter > img {
+  display: none;
+}
+
 .encounter-graphic {
   align-items: center;
   background-color: #00687D;
@@ -752,109 +756,155 @@ select {
 
 @media only screen and (min-width : 1024px) and (max-width : 1439px) {
 
-  .right-filters {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 320px;
+  .entity-encounter :first-child > span,
+  .entity-encounter .right-items :first-child > span {
+    display: block;
   }
 
-  .right-filters > select {
-    flex: 0;
-  }
-  
-  .right-filters > button {
-    flex: 0;
-    width: auto;
+  .image-bio > .image-container {
+    flex: 0 0 389px;
+    max-height: 389px;
   }
 
-  .cbp-row-card__header,
-  .right-row-card,
-  .cbp-row-card__footer {
-    flex: 1;
+  .image-bio > .image-container > img {
+    max-height: 385px;
   }
 
-  .cbp-row-card .cbp-row-card__footer .cbp-btn {
-    float: right;
+  .image-bio > .bio-info {
+    flex: 0 0 50%;
+    padding-left: 16px;
   }
 
-  .cbp-row-card--alert .right-row-card {
-    margin-right: min(433px, 33%);
-  }
-  
-  .cbp-row-card--alert .cbp-row-card__footer {
-    display: flex;
-    flex: 1 0 100%;
-    justify-content: space-between;
+  .image-bio > .bio-info {
+    order: 2;
   }
 
-  .cbp-row-card--alert .cbp-row-card__footer .cbp-btn {
-    margin-bottom: 1em;
-    margin-right: 16px;
-    position: absolute;
-    right: 0;
-    top: 55px;
+  .image-bio > .encounter {
+    height: 36px;
+    order: 3;
+  }
+
+  .image-bio > .encounter .encounter-graphic {
+    font-size: 20px;
   } 
 
-  .cbp-app-footer .cbp-page-list {
-    margin-right: 16px;
+  .image-bio > .encounter .ecounter-text {
+    flex-direction: row;
   }
 
-  .cbp-pagination-number li.additonal-btn  {
-    display: list-item;
+  .image-bio > .encounter .ecounter-text span:nth-child(2) {
+    margin-left: 12px;
   }
 
+  .image-bio > .encounter .ecounter-text span:last-child {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .cbp-accordion-group {
+    margin-top: 16px;
+  }
+
+}
+
+/* Custom Breakpoint Upcoming Encounter */
+@media only screen and (min-width : 1120px) and (max-width : 1439px) {
+
+  .image-bio > .bio-info {
+    flex: 0 0 280px;
+    padding-left: 16px;
+  }
+
+  .image-bio > .encounter {
+    align-items: flex-end;
+    flex: 0 0 31%;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-left: auto;
+    margin-top: 0;
+  }
+
+  .image-bio > .encounter > img {
+    display: inline-block;
+    height: 81%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .image-bio > .encounter .encounter-graphic,
+  .image-bio > .encounter .ecounter-text {
+    height: 72px;
+  }
+
+  .image-bio > .encounter .ecounter-text span:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .image-bio > .encounter .ecounter-text {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .image-bio > .encounter .ecounter-text span:nth-child(2) {
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width : 1440px) {
 
-  .right-filters {
-    align-items: center;
-    display: flex;
+  .entity-encounter :first-child > span,
+  .entity-encounter .right-items :first-child > span {
+    display: block;
+  }
+
+  .image-bio > .image-container {
+    flex: 0 0 389px;
+    max-height: 389px;
+  }
+
+  .image-bio > .image-container > img {
+    max-height: 385px;
+  }
+
+  .image-bio > .bio-info {
+    flex: 0 0 280px;
+    order: 2;
+    padding-left: 16px;
+  }
+
+  .image-bio > .encounter {
+    align-items: flex-end;
+    flex: 0 0 31%;
     flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 320px;
+    height: 100%;
+    margin-left: auto;
+    margin-top: 0;
   }
 
-  .right-filters > select {
-    flex: 0;
-  }
-  
-  .right-filters > button {
-    flex: 0;
-    width: auto;
+  .image-bio > .encounter > img {
+    display: inline-block;
+    height: 81%;
+    object-fit: cover;
+    width: 100%;
   }
 
-  .cbp-row-card__header,
-  .right-row-card,
-  .cbp-row-card__footer {
+  .image-bio > .encounter .encounter-graphic,
+  .image-bio > .encounter .ecounter-text {
+    height: 72px;
+  }
+
+  .image-bio > .encounter .ecounter-text span:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .image-bio > .encounter .ecounter-text {
     flex: 1;
+    flex-direction: column;
   }
 
-  .cbp-row-card .cbp-row-card__footer .cbp-btn {
-    float: right;
-  } 
-
-  .cbp-row-card--alert .cbp-row-card__footer {
-    display: flex;
-    flex: 1 0 10px;
-  }
-
-  .cbp-row-card--alert .cbp-row-card__footer .cbp-tags {
-    flex: 1;
-  }
-
-  .cbp-row-card--alert .cbp-row-card__footer button {
-    float: none;
-    height: 40px;
-}
-
-  .cbp-app-footer .cbp-page-list {
-    margin-right: 16px;
-  }
-
-  .cbp-pagination-number li.additonal-btn  {
-    display: list-item;
+  .image-bio > .encounter .ecounter-text span:nth-child(2) {
+    margin-left: 0;
   }
 }
