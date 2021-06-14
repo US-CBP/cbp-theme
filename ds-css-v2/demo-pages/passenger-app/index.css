@@ -35,7 +35,7 @@
 .cbp-tag {
   background-color: #0081A1;
   color: #fff;
-  border-radius: 16px;
+  border-radius: 20px;
   display: table;
   margin-bottom: 8px;
   margin-right: 8px;
@@ -61,6 +61,7 @@ select {
 .entity-encounter .right-items {
   display: flex;
   justify-content: space-between;
+  margin-left: 16px;
 }
 
 .entity-encounter .right-items :nth-child(2){
@@ -177,12 +178,13 @@ select {
 }
 
 .ecounter-text > span {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 /* CBP ACCORDION START */
 
 .cbp-accordion-group {
+  margin-bottom: 12px;
   margin-top: 32px;
 }
 
@@ -240,6 +242,7 @@ select {
 
 .cbp-accordion--danger .cbp-accordion-title .cbp-accordion-title-right > .fas {
   color: #FFF;
+  /* font-weight: 500; */
 }
 
 /* CBP ACCORDION STOP */
@@ -659,7 +662,19 @@ select {
 /* Filter Draw STOP */
 
 @media only screen and (max-width : 599px) {
+  /* TEMPORARY FIX */
+  .right-items .cbp-btn:nth-child(2) > i {
+    margin-left: 20px !important;
+  }
+  /* TEMPORARY FIX */
+}
 
+@media only screen and (min-width : 600px) {
+  /* TEMPORARY FIX */
+  .cbp-btn > i {
+    margin-left: 20px !important;
+  }
+  /* TEMPORARY FIX */
 }
 
 @media only screen and (min-width : 600px) and (max-width : 1023px) {

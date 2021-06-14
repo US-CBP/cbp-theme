@@ -79,11 +79,28 @@
   display: flex;
   font-family: "Roboto", sans-serif;
   height: 44px;
-  margin: 0;
-  padding: 0 20px;
+  justify-content: center;
+  // margin: 0;
+  min-width: 44px;
+  // padding: 0 20px;
   transition: all 300ms;
   
-  > .fas + span { margin-left: 8px; }
+  > i:only-of-type {
+    display: block;
+    margin: 0;
+  }
+
+  > *:first-child {
+    margin-left: 20px;
+  }
+
+  > *:last-child {
+    // display: none;
+    margin-left: 8px;
+    margin-right: 20px;
+  }
+
+  // > .fas + span { margin-left: 8px; }
   
   /* DISABLED */
   &:disabled {
@@ -123,6 +140,12 @@
     // }
   }
   
+  /* JUST ICON PRIMARY BUTTON */
+
+  &-icon {
+    width: 44px;
+  }
+
   /* PRIMARY OUTLINE */
   &--outline:not([disabled]) {
     background: #fff;
@@ -285,15 +308,30 @@
   }
 
   /* FLOATING ACTION BUTTON */
-  &--float-primary {
+  &--float-primary,
+  &--float-secondary {
+    align-items: center;
     border-radius: 30px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
     cursor:pointer;
+    display: flex;
     font-size: 24px;
     height: 56px;
+    justify-content: center;
     //outline-radius:;
     padding: 0;
     width: 56px;
+  }
+
+  &--float-primary:disabled,
+  &--float-secondary:disabled {
+    background-color: #ADADAD;
+    color: #FFF;
+  }
+
+  &--float-secondary {
+    background-color: #E6E6E2;
+    color: #5d5d52;
   }
 }
 
@@ -314,6 +352,7 @@
   &:focus {
     color: #BE32D0;
     font-weight: bold;
+    outline: none;
   }
   
   &:active {
