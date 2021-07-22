@@ -1,0 +1,106 @@
+// CBP Badges
+// .cbp-text-badge,
+.cbp-badge {
+  align-items: center;
+  background-color: #0081A1;
+  border-radius: 12px;
+  color: #FFF;
+  cursor: default;
+  display: flex;
+  font-size: 10px;
+  height: 24px;
+  justify-content: center;
+  // padding-top: 7px;
+  text-align: center;
+  width: 24px;
+
+  &--danger {
+    background-color: $cbp-danger;
+  }
+}
+
+// CBP Tags
+.cbp-tag {
+  @extend .cbp-text-subhead;
+  align-items: center;
+  background-color: #0081A1;
+  border-radius: 14px;
+  color: #FFF;
+  cursor: default;
+  display: flex;
+  height: 28px;
+  justify-content: center;
+  padding: 0 12px;
+
+  > i + span {
+    margin-left: 6px;
+  }
+
+  &--warning {
+    background-color: #FACE00;
+    color: #000;
+  }
+
+  &--success {
+    background-color: #008817;
+  }
+
+  &--danger {
+    background-color: $cbp-danger;
+  }
+}
+
+// CBP Chips
+.cbp-chips {
+  @extend .cbp-text-subhead;
+  align-items: center;
+  background-color: #76766A;
+  border-radius: 14px;
+  color: #FFF;
+  display: flex;
+  height: 28px;
+  justify-content: center;
+  padding-left: 12px;
+  text-transform: uppercase;
+
+  &--active {
+    background-color: #1B2B85;
+    
+    &:hover { background-color: #1B2B85; }
+
+    & > span + .plus-border {
+      transform: rotate(-45deg);
+    }
+  }
+
+  & > span + .plus-border {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    margin-left: 4px;
+    width: 24px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    > span + .plus-border {
+      background-color: #454540;
+    }
+  }
+
+  &:focus {
+    background-color: #BE32D0;
+    outline: none;
+
+    > span + .plus-border {
+      background-color: transparent;
+      border-color: #FFF;
+    }
+  }
+
+}
+

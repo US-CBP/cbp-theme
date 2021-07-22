@@ -1,0 +1,18 @@
+/*
+  !!!!! IMPORTANT: All scss files are, and should be imported into layout.scss !!!!!
+
+*/
+.cbp-content__header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.heading--main {
+  margin: 60px 80px 40px 80px;
+}
+
+.tab--text {
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=contentHeader.css.map */

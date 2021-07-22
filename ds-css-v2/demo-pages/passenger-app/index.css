@@ -183,7 +183,126 @@ select {
 
 /* CBP ACCORDION START */
 
-.cbp-accordion-group {
+.cbp-accordion__title--danger .cbp-badge,
+.cbp-accordion__item.active  .cbp-badge,
+.cbp-accordion__title:hover .cbp-badge {
+  background-color: #FFF;
+  color: #000;
+}
+
+/* Potential CBP List styling */
+.cbp-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.cbp-list > li {
+  border-bottom: 1px solid #F1F3F6;
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+
+.cbp-list > li div {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+
+.cbp-list > li button {
+  margin-left: auto;
+}
+
+.cbp-list > li span {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.cbp-accordrion__footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.cbp-page-list {
+  align-items: center;
+  display: flex;
+  flex: 0 1 100%;
+  justify-content: flex-start;
+}
+
+.cbp-pagination {
+  margin-left: auto;
+}
+
+.cbp-pagination {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-width: 190px;
+}
+
+.cbp-pagination-number {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cbp-pagination-number > li {
+  margin: 0;
+}
+
+.cbp-pagination-number button {
+  height: 36px;
+  width: 36px;
+}
+
+.cbp-pagination-number button {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  border:  none;
+  box-shadow: inset 0 0 0 1px #000;
+  padding: 8px;
+}
+
+.cbp-pagination-number button.active {
+  background-color: #1B2B85;
+  color: #fff;
+}
+
+.cbp-pagination-number li.additonal-btn  {
+  display: none;
+}
+
+.cbp-pagination-down > button {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.cbp-pagination-up > button {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cbp-pagination-down > button,
+.cbp-pagination-up > button {
+  background-color: transparent;
+  color: black;
+  width: 28px;
+}
+
+.cbp-pagination-down > button:disabled,
+.cbp-pagination-up > button:disabled {
+  background-color: transparent;
+  color: #ccc;
+}
+
+/* .cbp-accordion-group {
   margin-bottom: 12px;
   margin-top: 32px;
 }
@@ -242,8 +361,7 @@ select {
 
 .cbp-accordion--danger .cbp-accordion-title .cbp-accordion-title-right > .fas {
   color: #FFF;
-  /* font-weight: 500; */
-}
+} */
 
 /* CBP ACCORDION STOP */
 
