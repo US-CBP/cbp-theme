@@ -1,0 +1,47 @@
+/* CSS taken from PrismJS with a few modifications */
+.code-toolbar {
+  display: inline-block;
+}
+
+.toolbar-item {
+  padding: 7px;
+}
+
+.code-snippet-container {
+  max-width: 700px;
+}
+
+.apply-border-radius {
+  border-radius: 7px;
+}
+
+code {
+  background-color: transparent;
+  color: #0a3055;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0;
+}
+
+span.tag {
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.token.tag {
+  padding: 0 !important;
+}
+
+.token.attr-name {
+  padding-left: 10.5px;
+}
+
+.token.entity {
+  background-color: transparent;
+  cursor: inherit;
+}
+
+.token.string {
+  background-color: transparent;
+}
+/*# sourceMappingURL=codeSnippet.css.map */

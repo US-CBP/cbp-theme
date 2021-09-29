@@ -29,4 +29,17 @@ i.e.
 // cbp custom grid
 @import "cbp-grid/cbp-grid";
 
+/*************************/
+/* CBP Custom Components */
+/*************************/
+// CBP Custom Buttons
+@import "cbp-components/cbp-buttons/buttons.scss";
+
+// CBP Custom Badges Chips and Tags
+@import "cbp-components/badges-chips-tags/badges-chips-tags.scss";
+
+// CBP Custom Accordion
+@import "cbp-components/accordion/accordion.scss";
+
+// CBP Header Component
 @import "cbp-theme-settings/cbp-header";

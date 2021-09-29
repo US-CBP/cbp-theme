@@ -1,0 +1,233 @@
+input {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.liteBlue {
+  background-color: rgba(160, 174, 192, 0.5);
+}
+
+.green {
+  background-color: var(--cbp-success);
+  margin-left: var(--cbp-micro-space);
+}
+
+.blue {
+  background-color: var(--cbp-primary);
+  margin: 0 var(--cbp-micro-space);
+}
+
+.fas {
+  padding-right: var(--cbp-micro-space);
+}
+
+.cbp-button-text {
+  display: inline-block;
+  padding: 4px;
+}
+
+.cbp-button-text i {
+  display: inline;
+}
+
+.cbp-circle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  width: 25px;
+}
+
+.cbp-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.cbp-grid {
+  -ms-grid-rows: auto 40px;
+      grid-template-rows: auto 40px;
+  height: 100vh;
+}
+
+.top-border {
+  border-top: 1px var(--grey-dark) solid;
+}
+
+.top-margin {
+  display: block;
+  margin-top: var(--cbp-lg-space);
+}
+
+/* Universal Header */
+.cbp-universal-header {
+  -webkit-box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: -1px 2px 3px 2px rgba(0, 0, 0, 0.1);
+  max-height: 104px;
+}
+
+.cbp-universal-header__skipnav {
+  background: #fff;
+  color: #00416a !important;
+  left: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: -3.8rem;
+  z-index: 100;
+}
+
+.cbp-universal-header__skipnav:focus {
+  top: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cbp-universal-header > nav {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 52px;
+}
+
+.cbp-universal-header > nav > ul {
+  height: 100%;
+}
+
+.cbp-universal-header > nav > ul.cbp-grid {
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.cbp-universal-header > nav li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.cbp-universal-header > nav li:first-child b ~ a {
+  margin-left: var(--cbp-lg-space);
+}
+
+.cbp-universal-header > nav li:nth-child(2) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cbp-universal-header > nav li:nth-child(2) a {
+  padding-left: var(--cbp-lg-space);
+}
+
+.cbp-universal-header__main {
+  background: #003e65;
+  color: #fff;
+  -webkit-transition: height 0.3s ease-out;
+  transition: height 0.3s ease-out;
+}
+
+.cbp-universal-header__main a {
+  color: #fff;
+}
+
+.cbp-universal-header__main.expanded {
+  height: 104px;
+}
+
+.cbp-universal-header__main .uh-lg-up, .cbp-universal-header__main .uh-lg-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 52px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cbp-universal-header__main .uh-lg-left, .cbp-universal-header__main .uh-lg-right {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cbp-universal-header__main .uh-lg-up, .cbp-universal-header__main .uh-lg-down {
+    display: none;
+    height: 52px;
+  }
+  .cbp-universal-header__main .uh-lg-left, .cbp-universal-header__main .uh-lg-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.test .cbp-heading-1 {
+  padding: var(--cbp-sm-space) 0;
+}
+
+.test .cbp-spacing-small-bottom {
+  padding: var(--cbp-extra-sm-space) 0 0;
+}
+
+.test .bottom-border {
+  border-bottom: 1px var(--grey-dark) solid;
+}
+
+.test .back-to {
+  padding: var(--cbp-extra-sm-space) 0;
+}
+
+.test .duration {
+  background: #f1f4f7;
+  padding: var(--cbp-extra-sm-space) 0;
+}
+
+.test .input-elements {
+  margin-top: var(--cbp-lg-space);
+}
+
+.test .input-elements > div {
+  display: inline-block;
+}
+
+.test .input-elements > div:first-child {
+  margin-right: var(--cbp-sm-space);
+}
+
+.test .input-elements > div:nth-child(2) {
+  margin-left: var(--cbp-sm-space);
+}
+
+.test .input-elements .fas {
+  position: absolute;
+}
+
+.test .input-elements input {
+  padding-left: var(--cbp-reg-space);
+}
+
+.test footer {
+  background: #f1f4f7;
+  padding: var(--cbp-micro-space);
+  text-align: right;
+}
+
+.test footer button {
+  margin-right: var(--cbp-sm-space);
+}
+
+.test footer button.active {
+  background-color: var(--cbp-primary);
+  color: #fff;
+}
+/*# sourceMappingURL=test-page.css.map */

@@ -1,0 +1,106 @@
+.hover-focus {
+  background: #BE32D0;
+  color: #FFF;  
+}
+
+.focus-outline {
+  outline: 2px solid #fff !important;
+  outline-offset: -4px !important;
+}
+
+.cbp-accordion {
+  margin: 24px 0;
+
+  &__item {
+    margin-bottom: 12px;
+  }
+
+  &__item.active {
+
+    .cbp-accordion__title {
+      background-color: #008480;
+      color: #FFF;
+
+      .fa-angle-down {
+        transform: rotate(-180deg);
+      }
+
+      &--danger {
+        background: $cbp-danger;
+        color: #FFF;
+        
+        + .cbp-accordion__content {
+          border-color: $cbp-danger;
+        }
+      }
+    }
+
+    .cbp-accordion__content {
+      border-color: #008480;
+      display: block;
+      overflow: scroll;
+    }
+
+  }
+
+  &__title {
+    align-items: center;
+    background: #DFE1E2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    outline: transparent;
+    padding: 16px;
+    transition: all 300ms;
+    width: 100%;
+
+    .fa-angle-down {
+      font-size: 18px;
+      transition: transform .2s ease-in-out;
+    }
+
+    .title-left span {
+      margin-left: 16px;
+    }
+
+    &:hover {
+      @extend .hover-focus;
+      // background: #BE32D0;
+      // color: #FFF;
+    }
+
+    &:focus {
+      @extend .hover-focus;
+      @extend .focus-outline;     
+    }
+
+    &--danger {
+      background: $cbp-danger;
+      color: #FFF;
+
+      &:hover {
+        background: $cbp-danger-dark;
+      }
+
+      &:focus {
+        @extend .focus-outline;
+        background: $cbp-danger-dark;
+      }
+    }
+  }
+
+  &__content {
+    background: #FFF;
+    border-bottom: 4px solid #008480;
+    border-left: 4px solid #008480;
+    border-right: 4px solid #008480;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    // padding: 16px;
+    transition: max-height 0.2s ease-in-out;
+
+    > * { margin: 16px }
+  }
+}
