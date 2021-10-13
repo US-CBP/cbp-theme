@@ -28,7 +28,7 @@
       &--danger {
         background: $cbp-danger;
         color: #FFF;
-        
+
         + .cbp-accordion__content {
           border-color: $cbp-danger;
         }
@@ -36,9 +36,18 @@
     }
 
     .cbp-accordion__content {
-      border-color: #008480;
       display: block;
       overflow: scroll;
+      border-bottom: 4px solid #008480;
+      border-left: 4px solid #008480;
+      border-right: 4px solid #008480;
+      .cbp-accordion__footer {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        margin-top: 16px;
+      }
     }
 
   }
@@ -65,14 +74,12 @@
     }
 
     &:hover {
-      @extend .hover-focus;
-      // background: #BE32D0;
-      // color: #FFF;
+      background-color: $cbp-gray-30;
     }
 
     &:focus {
       @extend .hover-focus;
-      @extend .focus-outline;     
+      @extend .focus-outline;
     }
 
     &--danger {
@@ -84,23 +91,42 @@
       }
 
       &:focus {
+        @extend .hover-focus;
         @extend .focus-outline;
-        background: $cbp-danger-dark;
       }
     }
   }
 
   &__content {
     background: #FFF;
-    border-bottom: 4px solid #008480;
-    border-left: 4px solid #008480;
-    border-right: 4px solid #008480;
     display: none;
     max-height: 0;
     overflow: hidden;
-    // padding: 16px;
     transition: max-height 0.2s ease-in-out;
 
     > * { margin: 16px }
+  }
+}
+
+// Hover States
+.cbp-accordion__item.active {
+  &:hover .cbp-accordion__title {
+    background-color: $cbp-accent-secondary-dark;
+  }
+
+  &:hover .cbp-accordion__content {
+    border-bottom: 4px solid $cbp-accent-secondary-dark;
+    border-left: 4px solid $cbp-accent-secondary-dark;
+    border-right: 4px solid $cbp-accent-secondary-dark;
+  }
+
+  &:hover .cbp-accordion__title--danger {
+    background-color: $cbp-danger-darker;
+  }
+
+  &:hover .cbp-accordion__title--danger + .cbp-accordion__content {
+    border-bottom: 4px solid $cbp-danger-darker;
+    border-left: 4px solid $cbp-danger-darker;
+    border-right: 4px solid $cbp-danger-darker;
   }
 }
