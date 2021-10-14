@@ -18,6 +18,11 @@
   max-width: 100%;
 }
 
+/* Gives space above to all phone numbers except first one in accordion */
+.cbp-list > li:not(:first-child) { 
+  margin-top: 16px;
+}
+
 .cbp-list > li div {
   display: flex;
   flex-direction: column;
@@ -122,6 +127,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
     width: 80%;
   }
 
@@ -138,7 +144,6 @@
 /* Extra wide desktop */
 @media only screen and (min-width: 1652px) {
   .cbp-list__info li {
-    display: unset;
     width: unset;
     margin-right: 24px;
   }
