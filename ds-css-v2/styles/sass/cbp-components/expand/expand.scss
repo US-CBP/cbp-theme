@@ -1,0 +1,37 @@
+.expand-wrapper {
+  button {
+    border: 0;
+    background-color: transparent;
+    border-radius: 3px;
+
+    // Hover states for button background
+    &:hover {
+      background-color: $cbp-ui-neutral-darker;
+    }
+
+    // Hover state for font awesome icon while hovering button
+    &:hover i {
+      color: white;
+    }
+
+    // Focus states for expand button background 
+    &:focus {
+      background-color: #be32d0;
+    }
+
+    // Focus state for font awesome icon while focused button
+    &:focus i {
+      color: white;
+    }  }
+
+  button > i {
+    font-size: 16px;
+  }
+
+  span {
+    font-size: 1.125rem;
+    line-height: 20px;
+    text-align: left;
+  }
+
+}
