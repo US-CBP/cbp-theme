@@ -1,31 +1,36 @@
-.expand-wrapper {
+.cbp-expand {
+  margin: 12px 0;
+}
+
+.cbp-expand__title {
   button {
     border: 0;
     background-color: transparent;
     border-radius: 3px;
-
+    
     // Hover states for button background
     &:hover {
       background-color: $cbp-ui-neutral-darker;
     }
-
-    // Hover state for font awesome icon while hovering button
+    
     &:hover i {
       color: white;
     }
 
-    // Focus states for expand button background 
+    // Focus states for expand button background
     &:focus {
       background-color: #be32d0;
     }
 
-    // Focus state for font awesome icon while focused button
     &:focus i {
       color: white;
-    }  }
+    }
+  }
 
   button > i {
     font-size: 16px;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
   }
 
   span {
@@ -33,5 +38,35 @@
     line-height: 20px;
     text-align: left;
   }
+}
 
+.cbp-expand__content {
+  padding-top: 12px;
+  padding-left: 26px;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.cbp-expand__list {
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+
+  li {
+    line-height: 20px;
+  }
+}
+
+// Active
+.active {
+  .fa-caret-down {
+    transform: rotate(-180deg);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .cbp-expand__content {
+    display: block;
+    max-height: fit-content;
+  }
 }
