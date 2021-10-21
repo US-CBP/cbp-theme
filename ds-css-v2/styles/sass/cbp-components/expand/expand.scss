@@ -3,27 +3,22 @@
 }
 
 .cbp-expand__title {
-  button {
-    border: 0;
-    background-color: transparent;
-    border-radius: 3px;
-    
-    // Hover states for button background
-    &:hover {
-      background-color: $cbp-ui-neutral-darker;
-    }
-    
-    &:hover i {
-      color: white;
-    }
+  display: flex;
+  align-items: flex-start;
 
-    // Focus states for expand button background
+  button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 8px;
+
+    // Focus states for expand button 
     &:focus {
       background-color: #be32d0;
     }
 
     &:focus i {
-      color: white;
+      color: #fff;
     }
   }
 
@@ -37,12 +32,20 @@
     font-size: 1.125rem;
     line-height: 20px;
     text-align: left;
+
+  }
+
+  // Hover states for expand button
+  &:hover button {
+    background-color: $cbp-ui-neutral-darker;
+
+    i {
+      color: #fff;
+    }
   }
 }
 
 .cbp-expand__content {
-  padding-top: 12px;
-  padding-left: 26px;
   display: none;
   max-height: 0;
   overflow: hidden;
@@ -54,11 +57,12 @@
   list-style: none;
 
   li {
+    color: $cbp-text-darkest;
     line-height: 20px;
   }
 }
 
-// Active
+// Active state for expand
 .active {
   .fa-caret-down {
     transform: rotate(-180deg);
@@ -68,5 +72,7 @@
   .cbp-expand__content {
     display: block;
     max-height: fit-content;
+    padding-top: 12px;
+    padding-left: 32px;
   }
 }
