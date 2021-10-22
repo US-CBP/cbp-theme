@@ -1,19 +1,10 @@
 const accordionBtn = document.querySelectorAll('.cbp-accordion__title');
 
 accordionBtn.forEach( btn => {
-  btn.addEventListener('click', (item) => {
+  btn.addEventListener('click', (e) => {
     /* Accordion Parent */
-    let accordionParent = item.target.closest('.cbp-accordion__item');
-    let accordionContent = item.target.nextElementSibling;
-    let compStyles = window.getComputedStyle(accordionContent);
+    let accordionParent = e.target.closest('.cbp-accordion__item');
 
-    if(compStyles.getPropertyValue('display') === 'none') {
-      // Show Content
-      accordionParent.classList.toggle('active');
-    } else {
-      // Hide Content
-      accordionParent.classList.toggle('active');
-    }
-
-  } )
+    accordionParent.classList.toggle('active');
+  })
 })
