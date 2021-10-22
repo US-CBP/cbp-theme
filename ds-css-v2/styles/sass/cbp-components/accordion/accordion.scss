@@ -26,11 +26,11 @@
       }
 
       &--danger {
-        background: $cbp-danger;
+        background: #D54309; // $cbp-danger;
         color: #FFF;
 
         + .cbp-accordion__content {
-          border-color: $cbp-danger;
+          border-color: #D54309; // $cbp-danger;
         }
       }
     }
@@ -38,7 +38,7 @@
     .cbp-accordion__content {
       display: block;
       overflow: scroll;
-      border-bottom: 4px solid #008480;
+      border-bottom: 4px solid #008480; // $base-secondary
       border-left: 4px solid #008480;
       border-right: 4px solid #008480;
       .cbp-accordion__footer {
@@ -54,7 +54,7 @@
 
   &__title {
     align-items: center;
-    background: #DFE1E2;
+    background: #F7F9FA; // $ui-neutral-lighter
     border: none;
     cursor: pointer;
     display: flex;
@@ -74,7 +74,7 @@
     }
 
     &:hover {
-      background-color: $cbp-gray-30;
+      background-color: #AFAEA2; // $ui-neutral-light
     }
 
     &:focus {
@@ -83,11 +83,11 @@
     }
 
     &--danger {
-      background: $cbp-danger;
+      background: #D54309; // $cbp-danger;
       color: #FFF;
 
       &:hover {
-        background: $cbp-danger-dark;
+        background: #9C3D10; // $cbp-danger-dark;
       }
 
       &:focus {
@@ -115,18 +115,18 @@
   }
 
   &:hover .cbp-accordion__content {
-    border-bottom: 4px solid $cbp-accent-secondary-dark;
+    border-bottom: 4px solid $cbp-accent-secondary-dark; // #0F6460
     border-left: 4px solid $cbp-accent-secondary-dark;
     border-right: 4px solid $cbp-accent-secondary-dark;
   }
 
   &:hover .cbp-accordion__title--danger {
-    background-color: $cbp-danger-darker;
+    background-color: #9C3D10; // $cbp-danger-dark;
   }
 
   &:hover .cbp-accordion__title--danger + .cbp-accordion__content {
-    border-bottom: 4px solid $cbp-danger-darker;
-    border-left: 4px solid $cbp-danger-darker;
-    border-right: 4px solid $cbp-danger-darker;
+    border-bottom: 4px solid #9C3D10; // $cbp-danger-dark;
+    border-left: 4px solid #9C3D10; // $cbp-danger-dark;
+    border-right: 4px solid #9C3D10; // $cbp-danger-dark;
   }
 }
