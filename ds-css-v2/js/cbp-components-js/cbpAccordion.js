@@ -10,11 +10,9 @@ accordionBtn.forEach( btn => {
     if(compStyles.getPropertyValue('display') === 'none') {
       // Show Content
       accordionParent.classList.toggle('active');
-      accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
     } else {
       // Hide Content
       accordionParent.classList.toggle('active');
-      accordionContent.style.maxHeight = null;
     }
 
   } )

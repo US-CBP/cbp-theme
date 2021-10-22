@@ -37,7 +37,7 @@
 
     .cbp-accordion__content {
       display: block;
-      overflow: scroll;
+      max-height: fit-content;
       border-bottom: 4px solid #008480; // $base-secondary
       border-left: 4px solid #008480;
       border-right: 4px solid #008480;
