@@ -82,6 +82,12 @@
       @extend .focus-outline;
     }
 
+    &:focus + .cbp-accordion__content {
+      border-bottom: 4px solid #BE32D0 !important;
+      border-left: 4px solid #BE32D0 !important;
+      border-right: 4px solid #BE32D0 !important;
+    }
+
     &--danger {
       background: #D54309; // $cbp-danger;
       color: #FFF;
