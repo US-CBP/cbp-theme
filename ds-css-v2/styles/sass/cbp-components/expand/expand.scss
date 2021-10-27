@@ -11,36 +11,40 @@
     border: 0;
     border-radius: 3px;
     margin-right: 8px;
+    text-align: center;
 
     // Focus states for expand button 
     &:focus {
-      background-color: #be32d0;
+      background-color: #be32d0; // $cbp-focus-dark
+      outline: none;
     }
 
     &:focus i {
-      color: #fff;
+      color: #ffffff;
     }
   }
 
   button > i {
     font-size: 16px;
+    color: #5D5D52; // $cbp-ui-neutral-darker
     transform: rotate(0);
     transition: transform 0.2s ease-in-out;
   }
 
   span {
     font-size: 1.125rem;
+    font-weight: 500;
     line-height: 20px;
     text-align: left;
-
+    color: $cbp-text-darker;
   }
 
   // Hover states for expand button
   &:hover button {
-    background-color: $cbp-ui-neutral-darker;
+    background-color: #5D5D52; // $cbp-ui-neutral-darker
 
     i {
-      color: #fff;
+      color: #ffffff; // $white
     }
   }
 }
@@ -58,6 +62,8 @@
 
   li {
     color: $cbp-text-darkest;
+    font-weight: 400;
+    font-size: 1rem;
     line-height: 20px;
   }
 }
