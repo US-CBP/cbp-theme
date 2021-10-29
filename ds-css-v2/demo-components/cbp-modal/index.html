@@ -318,7 +318,7 @@
         <p>Are you sure you want to submit and close this exam?</p>
       </div>
       <div class="cbp-modal__footer">
-        <button class="cbp-btn cbp-btn--secondary">
+        <button class="cbp-btn cbp-btn--secondary" onclick="closeModal()">
           <i class="fas fa-trash-alt"></i>
           <span class="cbp-text-button">cancel</span>
         </button>
@@ -333,60 +333,14 @@
   <div id="cbp-grid-demo" class="cbp-grid-container">
 
     <div class="cbp-row">
-      <div class="cbp-grid-col-full">Full container width</div>
+      <button class="cbp-btn" onclick="openModal()">Open Modal</button>
     </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        Half container width
-      </div>
-
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        Half container width
-      </div>
-    </div>
-
-    <div class="cbp-row">
-
-      <div class="cbp-grid-col-4-sm 
-      cbp-grid-col-4-md 
-      cbp-grid-col-3-lg
-      cbp-grid-col-6-xl">
-        <span></span>
-      </div>
-
-      <div class="cbp-grid-col-4-sm 
-      cbp-grid-col-4-md 
-      cbp-grid-col-3-lg
-      cbp-grid-col-6-xl">
-        <span class="demo-content"></span>
-      </div>
-
-      <div class="cbp-grid-col-4-sm cbp-grid-col-4-md cbp-grid-col-3-lg">
-        <span></span>
-      </div>
-
-      <div class="cbp-grid-col-4-sm cbp-grid-col-4-md cbp-grid-col-3-lg">
-        <span></span>
-      </div>
-
-      <!-- <div class="cbp-grid-col-4-sm cbp-grid-col-4-md cbp-grid-col-4-lg">
-        .cbp-grid-col-4-sm
-      </div> -->
-    </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-1-sm cbp-grid-col-3-md cbp-grid-col-3-lg"><span></span></div>
-      <div class="cbp-grid-col-auto">Auto fill column</div>
-      <div class="cbp-grid-col-1-sm cbp-grid-col-3-md cbp-grid-col-3-lg"><span></span></div>
-    </div>
-
-
   </div>
 
   <!-- Required JS for USWDS -->
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/cbpModal.js"></script>
 </body>
 </html>
