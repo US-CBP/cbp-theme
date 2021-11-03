@@ -401,6 +401,41 @@
     </div>
   </div>
 
+  <div class="cbp-modal" id="form-modal">
+    <div class="cbp-modal__content">
+      <div class="cbp-modal__header">
+        <i class="fas fa-comment"></i>
+        <h5 class="cbp-modal__title">Feedback</h5>
+      </div>
+      <hr>
+      <div class="cbp-modal__body">
+        <p>If you're experiencing a system error or application problem please contact the Technology Service Desk.</p>
+        <form class="cbp-form">
+          <div class="cbp-form__group">
+            <label for="description" class="cbp-form__label">Description</label>
+            <textarea name="description" id="description" class="cbp-form__textarea" placeholder="This app doesn't like me" cols="30" rows="5"></textarea>
+            <div class="cbp-form__error">Required. Please describe the issue or feedback you would like the team to know about. 101/200 Characters remaining.</div>
+          </div>
+          <div class="cbp-form__group">
+            <label for="file-upload" class="cbp-form__label">Attach Screenshot (If Applicable)</label>
+            <input type="file" name="file-upload" id="file-upload">
+            <div class="cbp-form__error">Acceptable File Types: jpg, png, gif.</div>
+          </div>
+        </form>
+      </div>
+      <div class="cbp-modal__footer--double">
+        <button class="cbp-btn cbp-btn--secondary">
+          <i class="fas fa-times"></i>
+          <span class="cbp-text-button">cancel</span>
+        </button>
+        <button class="cbp-btn">
+          <i class="fas fa-paper-plane"></i>
+          <span class="cbp-text-button">submit</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Required JS for USWDS -->
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
