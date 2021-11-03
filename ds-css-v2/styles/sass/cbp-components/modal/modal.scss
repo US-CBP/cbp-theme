@@ -1,6 +1,6 @@
 .cbp-modal {
   background-color: rgba(0, 0, 0, 0.3);
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@
   height: 100%;
   z-index: 1;
 
-  .cbp-modal__content {
+  &__content {
     position: relative;
     top: 30%;
     background-color: #ffffff; // $white
@@ -30,19 +30,23 @@
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 16px;
+  color: $cbp-text-darker;
 
   i {
-    color: $cbp-text-darker;
     font-size: 22px;
   }
 
   .cbp-modal__title {
-    color: $cbp-text-darker;
     font-size: 1.602rem;
     font-weight: 500;
     line-height: 28px;
     margin-top: 0;
     margin-left: 16px;
+  }
+
+  // Modal Title Danger
+  &--danger {
+    color: #d54309;
   }
 }
 
@@ -54,85 +58,59 @@
 
 .cbp-modal__footer {
   display: flex;
-}
 
-/* Modal Button Variations */
-
-// 1 button
-.cbp-modal__footer--single {
-  button {
-    width: 100%;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-  }
-}
-
-// 2 buttons
-.cbp-modal__footer--double {
-  @extend .cbp-modal__footer;
-  button {
-    width: 50%;
+  /* Modal Button Modifiers */
+  // 1 button
+  &--single {
+    button {
+      width: 100%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
   }
 
-  button:first-child {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  // 2 buttons
+  &--double {
+    button {
+      width: 50%;
+    }
+
+    button:first-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    button:nth-child(2) {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
   }
 
-  button:nth-child(2) {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+  // 3 buttons 
+  &--triple {
+    button {
+      width: auto;
+    }
+
+    button:first-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    button:nth-child(2) {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    button:last-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
   }
-}
-
-// 3 buttons 
-.cbp-modal__footer--triple {
-  display: flex;
-  button {
-    width: auto;
-  }
-
-  button:first-child {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-
-  button:nth-child(2) {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-
-  button:last-child {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-}
-
-/* Possible CBP Form CSS */
-
-.cbp-form__group {
-  margin: 1rem 0;
-}
-
-.cbp-form__textarea {
-  border: 2px solid $cbp-ui-neutral;
-  border-radius: 3px;
-  width: 100%;
-}
-
-.cbp-form__label {
-  display: inline-block;
-  font-size: 14px;
-  margin-bottom: 0.5rem;
-}
-
-.cbp-form__error {
-  font-size: 14px;
-  margin-top: 0.5rem;
 }
