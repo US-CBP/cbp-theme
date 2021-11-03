@@ -46,13 +46,6 @@
       <div class="cbp-icon-container">
         <!-- Application Directory button -->
         <div>
-          <button onClick="showDropdown(this)" class="cbp-header-dropdown">
-            <i class="fas fa-th font-ui-md"></i>
-            <span class="cbp-header-text cbp-header-dropdown">
-              Passenger App
-            </span>
-          </button>
-
           <!-- Application Directory Dropdown -->
           <div id="cbpHeaderDropdown" class="dropdown-content app-directory">
             <!-- Icon and header text on full-width mobile dropdown -->
@@ -201,18 +194,12 @@
   <nav class="usa-header usa-header--basic">
     <div class="cbp-container">
       <div class="usa-navbar">
-        <div class="usa-logo" id="basic-logo">
-          <span class="cbp-heading-text-sm">Passenger App</span>
-        </div>
         <button class="usa-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
       </div>
       <nav aria-label="Primary navigation" class="usa-nav">
         <div class="cbp-mobile-header">
-          <span class="cbp-text-heading-xs" style="margin: auto 0"
-            >Passenger Archetype</span
-          >
           <button class="usa-nav__close" style="margin: 0">
             <i
               class="fas fa-times-circle"
@@ -307,7 +294,28 @@
   </nav>
   <!-- CBP Header / Application Header HTML End -->
 
-  <div class="cbp-modal">
+  <div id="cbp-grid-demo" class="cbp-grid-container">
+    <div class="cbp-row">
+      <button class="cbp-btn" onclick="openModal()">Open Confirmation Modal</button>
+    </div>
+    <div class="cbp-row">
+      <button class="cbp-btn" onclick="openModal()">Open Acknowledgement Modal</button>
+    </div>
+    <div class="cbp-row">
+      <button class="cbp-btn" onclick="openModal()">Open 3 Choice Modal</button>
+    </div>
+    <div class="cbp-row">
+      <button class="cbp-btn" onclick="openModal()">Open Simple Modal</button>
+    </div>
+    <div class="cbp-row">
+      <button class="cbp-btn" onclick="openModal()">Open Form Modal</button>
+    </div>
+    <div class="cbp-row">
+      <button class="cbp-btn" onclick="openModal()">Open Danger Modal</button>
+    </div>
+  </div>
+
+  <div class="cbp-modal" id="confirmation-modal">
     <div class="cbp-modal__content">
       <div class="cbp-modal__header">
         <i class="fas fa-check"></i>
@@ -317,7 +325,7 @@
       <div class="cbp-modal__body">
         <p>Are you sure you want to submit and close this exam?</p>
       </div>
-      <div class="cbp-modal__footer">
+      <div class="cbp-modal__footer--double">
         <button class="cbp-btn cbp-btn--secondary" onclick="closeModal()">
           <i class="fas fa-trash-alt"></i>
           <span class="cbp-text-button">cancel</span>
@@ -330,10 +338,66 @@
     </div>
   </div>
 
-  <div id="cbp-grid-demo" class="cbp-grid-container">
+  <div class="cbp-modal" id="acknowledgement-modal">
+    <div class="cbp-modal__content">
+      <div class="cbp-modal__header">
+        <h5 class="cbp-modal__title">Terms of Service Update</h5>
+      </div>
+      <hr>
+      <div class="cbp-modal__body">
+        <p>There was a change to our terms of service. Continued use of this system constitutes acceptance of these terms.</p>
+      </div>
+      <div class="cbp-modal__footer--single">
+        <button class="cbp-btn cbp-btn--secondary" onclick="closeModal()">
+          <i class="fas fa-check"></i>
+          <span class="cbp-text-button">Accept</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
-    <div class="cbp-row">
-      <button class="cbp-btn" onclick="openModal()">Open Modal</button>
+  <div class="cbp-modal" id="3choice-modal">
+    <div class="cbp-modal__content">
+      <div class="cbp-modal__header">
+        <i class="fas fa-file-alt"></i>
+        <h5 class="cbp-modal__title">Document Changes</h5>
+      </div>
+      <hr>
+      <div class="cbp-modal__body">
+        <p>What would you like to do with the changes you have made to this document?</p>
+      </div>
+      <div class="cbp-modal__footer--triple">
+        <button class="cbp-btn">
+          <i class="fas fa-times"></i>
+          <span class="cbp-text-button">cancel</span>
+        </button>
+        <button class="cbp-btn cbp-btn--secondary" onclick="closeModal()">
+          <i class="fas fa-save"></i>
+          <span class="cbp-text-button">save</span>
+        </button>
+        <button class="cbp-btn">
+          <i class="fas fa-paper-plane"></i>
+          <span class="cbp-text-button">submit</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cbp-modal" id="simple-modal">
+    <div class="cbp-modal__content">
+      <div class="cbp-modal__body">
+        <p>Are you sure you want to add this user to the list?</p>
+      </div>
+      <div class="cbp-modal__footer cbp-modal__footer--double">
+        <button class="cbp-btn cbp-btn--secondary" onclick="closeModal()">
+          <i class="fas fa-trash-alt"></i>
+          <span class="cbp-text-button">cancel</span>
+        </button>
+        <button class="cbp-btn">
+          <i class="fas fa-plus"></i>
+          <span class="cbp-text-button">add user</span>
+        </button>
+      </div>
     </div>
   </div>
 

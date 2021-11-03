@@ -10,7 +10,7 @@
 
   .cbp-modal__content {
     position: relative;
-    top: 40%;
+    top: 30%;
     background-color: #ffffff; // $white
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -32,31 +32,48 @@
   padding-bottom: 16px;
 
   i {
-   font-size: 22px; 
+    color: $cbp-text-darker;
+    font-size: 22px;
   }
 
   .cbp-modal__title {
+    color: $cbp-text-darker;
     font-size: 1.602rem;
+    font-weight: 500;
+    line-height: 28px;
     margin-top: 0;
     margin-left: 16px;
   }
 }
 
 .cbp-modal__body {
-  padding: 20px 16px;
+  color: $cbp-text-darker;
+  font-weight: 700;
+  padding: 16px 16px 20px 16px;
 }
 
 .cbp-modal__footer {
   display: flex;
+}
 
+/* Modal Button Variations */
+
+// 1 button
+.cbp-modal__footer--single {
   button {
-    width: 50%;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 }
 
-// Modal Button Modifiers
+// 2 buttons
+.cbp-modal__footer--double {
+  @extend .cbp-modal__footer;
+  button {
+    width: 50%;
+  }
 
-.cbp-modal__footer {
   button:first-child {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -70,8 +87,29 @@
   }
 }
 
-// .cbp-modal__button--first
+// 3 buttons 
+.cbp-modal__footer--triple {
+  display: flex;
+  button {
+    width: auto;
+  }
 
-// .cbp-modal__button--second
+  button:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 
-// .cbp-modal__button--third
+  button:nth-child(2) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  button:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
