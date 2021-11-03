@@ -294,15 +294,28 @@
   </nav>
   <!-- CBP Header / Application Header HTML End -->
 
-  <div id="cbp-grid-demo" class="cbp-grid-container">
+  <div class="cbp-grid-container">
     <div class="cbp-row margin-top-3">
-      <button class="cbp-btn" onclick="openModal()">Open Modal</button>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" onclick="openModal()">Open Modal</button><br>
+        <div>
+          <label for="header-danger">Danger Modal:</label>
+          <input type="checkbox" name="header-danger" id="header-danger" class="header-danger">
+        </div>
+        <div>
+          <label for="header-danger">Simple Modal (Remove Header):</label>
+          <input type="checkbox" name="simple-modal" id="simple-modal" class="simple-modal">
+        </div>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Modal Component</span>
+      </div>
     </div>
   </div>
 
   <div class="cbp-modal">
     <div class="cbp-modal__content">
-      <div class="cbp-modal__header cbp-modal__header--danger">
+      <div class="cbp-modal__header">
         <i class="fas fa-check"></i>
         <h5 class="cbp-modal__title">Modal Title</h5>
       </div>
@@ -315,7 +328,7 @@
           <i class="fas fa-trash-alt"></i>
           <span class="cbp-text-button">cancel</span>
         </button>
-        <button class="cbp-btn cbp-btn--danger">
+        <button class="cbp-btn">
           <i class="fas fa-trash-alt"></i>
           <span class="cbp-text-button">delete</span>
         </button>
