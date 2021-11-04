@@ -23,30 +23,3 @@ window.onclick = (e) => {
     e.target.style.display = "none";
   }
 }
-
-// For demo purposes only
-
-const dangerBtn = document.querySelectorAll(".header-danger");
-const simpleBtn = document.querySelectorAll(".simple-modal");
-const modalHeader = document.querySelector(".cbp-modal__header");
-const modalFooter = document.querySelector(".cbp-modal__footer");
-
-dangerBtn.forEach(item => {
-  item.addEventListener('click', (e) => {
-    modalHeader.classList.toggle('cbp-modal__header--danger');
-    modalFooter.children[modalFooter.children.length - 1].classList.toggle('cbp-btn--danger')
-  })
-})
-
-simpleBtn.forEach(item => {
-  item.addEventListener('click', (e) => {
-    const hr = document.querySelector(".cbp-modal__content hr");
-    if (modalHeader.style.display === "none") {
-      modalHeader.style.display = "flex"
-      hr.style.display = "block"
-    } else {
-      modalHeader.style.display = "none"
-      hr.style.display = "none"
-    }
-  })
-})
