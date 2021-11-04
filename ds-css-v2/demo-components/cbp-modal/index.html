@@ -194,6 +194,9 @@
   <nav class="usa-header usa-header--basic">
     <div class="cbp-container">
       <div class="usa-navbar">
+        <div class="usa-logo" id="basic-logo">
+          <span class="cbp-heading-text-sm">Modal Demo</span>
+        </div>
         <button class="usa-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
@@ -297,13 +300,13 @@
   <div class="cbp-grid-container">
     <div class="cbp-row margin-top-3">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <button class="cbp-btn" onclick="openModal()">Open Modal</button><br>
+        <button class="cbp-btn" data-modal-target="modal-one">Open Demo Modal</button><br>
         <div>
           <label for="header-danger">Danger Modal:</label>
           <input type="checkbox" name="header-danger" id="header-danger" class="header-danger">
         </div>
         <div>
-          <label for="header-danger">Simple Modal (Remove Header):</label>
+          <label for="simple-modal">Simple Modal:</label>
           <input type="checkbox" name="simple-modal" id="simple-modal" class="simple-modal">
         </div>
       </div>
@@ -311,9 +314,64 @@
         <span class="cbp-text-heading-2xs">Modal Component</span>
       </div>
     </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="modal-two">Open Demo Modal</button><br>
+        <div>
+          <label for="header-danger">Danger Modal:</label>
+          <input type="checkbox" name="header-danger" id="header-danger" class="header-danger">
+        </div>
+        <div>
+          <label for="simple-modal">Simple Modal:</label>
+          <input type="checkbox" name="simple-modal" id="simple-modal" class="simple-modal">
+        </div>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">2 Button Modal</span>
+      </div>
+    </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="modal-three">Open Demo Modal</button><br>
+        <div>
+          <label for="header-danger">Danger Modal:</label>
+          <input type="checkbox" name="header-danger" id="header-danger" class="header-danger">
+        </div>
+        <div>
+          <label for="simple-modal">Simple Modal:</label>
+          <input type="checkbox" name="simple-modal" id="simple-modal" class="simple-modal">
+        </div>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">3 Choice Modal</span>
+      </div>
+    </div>
   </div>
 
-  <div class="cbp-modal">
+  <!-- Modal Component  -->
+  <div class="cbp-modal" id="modal-one">
+    <div class="cbp-modal__content">
+      <div class="cbp-modal__header">
+        <i class="fas fa-check"></i>
+        <h5 class="cbp-modal__title">Modal Title</h5>
+      </div>
+      <hr>
+      <div class="cbp-modal__body">
+        <p>Are you sure you want to submit and close this exam?</p>
+      </div>
+      <div class="cbp-modal__footer cbp-modal__footer--single">
+        <button class="cbp-btn" data-modal-close>
+          <i class="fas fa-times"></i>
+          <span class="cbp-text-button">cancel</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 Button Modal  -->
+  <div class="cbp-modal" id="modal-two">
     <div class="cbp-modal__content">
       <div class="cbp-modal__header">
         <i class="fas fa-check"></i>
@@ -324,13 +382,41 @@
         <p>Are you sure you want to submit and close this exam?</p>
       </div>
       <div class="cbp-modal__footer cbp-modal__footer--double">
-        <button class="cbp-btn cbp-btn--secondary" onclick="closeModal()">
-          <i class="fas fa-trash-alt"></i>
+        <button class="cbp-btn cbp-btn--secondary"  data-modal-close>
+          <i class="fas fa-times"></i>
           <span class="cbp-text-button">cancel</span>
         </button>
         <button class="cbp-btn">
-          <i class="fas fa-trash-alt"></i>
-          <span class="cbp-text-button">delete</span>
+          <i class="fas fa-save"></i>
+          <span class="cbp-text-button">save</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 Button Modal  -->
+  <div class="cbp-modal" id="modal-three">
+    <div class="cbp-modal__content">
+      <div class="cbp-modal__header">
+        <i class="fas fa-check"></i>
+        <h5 class="cbp-modal__title">Modal Title</h5>
+      </div>
+      <hr>
+      <div class="cbp-modal__body">
+        <p>Are you sure you want to submit and close this exam?</p>
+      </div>
+      <div class="cbp-modal__footer cbp-modal__footer--triple">
+        <button class="cbp-btn"  data-modal-close>
+          <i class="fas fa-times"></i>
+          <span class="cbp-text-button">cancel</span>
+        </button>
+        <button class="cbp-btn cbp-btn--secondary">
+          <i class="fas fa-save"></i>
+          <span class="cbp-text-button">save</span>
+        </button>
+        <button class="cbp-btn">
+          <i class="fas fa-paper-plane"></i>
+          <span class="cbp-text-button">submit</span>
         </button>
       </div>
     </div>
