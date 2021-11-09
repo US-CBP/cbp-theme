@@ -345,8 +345,8 @@
   </div>
 
   <!-- Modal Component  -->
-  <div class="cbp-modal" id="modal-one">
-    <div class="cbp-modal__content">
+  <div class="cbp-modal" id="modal-one" aria-labelledby="modal-one-label" aria-describedby="modal-one-desc" aria-modal="true">
+    <div class="cbp-modal__content" role="document">
       <div class="cbp-modal__header">
         <i class="fas fa-check"></i>
         <h5 class="cbp-modal__title">Modal Title</h5>
@@ -365,10 +365,10 @@
   </div>
 
   <!-- Simple Modal -->
-  <div class="cbp-modal" id="simple-modal">
-    <div class="cbp-modal__content">
+  <div class="cbp-modal" id="simple-modal" aria-labelledby="simple-modal-label" aria-describedby="simple-modal-desc" aria-modal="true">
+    <div class="cbp-modal__content" role="document">
       <div class="cbp-modal__body">
-        <p>Are you sure you want to add this user to the list?</p>
+        <p id="simple-modal-desc">Are you sure you want to add this user to the list?</p>
       </div>
       <div class="cbp-modal__footer cbp-modal__footer--double">
         <button class="cbp-btn cbp-btn--secondary" data-modal-close>
@@ -384,15 +384,15 @@
   </div>
 
   <!-- 2 Button Modal  -->
-  <div class="cbp-modal" id="modal-two">
-    <div class="cbp-modal__content">
+  <div class="cbp-modal" id="modal-two" aria-labelledby="modal-two-label" aria-describedby="modal-two-desc" aria-modal="true">
+    <div class="cbp-modal__content" role="document">
       <div class="cbp-modal__header">
         <i class="fas fa-check"></i>
-        <h5 class="cbp-modal__title">Modal Title</h5>
+        <h5 class="cbp-modal__title" id="modal-two-label">Modal Title</h5>
       </div>
       <hr>
       <div class="cbp-modal__body">
-        <p>Are you sure you want to submit and close this exam?</p>
+        <p id="modal-two-desc">Are you sure you want to submit and close this exam?</p>
       </div>
       <div class="cbp-modal__footer cbp-modal__footer--double">
         <button class="cbp-btn cbp-btn--secondary"  data-modal-close>
@@ -408,18 +408,18 @@
   </div>
 
   <!-- 3 Button Modal  -->
-  <div class="cbp-modal" id="modal-three">
-    <div class="cbp-modal__content">
+  <div class="cbp-modal" id="modal-three" aria-labelledby="modal-three-label" aria-describedby="modal-three-desc" aria-modal="true">
+    <div class="cbp-modal__content" role="document">
       <div class="cbp-modal__header">
         <i class="fas fa-check"></i>
-        <h5 class="cbp-modal__title">Modal Title</h5>
+        <h5 class="cbp-modal__title" id="modal-three-label">Modal Title</h5>
       </div>
       <hr>
       <div class="cbp-modal__body">
-        <p>Are you sure you want to submit and close this exam?</p>
+        <p id="modal-three-desc">Are you sure you want to submit and close this exam?</p>
       </div>
       <div class="cbp-modal__footer cbp-modal__footer--triple">
-        <button class="cbp-btn"  data-modal-close>
+        <button class="cbp-btn">
           <i class="fas fa-times"></i>
           <span class="cbp-text-button">cancel</span>
         </button>
@@ -436,15 +436,15 @@
   </div>
 
   <!-- Danger Modal -->
-  <div class="cbp-modal" id="danger-modal">
-    <div class="cbp-modal__content">
+  <div class="cbp-modal" id="danger-modal" role="dialog" aria-labelledby="danger-modal-label" aria-describedby="danger-modal-desc" aria-modal="true">
+    <div class="cbp-modal__content" role="document">
       <div class="cbp-modal__header cbp-modal__header--danger">
         <i class="fas fa-exclamation-triangle"></i>
-        <h5 class="cbp-modal__title">Warning</h5>
+        <h5 class="cbp-modal__title" id="danger-modal-label">Warning</h5>
       </div>
       <hr>
       <div class="cbp-modal__body">
-        <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+        <p id="danger-modal-desc">Are you sure you want to delete this item? This action cannot be undone.</p>
       </div>
       <div class="cbp-modal__footer cbp-modal__footer--double">
         <button class="cbp-btn cbp-btn--secondary" data-modal-close="">
