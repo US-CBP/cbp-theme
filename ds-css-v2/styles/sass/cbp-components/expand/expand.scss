@@ -1,0 +1,88 @@
+.cbp-expand {
+  margin: 12px 0;
+}
+
+.cbp-expand__title {
+  display: flex;
+  align-items: flex-start;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+
+    // Focus states for expand button 
+    &:focus {
+      background-color: #be32d0; // $cbp-focus-dark
+      outline: none;
+    }
+
+    &:focus i {
+      color: #ffffff;
+    }
+  }
+
+  button > i {
+    font-size: 16px;
+    color: #5D5D52; // $cbp-ui-neutral-darker
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  span {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: $cbp-text-darker;
+    width: 100%;
+  }
+
+  // Hover states for expand button
+  &:hover button {
+    background-color: #5D5D52; // $cbp-ui-neutral-darker
+
+    i {
+      color: #ffffff; // $white
+    }
+  }
+}
+
+.cbp-expand__content {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.cbp-expand__list {
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+
+  li {
+    color: $cbp-text-darkest;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
+
+// Active state for expand
+.active {
+  .fa-caret-down {
+    transform: rotate(-180deg);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .cbp-expand__content {
+    display: block;
+    max-height: fit-content;
+    padding-top: 12px;
+    padding-left: 24px;
+  }
+}
