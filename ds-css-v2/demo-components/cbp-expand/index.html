@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CBP Theme Boilerplate</title>
-  <link rel="stylesheet" href="../dist/styles.css">
+  <title>CBP Design System | Expand Component Demo Page</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
   <!-- Font awesome loaded locally from assets-->
-  <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
 
 </head>
 <body>
+
   <!-- CBP Header / Application Header HTML Start -->
   <header class="cbp-universal-header">
     <!--
@@ -23,7 +24,7 @@
       <div class="cbp-logo-container">
         <img
           class="cbp-logo"
-          src="../assets/images/cbp-logo-white.svg"
+          src="../../assets/images/cbp-logo-white.svg"
           alt="CBP Logo"
           height="55"
         />
@@ -31,7 +32,7 @@
         <!-- Mobile meatball logo - default display set to none, sets to block at 640px (USWDS Tablet width) -->
         <div class="cbp-logo-mobile">
           <img
-            src="../assets/images/cbp-logo-circle.svg"
+            src="../../assets/images/cbp-logo-circle.svg"
             alt="CBP Logo"
             height="55"
           />
@@ -305,63 +306,79 @@
   </nav>
   <!-- CBP Header / Application Header HTML End -->
 
-  <div id="cbp-grid-demo" class="cbp-grid-container">
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-full">Full container width</div>
+  <main>
+    <div class="cbp-grid-container">
+      <div class="cbp-row">
+        <div class="cbp-grid-col-full">
+          <h1 class="cbp-heading-2">Expand</h1>
+          <hr>
+        </div>
+      </div>
+      <div class="cbp-row">
+        <div class="cbp-grid-col-full">
+          <div class="cbp-expand">
+            <div class="cbp-expand__title">
+              <button>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <span>
+                This is a question about where frogs live. 
+              </span>
+            </div>
+            <div class="cbp-expand__content">
+              <ul class="cbp-expand__list">
+                <li>There are different species of frogs and some make great pets!</li>
+                <li>Frogs can be bought at any pet store really. Here's a link to one <a href="http://petstore.com" class="cbp-text-link" target="_blank" rel="noopener noreferrer">petstore.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cbp-row">
+        <div class="cbp-grid-col-full">
+          <div class="cbp-expand">
+            <div class="cbp-expand__title">
+              <button>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <span>
+                This is a question about where frogs live. 
+              </span>
+            </div>
+            <div class="cbp-expand__content">
+              <ul class="cbp-expand__list">
+                <li>Frogs can be bought at any pet store really. Here's a link to one <a href="http://petstore.com" target="_blank" rel="noopener noreferrer">petstore.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cbp-row">
+        <div class="cbp-grid-col-full">
+          <div class="cbp-expand">
+            <div class="cbp-expand__title">
+              <button>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <span>
+                Some facts about dinosaurs and their eating habits that you should teach your kids. 
+              </span>
+            </div>
+            <div class="cbp-expand__content">
+              <ul class="cbp-expand__list">
+                <li>Frogs can be bought at any pet store really. Here's a link to one <a href="http://petstore.com" target="_blank" rel="noopener noreferrer">petstore.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        Half container width
-      </div>
-
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        Half container width
-      </div>
-    </div>
-
-    <div class="cbp-row">
-
-      <div class="cbp-grid-col-4-sm 
-      cbp-grid-col-4-md 
-      cbp-grid-col-3-lg
-      cbp-grid-col-6-xl">
-        <span></span>
-      </div>
-
-      <div class="cbp-grid-col-4-sm 
-      cbp-grid-col-4-md 
-      cbp-grid-col-3-lg
-      cbp-grid-col-6-xl">
-        <span class="demo-content"></span>
-      </div>
-
-      <div class="cbp-grid-col-4-sm cbp-grid-col-4-md cbp-grid-col-3-lg">
-        <span></span>
-      </div>
-
-      <div class="cbp-grid-col-4-sm cbp-grid-col-4-md cbp-grid-col-3-lg">
-        <span></span>
-      </div>
-
-      <!-- <div class="cbp-grid-col-4-sm cbp-grid-col-4-md cbp-grid-col-4-lg">
-        .cbp-grid-col-4-sm
-      </div> -->
-    </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-1-sm cbp-grid-col-3-md cbp-grid-col-3-lg"><span></span></div>
-      <div class="cbp-grid-col-auto">Auto fill column</div>
-      <div class="cbp-grid-col-1-sm cbp-grid-col-3-md cbp-grid-col-3-lg"><span></span></div>
-    </div>
-
-
-  </div>
+  </main>
 
   <!-- Required JS for USWDS -->
-  <script src="../js/uswds.min.js"></script>
+  <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
-  <script src="../js/universalHeader.js"></script>
+  <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/cbpExpand.js"></script>
 </body>
 </html>

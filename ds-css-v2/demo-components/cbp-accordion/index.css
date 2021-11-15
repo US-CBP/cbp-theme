@@ -18,28 +18,27 @@
   max-width: 100%;
 }
 
-.cbp-list > li div {
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  padding: 12px 0;
-}
-
-.cbp-list > li button {
-  margin-left: auto;
-}
-
-.cbp-list > li span {
-  display: inline-block;
-  margin-left: 16px;
-}
-
-.cbp-accordrion__footer {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
+/* Gives space above to all phone numbers except first one in accordion */
+.cbp-list > li:not(:first-child) { 
   margin-top: 16px;
+}
+
+.cbp-list > li div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.cbp-list__info {
+  list-style: none;
+  padding-left: unset;
+}
+
+.cbp-list > li div button {
+  margin-bottom: 16px;
+  width: fit-content;
 }
 
 .cbp-page-list {
@@ -115,4 +114,37 @@
 .cbp-pagination-up > button:disabled {
   background-color: transparent;
   color: #ccc;
+}
+
+/* Desktop Media Query */
+@media only screen and (min-width: 886px) {
+  .cbp-list > li div {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cbp-list__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+  }
+
+  .cbp-list__info li {
+    width: 300px;
+  }
+  
+  .cbp-list > li button {
+    margin-left: auto;
+    margin-right: 16px;
+  }
+}
+
+/* Extra wide desktop */
+@media only screen and (min-width: 1652px) {
+  .cbp-list__info li {
+    width: unset;
+    margin-right: 24px;
+  }
 }
