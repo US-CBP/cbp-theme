@@ -1,25 +1,25 @@
-.cbp-modal {
-  background-color: rgba(0, 0, 0, 0.3);
+// Future CSS to use for hidden components
+.cbp-hidden {
   display: none;
+}
+
+.cbp-modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+[role="dialog"] {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-
-  &__content {
-    position: relative;
-    top: 70%;
-    background-color: #ffffff; // $white
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
-    margin: auto;
-    width: 336px;
-
-    & > hr {
-      margin: 0px 16px;
-    }
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  background-color: #fff; // .cbp-white
+  border-radius: 5px;
+  width: 336px;
+  min-height: min-content;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+  & > hr {
+    margin: 0px 16px;
   }
 }
 
@@ -50,7 +50,7 @@
   }
 }
 
-.cbp-modal__body {
+.cbp-modal__content {
   color: $cbp-text-darker;
   font-weight: 700;
   padding: 16px 16px 20px 16px;
@@ -116,7 +116,7 @@
 }
 
 @media only screen and (min-width: 599px) {
-  .cbp-modal__content {
+  [role="dialog"] {
     top: 30%
   }
 }
