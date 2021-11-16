@@ -3,8 +3,24 @@
   display: none;
 }
 
+/* this is added to the body when a dialog is open */
+.has-modal {
+  overflow: hidden;
+}
+
 .cbp-modal__backdrop {
   background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cbp-modal__backdrop.active {
+  display: block;
 }
 
 [role="dialog"] {
