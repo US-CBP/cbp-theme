@@ -31,7 +31,7 @@
   background-color: #fff; // .cbp-white
   border-radius: 5px;
   width: 336px;
-  min-height: min-content;
+  height: fit-content;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   
   & > hr {
