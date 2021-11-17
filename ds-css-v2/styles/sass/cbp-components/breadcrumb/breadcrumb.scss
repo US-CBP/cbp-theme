@@ -1,0 +1,19 @@
+.cbp-breadcrumb {
+  display: flex;
+  list-style-type: none;
+}
+
+.cbp-breadcrumb__item {
+  &:not(:first-child) {
+    margin-left: 6px;
+  }
+
+  & > a {
+    text-decoration: none;
+
+    &::after {
+      content: '/';
+      margin-left: 2px;
+    }
+  }
+}
