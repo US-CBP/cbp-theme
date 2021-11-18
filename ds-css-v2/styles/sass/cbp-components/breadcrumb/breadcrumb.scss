@@ -1,11 +1,12 @@
 .cbp-breadcrumb {
   display: flex;
   list-style-type: none;
+  padding-left: 0;
 }
 
 .cbp-breadcrumb__item {
   &:not(:first-child) {
-    margin-left: 6px;
+    margin-left: 8px;
   }
 
   & > a {
@@ -13,7 +14,8 @@
 
     &::after {
       content: '/';
-      margin-left: 2px;
+      margin-left: 8px;
+      color: #000;
     }
   }
 }
