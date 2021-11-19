@@ -23,7 +23,7 @@
   display: block;
 }
 
-[role="dialog"] {
+.cbp-modal, [role="dialog"] {
   position: fixed;
   left: 50%;
   bottom: 2rem;

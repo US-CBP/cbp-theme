@@ -177,7 +177,7 @@ function Modal(modalId, focusAfterClosed, focusFirst) {
   this.addListeners();
 
   // Make modal visible
-  this.modalNode.className = "default_dialog";
+  this.modalNode.className = "cbp-modal";
 
   // if focusStart parameter is given, focus on that else focus on first element
   if (this.focusFirst) {
