@@ -214,8 +214,8 @@ Modal.prototype.trapFocus = function (event) {
   if (currentModal.modalNode.contains(event.target)) {
     currentModal.lastFocus = event.target;
   } else {
-    // Currently places focus on last element
     util.focusFirstChild(currentModal.modalNode);
+    console.log(currentModal.lastFocus == document.activeElement);
     if (currentModal.lastFocus == document.activeElement) {
       util.focusLastChild(currentModal.modalNode);
     }
@@ -239,6 +239,7 @@ window.openModal = function (modalId, focusAfterClosed, focusFirst) {
 window.closeModal = function (closeBtn) {
   const currentModal = util.getCurrentModal();
   if (currentModal.modalNode.contains(closeBtn)) {
+    console.log(currentModal.modalNode);
     currentModal.close();
   }
 };
