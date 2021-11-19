@@ -193,7 +193,7 @@ Modal.prototype.close = function () {
   this.removeListeners();
   this.preNode.remove();
   this.postNode.remove();
-  this.modalNode.className = "hidden";
+  this.modalNode.className = "cbp-hidden";
   this.backdropNode.classList.remove("active");
   this.focusAfterClosed.focus();
 
