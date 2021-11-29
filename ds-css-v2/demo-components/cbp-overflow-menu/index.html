@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CBP Theme Boilerplate</title>
+  <title>CBP Design System | Overflow Menu Component Demo Page</title>
   <link rel="stylesheet" href="../../dist/styles.css">
   <!-- Font awesome loaded locally from assets-->
   <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
@@ -44,13 +44,6 @@
       <div class="cbp-icon-container">
         <!-- Application Directory button -->
         <div>
-          <button onClick="showDropdown(this)" class="cbp-header-dropdown">
-            <i class="fas fa-th font-ui-md"></i>
-            <span class="cbp-header-text cbp-header-dropdown">
-              Passenger App
-            </span>
-          </button>
-
           <!-- Application Directory Dropdown -->
           <div id="cbpHeaderDropdown" class="dropdown-content app-directory">
             <!-- Icon and header text on full-width mobile dropdown -->
@@ -200,7 +193,7 @@
     <div class="cbp-container">
       <div class="usa-navbar">
         <div class="usa-logo" id="basic-logo">
-          <span class="cbp-heading-text-sm">Passenger App</span>
+          <span class="cbp-heading-text-sm">Demo Components</span>
         </div>
         <button class="usa-menu-btn">
           <i class="fas fa-bars"></i>
@@ -307,27 +300,29 @@
 
   <div class="cbp-grid-container">
     <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        <button>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-button-action">
           <!-- <i class="fas fa-ellipsis-h"></i> -->
           <i class="fas fa-ellipsis-v"></i>
         </button>
         <div class="hidden">
           <ul class="cbp-overflow-menu">
             <li class="cbp-overflow-menu__item">
-              <a href="#">Menu Item</a>
+              <a href="#">First Option</a>
             </li>
             <li class="cbp-overflow-menu__item">
-              <a href="#">Menu Item</a>
+              <a href="#">Second Option</a>
             </li>
             <li class="cbp-overflow-menu__item">
-              <a href="#">Menu Item</a>
+              <a href="#">Third Option</a>
+            </li>
+            <li>
+              <button class="cbp-btn"><i class="fas fa-times-circle"></i>Close</button>
             </li>
           </ul>
         </div>
       </div>
-
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h2>Overflow Menu</h2>
       </div>
     </div>
