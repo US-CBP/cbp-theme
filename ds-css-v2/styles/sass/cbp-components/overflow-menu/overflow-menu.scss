@@ -1,3 +1,14 @@
+/*
+BEM Hierarchy
+
+- Button Action
+- Overflow Menu
+  - Overflow Menu Item
+    - Overflow Menu Link
+    - Overflow Menu Button
+  - Overflow Menu Close (button)
+*/
+
 .cbp-button-action {
   background-color: #DFE1E2;
   border: 0;
@@ -77,8 +88,15 @@
     outline: 0;
     color: $cbp-text-darker;
   }
+
+  // Icon in Menu Item
+  i {
+    margin-right: 8px;
+  }
 }
 
+
+// Overflow Menu Close Button
 .cbp-overflow-menu li > button {
   width: 100%;
   height: 36px;
@@ -93,4 +111,21 @@
     width: min-content;
     margin-right: 6px !important;
   }
+}
+
+// Overflow Menu Condensed
+.cbp-overflow-menu--condensed {
+  width: 180px;
+
+  // Hover state for menu items
+  & li > a:hover {
+    color: $cbp-text-darker;
+  }
+}
+
+.cbp-overflow-menu__item--action > button {
+    border: 0;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top: 2px solid #71767A; // $base-neutral
 }
