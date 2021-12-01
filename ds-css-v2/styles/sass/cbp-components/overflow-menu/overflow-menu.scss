@@ -1,15 +1,11 @@
-/*
-BEM Hierarchy
+/* Wrapper class for the overflow menu component */
+.cbp-overflow-menu__wrapper {
+  position: relative;
+  display: inline-block;
+}
 
-- Button Action
-- Overflow Menu
-  - Overflow Menu Item
-    - Overflow Menu Link
-    - Overflow Menu Button
-  - Overflow Menu Close (button)
-*/
-
-.cbp-button-action {
+/* Button w/ icon to open menu */
+.cbp-btn--action {
   background-color: #DFE1E2;
   border: 0;
   cursor: pointer;
@@ -39,11 +35,17 @@ BEM Hierarchy
 
 /* Menu Container */
 .cbp-overflow-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
   width: 280px;
   list-style-type: none;
   padding: 0;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  z-index: 1;
 
   &__item {
     background-color: #2d2e2f; // $ui-neutral-darker
@@ -96,7 +98,7 @@ BEM Hierarchy
 }
 
 
-// Overflow Menu Close Button
+/* Overflow Menu Close Button */
 .cbp-overflow-menu li > button {
   width: 100%;
   height: 36px;
@@ -113,7 +115,7 @@ BEM Hierarchy
   }
 }
 
-// Overflow Menu Condensed
+/* Overflow Menu Condensed */
 .cbp-overflow-menu--condensed {
   width: 180px;
 
@@ -123,9 +125,41 @@ BEM Hierarchy
   }
 }
 
+/* Overflow Menu Item Action Button */
 .cbp-overflow-menu__item--action > button {
-    border: 0;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    border-top: 2px solid #71767A; // $base-neutral
+  border: 0;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top: 2px solid #71767A; // $base-neutral
+}
+
+/* Open state */
+.active {
+  display: block;
+}
+
+/* Top Left */
+.cbp-overflow-menu--top-left {
+  top: 0;
+  left: 0;
+}
+
+/* Top Right */
+.cbp-overflow-menu--top-right {
+  top: 0;
+  right: 0;
+}
+
+/* Bottom Left */
+.cbp-overflow-menu--bottom-left {
+  top: unset;
+  bottom: 0;
+  left: 0;
+}
+
+/* Bottom Right */
+.cbp-overflow-menu--bottom-right {
+  top: unset;
+  bottom: 0;
+  right: 0;
 }
