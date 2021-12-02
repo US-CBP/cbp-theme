@@ -34,15 +34,6 @@ const util = {
     }
   },
 
-  // Handle click on backdrop to close modal
-  handleBackdrop: function (e) {
-    const currentModal = util.getCurrentModal();
-    if (e.target.classList.contains('cbp-modal__backdrop')) {
-      currentModal.close();
-      e.stopPropagation();
-    }
-  },
-
   // Check if element is focusable
   isFocusable: function (element) {
     if (element.tabIndex < 0) {
@@ -108,9 +99,6 @@ const util = {
 
 // Attach key up event listener for ESC key to DOM
 document.addEventListener("keyup", util.handleEscape);
-
-// Attach click event listener for modal backdrop to DOM
-document.addEventListener('click', util.handleBackdrop);
 
 // Constructor function for modals
 function Modal(modalId, focusAfterClosed, focusFirst) {
@@ -243,3 +231,16 @@ window.closeModal = function (closeBtn) {
     currentModal.close();
   }
 };
+
+/* Misc code for checkbox */
+const checkbox = document.getElementById('btn-hierarchy');
+const altBtn = document.getElementById('alt-btn')
+checkbox.addEventListener('change', (e) => {
+  if (e.currentTarget.checked) {
+    altBtn.classList.remove('cbp-btn--modal-primary-light');
+    altBtn.classList.add('cbp-btn--modal-light')
+  } else {
+    altBtn.classList.remove('cbp-btn--modal-light');
+    altBtn.classList.add('cbp-btn--modal-primary-light')
+  }
+})
