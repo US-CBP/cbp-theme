@@ -301,59 +301,49 @@
   <div class="cbp-grid-container">
     <div class="cbp-row margin-top-9">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="cbp-overflow-menu__wrapper">
-          <button class="cbp-btn--action">
-            <!-- <i class="fas fa-ellipsis-h"></i> -->
-            <i class="fas fa-ellipsis-v"></i>
-          </button>
-          <ul class="cbp-overflow-menu cbp-overflow-menu--bottom-right">
-            <li class="cbp-overflow-menu__item">
-              <a href="#">First Option</a>
-            </li>
-            <li class="cbp-overflow-menu__item">
-              <a href="#">Second Option</a>
-            </li>
-            <li class="cbp-overflow-menu__item">
-              <a href="#">Third Option</a>
-            </li>
-            <li>
-              <button class="cbp-btn"><i class="fas fa-times-circle"></i>Close</button>
-            </li>
-          </ul>
+        <div class="cbp-sandbox">
+          <div class="cbp-overflow-menu__wrapper">
+            <button class="cbp-btn--action" onclick="openOverflowMenu('menu1')"">
+              <!-- <i class="fas fa-ellipsis-h"></i> -->
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu1">
+              <li class="cbp-overflow-menu__item">
+                <a href="#">First Option</a>
+              </li>
+              <li class="cbp-overflow-menu__item">
+                <a href="#">Second Option</a>
+              </li>
+              <li class="cbp-overflow-menu__item">
+                <a href="#">Third Option</a>
+              </li>
+              <li>
+                <button class="cbp-btn" onclick="closeOverflowMenu()"><i class="fas fa-times-circle"></i>Close</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h2>Overflow Menu</h2>
-      </div>
-    </div>
-    <div class="cbp-row margin-top-9">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="cbp-overflow-menu__wrapper">
-          <button class="cbp-btn--action">
-            <!-- <i class="fas fa-ellipsis-h"></i> -->
-            <i class="fas fa-ellipsis-v"></i>
-          </button>
-          <ul class="cbp-overflow-menu cbp-overflow-menu--condensed">
-            <li class="cbp-overflow-menu__item">
-              <a href="#"><i class="fas fa-sync-alt"></i>Refresh</a>
-            </li>
-            <li class="cbp-overflow-menu__item">
-              <a href="#"><i class="fas fa-copy"></i>Copy</a>
-            </li>
-            <li class="cbp-overflow-menu__item">
-              <a href="#"><i class="fas fa-download"></i>Export as .csv</a>
-            </li>
-            <li class="cbp-overflow-menu__item cbp-overflow-menu__item--action">
-              <button><i class="fas fa-trash-alt"></i>Delete</button>
-            </li>
-            <li>
-              <button class="cbp-btn"><i class="fas fa-times-circle"></i>Close</button>
-            </li>
-          </ul>
+        <div class="radio-group">
+          <div class="cbp-form__row">
+            <input type="radio" name="position" id="top-left" value="tl" checked>
+            <label for="top-left" class="cbp-radio__label">Top Left</label>
+          </div>
+          <div class="cbp-form__row">
+            <input type="radio" name="position" id="top-right" value="tr">
+            <label for="top-right" class="cbp-radio__label">Top Right</label>
+          </div>
+          <div class="cbp-form__row">
+            <input type="radio" class="cbp-radio__input" name="position" id="bottom-left" value="bl">
+            <label for="bottom-left" class="cbp-radio__label">Bottom Left</label>
+          </div>
+          <div class="cbp-form__row">
+            <input type="radio" name="position" id="bottom-right" value="br">
+            <label for="bottom-right" class="cbp-radio__label">Bottom Right</label>
+          </div>
         </div>
-      </div>
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h2>Condensed Overflow Menu</h2>
       </div>
     </div>
   </div>

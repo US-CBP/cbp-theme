@@ -1,3 +1,33 @@
+/* Future form components CSS */
+.cbp-form__row {
+  display: flex;
+  align-items: center;
+}
+
+.cbp-radio__input {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+input[type="radio"]:focus {
+  outline: none;
+}
+
+.cbp-radio__label {
+  margin-left: 0.25rem;
+}
+
+.cbp-sandbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  border: 2px solid #71767A;
+  border-radius: 5px;
+  resize: both;
+  overflow: auto;
+}
+
 /* Wrapper class for the overflow menu component */
 .cbp-overflow-menu__wrapper {
   position: relative;
