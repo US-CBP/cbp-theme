@@ -301,9 +301,15 @@
   <div class="cbp-grid-container">
     <div class="cbp-row margin-top-9">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div>
+          <select name="type" id="type">
+            <option value="default">Wide</option>
+            <option value="condensed">Condensed</option>
+          </select>
+        </div>
         <div class="cbp-sandbox">
           <div class="cbp-overflow-menu__wrapper">
-            <button class="cbp-btn--action" onclick="openOverflowMenu('menu1')"">
+            <button class="cbp-btn--action" onclick="openOverflowMenu('menu1', this)">
               <!-- <i class="fas fa-ellipsis-h"></i> -->
               <i class="fas fa-ellipsis-v"></i>
             </button>
@@ -328,11 +334,11 @@
         <h2>Overflow Menu</h2>
         <div class="radio-group">
           <div class="cbp-form__row">
-            <input type="radio" name="position" id="top-left" value="tl" checked>
+            <input type="radio" class="cbp-radio__input" name="position" id="top-left" value="tl" checked>
             <label for="top-left" class="cbp-radio__label">Top Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" name="position" id="top-right" value="tr">
+            <input type="radio" class="cbp-radio__input" name="position" id="top-right" value="tr">
             <label for="top-right" class="cbp-radio__label">Top Right</label>
           </div>
           <div class="cbp-form__row">
@@ -340,7 +346,7 @@
             <label for="bottom-left" class="cbp-radio__label">Bottom Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" name="position" id="bottom-right" value="br">
+            <input type="radio" class="cbp-radio__input" name="position" id="bottom-right" value="br">
             <label for="bottom-right" class="cbp-radio__label">Bottom Right</label>
           </div>
         </div>
