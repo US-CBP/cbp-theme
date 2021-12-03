@@ -346,6 +346,15 @@
         <span class="cbp-text-heading-2xs">Danger Modal</span>
       </div>
     </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="form-modal" onclick="openModal('form-modal', this)">Open Demo Modal</button><br>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Form Modal</span>
+      </div>
+    </div>
   </div>
 
   <!-- Confirmation Component  -->
@@ -448,6 +457,35 @@
       <button class="cbp-btn cbp-btn--modal-danger">
         <i class="fas fa-trash-alt"></i>
         <span class="cbp-text-button">delete</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="cbp-hidden" id="form-modal" role="dialog" role="dialog" aria-labelledby="form-modal-label" aria-modal="true">
+    <div class="cbp-modal__header">
+      <i class="fas fa-comment"></i>
+      <h5 class="cbp-modal__title" id="form-modal-label">Feedback</h5>
+    </div>
+    <hr>
+    <div class="cbp-modal__content">
+      <p id="form-modal-desc">If you're experiencing a system error or application problem please contact the Technology Service Desk.</p>
+      <form action="">
+        <label for="description" class="cbp-form__label">Description</label>
+        <textarea name="description" id="description" class="cbp-form__textarea" cols="30" rows="5" placeholder="Enter a Description"></textarea>
+        <div class="cbp-form__validation">
+          <p><b>Required.</b> Please describe the issue or feedback you would like the team to know about. 101/200 Characters remaining.</p>
+        </div>
+      </form>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--double">
+      <button class="cbp-btn cbp-btn--modal" onclick="closeModal(this)">
+        <i class="fas fa-times"></i>
+        <span class="cbp-text-button">cancel</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-primary">
+        <i class="fas fa-paper-plane"></i>
+        <span class="cbp-text-button">send</span>
       </button>
     </div>
   </div>

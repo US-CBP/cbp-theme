@@ -3,12 +3,41 @@
   display: none;
 }
 
+/* Form and inputs things below */
 .cbp-form__group {
   display: flex;
   align-items: center;
 
   & > label {
     margin-left: 6px;
+  }
+}
+
+.cbp-form__label {
+  font-size: 12px;
+}
+
+.cbp-form__textarea {
+  border: 2px solid #5D5D52;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 14px;
+  color: #454540;
+
+  &::placeholder {
+    font-style: italic;
+  }
+}
+
+.cbp-form__validation {
+  font-size: 14px;
+  p {
+    font-weight: 400;
+
+    b {
+      font-weight: 700;
+    }
   }
 }
 
@@ -88,6 +117,7 @@
   
   & > hr {
     margin: 0px 16px;
+    border: 1px solid #A9AEB1;
   }
 }
 
