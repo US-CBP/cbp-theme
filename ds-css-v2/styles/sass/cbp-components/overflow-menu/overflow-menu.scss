@@ -17,6 +17,10 @@ input[type="radio"]:focus {
   margin-left: 0.25rem;
 }
 
+.cbp-checkox__label {
+  margin-left: 0.25rem;
+}
+
 .cbp-sandbox {
   display: flex;
   align-items: center;
@@ -26,12 +30,6 @@ input[type="radio"]:focus {
   border-radius: 5px;
   resize: both;
   overflow: auto;
-}
-
-/* Wrapper class for the overflow menu component */
-.cbp-overflow-menu__wrapper {
-  position: relative;
-  display: inline-block;
 }
 
 /* Button w/ icon to open menu */
@@ -52,8 +50,8 @@ input[type="radio"]:focus {
   }
 
   &:not([disabled]):focus {
-    background-color: #BE32D0; // $focus-dark
-    border: 2px solid #BE32D0;
+    background-color: $cbp-focus-dark;
+    border: 2px solid $cbp-focus-dark;
     box-shadow: inset 0 0 0 2px #fff;
     outline: 0;
 
@@ -63,7 +61,13 @@ input[type="radio"]:focus {
   }
 }
 
-/* Menu Container */
+/* Wrapper class for the overflow menu component */
+.cbp-overflow-menu__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Overflow Menu */
 .cbp-overflow-menu {
   position: absolute;
   top: 0;
@@ -78,7 +82,7 @@ input[type="radio"]:focus {
   z-index: 1;
 
   &__item {
-    background-color: #2d2e2f; // $ui-neutral-darker
+    background-color: $cbp-base-darker;
     padding: 0;
     margin-bottom: 0;
     width: 100%;
@@ -98,19 +102,38 @@ input[type="radio"]:focus {
   }
 }
 
-/* Link Menu Items */
-.cbp-overflow-menu li > a {
+/* Overflow Menu Condensed */
+.cbp-overflow-menu--condensed {
+  width: 180px;
+
+  & li > a,
+  & li > button {
+    font-weight: 700;
+
+    &:hover {
+      color: $cbp-text-darker;
+    }
+  }
+}
+
+/* Overflow Menu Items */
+.cbp-overflow-menu__item > a,
+.cbp-overflow-menu__item > button {
+  background-color: #2d2e2f;
   display: flex;
   align-items: center;
   padding-left: 12px;
   width: 100%;
   height: 100%;
+  font-weight: 500;
   color: $cbp-text-lightest;
   text-decoration: none;
   line-height: 20px;
+  border: 0;
 
   &:hover {
     background-color: #AFAEA2;
+    color: $cbp-text-darkest;
   }
 
   &:focus {
@@ -127,40 +150,46 @@ input[type="radio"]:focus {
   }
 }
 
-
 /* Overflow Menu Close Button */
-.cbp-overflow-menu li > button {
+.cbp-overflow-menu__btn {
+  background-color: $cbp-ui-primary;
   width: 100%;
   height: 36px;
-  text-align: center;
+  font-weight: 700;
   text-transform: uppercase;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 0 0 5px 5px;
+  border: 0;
+  color: $cbp-text-lightest;
 
   i {
-    width: min-content;
-    margin-right: 6px !important;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: $cbp-ui-primary-dark;
+    color: $cbp-text-lightest !important;
+  }
+
+  &:focus {
+    background-color: $cbp-focus-dark;
+    border: 2px solid $cbp-focus-dark;
+    box-shadow: inset 0 0 0 2px #fff;
+    outline: 0 !important;
   }
 }
 
-/* Overflow Menu Condensed */
-.cbp-overflow-menu--condensed {
-  width: 180px;
+.cbp-overflow-menu__item--danger {
+  border-top: 2px solid #71767A;
 
-  // Hover state for menu items
-  & li > a:hover {
-    color: $cbp-text-darker;
+  & > button {
+    font-weight: 700;
+    color: #f39268;
+
+    &:hover {
+      background-color: #D54309;
+      color: #ffffff !important;
+    }
   }
-}
-
-/* Overflow Menu Item Action Button */
-.cbp-overflow-menu__item--action > button {
-  border: 0;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-  border-top: 2px solid #71767A; // $base-neutral
 }
 
 /* Open state */

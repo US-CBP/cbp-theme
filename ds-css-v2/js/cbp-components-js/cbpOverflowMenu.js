@@ -125,31 +125,32 @@ OverflowMenu.prototype.removeListeners = function () {
   document.removeEventListener('focus', this.trapFocus, true);
 }
 
+/* Radio buttons for menu positioning */
 const radioBtns = document.querySelectorAll('input[name="position"]')
 
-let selectedValue = "cbp-overflow-menu--top-left";
+let menuPosition = "cbp-overflow-menu--top-left";
 
 radioBtns.forEach(btn => {
   btn.onclick = function() {
     const menu = document.getElementById('menu1');
 
-    menu.classList.remove(selectedValue)
+    menu.classList.remove(menuPosition)
 
     switch (btn.value) {
       case 'bl':
-        selectedValue = 'cbp-overflow-menu--bottom-left';
+        menuPosition = 'cbp-overflow-menu--bottom-left';
         menu.classList.add('cbp-overflow-menu--bottom-left');
         break;
       case 'tr':
-        selectedValue = 'cbp-overflow-menu--top-right';
+        menuPosition = 'cbp-overflow-menu--top-right';
         menu.classList.add('cbp-overflow-menu--top-right');
         break;
       case 'br':
-        selectedValue = 'cbp-overflow-menu--bottom-right';
+        menuPosition = 'cbp-overflow-menu--bottom-right';
         menu.classList.add('cbp-overflow-menu--bottom-right');
         break;
       case 'tl':
-        selectedValue = 'cbp-overflow-menu--top-left';
+        menuPosition = 'cbp-overflow-menu--top-left';
         menu.classList.add('cbp-overflow-menu--top-left');
         break;
       default:
