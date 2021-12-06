@@ -21,25 +21,29 @@ input[type="radio"]:focus {
   margin-left: 0.25rem;
 }
 
+// Visual div for overflow menu
 .cbp-sandbox {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 400px;
+  resize: both;
   border: 2px solid #71767A;
   border-radius: 5px;
-  resize: both;
   overflow: auto;
 }
 
 /* Button w/ icon to open menu */
 .cbp-btn--action {
-  background-color: #DFE1E2;
-  border: 0;
-  cursor: pointer;
-  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
+  background-color: #DFE1E2;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
 
   i {
     font-size: 14px;
@@ -74,20 +78,20 @@ input[type="radio"]:focus {
   right: 0;
   display: none;
   width: 280px;
-  list-style-type: none;
+  margin: 0;
   padding: 0;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 0;
+  list-style-type: none;
   z-index: 1;
 
   &__item {
-    background-color: $cbp-base-darker;
     padding: 0;
     margin-bottom: 0;
     width: 100%;
     height: 36px;
     max-width: 100%; // Override styles from _list.scss (uswds)
+    background-color: $cbp-base-darker;
 
     &:first-child {
       border-top-left-radius: 5px;
@@ -119,29 +123,29 @@ input[type="radio"]:focus {
 /* Overflow Menu Items */
 .cbp-overflow-menu__item > a,
 .cbp-overflow-menu__item > button {
-  background-color: #2d2e2f;
   display: flex;
   align-items: center;
-  padding-left: 12px;
   width: 100%;
   height: 100%;
+  padding-left: 12px;
   font-weight: 500;
+  line-height: 20px;
   color: $cbp-text-lightest;
   text-decoration: none;
-  line-height: 20px;
+  background-color: #2d2e2f;
   border: 0;
 
   &:hover {
-    background-color: #AFAEA2;
     color: $cbp-text-darkest;
+    background-color: #AFAEA2;
   }
 
   &:focus {
+    color: $cbp-text-darker;
     background-color: #F4B2FF; // focus-light
     border: 2px solid #F4B2FF;
     box-shadow: inset 0 0 0 2px #fff;
     outline: 0;
-    color: $cbp-text-darker;
   }
 
   // Icon in Menu Item
@@ -152,22 +156,22 @@ input[type="radio"]:focus {
 
 /* Overflow Menu Close Button */
 .cbp-overflow-menu__btn {
-  background-color: $cbp-ui-primary;
   width: 100%;
   height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 0 0 5px 5px;
-  border: 0;
   color: $cbp-text-lightest;
+  background-color: $cbp-ui-primary;
+  border: 0;
+  border-radius: 0 0 5px 5px;
 
   i {
     margin-right: 8px;
   }
 
   &:hover {
-    background-color: $cbp-ui-primary-dark;
     color: $cbp-text-lightest !important;
+    background-color: $cbp-ui-primary-dark;
   }
 
   &:focus {
@@ -186,8 +190,8 @@ input[type="radio"]:focus {
     color: #f39268;
 
     &:hover {
-      background-color: #D54309;
       color: #ffffff !important;
+      background-color: #D54309;
     }
   }
 }
