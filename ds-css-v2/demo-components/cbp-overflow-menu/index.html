@@ -303,8 +303,7 @@
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-sandbox">
           <div class="cbp-overflow-menu__wrapper">
-            <button class="cbp-btn--action" onclick="openOverflowMenu('menu1', this)">
-              <!-- <i class="fas fa-ellipsis-h"></i> -->
+            <button class="cbp-btn--action" id="btn1" onclick="openOverflowMenu('menu1', this)">
               <i class="fas fa-ellipsis-v"></i>
             </button>
             <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu1">
@@ -329,20 +328,27 @@
         <div class="radio-group">
           <label for="radio-group-1" style="font-weight: 700; display: block; margin-bottom: 6px;">Position:</label>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="top-left" value="tl" checked>
+            <input type="radio" class="cbp-radio__input" name="menu1" id="top-left" value="tl" checked>
             <label for="top-left" class="cbp-radio__label">Top Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="top-right" value="tr">
+            <input type="radio" class="cbp-radio__input" name="menu1" id="top-right" value="tr">
             <label for="top-right" class="cbp-radio__label">Top Right</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="bottom-left" value="bl">
+            <input type="radio" class="cbp-radio__input" name="menu1" id="bottom-left" value="bl">
             <label for="bottom-left" class="cbp-radio__label">Bottom Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="bottom-right" value="br">
+            <input type="radio" class="cbp-radio__input" name="menu1" id="bottom-right" value="br">
             <label for="bottom-right" class="cbp-radio__label">Bottom Right</label>
+          </div>
+        </div>
+        <div class="checkbox-group">
+          <label for="radio-group-1" style="font-weight: 700; display: block; margin-bottom: 6px;">Ellipsis:</label>
+          <div class="cbp-grom__row">
+            <input type="checkbox" name="vertical1" id="vertical1" data-target-btn="btn1">
+            <label for="vertical1">Variant</label>
           </div>
         </div>
       </div>
@@ -351,9 +357,8 @@
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-sandbox">
           <div class="cbp-overflow-menu__wrapper">
-            <button class="cbp-btn--action" onclick="openOverflowMenu('menu2', this)">
-              <i class="fas fa-ellipsis-h"></i>
-              <!-- <i class="fas fa-ellipsis-v"></i> -->
+            <button class="cbp-btn--action" id="btn2" onclick="openOverflowMenu('menu2', this)">
+              <i class="fas fa-ellipsis-v"></i>
             </button>
             <ul class="cbp-overflow-menu cbp-overflow-menu--condensed cbp-overflow-menu--top-left" id="menu2">
               <li class="cbp-overflow-menu__item">
@@ -380,20 +385,27 @@
         <div class="radio-group">
           <label for="radio-group-1" style="font-weight: 700; display: block; margin-bottom: 6px;">Position:</label>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="top-left" value="tl" checked>
+            <input type="radio" class="cbp-radio__input" name="menu2" id="top-left" value="tl" checked>
             <label for="top-left" class="cbp-radio__label">Top Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="top-right" value="tr">
+            <input type="radio" class="cbp-radio__input" name="menu2" id="top-right" value="tr">
             <label for="top-right" class="cbp-radio__label">Top Right</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="bottom-left" value="bl">
+            <input type="radio" class="cbp-radio__input" name="menu2" id="bottom-left" value="bl">
             <label for="bottom-left" class="cbp-radio__label">Bottom Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="bottom-right" value="br">
+            <input type="radio" class="cbp-radio__input" name="menu2" id="bottom-right" value="br">
             <label for="bottom-right" class="cbp-radio__label">Bottom Right</label>
+          </div>
+        </div>
+        <div class="checkbox-group">
+          <label for="radio-group-1" style="font-weight: 700; display: block; margin-bottom: 6px;">Ellipsis:</label>
+          <div class="cbp-grom__row">
+            <input type="checkbox" name="vertical2" id="vertical2" data-target-btn="btn2">
+            <label for="vertical2">Variant</label>
           </div>
         </div>
       </div>
@@ -402,11 +414,10 @@
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-sandbox">
           <div class="cbp-overflow-menu__wrapper">
-            <button class="cbp-btn--action" onclick="openOverflowMenu('menu3', this)">
-              <!-- <i class="fas fa-ellipsis-h"></i> -->
+            <button class="cbp-btn--action" id="btn3" onclick="openOverflowMenu('menu3', this)">
               <i class="fas fa-ellipsis-v"></i>
             </button>
-            <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu3">
+            <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu3" data-menu-type="breadcrumb">
               <li class="cbp-overflow-menu__item">
                 <a href="#"><i class="fas fa-home"></i>Home Page (A)</a>
               </li>
@@ -431,20 +442,27 @@
         <div class="radio-group">
           <label for="radio-group-1" style="font-weight: 700; display: block; margin-bottom: 6px;">Position:</label>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="top-left" value="tl" checked>
+            <input type="radio" class="cbp-radio__input" name="menu3" id="top-left" value="tl" checked>
             <label for="top-left" class="cbp-radio__label">Top Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="top-right" value="tr">
+            <input type="radio" class="cbp-radio__input" name="menu3" id="top-right" value="tr">
             <label for="top-right" class="cbp-radio__label">Top Right</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="bottom-left" value="bl">
+            <input type="radio" class="cbp-radio__input" name="menu3" id="bottom-left" value="bl">
             <label for="bottom-left" class="cbp-radio__label">Bottom Left</label>
           </div>
           <div class="cbp-form__row">
-            <input type="radio" class="cbp-radio__input" name="position" id="bottom-right" value="br">
+            <input type="radio" class="cbp-radio__input" name="menu3" id="bottom-right" value="br">
             <label for="bottom-right" class="cbp-radio__label">Bottom Right</label>
+          </div>
+        </div>
+        <div class="checkbox-group">
+          <label for="radio-group-1" style="font-weight: 700; display: block; margin-bottom: 6px;">Ellipsis:</label>
+          <div class="cbp-grom__row">
+            <input type="checkbox" name="vertical3" id="vertical3" data-target-btn="btn3">
+            <label for="vertical1">Variant</label>
           </div>
         </div>
       </div>

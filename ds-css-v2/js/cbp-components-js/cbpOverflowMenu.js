@@ -1,11 +1,10 @@
-const openMenus = []
+const openMenus = [];
 
 const utilMenu = {
-
   ignoreUtilFocusChanges: false,
 
   // Returns the current menu that is open
-  getCurrentMenu: function() {
+  getCurrentMenu: function () {
     return openMenus[openMenus.length - 1];
   },
 
@@ -68,15 +67,15 @@ const utilMenu = {
       }
     }
     return false;
-  }
-}
+  },
+};
 
 function OverflowMenu(menuId, focusAfterClosed) {
   this.menuNode = document.getElementById(menuId);
 
   openMenus.push(this);
 
-  this.menuNode.classList.toggle('active')
+  this.menuNode.classList.toggle("active");
 
   // Check that parameter focusAfterClosed is provided in function call
   if (typeof focusAfterClosed === "string") {
@@ -95,9 +94,9 @@ function OverflowMenu(menuId, focusAfterClosed) {
 OverflowMenu.prototype.close = function () {
   openMenus.pop();
   this.removeListeners();
-  this.menuNode.classList.toggle('active');
+  this.menuNode.classList.toggle("active");
   this.focusAfterClosed.focus();
-}
+};
 
 // Trap Focus method
 OverflowMenu.prototype.trapFocus = function (event) {
@@ -115,48 +114,79 @@ OverflowMenu.prototype.trapFocus = function (event) {
     }
     currentMenu.lastFocus = document.activeElement;
   }
-}
+};
 
 OverflowMenu.prototype.addListeners = function () {
-  document.addEventListener('focus', this.trapFocus, true);
-}
+  document.addEventListener("focus", this.trapFocus, true);
+};
 
 OverflowMenu.prototype.removeListeners = function () {
-  document.removeEventListener('focus', this.trapFocus, true);
-}
+  document.removeEventListener("focus", this.trapFocus, true);
+};
 
 /* Radio buttons for menu positioning */
-const radioBtns = document.querySelectorAll('input[name="position"]')
+const radioBtns = document.querySelectorAll('input[type="radio"]');
 
 let menuPosition = "cbp-overflow-menu--top-left";
 
-radioBtns.forEach(btn => {
-  btn.onclick = function() {
-    const menu = document.getElementById('menu1');
+radioBtns.forEach((btn) => {
+  btn.onclick = function () {
+    const menu = document.getElementById(btn.name);
 
-    menu.classList.remove(menuPosition)
+    menu.className = "cbp-overflow-menu";
 
     switch (btn.value) {
-      case 'bl':
-        menuPosition = 'cbp-overflow-menu--bottom-left';
-        menu.classList.add('cbp-overflow-menu--bottom-left');
+      case "bl":
+        menuPosition = "cbp-overflow-menu--bottom-left";
+        menu.classList.add("cbp-overflow-menu--bottom-left");
         break;
-      case 'tr':
-        menuPosition = 'cbp-overflow-menu--top-right';
-        menu.classList.add('cbp-overflow-menu--top-right');
+      case "tr":
+        menuPosition = "cbp-overflow-menu--top-right";
+        menu.classList.add("cbp-overflow-menu--top-right");
         break;
-      case 'br':
-        menuPosition = 'cbp-overflow-menu--bottom-right';
-        menu.classList.add('cbp-overflow-menu--bottom-right');
+      case "br":
+        menuPosition = "cbp-overflow-menu--bottom-right";
+        menu.classList.add("cbp-overflow-menu--bottom-right");
         break;
-      case 'tl':
-        menuPosition = 'cbp-overflow-menu--top-left';
-        menu.classList.add('cbp-overflow-menu--top-left');
+      case "tl":
+        menuPosition = "cbp-overflow-menu--top-left";
+        menu.classList.add("cbp-overflow-menu--top-left");
         break;
       default:
         break;
     }
+  };
+});
+
+const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkBoxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", (e) => {
+    const btn = document.getElementById(e.target.dataset.targetBtn).firstElementChild;
+    if (e.target.checked) {
+      btn.classList.remove("fa-ellipsis-v");
+      btn.classList.add("fa-ellipsis-h");
+    } else {
+      btn.classList.remove("fa-ellipsis-h");
+      btn.classList.add("fa-ellipsis-v");
+    }
+  });
+});
+
+const menuBreadcrumb = document.querySelector("[data-menu-type='breadcrumb']")
+const breadcrumbs = menuBreadcrumb.querySelectorAll('li');
+
+let paddingLeft = 12;
+
+breadcrumbs.forEach((crumb, i) => {
+  if (i === 0) {
+    return;
+  } else if (i === breadcrumbs.length - 1) {
+   return;   
   }
+
+  paddingLeft += 12;
+  crumb.firstElementChild.style.paddingLeft = `${paddingLeft}px`;
 })
 
 window.openOverflowMenu = function (menuId, focusAfterClosed) {
@@ -166,4 +196,4 @@ window.openOverflowMenu = function (menuId, focusAfterClosed) {
 window.closeOverflowMenu = function () {
   const currentMenu = utilMenu.getCurrentMenu();
   currentMenu.close();
-}
+};
