@@ -1,7 +1,9 @@
 .cbp-breadcrumb {
   display: flex;
-  list-style-type: none;
+  margin-top: 16px;
+  margin-bottom: 16px !important; // override from uswds
   padding-left: 0;
+  list-style-type: none;
 }
 
 .cbp-breadcrumb__item {
@@ -10,12 +12,30 @@
   }
 
   & > a {
+    font-weight: 500;
     text-decoration: none;
+    color: $cbp-ui-primary;
+
+    &:hover {
+      color: $cbp-ui-primary-dark;
+      text-decoration: underline;
+    }
 
     &::after {
+      @extend .cbp-text-subhead;
       content: '/';
       margin-left: 8px;
-      color: #000;
+      font-style: italic;
+      color: $cbp-text-darker;
     }
+  }
+
+  &:first-child > a:hover {
+    text-decoration: none;
+  }
+
+  /* Last breadcrumb should not have separator */
+  &:last-child > a::after {
+    content: '';
   }
 }
