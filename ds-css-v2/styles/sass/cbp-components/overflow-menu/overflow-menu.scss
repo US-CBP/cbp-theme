@@ -40,7 +40,7 @@ input[type="radio"]:focus {
   align-items: center;
   width: 24px;
   height: 24px;
-  background-color: #DFE1E2;
+  background-color: transparent;
   border: 0;
   border-radius: 3px;
   cursor: pointer;
@@ -50,7 +50,7 @@ input[type="radio"]:focus {
   }
 
   &:hover {
-    background-color: #AFAEA2;
+    background-color: $cbp-ui-neutral-light;
   }
 
   &:not([disabled]):focus {
@@ -109,11 +109,6 @@ input[type="radio"]:focus {
 /* Overflow Menu Condensed */
 .cbp-overflow-menu--condensed {
   width: 180px;
-
-  & li > a,
-  & li > button {
-    font-weight: 700;
-  }
 }
 
 /* Overflow Menu Items */
@@ -132,11 +127,13 @@ input[type="radio"]:focus {
   border: 0;
 
   &:hover {
+    font-weight: 700;
     color: $cbp-text-darkest;
     background-color: #AFAEA2;
   }
 
   &:focus {
+    font-weight: 700;
     color: $cbp-text-darkest;
     background-color: $cbp-focus-light;
     border: 2px solid $cbp-focus-light;
@@ -157,9 +154,11 @@ input[type="radio"]:focus {
   font-weight: 700;
   text-transform: uppercase;
   color: $cbp-text-lightest;
+  letter-spacing: 1.08px;
   background-color: $cbp-ui-primary;
   border: 0;
   border-radius: 0 0 5px 5px;
+  cursor: pointer;
 
   i {
     margin-right: 8px;
@@ -182,8 +181,8 @@ input[type="radio"]:focus {
   border-top: 2px solid #71767A;
 
   & > button {
-    font-weight: 700;
     color: #f39268;
+    cursor: pointer;
 
     &:hover {
       color: #ffffff !important;
