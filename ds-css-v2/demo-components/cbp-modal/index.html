@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBP Design System | Modal Component Demo Page</title>
+  <link rel="stylesheet" href="../../dist/styles.css" />
+  <link rel="stylesheet" href="../../demo-components/slide-out-draw/index.css">
+  <!-- Font awesome loaded locally from assets-->
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css" />
+
+</head>
+<body>
+
+  <!-- CBP Header / Application Header HTML Start -->
+  <header class="cbp-universal-header">
+    <!--
+      USWDS grid for logo & menu items.
+      'cbp-container' class sets the left & right margins for content inside.
+    -->
+    <div class="cbp-container">
+      <!--
+        CBP Logo
+      -->
+      <div class="cbp-logo-container">
+        <img
+          class="cbp-logo"
+          src="../../assets/images/cbp-logo-white.svg"
+          alt="CBP Logo"
+          height="55"
+        />
+
+        <!-- Mobile meatball logo - default display set to none, sets to block at 640px (USWDS Tablet width) -->
+        <div class="cbp-logo-mobile">
+          <img
+            src="../../assets/images/cbp-logo-circle.svg"
+            alt="CBP Logo"
+            height="55"
+          />
+          <span class="cbp-logo-text cbp-text-heading-xs">CBP</span>
+        </div>
+      </div>
+
+      <!-- USWDS grid that holds the icons & floats to the right-most side in tablet view -->
+
+      <div class="cbp-icon-container">
+        <!-- Application Directory button -->
+        <div>
+          <!-- Application Directory Dropdown -->
+          <div id="cbpHeaderDropdown" class="dropdown-content app-directory">
+            <!-- Icon and header text on full-width mobile dropdown -->
+            <div class="dropdown-header-mobile">
+              <h2
+                class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
+              >
+                <i class="fas fa-th font-ui-lg"></i>
+                Card Archetype
+              </h2>
+              <button
+                onClick="closeDropdown()"
+                class="usa-button--unstyled margin-left-auto"
+              >
+                <i class="fas fa-times-circle cbp-close-icon"></i>
+              </button>
+            </div>
+
+            <!-- Dropdown content -->
+            <span class="cbp-header-subtext">
+              Recently Visited Applications
+            </span>
+            <ul>
+              <li class="cbp-dropdown-item">
+                <a href="#" target="_blank">
+                  <span> Most Recent Application </span>
+                </a>
+              </li>
+
+              <li class="cbp-dropdown-item">
+                <a href="#" target="_blank">
+                  <span> Next Recent Application </span>
+                </a>
+              </li>
+
+              <li class="cbp-dropdown-item">
+                <a href="#" target="_blank">
+                  <span
+                    >Next Recent Application that has a really long name
+                  </span>
+                </a>
+              </li>
+
+              <li class="cbp-dropdown-item">
+                <a href="#" target="_blank">
+                  <span
+                    >Next Recent Application that has a really long name
+                  </span>
+                </a>
+              </li>
+
+              <li class="cbp-dropdown-item">
+                <a class="cbp-external-button" href="#" target="_blank"
+                  ><span class="cbp-text-button">View All Apps</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feedback-user-container">
+          <!--
+          Feedback standalone button (no dropdown)
+        -->
+          <div class="">
+            <a href="#">
+              <button>
+                <i class="fas fa-comment font-ui-md"></i>
+                <span class="cbp-header-text text-right"> Feedback </span>
+              </button>
+            </a>
+          </div>
+
+          <!--
+          User profile & dropdown
+        -->
+          <div class="">
+            <button onClick="showDropdown(this)" class="cbp-header-dropdown">
+              <i class="fas fa-user font-ui-md"></i>
+              <span class="cbp-header-text cbp-header-dropdown">
+                User Name
+              </span>
+            </button>
+
+            <!-- Icon and header text on full-width mobile dropdown -->
+            <div
+              id="cbpHeaderDropdown2"
+              class="dropdown-content user-profile"
+            >
+              <div class="dropdown-header-mobile">
+                <h2
+                  class="display-flex flex-align-center flex-2 cbp-text-heading-lg"
+                >
+                  <i class="fas fa-user font-ui-lg"></i>
+                  User Name
+                </h2>
+                <button
+                  onClick="closeDropdown()"
+                  class="usa-button--unstyled margin-left-auto"
+                >
+                  <i class="fas fa-times-circle cbp-close-icon"></i>
+                </button>
+              </div>
+
+              <!-- Dropdown content -->
+              <ul>
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Optional Link 1 </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span> Optional Link 2 </span>
+                  </a>
+                </li>
+
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span>A slightly longer link </span>
+                  </a>
+                </li>
+                <li class="cbp-dropdown-item">
+                  <a href="#" target="_blank">
+                    <span>
+                      This is the longest of all the links in the land
+                    </span>
+                  </a>
+                </li>
+                <li class="cbp-dropdown-item">
+                  <a class="cbp-external-button" href="#" target="_blank">
+                    <span class="cbp-text-button"
+                      ><i class="fas fa-sign-out-alt"></i> Logout</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="usa-header usa-header--basic">
+    <div class="cbp-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="basic-logo">
+          <span class="cbp-heading-text-sm">Modal Demo</span>
+        </div>
+        <button class="usa-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <div class="cbp-mobile-header">
+          <button class="usa-nav__close" style="margin: 0">
+            <i
+              class="fas fa-times-circle"
+              style="font-size: 16px"
+              alt="close"
+            ></i>
+          </button>
+        </div>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+            <button
+              class="usa-accordion__button usa-nav__link"
+              aria-expanded="false"
+              aria-controls="basic-nav-section-one"
+            >
+              <span>Child 1</span>
+            </button>
+            <ul id="basic-nav-section-one" class="usa-nav__submenu">
+              <li class="usa-nav__submenu-item">
+                <a href="#" class=""> Navigation link</a>
+              </li>
+              <li class="usa-nav__submenu-item">
+                <a href="#" class=""> Navigation link</a>
+              </li>
+              <li class="usa-nav__submenu-item">
+                <a href="#" class=""> Navigation link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <button
+              class="usa-accordion__button usa-nav__link"
+              aria-expanded="false"
+              aria-controls="basic-nav-section-two"
+            >
+              <span>Child 2</span>
+            </button>
+            <ul id="basic-nav-section-two" class="usa-nav__submenu">
+              <li class="usa-nav__submenu-item">
+                <a href="#" class="usa-current"> Navigation link</a>
+              </li>
+              <li class="usa-nav__submenu-item">
+                <a href="#" class=""> Navigation link</a>
+              </li>
+              <li class="usa-nav__submenu-item">
+                <a href="#" class=""> Navigation link</a>
+              </li>
+              <ul class="usa-nav__sublist">
+                <li class="usa-nav__submenu-item is-active">
+                  <a href=""><span>Grandchild link </span></a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href=""><span>Grandchild link</span></a>
+                </li>
+                <li class="usa-nav__submenu-item">
+                  <a href=""><span>Grandchild link</span></a>
+                </li>
+              </ul>
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <a class="usa-nav__link" href="javascript:void(0)"
+              ><span>Child 3</span></a
+            >
+          </li>
+
+          <li class="usa-nav__primary-item">
+            <a class="usa-nav__link" href="javascript:void(0)"
+              ><span>Child 4</span></a
+            >
+          </li>
+        </ul>
+        <button class="usa-search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        <form class="usa-search usa-search--small" role="search">
+          <label class="usa-sr-only" for="basic-search-field-small"
+            >Search small</label
+          >
+          <input
+            class="usa-input"
+            id="basic-search-field-small"
+            type="search"
+            name="search"
+          />
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </form>
+      </nav>
+    </div>
+  </nav>
+  <!-- CBP Header / Application Header HTML End -->
+
+  <div class="cbp-grid-container">
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="confirmation-modal" onclick="openModal('confirmation-modal', this)">Open Demo Modal</button><br>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Confirmation Modal</span>
+      </div>
+    </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="modal-one" onclick="openModal('modal-one', this)">Open Demo Modal</button><br>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Acknowledgement Modal</span>
+      </div>
+    </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="simple-modal" onclick="openModal('simple-modal', this)">Open Demo Modal</button><br>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Simple Modal</span>
+      </div>
+    </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="modal-three" onclick="openModal('modal-three', this)">Open Demo Modal</button><br>
+        <div class="cbp-form__group">
+          <input type="checkbox" name="btn-hierarchy" id="btn-hierarchy">
+          <label for="btn-hierarchy">Secondary Button Hierarchy</label>
+        </div>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">3 Choice Modal</span>
+      </div>
+    </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="danger-modal" onclick="openModal('danger-modal', this)">Open Demo Modal</button><br>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Danger Modal</span>
+      </div>
+    </div>
+    <hr>
+    <div class="cbp-row margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <button class="cbp-btn" data-modal-target="form-modal" onclick="openModal('form-modal', this)">Open Demo Modal</button><br>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Form Modal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Component  -->
+  <div class="cbp-hidden" id="confirmation-modal" role="dialog" aria-labelledby="confirmation-modal-label" aria-modal="true">
+    <div class="cbp-modal__header">
+      <i class="fas fa-check"></i>
+      <h5 class="cbp-modal__title" id="confirmation-modal-label">Confirm</h5>
+    </div>
+    <hr>
+    <div class="cbp-modal__content">
+      <p>Are you sure you want to submit and close this exam?</p>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--double">
+      <button class="cbp-btn cbp-btn--modal" onclick="closeModal(this)">
+        <i class="fas fa-times"></i>
+        <span class="cbp-text-button">cancel</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-primary" onclick="closeModal(this)">
+        <i class="fas fa-paper-plane"></i>
+        <span class="cbp-text-button">submit</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Acknowledgement Component  -->
+  <div class="cbp-hidden" id="modal-one" role="dialog" aria-labelledby="modal-one-label" aria-modal="true">
+    <div class="cbp-modal__header">
+      <h5 class="cbp-modal__title" id="modal-one-label">Terms of Service Update</h5>
+    </div>
+    <hr>
+    <div class="cbp-modal__content">
+      <p>There was a change to our terms of service. Continued use of this system constitutes acceptance of these terms.</p>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--single">
+      <button class="cbp-btn cbp-btn--modal-primary" onclick="closeModal(this)">
+        <i class="fas fa-check"></i>
+        <span class="cbp-text-button">accept</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Simple Modal -->
+  <div class="cbp-hidden" id="simple-modal" role="dialog" aria-modal="true">
+    <div class="cbp-modal__content">
+      <p id="simple-modal-desc" class="cbp-text-heading-2xs">Are you sure you want to add this user to the list?</p>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--double">
+      <button class="cbp-btn cbp-btn--modal" onclick="closeModal(this)">
+        <i class="fas fa-trash-alt"></i>
+        <span class="cbp-text-button">cancel</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-primary">
+        <i class="fas fa-plus"></i>
+        <span class="cbp-text-button">add user</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 3 Choice Modal  -->
+  <div class="cbp-hidden" id="modal-three" role="dialog" aria-labelledby="modal-three-label" aria-modal="true">
+    <div class="cbp-modal__header">
+      <i class="fas fa-file-alt"></i>
+      <h5 class="cbp-modal__title" id="modal-three-label">Document Changes</h5>
+    </div>
+    <hr>
+    <div class="cbp-modal__content">
+      <p id="modal-three-desc">What would you like to do with the changes you have made to this document?</p>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--triple">
+      <button class="cbp-btn cbp-btn--modal" onclick="closeModal(this)">
+        <i class="fas fa-times"></i>
+        <span class="cbp-text-button">cancel</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-primary-light" id="alt-btn">
+        <i class="fas fa-save"></i>
+        <span class="cbp-text-button">save</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-primary">
+        <i class="fas fa-paper-plane"></i>
+        <span class="cbp-text-button">publish</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Danger Modal -->
+  <div class="cbp-hidden" id="danger-modal" role="dialog" role="dialog" aria-labelledby="danger-modal-label" aria-modal="true">
+    <div class="cbp-modal__header cbp-modal__header--danger">
+      <i class="fas fa-exclamation-triangle"></i>
+      <h5 class="cbp-modal__title" id="danger-modal-label">Warning</h5>
+    </div>
+    <hr>
+    <div class="cbp-modal__content">
+      <p id="danger-modal-desc">Are you sure you want to delete this item? This action cannot be undone.</p>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--double">
+      <button class="cbp-btn cbp-btn--modal" onclick="closeModal(this)">
+        <i class="fas fa-times"></i>
+        <span class="cbp-text-button">cancel</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-danger">
+        <i class="fas fa-trash-alt"></i>
+        <span class="cbp-text-button">delete</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="cbp-hidden" id="form-modal" role="dialog" role="dialog" aria-labelledby="form-modal-label" aria-modal="true">
+    <div class="cbp-modal__header">
+      <i class="fas fa-comment"></i>
+      <h5 class="cbp-modal__title" id="form-modal-label">Feedback</h5>
+    </div>
+    <hr>
+    <div class="cbp-modal__content">
+      <p id="form-modal-desc">If you're experiencing a system error or application problem please contact the Technology Service Desk.</p>
+      <form action="">
+        <label for="description" class="cbp-form__label">Description</label>
+        <textarea name="description" id="description" class="cbp-form__textarea" cols="30" rows="5" placeholder="Enter a Description"></textarea>
+        <div class="cbp-form__validation">
+          <p><b>Required.</b> Please describe the issue or feedback you would like the team to know about. 101/200 Characters remaining.</p>
+        </div>
+      </form>
+    </div>
+    <div class="cbp-modal__footer cbp-modal__footer--double">
+      <button class="cbp-btn cbp-btn--modal" onclick="closeModal(this)">
+        <i class="fas fa-times"></i>
+        <span class="cbp-text-button">cancel</span>
+      </button>
+      <button class="cbp-btn cbp-btn--modal-primary">
+        <i class="fas fa-paper-plane"></i>
+        <span class="cbp-text-button">send</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Required JS for USWDS -->
+  <script src="../../js/uswds.min.js"></script>
+  <!-- JS for dropdowns -->
+  <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/cbpModal.js"></script>
+</body>
+</html>
