@@ -19,6 +19,11 @@
     &:hover {
       color: $cbp-ui-primary-dark;
       text-decoration: underline;
+
+      &::after {
+        display: inline-block;
+        text-decoration: none;
+      }
     }
 
     &::after {
@@ -30,6 +35,7 @@
     }
   }
 
+  /* First breadcrumb icon should not have underline on hover */
   &:first-child > a:hover {
     text-decoration: none;
   }
@@ -38,4 +44,22 @@
   &:last-child > a::after {
     content: '';
   }
+}
+
+.cbp-breadcrumb--condensed {
+  margin-top: 12px;
+  margin-bottom: 12px !important;
+}
+
+.cbp-breadcrumb--condensed > li:nth-child(2) > a {
+  color: black;
+}
+
+.cbp-lastcrumb {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #000;
+  border-bottom: 4px solid $cbp-ui-neutral;
 }

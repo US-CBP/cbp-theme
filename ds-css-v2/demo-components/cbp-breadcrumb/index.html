@@ -308,7 +308,8 @@
   <main class="cbp-grid-container">
     <div class="cbp-row margin-top-3 margin-top-3">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <ul class="cbp-breadcrumb">
+        <span class="mq-value"></span>
+        <ul class="cbp-breadcrumb" data-breadcrumb="true">
           <li class="cbp-breadcrumb__item">
             <a href="#"><i class="fas fa-home"></i></a>
           </li>
@@ -319,18 +320,40 @@
             <a href="#">Grandchild Page</a>
           </li>
         </ul>
+        <h1 class="cbp-lastcrumb">Primary Passengers Application</h1>
       </div>
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <span class="cbp-text-heading-2xs">Breadcrumb Component</span>
+        <span class="cbp-text-heading-2xs">Breadcrumb</span>
       </div>
     </div>
     <hr>
+    <div class="cbp-row margin-top-3 margin-top-3">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <ul class="cbp-breadcrumb cbp-breadcrumb--condensed">
+          <li class="cbp-breadcrumb__item">
+            <a href="#"><i class="fas fa-home"></i></a>
+          </li>
+          <li class="cbp-breadcrumb__item">
+            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+          </li>
+          <li class="cbp-breadcrumb__item">
+            <a href="#">Grandchild Page</a>
+          </li>
+        </ul>
+        <h1 class="cbp-lastcrumb">Primary Passengers Application</h1>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Condensed Breadcrumb</span>
+      </div>
+    </div>
   </main>
 
   <!-- Required JS for USWDS -->
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/cbpBreadcrumb.js"></script>
 </body>
 </html>
