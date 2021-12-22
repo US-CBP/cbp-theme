@@ -182,7 +182,7 @@ breadcrumbs.forEach((crumb, i) => {
   if (i === 0) {
     return;
   } else if (i === breadcrumbs.length - 1) {
-   return;   
+   return;
   }
 
   paddingLeft += 12;

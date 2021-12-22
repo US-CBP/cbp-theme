@@ -335,7 +335,28 @@
             <a href="#"><i class="fas fa-home"></i></a>
           </li>
           <li class="cbp-breadcrumb__item">
-            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+            <div class="cbp-overflow-menu__wrapper">
+              <button class="cbp-btn--action" id="btn3" onclick="openOverflowMenu('menu3', this)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+              <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu3" data-menu-type="breadcrumb">
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-home"></i>Home Page (A)</a>
+                </li>
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-arrow-right"></i>Child Page (B)</a>
+                </li>
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-arrow-right"></i>Grandchild Page (C)</a>
+                </li>
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-arrow-right"></i>Great-Grandchild Page (D)</a>
+                </li>
+                <li>
+                  <button class="cbp-overflow-menu__btn" onclick="closeOverflowMenu()"><i class="fas fa-times-circle"></i>Close</button>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="cbp-breadcrumb__item">
             <a href="#">Grandchild Page</a>
@@ -355,5 +376,6 @@
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
   <script src="../../js/cbp-components-js/cbpBreadcrumb.js"></script>
+  <script src="../../js/cbp-components-js/cbpOverflowMenu.js"></script>
 </body>
 </html>
