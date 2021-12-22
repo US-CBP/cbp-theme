@@ -1,0 +1,225 @@
+// Future CSS to use for hidden components
+.cbp-hidden {
+  display: none;
+}
+
+/* Form and inputs things below */
+.cbp-form__group {
+  display: flex;
+  align-items: center;
+
+  & > label {
+    margin-left: 6px;
+  }
+}
+
+.cbp-form__label {
+  font-size: 12px;
+}
+
+.cbp-form__textarea {
+  border: 2px solid #5D5D52;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 14px;
+  color: #454540;
+
+  &::placeholder {
+    font-style: italic;
+  }
+}
+
+.cbp-form__validation {
+  font-size: 14px;
+  p {
+    font-weight: 400;
+
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+/* Remove during button fixes */
+.cbp-btn--modal {
+  background-color: #76766A;
+
+  &:hover {
+    background-color: #454540 !important;
+    box-shadow: none !important;
+  }
+
+  &-light {
+    background-color: #5D5D52 !important;
+
+    &:hover {
+      background-color: #454540 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &-primary {
+    &:hover {
+      background-color: $cbp-ui-primary-darker !important;
+      box-shadow: none !important;
+    }
+
+    &-light {
+      background-color: #2672de !important;
+      
+      &:hover {
+        background-color: $cbp-ui-primary-darker !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  &-danger {
+    background-color: #D54309 !important;
+    &:hover {
+      background-color: #9C3D10 !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+/* this is added to the body when a dialog is open */
+.has-modal {
+  overflow: hidden;
+}
+
+.cbp-modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cbp-modal__backdrop.active {
+  display: block;
+}
+
+.cbp-modal, [role="dialog"] {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  background-color: #fff; // .cbp-white
+  border-radius: 5px;
+  width: 336px;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+  & > hr {
+    margin: 0px 16px;
+    border: 1px solid #A9AEB1;
+  }
+}
+
+.cbp-modal__header {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  color: $cbp-text-darker;
+
+  i {
+    font-size: 22px;
+    margin-right: 16px;
+  }
+
+  .cbp-modal__title {
+    font-size: 1.602rem;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: 0;
+  }
+
+  // Modal Title Danger
+  &--danger {
+    color: #d54309;
+  }
+}
+
+.cbp-modal__content {
+  color: $cbp-text-darker;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 16px 16px 20px 16px;
+
+  p {
+    line-height: 20px;
+  }
+}
+
+.cbp-modal__footer {
+  display: flex;
+
+  /* Modal Button Modifiers */
+  // 1 button
+  &--single {
+    button {
+      width: 100%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+  }
+
+  // 2 buttons
+  &--double {
+    button {
+      width: 50%;
+    }
+
+    button:first-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    button:nth-child(2) {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  // 3 buttons 
+  &--triple {
+    button {
+      width: auto;
+    }
+
+    button:first-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    button:nth-child(2) {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    button:last-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: 599px) {
+  [role="dialog"] {
+    top: 30%
+  }
+}

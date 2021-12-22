@@ -1,0 +1,223 @@
+/* Future form components CSS */
+.cbp-form__row {
+  display: flex;
+  align-items: center;
+}
+
+.cbp-radio__input {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+input[type="radio"]:focus {
+  outline: none;
+}
+
+.cbp-radio__label {
+  margin-left: 0.25rem;
+}
+
+.cbp-checkox__label {
+  margin-left: 0.25rem;
+}
+
+// Visual div for overflow menu
+.cbp-sandbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  resize: both;
+  border: 2px solid #71767A;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+/* Button w/ icon to open menu */
+.cbp-btn--action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+
+  i {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $cbp-ui-neutral-light;
+  }
+
+  &:not([disabled]):focus {
+    background-color: $cbp-focus-dark;
+    border: 2px solid $cbp-focus-dark;
+    box-shadow: inset 0 0 0 2px #fff;
+    outline: 0;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+/* Wrapper class for the overflow menu component */
+.cbp-overflow-menu__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Overflow Menu */
+.cbp-overflow-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+  z-index: 1;
+
+  &__item {
+    padding: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 36px;
+    max-width: 100%; // Override styles from _list.scss (uswds)
+    background-color: $cbp-base-darker;
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      // This is 4 levels deep and should be avoided
+      & > a {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+    }
+  }
+}
+
+/* Overflow Menu Condensed */
+.cbp-overflow-menu--condensed {
+  width: 180px;
+}
+
+/* Overflow Menu Items */
+.cbp-overflow-menu__item > a,
+.cbp-overflow-menu__item > button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $cbp-text-lightest;
+  text-decoration: none;
+  background-color: $cbp-main-bg-dark;
+  border: 0;
+
+  &:hover {
+    font-weight: 700;
+    color: $cbp-text-darkest;
+    background-color: #AFAEA2;
+  }
+
+  &:focus {
+    font-weight: 700;
+    color: $cbp-text-darkest;
+    background-color: $cbp-focus-light;
+    border: 2px solid $cbp-focus-light;
+    box-shadow: inset 0 0 0 2px #fff;
+    outline: 0;
+  }
+
+  // Icon in Menu Item
+  i {
+    margin-right: 8px;
+  }
+}
+
+/* Overflow Menu Close Button */
+.cbp-overflow-menu__btn {
+  width: 100%;
+  height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $cbp-text-lightest;
+  letter-spacing: 1.08px;
+  background-color: $cbp-ui-primary;
+  border: 0;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+
+  i {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    color: $cbp-text-lightest !important;
+    background-color: $cbp-ui-primary-dark;
+  }
+
+  &:focus {
+    background-color: $cbp-focus-dark;
+    border: 2px solid $cbp-focus-dark;
+    box-shadow: inset 0 0 0 2px #fff;
+    outline: 0 !important;
+  }
+}
+
+.cbp-overflow-menu__item--danger {
+  border-top: 2px solid #71767A;
+
+  & > button {
+    color: #f39268;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff !important;
+      background-color: #D54309;
+    }
+  }
+}
+
+/* Open state */
+.active {
+  display: block;
+}
+
+/* Top Left Menu Position */
+.cbp-overflow-menu--top-left {
+  top: 0;
+  left: 0;
+}
+
+/* Top Right Menu Position */
+.cbp-overflow-menu--top-right {
+  top: 0;
+  right: 0;
+}
+
+/* Bottom Left Menu Position */
+.cbp-overflow-menu--bottom-left {
+  top: unset;
+  bottom: 0;
+  left: 0;
+}
+
+/* Bottom Right Menu Position */
+.cbp-overflow-menu--bottom-right {
+  top: unset;
+  bottom: 0;
+  right: 0;
+}
