@@ -89,6 +89,23 @@ function OverflowMenu(menuId, focusAfterClosed) {
   }
 
   this.addListeners();
+
+  if (this.menuNode.hasAttribute("data-menu-type")) {
+    const crumbs = this.menuNode.querySelectorAll('li');
+    
+    let paddingLeft = 12;
+
+    crumbs.forEach((crumb, i) => {
+      if (i === 0) {
+        return;
+      } else if (i === crumbs.length - 1) {
+       return;
+      }
+    
+      paddingLeft += 12;
+      crumb.firstElementChild.style.paddingLeft = `${paddingLeft}px`;
+    })
+  }
 }
 
 OverflowMenu.prototype.close = function () {
@@ -172,22 +189,6 @@ checkBoxes.forEach((checkbox) => {
     }
   });
 });
-
-const menuBreadcrumb = document.querySelector("[data-menu-type='breadcrumb']")
-const breadcrumbs = menuBreadcrumb.querySelectorAll('li');
-
-let paddingLeft = 12;
-
-breadcrumbs.forEach((crumb, i) => {
-  if (i === 0) {
-    return;
-  } else if (i === breadcrumbs.length - 1) {
-   return;
-  }
-
-  paddingLeft += 12;
-  crumb.firstElementChild.style.paddingLeft = `${paddingLeft}px`;
-})
 
 window.openOverflowMenu = function (menuId, focusAfterClosed) {
   const overflowMenu = new OverflowMenu(menuId, focusAfterClosed);

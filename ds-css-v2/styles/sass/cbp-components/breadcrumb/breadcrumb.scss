@@ -26,7 +26,13 @@
       &::after {
         display: inline-block;
         text-decoration: none;
+        white-space: nowrap;
       }
+    }
+
+    &:focus {
+      color: $cbp-focus-dark;
+      outline: 0;
     }
   }
 
@@ -45,7 +51,7 @@
     color: $cbp-text-darker;
     content: '/';
     font-style: italic;
-    margin-left: 8px;
+    margin-left: 4px;
   }
 }
 
@@ -58,6 +64,7 @@
   color: black;
 }
 
+/* Header (Might not be part of actual breadcrumb */
 .cbp-lastcrumb {
   color: #000;
   border-bottom: 4px solid $cbp-ui-neutral;
@@ -65,4 +72,16 @@
   font-weight: 500;
   line-height: 48px;
   margin: 0;
+}
+
+.d-lg-none {
+  @media screen and (min-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.d-sm-none {
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
 }
