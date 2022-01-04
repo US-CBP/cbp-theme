@@ -9,10 +9,51 @@
   font-weight: 500;
 }
 
-/* Mixin for hover properties */
+/* Mixin for Hover Properties */
 @mixin hover ($background) {
   background: $background;
   // font-weight: 700;
+}
+
+/* Mixin for Floating Action Button */
+@mixin float ($background, $hover-background) {
+  background: $background;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  color: $cbp-text-lightest;
+  cursor: pointer;
+  font-size: 24px;
+  height: 56px;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  width: 56px;
+  z-index: 99998;
+
+  &:hover {
+    background-color: $hover-background;
+  }
+
+  & > i {
+    margin-right: 0;
+  }
+
+  &:active:not([disabled]) {
+    cursor: grabbing;
+  }
+
+  &:disabled {
+    background-color: $cbp-disabled-light;
+    color: $cbp-disabled-dark;
+  }
+
+  &:focus:not([disabled]) {
+    background: $cbp-focus-dark;
+    color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+  }
 }
 
 /* PRIMARY FOCUS PROPERTIES */
@@ -199,27 +240,7 @@
 
     /* PRIMARY FLOATING ACTION */
     &-float {
-      background: $cbp-ui-primary-dark;
-      border-radius: 30px;
-      box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
-      box-sizing: border-box;
-      color: $cbp-text-lightest;
-      cursor: pointer;
-      font-size: 24px;
-      height: 56px;
-      justify-content: center;
-      padding: 0;
-      text-align: center;
-      width: 56px;
-      z-index: 99998;
-
-      &:hover {
-        background-color: $cbp-ui-primary-darker;
-      }
-
-      & > i {
-        margin-right: 0;
-      }
+      @include float($cbp-ui-primary-dark, $cbp-ui-primary-darker);
     }
   }
 
@@ -268,6 +289,11 @@
       //   box-shadow: none;
       //   color: #1B2B85;
       // }
+    }
+
+    /* SECONDARY FLOATING ACTION */
+    &-float {
+      @include float($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
     }
   }
 
