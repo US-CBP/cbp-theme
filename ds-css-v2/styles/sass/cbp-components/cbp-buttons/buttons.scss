@@ -68,7 +68,7 @@
 .btn-active {
   background: #1B2B85;
   box-shadow: none;
-  font-style: italic;
+  // font-style: italic;
   outline: none;
   
   > .cbp-text-button {
@@ -214,7 +214,6 @@
       /* PRIMARY OUTLINE FOCUS */
       &:focus:not([disabled]) {
         @extend .btn-focus;
-        border: 0;
       }  
 
       /* PRIMARY OUTLINE ACTIVE */  
@@ -233,8 +232,12 @@
       border: 0;
       color: $cbp-ui-primary-dark;
 
-      &:hover {
+      &:hover:not([disabled]) {
         background: $cbp-ui-primary-lighter;
+      }
+
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
       }
     }
 
@@ -249,11 +252,11 @@
     background-color: $cbp-ui-neutral-dark;
     color: $cbp-text-lightest;
 
-    &:hover {
+    &:hover:not([disabled]) {
       @include hover($cbp-ui-neutral-darker);
     }
 
-    &:focus {
+    &:focus:not([disabled]) {
       @extend .btn-focus;
     }
 
@@ -289,6 +292,21 @@
       //   box-shadow: none;
       //   color: #1B2B85;
       // }
+    }
+
+    /* SECONDARY GHOST BUTTON */
+    &-ghost {
+      background-color: #fff;
+      border: 0;
+      color: $cbp-ui-neutral-dark;
+
+      &:hover:not([disabled]) {
+        background: $cbp-ui-neutral-lighter;
+      }
+
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
+      }
     }
 
     /* SECONDARY FLOATING ACTION */
@@ -371,34 +389,32 @@
 
       /* BUTTON DANGER SECONDARY HOVER */
       &:hover:not([disabled]) {
-        background-color: #E6E6E2;
-        color:  #9C3D10;
+        @include hover(#9C3D10);
+        color: $cbp-text-lightest;
+        border: 2px solid #9C3D10; // $cbp-danger-darker
       }
 
       /* BUTTON DANGER SECONDARY HOVER */
       &:focus:not([disabled]) {
-        background-color: #E6E6E2;
-        color:  #9C3D10;
-        outline: 2px solid #fff;
-        outline-offset: -4px;
+        @extend .btn-focus;
       }
     }
-  }
 
-  &--float-secondary {
-    @extend .cbp-btn--float-primary;
-    background-color: $cbp-ui-neutral-dark;
-  }
+    /* SECONDARY GHOST BUTTON */
+    &-ghost {
+      background-color: #fff;
+      border: 0;
+      color: #D54309;
 
-  &--float-primary:disabled,
-  &--float-secondary:disabled {
-    background-color: #ADADAD;
-    color: #FFF;
-  }
+      &:hover:not([disabled]) {
+        background: #fce1d4;
+        color: #9C3D10;
+      }
 
-  &--float-secondary {
-    background-color: #E6E6E2;
-    color: #5d5d52;
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
+      }
+    }
   }
 }
 
@@ -417,7 +433,7 @@
   }
 
   &:visited {
-    color: $cbp-visited-dark; // #4A50C4
+    color: $cbp-visited-dark;
   }
 
   &:hover {
