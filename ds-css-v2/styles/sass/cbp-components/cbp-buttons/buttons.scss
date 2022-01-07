@@ -149,6 +149,7 @@
 //     &-danger-outline {}
 //     &-danger-ghost {}
 //   }
+//   &-segment {}
 // }
 
 .cbp-btn {
@@ -446,6 +447,54 @@
       @include square(#D54309, $cbp-text-lightest, #9C3D10);
     }
   }
+
+  /* SEGMENTED BUTTONS */
+  &--segment {
+    display: flex;
+    width: fit-content;
+    
+    button {
+      @extend .cbp-btn;
+      background-color: #fff;
+      border: 2px solid $cbp-ui-neutral-dark;
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        border-left: 0;
+        border-radius: 0;
+      }
+
+      &:last-child {
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-neutral-darker;
+        color: #fff;
+      }
+
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
+      }
+    }
+  }
+
+  &--cta {
+    @extend .cbp-btn--primary;
+    font-size: 18px;
+    height: 52px;
+    padding: 0 16px;
+
+    & > i {
+      margin-right: 12px;
+    }
+  }
 }
 
 .cbp-inline-text-link {
@@ -476,5 +525,4 @@
     font-weight: 700;
     outline: 2px solid $cbp-focus-dark;
   }
-
 }
