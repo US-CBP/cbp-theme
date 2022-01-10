@@ -9,12 +9,6 @@
   font-weight: 500;
 }
 
-/* Mixin for Hover Properties */
-@mixin hover ($background) {
-  background: $background;
-  // font-weight: 700;
-}
-
 /* Mixin for Floating Action Button */
 @mixin float ($background, $hover-background) {
   background: $background;
@@ -179,7 +173,7 @@
 
     /* HOVER */
     &:hover:not([disabled]) {
-      @include hover($cbp-ui-primary-darker);
+      background-color: $cbp-ui-primary-darker;
     }
 
     /* FOCUSED */
@@ -274,7 +268,7 @@
     color: $cbp-text-lightest;
 
     &:hover:not([disabled]) {
-      @include hover($cbp-ui-neutral-darker);
+      background-color: $cbp-ui-neutral-darker;
     }
 
     &:focus:not([disabled]) {
@@ -289,7 +283,7 @@
 
       /* SECONDARY BUTTON OUTLINE HOVER */
       &:hover:not([disabled]) {
-        @include hover($cbp-ui-neutral-darker);
+        background-color: $cbp-ui-neutral-darker;
         border: 2px solid transparent;
         color: #fff;
       }
@@ -415,7 +409,7 @@
 
       /* BUTTON DANGER SECONDARY HOVER */
       &:hover:not([disabled]) {
-        @include hover(#9C3D10);
+        background-color: #9C3D10;
         color: $cbp-text-lightest;
         border: 2px solid #9C3D10; // $cbp-danger-darker
       }
