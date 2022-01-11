@@ -81,20 +81,22 @@
 .btn-active {
   background: #1B2B85;
   box-shadow: none;
-  // font-style: italic;
+  font-style: italic;
   outline: none;
-  
-  > .cbp-text-button {
-    font-weight: 700;
-  }
 }
 
-/* PRIMARY OUTLINE ACTIVE PROPERTIES */
+/* OUTLINE ACTIVE PROPERTIES */
 .btn-outline-active {
   background: #fff;
-  border-color: 2px solid #1B2B85;
+  border: 2px solid #1B2B85;
   box-shadow: none;
   color: #1B2B85;
+  font-style: italic;
+}
+
+.btn-ghost-active {
+  @extend .btn-outline-active;
+  border: 0;
 }
 
 /* PRIMARY OUTLINE DISABLED PROPERTIES*/
@@ -150,7 +152,6 @@
     /* HOVER */
     &:hover:not([disabled]) {
       background-color: $cbp-ui-primary-darker;
-      font-weight: 700;
     }
 
     /* FOCUSED */
@@ -205,13 +206,9 @@
       }  
 
       /* PRIMARY OUTLINE ACTIVE */  
-      // &:active:not([disabled]) {
-      //   @extend .btn-outline-active;
-      //   background: #fff;
-      //   border-color: 2px solid #1B2B85;
-      //   box-shadow: none;
-      //   color: #1B2B85;
-      // }
+      &:active:not([disabled]) {
+        @extend .btn-outline-active;
+      }
     }
 
     /* PRIMARY GHOST */
@@ -226,6 +223,10 @@
 
       &:focus:not([disabled]) {
         @extend .btn-focus;
+      }
+
+      &:active:not([disabled]) {
+        @extend .btn-ghost-active;
       }
     }
 
@@ -254,6 +255,10 @@
       border: 2px solid transparent;
     }
 
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+
     /* SECONDARY BUTTON OUTLINE */
     &-outline {
       background: #FFF;
@@ -279,13 +284,9 @@
       }
 
       /* SECONDARY BUTTON OUTLINE ACTIVE*/
-      // &:active:not([disabled]) {
-      //   @extend .btn-outline-active;
-      //   background: #fff;
-      //   border-color: #1B2B85;
-      //   box-shadow: none;
-      //   color: #1B2B85;
-      // }
+      &:active:not([disabled]) {
+        @extend .btn-outline-active;
+      }
     }
 
     /* SECONDARY GHOST BUTTON */
@@ -301,6 +302,10 @@
       &:focus:not([disabled]) {
         @extend .btn-focus;
       }
+
+      &:active:not([disabled]) {
+        @extend .btn-ghost-active;
+      }
     }
 
     /* SECONDARY FLOATING ACTION */
@@ -313,45 +318,6 @@
       @include square($cbp-ui-neutral-dark, $cbp-text-lightest, $cbp-ui-neutral-darker);
     }
   }
-
-  // /* BUTTON JUST TEXT */
-  // &--text:not([disabled]) {
-  //   background: #FFF;
-  //   border-color: transparent;
-  //   color: #5D5D5D;
-  // }
-
-  // /* BUTTON JUST TEXT DISABLED */
-  // &--text:disabled {
-  //   background: #FFF;
-  //   color: #ADADAD;
-  //   cursor: not-allowed;
-  //   font-style: italic;
-    
-  //   > .cbp-text-button {
-  //     font-weight: 700;
-  //   }    
-  // }
-
-  // /* BUTTON JUST TEXT */
-  // &--text:hover:not([disabled]) {
-  //   background-color: #E6E6E2;
-  //   color: #BE32D0;
-  // }
-
-  // /* BUTTON JUST TEXT FOCUS */
-  // &--text:focus:not([disabled]) {
-  //   background-color: #E6E6E2;
-  //   color: #BE32D0;
-  //   outline: 2px solid #fff;
-  //   outline-offset: -4px;    
-  // }
-
-  // /* BUTTON JUST TEXT ACTIVE */
-  // &--text:active:not([disabled]) {
-  //   background-color: #FFF;
-  //   color: #1B2B85;
-  // }
 
   /* BUTTON DANGER */
   &--danger {
@@ -368,6 +334,10 @@
       @extend .btn-focus;
       border: 2px solid transparent;
       color: #fff;
+    }
+
+    &:active:not([disabled]) {
+      @extend .btn-active;
     }
 
     /* BUTTON DANGER OUTLINE */
@@ -389,6 +359,10 @@
         border: 2px solid transparent;
       }
       
+      &:active:not([disabled]) {
+        @extend .btn-outline-active;
+      }
+
       /* BUTTON DANGER DISABLED */
       &:disabled {
         background: #FFF;
@@ -411,6 +385,10 @@
 
       &:focus:not([disabled]) {
         @extend .btn-focus;
+      }
+
+      &:active:not([disabled]) {
+        @extend .btn-ghost-active;
       }
     }
 
