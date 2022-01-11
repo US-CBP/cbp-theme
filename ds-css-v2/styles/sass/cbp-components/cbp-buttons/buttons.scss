@@ -63,6 +63,10 @@
   &:hover:not([disabled]) {
     background-color: $hover-bg;
   }
+
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
+  }
 }
 
 /* PRIMARY FOCUS PROPERTIES */
@@ -118,34 +122,6 @@
   &--right { justify-content: flex-end; }
 }
 
-
-// .cbp-btn {
-//   &-primary {
-//     &-outline {}
-//     &-ghost {}
-//   }
-//   &-secondary {
-//     &-outline {}
-//     &-ghost {}
-//   }
-//   &-danger {
-//     &-outline {}
-//     &-ghost-icon {}
-//     &-ghost {}
-//   }
-//   &-square {
-//     &-primary-outline {}
-//     &-primary-ghost {}
-//     &-secondary {}
-//     &-secondary-outline {}
-//     &-secondary-ghost {}
-//     &-danger {}
-//     &-danger-outline {}
-//     &-danger-ghost {}
-//   }
-//   &-segment {}
-// }
-
 .cbp-btn {
   align-items: center;
   border: 2px solid transparent;
@@ -174,6 +150,7 @@
     /* HOVER */
     &:hover:not([disabled]) {
       background-color: $cbp-ui-primary-darker;
+      font-weight: 700;
     }
 
     /* FOCUSED */
@@ -224,6 +201,7 @@
       /* PRIMARY OUTLINE FOCUS */
       &:focus:not([disabled]) {
         @extend .btn-focus;
+        border: 2px solid transparent;
       }  
 
       /* PRIMARY OUTLINE ACTIVE */  
@@ -273,6 +251,7 @@
 
     &:focus:not([disabled]) {
       @extend .btn-focus;
+      border: 2px solid transparent;
     }
 
     /* SECONDARY BUTTON OUTLINE */
@@ -296,7 +275,7 @@
       &:focus:not([disabled]) {
         @extend .btn-focus;
         border: 2px solid transparent;
-        color: #fff;    
+        color: #fff;
       }
 
       /* SECONDARY BUTTON OUTLINE ACTIVE*/
@@ -335,44 +314,44 @@
     }
   }
 
-  /* BUTTON JUST TEXT */
-  &--text:not([disabled]) {
-    background: #FFF;
-    border-color: transparent;
-    color: #5D5D5D;
-  }
+  // /* BUTTON JUST TEXT */
+  // &--text:not([disabled]) {
+  //   background: #FFF;
+  //   border-color: transparent;
+  //   color: #5D5D5D;
+  // }
 
-  /* BUTTON JUST TEXT DISABLED */
-  &--text:disabled {
-    background: #FFF;
-    color: #ADADAD;
-    cursor: not-allowed;
-    font-style: italic;
+  // /* BUTTON JUST TEXT DISABLED */
+  // &--text:disabled {
+  //   background: #FFF;
+  //   color: #ADADAD;
+  //   cursor: not-allowed;
+  //   font-style: italic;
     
-    > .cbp-text-button {
-      font-weight: 700;
-    }    
-  }
+  //   > .cbp-text-button {
+  //     font-weight: 700;
+  //   }    
+  // }
 
-  /* BUTTON JUST TEXT */
-  &--text:hover:not([disabled]) {
-    background-color: #E6E6E2;
-    color: #BE32D0;
-  }
+  // /* BUTTON JUST TEXT */
+  // &--text:hover:not([disabled]) {
+  //   background-color: #E6E6E2;
+  //   color: #BE32D0;
+  // }
 
-  /* BUTTON JUST TEXT FOCUS */
-  &--text:focus:not([disabled]) {
-    background-color: #E6E6E2;
-    color: #BE32D0;
-    outline: 2px solid #fff;
-    outline-offset: -4px;    
-  }
+  // /* BUTTON JUST TEXT FOCUS */
+  // &--text:focus:not([disabled]) {
+  //   background-color: #E6E6E2;
+  //   color: #BE32D0;
+  //   outline: 2px solid #fff;
+  //   outline-offset: -4px;    
+  // }
 
-  /* BUTTON JUST TEXT ACTIVE */
-  &--text:active:not([disabled]) {
-    background-color: #FFF;
-    color: #1B2B85;
-  }
+  // /* BUTTON JUST TEXT ACTIVE */
+  // &--text:active:not([disabled]) {
+  //   background-color: #FFF;
+  //   color: #1B2B85;
+  // }
 
   /* BUTTON DANGER */
   &--danger {
@@ -387,36 +366,35 @@
     /* BUTTON DANGER FOCUS */
     &:focus:not([disabled]) {
       @extend .btn-focus;
+      border: 2px solid transparent;
+      color: #fff;
     }
 
-    /* BUTTON DANGER */
+    /* BUTTON DANGER OUTLINE */
     &-outline {
       background-color: #FFF;
       border: 2px solid #D54309;
       color: #D54309;
 
-      /* BUTTON DANGER SECONDARY DISABLED */
+      /* BUTTON DANGER SECONDARY HOVER */
+      &:hover:not([disabled]) {
+        background-color: #9C3D10;
+        color: $cbp-text-lightest;
+        border: 2px solid transparent;
+      }
+
+      /* BUTTON DANGER FOCUS */
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
+        border: 2px solid transparent;
+      }
+      
+      /* BUTTON DANGER DISABLED */
       &:disabled {
         background: #FFF;
         color: #ADADAD;
         cursor: not-allowed;
         font-style: italic;
-        
-        > .cbp-text-button {
-          font-weight: 700;
-        }
-      }
-
-      /* BUTTON DANGER SECONDARY HOVER */
-      &:hover:not([disabled]) {
-        background-color: #9C3D10;
-        color: $cbp-text-lightest;
-        border: 2px solid #9C3D10; // $cbp-danger-darker
-      }
-
-      /* BUTTON DANGER SECONDARY HOVER */
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
       }
     }
 
@@ -455,15 +433,17 @@
       &:first-child {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        border-right: .5px solid $cbp-ui-neutral-dark;
       }
 
       &:not(:first-child):not(:last-child) {
-        border-left: 0;
+        border-left: 0.5px solid $cbp-ui-neutral-dark;
+        border-right: 0.5px solid $cbp-ui-neutral-dark;
         border-radius: 0;
       }
 
       &:last-child {
-        border-left: 0;
+        border-left: 0.5px solid $cbp-ui-neutral-dark;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
