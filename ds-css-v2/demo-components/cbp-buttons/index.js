@@ -37,3 +37,18 @@ justIconBtns.forEach( btn => {
 
   })
 })
+
+const segmentBtns = document.querySelectorAll('[data-segment-button="true"]');
+
+segmentBtns.forEach(segment => {
+  let selected = [];
+
+  const { children } = segment;
+
+  for (child of children) {
+    child.addEventListener('click', e => {
+      selected.push(e.target);
+      e.target.classList.toggle("active");
+    })
+  }
+})

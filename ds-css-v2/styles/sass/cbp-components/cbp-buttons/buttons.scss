@@ -421,7 +421,7 @@
       &:active:not([disabled]) {
         @extend .btn-ghost-active;
       }
-      
+
       &:disabled {
         @extend .btn-ghost-disabled;
       }
@@ -469,6 +469,15 @@
       &:focus:not([disabled]) {
         @extend .btn-focus;
       }
+
+      & > i {
+        margin-right: 0;
+      }
+    }
+
+    .active {
+      background-color: $cbp-selected-dark;
+      color: #fff;
     }
   }
 
