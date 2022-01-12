@@ -7,6 +7,11 @@
   cursor: pointer;
   font-style: italic;
   font-weight: 500;
+
+  &:hover {
+    background-color: #ADADAD;
+    color: $cbp-text-darkest;
+  }
 }
 
 /* Mixin for Floating Action Button */
@@ -107,7 +112,21 @@
   cursor: not-allowed;
   font-style: italic;
   
-  > .cbp-text-button {
+  &:hover {
+    background-color: #E6E6E6;
+    border: 2px solid #E6E6E6;
+    color: $cbp-text-darker;
+    font-weight: 700;
+  }
+}
+
+.btn-ghost-disabled {
+  color: #ADADAD; // $cbp-disabled-dark
+  font-style: italic;
+
+  &:hover {
+    background-color: #E6E6E6;
+    color: $cbp-text-darker;
     font-weight: 700;
   }
 }
@@ -180,15 +199,10 @@
     }
 
     /* PRIMARY OUTLINE */
-    &-outline:not([disabled]) {
+    &-outline {
       background-color: #fff;
       border: 2px solid #0050D8;
       color: #0050D8;
-
-      /* PRIMARY OUTLINE DISABLED */
-      &:disabled {
-        @extend .btn-outline-disabled;
-      }
 
       /* PRIMARY OUTLINE HOVER */
       &:hover:not([disabled]) {
@@ -197,7 +211,6 @@
         color: #fff;
         font-weight: 700;
       }
-
 
       /* PRIMARY OUTLINE FOCUS */
       &:focus:not([disabled]) {
@@ -208,6 +221,11 @@
       /* PRIMARY OUTLINE ACTIVE */  
       &:active:not([disabled]) {
         @extend .btn-outline-active;
+      }
+
+      /* PRIMARY OUTLINE DISABLED */
+      &:disabled {
+        @extend .btn-outline-disabled;
       }
     }
 
@@ -227,6 +245,10 @@
 
       &:active:not([disabled]) {
         @extend .btn-ghost-active;
+      }
+
+      &:disabled {
+        @extend .btn-ghost-disabled;
       }
     }
 
@@ -257,6 +279,10 @@
 
     &:active:not([disabled]) {
       @extend .btn-active;
+    }
+
+    &:disabled {
+      @extend .btn-disabled;
     }
 
     /* SECONDARY BUTTON OUTLINE */
@@ -306,6 +332,10 @@
       &:active:not([disabled]) {
         @extend .btn-ghost-active;
       }
+
+      &:disabled {
+        @extend .btn-ghost-disabled;
+      }
     }
 
     /* SECONDARY FLOATING ACTION */
@@ -340,6 +370,10 @@
       @extend .btn-active;
     }
 
+    &:disabled {
+      @extend .btn-disabled;
+    }
+
     /* BUTTON DANGER OUTLINE */
     &-outline {
       background-color: #FFF;
@@ -365,10 +399,7 @@
 
       /* BUTTON DANGER DISABLED */
       &:disabled {
-        background: #FFF;
-        color: #ADADAD;
-        cursor: not-allowed;
-        font-style: italic;
+        @extend .btn-outline-disabled;
       }
     }
 
@@ -389,6 +420,10 @@
 
       &:active:not([disabled]) {
         @extend .btn-ghost-active;
+      }
+      
+      &:disabled {
+        @extend .btn-ghost-disabled;
       }
     }
 
