@@ -1,0 +1,65 @@
+{
+  "source": ["styles/tokens/**/*.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "web",
+      "buildPath": "styles/sass/cbp-tokens/",
+      "files": [
+        {
+          "destination": "_color.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "color"
+            }
+          }
+        },
+        {
+          "destination": "_theme.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "theme"
+            }
+          }
+        },
+        {
+          "destination": "_base.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "base"
+            }
+          }
+        },
+        {
+          "destination": "_ui.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "ui"
+            }
+          }
+        },
+        {
+          "destination": "_text.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "non-interactive"
+            }
+          }
+        },
+        {
+          "destination": "_state.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "state"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "cbp": {
+    "ui": {
+      "primary": {
+        "lighter": {
+          "value": "{ cbp.blue.warm.10.value }",
+          "attributes": { "use": "ui", "type": "primary" }
+        },
+        "light": {
+          "value": "{ cbp.blue.warm.30.value }",
+          "attributes": { "use": "ui", "type": "primary" }
+        },
+        "base": {
+          "value": "{ cbp.blue.warm.50.value }",
+          "attributes": { "use": "ui", "type": "primary" }
+        },
+        "dark": {
+          "value": "{ cbp.blue.warm.60.value }",
+          "attributes": { "use": "ui", "type": "primary" }
+        },
+        "darker": {
+          "value": "{ cbp.blue.warm.70.value }",
+          "attributes": { "use": "ui", "type": "primary" }
+        }
+      },
+
+      "neutral": {
+        "lighter": {
+          "value": "{ cbp.gray.warm.10.value }",
+          "attributes": { "use": "ui", "type": "neutral" }
+        },
+        "light": {
+          "value": "{ cbp.gray.warm.30.value }",
+          "attributes": { "use": "ui", "type": "neutral" }
+        },
+        "base": {
+          "value": "{ cbp.gray.warm.50.value }",
+          "attributes": { "use": "ui", "type": "neutral" }
+        },
+        "dark": {
+          "value": "{ cbp.gray.warm.60.value }",
+          "attributes": { "use": "ui", "type": "neutral" }
+        },
+        "darker": {
+          "value": "{ cbp.gray.warm.70.value }",
+          "attributes": { "use": "ui", "type": "neutral" }
+        }
+      },
+
+      "success": {
+        "lighter": {
+          "value": "{ cbp.green.cool.10.value }",
+          "attributes": { "use": "ui", "type": "success" }
+        },
+        "light": {
+          "value": "{ cbp.green.cool.30.value }",
+          "attributes": { "use": "ui", "type": "success" }
+        },
+        "base": {
+          "value": "{ cbp.green.cool.50.value }",
+          "attributes": { "use": "ui", "type": "success" }
+        },
+        "dark": {
+          "value": "{ cbp.green.cool.60.value }",
+          "attributes": { "use": "ui", "type": "success" }
+        },
+        "darker": {
+          "value": "{ cbp.green.cool.70.value }",
+          "attributes": { "use": "ui", "type": "success" }
+        }
+      },
+
+      "warning": {
+        "lighter": {
+          "value": "{ cbp.yellow.5.value }",
+          "attributes": { "use": "ui", "type": "warning" }
+        },
+        "light": {
+          "value": "{ cbp.yellow.10.value }",
+          "attributes": { "use": "ui", "type": "warning" }
+        },
+        "base": {
+          "value": "{ cbp.yellow.20.value }",
+          "attributes": { "use": "ui", "type": "warning" }
+        },
+        "dark": {
+          "value": "{ cbp.yellow.30.value }",
+          "attributes": { "use": "ui", "type": "warning" }
+        },
+        "darker": {
+          "value": "{ cbp.yellow.50.value }",
+          "attributes": { "use": "ui", "type": "warning" }
+        }
+      },
+
+      "danger": {
+        "lighter": {
+          "value": "{ cbp.red.warm.10.value }",
+          "attributes": { "use": "ui", "type": "danger" }
+        },
+        "light": {
+          "value": "{ cbp.red.warm.30.value }",
+          "attributes": { "use": "ui", "type": "danger" }
+        },
+        "base": {
+          "value": "{ cbp.red.warm.50.value }",
+          "attributes": { "use": "ui", "type": "danger" }
+        },
+        "dark": {
+          "value": "{ cbp.red.warm.60.value }",
+          "attributes": { "use": "ui", "type": "danger" }
+        },
+        "darker": {
+          "value": "{ cbp.red.warm.70.value }",
+          "attributes": { "use": "ui", "type": "danger" }
+        }
+      }
+    }
+  }
+}

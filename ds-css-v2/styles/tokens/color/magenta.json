@@ -1,0 +1,15 @@
+{
+  "cbp": {
+    "magenta": {
+      "5": { "value": "#fff2f5", "attributes": { "use": "color" } },
+      "10": { "value": "#ffddea", "attributes": { "use": "color" } },
+      "20": { "value": "#ffb4cf", "attributes": { "use": "color" } },
+      "30": { "value": "#ff87b2", "attributes": { "use": "color" } },
+      "40": { "value": "#fd4496", "attributes": { "use": "color" } },
+      "50": { "value": "#d72d79", "attributes": { "use": "color" } },
+      "60": { "value": "#ab2165", "attributes": { "use": "color" } },
+      "70": { "value": "#731f44", "attributes": { "use": "color" } },
+      "80": { "value": "#4f172e", "attributes": { "use": "color" } }
+    }
+  }
+}
