@@ -58,6 +58,15 @@
               "use": "state"
             }
           }
+        },
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "use": "variables"
+            }
+          }
         }
       ]
     }

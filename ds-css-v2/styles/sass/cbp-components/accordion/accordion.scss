@@ -117,13 +117,13 @@
 // Hover States
 .cbp-accordion__item.active {
   &:hover .cbp-accordion__title {
-    background-color: $cbp-accent-secondary-dark;
+    background-color: $cbp-mint-cool-60;
   }
 
   &:hover .cbp-accordion__content {
-    border-bottom: 4px solid $cbp-accent-secondary-dark; // #0F6460
-    border-left: 4px solid $cbp-accent-secondary-dark;
-    border-right: 4px solid $cbp-accent-secondary-dark;
+    border-bottom: 4px solid $cbp-mint-cool-60; // #0F6460
+    border-left: 4px solid $cbp-mint-cool-60;
+    border-right: 4px solid $cbp-mint-cool-60;
   }
 
   &:hover .cbp-accordion__title--danger {

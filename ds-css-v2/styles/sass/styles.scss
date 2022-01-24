@@ -73,4 +73,42 @@
 // -------------------------------------
 // Import theme custom styles
 
-@import "uswds-theme-custom-styles";
+@import "cbp-theme-settings/cbp-typography";
+@import "cbp-theme-settings/cbp-spacing";
+
+// Custom CBP SCSS 
+@import "base/normalize";
+
+@import "cbp-tokens/base";
+@import "cbp-tokens/color";
+@import "cbp-tokens/state";
+@import "cbp-tokens/text";
+@import "cbp-tokens/theme";
+@import "cbp-tokens/ui";
+@import "cbp-tokens/variables";
+
+@import "utilities/helpers";
+
+// CBP Grid
+@import "cbp-grid/cbp-grid";
+
+// CBP Buttons
+@import "cbp-components/cbp-buttons/buttons.scss";
+
+// CBP Custom Badges Chips and Tags
+@import "cbp-components/badges-chips-tags/badges-chips-tags.scss";
+
+// CBP Custom Accordion
+@import "cbp-components/accordion/accordion.scss";
+
+// CBP Header Component
+@import "cbp-theme-settings/cbp-header";
+
+// CBP Expand Component
+@import "cbp-components/expand/expand.scss";
+
+// CBP Overflow Menu Component
+@import "cbp-components/overflow-menu/overflow-menu.scss";
+
+// CBP Modal
+@import "cbp-components/modal/modal.scss";
