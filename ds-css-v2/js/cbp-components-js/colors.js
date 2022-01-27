@@ -60,13 +60,13 @@ const createPalettte = (color) => {
   palette.className = "cbp-palette";
   palette.style.backgroundColor = color;
 
+  palette.appendChild(createLabel(color));
+
   return palette;
 };
 
 const appendPalette = (id, colorList) => {
   const wrapper = document.getElementById(id);
-  wrapper.style.border = "2px solid gray";
-  wrapper.style.borderRadius = "3px";
 
   for (const color in colorList) {
     if (Object.hasOwnProperty.call(colorList, color)) {
@@ -76,6 +76,16 @@ const appendPalette = (id, colorList) => {
     }
   }
 };
+
+const createLabel = (color) => {
+  const label = document.createElement("div");
+  const labelText = document.createElement("span");
+
+  labelText.innerHTML = color;
+  label.appendChild(labelText);
+
+  return label;
+}
 
 for (const color in colors) {
   if (Object.hasOwnProperty.call(colors, color)) {

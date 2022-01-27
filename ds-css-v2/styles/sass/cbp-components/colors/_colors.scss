@@ -1,0 +1,29 @@
+.cbp-palette__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-self: center;
+}
+
+.cbp-palette {
+  height: 168px;
+  justify-self: center;
+  margin-bottom: 24px;
+  width: 168px;
+
+  & > div {
+    align-items: center;
+    display: flex;
+    background-color: $cbp-gray-20;
+    height: 25%;
+    justify-content: center;
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+    width: 100%;
+
+    & > span {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
