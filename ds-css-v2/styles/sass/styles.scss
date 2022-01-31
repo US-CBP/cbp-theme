@@ -78,6 +78,7 @@
 // Custom CBP SCSS 
 @import "base/normalize";
 
+// CBP Color Tokens
 @import "cbp-tokens/base";
 @import "cbp-tokens/color";
 @import "cbp-tokens/state";
@@ -86,6 +87,7 @@
 @import "cbp-tokens/ui";
 @import "cbp-tokens/variables";
 
+// CBP Utilities & Helpers
 @import "utilities/helpers";
 
 // CBP Grid
@@ -111,5 +113,3 @@
 
 // CBP Modal
 @import "cbp-components/modal/modal.scss";
-
-@import "cbp-components/colors/colors"
