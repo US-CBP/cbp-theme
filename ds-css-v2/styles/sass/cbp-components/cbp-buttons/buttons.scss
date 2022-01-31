@@ -1,19 +1,3 @@
-/* Extended Classes */
-
-/* PRIMARY DISABLE PROPERTIES */
-.btn-disabled {
-  background: $cbp-disabled-light;
-  color: $cbp-disabled-dark;
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 500;
-
-  &:hover {
-    background-color: #ADADAD;
-    color: $cbp-text-darkest;
-  }
-}
-
 /* Mixin for Floating Action Button */
 @mixin float ($background, $hover-background) {
   background: $background;
@@ -74,6 +58,22 @@
   }
 }
 
+/* Extended Classes */
+
+/* PRIMARY DISABLE PROPERTIES */
+.btn-disabled {
+  background: $cbp-disabled-light;
+  color: $cbp-disabled-dark;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #ADADAD;
+    color: $cbp-text-darkest;
+  }
+}
+
 /* PRIMARY FOCUS PROPERTIES */
 .btn-focus {
   background: $cbp-focus-dark;
@@ -131,6 +131,21 @@
   }
 }
 
+span.ripple {
+  animation: ripple 400ms linear;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
 /* Extended Classes */
 
 .cbp-btn-group { 
@@ -156,12 +171,15 @@
   height: 36px;
   justify-content: center;
   letter-spacing: 1.08px;
+  overflow: hidden;
   padding: 0 12px;
+  position: relative;
   text-transform: uppercase;
   transition: all 300ms;
 
   & > i {
     margin-right: 8px;
+    pointer-events: none;
   }
 
   &--primary {
@@ -472,7 +490,6 @@
 
       & > i {
         margin-right: 0;
-        pointer-events: none;
       }
     }
 

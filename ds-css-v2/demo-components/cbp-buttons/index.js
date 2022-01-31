@@ -66,3 +66,27 @@ singleSegment.forEach(segment => {
     })
   }
 })
+
+/* Ripple animation effect on all buttons */
+const createRipple = (e) => {
+  const button = e.currentTarget;
+
+  const circle = document.createElement("span");
+  const diameter = Math.max(button.clientWidth, button.clientHeight);
+  const radius = diameter / 2;
+
+  circle.style.width = circle.style.height = `${diameter}px`;
+  circle.style.left = `${e.offsetX - radius}px`;
+  circle.style.top = `${e.offsetY - radius}px`;
+  circle.classList.add("ripple"); 
+
+  button.appendChild(circle);
+
+  circle.addEventListener('animationend', () => button.removeChild(circle));
+}
+
+const buttons = document.getElementsByTagName("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createRipple);
+}
