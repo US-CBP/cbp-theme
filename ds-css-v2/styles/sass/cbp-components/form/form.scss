@@ -1,0 +1,61 @@
+.cbp-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.cbp-form__label {
+  color: $cbp-text-darkest;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.cbp-form__input {
+  border: 2px solid $cbp-ui-neutral;
+  border-radius: 3px;
+  color: $cbp-text-darkest;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 36px;
+  letter-spacing: 0.3px;
+  padding: 0 8px;
+
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &:hover:not([disabled]) {
+    border: 2px solid $cbp-ui-neutral-darker;
+  }
+
+  &:focus:not([disabled]) {
+    border: 2px solid $cbp-focus-dark;
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: $cbp-ui-neutral-light;
+    cursor: not-allowed;
+  }
+
+  &:invalid {
+    border: 2px solid $cbp-danger;
+  }
+
+}
+
+.cbp-form__description {
+  color: $cbp-text-darkest;
+  font-size: 0.889rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+}
+
+.cbp-form__validation {
+  @extend .cbp-form__description;
+  color: $cbp-danger;
+}
