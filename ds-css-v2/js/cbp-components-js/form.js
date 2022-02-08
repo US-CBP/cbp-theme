@@ -2,8 +2,6 @@ const { children } = document.querySelector(".cbp-form__password");
 
 const [input, btn] = children;
 
-console.log(btn.firstElementChild.className);
-
 btn.addEventListener("click", (e) => {
   if (input.type === "password") {
     input.type = "text";
