@@ -22,7 +22,7 @@
 }
 
 .cbp-form__input {
-  border: 1px solid $cbp-ui-neutral;
+  border: 2px solid $cbp-ui-neutral-light;
   border-radius: 3px;
   box-sizing: border-box;
   color: $cbp-text-darkest;
@@ -74,6 +74,33 @@
   @extend .cbp-form__input;
   height: unset;
   padding: 8px;
+}
+
+.cbp-form__password {
+  display: flex;
+
+  & > input[type=password],
+  & > input[type=text] {
+    @extend .cbp-form__input;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+  }
+
+  // When button PR is merged, extend square btn and add specific styling as needed
+  .cbp-form__btn--square {
+    background-color: $cbp-ui-neutral-dark;
+    border: 1px solid $cbp-ui-neutral-dark;
+    border-radius: 3px;
+    height: 36px;
+    margin-left: -2px;
+    width: 36px;
+
+    & > .fas {
+      color: #ffffff;
+    }
+  }
 }
 
 .cbp-form__validation {

@@ -308,7 +308,7 @@
   <div class="cbp-grid-container">
 
     <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-form-wrapper">
           <label for="firstName" class="cbp-form__label">First Name</label>
           <span class="cbp-form__description">Required. 100/250 Characters remaining.</span>
@@ -320,13 +320,13 @@
         </div>
       </div>
 
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Simple Text Input</h3>
       </div>
     </div>
 
     <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-form-wrapper">
           <label for="firstName" class="cbp-form__label">Description</label>
           <span class="cbp-form__description">Required. 500/500 Characters remaining.</span>
@@ -338,8 +338,27 @@
         </div>
       </div>
 
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Text Area</h3>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Password</label>
+          <span class="cbp-form__description">Required.</span>
+          <div class="cbp-form__password">
+            <input type="password" name="password" id="password" placeholder="Enter Password"></input>
+            <button type="button" class="cbp-form__btn--square">
+              <i class="fas fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Password (Hash) Field</h3>
       </div>
     </div>
 
@@ -349,5 +368,6 @@
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/form.js"></script>
 </body>
 </html>
