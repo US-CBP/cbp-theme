@@ -31,6 +31,7 @@
   height: 36px;
   letter-spacing: 0.3px;
   padding: 0 8px;
+  width: 100%;
 
   &::placeholder {
     font-style: italic;
@@ -85,7 +86,6 @@
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    width: 100%;
   }
 
   // When button PR is merged, extend square btn and add specific styling as needed
@@ -101,6 +101,19 @@
       color: #ffffff;
     }
   }
+}
+
+.cbp-form__number {
+  & > input[type=number] {
+    @extend .cbp-form__input;
+    -moz-appearance: textfield; /* Firefox */
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Margins still appear even if hidden */
 }
 
 .cbp-form__validation {
