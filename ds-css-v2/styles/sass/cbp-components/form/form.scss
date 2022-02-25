@@ -106,10 +106,12 @@
 .cbp-form__number {
   & > input[type=number] {
     @extend .cbp-form__input;
+    // This removes the default increment arrows in the number input field
     -moz-appearance: textfield; /* Firefox */
   }
 }
 
+// This removes the default increment arrows in the number input field
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
