@@ -1,0 +1,59 @@
+/* 
+  Originally taken from _cbp-colors.scss before this commit
+*/
+
+.cbp-text-lightest {
+  color: $cbp-text-lightest;
+}
+
+.cbp-text-lighter {
+  color: $cbp-text-lighter;
+}
+
+.cbp-text-dark {
+  color: $cbp-text-dark;
+}
+
+.cbp-text-darker {
+  color: $cbp-text-darker;
+}
+
+.cbp-text-darkest {
+  color: $cbp-text-darkest;
+}
+
+.cbp-bg {
+  background-color: $cbp-bg-light;
+
+  &--dark {
+    background-color: $cbp-bg-dark;
+  }
+}
+
+.cbp-bg-base-lightest {
+  background-color: $cbp-base-neutral-lightest;
+}
+
+.cbp-bg-base-lighter {
+  background-color: $cbp-base-neutral-lighter;
+}
+
+.cbp-bg-base-light {
+  background-color: $cbp-base-neutral-light;
+}
+
+.cbp-bg-base {
+  background-color: $cbp-base-neutral-base;
+}
+
+.cbp-bg-base-dark {
+  background-color: $cbp-base-neutral-dark;
+}
+
+.cbp-bg-base-darker {
+  background-color: $cbp-base-neutral-darker;
+}
+
+.cbp-bg-base-darkest {
+  background-color: $cbp-base-neutral-darkest;
+}
