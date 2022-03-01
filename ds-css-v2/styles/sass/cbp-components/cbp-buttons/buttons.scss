@@ -14,16 +14,16 @@
   width: 56px;
   z-index: 99998;
 
-  &:hover {
-    background-color: $hover-background;
-  }
-
   & > i {
     margin-right: 0;
   }
 
-  &:active:not([disabled]) {
-    cursor: grabbing;
+  &:hover {
+    background-color: $hover-background;
+  }
+
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
   }
 
   &:disabled {
@@ -31,11 +31,9 @@
     color: $cbp-disabled-dark;
   }
 
-  &:focus:not([disabled]) {
-    background: $cbp-focus-dark;
-    color: #fff;
-    outline: 2px solid #fff;
-    outline-offset: -4px;
+  &:active:not([disabled]) {
+    @extend .btn-active;
+    cursor: grabbing;
   }
 }
 
@@ -55,6 +53,10 @@
 
   &:focus:not([disabled]) {
     @extend .btn-focus;
+  }
+
+  &:active:not([disabled]) {
+    @extend .btn-active;
   }
 }
 
@@ -80,17 +82,28 @@
   color: #fff;
   outline: 2px solid #fff;
   outline-offset: -4px;
+
+  &:hover {
+    background-color: $cbp-focus-dark;
+    color: #fff;
+  }
 }
 
-/* PRIMARY ACTIVE PROPERTIES */
+/* ACTIVE (:active) PROPERTIES */
 .btn-active {
+  @extend .btn-focus;
+  outline: none;
+}
+
+/* ACTIVE STATE PROPERTIES */
+.active {
   background: #1B2B85;
   box-shadow: none;
   font-style: italic;
   outline: none;
 }
 
-/* OUTLINE ACTIVE PROPERTIES */
+/* OUTLINE ACTIVE STATE PROPERTIES */
 .btn-outline-active {
   background: #fff;
   border: 2px solid #1B2B85;
@@ -99,6 +112,7 @@
   font-style: italic;
 }
 
+/* GHOST ACTIVE STATE PROPERTIES */
 .btn-ghost-active {
   @extend .btn-outline-active;
   border: 0;
@@ -120,6 +134,7 @@
   }
 }
 
+/* GHOST DISABLED PROPERTIES */
 .btn-ghost-disabled {
   color: #ADADAD; // $cbp-disabled-dark
   font-style: italic;
@@ -189,6 +204,7 @@ span.ripple {
     /* HOVER */
     &:hover:not([disabled]) {
       background-color: $cbp-ui-primary-darker;
+      font-weight: 700;
     }
 
     /* FOCUSED */
@@ -211,7 +227,6 @@ span.ripple {
       }
     }
     
-    /* ACTIVE */
     &:active:not([disabled]) {
       @extend .btn-active;
     }
@@ -233,17 +248,17 @@ span.ripple {
       /* PRIMARY OUTLINE FOCUS */
       &:focus:not([disabled]) {
         @extend .btn-focus;
-        border: 2px solid transparent;
+        border: 2px solid $cbp-focus-dark;
       }  
-
-      /* PRIMARY OUTLINE ACTIVE */  
-      &:active:not([disabled]) {
-        @extend .btn-outline-active;
-      }
 
       /* PRIMARY OUTLINE DISABLED */
       &:disabled {
         @extend .btn-outline-disabled;
+      }
+
+      /* PRIMARY OUTLINE ACTIVE - On-click/Press-down */
+      &:active:not([disabled]) {
+        @extend .btn-active;
       }
     }
 
@@ -255,18 +270,19 @@ span.ripple {
 
       &:hover:not([disabled]) {
         background: $cbp-ui-primary-lighter;
+        font-weight: 700;
       }
 
       &:focus:not([disabled]) {
         @extend .btn-focus;
       }
 
-      &:active:not([disabled]) {
-        @extend .btn-ghost-active;
-      }
-
       &:disabled {
         @extend .btn-ghost-disabled;
+      }
+
+      &:active:not([disabled]) {
+        @extend .btn-active;
       }
     }
 
@@ -288,19 +304,19 @@ span.ripple {
 
     &:hover:not([disabled]) {
       background-color: $cbp-ui-neutral-darker;
+      font-weight: 700;
     }
 
     &:focus:not([disabled]) {
       @extend .btn-focus;
-      border: 2px solid transparent;
-    }
-
-    &:active:not([disabled]) {
-      @extend .btn-active;
     }
 
     &:disabled {
       @extend .btn-disabled;
+    }
+
+    &:active:not([disabled]) {
+      @extend .btn-active;
     }
 
     /* SECONDARY BUTTON OUTLINE */
@@ -329,7 +345,7 @@ span.ripple {
 
       /* SECONDARY BUTTON OUTLINE ACTIVE*/
       &:active:not([disabled]) {
-        @extend .btn-outline-active;
+        @extend .btn-active;
       }
     }
 
@@ -348,7 +364,7 @@ span.ripple {
       }
 
       &:active:not([disabled]) {
-        @extend .btn-ghost-active;
+        @extend .btn-active;
       }
 
       &:disabled {
@@ -412,7 +428,7 @@ span.ripple {
       }
       
       &:active:not([disabled]) {
-        @extend .btn-outline-active;
+        @extend .btn-active;
       }
 
       /* BUTTON DANGER DISABLED */
@@ -421,7 +437,7 @@ span.ripple {
       }
     }
 
-    /* SECONDARY GHOST BUTTON */
+    /* DANGER GHOST BUTTON */
     &-ghost {
       background-color: #fff;
       border: 0;
@@ -430,18 +446,19 @@ span.ripple {
       &:hover:not([disabled]) {
         background: #fce1d4;
         color: #9C3D10;
+        font-weight: 700;
       }
 
       &:focus:not([disabled]) {
         @extend .btn-focus;
       }
 
-      &:active:not([disabled]) {
-        @extend .btn-ghost-active;
-      }
-
       &:disabled {
         @extend .btn-ghost-disabled;
+      }
+
+      &:active:not([disabled]) {
+        @extend .btn-active;
       }
     }
 
