@@ -523,6 +523,17 @@ span.ripple {
   &--active {
     background-color: $cbp-active-dark;
     box-shadow: none;
+    cursor: not-allowed;
+    font-style: italic;
+    outline: none;
+  }
+
+  /* OUTLINE ACTIVE STATE PROPERTIES */
+  &--outline-active {
+    background-color: $cbp-white;
+    border: 2px solid $cbp-active-dark;
+    color: $cbp-active-dark;
+    cursor: not-allowed;
     font-style: italic;
     outline: none;
   }

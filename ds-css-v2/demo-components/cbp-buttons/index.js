@@ -2,6 +2,7 @@ const disableBtns = document.querySelectorAll('.disable-btn');
 const justTextBtns = document.querySelectorAll('.just-text-btn');
 const justIconBtns = document.querySelectorAll('.just-icon-btn');
 const activeBtns = document.querySelectorAll('.active-btn');
+const outlineActiveBtns = document.querySelectorAll('.outline-active-btn');
 
 const returnDisplay = (el) => {
   const currentState = window.getComputedStyle(el, null).getPropertyValue("display")
@@ -44,6 +45,14 @@ activeBtns.forEach((btn) => {
     const parent = e.target.parentElement;
     const targetBtn = parent.firstElementChild;
     targetBtn.classList.toggle("cbp-btn--active");
+  })
+})
+
+outlineActiveBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const parent = e.target.parentElement;
+    const targetBtn = parent.firstElementChild;
+    targetBtn.classList.toggle("cbp-btn--outline-active");
   })
 })
 
