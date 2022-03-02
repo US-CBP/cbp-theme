@@ -91,7 +91,7 @@ input[type="radio"]:focus {
     width: 100%;
     height: 36px;
     max-width: 100%; // Override styles from _list.scss (uswds)
-    background-color: $cbp-base-darker;
+    background-color: $cbp-gray-cool-80; // $cbp-base-darker;
 
     &:first-child {
       border-top-left-radius: 5px;
@@ -123,7 +123,7 @@ input[type="radio"]:focus {
   line-height: 20px;
   color: $cbp-text-lightest;
   text-decoration: none;
-  background-color: $cbp-main-bg-dark;
+  background-color: $cbp-gray-cool-80; // $cbp-main-bg-dark;
   border: 0;
 
   &:hover {
@@ -155,7 +155,7 @@ input[type="radio"]:focus {
   text-transform: uppercase;
   color: $cbp-text-lightest;
   letter-spacing: 1.08px;
-  background-color: $cbp-ui-primary;
+  background-color: $cbp-blue-warm-50; // $cbp-ui-primary;
   border: 0;
   border-radius: 0 0 5px 5px;
   cursor: pointer;

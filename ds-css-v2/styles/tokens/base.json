@@ -1,0 +1,80 @@
+{
+  "cbp": {
+    "base": {
+      "primary": {
+        "lighter": {
+          "value": "{ cbp.blue.cool.10.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "light": {
+          "value": "{ cbp.blue.cool.30.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "base": {
+          "value": "{ cbp.blue.cool.50.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "dark": {
+          "value": "{ cbp.blue.cool.60.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        },
+        "darker": {
+          "value": "{ cbp.blue.cool.70.value }",
+          "attributes": { "use": "base", "type": "primary" }
+        }
+      },
+      "secondary": {
+        "lighter": {
+          "value": "{ cbp.mint.cool.10.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "light": {
+          "value": "{ cbp.mint.cool.30.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "base": {
+          "value": "{ cbp.mint.cool.50.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "dark": {
+          "value": "{ cbp.mint.cool.60.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        },
+        "darker": {
+          "value": "{ cbp.mint.cool.70.value }",
+          "attributes": { "use": "base", "type": "secondary" }
+        }
+      },
+      "neutral": {
+        "lightest": {
+          "value": "{ cbp.gray.cool.4.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "lighter": {
+          "value": "{ cbp.gray.cool.10.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "light": {
+          "value": "{ cbp.gray.cool.30.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "base": {
+          "value": "{ cbp.gray.cool.50.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "dark": {
+          "value": "{ cbp.gray.cool.60.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "darker": {
+          "value": "{ cbp.gray.cool.80.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        },
+        "darkest": {
+          "value": "{ cbp.gray.cool.90.value }",
+          "attributes": { "use": "base", "type": "neutral" }
+        }
+      }
+    }
+  }
+}

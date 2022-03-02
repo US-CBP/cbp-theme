@@ -1,0 +1,15 @@
+{
+  "cbp": {
+    "gold": {
+      "5": { "value": "#fef0c8", "attributes": { "use": "color" } },
+      "10": { "value": "#ffe396", "attributes": { "use": "color" } },
+      "20": { "value": "#ffbe2e", "attributes": { "use": "color" } },
+      "30": { "value": "#e5a000", "attributes": { "use": "color" } },
+      "40": { "value": "#c2850c", "attributes": { "use": "color" } },
+      "50": { "value": "#936f38", "attributes": { "use": "color" } },
+      "60": { "value": "#7a591a", "attributes": { "use": "color" } },
+      "70": { "value": "#5c410a", "attributes": { "use": "color" } },
+      "80": { "value": "#3b2b15", "attributes": { "use": "color" } }
+    }
+  }
+}

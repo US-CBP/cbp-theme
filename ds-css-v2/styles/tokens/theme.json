@@ -1,0 +1,14 @@
+{
+  "cbp": {
+    "bg": {
+      "light": {
+        "value": "{cbp.gray.cool.3}",
+        "attributes": { "use": "theme", "type": "primary" }
+      },
+      "dark": {
+        "value": "{cbp.gray.cool.80}",
+        "attributes": { "use": "theme", "type": "primary" }
+      }
+    }
+  }
+}
