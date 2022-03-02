@@ -1,6 +1,6 @@
 /* Mixin for Floating Action Button */
 @mixin float ($background, $hover-background) {
-  background: $background;
+  background-color: $background;
   border-radius: 30px;
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
   box-sizing: border-box;
@@ -92,14 +92,6 @@
 /* ACTIVE (:active) PROPERTIES */
 .btn-active {
   @extend .btn-focus;
-  outline: none;
-}
-
-/* ACTIVE STATE PROPERTIES */
-.active {
-  background: #1B2B85;
-  box-shadow: none;
-  font-style: italic;
   outline: none;
 }
 
@@ -526,10 +518,18 @@ span.ripple {
       margin-right: 12px;
     }
   }
+
+  /* ACTIVE STATE PROPERTIES */
+  &--active {
+    background-color: $cbp-active-dark;
+    box-shadow: none;
+    font-style: italic;
+    outline: none;
+  }
 }
 
 .cbp-inline-text-link {
-  color: $cbp-ui-primary; // #0050D8
+  color: $cbp-ui-primary-dark;
   cursor: pointer;
   font-weight: 400;
   letter-spacing: 1px;
