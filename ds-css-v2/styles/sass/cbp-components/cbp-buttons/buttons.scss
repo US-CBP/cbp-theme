@@ -256,7 +256,7 @@ span.ripple {
 
     /* PRIMARY GHOST */
     &-ghost {
-      background-color: #fff;
+      background-color: $cbp-white;
       border: 0;
       color: $cbp-ui-primary-dark;
 
@@ -343,7 +343,7 @@ span.ripple {
 
     /* SECONDARY GHOST BUTTON */
     &-ghost {
-      background-color: #fff;
+      background-color: $cbp-white;
       border: 0;
       color: $cbp-ui-neutral-dark;
 
@@ -431,7 +431,7 @@ span.ripple {
 
     /* DANGER GHOST BUTTON */
     &-ghost {
-      background-color: #fff;
+      background-color: $cbp-white;
       border: 0;
       color: #D54309;
 
@@ -532,6 +532,16 @@ span.ripple {
   &--outline-active {
     background-color: $cbp-white;
     border: 2px solid $cbp-active-dark;
+    color: $cbp-active-dark;
+    cursor: not-allowed;
+    font-style: italic;
+    outline: none;
+  }
+
+  /* GHOST ACTIVE STATE PROPERTIES */
+  &--ghost-active {
+    background-color: $cbp-white;
+    border: 0;
     color: $cbp-active-dark;
     cursor: not-allowed;
     font-style: italic;

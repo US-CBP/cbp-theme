@@ -3,6 +3,7 @@ const justTextBtns = document.querySelectorAll('.just-text-btn');
 const justIconBtns = document.querySelectorAll('.just-icon-btn');
 const activeBtns = document.querySelectorAll('.active-btn');
 const outlineActiveBtns = document.querySelectorAll('.outline-active-btn');
+const ghostActiveBtns = document.querySelectorAll('.ghost-active-btn');
 
 const returnDisplay = (el) => {
   const currentState = window.getComputedStyle(el, null).getPropertyValue("display")
@@ -53,6 +54,14 @@ outlineActiveBtns.forEach((btn) => {
     const parent = e.target.parentElement;
     const targetBtn = parent.firstElementChild;
     targetBtn.classList.toggle("cbp-btn--outline-active");
+  })
+})
+
+ghostActiveBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const parent = e.target.parentElement;
+    const targetBtn = parent.firstElementChild;
+    targetBtn.classList.toggle("cbp-btn--ghost-active");
   })
 })
 
