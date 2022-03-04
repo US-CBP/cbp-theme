@@ -1,0 +1,125 @@
+/* Mixin for Floating Action Button */
+
+/**
+  @param $background
+  @param $hover-background
+*/
+
+@mixin float ($background, $hover-background) {
+  background-color: $background;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  color: $cbp-text-lightest;
+  cursor: pointer;
+  font-size: 24px;
+  height: 56px;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  width: 56px;
+  z-index: 99998;
+
+  & > i {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: $hover-background;
+  }
+
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
+  }
+
+  &:disabled {
+    background-color: $cbp-disabled-light;
+    color: $cbp-disabled-dark;
+  }
+
+  &:active:not([disabled]) {
+    @extend .btn-active;
+    cursor: grabbing;
+  }
+}
+
+/**
+  @param $background-color
+  @param $color
+  @param $hover-bg
+*/
+
+/* Mixin for Square Button */
+@mixin square ($background-color, $color, $hover-bg) {
+  background-color: $background-color;
+  color: $color;
+  width: 36px;
+
+  & > i {
+    margin-right: 0;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: $hover-bg;
+  }
+
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
+  }
+
+  &:active:not([disabled]) {
+    @extend .btn-active;
+  }
+
+  &--outline {
+    background-color: $cbp-white;
+    border: 2px solid $background-color;
+    color: $background-color;
+    width: 36px;
+
+    & > i {
+      margin-right: 0;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: $hover-bg;
+      border: 2px solid $hover-bg;
+      color: $cbp-white;
+    }
+
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+      border: 2px solid $cbp-focus-dark;
+    }
+  
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: $background-color;
+    border: 0;
+    width: 36px;
+
+    & > i {
+      margin-right: 0;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: $hover-bg;
+      border: 2px solid $hover-bg;
+      color: $cbp-white;
+    }
+
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+      border: 2px solid $cbp-focus-dark;
+    }
+  
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+  }
+}

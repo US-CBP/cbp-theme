@@ -82,14 +82,24 @@ multiSegment.forEach(segment => {
 })
 
 singleSegment.forEach(segment => {
+  let selected;
+  
   const { children } = segment;
 
   for (const child of children) {
     child.addEventListener('click', e => {
-      for (const btn of children) {
-        btn.classList.remove("active")
+      if (typeof selected === "undefined") {
+        selected = e.currentTarget;
+        selected.classList.add("active");
+      } else if (e.currentTarget === selected) {
+        selected.classList.remove("active");
       }
-      e.target.classList.toggle("active");
+
+      if (e.currentTarget != selected) {
+        selected.classList.remove("active");
+        selected = e.currentTarget;
+        selected.classList.add("active");
+      }
     })
   }
 })

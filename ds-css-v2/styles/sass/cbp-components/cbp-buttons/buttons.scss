@@ -1,67 +1,37 @@
-/* Mixin for Floating Action Button */
-@mixin float ($background, $hover-background) {
-  background-color: $background;
-  border-radius: 30px;
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
-  box-sizing: border-box;
-  color: $cbp-text-lightest;
-  cursor: pointer;
-  font-size: 24px;
-  height: 56px;
-  justify-content: center;
-  padding: 0;
-  text-align: center;
-  width: 56px;
-  z-index: 99998;
+/* Button Tree */
 
-  & > i {
-    margin-right: 0;
-  }
-
-  &:hover {
-    background-color: $hover-background;
-  }
-
-  &:focus:not([disabled]) {
-    @extend .btn-focus;
-  }
-
-  &:disabled {
-    background-color: $cbp-disabled-light;
-    color: $cbp-disabled-dark;
-  }
-
-  &:active:not([disabled]) {
-    @extend .btn-active;
-    cursor: grabbing;
-  }
-}
-
-/* Mixin for Square Button */
-@mixin square ($background-color, $color, $hover-bg) {
-  background-color: $background-color;
-  color: $color;
-  width: 36px;
-
-  & > i {
-    margin-right: 0;
-  }
-
-  &:hover:not([disabled]) {
-    background-color: $hover-bg;
-  }
-
-  &:focus:not([disabled]) {
-    @extend .btn-focus;
-  }
-
-  &:active:not([disabled]) {
-    @extend .btn-active;
-  }
-}
+/*
+.cbp-btn
+  .cbp-btn__primary
+    &--outline
+    &--ghost
+    &--square
+      &--outline
+      &--ghost
+    &--float
+  .cbp-btn__secondary
+    &--outline
+    &--ghost
+    &--square
+      &--outline
+      &--ghost
+    &--float
+  .cbp-btn__danger
+    &--outline
+    &--ghost
+    &--square
+      &--outline
+      &--ghost
+  .cbp-btn__segment
+    &--text
+    &--icon
+.cbp-link
+  &__inline
+  &__list
+  &__define
+*/
 
 /* Extended Classes */
-
 /* PRIMARY DISABLE PROPERTIES */
 .btn-disabled {
   background: $cbp-disabled-light;
@@ -98,9 +68,9 @@
 /* OUTLINE ACTIVE STATE PROPERTIES */
 .btn-outline-active {
   background: #fff;
-  border: 2px solid #1B2B85;
+  border: 2px solid #1B2B85 !important;
   box-shadow: none;
-  color: #1B2B85;
+  color: #1B2B85 !important;
   font-style: italic;
 }
 
@@ -226,8 +196,8 @@ span.ripple {
     /* PRIMARY OUTLINE */
     &-outline {
       background-color: #fff;
-      border: 2px solid #0050D8;
-      color: #0050D8;
+      border: 2px solid $cbp-ui-primary-dark;
+      color: $cbp-ui-primary-dark;
 
       /* PRIMARY OUTLINE HOVER */
       &:hover:not([disabled]) {
@@ -251,12 +221,13 @@ span.ripple {
       /* PRIMARY OUTLINE ACTIVE - On-click/Press-down */
       &:active:not([disabled]) {
         @extend .btn-active;
+        border: 0;
       }
     }
 
     /* PRIMARY GHOST */
     &-ghost {
-      background-color: $cbp-white;
+      background-color: transparent;
       border: 0;
       color: $cbp-ui-primary-dark;
 
@@ -343,7 +314,7 @@ span.ripple {
 
     /* SECONDARY GHOST BUTTON */
     &-ghost {
-      background-color: $cbp-white;
+      background-color: transparent;
       border: 0;
       color: $cbp-ui-neutral-dark;
 
@@ -431,7 +402,7 @@ span.ripple {
 
     /* DANGER GHOST BUTTON */
     &-ghost {
-      background-color: $cbp-white;
+      background-color: transparent;
       border: 0;
       color: #D54309;
 
@@ -467,7 +438,7 @@ span.ripple {
     
     button {
       @extend .cbp-btn;
-      background-color: #fff;
+      background-color: $cbp-white;
       border: 2px solid $cbp-ui-neutral-dark;
 
       &:first-child {
@@ -540,7 +511,7 @@ span.ripple {
 
   /* GHOST ACTIVE STATE PROPERTIES */
   &--ghost-active {
-    background-color: $cbp-white;
+    background-color: transparent;
     border: 0;
     color: $cbp-active-dark;
     cursor: not-allowed;
@@ -558,7 +529,7 @@ span.ripple {
 
   &--disabled {
     @extend .cbp-inline-text-link;
-    color: #ADADAD;
+    color: $cbp-text-base;
     cursor: not-allowed;
     font-style: italic;
   }
