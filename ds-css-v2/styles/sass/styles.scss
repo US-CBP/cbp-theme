@@ -80,10 +80,6 @@
 // CBP Base
 @import "base/normalize";
 
-// CBP Utilities
-@import "utilities/mixins/button";
-@import "utilities/helpers";
-
 // CBP Color Tokens
 @import "cbp-tokens/base";
 @import "cbp-tokens/color";
@@ -92,6 +88,10 @@
 @import "cbp-tokens/theme";
 @import "cbp-tokens/ui";
 @import "cbp-tokens/variables";
+
+// CBP Utilities
+@import "utilities/mixins/button";
+@import "utilities/helpers";
 
 // CBP Grid
 @import "cbp-grid/cbp-grid";

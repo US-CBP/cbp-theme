@@ -4,6 +4,7 @@ const justIconBtns = document.querySelectorAll('.just-icon-btn');
 const activeBtns = document.querySelectorAll('.active-btn');
 const outlineActiveBtns = document.querySelectorAll('.outline-active-btn');
 const ghostActiveBtns = document.querySelectorAll('.ghost-active-btn');
+const disabledLinks = document.querySelectorAll('[aria-disabled="true"]');
 
 const returnDisplay = (el) => {
   const currentState = window.getComputedStyle(el, null).getPropertyValue("display")
@@ -62,6 +63,14 @@ ghostActiveBtns.forEach((btn) => {
     const parent = e.target.parentElement;
     const targetBtn = parent.firstElementChild;
     targetBtn.classList.toggle("cbp-btn--ghost-active");
+  })
+})
+
+disabledLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    if (e.target.nodeName === 'A' && e.target.getAttribute('aria-disabled') == 'true') {
+      e.preventDefault();
+    }
   })
 })
 

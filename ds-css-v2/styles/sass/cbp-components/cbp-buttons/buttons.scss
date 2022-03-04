@@ -348,7 +348,7 @@ span.ripple {
 
   /* BUTTON DANGER */
   &--danger {
-    background-color: #D54309;
+    background-color: $cbp-danger;
     color: #fff;
 
     /* BUTTON DANGER HOVER */
@@ -374,8 +374,8 @@ span.ripple {
     /* BUTTON DANGER OUTLINE */
     &-outline {
       background-color: #FFF;
-      border: 2px solid #D54309;
-      color: #D54309;
+      border: 2px solid $cbp-danger;
+      color: $cbp-danger;
 
       /* BUTTON DANGER SECONDARY HOVER */
       &:hover:not([disabled]) {
@@ -404,7 +404,7 @@ span.ripple {
     &-ghost {
       background-color: transparent;
       border: 0;
-      color: #D54309;
+      color: $cbp-danger;
 
       &:hover:not([disabled]) {
         background: #fce1d4;
@@ -427,7 +427,7 @@ span.ripple {
 
     /* DANGER SQUARE BUTTON */
     &-square {
-      @include square(#D54309, $cbp-text-lightest, #9C3D10);
+      @include square($cbp-danger, $cbp-text-lightest, #9C3D10);
     }
   }
 
@@ -520,7 +520,7 @@ span.ripple {
   }
 }
 
-.cbp-inline-text-link {
+.cbp-link__inline {
   color: $cbp-ui-primary-dark;
   cursor: pointer;
   font-weight: 400;
@@ -528,24 +528,33 @@ span.ripple {
   text-decoration: underline;
 
   &--disabled {
-    @extend .cbp-inline-text-link;
-    color: $cbp-text-base;
+    color: $cbp-text-base !important;
     cursor: not-allowed;
     font-style: italic;
+
+    &:hover {
+      color: $cbp-ui-neutral-dark !important;
+    }
+
+    &:focus {
+      color: $cbp-focus-dark !important;
+      font-weight: 700;
+      outline: 2px solid $cbp-focus-dark;  
+    }
   }
 
-  &:visited {
-    color: $cbp-visited-dark;
-  }
-
-  &:hover {
+  &:hover:not([disabled]) {
     color: $cbp-ui-primary-dark;
     font-weight: 700;
   }
 
-  &:focus {
-    color: $cbp-focus-dark;
+  &:focus:not([disabled]) {
+    color: $cbp-focus-dark !important;
     font-weight: 700;
     outline: 2px solid $cbp-focus-dark;
+  }
+
+  &:visited:not([disabled]) {
+    color: $cbp-visited-dark;
   }
 }
