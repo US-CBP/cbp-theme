@@ -19,17 +19,25 @@
   .cbp-btn__danger
     &--outline
     &--ghost
-    &--square
-      &--outline
-      &--ghost
+  .cbp-btn__square
+    &--outline
+    &--ghost
+  
+  &--outline
+  &--ghost
+
   .cbp-btn__segment
     &--text
     &--icon
+
+
 .cbp-link
   &__inline
   &__list
   &__define
 */
+
+
 
 /* Extended Classes */
 /* PRIMARY DISABLE PROPERTIES */
@@ -80,7 +88,7 @@
   border: 0;
 }
 
-/* PRIMARY OUTLINE DISABLED PROPERTIES*/
+/* OUTLINE DISABLED PROPERTIES*/
 .btn-outline-disabled {
   background: #FFF;
   border: 2px solid #ADADAD;
@@ -195,58 +203,12 @@ span.ripple {
 
     /* PRIMARY OUTLINE */
     &-outline {
-      background-color: #fff;
-      border: 2px solid $cbp-ui-primary-dark;
-      color: $cbp-ui-primary-dark;
-
-      /* PRIMARY OUTLINE HOVER */
-      &:hover:not([disabled]) {
-        background-color: $cbp-ui-primary-dark;
-        border-color: $cbp-ui-primary-dark;
-        color: #fff;
-        font-weight: 700;
-      }
-
-      /* PRIMARY OUTLINE FOCUS */
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
-        border: 2px solid $cbp-focus-dark;
-      }  
-
-      /* PRIMARY OUTLINE DISABLED */
-      &:disabled {
-        @extend .btn-outline-disabled;
-      }
-
-      /* PRIMARY OUTLINE ACTIVE - On-click/Press-down */
-      &:active:not([disabled]) {
-        @extend .btn-active;
-        border: 0;
-      }
+      @include outline($cbp-ui-primary-dark, $cbp-ui-primary-darker);
     }
 
     /* PRIMARY GHOST */
     &-ghost {
-      background-color: transparent;
-      border: 0;
-      color: $cbp-ui-primary-dark;
-
-      &:hover:not([disabled]) {
-        background: $cbp-ui-primary-lighter;
-        font-weight: 700;
-      }
-
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
-      }
-
-      &:disabled {
-        @extend .btn-ghost-disabled;
-      }
-
-      &:active:not([disabled]) {
-        @extend .btn-active;
-      }
+      @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-lighter);
     }
 
     /* PRIMARY FLOATING ACTION */
@@ -282,57 +244,14 @@ span.ripple {
       @extend .btn-active;
     }
 
-    /* SECONDARY BUTTON OUTLINE */
+    /* SECONDARY OUTLINE */
     &-outline {
-      background: #FFF;
-      border: 2px solid #5D5D5D;
-      color: #5D5D5D;
-
-      /* SECONDARY BUTTON OUTLINE HOVER */
-      &:hover:not([disabled]) {
-        background-color: $cbp-ui-neutral-darker;
-        border: 2px solid transparent;
-        color: #fff;
-      }
-
-      /* SECONDARY BUTTON OUTLINE DISABLED */
-      &:disabled {
-        @extend .btn-outline-disabled;
-      }
-
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
-        border: 2px solid transparent;
-        color: #fff;
-      }
-
-      /* SECONDARY BUTTON OUTLINE ACTIVE*/
-      &:active:not([disabled]) {
-        @extend .btn-active;
-      }
+      @include outline($cbp-ui-neutral-dark, $cbp-ui-neutral-darker)
     }
 
     /* SECONDARY GHOST BUTTON */
     &-ghost {
-      background-color: transparent;
-      border: 0;
-      color: $cbp-ui-neutral-dark;
-
-      &:hover:not([disabled]) {
-        background: $cbp-ui-neutral-lighter;
-      }
-
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
-      }
-
-      &:active:not([disabled]) {
-        @extend .btn-active;
-      }
-
-      &:disabled {
-        @extend .btn-ghost-disabled;
-      }
+      @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-lighter);
     }
 
     /* SECONDARY FLOATING ACTION */
@@ -359,8 +278,6 @@ span.ripple {
     /* BUTTON DANGER FOCUS */
     &:focus:not([disabled]) {
       @extend .btn-focus;
-      border: 2px solid transparent;
-      color: #fff;
     }
 
     &:active:not([disabled]) {
@@ -373,56 +290,12 @@ span.ripple {
 
     /* BUTTON DANGER OUTLINE */
     &-outline {
-      background-color: #FFF;
-      border: 2px solid $cbp-danger;
-      color: $cbp-danger;
-
-      /* BUTTON DANGER SECONDARY HOVER */
-      &:hover:not([disabled]) {
-        background-color: #9C3D10;
-        color: $cbp-text-lightest;
-        border: 2px solid transparent;
-      }
-
-      /* BUTTON DANGER FOCUS */
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
-        border: 2px solid transparent;
-      }
-      
-      &:active:not([disabled]) {
-        @extend .btn-active;
-      }
-
-      /* BUTTON DANGER DISABLED */
-      &:disabled {
-        @extend .btn-outline-disabled;
-      }
+      @include outline($cbp-danger, $cbp-ui-danger-dark);
     }
 
     /* DANGER GHOST BUTTON */
     &-ghost {
-      background-color: transparent;
-      border: 0;
-      color: $cbp-danger;
-
-      &:hover:not([disabled]) {
-        background: #fce1d4;
-        color: #9C3D10;
-        font-weight: 700;
-      }
-
-      &:focus:not([disabled]) {
-        @extend .btn-focus;
-      }
-
-      &:disabled {
-        @extend .btn-ghost-disabled;
-      }
-
-      &:active:not([disabled]) {
-        @extend .btn-active;
-      }
+      @include ghost($cbp-danger, $cbp-ui-danger-dark);
     }
 
     /* DANGER SQUARE BUTTON */
@@ -479,7 +352,7 @@ span.ripple {
     }
   }
 
-  &--cta {
+  &__cta {
     @extend .cbp-btn--primary;
     font-size: 18px;
     height: 52px;
@@ -490,9 +363,14 @@ span.ripple {
     }
   }
 
+  /**
+    Button active states indicating selection of button(s).
+    Separate from the pseudo-class :active
+  */
+
   /* ACTIVE STATE PROPERTIES */
   &--active {
-    background-color: $cbp-active-dark;
+    background-color: $cbp-active-dark !important;
     box-shadow: none;
     cursor: not-allowed;
     font-style: italic;
@@ -502,8 +380,8 @@ span.ripple {
   /* OUTLINE ACTIVE STATE PROPERTIES */
   &--outline-active {
     background-color: $cbp-white;
-    border: 2px solid $cbp-active-dark;
-    color: $cbp-active-dark;
+    border: 2px solid $cbp-active-dark !important;
+    color: $cbp-active-dark !important;
     cursor: not-allowed;
     font-style: italic;
     outline: none;
@@ -513,7 +391,7 @@ span.ripple {
   &--ghost-active {
     background-color: transparent;
     border: 0;
-    color: $cbp-active-dark;
+    color: $cbp-active-dark !important;
     cursor: not-allowed;
     font-style: italic;
     outline: none;
