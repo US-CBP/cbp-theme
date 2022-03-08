@@ -254,7 +254,7 @@ span.ripple {
   /* BUTTON DANGER */
   &__danger {
     background-color: $cbp-danger;
-    color: #fff;
+    color: $cbp-white;
 
     /* BUTTON DANGER HOVER */
     &:hover:not([disabled]) {
@@ -282,7 +282,7 @@ span.ripple {
 
     /* DANGER GHOST BUTTON */
     &--ghost {
-      @include ghost($cbp-danger, $cbp-ui-danger-dark);
+      @include ghost($cbp-danger, $cbp-ui-danger-lighter);
     }
   }
 
