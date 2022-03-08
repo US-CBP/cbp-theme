@@ -152,7 +152,7 @@
 
   &:hover:not([disabled]) {
     background-color: $hover-bg;
-    color: $color;
+    color: $cbp-white;
   }
 
   &:focus:not([disabled]) {

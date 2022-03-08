@@ -215,11 +215,6 @@ span.ripple {
     &-float {
       @include float($cbp-ui-primary-dark, $cbp-ui-primary-darker);
     }
-
-    /* PRIMARY SQUARE BUTTON */
-    &-square {
-      @include square($cbp-ui-primary-dark, $cbp-text-lightest, $cbp-ui-primary-darker);
-    }
   }
 
   /* SECONDARY BUTTON */
@@ -258,11 +253,6 @@ span.ripple {
     &-float {
       @include float($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
     }
-
-    /* SECONDARY SQUARE BUTTON */
-    &-square {
-      @include square($cbp-ui-neutral-dark, $cbp-text-lightest, $cbp-ui-neutral-darker);
-    }
   }
 
   /* BUTTON DANGER */
@@ -297,10 +287,69 @@ span.ripple {
     &-ghost {
       @include ghost($cbp-danger, $cbp-ui-danger-dark);
     }
+  }
 
-    /* DANGER SQUARE BUTTON */
-    &-square {
-      @include square($cbp-danger, $cbp-text-lightest, #9C3D10);
+  &__square {
+    width: 36px;
+
+    & > i {
+      margin-right: 0 !important;
+    }
+
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+    }
+
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+    &-primary {
+      background-color: $cbp-ui-primary-dark;
+      color: $cbp-white;
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-primary-darker;
+      }
+
+      &--outline {
+        @include outline($cbp-ui-primary-dark, $cbp-ui-primary-darker);
+      }
+      &--ghost {
+        @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-darker);
+      }
+    }
+
+    &-secondary {
+      background-color: $cbp-ui-neutral-dark;
+      color: $cbp-white;
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-neutral-darker;
+      }
+
+      &--outline {
+        @include outline($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
+      }
+      &--ghost {
+        @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
+      }
+    }
+
+    &-danger {
+      background-color: $cbp-danger;
+      color: $cbp-white;
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-danger-dark;
+      }
+
+      &--outline {
+        @include outline($cbp-danger, $cbp-ui-danger-dark);
+      }
+
+      &--ghost {
+        @include ghost($cbp-danger, $cbp-ui-danger-dark);
+      }
     }
   }
 
