@@ -5,6 +5,7 @@ const activeBtns = document.querySelectorAll('.active-btn');
 const outlineActiveBtns = document.querySelectorAll('.outline-active-btn');
 const ghostActiveBtns = document.querySelectorAll('.ghost-active-btn');
 const disabledLinks = document.querySelectorAll('[aria-disabled="true"]');
+const linkDisableBtn = document.querySelector('#link-disable');
 
 const returnDisplay = (el) => {
   const currentState = window.getComputedStyle(el, null).getPropertyValue("display")
@@ -28,17 +29,12 @@ justIconBtns.forEach( btn => {
   btn.addEventListener('click', e => {
     const parent = e.target.parentElement;
     const btnIcon = parent.querySelector('.cbp-btn > .fas');
-    const btnTxt = parent.querySelector('.cbp-text-button');
 
-
-    btnIcon.style.display = returnDisplay(btnIcon);
-    
-    if(returnDisplay(btnIcon) === 'none') {
-      btnTxt.style.marginLeft = '8px';
+    if (btn.checked) {
+      btnIcon.style.display = "none";
     } else {
-      btnTxt.style.marginLeft = '20px';
+      btnIcon.style.display = "inline";
     }
-
   })
 })
 
@@ -72,6 +68,14 @@ disabledLinks.forEach(link => {
       e.preventDefault();
     }
   })
+})
+
+linkDisableBtn.addEventListener("click", e => {
+  const parent = e.target.parentElement;
+  const targetBtn = parent.firstElementChild;
+  
+  targetBtn.ariaDisabled = linkDisableBtn.checked
+  targetBtn.classList.toggle("cbp-link__inline--disabled");
 })
 
 const singleSegment = document.querySelectorAll('[data-segment-button="single"]');

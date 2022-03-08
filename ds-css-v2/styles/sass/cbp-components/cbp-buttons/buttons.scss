@@ -1,6 +1,4 @@
-/* Button Tree */
-
-/*
+/* Button Tree
 .cbp-btn
   .cbp-btn__primary
     &--outline
@@ -36,8 +34,6 @@
   &__list
   &__define
 */
-
-
 
 /* Extended Classes */
 /* PRIMARY DISABLE PROPERTIES */
@@ -167,7 +163,7 @@ span.ripple {
     pointer-events: none;
   }
 
-  &--primary {
+  &__primary {
     background-color: $cbp-ui-primary-dark;
     color: $cbp-text-lightest;
 
@@ -202,23 +198,23 @@ span.ripple {
     }
 
     /* PRIMARY OUTLINE */
-    &-outline {
+    &--outline {
       @include outline($cbp-ui-primary-dark, $cbp-ui-primary-darker);
     }
 
     /* PRIMARY GHOST */
-    &-ghost {
+    &--ghost {
       @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-lighter);
     }
 
     /* PRIMARY FLOATING ACTION */
-    &-float {
+    &--float {
       @include float($cbp-ui-primary-dark, $cbp-ui-primary-darker);
     }
   }
 
   /* SECONDARY BUTTON */
-  &--secondary {
+  &__secondary {
     background-color: $cbp-ui-neutral-dark;
     color: $cbp-text-lightest;
 
@@ -240,29 +236,30 @@ span.ripple {
     }
 
     /* SECONDARY OUTLINE */
-    &-outline {
+    &--outline {
       @include outline($cbp-ui-neutral-dark, $cbp-ui-neutral-darker)
     }
 
     /* SECONDARY GHOST BUTTON */
-    &-ghost {
+    &--ghost {
       @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-lighter);
     }
 
     /* SECONDARY FLOATING ACTION */
-    &-float {
+    &--float {
       @include float($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
     }
   }
 
   /* BUTTON DANGER */
-  &--danger {
+  &__danger {
     background-color: $cbp-danger;
     color: #fff;
 
     /* BUTTON DANGER HOVER */
     &:hover:not([disabled]) {
-      background-color: #9C3D10;
+      background-color: $cbp-ui-danger-dark;
+      font-weight: 700;
     }
 
     /* BUTTON DANGER FOCUS */
@@ -279,12 +276,12 @@ span.ripple {
     }
 
     /* BUTTON DANGER OUTLINE */
-    &-outline {
+    &--outline {
       @include outline($cbp-danger, $cbp-ui-danger-dark);
     }
 
     /* DANGER GHOST BUTTON */
-    &-ghost {
+    &--ghost {
       @include ghost($cbp-danger, $cbp-ui-danger-dark);
     }
   }
@@ -315,7 +312,7 @@ span.ripple {
         @include outline($cbp-ui-primary-dark, $cbp-ui-primary-darker);
       }
       &--ghost {
-        @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-darker);
+        @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-lighter);
       }
     }
 
@@ -331,7 +328,7 @@ span.ripple {
         @include outline($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
       }
       &--ghost {
-        @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
+        @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-lighter);
       }
     }
 
@@ -348,7 +345,7 @@ span.ripple {
       }
 
       &--ghost {
-        @include ghost($cbp-danger, $cbp-ui-danger-dark);
+        @include ghost($cbp-danger, $cbp-ui-danger-lighter);
       }
     }
   }
@@ -402,7 +399,7 @@ span.ripple {
   }
 
   &__cta {
-    @extend .cbp-btn--primary;
+    @extend .cbp-btn__primary;
     font-size: 18px;
     height: 52px;
     padding: 0 16px;

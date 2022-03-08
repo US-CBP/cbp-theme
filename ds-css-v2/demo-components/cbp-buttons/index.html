@@ -310,7 +310,7 @@
       <!-- PRIMARY BUTTON -->
       <div class="cbp-row margin-top-3 margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--primary">
+          <button class="cbp-btn cbp-btn__primary">
             <i class="fas fa-clipboard-check"></i>
             vet passenger
           </button><br>
@@ -331,7 +331,7 @@
       <!-- PRIMARY OUTLINE BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--primary-outline">
+          <button class="cbp-btn cbp-btn__primary cbp-btn__primary--outline">
             <i class="fas fa-clipboard-check"></i>
             vet passenger
           </button><br>
@@ -352,7 +352,7 @@
       <!-- PRIMARY GHOST BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--primary-ghost">
+          <button class="cbp-btn cbp-btn__primary cbp-btn__primary--ghost">
             <i class="fas fa-clipboard-check"></i>
             vet passenger
           </button><br>
@@ -421,7 +421,7 @@
       <!-- SECONDARY BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--secondary">
+          <button class="cbp-btn cbp-btn__secondary">
             <i class="fas fa-clipboard-check"></i>
             vet passenger
           </button><br>
@@ -442,7 +442,7 @@
       <!-- SECONDARY OUTLINE BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--secondary-outline">
+          <button class="cbp-btn cbp-btn__secondary cbp-btn__secondary--outline">
             <i class="fas fa-clipboard-check"></i>
             vet passenger
           </button><br>
@@ -463,7 +463,7 @@
       <!-- SECONDARY GHOST BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--secondary-ghost">
+          <button class="cbp-btn cbp-btn__secondary cbp-btn__secondary--ghost">
             <i class="fas fa-clipboard-check"></i>
             vet passenger
           </button><br>
@@ -524,7 +524,7 @@
         </div>
   
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <span class="cbp-text-heading-2xs">Secondary Square Outline Button w/ Icon</span>
+          <span class="cbp-text-heading-2xs">Secondary Square Ghost Button w/ Icon</span>
         </div>
       </div>
       <hr>
@@ -532,7 +532,7 @@
       <!-- DANGER BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--danger">
+          <button class="cbp-btn cbp-btn__danger">
             <i class="fas fa-trash-alt"></i>
             delete
           </button><br>
@@ -551,7 +551,7 @@
       <!-- DANGER OUTLINE BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--danger-outline">
+          <button class="cbp-btn cbp-btn__danger cbp-btn__danger--outline">
             <i class="fas fa-trash-alt"></i>
             delete
           </button><br>
@@ -570,7 +570,7 @@
       <!-- DANGER GHOST BUTTON -->
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--danger-ghost">
+          <button class="cbp-btn cbp-btn__danger cbp-btn__danger--ghost">
             <i class="fas fa-trash-alt"></i>
             delete
           </button><br>
@@ -632,9 +632,9 @@
       <div class="cbp-row margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
           <!-- 'aria-disabled="true"' needs to be added to disabled links for accessibility and JS -->
-          <a href="#" class="cbp-link__inline">Text Link</a><br>
+          <a href="#" class="cbp-link__inline" aria-disabled="false">Text Link</a><br>
           <span>Disable Button:</span>
-          <input type="checkbox" class="disable-btn"><br>
+          <input type="checkbox" class="disable-link-btn" id="link-disable"><br>
         </div>
 
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
@@ -646,7 +646,7 @@
       <!-- FLOATING ACTION BUTTON -->
       <div class="cbp-row margin-top-3 margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--primary-float">
+          <button class="cbp-btn cbp-btn__primary cbp-btn__primary--float">
             <i class="fas fa-arrow-up"></i>
           </button><br>
         </div>
@@ -660,7 +660,7 @@
       <!-- SECONDARY ACTION BUTTON -->
       <div class="cbp-row margin-top-3 margin-top-3">
         <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-          <button class="cbp-btn cbp-btn--secondary-float">
+          <button class="cbp-btn cbp-btn__secondary cbp-btn__secondary--float">
             <i class="fas fa-arrow-up"></i>
           </button><br>
         </div>
