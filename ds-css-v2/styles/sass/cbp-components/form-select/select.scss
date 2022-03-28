@@ -67,6 +67,7 @@ select {
 /* When hover over custom select, apply hover to dropdown menu */
 .cbp-dropdown__custom:hover + .cbp-dropdown {
   border: 2px solid $cbp-ui-neutral-darker;
+  border-top: 0;
 }
 
 /* Hover Caret State */
@@ -142,6 +143,7 @@ select {
   width: 100%;
 }
 
+/* Custom Dropdown Menu */
 .cbp-dropdown {
   border: 1px solid $cbp-ui-neutral-base;
   border-top-left-radius: 0px;
@@ -153,7 +155,6 @@ select {
   overflow-y: scroll;
 
   &:hover {
-    border: 2px solid $cbp-ui-neutral-darker;
     border-top: 0;
   }
 
@@ -179,6 +180,14 @@ select {
 
     &:focus {
       background-color: $cbp-focus-dark;
+      color: $cbp-white;
+      font-weight: 700;
+      outline: 0;
+
+      &::after {
+        content: "";
+        display: none;
+      }
     }
 
     &:focus::after {
@@ -196,6 +205,10 @@ select {
       position: absolute;
       width: 95%;
     }
+  }
+
+  &:focus {
+    outline: 0;
   }
 
   &__item:last-child {
@@ -229,13 +242,13 @@ select {
   }
 }
 
-
-// When open, both select and dropdown need to be hovering
+/* Open Custom Dropdown */
 .cbp-dropdown--open {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 
   & + .cbp-dropdown {
+    border-top: 0;
     display: block !important;
   }
 }
@@ -243,8 +256,8 @@ select {
 // Focus on Select and Dropdown Menu
 .cbp-dropdown--open:focus + .cbp-dropdown {
   border: 2px solid $cbp-focus-dark;
+  border-top: 0;
 }
-
 
 .cbp-dropdown__custom--error {
   @extend .cbp-dropdown--error;
