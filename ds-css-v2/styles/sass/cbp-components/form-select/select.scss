@@ -1,3 +1,4 @@
+/* Select (Form Input) */
 .select-wrapper {
   display: flex;
   margin-bottom: 16px;
@@ -25,7 +26,9 @@ select {
   }
 }
 
-.select-wrapper::after {
+/* Down Caret "Button */
+.select-wrapper::after,
+.cbp-dropdown__custom::after {
   align-items: center;
   background-color: $cbp-ui-neutral-base;
   border: 2px solid $cbp-ui-neutral-base;
@@ -47,6 +50,7 @@ select {
 }
 
 .cbp-form__single-select {
+  border: 1px solid $cbp-ui-neutral-base;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-right: none;
@@ -54,25 +58,35 @@ select {
 }
 
 /* Hover State */
-.cbp-form__single-select:hover {
+.cbp-form__single-select:hover,
+.cbp-dropdown__custom:hover {
   border: 2px solid $cbp-ui-neutral-darker;
   border-right: 0;
 }
 
+/* When hover over custom select, apply hover to dropdown menu */
+.cbp-dropdown__custom:hover + .cbp-dropdown {
+  border: 2px solid $cbp-ui-neutral-darker;
+}
+
 /* Hover Caret State */
-.select-wrapper:hover::after {
+.select-wrapper:hover::after,
+.cbp-dropdown__custom:hover::after {
   background-color: $cbp-ui-neutral-darker;
   border: 2px solid $cbp-ui-neutral-darker;
 }
 
 /* Focus State */
-.cbp-form__single-select:focus {
+.cbp-form__single-select:focus,
+.cbp-dropdown__custom:focus {
   border: 2px solid $cbp-focus-dark;
   border-right: 0;
+  outline: 0;
 }
 
 /* Focus Caret State */
-.select-wrapper:focus-within::after {
+.select-wrapper:focus-within::after,
+.cbp-dropdown__custom:focus-within::after {
   background-color: $cbp-focus-dark;
   border: 2px solid $cbp-focus-dark;
 }
@@ -106,5 +120,138 @@ select {
   &:focus-within::after {
     background-color: $cbp-focus-dark;
     border: 2px solid $cbp-focus-dark;
+  }
+}
+
+/* 
+  Dropdown Component
+*/
+.cbp-dropdown__custom {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-radius: 3px;
+  cursor: inherit;
+  display: flex;
+  font-family: inherit;
+  font-size: inherit;
+  height: 36px;
+  line-height: inherit;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 100%;
+}
+
+.cbp-dropdown {
+  border: 1px solid $cbp-ui-neutral-base;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+  max-height: 216px;
+  overflow-y: scroll;
+
+  &:hover {
+    border: 2px solid $cbp-ui-neutral-darker;
+    border-top: 0;
+  }
+
+  &__item {
+    align-items: center;
+    border-bottom: 0;
+    border-top: 0;
+    display: flex;
+    height: 36px;
+    padding-left: 16px;
+    position: relative;
+
+    &:hover {
+      background-color: $cbp-ui-neutral-darker;
+      color: $cbp-text-lightest;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    &:hover::after {
+      border-bottom: 1px solid $cbp-ui-neutral-darker;
+    }
+
+    &:focus {
+      background-color: $cbp-focus-dark;
+    }
+
+    &:focus::after {
+      border-bottom: 1px solid $cbp-ui-neutral-darker;
+    }
+
+    /* Hacky solution due to width property (right margin) of separating line */
+    &::after {
+      content: "";
+      border-bottom: 1px solid $cbp-ui-neutral-lighter;
+      display: block;
+      height: 1px;
+      left: 12px;
+      bottom: 0;
+      position: absolute;
+      width: 95%;
+    }
+  }
+
+  &__item:last-child {
+    &::after {
+      content: "";
+      border-bottom: 0;
+      height: 0;
+    }
+  }
+
+  /* Error State */
+  &--error {
+    background-color: $cbp-ui-danger-lighter;
+    border: 1px solid $cbp-danger;
+    border-top: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &:hover {
+      border: 2px solid $cbp-ui-danger-dark;
+      border-top: 0;
+    }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+      border-top: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      outline: 0;
+    }
+  }
+}
+
+
+// When open, both select and dropdown need to be hovering
+.cbp-dropdown--open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  & + .cbp-dropdown {
+    display: block !important;
+  }
+}
+
+// Focus on Select and Dropdown Menu
+.cbp-dropdown--open:focus + .cbp-dropdown {
+  border: 2px solid $cbp-focus-dark;
+}
+
+
+.cbp-dropdown__custom--error {
+  @extend .cbp-dropdown--error;
+  border-top: 1px solid $cbp-ui-danger-base;
+
+  & + .cbp-dropdown {
+    background-color: $cbp-ui-danger-lighter;
+    border: 2px solid $cbp-ui-danger-base;
   }
 }

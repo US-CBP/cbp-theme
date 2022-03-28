@@ -308,8 +308,8 @@
   <div class="cbp-grid-container">
     <div class="cbp-row">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="select-wrapper select-wrapper--error">
-          <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port">
+        <div class="select-wrapper">
+          <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port" onclick="openDropdown('chocolate')">
             <option value="baltimore">Port of Baltimore</option>
             <option value="newark">Port of Newark</option>
             <option value="washington">Port of Washington</option>
@@ -321,26 +321,28 @@
       </div>
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h2>CBP Select Dropdown Field</h2>
+        <h2>CBP Select Field</h2>
       </div>
     </div>
 
     <div class="cbp-row">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="select-wrapper">
-          <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port">
-            <option value="baltimore">Port of Baltimore</option>
-            <option value="newark">Port of Newark</option>
-            <option value="washington">Port of Washington</option>
-            <option value="Zoolily">Port of Zoolily</option>
-            <option value="boston">Port of Boston</option>
-            <option value="ysidro">Port of San Ysidro</option>
-          </select>
+        <div class="cbp-dropdown__custom" id="custom-dropdown" tabindex="0" onclick="openDropdown('custom-dropdown')">Select City</div>
+        <div class="cbp-dropdown" tabindex="1">
+          <div class="cbp-dropdown__item">Port of Baltimore</div>
+          <div class="cbp-dropdown__item">Port of Newark</div>
+          <div class="cbp-dropdown__item">Port of Washington</div>
+          <div class="cbp-dropdown__item">Port of Zoolily</div>
+          <div class="cbp-dropdown__item">Port of Boston</div>
+          <div class="cbp-dropdown__item">Port of San Ysidro</div>
+          <div class="cbp-dropdown__item">Port of San Diego</div>
+          <div class="cbp-dropdown__item">Port of Rhode Island</div>
+          <div class="cbp-dropdown__item">Port of Galveston</div>
         </div>
       </div>
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h2>CBP Select Options List</h2>
+        <h2>CBP Dropdown</h2>
       </div>
     </div>
   </div>
@@ -349,5 +351,6 @@
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/selectDropdown.js"></script>
 </body>
 </html>
