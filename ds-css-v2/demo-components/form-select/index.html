@@ -308,8 +308,8 @@
   <div class="cbp-grid-container">
     <div class="cbp-row">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="select-wrapper">
-          <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port" onclick="openDropdown('chocolate')">
+        <div class="select-wrapper select-wrapper--error">
+          <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port">
             <option value="baltimore">Port of Baltimore</option>
             <option value="newark">Port of Newark</option>
             <option value="washington">Port of Washington</option>
@@ -327,17 +327,17 @@
 
     <div class="cbp-row">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="cbp-dropdown__custom" id="custom-dropdown" tabindex="0" onclick="openDropdown('custom-dropdown')">Select City</div>
-        <div class="cbp-dropdown" tabindex="1">
-          <div class="cbp-dropdown__item" tabindex="2">Port of Baltimore</div>
-          <div class="cbp-dropdown__item" tabindex="3">Port of Newark</div>
-          <div class="cbp-dropdown__item" tabindex="4">Port of Washington</div>
-          <div class="cbp-dropdown__item" tabindex="5">Port of Zoolily</div>
-          <div class="cbp-dropdown__item" tabindex="6">Port of Boston</div>
-          <div class="cbp-dropdown__item" tabindex="7">Port of San Ysidro</div>
-          <div class="cbp-dropdown__item" tabindex="8">Port of San Diego</div>
-          <div class="cbp-dropdown__item" tabindex="9">Port of Rhode Island</div>
-          <div class="cbp-dropdown__item" tabindex="10">Port of Galveston</div>
+        <button class="cbp-dropdown__custom" id="custom-dropdown">Select City</button>
+        <div class="cbp-dropdown" id="custom-dropdown-menu">
+          <a href="#" class="cbp-dropdown__item">Port of Baltimore</a>
+          <a href="#" class="cbp-dropdown__item">Port of Newark</a>
+          <a href="#" class="cbp-dropdown__item">Port of Washington</a>
+          <a href="#" class="cbp-dropdown__item">Port of Zoolily</a>
+          <a href="#" class="cbp-dropdown__item">Port of Boston</a>
+          <a href="#" class="cbp-dropdown__item">Port of San Ysidro</a>
+          <a href="#" class="cbp-dropdown__item">Port of San Diego</a>
+          <a href="#" class="cbp-dropdown__item">Port of Rhode Island</a>
+          <a href="#" class="cbp-dropdown__item">Port of Galveston</a>
         </div>
       </div>
 

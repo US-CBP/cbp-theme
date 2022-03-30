@@ -1,45 +1,56 @@
-class Dropdown {
-  constructor(dropdownId) {
-    this.selectNode = document.getElementById(dropdownId);
-    this.dropdownNode = this.selectNode.nextElementSibling;
-    this.options = this.dropdownNode.children;
-    this.isOpen = false;
+const element = document.getElementById('custom-dropdown');
+const menu = document.getElementById('custom-dropdown-menu');
 
-    this.toggleDropdown();
-  }
+const focusableElements = 'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])';
 
-  /**
-   * Opens and closes the custom dropdown component
-   */
-  toggleDropdown() {
-    this.selectNode.classList.toggle("cbp-dropdown--open");
-  }
+const getFocusableEls = (elementId) => {
+  const el = document.getElementById(elementId).nextElementSibling;
+  const focusableEls = el.querySelectorAll(focusableElements);
+
+  return focusableEls;
+};
+
+const customDropdown = getFocusableEls('custom-dropdown');
+
+const firstFocus = customDropdown[0];
+const lastFocus = customDropdown[customDropdown.length - 1];
+
+const closeDropdownMenu = () => {
+  element.classList.remove('  cbp-dropdown--open');
 }
 
-window.openDropdown = (dropdownId) => {
-  const dropdown = new Dropdown(dropdownId);
-}
+element.addEventListener('click', e => {
+  element.classList.toggle('cbp-dropdown--open');
+})
 
-const thing = document.getElementById("custom-dropdown");
-
-thing.addEventListener('keydown', e => {
-  // Enter Key
-  if (e.code === "Enter" && e.key === "Enter") {
-    console.log("Enter has been pressed!");
-  }
-
-  // ArrowDown
-  if (e.code === "ArrowDown" && e.key === "ArrowDown") {
-    console.log("ArrowDown has been pressed!");
-  }
-  // ArrowUp
-  if (e.code === "ArrowUp" && e.key === "ArrowUp") {
-    console.log("ArrowUp has been pressed!");
-  }
-
-  // Tab
-  if (e.code === "Tab" && e.key === "Tab") {
-    console.log("Tab has been pressed!");
+element.addEventListener('keydown', e => {
+  if (e.key === "Escape" || e.code === "Escape") {
+    closeDropdownMenu();
   }
 })
 
+menu.addEventListener('keydown', function(e) {
+  const isTabPressed = (e.key === 'Tab' || e.key === 'Tab');
+
+  if (e.key === "Escape" || e.code === "Escape") {
+    closeDropdownMenu();
+  } 
+
+  if (!isTabPressed) { 
+    return; 
+  }
+
+  if ( e.shiftKey ) /* shift + tab */ {
+    if (document.activeElement === firstFocus) {
+      lastFocus.focus();
+      e.preventDefault();
+    }
+  } else /* tab */ {
+    if (document.activeElement === lastFocus) {
+      firstFocus.focus();
+      e.preventDefault();
+    }
+  }
+});
+
+console.log(menu.children);
