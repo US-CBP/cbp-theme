@@ -1,40 +1,3 @@
-/* Button Tree
-.cbp-btn
-  .cbp-btn__primary
-    &--outline
-    &--ghost
-    &--square
-      &--outline
-      &--ghost
-    &--float
-  .cbp-btn__secondary
-    &--outline
-    &--ghost
-    &--square
-      &--outline
-      &--ghost
-    &--float
-  .cbp-btn__danger
-    &--outline
-    &--ghost
-  .cbp-btn__square
-    &--outline
-    &--ghost
-  
-  &--outline
-  &--ghost
-
-  .cbp-btn__segment
-    &--text
-    &--icon
-
-
-.cbp-link
-  &__inline
-  &__list
-  &__define
-*/
-
 /* Extended Classes */
 /* PRIMARY DISABLE PROPERTIES */
 .btn-disabled {
@@ -95,18 +58,6 @@
   &:hover {
     background-color: #E6E6E6;
     border: 2px solid #E6E6E6;
-    color: $cbp-text-darker;
-    font-weight: 700;
-  }
-}
-
-/* GHOST DISABLED PROPERTIES */
-.btn-ghost-disabled {
-  color: #ADADAD; // $cbp-disabled-dark
-  font-style: italic;
-
-  &:hover {
-    background-color: #E6E6E6;
     color: $cbp-text-darker;
     font-weight: 700;
   }
@@ -205,6 +156,10 @@ span.ripple {
     /* PRIMARY GHOST */
     &--ghost {
       @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-lighter);
+      
+      &:disabled {
+        background-color: transparent !important;
+      }
     }
 
     /* PRIMARY FLOATING ACTION */

@@ -107,4 +107,15 @@
   &:active:not([disabled]) {
     @extend .btn-active;
   }
+
+  &:disabled {
+    background-color: inherit;
+    color: $cbp-disabled-dark;
+
+    &:hover {
+      background-color: $cbp-disabled-light !important;
+      color: $cbp-text-darker;
+      font-weight: 700;
+    }
+  }
 }
