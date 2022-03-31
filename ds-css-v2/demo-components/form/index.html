@@ -318,6 +318,18 @@
           </span>
           <input type="text" class="cbp-form__input" name="firstName" id="firstName" placeholder="Enter first name">
         </div>
+        <div>
+          <label for="invalid">Invalid</label>
+          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'firstName')">
+        </div>
+        <div>
+          <label for="disable">Disable</label>
+          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'firstName')">
+        </div>
+        <div>
+          <label for="readonly">Read Only</label>
+          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'firstName')">
+        </div>
       </div>
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
@@ -335,6 +347,18 @@
             Required. 500/500 Characters remaining.
           </span>
           <textarea class="cbp-form__textarea" name="description" id="description" cols="30" rows="10" placeholder="Enter a description"></textarea>
+        </div>
+        <div>
+          <label for="invalid">Invalid</label>
+          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'description')">
+        </div>
+        <div>
+          <label for="disable">Disable</label>
+          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'description')">
+        </div>
+        <div>
+          <label for="readonly">Read Only</label>
+          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'description')">
         </div>
       </div>
 
@@ -354,6 +378,18 @@
               <i class="fas fa-eye-slash"></i>
             </button>
           </div>
+          <div>
+            <label for="invalid">Invalid</label>
+            <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'password')">
+          </div>
+          <div>
+            <label for="disable">Disable</label>
+            <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'password')">
+          </div>
+          <div>
+            <label for="readonly">Read Only</label>
+            <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'password')">
+          </div>
         </div>
       </div>
 
@@ -371,21 +407,17 @@
             <input type="number" name="numeric" id="numeric" placeholder="Enter Number of Fish"></input>
           </div>
         </div>
-      </div>
-
-      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h3>Simple Numeric Field</h3>
-      </div>
-    </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <div class="cbp-form-wrapper">
-          <label for="number" class="cbp-form__label">Number of Fish</label>
-          <span class="cbp-form__description">Required.</span>
-          <div class="cbp-form__number">
-            <input type="number" name="numeric" id="numeric" placeholder="Enter Number of Fish"></input>
-          </div>
+        <div>
+          <label for="invalid">Invalid</label>
+          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric')">
+        </div>
+        <div>
+          <label for="disable">Disable</label>
+          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric')">
+        </div>
+        <div>
+          <label for="readonly">Read Only</label>
+          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric')">
         </div>
       </div>
 
@@ -393,7 +425,6 @@
         <h3>Simple Numeric Field</h3>
       </div>
     </div>
-
   </div>
 
   <!-- Required JS for USWDS -->

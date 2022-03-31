@@ -18,7 +18,16 @@
   color: $cbp-text-darkest;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 20px;
+  padding-bottom: 8px;
+}
+
+.cbp-form__description {
+  color: $cbp-text-darkest;
+  font-size: 0.889rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding-bottom: 8px;
 }
 
 .cbp-form__input {
@@ -57,24 +66,35 @@
   }
 
   &:invalid {
+    background-color: $cbp-ui-danger-lighter;
     border: 2px solid $cbp-danger;
+
+    &:focus {
+      border-color: $cbp-focus-dark;
+    }
+    
+    &:hover {
+      border-color: $cbp-ui-danger-dark;
+
+      &:focus {
+        border-color: $cbp-focus-dark;
+      }
+    }
   }
 
-}
+  &:read-only {
+    background-color: $cbp-base-neutral-lighter;
+    border: 1px solid $cbp-ui-neutral-light;
+    cursor: not-allowed;
+  }
 
-.cbp-form__description {
-  color: $cbp-text-darkest;
-  font-size: 0.889rem;
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  line-height: 20px;
 }
 
 .cbp-form__textarea {
   @extend .cbp-form__input;
   height: unset;
   padding: 8px;
+  resize: none;
 }
 
 .cbp-form__password {
@@ -114,8 +134,8 @@
 // This removes the default increment arrows in the number input field
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; /* Margins still appear even if hidden */
+  -webkit-appearance: none;
+  margin: 0; /* Margins still appear even if hidden */
 }
 
 .cbp-form__validation {
