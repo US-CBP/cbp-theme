@@ -307,45 +307,77 @@
 
   <div class="cbp-grid-container">
     <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <form action="submit">
           <div class="form-control">
-            <input type="checkbox" name="checkbox1" class="cbp-form__checkbox">
-            <label for="checkbox1">Bacon</label>
+            <div class="form-check">
+              <input type="checkbox" name="checkbox1" class="cbp-form__checkbox">
+              <label for="checkbox1">Bacon</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
+              <label for="checkbox1">Pepperoni</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="checkbox3" class="cbp-form__checkbox" disabled checked>
+              <label for="checkbox1">Sausage</label>
+            </div>
           </div>
         </form>
       </div>
 
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h2>Checkbox Field</h2>
       </div>
     </div>
 
     <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        <div class="form-control">
-          <input type="radio" name="radio1" class="cbp-form__radio">
-          <label for="radio1">Pepperoni</label>
-        </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="form-control">
+            <div class="form-check">
+              <input type="checkbox" name="checkbox1" class="cbp-form__checkbox" id="indy" checked disabled>
+              <label for="checkbox1">Olives</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
+              <label for="checkbox1">Pineapple</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="checkbox3" class="cbp-form__checkbox">
+              <label for="checkbox1">Sardines</label>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h2>Indeterminate Checkbox Field</h2>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="form-control">
+            <div class="form-check">
+              <input type="radio" name="radio1" class="cbp-form__radio" disabled>
+              <label for="radio1">Pepperoni</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" name="radio2" class="cbp-form__radio">
+              <label for="radio1">Sardines</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" name="radio3" class="cbp-form__radio">
+              <label for="radio1">Olives</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h2>Radio Button Field</h2>
-      </div>
-    </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        <form action="submit">
-          <div class="form-control">
-            <input type="checkbox" name="checkbox1" class="cbp-form__checkbox--test">
-            <label for="checkbox1">Bacon</label>
-          </div>
-        </form>
-      </div>
-
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg">
-        <h2>Checkbox Field</h2>
       </div>
     </div>
   </div>
@@ -354,5 +386,6 @@
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/form.js"></script>
 </body>
 </html>

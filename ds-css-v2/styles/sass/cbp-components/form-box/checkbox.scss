@@ -1,12 +1,19 @@
+form {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.form-control {
+  display: block;
+}
+
+.form-check {
+  margin-bottom: 20px;
+}
+
 /* Reset for Checkbox */
 [type="checkbox"]::before,
 [type="checkbox"]::after {
-  box-sizing: border-box;
-}
-
-/* Reset for Radio */
-[type="radio"]::before,
-[type="radio"]::after {
   box-sizing: border-box;
 }
 
@@ -14,7 +21,6 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   -o-appearance: none;
-  // appearance: none;
   background-color: $cbp-white;
   border: 2px solid $cbp-ui-neutral-base;
   border-radius: 3px;
@@ -37,89 +43,148 @@
 	
   &:hover:not([disabled]) {
     box-shadow: 0 0 0 8px rgba(230, 230, 226, 0.5); // $cbp-ui-neutral-lighter
-  }
-
-  &:checked::before {
-    border-right: 3px solid $cbp-white;
-    border-bottom: 3px solid $cbp-white;
-    height: 70%;
-    width: 30%;
-    transform: rotate(45deg) translateY(-10%) translateX(-10%);
+    clip-path: circle(80%);
   }
   
+  &:focus {
+    border: 2px solid $cbp-focus-dark;
+    box-shadow: 0 0 0 8px $cbp-focus-light;
+    clip-path: circle(80%);
+    outline: 0 !important; // Overriding style from _focus.scss??
+
+    &:hover:not([disabled]) {
+      box-shadow: 0 0 0 8px $cbp-focus-light;
+      clip-path: circle(80%);
+    }
+	}
+
+  &:disabled {
+    background-color: $cbp-disabled-light;
+    border: 2px solid $cbp-disabled-dark;
+
+    &:checked {
+      border-color: $cbp-disabled-dark;
+      background-color: $cbp-disabled-dark;
+      color: $cbp-white;
+
+      &::before {
+        border-right: 3px solid $cbp-white;
+        border-bottom: 3px solid $cbp-white;
+        height: 70%;
+        width: 30%;
+        transform: rotate(45deg) translateY(-10%) translateX(-10%);
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+        clip-path: circle(80%);
+      }
+
+      &:focus {
+        background-color: $cbp-disabled-light;
+        border: 2px solid $cbp-black;
+        box-shadow: 0 0 0 8px $cbp-focus-light;
+        clip-path: circle(80%);
+        outline: 0 !important; // Overriding style from _focus.scss??
+
+        &::before {
+          border-right: 3px solid $cbp-disabled-dark;
+          border-bottom: 3px solid $cbp-disabled-dark;
+          height: 70%;
+          width: 30%;
+          transform: rotate(45deg) translateY(-10%) translateX(-10%);
+        }
+    
+        &:hover:not([disabled]) {
+          box-shadow: 0 0 0 8px $cbp-focus-light;
+          clip-path: circle(80%);
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+      clip-path: circle(80%);
+    }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+      box-shadow: 0 0 0 8px $cbp-focus-light;
+      clip-path: circle(80%);
+      outline: 0 !important; // Overriding style from _focus.scss??
+  
+      &:hover:not([disabled]) {
+        box-shadow: 0 0 0 8px $cbp-focus-light;
+        clip-path: circle(80%);
+      }
+    }
+
+    &:indeterminate {
+      background-color: $cbp-disabled-dark;
+      border: 2px solid $cbp-disabled-dark;
+  
+      &::before {
+        border: 1px solid $cbp-disabled-light;
+        height: 0;
+        width: 60%;
+      }
+  
+      &:hover {
+        background-color: $cbp-ui-neutral-base;
+        border: 2px solid $cbp-ui-neutral-base;
+        box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+        clip-path: circle(80%);
+      }
+  
+      &:focus {
+        background-color: $cbp-focus-dark;
+        border: 2px solid $cbp-white;
+      }
+    }
+  }
+
   &:checked {
     border-color: #745fe9;
     background-color: #745fe9;
     color: $cbp-white;
 
-    &:focus {
-      outline: 2px solid red;
-    }
-  }
-}
-
-.cbp-form__radio {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -o-appearance: none;
-  // appearance: none;
-  border: 2px solid $cbp-ui-neutral-base;
-  border-radius: 100%;
-  height: 24px;
-  position: relative;
-  vertical-align: text-bottom;
-  width: 24px;
-
-  &::before {
-		content: '';
-		position: absolute;
-		margin: auto;
-		left: 0;
-		right: 0;
-		bottom: 0;
-    height: 0;
-		overflow: hidden;
-		top: 0;
-    width: 0;
-	}
-
-  &:hover:not([disabled]) {
-    box-shadow: 0 0 0 6px rgba(230, 230, 226, 0.5); // $cbp-ui-neutral-lighter
-  }
-	
-	&:focus {
-    border: 2px solid $cbp-focus-dark;
-    box-shadow: 0 0 0 6px $cbp-focus-light;
-    outline: 0 !important; // Overriding style from _focus.scss??
-
-    &:hover:not([disabled]) {
-      box-shadow: 0 0 0 6px $cbp-focus-light;
-    }
-	}
-
-  &:checked {
-    border: 2px solid #745fe9;
-
     &::before {
-      border: 6px solid transparent;
-      border-radius: 100%;
-      outline-offset: -6px;
-      background: #745fe9; 
+      border-right: 3px solid $cbp-white;
+      border-bottom: 3px solid $cbp-white;
+      height: 70%;
+      width: 30%;
+      transform: rotate(45deg) translateY(-10%) translateX(-10%);
     }
 
     &:hover {
-      box-shadow: 0 0 0 6px #e4deff; // $cbp-selected-light
+      box-shadow: 0 0 0 8px #e4deff; // $cbp-selected-light
+      clip-path: circle(80%);
     }
 
     &:focus {
       background-color: $cbp-focus-dark;
       border: 2px solid $cbp-white;
-      box-shadow: 0 0 0 6px $cbp-focus-light; // $cbp-ui-neutral-lighter
-
-      &::before {
-        border: 6px solid $cbp-white;
-      }
     }
   }
 
+  &:indeterminate {
+    background-color: #745fe9;
+    border: 2px solid #745fe9;
+
+    &::before {
+      border: 1px solid $cbp-white;
+      height: 0;
+      width: 60%;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 8px #e4deff; // $cbp-selected-light
+      clip-path: circle(80%);
+    }
+
+    &:focus {
+      background-color: $cbp-focus-dark;
+      border: 2px solid $cbp-white;
+    }
+  }
 }
