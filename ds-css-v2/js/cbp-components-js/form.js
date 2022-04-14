@@ -1,5 +1,4 @@
 const { children } = document.querySelector(".cbp-form__password");
-
 const [input, btn] = children;
 
 btn.addEventListener("click", (e) => {
@@ -18,13 +17,25 @@ const getInput = (inputId) => {
   return input;
 };
 
+const findDesc = (element) => {
+  const wrapper = element.closest(".cbp-form-wrapper");
+  const descriptions = wrapper.querySelectorAll(".cbp-form__description");
+
+  return descriptions;
+}
+
 const setInvalid = (event, inputId) => {
   const { target: { checked } } = event;
   const input = getInput(inputId);
+  const desc = findDesc(input);
 
   if (checked) {
+    desc[0].hidden = true;
+    desc[1].hidden = false;
     input.setCustomValidity("invalid");
   } else {
+    desc[0].hidden = false;
+    desc[1].hidden = true;
     input.setCustomValidity("");
   }
 }

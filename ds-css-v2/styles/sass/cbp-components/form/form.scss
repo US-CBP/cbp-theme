@@ -10,8 +10,7 @@
 .cbp-form-wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin: 16px 0;
 }
 
 .cbp-form__label {
@@ -28,10 +27,15 @@
   font-weight: 500;
   letter-spacing: 0.3px;
   padding-bottom: 8px;
+
+  &--error {
+    color: $cbp-danger;
+  }
 }
 
 .cbp-form__input {
-  border: 2px solid $cbp-ui-neutral-light;
+  background-color: $cbp-white;
+  border: 1px solid $cbp-ui-neutral-base;
   border-radius: 3px;
   box-sizing: border-box;
   color: $cbp-text-darkest;
@@ -39,8 +43,8 @@
   font-weight: 400;
   height: 36px;
   letter-spacing: 0.3px;
+  margin-bottom: 16px;
   padding: 0 8px;
-  width: 100%;
 
   &::placeholder {
     font-style: italic;
@@ -55,6 +59,16 @@
     outline: 0;
   }
 
+  &:read-only {
+    background-color: $cbp-base-neutral-lighter;
+    border: 1px solid $cbp-ui-neutral-light;
+    cursor: not-allowed;
+
+    &:hover {
+      border: 1px solid $cbp-ui-neutral-light;
+    }
+  }
+
   &:disabled {
     background-color: $cbp-disabled-light;
     border: 1px solid $cbp-disabled-dark;
@@ -63,36 +77,35 @@
     &:hover {
       border: 2px solid $cbp-ui-neutral-darker;
     }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+    }
   }
 
   &:invalid {
     background-color: $cbp-ui-danger-lighter;
-    border: 2px solid $cbp-danger;
+    border: 1px solid $cbp-danger;
 
     &:focus {
       border-color: $cbp-focus-dark;
     }
     
     &:hover {
-      border-color: $cbp-ui-danger-dark;
+      border: 2px solid $cbp-ui-danger-dark;
 
       &:focus {
         border-color: $cbp-focus-dark;
       }
     }
   }
-
-  &:read-only {
-    background-color: $cbp-base-neutral-lighter;
-    border: 1px solid $cbp-ui-neutral-light;
-    cursor: not-allowed;
-  }
-
 }
+
+
 
 .cbp-form__textarea {
   @extend .cbp-form__input;
-  height: unset;
+  min-height: 108px;
   padding: 8px;
   resize: none;
 }
@@ -107,20 +120,6 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-
-  // When button PR is merged, extend square btn and add specific styling as needed
-  .cbp-form__btn--square {
-    background-color: $cbp-ui-neutral-dark;
-    border: 1px solid $cbp-ui-neutral-dark;
-    border-radius: 3px;
-    height: 36px;
-    margin-left: -2px;
-    width: 36px;
-
-    & > .fas {
-      color: #ffffff;
-    }
-  }
 }
 
 .cbp-form__number {
@@ -128,6 +127,14 @@
     @extend .cbp-form__input;
     // This removes the default increment arrows in the number input field
     -moz-appearance: textfield; /* Firefox */
+  }
+
+  &--counter {
+    display: flex;
+
+    & > button {
+      margin-left: 16px;
+    }
   }
 }
 
@@ -138,7 +145,21 @@ input::-webkit-inner-spin-button {
   margin: 0; /* Margins still appear even if hidden */
 }
 
-.cbp-form__validation {
-  @extend .cbp-form__description;
-  color: $cbp-danger;
+// When button PR is merged, extend square btn and add specific styling as needed
+.cbp-form__btn--square {
+  background-color: $cbp-ui-neutral-base;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-radius: 3px;
+  height: 36px;
+  margin-left: -2px;
+  width: 36px;
+
+  & > .fas {
+    color: $cbp-text-lightest;
+  }
+
+  &:hover {
+    background-color: $cbp-ui-neutral-darker;
+    border: 1px solid $cbp-ui-neutral-darker;
+  }
 }
