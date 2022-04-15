@@ -16,14 +16,14 @@
 /* PRIMARY FOCUS PROPERTIES */
 .btn-focus {
   background: $cbp-focus-dark;
-  color: #fff;
+  color: $cbp-white;
   font-weight: 700;
-  outline: 2px solid #fff;
+  outline: 2px solid $cbp-white;
   outline-offset: -4px;
 
   &:hover {
     background-color: $cbp-focus-dark;
-    color: #fff;
+    color: $cbp-white;
   }
 }
 
@@ -35,10 +35,10 @@
 
 /* OUTLINE ACTIVE STATE PROPERTIES */
 .btn-outline-active {
-  background: #fff;
-  border: 2px solid #1B2B85 !important;
+  background: $cbp-white;
+  border: 2px solid $cbp-active-dark !important;
   box-shadow: none;
-  color: #1B2B85 !important;
+  color: $cbp-active-dark !important;
   font-style: italic;
 }
 
@@ -50,15 +50,15 @@
 
 /* OUTLINE DISABLED PROPERTIES*/
 .btn-outline-disabled {
-  background: #FFF;
-  border: 2px solid #ADADAD;
-  color: #ADADAD;
+  background: $cbp-white;
+  border: 2px solid $cbp-gray-30;
+  color: $cbp-text-base;
   cursor: not-allowed;
   font-style: italic;
   
   &:hover {
-    background-color: #E6E6E6;
-    border: 2px solid #E6E6E6;
+    background-color: $cbp-disabled-light;
+    border: 2px solid $cbp-disabled-light;
     color: $cbp-text-darker;
     font-weight: 700;
   }
