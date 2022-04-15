@@ -17,6 +17,7 @@
 .btn-focus {
   background: $cbp-focus-dark;
   color: #fff;
+  font-weight: 700;
   outline: 2px solid #fff;
   outline-offset: -4px;
 
@@ -318,17 +319,17 @@ span.ripple {
       &:first-child {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-right: .5px solid $cbp-ui-neutral-dark;
+        border-right: 1px solid $cbp-ui-neutral-dark;
       }
 
       &:not(:first-child):not(:last-child) {
-        border-left: 0.5px solid $cbp-ui-neutral-dark;
-        border-right: 0.5px solid $cbp-ui-neutral-dark;
+        border-left: 1px solid $cbp-ui-neutral-dark;
+        border-right: 1px solid $cbp-ui-neutral-dark;
         border-radius: 0;
       }
 
       &:last-child {
-        border-left: 0.5px solid $cbp-ui-neutral-dark;
+        border-left: 1px solid $cbp-ui-neutral-dark;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
@@ -339,7 +340,11 @@ span.ripple {
       }
 
       &:focus:not([disabled]) {
-        @extend .btn-focus;
+        background: $cbp-white;
+        color: $cbp-focus-dark;
+        font-weight: 700;
+        outline: 2px solid $cbp-focus-dark;
+        outline-offset: -3px;
       }
 
       & > i {
@@ -350,6 +355,11 @@ span.ripple {
     .active {
       background-color: $cbp-selected-dark;
       color: #fff;
+
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
+        outline-offset: -3px;
+      }
     }
   }
 
