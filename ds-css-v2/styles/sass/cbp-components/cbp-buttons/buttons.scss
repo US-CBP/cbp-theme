@@ -386,6 +386,10 @@ span.ripple {
     cursor: not-allowed;
     font-style: italic;
     outline: none;
+
+    &:hover {
+      font-weight: 500 !important;
+    }
   }
 
   /* OUTLINE ACTIVE STATE PROPERTIES */
@@ -396,6 +400,11 @@ span.ripple {
     cursor: not-allowed;
     font-style: italic;
     outline: none;
+
+    &:hover {
+      background-color: $cbp-white !important;
+      font-weight: 500 !important;
+    }
   }
 
   /* GHOST ACTIVE STATE PROPERTIES */
@@ -406,6 +415,11 @@ span.ripple {
     cursor: not-allowed;
     font-style: italic;
     outline: none;
+
+    &:hover {
+      background-color: transparent !important;
+      font-weight: 500 !important;
+    }
   }
 }
 

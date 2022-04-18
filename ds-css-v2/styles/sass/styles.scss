@@ -1,3 +1,7 @@
+@charset "utf-8";
+
+@import "base/normalize";
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -76,9 +80,6 @@
 @import "cbp-theme-settings/cbp-typography";
 
 // Custom CBP SCSS 
-
-// CBP Base
-@import "base/normalize";
 
 // CBP Color Tokens
 @import "cbp-tokens/base";
