@@ -111,6 +111,7 @@
   &:disabled {
     background-color: inherit;
     color: $cbp-disabled-dark;
+    font-style: italic;
 
     &:hover {
       background-color: $cbp-disabled-light !important;
