@@ -61,3 +61,7 @@ const readOnlyInput = (event, inputId) => {
     input.readOnly = false;
   }
 }
+
+const indCheck = document.getElementById('indy');
+
+indCheck.indeterminate = true;

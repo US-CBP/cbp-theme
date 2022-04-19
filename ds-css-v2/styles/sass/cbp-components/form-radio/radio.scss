@@ -1,0 +1,108 @@
+/* Reset for Radio */
+[type="radio"]::before,
+[type="radio"]::after {
+  box-sizing: border-box;
+}
+
+.cbp-form__radio {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  border: 2px solid $cbp-ui-neutral-base;
+  border-radius: 100%;
+  height: 24px;
+  position: relative;
+  vertical-align: text-bottom;
+  width: 24px;
+
+  &::before {
+		content: '';
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+    height: 0;
+		overflow: hidden;
+		top: 0;
+    width: 0;
+	}
+
+  &:hover:not([disabled]) {
+    box-shadow: 0 0 0 8px rgba(230, 230, 226, 0.5); // $cbp-ui-neutral-lighter
+  }
+	
+	&:focus {
+    border: 2px solid $cbp-focus-dark;
+    box-shadow: 0 0 0 8px $cbp-focus-light;
+    outline: 0 !important; // Overriding style from _focus.scss??
+
+    &:hover:not([disabled]) {
+      box-shadow: 0 0 0 8px $cbp-focus-light;
+    }
+	}
+
+  &:checked {
+    border: 2px solid #745fe9;
+
+    &::before {
+      border: 6px solid transparent;
+      border-radius: 100%;
+      outline-offset: -6px;
+      background: #745fe9; 
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 8px #e4deff; // $cbp-selected-light
+    }
+
+    &:focus {
+      background-color: $cbp-focus-dark;
+      border: 2px solid $cbp-white;
+      box-shadow: 0 0 0 8px $cbp-focus-light; // $cbp-ui-neutral-lighter
+
+      &::before {
+        border: 6px solid $cbp-white;
+      }
+    }
+  }
+
+  &:disabled {
+    background-color: $cbp-disabled-light;
+    border: 2px solid $cbp-disabled-dark;
+
+    &:checked {
+      border-color: $cbp-disabled-dark;
+
+      &::before {
+        border: 6px solid transparent;
+        border-radius: 100%;
+        outline-offset: -6px;
+        background: $cbp-disabled-dark;
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+      }
+
+      &:focus {
+        background-color: $cbp-disabled-light;
+        border: 2px solid $cbp-black;
+        box-shadow: 0 0 0 8px $cbp-focus-light; // $cbp-ui-neutral-lighter
+  
+        &::before {
+          border: 6px solid $cbp-disabled-dark;
+        }
+      }
+    }
+    
+    &:hover {
+      box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+    }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+      box-shadow: 0 0 0 8px $cbp-focus-light; // $cbp-ui-neutral-lighter
+    }
+  }
+}
