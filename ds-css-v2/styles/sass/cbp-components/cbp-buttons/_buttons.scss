@@ -1,0 +1,424 @@
+/* Extended Classes */
+/* PRIMARY DISABLE PROPERTIES */
+.btn-disabled {
+  background: $cbp-disabled-light;
+  color: $cbp-disabled-dark;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #ADADAD;
+    color: $cbp-text-darkest;
+  }
+}
+
+/* PRIMARY FOCUS PROPERTIES */
+.btn-focus {
+  background: $cbp-focus-dark;
+  color: $cbp-white;
+  font-weight: 700;
+  outline: 2px solid $cbp-white;
+  outline-offset: -4px;
+
+  &:hover {
+    background-color: $cbp-focus-dark;
+    color: $cbp-white;
+  }
+}
+
+/* ACTIVE (:active) PROPERTIES */
+.btn-active {
+  @extend .btn-focus;
+  outline: none;
+}
+
+/* OUTLINE ACTIVE STATE PROPERTIES */
+.btn-outline-active {
+  background: $cbp-white;
+  border: 2px solid $cbp-active-dark !important;
+  box-shadow: none;
+  color: $cbp-active-dark !important;
+  font-style: italic;
+}
+
+/* GHOST ACTIVE STATE PROPERTIES */
+.btn-ghost-active {
+  @extend .btn-outline-active;
+  border: 0;
+}
+
+/* OUTLINE DISABLED PROPERTIES*/
+.btn-outline-disabled {
+  background: $cbp-white;
+  border: 2px solid $cbp-gray-30;
+  color: $cbp-text-base;
+  cursor: not-allowed;
+  font-style: italic;
+  
+  &:hover {
+    background-color: $cbp-disabled-light;
+    border: 2px solid $cbp-disabled-light;
+    color: $cbp-text-darker;
+    font-weight: 700;
+  }
+}
+
+span.ripple {
+  animation: ripple 400ms linear;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Extended Classes */
+
+.cbp-btn-group { 
+  display: flex;
+  justify-content: space-between;
+
+  &--around { justify-content: space-around; }
+  &--center { justify-content: center; }
+  &--left { justify-content: flex-start; }
+  &--right { justify-content: flex-end; }
+}
+
+.cbp-btn {
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: 1.08px;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 300ms;
+
+  & > i {
+    margin-right: 8px;
+    pointer-events: none;
+  }
+
+  &__primary {
+    background-color: $cbp-ui-primary-dark;
+    color: $cbp-text-lightest;
+
+    /* HOVER */
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-primary-darker;
+      font-weight: 700;
+    }
+
+    /* FOCUSED */
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+    }
+    
+    /* DISABLED */
+    &:disabled {
+      @extend .btn-disabled;
+
+      &:hover {
+        background: $cbp-disabled-dark;
+        color: $cbp-text-darkest;
+        font-weight: 700;
+      }
+
+      &:focus {
+        @extend .btn-focus;
+      }
+    }
+    
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+
+    /* PRIMARY OUTLINE */
+    &--outline {
+      @include outline($cbp-ui-primary-dark, $cbp-ui-primary-darker);
+    }
+
+    /* PRIMARY GHOST */
+    &--ghost {
+      @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-lighter);
+      
+      &:disabled {
+        background-color: transparent !important;
+      }
+    }
+
+    /* PRIMARY FLOATING ACTION */
+    &--float {
+      @include float($cbp-ui-primary-dark, $cbp-ui-primary-darker);
+    }
+  }
+
+  /* SECONDARY BUTTON */
+  &__secondary {
+    background-color: $cbp-ui-neutral-dark;
+    color: $cbp-text-lightest;
+
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-neutral-darker;
+      font-weight: 700;
+    }
+
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+    }
+
+    &:disabled {
+      @extend .btn-disabled;
+    }
+
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+
+    /* SECONDARY OUTLINE */
+    &--outline {
+      @include outline($cbp-ui-neutral-dark, $cbp-ui-neutral-darker)
+    }
+
+    /* SECONDARY GHOST BUTTON */
+    &--ghost {
+      @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-lighter);
+    }
+
+    /* SECONDARY FLOATING ACTION */
+    &--float {
+      @include float($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
+    }
+  }
+
+  /* BUTTON DANGER */
+  &__danger {
+    background-color: $cbp-danger;
+    color: $cbp-white;
+
+    /* BUTTON DANGER HOVER */
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-danger-dark;
+      font-weight: 700;
+    }
+
+    /* BUTTON DANGER FOCUS */
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+    }
+
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+
+    &:disabled {
+      @extend .btn-disabled;
+    }
+
+    /* BUTTON DANGER OUTLINE */
+    &--outline {
+      @include outline($cbp-danger, $cbp-ui-danger-dark);
+    }
+
+    /* DANGER GHOST BUTTON */
+    &--ghost {
+      @include ghost($cbp-danger, $cbp-ui-danger-lighter);
+    }
+  }
+
+  &__square {
+    width: 36px;
+
+    & > i {
+      margin-right: 0 !important;
+    }
+
+    &:focus:not([disabled]) {
+      @extend .btn-focus;
+    }
+
+    &:active:not([disabled]) {
+      @extend .btn-active;
+    }
+    &-primary {
+      background-color: $cbp-ui-primary-dark;
+      color: $cbp-white;
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-primary-darker;
+      }
+
+      &--outline {
+        @include outline($cbp-ui-primary-dark, $cbp-ui-primary-darker);
+      }
+      &--ghost {
+        @include ghost($cbp-ui-primary-dark, $cbp-ui-primary-lighter);
+      }
+    }
+
+    &-secondary {
+      background-color: $cbp-ui-neutral-dark;
+      color: $cbp-white;
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-neutral-darker;
+      }
+
+      &--outline {
+        @include outline($cbp-ui-neutral-dark, $cbp-ui-neutral-darker);
+      }
+      &--ghost {
+        @include ghost($cbp-ui-neutral-dark, $cbp-ui-neutral-lighter);
+      }
+    }
+
+    &-danger {
+      background-color: $cbp-danger;
+      color: $cbp-white;
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-danger-dark;
+      }
+
+      &--outline {
+        @include outline($cbp-danger, $cbp-ui-danger-dark);
+      }
+
+      &--ghost {
+        @include ghost($cbp-danger, $cbp-ui-danger-lighter);
+      }
+    }
+  }
+
+  /* SEGMENTED BUTTONS */
+  &--segment {
+    display: flex;
+    width: fit-content;
+    
+    button {
+      @extend .cbp-btn;
+      background-color: $cbp-white;
+      border: 2px solid $cbp-ui-neutral-dark;
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 1px solid $cbp-ui-neutral-dark;
+      }
+
+      &:not(:first-child):not(:last-child) {
+        border-left: 1px solid $cbp-ui-neutral-dark;
+        border-right: 1px solid $cbp-ui-neutral-dark;
+        border-radius: 0;
+      }
+
+      &:last-child {
+        border-left: 1px solid $cbp-ui-neutral-dark;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:hover:not([disabled]) {
+        background-color: $cbp-ui-neutral-darker;
+        color: #fff;
+      }
+
+      &:focus:not([disabled]) {
+        background: $cbp-white;
+        color: $cbp-focus-dark;
+        font-weight: 700;
+        outline: 2px solid $cbp-focus-dark;
+        outline-offset: -3px;
+      }
+
+      & > i {
+        margin-right: 0;
+      }
+    }
+
+    .active {
+      background-color: $cbp-selected-dark;
+      color: #fff;
+
+      &:focus:not([disabled]) {
+        @extend .btn-focus;
+        outline-offset: -3px;
+      }
+    }
+  }
+
+  &__cta {
+    @extend .cbp-btn__primary;
+    font-size: 18px;
+    height: 52px;
+    padding: 0 16px;
+
+    & > i {
+      margin-right: 12px;
+    }
+  }
+
+  /**
+    Button active states indicating selection of button(s).
+    Separate from the pseudo-class :active
+  */
+
+  /* ACTIVE STATE PROPERTIES */
+  &--active {
+    background-color: $cbp-active-dark !important;
+    box-shadow: none;
+    cursor: not-allowed;
+    font-style: italic;
+    outline: none;
+
+    &:hover {
+      font-weight: 500 !important;
+    }
+  }
+
+  /* OUTLINE ACTIVE STATE PROPERTIES */
+  &--outline-active {
+    background-color: $cbp-white;
+    border: 2px solid $cbp-active-dark !important;
+    color: $cbp-active-dark !important;
+    cursor: not-allowed;
+    font-style: italic;
+    outline: none;
+
+    &:hover {
+      background-color: $cbp-white !important;
+      font-weight: 500 !important;
+    }
+  }
+
+  /* GHOST ACTIVE STATE PROPERTIES */
+  &--ghost-active {
+    background-color: transparent;
+    border: 0;
+    color: $cbp-active-dark !important;
+    cursor: not-allowed;
+    font-style: italic;
+    outline: none;
+
+    &:hover {
+      background-color: transparent !important;
+      font-weight: 500 !important;
+    }
+  }
+}
