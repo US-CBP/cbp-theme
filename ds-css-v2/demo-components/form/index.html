@@ -444,93 +444,27 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Numeric Counter Field</h3>
-        <div>
-          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric-counter')">
-          <label for="invalid">Error</label>
-        </div>
-        <div>
-          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric-counter')">
-          <label for="disable">Disable</label>
-        </div>
-        <div>
-          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric-counter')">
-          <label for="readonly">Read Only</label>
-        </div>
       </div>
     </div>
 
     <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <form action="submit">
-          <div class="form-control">
-            <div class="form-check">
-              <input type="checkbox" name="checkbox1" class="cbp-form__checkbox">
-              <label for="checkbox1">Bacon</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
-              <label for="checkbox1">Pepperoni</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox3" class="cbp-form__checkbox" disabled checked>
-              <label for="checkbox1">Sausage</label>
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="number" class="cbp-form__label">Number of Fish</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-form__number cbp-form__number--counter">
+            <input type="number" name="numeric-counter" id="numeric-counter" placeholder="Enter Number of Fish"></input>
+            <div class="cbp-btn--segment" data-segment-button="single">
+              <button>LBS</button>
+              <button>KG</button>
             </div>
           </div>
-        </form>
+        </div>
       </div>
 
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h3>Checkbox Field</h3>
-      </div>
-    </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <form action="submit">
-          <div class="form-control">
-            <div class="form-check">
-              <input type="checkbox" name="checkbox1" class="cbp-form__checkbox" id="indy" checked disabled>
-              <label for="checkbox1">Olives</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
-              <label for="checkbox1">Pineapple</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox3" class="cbp-form__checkbox">
-              <label for="checkbox1">Sardines</label>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h3>Indeterminate Checkbox Field</h3>
-      </div>
-    </div>
-
-    <div class="cbp-row">
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <form action="submit">
-          <div class="form-control">
-            <div class="form-check">
-              <input type="radio" name="radio1" class="cbp-form__radio" disabled>
-              <label for="radio1">Pepperoni</label>
-            </div>
-            <div class="form-check">
-              <input type="radio" name="radio2" class="cbp-form__radio">
-              <label for="radio1">Sardines</label>
-            </div>
-            <div class="form-check">
-              <input type="radio" name="radio3" class="cbp-form__radio">
-              <label for="radio1">Olives</label>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h3>Radio Button Field</h3>
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Numeric Switch Field</h3>
       </div>
     </div>
   </div>
@@ -539,6 +473,6 @@
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
-  <script src="../../js/cbp-components-js/formControls.js"></script>
+  <script src="../cbp-buttons/index.js"></script>
 </body>
 </html>

@@ -122,10 +122,4 @@
 @import "cbp-components/modal/modal.scss";
 
 // CBP Text Forms
-@import "cbp-components/form/form.scss";
-
-// CBP Checkbox
-@import "cbp-components/form-box/checkbox.scss";
-
-// CBP Radio Button
-@import "cbp-components/form-radio/radio.scss";
+@import "cbp-components/form/all";
