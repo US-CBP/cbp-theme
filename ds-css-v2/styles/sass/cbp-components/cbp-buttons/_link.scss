@@ -1,0 +1,38 @@
+.cbp-link__inline {
+  color: $cbp-ui-primary-dark;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: underline;
+
+  &--disabled {
+    color: $cbp-text-base !important;
+    cursor: not-allowed;
+    font-style: italic;
+
+    &:hover {
+      color: $cbp-ui-neutral-dark !important;
+    }
+
+    &:focus {
+      color: $cbp-focus-dark !important;
+      font-weight: 700;
+      outline: 2px solid $cbp-focus-dark;  
+    }
+  }
+
+  &:hover:not([disabled]) {
+    color: $cbp-ui-primary-dark;
+    font-weight: 700;
+  }
+
+  &:focus:not([disabled]) {
+    color: $cbp-focus-dark !important;
+    font-weight: 700;
+    outline: 2px solid $cbp-focus-dark;
+  }
+
+  &:visited:not([disabled]) {
+    color: $cbp-visited-dark;
+  }
+}

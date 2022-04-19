@@ -98,7 +98,10 @@
 @import "cbp-grid/cbp-grid";
 
 // CBP Buttons
-@import "cbp-components/cbp-buttons/buttons.scss";
+@import "cbp-components/cbp-buttons/buttons";
+
+// CBP Link 
+@import "cbp-components/cbp-buttons/link";
 
 // CBP Custom Badges Chips and Tags
 @import "cbp-components/badges-chips-tags/badges-chips-tags.scss";
