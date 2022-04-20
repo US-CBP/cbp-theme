@@ -136,6 +136,14 @@
       margin-left: 16px;
     }
   }
+
+  &--switch {
+    display: flex;
+    
+    & > input {
+      margin-right: 16px;
+    }
+  }
 }
 
 // This removes the default increment arrows in the number input field
@@ -147,19 +155,8 @@ input::-webkit-inner-spin-button {
 
 // When button PR is merged, extend square btn and add specific styling as needed
 .cbp-form__btn--square {
-  background-color: $cbp-ui-neutral-base;
-  border: 1px solid $cbp-ui-neutral-base;
-  border-radius: 3px;
-  height: 36px;
+  @extend .cbp-btn;
+  @extend .cbp-btn__square;
+  @extend .cbp-btn__square-secondary;
   margin-left: -2px;
-  width: 36px;
-
-  & > .fas {
-    color: $cbp-text-lightest;
-  }
-
-  &:hover {
-    background-color: $cbp-ui-neutral-darker;
-    border: 1px solid $cbp-ui-neutral-darker;
-  }
 }
