@@ -1,0 +1,62 @@
+{
+  "cbp": {
+    "text": {
+      "lightest": {
+        "value": "{ cbp.gray.1.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "lighter": {
+        "value": "{ cbp.gray.5.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "light": {
+        "value": "{ cbp.gray.20.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "base": {
+        "value": "{ cbp.gray.30.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "dark": {
+        "value": "{ cbp.gray.50.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "darker": {
+        "value": "{ cbp.gray.70.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      },
+
+      "darkest": {
+        "value": "{ cbp.gray.90.value }",
+        "attributes": { "use": "non-interactive", "type": "text" }
+      }
+    },
+    "info": {
+      "lighter": {
+        "value": "{ cbp.cyan.10.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "light": {
+        "value": "{ cbp.cyan.30.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "base": {
+        "value": "{ cbp.cyan.50.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "dark": {
+        "value": "{ cbp.cyan.60.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      },
+      "darker": {
+        "value": "{ cbp.cyan.70.value }",
+        "attributes": { "use": "non-interactive", "type": "info" }
+      }
+    }
+  }
+}

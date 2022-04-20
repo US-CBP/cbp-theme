@@ -16,10 +16,10 @@
   border-bottom: 2px solid #DFE1E2;
 }
 
-.cbp-btn-group > button {
+/* .cbp-btn-group > button {
   margin: 0;
   max-width: 130px !important;
-}
+} */
 
 .cbp-app-name {
   border-bottom: solid 3px #A9AEB1;
@@ -782,7 +782,7 @@ select {
 @media only screen and (max-width : 599px) {
   /* TEMPORARY FIX */
   .right-items .cbp-btn:nth-child(2) > i {
-    margin-left: 20px !important;
+    /* margin-left: 20px !important; */
   }
   /* TEMPORARY FIX */
 }
@@ -790,7 +790,7 @@ select {
 @media only screen and (min-width : 600px) {
   /* TEMPORARY FIX */
   .cbp-btn > i {
-    margin-left: 20px !important;
+    /* margin-left: 20px !important; */
   }
   /* TEMPORARY FIX */
 }

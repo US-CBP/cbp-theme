@@ -1,0 +1,122 @@
+/**
+  Mixin for Outline Buttons
+  ================================
+  @param {$outline-color} 
+  @param {$bg-hover}
+*/
+
+@mixin outline ($color, $bg-hover) {
+  background-color: $cbp-white;
+  border: 2px solid $color;
+  color: $color;
+
+  /* PRIMARY OUTLINE HOVER */
+  &:hover:not([disabled]) {
+    background-color: $bg-hover;
+    border: 2px solid $bg-hover;
+    color: $cbp-white;
+    font-weight: 700;
+  }
+
+  /* PRIMARY OUTLINE FOCUS */
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
+    border: 2px solid $cbp-focus-dark;
+  }  
+
+  /* PRIMARY OUTLINE DISABLED */
+  &:disabled {
+    @extend .btn-outline-disabled;
+  }
+
+  /* PRIMARY OUTLINE ACTIVE - On-click/Press-down */
+  &:active:not([disabled]) {
+    @extend .btn-active;
+  }
+}
+
+/**
+  Mixin for Floating Action Button
+  ================================
+  @param $background
+  @param $hover-background
+*/
+
+@mixin float ($background, $hover-background) {
+  background-color: $background;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  color: $cbp-text-lightest;
+  cursor: pointer;
+  font-size: 24px;
+  height: 56px;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  width: 56px;
+  z-index: 99998;
+
+  & > i {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: $hover-background;
+  }
+
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
+  }
+
+  &:disabled {
+    background-color: $cbp-disabled-light;
+    color: $cbp-disabled-dark;
+  }
+
+  &:active:not([disabled]) {
+    @extend .btn-active;
+    cursor: grabbing;
+  }
+}
+
+/**
+  Mixin for Ghost Styling
+  =======================
+  @param {$color}: used to color the icon of the ghost button
+  @param {$hover-bg}: hover background color 
+*/
+@mixin ghost ($color, $hover-bg) {
+  background-color: transparent;
+  border: 0;
+  color: $color;
+
+  & > i {
+    margin-right: 8px;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: $hover-bg;
+  }
+
+  &:focus:not([disabled]) {
+    @extend .btn-focus;
+    border: 2px solid $cbp-focus-dark;
+  }
+
+  &:active:not([disabled]) {
+    @extend .btn-active;
+  }
+
+  &:disabled {
+    background-color: inherit;
+    color: $cbp-disabled-dark;
+    font-style: italic;
+
+    &:hover {
+      background-color: $cbp-disabled-light !important;
+      color: $cbp-text-darker;
+      font-weight: 700;
+    }
+  }
+}

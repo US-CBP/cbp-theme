@@ -1,0 +1,8 @@
+{
+  "cbp": {
+    "danger": {
+      "value": "{ cbp.red.warm.50.value }",
+      "attributes": { "use": "variables", "type": "danger" }
+    }
+  }
+}
