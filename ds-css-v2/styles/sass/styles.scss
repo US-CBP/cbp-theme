@@ -97,29 +97,8 @@
 // CBP Grid
 @import "cbp-grid/cbp-grid";
 
-// CBP Buttons
-@import "cbp-components/cbp-buttons/buttons";
-
-// CBP Link 
-@import "cbp-components/cbp-buttons/link";
-
-// CBP Custom Badges Chips and Tags
-@import "cbp-components/badges-chips-tags/badges-chips-tags.scss";
-
-// CBP Custom Accordion
-@import "cbp-components/accordion/accordion.scss";
-
 // CBP Header Component
 @import "cbp-theme-settings/cbp-header";
 
-// CBP Expand Component
-@import "cbp-components/expand/expand.scss";
-
-// CBP Overflow Menu Component
-@import "cbp-components/overflow-menu/overflow-menu.scss";
-
-// CBP Modal
-@import "cbp-components/modal/modal.scss";
-
-// CBP Text Forms
-@import "cbp-components/form/all";
+// CBP Components
+@import 'cbp-components/all';

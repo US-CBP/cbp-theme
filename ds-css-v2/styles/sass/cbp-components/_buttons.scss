@@ -51,7 +51,7 @@
 /* OUTLINE DISABLED PROPERTIES*/
 .btn-outline-disabled {
   background: $cbp-white;
-  border: 2px solid $cbp-gray-30;
+  border: 2px solid $cbp-text-base;
   color: $cbp-text-base;
   cursor: not-allowed;
   font-style: italic;
@@ -209,7 +209,7 @@ span.ripple {
 
   /* BUTTON DANGER */
   &__danger {
-    background-color: $cbp-danger;
+    background-color: $cbp-ui-danger-base;
     color: $cbp-white;
 
     /* BUTTON DANGER HOVER */
@@ -233,12 +233,12 @@ span.ripple {
 
     /* BUTTON DANGER OUTLINE */
     &--outline {
-      @include outline($cbp-danger, $cbp-ui-danger-dark);
+      @include outline($cbp-ui-danger-base, $cbp-ui-danger-dark);
     }
 
     /* DANGER GHOST BUTTON */
     &--ghost {
-      @include ghost($cbp-danger, $cbp-ui-danger-lighter);
+      @include ghost($cbp-ui-danger-base, $cbp-ui-danger-lighter);
     }
   }
 
@@ -289,7 +289,7 @@ span.ripple {
     }
 
     &-danger {
-      background-color: $cbp-danger;
+      background-color: $cbp-ui-danger-base;
       color: $cbp-white;
 
       &:hover:not([disabled]) {
@@ -297,11 +297,11 @@ span.ripple {
       }
 
       &--outline {
-        @include outline($cbp-danger, $cbp-ui-danger-dark);
+        @include outline($cbp-ui-danger-base, $cbp-ui-danger-dark);
       }
 
       &--ghost {
-        @include ghost($cbp-danger, $cbp-ui-danger-lighter);
+        @include ghost($cbp-ui-danger-base, $cbp-ui-danger-lighter);
       }
     }
   }

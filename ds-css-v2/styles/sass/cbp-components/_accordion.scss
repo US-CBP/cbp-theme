@@ -1,10 +1,10 @@
 .hover-focus {
-  background: #BE32D0 !important;
-  color: #FFF;  
+  background: $cbp-focus-dark !important;
+  color: $cbp-white;
 }
 
 .focus-outline {
-  outline: 2px solid #fff !important;
+  outline: 2px solid $cbp-white !important;
   outline-offset: -4px !important;
 }
 
@@ -18,19 +18,19 @@
   &__item.active {
 
     .cbp-accordion__title {
-      background-color: #008480;
-      color: #FFF;
+      background-color: $cbp-base-secondary-base;
+      color: $cbp-white;
 
       .fa-angle-down {
         transform: rotate(-180deg);
       }
 
       &--danger {
-        background: #D54309; // $cbp-danger;
-        color: #FFF;
+        background: $cbp-ui-danger-base;
+        color: $cbp-white;
 
         + .cbp-accordion__content {
-          border-color: #D54309; // $cbp-danger;
+          border-color: $cbp-ui-danger-base;
         }
       }
     }
@@ -38,9 +38,9 @@
     .cbp-accordion__content {
       display: block;
       max-height: fit-content;
-      border-bottom: 4px solid #008480; // $base-secondary
-      border-left: 4px solid #008480;
-      border-right: 4px solid #008480;
+      border-bottom: 4px solid $cbp-base-secondary-base;
+      border-left: 4px solid $cbp-base-secondary-base;
+      border-right: 4px solid $cbp-base-secondary-base;
       .cbp-accordion__footer {
         align-items: center;
         display: flex;
@@ -54,7 +54,7 @@
 
   &__title {
     align-items: center;
-    background: #F7F9FA; // $ui-neutral-lighter
+    background: $cbp-gray-cool-2; // $ui-neutral-lighter
     border: none;
     cursor: pointer;
     display: flex;
@@ -74,7 +74,7 @@
     }
 
     &:hover {
-      background-color: #AFAEA2; // $ui-neutral-light
+      background-color: $cbp-ui-neutral-light;
     }
 
     &:focus {
@@ -83,17 +83,17 @@
     }
 
     &:focus + .cbp-accordion__content {
-      border-bottom: 4px solid #BE32D0 !important;
-      border-left: 4px solid #BE32D0 !important;
-      border-right: 4px solid #BE32D0 !important;
+      border-bottom: 4px solid $cbp-focus-dark !important;
+      border-left: 4px solid $cbp-focus-dark !important;
+      border-right: 4px solid $cbp-focus-dark !important;
     }
 
     &--danger {
-      background: #D54309; // $cbp-danger;
-      color: #FFF;
+      background: $cbp-ui-danger-base;
+      color: $cbp-white;
 
       &:hover {
-        background: #9C3D10; // $cbp-danger-dark;
+        background: $cbp-ui-danger-dark;
       }
 
       &:focus {
@@ -104,7 +104,7 @@
   }
 
   &__content {
-    background: #FFF;
+    background: $cbp-white;
     display: none;
     max-height: 0;
     overflow: hidden;
@@ -117,22 +117,22 @@
 // Hover States
 .cbp-accordion__item.active {
   &:hover .cbp-accordion__title {
-    background-color: $cbp-mint-cool-60;
+    background-color: $cbp-base-secondary-dark;
   }
 
   &:hover .cbp-accordion__content {
-    border-bottom: 4px solid $cbp-mint-cool-60; // #0F6460
-    border-left: 4px solid $cbp-mint-cool-60;
-    border-right: 4px solid $cbp-mint-cool-60;
+    border-bottom: 4px solid $cbp-base-secondary-dark;
+    border-left: 4px solid $cbp-base-secondary-dark;
+    border-right: 4px solid $cbp-base-secondary-dark;
   }
 
   &:hover .cbp-accordion__title--danger {
-    background-color: #9C3D10; // $cbp-danger-dark;
+    background-color: $cbp-ui-danger-dark;
   }
 
   &:hover .cbp-accordion__title--danger + .cbp-accordion__content {
-    border-bottom: 4px solid #9C3D10; // $cbp-danger-dark;
-    border-left: 4px solid #9C3D10; // $cbp-danger-dark;
-    border-right: 4px solid #9C3D10; // $cbp-danger-dark;
+    border-bottom: 4px solid $cbp-ui-danger-dark;
+    border-left: 4px solid $cbp-ui-danger-dark;
+    border-right: 4px solid $cbp-ui-danger-dark;
   }
 }
