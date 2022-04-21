@@ -4,6 +4,8 @@ form {
 }
 
 .form-check {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -21,6 +23,7 @@ form {
   border: 2px solid $cbp-ui-neutral-base;
   border-radius: 3px;
   height: 24px;
+  margin-right: 8px;
   outline: 0 !important;
   position: relative;
   vertical-align: text-bottom;
