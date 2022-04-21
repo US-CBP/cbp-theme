@@ -2,8 +2,8 @@
   align-items: center;
   display: flex;
   list-style-type: none;
-  margin-top: 16px;
-  margin-bottom: 16px !important; // override from uswds
+  margin-top: 8px;
+  margin-bottom: 8px; // override from uswds
   padding-left: 0;
 }
 
@@ -15,30 +15,22 @@
   }
 
   & > a {
-    color: $cbp-ui-primary;
-    font-weight: 500;
-    text-decoration: none;
-
-    &:hover {
-      color: $cbp-ui-primary-dark;
-      text-decoration: underline;
-
-      &::after {
-        display: inline-block;
-        text-decoration: none;
-        white-space: nowrap;
-      }
-    }
-
-    &:focus {
-      color: $cbp-focus-dark;
-      outline: 0;
-    }
+    @extend .cbp-link__inline;
+    letter-spacing: unset;
   }
 
   /* First breadcrumb icon should not have underline on hover */
-  &:first-child > a:hover {
-    text-decoration: none;
+  &:first-child {
+    align-items: center;
+    display: inherit;
+
+    & > a:hover {
+      text-decoration: none;
+    }
+
+    &::after {
+      margin-left: 8px;
+    }
   }
 
   /* Last breadcrumb should not have separator */
@@ -55,22 +47,24 @@
   }
 }
 
-.cbp-breadcrumb--condensed {
-  margin-bottom: 12px !important;
-  margin-top: 12px;
+.cbp-breadcrumb--condensed > li:nth-child(2) > a {
+  color: $cbp-black;
 }
 
-.cbp-breadcrumb--condensed > li:nth-child(2) > a {
-  color: black;
+.cbp-breadcrumb__btn {
+  @extend .cbp-btn;
+  @extend .cbp-btn__square; 
+  @extend .cbp-btn__square-primary--ghost;
 }
 
 /* Header (Might not be part of actual breadcrumb */
 .cbp-lastcrumb {
-  color: #000;
-  border-bottom: 4px solid $cbp-ui-neutral;
+  color: $cbp-black;
+  border-bottom: 4px solid $cbp-base-neutral-light;
   font-size: 32px;
   font-weight: 500;
   line-height: 48px;
+  padding-bottom: 16px;
   margin: 0;
 }
 

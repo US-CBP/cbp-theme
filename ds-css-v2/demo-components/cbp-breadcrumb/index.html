@@ -311,7 +311,9 @@
         <span class="mq-value"></span>
         <ul class="cbp-breadcrumb" data-breadcrumb="true">
           <li class="cbp-breadcrumb__item">
-            <a href="#"><i class="fas fa-home"></i></a>
+            <button class="cbp-breadcrumb__btn">
+              <i class="fas fa-home"></i>
+            </button>
           </li>
           <li class="cbp-breadcrumb__item">
             <a href="#">Child Page</a>
@@ -332,7 +334,9 @@
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <ul class="cbp-breadcrumb cbp-breadcrumb--condensed">
           <li class="cbp-breadcrumb__item">
-            <a href="#"><i class="fas fa-home"></i></a>
+            <button class="cbp-breadcrumb__btn">
+              <i class="fas fa-home"></i>
+            </button>
           </li>
           <li class="cbp-breadcrumb__item">
             <div class="cbp-overflow-menu__wrapper">
@@ -369,45 +373,54 @@
       </div>
     </div>
     <hr>
-    <ul class="cbp-breadcrumb">
-      <li class="cbp-breadcrumb__item">
-        <a href="#"><i class="fas fa-home"></i></a>
-      </li>
-      <li class="cbp-breadcrumb__item d-lg-none">
-        <div class="cbp-overflow-menu__wrapper">
-          <button class="cbp-btn--action" id="btn4" onclick="openOverflowMenu('menu4', this)">
-            <i class="fas fa-ellipsis-h"></i>
-          </button>
-          <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu4" data-menu-type="breadcrumb">
-            <li class="cbp-overflow-menu__item">
-              <a href="#"><i class="fas fa-home"></i>Program Office</a>
-            </li>
-            <li class="cbp-overflow-menu__item">
-              <a href="#"><i class="fas fa-arrow-right"></i>Operations Support</a>
-            </li>
-            <li class="cbp-overflow-menu__item">
-              <a href="#"><i class="fas fa-arrow-right"></i>Office of Intelligence</a>
-            </li>
-            <li>
-              <button class="cbp-overflow-menu__btn" onclick="closeOverflowMenu()"><i class="fas fa-times-circle"></i>Close</button>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="cbp-breadcrumb__item d-sm-none">
-        <a href="#">Program Office</a>
-      </li>
-      <li class="cbp-breadcrumb__item d-sm-none">
-        <a href="#">Operations Support</a>
-      </li>
-      <li class="cbp-breadcrumb__item d-sm-none">
-        <a href="#">Office of Intelligence</a>
-      </li>
-      <li class="cbp-breadcrumb__item">
-        <a href="#">Contacts</a>
-      </li>
-    </ul>
-    <h1 class="cbp-lastcrumb">Primary Passengers Application</h1>
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <ul class="cbp-breadcrumb">
+          <li class="cbp-breadcrumb__item">
+            <button class="cbp-breadcrumb__btn">
+              <i class="fas fa-home"></i>
+            </button>
+          </li>
+          <li class="cbp-breadcrumb__item d-lg-none">
+            <div class="cbp-overflow-menu__wrapper">
+              <button class="cbp-btn--action" id="btn4" onclick="openOverflowMenu('menu4', this)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+              <ul class="cbp-overflow-menu cbp-overflow-menu--top-left" id="menu4" data-menu-type="breadcrumb">
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-home"></i>Program Office</a>
+                </li>
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-arrow-right"></i>Operations Support</a>
+                </li>
+                <li class="cbp-overflow-menu__item">
+                  <a href="#"><i class="fas fa-arrow-right"></i>Office of Intelligence</a>
+                </li>
+                <li>
+                  <button class="cbp-overflow-menu__btn" onclick="closeOverflowMenu()"><i class="fas fa-times-circle"></i>Close</button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="cbp-breadcrumb__item d-sm-none">
+            <a href="#">Program Office</a>
+          </li>
+          <li class="cbp-breadcrumb__item d-sm-none">
+            <a href="#">Operations Support</a>
+          </li>
+          <li class="cbp-breadcrumb__item d-sm-none">
+            <a href="#">Office of Intelligence</a>
+          </li>
+          <li class="cbp-breadcrumb__item">
+            <a href="#">Contacts</a>
+          </li>
+        </ul>
+        <h1 class="cbp-lastcrumb">Primary Passengers Application</h1>
+      </div>
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <span class="cbp-text-heading-2xs">Condensed Breadcrumb</span>
+      </div>
+    </div>
   </main>
 
   <!-- Required JS for USWDS -->
