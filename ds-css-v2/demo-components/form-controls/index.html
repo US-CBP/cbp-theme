@@ -313,7 +313,7 @@
             <label for="number" class="cbp-form__label">Pizza Toppings</label>
             <span class="cbp-form__description">Required. Choose as many as you like.</span>
             <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-            <div class="form-control">
+            <div class="cbp-form__control" id="check-wrapper">
               <div class="form-check">
                 <input type="checkbox" name="checkbox1" class="cbp-form__checkbox">
                 <label for="checkbox1">Bacon</label>
@@ -323,7 +323,7 @@
                 <label for="checkbox1">Pepperoni</label>
               </div>
               <div class="form-check">
-                <input type="checkbox" name="checkbox3" class="cbp-form__checkbox" disabled checked>
+                <input type="checkbox" name="checkbox3" class="cbp-form__checkbox">
                 <label for="checkbox1">Sausage</label>
               </div>
             </div>
@@ -333,6 +333,16 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Checkbox Field</h3>
+        <div class="cbp-form__control">
+          <div class="form-radio">
+            <input type="checkbox" name="checkbox-inline" class="cbp-form__checkbox" onchange="setInline(event, 'check-wrapper')">
+            <label for="checkbox-inline">Inline</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline2" class="cbp-form__checkbox" onchange="setControlDisabled(event, 'check-wrapper')">
+            <label for="checkbox-inline2">Disable</label>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -343,17 +353,25 @@
             <label for="number" class="cbp-form__label">Pizza Toppings</label>
             <span class="cbp-form__description">Required. Choose as many as you like.</span>
             <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox1" class="cbp-form__checkbox" id="indy" checked disabled>
-              <label for="checkbox1">Olives</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
-              <label for="checkbox1">Pineapple</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" name="checkbox3" class="cbp-form__checkbox">
-              <label for="checkbox1">Sardines</label>
+            <div class="cbp-form__control" id="indy-wrapper">
+              <div class="form-check">
+                <input type="checkbox" name="checkbox1" class="cbp-form__checkbox" id="indy">
+                <label for="checkbox1">All Toppings</label>
+              </div>
+              <div class="cbp-form__control--nested">
+                <div class="form-check">
+                  <input type="checkbox" name="checkbox1" class="cbp-form__checkbox" id="indy">
+                  <label for="checkbox1">Olives</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
+                  <label for="checkbox1">Pineapple</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" name="checkbox3" class="cbp-form__checkbox">
+                  <label for="checkbox1">Sardines</label>
+                </div>
+              </div>
             </div>
           </div>
         </form>
@@ -361,6 +379,12 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Indeterminate Checkbox Field</h3>
+        <div class="cbp-form__control">
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline2" class="cbp-form__checkbox" onchange="setControlDisabled(event, 'indy-wrapper')">
+            <label for="checkbox-inline2">Disable</label>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -371,17 +395,19 @@
             <label for="number" class="cbp-form__label">Pizza Toppings</label>
             <span class="cbp-form__description">Required. Choose as many as you like.</span>
             <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-            <div class="form-check">
-              <input type="radio" name="radio1" class="cbp-form__radio" disabled>
-              <label for="radio1">Pepperoni</label>
-            </div>
-            <div class="form-check">
-              <input type="radio" name="radio2" class="cbp-form__radio">
-              <label for="radio1">Sardines</label>
-            </div>
-            <div class="form-check">
-              <input type="radio" name="radio3" class="cbp-form__radio">
-              <label for="radio1">Olives</label>
+            <div class="cbp-form__control" id="radio-wrapper">
+              <div class="form-radio">
+                <input type="radio" name="radio1" class="cbp-form__radio">
+                <label for="radio1">Pepperoni</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="radio2" class="cbp-form__radio">
+                <label for="radio1">Sardines</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="radio3" class="cbp-form__radio">
+                <label for="radio1">Olives</label>
+              </div>
             </div>
           </div>
         </form>
@@ -389,6 +415,16 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Radio Button Field</h3>
+        <div class="cbp-form__control">
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline" class="cbp-form__checkbox" onchange="setInline(event, 'radio-wrapper')">
+            <label for="checkbox-inline">Inline</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline2" class="cbp-form__checkbox" onchange="setControlDisabled(event, 'radio-wrapper')">
+            <label for="checkbox-inline2">Disable</label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -397,6 +433,6 @@
   <script src="../../js/uswds.min.js"></script>
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
-  <script src="../../js/cbp-components-js/form.js"></script>
+  <script src="../../js/cbp-components-js/formControls.js"></script>
 </body>
 </html>

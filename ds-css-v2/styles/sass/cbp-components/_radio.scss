@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.cbp-form__control--inline .form-radio {
+  margin-right: 16px;
+}
+
+/* Form Group - div that groups together label, input together */
+.form-radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .cbp-form__radio {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -84,6 +95,10 @@
 
       &:hover {
         box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+
+        &::before {
+          background: $cbp-ui-neutral-base;
+        }
       }
 
       &:focus {
@@ -99,6 +114,7 @@
     
     &:hover {
       box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+      border: 2px solid $cbp-ui-neutral-base;
     }
 
     &:focus {

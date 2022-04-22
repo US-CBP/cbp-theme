@@ -3,6 +3,14 @@ form {
   margin-bottom: 12px;
 }
 
+.cbp-form__control--inline .form-check {
+  margin-right: 16px;
+}
+
+.cbp-form__control--nested {
+  padding-left: 24px;
+}
+
 .form-check {
   display: flex;
   align-items: center;
@@ -75,6 +83,7 @@ form {
       }
 
       &:hover {
+        background-color: $cbp-ui-neutral-base;
         box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
         clip-path: circle(80%);
       }
@@ -102,7 +111,8 @@ form {
     }
 
     &:hover {
-      box-shadow: 0 0 0 8px $cbp-disabled-light; // $cbp-selected-light
+      border: 2px solid $cbp-ui-neutral-base;
+      box-shadow: 0 0 0 8px $cbp-ui-neutral-lighter;
       clip-path: circle(80%);
     }
 

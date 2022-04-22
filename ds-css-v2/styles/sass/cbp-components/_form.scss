@@ -13,6 +13,14 @@
   margin: 16px 0;
 }
 
+.cbp-form__control {
+  display: block;
+}
+
+.cbp-form__control--inline {
+  display: flex;
+}
+
 .cbp-form__label {
   color: $cbp-text-darkest;
   font-size: 1rem;
