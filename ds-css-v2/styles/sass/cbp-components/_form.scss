@@ -131,7 +131,8 @@
 }
 
 .cbp-form__number {
-  & > input[type=number] {
+  & > input[type=number],
+  & > div:first-child > input[type=number] {
     @extend .cbp-form__input;
     // This removes the default increment arrows in the number input field
     -moz-appearance: textfield; /* Firefox */
@@ -144,14 +145,47 @@
       margin-left: 16px;
     }
   }
+}
 
-  &--switch {
+.cbp-form__number--switch {
+  display: flex;
+
+  & > div:first-child {
+    margin-right: 16px;
     display: flex;
-    
-    & > input {
-      margin-right: 16px;
+
+    & > input[type=number] {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:hover {
+        border-right: 0 !important;
+
+        & ~ .cbp-form__unit {
+          border: 2px solid $cbp-black;
+          border-left: 0;
+        }
+      }
     }
   }
+}
+
+.cbp-form__unit {
+  border: 1px solid $cbp-ui-neutral-base;
+  border-left: none;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: $cbp-text-darker;
+  font-style: italic;
+  font-weight: 700;
+  height: 36px;
+  line-height: 34px;
+  margin-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: auto;
 }
 
 // This removes the default increment arrows in the number input field
