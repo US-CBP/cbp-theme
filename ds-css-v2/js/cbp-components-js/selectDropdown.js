@@ -52,5 +52,3 @@ menu.addEventListener('keydown', function(e) {
     }
   }
 });
-
-console.log(menu.children);
