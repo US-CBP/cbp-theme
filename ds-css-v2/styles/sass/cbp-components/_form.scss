@@ -24,6 +24,7 @@
 .cbp-form__label {
   color: $cbp-text-darkest;
   font-size: 1rem;
+  font-style: italic;
   font-weight: 700;
   padding-bottom: 8px;
 }
@@ -168,6 +169,23 @@
         }
       }
     }
+  }
+}
+
+.cbp-form__number--phone {
+  display: flex;
+
+  & button {
+    margin-right: 16px;
+    width: 168px;
+  }
+
+  & .cbp-dropdown {
+    width: calc(100% - 16px);
+  }
+
+  & input {
+    width: 100%;
   }
 }
 
