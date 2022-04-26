@@ -185,6 +185,7 @@
   }
 
   & input {
+    @extend .cbp-form__input;
     width: 100%;
   }
 }

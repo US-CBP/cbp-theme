@@ -16,7 +16,7 @@ const firstFocus = customDropdown[0];
 const lastFocus = customDropdown[customDropdown.length - 1];
 
 const closeDropdownMenu = () => {
-  element.classList.remove('  cbp-dropdown--open');
+  element.classList.remove('cbp-dropdown--open');
 }
 
 element.addEventListener('click', e => {
@@ -24,8 +24,27 @@ element.addEventListener('click', e => {
 })
 
 element.addEventListener('keydown', e => {
+  const isTabPressed = (e.key === 'Tab' || e.key === 'Tab');
+
   if (e.key === "Escape" || e.code === "Escape") {
     closeDropdownMenu();
+  }
+
+
+  if (!isTabPressed) { 
+    return; 
+  }
+
+  if ( e.shiftKey ) /* shift + tab */ {
+    if (document.activeElement === firstFocus) {
+      lastFocus.focus();
+      e.preventDefault();
+    }
+  } else /* tab */ {
+    if (document.activeElement === lastFocus) {
+      firstFocus.focus();
+      e.preventDefault();
+    }
   }
 })
 
@@ -37,6 +56,7 @@ menu.addEventListener('keydown', function(e) {
   } 
 
   if (!isTabPressed) { 
+    console.log("something");
     return; 
   }
 

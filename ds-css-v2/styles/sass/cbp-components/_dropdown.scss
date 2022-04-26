@@ -1,3 +1,7 @@
+.cbp-dropdown__wrapper {
+  position: relative;
+}
+
 /* 
   Dropdown Component
 */
@@ -99,6 +103,7 @@
 
 /* Dropdown Menu Component */
 .cbp-dropdown {
+  background-color: $cbp-white;
   border: 1px solid $cbp-ui-neutral-base;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
@@ -107,6 +112,9 @@
   display: none;
   max-height: 216px;
   overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
 
   &:hover {
     border-top: 0;
