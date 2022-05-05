@@ -557,7 +557,7 @@
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
           <div class="cbp-dropdown-wrapper">
-            <button class="cbp-dropdown__custom" id="port-dropdown" onclick="openDropdown(this, 'port-dropdown')">Choose Port</button>
+            <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">Choose Port</button>
             <div class="cbp-dropdown" id="custom-dropdown-menu">
               <a href="#" class="cbp-dropdown__item">Port of Baltimore</a>
               <a href="#" class="cbp-dropdown__item">Port of Newark</a>
@@ -589,6 +589,6 @@
   <script src="../../js/universalHeader.js"></script>
   <script src="../cbp-buttons/index.js"></script>
   <script src="../../js/cbp-components-js/form.js"></script>
-  <script src="../../js/cbp-components-js/selectDropdown.js"></script>
+  <script src="../../js/cbp-components-js/selectDropdown.js" type="module"></script>
 </body>
 </html>

@@ -1,77 +1,9 @@
-// const element = document.getElementById("custom-dropdown");
-// const menu = document.getElementById("custom-dropdown-menu");
+const dropdowns = document.querySelectorAll('[data-toggle="dropdown"]')
+const ENTER_KEY = "Enter";
+const ESCAPE_KEY = "Escape";
+const KEY_UP = "ArrowUp";
+const KEY_DOWN = "ArrowDown";
 
-// const focusableElements =
-//   'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])';
-
-// const getFocusableEls = (elementId) => {
-//   const el = document.getElementById(elementId).nextElementSibling;
-//   const focusableEls = el.querySelectorAll(focusableElements);
-
-//   return focusableEls;
-// };
-
-// const customDropdown = getFocusableEls("custom-dropdown");
-
-// const firstFocus = customDropdown[0];
-// const lastFocus = customDropdown[customDropdown.length - 1];
-
-// const closeDropdownMenu = () => {
-//   element.classList.remove("cbp-dropdown--open");
-// };
-
-// element.addEventListener("click", (e) => {
-//   element.classList.toggle("cbp-dropdown--open");
-// });
-
-// element.addEventListener("keydown", (e) => {
-//   const isTabPressed = e.key === "Tab" || e.key === "Tab";
-
-//   if (e.key === "Escape" || e.code === "Escape") {
-//     closeDropdownMenu();
-//   }
-
-//   if (!isTabPressed) {
-//     return;
-//   }
-
-//   if (e.shiftKey) {
-//     /* shift + tab */ if (document.activeElement === firstFocus) {
-//       lastFocus.focus();
-//       e.preventDefault();
-//     }
-//   } /* tab */ else {
-//     if (document.activeElement === lastFocus) {
-//       firstFocus.focus();
-//       e.preventDefault();
-//     }
-//   }
-// });
-
-// menu.addEventListener("keydown", function (e) {
-//   const isTabPressed = e.key === "Tab" || e.key === "Tab";
-
-//   if (e.key === "Escape" || e.code === "Escape") {
-//     closeDropdownMenu();
-//   }
-
-//   if (!isTabPressed) {
-//     console.log("something");
-//     return;
-//   }
-
-//   if (e.shiftKey) {
-//     /* shift + tab */ if (document.activeElement === firstFocus) {
-//       lastFocus.focus();
-//       e.preventDefault();
-//     }
-//   } /* tab */ else {
-//     if (document.activeElement === lastFocus) {
-//       firstFocus.focus();
-//       e.preventDefault();
-//     }
-//   }
-// });
 
 /** Class representing a dropdown menu. */
 class Dropdown {
@@ -79,30 +11,86 @@ class Dropdown {
    * Create a dropdown menu and toggle.
    * @constructor
    * @param {string} dropdownId
-   * @param {object} event
    */
-  constructor(event, dropdownId) {
+  constructor(dropdownId) {
     this.selection = [];
     this.dropdownNode = document.getElementById(dropdownId);
     this.dropdownMenuNode = this.dropdownNode.nextElementSibling;
-
-    this.toggle();
-
-    this.addListeners(event);
+    this.menuItems = this.dropdownMenuNode.children;
   }
 
   /**
    * Open/close dropdown menu
    */
-   toggle() {
-    this.dropdownNode.classList.toggle('cbp-dropdown--open');
+  toggle() {
+    this.dropdownNode.classList.toggle("cbp-dropdown--open");
   }
 
-  addListeners(event) {
-    console.log(event.key);
+  close() {
+    if (this.isOpen()) {
+      this.dropdownNode.classList.remove('cbp-dropdown--open');
+    }
+  }
+
+  isOpen() {
+    return this.dropdownNode.classList.contains('cbp-dropdown--open')
   }
 }
 
-window.openDropdown = (event, dropdownId) => {
-  const dropdown = new Dropdown(event, dropdownId);
-};
+// On click instantiate a dropdown
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', () => {
+    const drp = new Dropdown(dropdown.id);
+    drp.toggle();
+  })
+})
+
+// On Enter instantiate a dropdown
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('keydown', (e) => {
+    e.preventDefault();
+    if (e.key === "Enter") {
+      const drp = new Dropdown(dropdown.id);
+      drp.toggle();
+    }
+  })
+})
+
+// On Key Up instantiate a dropdown
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('keydown', (e) => {
+    e.preventDefault();
+    if (e.key === KEY_UP) {
+      const drp = new Dropdown(dropdown.id);
+      drp.toggle();
+    }
+  })
+})
+
+// On Key Down instantiate a dropdown
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('keydown', (e) => {
+    e.preventDefault();
+    if (e.key === KEY_DOWN) {
+      const drp = new Dropdown(dropdown.id);
+      drp.toggle();
+    }
+  })
+})
+
+// On Escape close dropdown
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('keydown', (e) => {
+    e.preventDefault();
+    if (e.key === ESCAPE_KEY) {
+      const drp = new Dropdown(dropdown.id);
+      drp.close();
+    }
+  })
+})
+
+
+dropdowns.forEach(dropdown => {
+  console.log("instance created!");
+  return new Dropdown(dropdown.id);
+})
