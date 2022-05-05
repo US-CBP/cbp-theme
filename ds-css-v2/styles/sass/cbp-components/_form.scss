@@ -164,8 +164,66 @@
         border-right: 0 !important;
 
         & ~ .cbp-form__unit {
-          border: 2px solid $cbp-black;
+          border: 2px solid $cbp-ui-neutral-darker;
           border-left: 0;
+        }
+      }
+
+      &:read-only {
+        border-right: inherit;
+
+        & ~ .cbp-form__unit {
+          background-color: $cbp-base-neutral-lighter;
+          border: 1px solid $cbp-ui-neutral-light;
+          border-left: 0;
+          cursor: not-allowed;
+
+          &:hover {
+            border: 1px solid $cbp-ui-neutral-light;
+            border-left: 0;
+          }
+        }
+      }
+
+      &:disabled {
+        border-right: inherit;
+    
+        & ~ .cbp-form__unit {
+          background-color: $cbp-disabled-light;
+          border: 1px solid $cbp-disabled-dark;
+          border-left: 0;
+        }
+
+        &:hover {
+          border-right: inherit;
+
+          & ~ .cbp-form__unit {
+            border: 2px solid $cbp-ui-neutral-darker;
+            border-left: 0;
+          }
+        }
+
+        &:focus {
+          border: 2px solid $cbp-focus-dark;
+        }
+      }
+
+      &:invalid {
+        border-right: 0;
+
+        & ~ .cbp-form__unit {
+          background-color: $cbp-ui-danger-lighter;
+          border: 1px solid $cbp-danger;
+          border-left: 0;
+        }
+
+        &:hover {
+          border-right: 0 !important;
+  
+          & ~ .cbp-form__unit {
+            border: 2px solid $cbp-ui-danger-dark;
+            border-left: 0;
+          }
         }
       }
     }

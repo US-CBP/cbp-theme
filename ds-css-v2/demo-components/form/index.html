@@ -321,16 +321,16 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Simple Text Input</h3>
-        <div>
-          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'firstName')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'firstName')">
           <label for="invalid">Error</label>
         </div>
-        <div>
-          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'firstName')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'firstName')">
           <label for="disable">Disable</label>
         </div>
-        <div>
-          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'firstName')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'firstName')">
           <label for="readonly">Read Only</label>
         </div>
       </div>
@@ -348,16 +348,16 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Text Area</h3>
-        <div>
-          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'description')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'description')">
           <label for="invalid">Error</label>
         </div>
-        <div>
-          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'description')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'description')">
           <label for="disable">Disable</label>
         </div>
-        <div>
-          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'description')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'description')">
           <label for="readonly">Read Only</label>
         </div>
       </div>
@@ -380,16 +380,16 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Password (Hash) Field</h3>
-        <div>
-          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'password')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'password')">
           <label for="invalid">Error</label>
         </div>
-        <div>
-          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'password')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'password')">
           <label for="disable">Disable</label>
         </div>
-        <div>
-          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'password')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'password')">
           <label for="readonly">Read Only</label>
         </div>
       </div>
@@ -409,16 +409,16 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Simple Numeric Field</h3>
-        <div>
-          <input type="checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric')">
           <label for="invalid">Error</label>
         </div>
-        <div>
-          <input type="checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric')">
           <label for="disable">Disable</label>
         </div>
-        <div>
-          <input type="checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric')">
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric')">
           <label for="readonly">Read Only</label>
         </div>
       </div>
@@ -444,6 +444,18 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Numeric Counter Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric-counter')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric-counter')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric-counter')">
+          <label for="readonly">Read Only</label>
+        </div>
       </div>
     </div>
 
@@ -458,7 +470,7 @@
               <input type="number" name="numeric-switch" id="numeric-switch" placeholder="Enter Number of Fish"></input>
               <div class="cbp-form__unit">lbs</div>
             </div>
-            <div class="cbp-btn--segment" data-segment-button="single">
+            <div class="cbp-btn--segment cbp-btn--readyonly" data-segment-button="single">
               <button>LBS</button>
               <button>KG</button>
             </div>
@@ -468,6 +480,18 @@
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Numeric Switch Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric-switch')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric-switch')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric-switch')">
+          <label for="readonly">Read Only</label>
+        </div>
       </div>
     </div>
 
@@ -479,7 +503,7 @@
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
           <div class="cbp-form__number cbp-form__number--phone">
             <div class="cbp-dropdown__wrapper">
-              <button class="cbp-dropdown__custom" id="custom-dropdown">IM/IMN +44 - 1624</button>
+              <button class="cbp-dropdown__custom" id="phone-dropdown" onclick="openDropdown(event, 'phone-dropdown')">IM/IMN +44 - 1624</button>
               <div class="cbp-dropdown" id="custom-dropdown-menu">
                 <a href="#" class="cbp-dropdown__item">AF/AFG +93</a>
                 <a href="#" class="cbp-dropdown__item">AL/ALB +355</a>
@@ -533,7 +557,7 @@
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
           <div class="cbp-dropdown-wrapper">
-            <button class="cbp-dropdown__custom" id="custom-dropdown">Choose Port</button>
+            <button class="cbp-dropdown__custom" id="port-dropdown" onclick="openDropdown(this, 'port-dropdown')">Choose Port</button>
             <div class="cbp-dropdown" id="custom-dropdown-menu">
               <a href="#" class="cbp-dropdown__item">Port of Baltimore</a>
               <a href="#" class="cbp-dropdown__item">Port of Newark</a>
@@ -564,6 +588,7 @@
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
   <script src="../cbp-buttons/index.js"></script>
+  <script src="../../js/cbp-components-js/form.js"></script>
   <script src="../../js/cbp-components-js/selectDropdown.js"></script>
 </body>
 </html>
