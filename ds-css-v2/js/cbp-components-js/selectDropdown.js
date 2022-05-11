@@ -4,6 +4,19 @@ const ESCAPE_KEY = "Escape";
 const KEY_UP = "ArrowUp";
 const KEY_DOWN = "ArrowDown";
 
+/** Class representing Selector Engine */
+class SelectorEngine {
+  constructor(id) {
+    this.id = id;
+  }
+}
+
+/** Class representing Event Handlers */
+class EventHandler {
+  constructor(type) {
+    this.type = type;
+  }
+}
 
 /** Class representing a dropdown menu. */
 class Dropdown {
