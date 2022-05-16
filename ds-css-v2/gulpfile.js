@@ -1,11 +1,11 @@
-const { series, src, watch, dest } = require("gulp");
+const { parallel, src, watch, dest } = require("gulp");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const pkg = require("./node_modules/uswds/package.json");
 const postcss = require("gulp-postcss");
 const replace = require("gulp-replace");
 const sass = require("gulp-sass")(require("sass"));
-const babel = require("gulp-babel");
+const gls = require("gulp-live-server");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
 
 const PROJECT_SASS_SRC = "styles/sass";
@@ -17,23 +17,11 @@ TASKS
 ----------------------------------------
 */
 
-function buildJs() {
-  return src("js/main.js")
-    .pipe(
-      babel({
-        presets: ["@babel/preset-env"],
-      })
-    )
-    .pipe(dest("dist"));
-}
-
 function buildSass() {
-  const plugins = [
-    autoprefixer({ cascade: false, grid: true }), // Autoprefix
-    csso({ forceMediaMerge: false }) // Minify
-  ];
-
-  return src([`${PROJECT_SASS_SRC}/*.scss`], { sourcemaps: true, largeFile: true })
+  return src([`${PROJECT_SASS_SRC}/*.scss`], {
+    sourcemaps: true,
+    largeFile: true,
+  })
     .pipe(
       sass.sync({
         includePaths: [
@@ -44,18 +32,28 @@ function buildSass() {
       })
     )
     .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
-    .pipe(postcss(plugins))
-    .pipe(dest(`${CSS_DEST}`, { sourcemaps: '.', largeFile: true }));
+    .pipe(postcss([
+      autoprefixer({ cascade: false, grid: true }), // Autoprefix
+      csso({ forceMediaMerge: false }), // Minify
+    ]))
+    .pipe(dest(`${CSS_DEST}`, { sourcemaps: ".", largeFile: true }));
 }
 
+function serve() {
+  const server = gls.static('./', 8888);
+  server.start();
+
+  watch(['./**/*.html', './dist/*.css', './js/**/*.js'])
+    .on('change', path => server.notify.call(server, { path }));
+};
+
 function defaultTasks() {
-  watch("js/main.js", buildJs);
   watch(`${PROJECT_SASS_SRC}/**/*.scss`, buildSass);
 }
 
 module.exports = {
-  build: series(buildJs, buildSass),
-  buildJs,
+  build: buildSass,
   buildSass,
-  default: defaultTasks,
-}
+  default: parallel(defaultTasks, serve),
+  serve: serve,
+};

@@ -4,17 +4,27 @@ const ESCAPE_KEY = "Escape";
 const KEY_UP = "ArrowUp";
 const KEY_DOWN = "ArrowDown";
 
-/** Class representing Selector Engine */
-class SelectorEngine {
-  constructor(id) {
-    this.id = id;
-  }
-}
+const events = new Set([
+  'click',
+  'keydown',
+])
 
-/** Class representing Event Handlers */
+/** Class representing Event Handler */
 class EventHandler {
-  constructor(type) {
-    this.type = type;
+  static on(type, func) {
+    this.addHandler(type, func);
+  }
+
+  /**
+   * @param {string} type 
+   * @returns element with attached event handler
+   */
+  static addHandler(type, func = {}) {
+    if (!events.has(type)) {
+      throw new Error('Event handler type does not exist')
+    }
+
+    console.log(func);
   }
 }
 
@@ -107,3 +117,5 @@ dropdowns.forEach(dropdown => {
   console.log("instance created!");
   return new Dropdown(dropdown.id);
 })
+
+EventHandler.on('click');
