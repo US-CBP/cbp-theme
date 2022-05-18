@@ -1,7 +1,3 @@
-const indCheck = document.getElementById('indy');
-
-indCheck.indeterminate = true;
-
 const setInline = (e, wrapperId) => {
   const { target: { checked } } = e;
   const wrapper = document.getElementById(wrapperId);
@@ -29,3 +25,45 @@ const setControlDisabled = (e, wrapperId) => {
     })
   }
 }
+
+const allToppings = document.getElementById('all-toppings');
+const nested = document.querySelectorAll('.cbp-form__control--nested input');
+
+allToppings.addEventListener('change', (e) => {
+  // e.preventDefault();
+
+  if (e.target.checked) {
+    nested.forEach(chk => {
+      chk.checked = true;
+    })
+  } else {
+    nested.forEach(chk => {
+      chk.checked = false;
+    })
+  }
+})
+
+const updateIndy = () => {
+  let checkedCount = 0;
+
+  for(const topping of nested) {
+    if (topping.checked) {
+      checkedCount++;
+    }
+  }
+
+  if(checkedCount === 0) {
+    allToppings.checked = false;
+    allToppings.indeterminate = false;
+  } else if(checkedCount === nested.length) {
+    allToppings.checked = true;
+    allToppings.indeterminate = false;
+  } else {
+    allToppings.checked = false;
+    allToppings.indeterminate = true;
+  }
+}
+
+nested.forEach(chk => {
+  chk.addEventListener('change', updateIndy)
+})

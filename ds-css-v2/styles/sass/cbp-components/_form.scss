@@ -60,13 +60,11 @@
   }
 
   &:hover:not([disabled]) {
-    border: 1px solid $cbp-ui-neutral-darker;
-    outline: solid $cbp-ui-neutral-darker 1px;
+    border: 2px solid $cbp-ui-neutral-darker;
   }
 
   &:focus:not([disabled]) {
-    border: 1px solid $cbp-focus-dark;
-    outline: solid $cbp-focus-dark 1px;
+    border: 2px solid $cbp-focus-dark;
   }
 
   &:read-only {
@@ -86,27 +84,24 @@
     cursor: not-allowed;
 
     &:hover {
-      border: 1px solid $cbp-ui-neutral-darker;
-      outline: solid $cbp-ui-neutral-darker 1px;
+      border: 2px solid $cbp-ui-neutral-darker;
     }
 
     &:focus {
-      border: 1px solid $cbp-focus-dark;
-      outline: solid $cbp-focus-dark 1px;
+      border: 2px solid $cbp-focus-dark;
     }
   }
 
   &:invalid {
     background-color: $cbp-ui-danger-lighter;
-    border: 1px solid $cbp-danger;
+    border: 2px solid $cbp-danger;
 
     &:focus {
       border-color: $cbp-focus-dark;
     }
     
     &:hover {
-      border: 1px solid $cbp-ui-danger-dark;
-      outline: solid $cbp-ui-danger-dark 1px;
+      border: 2px solid $cbp-ui-danger-dark;
 
       &:focus {
         border-color: $cbp-focus-dark;
