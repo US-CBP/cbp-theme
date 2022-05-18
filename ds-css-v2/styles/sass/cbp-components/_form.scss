@@ -60,12 +60,13 @@
   }
 
   &:hover:not([disabled]) {
-    border: 2px solid $cbp-ui-neutral-darker;
+    border: 1px solid $cbp-ui-neutral-darker;
+    outline: solid $cbp-ui-neutral-darker 1px;
   }
 
   &:focus:not([disabled]) {
-    border: 2px solid $cbp-focus-dark;
-    outline: 0;
+    border: 1px solid $cbp-focus-dark;
+    outline: solid $cbp-focus-dark 1px;
   }
 
   &:read-only {
@@ -75,6 +76,7 @@
 
     &:hover {
       border: 1px solid $cbp-ui-neutral-light;
+      outline: 0;
     }
   }
 
@@ -84,11 +86,13 @@
     cursor: not-allowed;
 
     &:hover {
-      border: 2px solid $cbp-ui-neutral-darker;
+      border: 1px solid $cbp-ui-neutral-darker;
+      outline: solid $cbp-ui-neutral-darker 1px;
     }
 
     &:focus {
-      border: 2px solid $cbp-focus-dark;
+      border: 1px solid $cbp-focus-dark;
+      outline: solid $cbp-focus-dark 1px;
     }
   }
 
@@ -101,7 +105,8 @@
     }
     
     &:hover {
-      border: 2px solid $cbp-ui-danger-dark;
+      border: 1px solid $cbp-ui-danger-dark;
+      outline: solid $cbp-ui-danger-dark 1px;
 
       &:focus {
         border-color: $cbp-focus-dark;
@@ -129,6 +134,13 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
+
+  & > button {
+    @extend .cbp-btn;
+    @extend .cbp-btn__square;
+    @extend .cbp-btn__square-secondary;
+    margin-left: -2px;
+  }
 }
 
 .cbp-form__number {
@@ -148,6 +160,7 @@
   }
 }
 
+// Because of the input field border, this will be refactored
 .cbp-form__number--switch {
   display: flex;
 
@@ -156,16 +169,18 @@
     display: flex;
 
     & > input[type=number] {
-      border-right: 0;
+      @extend .cbp-form__input;
+      border-right: 0 !important;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      
 
       &:hover {
-        border-right: 0 !important;
+        border-right: inherit;
 
         & ~ .cbp-form__unit {
           border: 2px solid $cbp-ui-neutral-darker;
-          border-left: 0;
+          border-left: 0 !important;
         }
       }
 
@@ -250,7 +265,7 @@
 
 .cbp-form__unit {
   border: 1px solid $cbp-ui-neutral-base;
-  border-left: none;
+  border-left: 0;
   border-radius: 3px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -270,12 +285,4 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; /* Margins still appear even if hidden */
-}
-
-// When button PR is merged, extend square btn and add specific styling as needed
-.cbp-form__btn--square {
-  @extend .cbp-btn;
-  @extend .cbp-btn__square;
-  @extend .cbp-btn__square-secondary;
-  margin-left: -2px;
 }

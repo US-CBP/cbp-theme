@@ -101,7 +101,6 @@ multiSegment.forEach(segment => {
 
 singleSegment.forEach(segment => {
   let selected;
-  
   const { children } = segment;
 
   for (const child of children) {
