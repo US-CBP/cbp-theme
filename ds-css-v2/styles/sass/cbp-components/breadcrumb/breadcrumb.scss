@@ -1,0 +1,82 @@
+.cbp-breadcrumb {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin-top: 8px;
+  margin-bottom: 8px; // override from uswds
+  padding-left: 0;
+}
+
+.cbp-breadcrumb__item {
+  margin-bottom: 0;
+
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  & > a {
+    @extend .cbp-link__inline;
+    letter-spacing: unset;
+  }
+
+  /* First breadcrumb icon should not have underline on hover */
+  &:first-child {
+    align-items: center;
+    display: inherit;
+
+    & > a:hover {
+      text-decoration: none;
+    }
+
+    &::after {
+      height: 16px;
+      margin-left: 8px;
+    }
+  }
+
+  /* Last breadcrumb should not have separator */
+  &:last-child::after {
+    content: '';
+  }
+
+  &::after {
+    @extend .cbp-text-subhead;
+    color: $cbp-text-darker;
+    content: '/';
+    font-style: italic;
+    margin-left: 4px;
+  }
+}
+
+.cbp-breadcrumb--condensed > li:nth-child(2) > a {
+  color: $cbp-black;
+}
+
+.cbp-breadcrumb__btn {
+  @extend .cbp-btn;
+  @extend .cbp-btn__square; 
+  @extend .cbp-btn__square-primary--ghost;
+}
+
+/* Header (Might not be part of actual breadcrumb */
+.cbp-lastcrumb {
+  color: $cbp-black;
+  border-bottom: 4px solid $cbp-base-neutral-light;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.d-lg-none {
+  @media screen and (min-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.d-sm-none {
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
