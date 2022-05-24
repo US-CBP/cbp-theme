@@ -28,6 +28,12 @@ class EventHandler {
   }
 }
 
+class SelectorEngine {
+  static findAll (selector) {
+    return document.querySelectorAll(selector);
+  }
+}
+
 /** Class representing a dropdown menu. */
 class Dropdown {
   /**

@@ -65,6 +65,7 @@
 
   &:focus:not([disabled]) {
     border: 2px solid $cbp-focus-dark;
+    outline: 0;
   }
 
   &:read-only {
@@ -74,7 +75,6 @@
 
     &:hover {
       border: 1px solid $cbp-ui-neutral-light;
-      outline: 0;
     }
   }
 
@@ -94,7 +94,7 @@
 
   &:invalid {
     background-color: $cbp-ui-danger-lighter;
-    border: 2px solid $cbp-danger;
+    border: 1px solid $cbp-danger;
 
     &:focus {
       border-color: $cbp-focus-dark;
@@ -109,8 +109,6 @@
     }
   }
 }
-
-
 
 .cbp-form__textarea {
   @extend .cbp-form__input;
@@ -155,7 +153,6 @@
   }
 }
 
-// Because of the input field border, this will be refactored
 .cbp-form__number--switch {
   display: flex;
 
@@ -164,18 +161,17 @@
     display: flex;
 
     & > input[type=number] {
-      @extend .cbp-form__input;
-      border-right: 0 !important;
+      border-right: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       
 
       &:hover {
-        border-right: inherit;
+        border-right: 0 !important;
 
         & ~ .cbp-form__unit {
           border: 2px solid $cbp-ui-neutral-darker;
-          border-left: 0 !important;
+          border-left: 0;
         }
       }
 
@@ -190,6 +186,20 @@
 
           &:hover {
             border: 1px solid $cbp-ui-neutral-light;
+            border-left: 0;
+          }
+        }
+      }
+
+      &:focus {
+        border-right: 0 !important;
+
+        & ~ .cbp-form__unit {
+          border: 2px solid $cbp-focus-dark;
+          border-left: 0;
+
+          &:hover {
+            border: 2px solid $cbp-focus-dark;
             border-left: 0;
           }
         }
@@ -260,7 +270,7 @@
 
 .cbp-form__unit {
   border: 1px solid $cbp-ui-neutral-base;
-  border-left: 0;
+  border-left: none;
   border-radius: 3px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -270,6 +280,7 @@
   height: 36px;
   line-height: 34px;
   margin-bottom: 16px;
+  margin-left: -1px;
   padding-left: 8px;
   padding-right: 8px;
   width: auto;
