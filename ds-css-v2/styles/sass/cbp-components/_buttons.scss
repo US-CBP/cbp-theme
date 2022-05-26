@@ -354,7 +354,7 @@ span.ripple {
 
     .active {
       background-color: $cbp-selected-dark;
-      color: #fff;
+      color: $cbp-white;
 
       &:focus:not([disabled]) {
         @extend .btn-focus;
@@ -422,8 +422,3 @@ span.ripple {
     }
   }
 }
-
-/* SEGMENT READ-ONLY */
-// .cbp-btn--readyonly {
-
-// }

@@ -430,51 +430,61 @@
 
     <div class="cbp-row">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <form action="submit">
-          <div class="cbp-form-wrapper">
-            <h4><i class="fas fa-user"></i> User Preferences</h4>
-            <div class="cbp-toggle__wrapper">
-              <label for="wi-fi" class="cbp-toggle__label">Wi-Fi Connection</label>
-              <label class="cbp-toggle">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span>On</span>
-            </div>
-            <div class="cbp-toggle__wrapper">
-              <label for="cell-data" class="cbp-toggle__label">Cellular Data</label>
-              <label class="cbp-toggle">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span>On</span>
-            </div>
-            <div class="cbp-toggle__wrapper">
-              <label for="bluetooth" class="cbp-toggle__label">Bluetooth</label>
-              <label class="cbp-toggle">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span>On</span>
-            </div>
-            <div class="cbp-toggle__wrapper">
-              <label for="dnd" class="cbp-toggle__label">Do Not Disturb</label>
-              <label class="cbp-toggle">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span>Off</span>
-            </div>
-            <div class="cbp-toggle__wrapper">
-              <label for="Airplane Mode" class="cbp-toggle__label">Airplane Mode</label>
-              <label class="cbp-toggle">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span>Off</span>
-            </div>
+        <div class="cbp-form-wrapper">
+          <h4><i class="fas fa-user"></i> User Preferences</h4>
+          <div class="cbp-toggle__wrapper">
+            <label for="wi-fi" class="cbp-toggle__label">Wi-Fi Connection</label>
+            <label class="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>On</span>
           </div>
-        </form>
+          <div class="cbp-toggle__wrapper">
+            <label for="cell-data" class="cbp-toggle__label">Cellular Data</label>
+            <label class="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>On</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="bluetooth" class="cbp-toggle__label">Bluetooth</label>
+            <label class="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>On</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="dnd" class="cbp-toggle__label">Do Not Disturb</label>
+            <label class="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>Off</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="airplane-mode" class="cbp-toggle__label">Airplane Mode</label>
+            <label class="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>Off</span>
+          </div>
+        </div>
+        <div class="cbp-form__wrapper">
+          <div class="cbp-toggle__wrapper">
+            <label for="airplane-mode" class="cbp-toggle__label">Night Mode</label>
+            <label class="cbp-toggle demo-toggle" id="demo-toggle">
+              <input type="checkbox">
+              <span class="slider">
+                <i class="fas fa-moon" style="color: yellow;"></i>
+                <i class="fas fa-sun" style="color: orange;"></i>
+              </span>
+            </label>
+          </div>
+        </div>
       </div>
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
@@ -488,5 +498,6 @@
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
   <script src="../../js/cbp-components-js/formControls.js"></script>
+  <script src="../../js/cbp-components-js/toggle.js"></script>
 </body>
 </html>
