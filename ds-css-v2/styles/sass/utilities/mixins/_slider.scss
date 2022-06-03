@@ -1,0 +1,41 @@
+$track-height: 4px;
+$track-width: 100%;
+$track-background-color: $cbp-ui-neutral-light;
+
+$thumb-background-color: $cbp-ui-neutral-dark;
+$thumb-height: 20px;
+$thumb-width: $thumb-height;
+$thumb-margin: (($track-height / 2) - ($thumb-height / 2));
+
+@mixin track {
+  background-color: $track-background-color;
+  border-radius: 2px;
+  height: $track-height;
+  transition: all .2s ease;
+  width: $track-width;
+}
+
+@mixin fill {
+  height: 8px;
+  background: $cbp-selected-dark;
+  border-radius: 4px;
+}
+
+@mixin thumb {
+  background: $thumb-background-color;
+  border: 2px solid #f5f6f7;
+  border-radius: 12px;
+  box-sizing: border-box;
+  cursor: default;
+  height: $thumb-height;
+  width: $thumb-width;
+
+  &:hover {
+    box-shadow: 0 0 0 8px rgba(230, 230, 226, 0.5);
+  }
+}
+
+@mixin thumb-focus {
+  background: $cbp-focus-dark;
+  box-shadow: 0 0 0 8px rgba(190, 50, 208, 0.5);
+}
