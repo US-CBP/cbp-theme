@@ -82,11 +82,40 @@ input[type='range'] {
   }
 
   &:disabled {
-    &::-webkit-slider-thumb,
-    &::-moz-range-thumb,
-    &::-ms-thumb,
-    &::-webkit-slider-runnable-track{
-      cursor: not-allowed;
+    &::-moz-range-track {
+      background-color: $cbp-disabled-light;
+    }
+
+    &::-moz-range-progress {
+      background: $cbp-disabled-dark;
+    }
+
+    &::-moz-range-thumb {
+      background: $cbp-ui-neutral-light;
+    }
+
+    &::-moz-range-thumb:hover {
+      background: $cbp-ui-neutral-darker;
+    }
+
+    &::-moz-range-thumb:focus {
+      @include thumb-focus;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-color: $cbp-disabled-light;
+    }
+
+    &::-webkit-slider-thumb {
+      background: $cbp-ui-neutral-light;
+    }
+
+    &::-webkit-slider-thumb:hover {
+      background: $cbp-ui-neutral-darker;
+    }
+
+    &::-webkit-slider-thumb:focus {
+      @include thumb-focus;
     }
   }
 }
