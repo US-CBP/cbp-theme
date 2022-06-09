@@ -46,6 +46,11 @@
   display: flex;
   flex: 0 1 100%;
   justify-content: flex-start;
+  
+  & > select {
+    all: revert;
+    padding: 8px;
+  }
 }
 
 .cbp-pagination {

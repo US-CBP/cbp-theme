@@ -1,5 +1,8 @@
+.mr-2 {
+  margin-right: 8px;
+}
+
 // CBP Badges
-// .cbp-text-badge,
 .cbp-badge {
   align-items: center;
   background-color: $cbp-info-base;
@@ -10,7 +13,6 @@
   font-size: 10px;
   height: 24px;
   justify-content: center;
-  // padding-top: 7px;
   text-align: center;
   width: 24px;
 
@@ -31,9 +33,10 @@
   height: 28px;
   justify-content: center;
   padding: 0 12px;
+  width: fit-content;
 
-  > i + span {
-    margin-left: 6px;
+  & > i::after {
+    content: '\a0\a0';
   }
 
   &--warning {
@@ -62,11 +65,14 @@
   justify-content: center;
   padding-left: 12px;
   text-transform: uppercase;
+  width: fit-content;
 
   &--active {
     background-color: $cbp-active-dark;
     
-    &:hover { background-color: $cbp-active-dark; }
+    &:hover { 
+      background-color: $cbp-active-dark; 
+    }
 
     & > span + .plus-border {
       transform: rotate(-45deg);

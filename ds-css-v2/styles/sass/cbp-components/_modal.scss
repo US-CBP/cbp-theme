@@ -3,49 +3,6 @@
   display: none;
 }
 
-/* Remove during button fixes */
-.cbp-btn--modal {
-  background-color: #76766A;
-
-  &:hover {
-    background-color: #454540 !important;
-    box-shadow: none !important;
-  }
-
-  &-light {
-    background-color: #5D5D52 !important;
-
-    &:hover {
-      background-color: #454540 !important;
-      box-shadow: none !important;
-    }
-  }
-
-  &-primary {
-    &:hover {
-      background-color: $cbp-ui-primary-darker !important;
-      box-shadow: none !important;
-    }
-
-    &-light {
-      background-color: #2672de !important;
-      
-      &:hover {
-        background-color: $cbp-ui-primary-darker !important;
-        box-shadow: none !important;
-      }
-    }
-  }
-
-  &-danger {
-    background-color: #D54309 !important;
-    &:hover {
-      background-color: #9C3D10 !important;
-      box-shadow: none !important;
-    }
-  }
-}
-
 /* this is added to the body when a dialog is open */
 .has-modal {
   overflow: hidden;
@@ -156,7 +113,7 @@
   // 3 buttons 
   &--triple {
     button {
-      width: auto;
+      width: 100%;
     }
 
     button:first-child {
