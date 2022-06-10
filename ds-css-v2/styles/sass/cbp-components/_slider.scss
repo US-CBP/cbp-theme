@@ -25,14 +25,15 @@
       margin-right: 8px;  
     }
 
-    &:last-child {
-      margin-left: 8px;  
+    &:last-of-type {
+      margin-left: 8px; 
     }
   }
 
   & > .value-slider {
     @extend .cbp-form__input;
     @extend .cbp-form__number;
+    margin-bottom: 0;
     margin-left: 8px;
     width: 40px;
   }

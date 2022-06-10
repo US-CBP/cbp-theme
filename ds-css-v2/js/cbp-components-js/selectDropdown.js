@@ -23,8 +23,6 @@ class EventHandler {
     if (!events.has(type)) {
       throw new Error('Event handler type does not exist')
     }
-
-    console.log(func);
   }
 }
 

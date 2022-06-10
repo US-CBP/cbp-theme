@@ -46,7 +46,7 @@
   }
 
   &:focus:hover + .slider:before {
-    background-color: $cbp-white;
+    background-color: transparent;
   }
 
   &:disabled + .slider {

@@ -54,6 +54,7 @@
   letter-spacing: 0.3px;
   margin-bottom: 16px;
   padding: 0 8px;
+  width: 100%;
 
   &::placeholder {
     font-style: italic;
@@ -159,12 +160,13 @@
   & > div:first-child {
     margin-right: 16px;
     display: flex;
+    width: 100%;
 
     & > input[type=number] {
       border-right: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-      
+      width: 100%;
 
       &:hover {
         border-right: 0 !important;
