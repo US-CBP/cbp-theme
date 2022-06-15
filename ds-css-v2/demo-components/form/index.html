@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="cbp-grid-container">
-    <div class="cbp-row margin-top-10">
+    <div class="cbp-row margin-top-5">
       <div class="cbp-grid-col-full">
         <h1>Form Components</h1>
       </div>
@@ -21,10 +21,10 @@
         <div class="cbp-form-wrapper">
           <label for="firstName" class="cbp-form__label">First Name</label>
           <span class="cbp-form__description">
-            Required. <span id="char-count-2">250</span>/250 Characters remaining.
+            Required. <span id="char-count-2" data-char-counter="true">250</span>/250 Characters remaining.
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-          <input type="text" class="cbp-form__input" name="firstName" id="firstName" maxlength="250" placeholder="Enter first name">
+          <input type="text" class="cbp-form__input" name="firstName" id="firstName" maxlength="250" oninput="countChar('char-count-2', event)" placeholder="Enter first name">
         </div>
       </div>
 
@@ -51,7 +51,7 @@
           <label for="firstName" class="cbp-form__label">Description</label>
           <span class="cbp-form__description">Required. <span id="char-count">500</span>/500 Characters remaining.</span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;You must make a selection</span>
-          <textarea class="cbp-form__textarea" name="description" id="description" cols="30" rows="10" maxlength="500" placeholder="Enter a description"></textarea>
+          <textarea class="cbp-form__textarea" name="description" id="description" cols="30" rows="10" maxlength="500" oninput="countChar('char-count', event)" placeholder="Enter a description"></textarea>
         </div>
       </div>
 
@@ -141,10 +141,10 @@
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
           <div class="cbp-form__number cbp-form__number--counter" id="number-counter">
             <input type="number" name="numeric-counter" id="numeric-counter" placeholder="Enter Number of Fish"></input>
-            <button class="cbp-btn cbp-btn__square cbp-btn__square-secondary">
+            <button class="cbp-btn cbp-btn__square cbp-btn__square-secondary" id="decrement">
               <i class="fas fa-minus"></i>
             </button>
-            <button class="cbp-btn cbp-btn__square cbp-btn__square-secondary">
+            <button class="cbp-btn cbp-btn__square cbp-btn__square-secondary" id="increment">
               <i class="fas fa-plus"></i>
             </button>
           </div>
@@ -204,7 +204,7 @@
       </div>
     </div>
 
-    <!-- <div class="cbp-row">
+    <div class="cbp-row">
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-form-wrapper">
           <label for="number" class="cbp-form__label">Phone Number</label>
@@ -229,7 +229,8 @@
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Phone Number Field</h3>
       </div>
-    </div> -->
+    </div>
+
     <footer class="cbp-footer">
       <span class="font-sans-3xs text-ls-1 text-base-dark">Made with ♥️ by Creative Services</span>
     </footer>
