@@ -144,7 +144,7 @@
           <h4><i class="fas fa-user"></i> User Preferences</h4>
           <div class="cbp-toggle__wrapper">
             <label for="wi-fi" class="cbp-toggle__label">Wi-Fi Connection</label>
-            <label class="cbp-toggle">
+            <label class="cbp-toggle" data-component="cbp-toggle">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
@@ -152,7 +152,7 @@
           </div>
           <div class="cbp-toggle__wrapper">
             <label for="cell-data" class="cbp-toggle__label">Cellular Data</label>
-            <label class="cbp-toggle">
+            <label class="cbp-toggle" data-component="cbp-toggle">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
@@ -160,7 +160,7 @@
           </div>
           <div class="cbp-toggle__wrapper">
             <label for="bluetooth" class="cbp-toggle__label">Bluetooth</label>
-            <label class="cbp-toggle">
+            <label class="cbp-toggle" data-component="cbp-toggle">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
@@ -168,7 +168,7 @@
           </div>
           <div class="cbp-toggle__wrapper">
             <label for="dnd" class="cbp-toggle__label">Do Not Disturb</label>
-            <label class="cbp-toggle">
+            <label class="cbp-toggle" data-component="cbp-toggle">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
@@ -176,7 +176,7 @@
           </div>
           <div class="cbp-toggle__wrapper">
             <label for="airplane-mode" class="cbp-toggle__label">Airplane Mode</label>
-            <label class="cbp-toggle">
+            <label class="cbp-toggle" data-component="cbp-toggle">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
@@ -186,7 +186,7 @@
         <div class="cbp-form__wrapper">
           <div class="cbp-toggle__wrapper">
             <label for="airplane-mode" class="cbp-toggle__label">Night Mode</label>
-            <label class="cbp-toggle demo-toggle" id="demo-toggle">
+            <label class="cbp-toggle demo-toggle" data-component="cbp-toggle">
               <input type="checkbox">
               <span class="slider">
                 <i class="fas fa-moon" style="color: yellow;"></i>
@@ -240,6 +240,27 @@
         <h3>Value Slider</h3>
       </div>
     </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">Volume</label>
+            <div class="cbp-form__control cbp-form__control--range">
+              <span>0</span>
+              <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
+              <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
+              <span>100</span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Range Slider</h3>
+      </div>
+    </div>
+
     <footer class="cbp-footer">
       <span class="font-sans-3xs text-ls-1 text-base-dark">Made with ♥️ by Creative Services</span>
     </footer>
