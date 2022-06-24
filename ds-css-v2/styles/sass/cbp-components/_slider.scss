@@ -1,4 +1,4 @@
-.cbp-form__control--range {
+.cbp-form__control--value {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -30,12 +30,25 @@
     }
   }
 
-  & > .value-slider {
-    @extend .cbp-form__input;
-    @extend .cbp-form__number;
-    margin-bottom: 0;
+  & > .cbp-form__number {
     margin-left: 8px;
-    width: 40px;
+
+    & > input[type='number'] {
+      margin-bottom: unset;
+      width: 40px;
+    }
+  }
+}
+
+.cbp-form__control--range {
+  @extend .cbp-form__control--value;
+  & > .cbp-form__number:first-child {
+    margin-right: 8px;
+
+    & > input[type='number'] {
+      margin-bottom: unset;
+      width: 40px;
+    }
   }
 }
 
@@ -46,6 +59,8 @@ input[type='range'] {
   cursor: pointer;
   margin: 0;
   width: 100%;
+  grid-column: 1;
+  grid-row: 2;
 
   &::-moz-focus-outer {
     border: 0;
@@ -140,4 +155,18 @@ input[type='range'] {
       @include thumb-focus;
     }
   }
+}
+
+.range-wrapper {
+  display: grid;
+  grid-template-rows: max-content 1em;
+  margin: 1em auto;
+  width: 20em;
+  overflow: hidden;
+  position: relative;
+}
+
+.sr-only {
+  position: absolute;
+  clip-path: inset(50%);
 }

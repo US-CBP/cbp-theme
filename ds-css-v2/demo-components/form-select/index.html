@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CBP Theme Boilerplate</title>
   <link rel="stylesheet" href="../../dist/styles.css">
-  <!-- Font awesome loaded locally from assets-->
   <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
 
 </head>
@@ -67,10 +66,83 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>CBP Dropdown*</h3>
-        <!-- This dropdown uses special classes to create a custom look & feel while doing its best
-        to remain fully accessible to use. You will have to use your own code to make it work with
-        your form as this dropdown has it own JS to open and close. Selection to any data source/form 
-        needs custom even handlers that fits to your use.  -->
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="pod2" class="cbp-form__label">Port(s) of Departure</label>
+          <span class="cbp-form__description">
+            Required.
+          </span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-dropdown-wrapper">
+            <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">
+              <span class="cbp-dropdown__placeholder">Choose Ports</span>
+              <div class="cbp-chips margin-right-1">
+                <span>1</span>
+                <div class="plus-border">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <div class="cbp-chips margin-right-1">
+                <span>4</span>
+                <div class="plus-border">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+              <div class="cbp-chips margin-right-1">
+                <span>11</span>
+                <div class="plus-border">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+            </button>
+            <div class="cbp-dropdown" id="custom-dropdown-menu">
+              <label for="baltimore" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="baltimore" id="baltimore">
+                Port of Balitmore
+              </label>
+              <label for="newark" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="newark" id="newark">
+                Port of Newark
+              </label>
+              <label for="washington" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="washington" id="washington">
+                Port of Washington
+              </label>
+              <label for="zoolily" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="zoolily" id="zoolily">
+                Port of Zoolily
+              </label>
+              <label for="boston" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="boston" id="boston">
+                Port of Boston
+              </label>
+              <label for="san-ysidro" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="san-ysidro" id="san-ysidro">
+                Port of San Ysidro
+              </label>
+              <label for="san-diego" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="san-diego" id="san-diego">
+                Port of San Diego
+              </label>
+              <label for="rhode-island" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="rhode-island" id="rhode-island">
+                Port of Rhode Island
+              </label>
+              <label for="galveston" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" name="galveston" id="galveston">
+                Port of Galveston
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>CBP Multi-Select Dropdown*</h3>
       </div>
     </div>
   </div>

@@ -8,4 +8,3 @@ valueSlider.addEventListener('input', (e) => {
 
   vsInput.value = value;
 })
-

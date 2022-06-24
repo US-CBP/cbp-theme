@@ -1,56 +1,43 @@
 const dropdowns = document.querySelectorAll('[data-toggle="dropdown"]')
-const ENTER_KEY = "Enter";
-const ESCAPE_KEY = "Escape";
-const KEY_UP = "ArrowUp";
-const KEY_DOWN = "ArrowDown";
 
-const events = new Set([
-  'click',
-  'keydown',
+class FocusTrap {
+  static goToFirst(menuNode) {
+    const firstItem = menuNode.item(0);
+    firstItem.focus();
+  };
+  static goToLast(menuNode) {
+    const lastItem = menuNode.item(menuNode.length - 1);
+    lastItem.focus();
+  };
+}
+
+const KEY_EVENTS = new Set([
+  "Enter",
+  "Escape",
+  "ArrowUp",
+  "ArrowDown"
 ])
-
-/** Class representing Event Handler */
-class EventHandler {
-  static on(type, func) {
-    this.addHandler(type, func);
-  }
-
-  /**
-   * @param {string} type 
-   * @returns element with attached event handler
-   */
-  static addHandler(type, func = {}) {
-    if (!events.has(type)) {
-      throw new Error('Event handler type does not exist')
-    }
-  }
-}
-
-class SelectorEngine {
-  static findAll (selector) {
-    return document.querySelectorAll(selector);
-  }
-}
-
-/** Class representing a dropdown menu. */
 class Dropdown {
-  /**
-   * Create a dropdown menu and toggle.
-   * @constructor
-   * @param {string} dropdownId
-   */
-  constructor(dropdownId) {
-    this.selection = [];
-    this.dropdownNode = document.getElementById(dropdownId);
+  constructor(domNode) {
+    this.dropdownNode = domNode;
     this.dropdownMenuNode = this.dropdownNode.nextElementSibling;
     this.menuItems = this.dropdownMenuNode.children;
+
+    this.dropdownNode.addEventListener('click', () => {
+      this.toggle()
+    });
+    
+    this.dropdownNode.addEventListener('keydown', e => this.onKeydown(e, this.menuItems));
+
+    this.addListeners(this.menuItems);
   }
 
-  /**
-   * Open/close dropdown menu
-   */
   toggle() {
     this.dropdownNode.classList.toggle("cbp-dropdown--open");
+  }
+
+  isOpen() {
+    return this.dropdownNode.classList.contains('cbp-dropdown--open')
   }
 
   close() {
@@ -59,67 +46,53 @@ class Dropdown {
     }
   }
 
-  isOpen() {
-    return this.dropdownNode.classList.contains('cbp-dropdown--open')
+  onKeydown(event, menuItems) {
+    if (event.key === "Enter" && KEY_EVENTS.has(event.key)) {
+      event.preventDefault();
+      this.toggle();
+    }
+
+    if (event.key === "Escape" && KEY_EVENTS.has(event.key)) {
+      event.preventDefault();
+      this.handleEscape(event);
+    }
+
+    if (event.key === "ArrowUp" && KEY_EVENTS.has(event.key)) {
+      event.preventDefault();
+      FocusTrap.goToLast(menuItems);
+    }
+
+    if (event.key === "ArrowDown" && KEY_EVENTS.has(event.key)) {
+      event.preventDefault();
+      FocusTrap.goToFirst(menuItems);
+    }
+  }
+
+  handleEscape(e) {
+    const key = e.key === "Escape" || e.code === "Escape";
+
+    if (key && this.close()) {
+      e.stopPropagation();
+    }
+  }
+
+  addListeners(menuItems) {
+    for (const item of menuItems) {
+      item.addEventListener('keydown', e => {
+        console.log(e.key);
+      })
+    }
+  }
+
+  trapFocus(event, menuItems) {
+    FocusTrap.goToFirst(menuItems);
   }
 }
 
-// On click instantiate a dropdown
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', () => {
-    const drp = new Dropdown(dropdown.id);
-    drp.toggle();
-  })
-})
-
-// On Enter instantiate a dropdown
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('keydown', (e) => {
-    e.preventDefault();
-    if (e.key === "Enter") {
-      const drp = new Dropdown(dropdown.id);
-      drp.toggle();
-    }
-  })
-})
-
-// On Key Up instantiate a dropdown
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('keydown', (e) => {
-    e.preventDefault();
-    if (e.key === KEY_UP) {
-      const drp = new Dropdown(dropdown.id);
-      drp.toggle();
-    }
-  })
-})
-
-// On Key Down instantiate a dropdown
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('keydown', (e) => {
-    e.preventDefault();
-    if (e.key === KEY_DOWN) {
-      const drp = new Dropdown(dropdown.id);
-      drp.toggle();
-    }
-  })
-})
-
-// On Escape close dropdown
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('keydown', (e) => {
-    e.preventDefault();
-    if (e.key === ESCAPE_KEY) {
-      const drp = new Dropdown(dropdown.id);
-      drp.close();
-    }
-  })
-})
-
+const addOrInstantiate = (Klass, node) => {
+  return new Klass(node)
+}
 
 dropdowns.forEach(dropdown => {
-  console.log("instance created!");
-  return new Dropdown(dropdown.id);
+  addOrInstantiate(Dropdown, dropdown)
 })
-
-EventHandler.on('click');

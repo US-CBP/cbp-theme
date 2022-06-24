@@ -1,10 +1,18 @@
 const accordionBtn = document.querySelectorAll('.cbp-accordion__title');
 
-accordionBtn.forEach( btn => {
-  btn.addEventListener('click', (e) => {
-    /* Accordion Parent */
-    let accordionParent = e.target.closest('.cbp-accordion__item');
+class Accordion {
+  constructor(domNode) {
+    this.accordionNode = domNode;
 
-    accordionParent.classList.toggle('active');
-  })
+    this.accordionNode.addEventListener('click', this.toggle)
+  }
+
+  toggle(event) {
+    const wrapper = event.target.closest('.cbp-accordion__item');
+    wrapper.classList.toggle('active');
+  }
+}
+
+accordionBtn.forEach(btn => {
+  new Accordion(btn);
 })

@@ -101,6 +101,15 @@
   z-index: 1;
 }
 
+.cbp-dropdown__placeholder {
+  display: none;
+}
+
+.cbp-dropdown__custom .cbp-chips {
+  font-size: 12px;
+  height: 20px;
+}
+
 /* Dropdown Menu Component */
 .cbp-dropdown {
   background-color: $cbp-white;
@@ -183,6 +192,55 @@
       border-bottom: 0;
       height: 0;
     }
+  }
+}
+
+.cbp-dropdown__item--multiselect {
+  & > input[type="checkbox"] {
+    @extend .cbp-form__checkbox;
+    border-radius: 12px;
+
+    &:hover:not([disabled]) {
+      background-color: inherit;
+      border-color: $cbp-ui-neutral-lighter;
+      box-shadow: initial;
+      clip-path: initial;
+    }
+
+    &:checked {
+      &:hover {
+        background-color: $cbp-selected-light;
+
+        &::before {
+          border-right: 3px solid $cbp-text-darkest;
+          border-bottom: 3px solid $cbp-text-darkest;
+          height: 70%;
+          width: 30%;
+          transform: rotate(45deg) translateY(-10%) translateX(-10%);
+        }
+      }
+    }
+
+    &:focus {
+      border: 2px solid $cbp-ui-neutral-lighter;
+      box-shadow: initial;
+      clip-path: initial;
+      outline: 0 !important; // Overriding style from _focus.scss??
+  
+      &:hover:not([disabled]) {
+        box-shadow: initial;
+        clip-path: initial;
+      }
+    }
+  }
+
+  &::after {
+    all: initial;
+  }
+
+  &:focus-within {
+    background-color: $cbp-focus-dark;
+    color: $cbp-text-lighter;
   }
 }
 

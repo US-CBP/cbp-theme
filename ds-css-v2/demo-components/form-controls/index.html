@@ -225,12 +225,14 @@
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <form action="submit">
           <div class="cbp-form-wrapper">
-            <label for="number" class="cbp-form__label">Volume</label>
+            <label for="number" class="cbp-form__label">How many turnips you want?</label>
             <div class="cbp-form__control cbp-form__control--range">
               <span>0</span>
               <input type="range" name="value-slider" id="value-slider" max="100" min="0" value="15">
               <span>100</span>
-              <input type="number" class="value-slider" name="value-slider-input" id="value-slider-input" value="15">
+              <div class="cbp-form__number">
+                <input type="number" class="value-slider" name="value-slider-input" id="value-slider-input" value="15">
+              </div>
             </div>
           </div>
         </form>
@@ -245,12 +247,20 @@
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <form action="submit">
           <div class="cbp-form-wrapper">
-            <label for="number" class="cbp-form__label">Volume</label>
+            <label for="number" class="cbp-form__label">Price Range for Turnips</label>
             <div class="cbp-form__control cbp-form__control--range">
+              <div class="cbp-form__number">
+                <input type="number" name="lower-range" id="lower-range" value="25">
+              </div>
               <span>0</span>
-              <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
-              <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
+              <div class="range-wrapper">
+                <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
+                <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
+              </div>
               <span>100</span>
+              <div class="cbp-form__number">
+                <input type="number" name="upper-range" id="upper-range" value="75">
+              </div>
             </div>
           </div>
         </form>
