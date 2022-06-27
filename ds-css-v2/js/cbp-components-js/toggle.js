@@ -1,5 +1,3 @@
-import { SelectorEngine } from '../utilities/selectorEngine';
-
 class Toggle {
   constructor(node) {
     this.node = node; // Toggle wrapper
@@ -44,10 +42,14 @@ class Toggle {
   }
 }
 
-window.addEventListener("load", () => {
-  const allToggles = SelectorEngine.getNodes('[data-component="cbp-toggle"]');
+class SelectorEngine {
+  static findAll(selector) {
+    return document.querySelectorAll(selector);
+  }
+}
 
-  allToggles.forEach((toggle) => {
+window.addEventListener("load", () => {
+  SelectorEngine.findAll('[data-component="cbp-toggle"]').forEach((toggle) => {
     new Toggle(toggle);
   });
 });
