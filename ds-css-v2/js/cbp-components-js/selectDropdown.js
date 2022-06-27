@@ -1,22 +1,59 @@
-const dropdowns = document.querySelectorAll('[data-toggle="dropdown"]')
-
-class FocusTrap {
-  static goToFirst(menuNode) {
-    const firstItem = menuNode.item(0);
-    firstItem.focus();
-  };
-  static goToLast(menuNode) {
-    const lastItem = menuNode.item(menuNode.length - 1);
-    lastItem.focus();
-  };
-}
-
 const KEY_EVENTS = new Set([
   "Enter",
   "Escape",
   "ArrowUp",
   "ArrowDown"
 ])
+
+class DropdownUtil {
+  static openMenus = [];
+}
+class FocusTrap {
+
+  /* Return currently open menu */
+  static getCurrentMenu(openMenus) {
+    return openMenus[openMenus.length - 1];
+  }
+
+  /* Check menu for focusable elements */
+  static isFocusable(element) {
+    if (element.tabIndex < 0) {
+      return false;
+    }
+
+    if (element.disabled) {
+      return false;
+    }
+
+    switch (element.nodeName) {
+      case "A":
+        return !!element.href && element.rel != "ignore";
+      case "INPUT":
+        return element.type != "hidden";
+      case "BUTTON":
+      case "SELECT":
+      case "TEXTAREA":
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  static goToFirst(menuNode) {
+    const firstItem = menuNode.item(0);
+    firstItem.focus();
+  };
+
+  static goToLast(menuNode) {
+    const lastItem = menuNode.item(menuNode.length - 1);
+    lastItem.focus();
+  };
+}
+
+const focusTrap = openMenu => {
+  return true;
+}
+
 class Dropdown {
   constructor(domNode) {
     this.dropdownNode = domNode;
@@ -93,6 +130,12 @@ const addOrInstantiate = (Klass, node) => {
   return new Klass(node)
 }
 
-dropdowns.forEach(dropdown => {
+class SelectorEngine {
+  static findAll(selector) {
+    return document.querySelectorAll(selector);
+  }
+}
+
+SelectorEngine.findAll('[data-toggle="dropdown"]').forEach(dropdown => {
   addOrInstantiate(Dropdown, dropdown)
 })
