@@ -110,3 +110,35 @@ select {
     border: 2px solid $cbp-focus-dark;
   }
 }
+
+.select-wrapper--disabled {
+  & > select {
+    background: linear-gradient(to right, $cbp-disabled-light calc(100% - 34px), transparent 0);
+    border: 1px solid $cbp-disabled-dark;
+    color: $cbp-disabled-dark;
+    font-style: italic;
+
+    &:hover {
+      border: 2px solid $cbp-ui-neutral-darker;
+    }
+
+    &:focus {
+      background: linear-gradient(to right, $cbp-disabled-light calc(100% - 34px), transparent 0);
+      border: 2px solid $cbp-focus-dark;
+    }
+
+    &::placeholder {
+      color: $cbp-disabled-light;
+    }
+  }
+
+  &::after {
+    background-color: $cbp-disabled-dark;
+    border: 2px solid $cbp-disabled-dark;
+  }
+
+  &:hover::after {
+    background-color: $cbp-ui-neutral-darker;
+    border: 2px solid $cbp-ui-neutral-darker;
+  }
+}

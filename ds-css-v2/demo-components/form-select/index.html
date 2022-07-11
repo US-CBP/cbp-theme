@@ -21,8 +21,9 @@
             Required.
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-          <div class="select-wrapper">
+          <div class="select-wrapper" id="dropdown-demo-1">
             <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port">
+              <option value="">Choose Port</option>
               <option value="baltimore">Port of Baltimore</option>
               <option value="newark">Port of Newark</option>
               <option value="washington">Port of Washington</option>
@@ -36,6 +37,14 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>CBP Select Field</h3>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable1" id="disable1" onchange="disableSelect(event, 'dropdown-demo-1')">
+          <label for="disable1">Disable</label>
+        </div>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="error1" id="error1" onchange="addError(event, 'dropdown-demo-1')">
+          <label for="error1">Error</label>
+        </div>
       </div>
     </div>
 
@@ -47,10 +56,10 @@
             Required.
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-          <div class="cbp-dropdown-wrapper">
+          <div class="cbp-dropdown-wrapper" id="dropdown-demo-2">
             <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">Choose Port</button>
             <div class="cbp-dropdown" id="custom-dropdown-menu">
-              <a href="#" class="cbp-dropdown__item">Port of Baltimore</a>
+              <a href="www.google.com" class="cbp-dropdown__item">Port of Baltimore</a>
               <a href="#" class="cbp-dropdown__item">Port of Newark</a>
               <a href="#" class="cbp-dropdown__item">Port of Washington</a>
               <a href="#" class="cbp-dropdown__item">Port of Zoolily</a>
@@ -66,6 +75,14 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>CBP Dropdown*</h3>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable2" id="disable2" onchange="disableSelect(event, 'dropdown-demo-2', true)">
+          <label for="disable2">Disable</label>
+        </div>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="error2" id="error2" onchange="addError(event, 'dropdown-demo-2', true)">
+          <label for="error2">Error</label>
+        </div>
       </div>
     </div>
 
@@ -77,63 +94,45 @@
             Required.
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-          <div class="cbp-dropdown-wrapper">
-            <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">
+          <div class="cbp-dropdown-wrapper" id="dropdown-demo-3">
+            <button class="cbp-dropdown__custom" id="ports-dropdown" data-toggle="dropdown">
               <span class="cbp-dropdown__placeholder">Choose Ports</span>
-              <div class="cbp-chips margin-right-1">
-                <span>1</span>
-                <div class="plus-border">
-                  <i class="fas fa-times"></i>
-                </div>
-              </div>
-              <div class="cbp-chips margin-right-1">
-                <span>4</span>
-                <div class="plus-border">
-                  <i class="fas fa-times"></i>
-                </div>
-              </div>
-              <div class="cbp-chips margin-right-1">
-                <span>11</span>
-                <div class="plus-border">
-                  <i class="fas fa-times"></i>
-                </div>
-              </div>
             </button>
             <div class="cbp-dropdown" id="custom-dropdown-menu">
-              <label for="baltimore" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="baltimore" id="baltimore">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="22">
                 Port of Balitmore
               </label>
-              <label for="newark" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="newark" id="newark">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="82">
                 Port of Newark
               </label>
-              <label for="washington" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="washington" id="washington">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="11">
                 Port of Washington
               </label>
-              <label for="zoolily" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="zoolily" id="zoolily">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="667">
                 Port of Zoolily
               </label>
-              <label for="boston" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="boston" id="boston">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="2">
                 Port of Boston
               </label>
-              <label for="san-ysidro" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="san-ysidro" id="san-ysidro">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="65">
                 Port of San Ysidro
               </label>
-              <label for="san-diego" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="san-diego" id="san-diego">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="87">
                 Port of San Diego
               </label>
-              <label for="rhode-island" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="rhode-island" id="rhode-island">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="998">
                 Port of Rhode Island
               </label>
               <label for="galveston" class="cbp-dropdown__item cbp-dropdown__item--multiselect">
-                <input type="checkbox" name="galveston" id="galveston">
+                <input type="checkbox" value="423">
                 Port of Galveston
               </label>
             </div>
@@ -143,6 +142,14 @@
 
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>CBP Multi-Select Dropdown*</h3>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable3" id="disable3"  onchange="disableSelect(event, 'dropdown-demo-3', true)">
+          <label for="disable3">Disable</label>
+        </div>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="error3" id="error3" onchange="addError(event, 'dropdown-demo-3', true)">
+          <label for="error3">Error</label>
+        </div>
       </div>
     </div>
   </div>
@@ -152,5 +159,6 @@
   <!-- JS for dropdowns -->
   <script src="../../js/universalHeader.js"></script>
   <script src="../../js/cbp-components-js/selectDropdown.js"></script>
+  <script src="../../js/utilities/demo.js"></script>
 </body>
 </html>

@@ -2,9 +2,7 @@
   position: relative;
 }
 
-/* 
-  Dropdown Component
-*/
+/* Dropdown Button */
 .cbp-dropdown__custom {
   align-items: center;
   background-color: transparent;
@@ -22,64 +20,41 @@
   position: relative;
   width: 100%;
 
-  /* Custom Dropdown Error State */
-  &--error {
-    background-color: $cbp-ui-danger-lighter;
-    border: 2px solid $cbp-danger;
+  &:hover {
+    border: 2px solid $cbp-ui-neutral-darker;
+    border-right: 0;
+  }
+  
+  &:hover::after {
+    background-color: $cbp-ui-neutral-darker;
+    border: 2px solid $cbp-ui-neutral-darker;
+  }
+
+  &:disabled {
+    border: 1px solid $cbp-disabled-dark;
+    background-color: $cbp-disabled-light;
+    color: $cbp-disabled-dark;
+    font-style: italic;
 
     &::after {
-      border: 2px solid $cbp-ui-danger-base;
-      background-color: $cbp-danger;
+      background-color: $cbp-disabled-dark;
+      border-color: $cbp-disabled-dark;
+      font-style: initial;
     }
 
     &:hover {
-      border: 2px solid $cbp-ui-danger-dark;
-
-      &::after {
-        border: 2px solid $cbp-ui-danger-dark;
-        background-color: $cbp-ui-danger-dark;
-      }
+      border: 2px solid $cbp-ui-neutral-darker;
+      border-right: 0;
     }
 
-    &:focus:not([disabled]) {
-      border: 2px solid $cbp-focus-dark;
-      outline: 0;
-
-      &::after {
-        border: inherit;
-        background-color: $cbp-focus-dark;
-      }
-    }
-
-    & + .cbp-dropdown {
-      background-color: $cbp-ui-danger-lighter;
-      border: 2px solid $cbp-danger;
-      border-top: 0;
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
-
-      &:hover {
-        border-top: 0;
-      }
-
-      &:focus {
-        border: 2px solid $cbp-focus-dark;
-        border-top: 0;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-        outline: 0;
-      }
-    }
-
-    /* Caret Button */
-    &::after {
-      background-color: $cbp-danger;
-      border: 2px solid $cbp-danger;
+    &:disabled:hover::after {
+      background-color: $cbp-ui-neutral-darker;
+      border: 2px solid $cbp-ui-neutral-darker;
     }
   }
 }
 
-/* Down Caret "Button */
+/* Down Caret */
 .cbp-dropdown__custom::after {
   align-items: center;
   background-color: $cbp-ui-neutral-base;
@@ -102,7 +77,7 @@
 }
 
 .cbp-dropdown__placeholder {
-  display: none;
+  display: block;
 }
 
 .cbp-dropdown__custom .cbp-chips {
@@ -110,7 +85,7 @@
   height: 20px;
 }
 
-/* Dropdown Menu Component */
+/* Dropdown Menu */
 .cbp-dropdown {
   background-color: $cbp-white;
   border: 1px solid $cbp-ui-neutral-base;
@@ -244,6 +219,68 @@
   }
 }
 
+/* Custom Dropdown Error State */
+.cbp-dropdown__custom--error {
+  background-color: $cbp-ui-danger-lighter;
+  border-left: 2px solid $cbp-ui-danger-base;
+  border-right: 0;
+  border-top: 2px solid $cbp-ui-danger-base;
+  border-bottom: 2px solid $cbp-ui-danger-base;
+
+  &::after {
+    border: 2px solid $cbp-ui-danger-base !important;
+    background-color: $cbp-ui-danger-base !important;
+  }
+
+  &:hover {
+    border-left: 2px solid $cbp-ui-danger-dark;
+    border-right: 0;
+    border-top: 2px solid $cbp-ui-danger-dark;
+    border-bottom: 2px solid $cbp-ui-danger-dark;
+
+    &::after {
+      border: 2px solid $cbp-ui-danger-dark !important;
+      background-color: $cbp-ui-danger-dark !important;
+    }
+  }
+
+  &:focus:not([disabled]) {
+    border: 2px solid $cbp-focus-dark;
+    outline: 0;
+
+    &::after {
+      border: 2px solid $cbp-focus-dark !important;
+      background-color: $cbp-focus-dark !important;
+    }
+  }
+
+  & + .cbp-dropdown {
+    background-color: $cbp-ui-danger-lighter;
+    border: 2px solid $cbp-danger;
+    border-top: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &:hover {
+      border-top: 0;
+    }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+      border-top: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      outline: 0;
+    }
+  }
+
+  /* Caret Button */
+  &::after {
+    background-color: $cbp-danger;
+    border: 2px solid $cbp-danger;
+  }
+}
+
 /* Open Custom Dropdown */
 .cbp-dropdown--open {
   border-bottom-left-radius: 0px;
@@ -255,28 +292,16 @@
   }
 }
 
-/* Hover State */
-.cbp-dropdown__custom:hover {
-  border: 2px solid $cbp-ui-neutral-darker;
-  border-right: 0;
-}
-
-/* Hover over error custom select, apply hover to dropdown menu */
-.cbp-dropdown__custom--error:hover + .cbp-dropdown {
-  border: 2px solid $cbp-ui-danger-dark;
-  border-top: 0;
-}
-
 /* When hover over custom select, apply hover to dropdown menu */
 .cbp-dropdown__custom:hover + .cbp-dropdown {
   border: 2px solid $cbp-ui-neutral-darker;
   border-top: 0;
 }
 
-/* Hover Caret State */
-.cbp-dropdown__custom:hover::after {
-  background-color: $cbp-ui-neutral-darker;
-  border: 2px solid $cbp-ui-neutral-darker;
+/* Hover over error custom select, apply hover to dropdown menu */
+.cbp-dropdown__custom--error:hover + .cbp-dropdown {
+  border: 2px solid $cbp-ui-danger-dark;
+  border-top: 0;
 }
 
 /* Focus State */
