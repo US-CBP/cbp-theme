@@ -89,10 +89,10 @@ class Dropdown {
   }
 
   handleClick(e, dropdown) {
-    const target = e.target;
+    const { target } = e;
     e.preventDefault();
-    if (e.target != this.dropdownNode) {
-      this.handleChips(e);
+    if (target != this.dropdownNode) {
+      this.handleChips(target.closest('.cbp-chips'));
     } else {
       this.toggle(dropdown)
     }
@@ -207,6 +207,12 @@ class Dropdown {
     if (allChips.length == 0) {
       this.dropdownNode.appendChild(this.placeHolder);
     }
+  }
+
+  handleChips(parentChip) {
+    const chipVal = parentChip.querySelector('span').innerHTML;
+    this.chips = this.chips.filter(item => item != chipVal);
+    this.updateChips(this.chips);
   }
 }
 
