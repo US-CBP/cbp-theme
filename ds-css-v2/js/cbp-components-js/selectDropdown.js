@@ -20,7 +20,7 @@ const util = {
       return true;
     }
     return false;
-  }
+  },
 };
 class SelectorEngine {
   static findAll(selector) {
@@ -32,9 +32,12 @@ class Dropdown {
   constructor(domNode) {
     this.dropdownNode = domNode;
     this.dropdownMenuNode = this.dropdownNode.nextElementSibling;
+    this.selected;
     this.menuItems = this.dropdownMenuNode.children;
     this.chips = [];
-    this.placeHolder = this.dropdownNode.querySelector('.cbp-dropdown__placeholder');
+    this.placeHolder = this.dropdownNode.querySelector(
+      ".cbp-dropdown__placeholder"
+    );
 
     this.dropdownNode.addEventListener("click", (e) => {
       this.handleClick(e, this);
@@ -48,8 +51,11 @@ class Dropdown {
   }
 
   isOpen() {
-    const { getCurrentMenu } = util
-    return typeof getCurrentMenu() != "undefined" && getCurrentMenu().dropdownNode.classList.contains('cbp-dropdown--open')
+    const { getCurrentMenu } = util;
+    return (
+      typeof getCurrentMenu() != "undefined" &&
+      getCurrentMenu().dropdownNode.classList.contains("cbp-dropdown--open")
+    );
   }
 
   close() {
@@ -57,13 +63,17 @@ class Dropdown {
       util.getCurrentMenu().dropdownNode.classList.remove("cbp-dropdown--open");
       util.openDropdowns.pop();
       this.dropdownNode.focus();
-      window.removeEventListener('click', this.handleOutsideClick, true)
+      window.removeEventListener("click", this.handleOutsideClick, true);
     }
   }
 
   handleOutsideClick(e) {
-    const isMultiChoice = e.target.classList.contains('cbp-dropdown__item--multiselect') || e.target.type === 'checkbox';
-    const insideClick = e.target.classList.contains('cbp-dropdown__custom') || e.target.classList.contains('cbp-dropdown__item');
+    const isMultiChoice =
+      e.target.classList.contains("cbp-dropdown__item--multiselect") ||
+      e.target.type === "checkbox";
+    const insideClick =
+      e.target.classList.contains("cbp-dropdown__custom") ||
+      e.target.classList.contains("cbp-dropdown__item");
     if (insideClick || isMultiChoice) {
       return;
     } else {
@@ -75,13 +85,13 @@ class Dropdown {
     if (typeof util.getCurrentMenu() === "undefined") {
       util.openDropdowns.push(dropdown);
       util.getCurrentMenu().dropdownNode.classList.add("cbp-dropdown--open");
-      window.addEventListener('click', this.handleOutsideClick, true)
+      window.addEventListener("click", this.handleOutsideClick, true);
     } else if (dropdown.dropdownNode != util.getCurrentMenu().dropdownNode) {
       util.getCurrentMenu().close();
       util.openDropdowns.pop();
       util.openDropdowns.push(dropdown);
       util.getCurrentMenu().dropdownNode.classList.add("cbp-dropdown--open");
-      window.addEventListener('click', this.handleOutsideClick, true)
+      window.addEventListener("click", this.handleOutsideClick, true);
     } else {
       util.getCurrentMenu().close();
       util.openDropdowns.pop();
@@ -92,9 +102,9 @@ class Dropdown {
     const { target } = e;
     e.preventDefault();
     if (target != this.dropdownNode) {
-      this.handleChips(target.closest('.cbp-chips'));
+      this.handleChips(target.closest(".cbp-chips"));
     } else {
-      this.toggle(dropdown)
+      this.toggle(dropdown);
     }
   }
 
@@ -107,7 +117,7 @@ class Dropdown {
 
     if (e.key === "Enter" && KEY_EVENTS.has(e.key)) {
       e.preventDefault();
-      this.toggle(dropdown)
+      this.toggle(dropdown);
     }
 
     if (e.key === "ArrowUp" && KEY_EVENTS.has(e.key)) {
@@ -124,7 +134,7 @@ class Dropdown {
   handleMenuItems(items, dropdown) {
     for (let i = 0; i < items.length; i++) {
       const element = items[i];
-      element.addEventListener('keydown', (e) => {
+      element.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && KEY_EVENTS.has(e.key)) {
           e.preventDefault();
           this.close();
@@ -132,62 +142,68 @@ class Dropdown {
 
         if (e.key === "Enter" && KEY_EVENTS.has(e.key)) {
           e.preventDefault();
-          this.toggle(dropdown)
+          this.toggle(dropdown);
         }
 
         if (e.key === "ArrowUp" && KEY_EVENTS.has(e.key)) {
           e.preventDefault();
           const prevEl = items[i - 1];
-          if (typeof prevEl === 'undefined') {
+          if (typeof prevEl === "undefined") {
             return;
           }
           prevEl.focus();
         }
-    
+
         if (e.key === "ArrowDown" && KEY_EVENTS.has(e.key)) {
           e.preventDefault();
           const nextEl = items[i + 1];
-          if (typeof nextEl === 'undefined') {
+          if (typeof nextEl === "undefined") {
             return;
           }
           nextEl.focus();
         }
-      })
+      });
     }
 
     for (let i = 0; i < items.length; i++) {
       const element = items[i];
-      element.addEventListener('click', (e) => {
-        if (e.target.nodeName === 'A') {
+      element.addEventListener("click", (e) => {
+        if (e.target.nodeName === "A") {
+          this.selected = e.target.innerHTML;
+          if (typeof this.selected != undefined) {
+            this.dropdownNode.innerHTML = this.selected;
+          }
           util.getCurrentMenu().close();
         }
-      })
+      });
     }
 
     for (let i = 0; i < items.length; i++) {
       const element = items[i];
 
-      element.addEventListener('change', (e) => {
+      element.addEventListener("change", (e) => {
         const selectedIndex = i + 1;
         if (element.firstElementChild.checked) {
           this.chips.push(element.firstElementChild.value);
           this.updateChips(this.chips);
         } else {
-          this.chips = this.chips.filter(val => val != element.firstElementChild.value);
+          this.chips = this.chips.filter(
+            (val) => val != element.firstElementChild.value
+          );
           this.updateChips(this.chips);
         }
-      })
+      });
     }
   }
 
   createChip(val) {
-    const chip = document.createElement('div');
-    const text = document.createElement('span');
-    const iconWrapper = document.createElement('div');
-    const icon = document.createElement('i');
-    chip.className = 'cbp-chips margin-right-1';
-    iconWrapper.className = 'plus-border';
-    icon.className = 'fas fa-times';
+    const chip = document.createElement("div");
+    const text = document.createElement("span");
+    const iconWrapper = document.createElement("div");
+    const icon = document.createElement("i");
+    chip.className = "cbp-chips margin-right-1";
+    iconWrapper.className = "plus-border";
+    icon.className = "fas fa-times";
 
     chip.appendChild(text);
     chip.appendChild(iconWrapper);
@@ -198,11 +214,11 @@ class Dropdown {
   }
 
   updateChips(allChips) {
-    this.dropdownNode.innerHTML = '';
-    allChips.forEach(val => {
+    this.dropdownNode.innerHTML = "";
+    allChips.forEach((val) => {
       const chip = this.createChip(val);
       this.dropdownNode.appendChild(chip);
-    })
+    });
 
     if (allChips.length == 0) {
       this.dropdownNode.appendChild(this.placeHolder);
@@ -210,8 +226,8 @@ class Dropdown {
   }
 
   handleChips(parentChip) {
-    const chipVal = parentChip.querySelector('span').innerHTML;
-    this.chips = this.chips.filter(item => item != chipVal);
+    const chipVal = parentChip.querySelector("span").innerHTML;
+    this.chips = this.chips.filter((item) => item != chipVal);
     this.updateChips(this.chips);
   }
 }

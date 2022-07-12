@@ -52,6 +52,12 @@
       border: 2px solid $cbp-ui-neutral-darker;
     }
   }
+
+  &:disabled .cbp-chips {
+    background-color: $cbp-disabled-dark;
+    color: $cbp-disabled-light;
+    font-style: normal;
+  }
 }
 
 /* Down Caret */
