@@ -22,6 +22,11 @@ select {
   &:focus:not([disabled]) {
     outline: 0;
   }
+
+  &:invalid {
+    color: $cbp-text-dark;
+    font-style: italic;
+  }
 }
 
 /* Down Caret "Button */
@@ -129,6 +134,7 @@ select {
 
     &::placeholder {
       color: $cbp-disabled-light;
+      font-style: italic;
     }
   }
 

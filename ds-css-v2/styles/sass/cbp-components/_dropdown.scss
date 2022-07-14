@@ -83,7 +83,9 @@
 }
 
 .cbp-dropdown__placeholder {
+  color: $cbp-text-dark;
   display: block;
+  font-style: italic;
 }
 
 .cbp-dropdown__custom .cbp-chips {
@@ -295,6 +297,10 @@
   & + .cbp-dropdown {
     border-top: 0;
     display: block !important;
+  }
+
+  &::after {
+    content: '\f106';
   }
 }
 

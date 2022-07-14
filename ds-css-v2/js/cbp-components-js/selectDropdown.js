@@ -1,4 +1,4 @@
-const KEY_EVENTS = new Set(["Enter", "Escape", "ArrowUp", "ArrowDown"]);
+const KEY_EVENTS = new Set(["Enter", "Escape", "ArrowUp", "ArrowDown", "Tab"]);
 
 const util = {
   openDropdowns: [],
@@ -33,11 +33,10 @@ class Dropdown {
     this.dropdownNode = domNode;
     this.dropdownMenuNode = this.dropdownNode.nextElementSibling;
     this.selected;
+    this.selectionCount = 0;
     this.menuItems = this.dropdownMenuNode.children;
     this.chips = [];
-    this.placeHolder = this.dropdownNode.querySelector(
-      ".cbp-dropdown__placeholder"
-    );
+    this.placeHolder = this.dropdownNode.querySelector(".cbp-dropdown__placeholder");
 
     this.dropdownNode.addEventListener("click", (e) => {
       this.handleClick(e, this);
@@ -82,7 +81,7 @@ class Dropdown {
   }
 
   toggle(dropdown) {
-    if (typeof util.getCurrentMenu() === "undefined") {
+    if (typeof util.getCurrentMenu() === "undefined" || util.openDropdowns.length <= 0) {
       util.openDropdowns.push(dropdown);
       util.getCurrentMenu().dropdownNode.classList.add("cbp-dropdown--open");
       window.addEventListener("click", this.handleOutsideClick, true);
@@ -93,8 +92,7 @@ class Dropdown {
       util.getCurrentMenu().dropdownNode.classList.add("cbp-dropdown--open");
       window.addEventListener("click", this.handleOutsideClick, true);
     } else {
-      util.getCurrentMenu().close();
-      util.openDropdowns.pop();
+      this.close();
     }
   }
 
@@ -122,12 +120,26 @@ class Dropdown {
 
     if (e.key === "ArrowUp" && KEY_EVENTS.has(e.key)) {
       e.preventDefault();
-      util.focusLast(menuItems);
+      if (this.isOpen()) {
+        util.focusLast(menuItems);
+      } else {
+        this.toggle(dropdown);
+        util.focusLast(menuItems);
+      }
     }
 
     if (e.key === "ArrowDown" && KEY_EVENTS.has(e.key)) {
       e.preventDefault();
-      util.focusFirst(menuItems);
+      if (this.isOpen()) {
+        util.focusFirst(menuItems);
+      } else {
+        this.toggle(dropdown);
+        util.focusFirst(menuItems);
+      }
+    }
+
+    if (e.key === "Tab" && KEY_EVENTS.has(e.key)) {
+      this.close();
     }
   }
 
@@ -162,6 +174,11 @@ class Dropdown {
           }
           nextEl.focus();
         }
+
+        if (e.key === "Tab" && KEY_EVENTS.has(e.key)) {
+          this.close();
+        }
+
       });
     }
 
@@ -185,12 +202,12 @@ class Dropdown {
         const selectedIndex = i + 1;
         if (element.firstElementChild.checked) {
           this.chips.push(element.firstElementChild.value);
-          this.updateChips(this.chips);
+          // this.updateChips(this.chips);
+          this.addCount(this.chips.length)
         } else {
-          this.chips = this.chips.filter(
-            (val) => val != element.firstElementChild.value
-          );
-          this.updateChips(this.chips);
+          this.chips = this.chips.filter((val) => val != element.firstElementChild.value);
+          // this.updateChips(this.chips);
+          this.addCount(this.chips.length)
         }
       });
     }
@@ -211,6 +228,17 @@ class Dropdown {
     text.innerHTML = val;
 
     return chip;
+  }
+
+  addCount (count) {
+    this.dropdownNode.innerHTML = "";
+    const counterChip = this.createChip(count);
+
+    if (count == 0) {
+      this.dropdownNode.appendChild(this.placeHolder);
+    } else {
+      this.dropdownNode.appendChild(counterChip)
+    }
   }
 
   updateChips(allChips) {

@@ -22,8 +22,8 @@
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
           <div class="select-wrapper" id="dropdown-demo-1">
-            <select name="chocolate" id="chocolate" class="cbp-form__single-select" placeholder="Choose Port">
-              <option value="">Choose Port</option>
+            <select name="chocolate" id="chocolate" class="cbp-form__single-select" required>
+              <option value="" selected disabled>Choose Port</option>
               <option value="baltimore">Port of Baltimore</option>
               <option value="newark">Port of Newark</option>
               <option value="washington">Port of Washington</option>
@@ -57,7 +57,9 @@
           </span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
           <div class="cbp-dropdown-wrapper" id="dropdown-demo-2">
-            <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">Choose Port</button>
+            <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">
+              <span class="cbp-dropdown__placeholder">Choose Ports</span>
+            </button>
             <div class="cbp-dropdown" id="custom-dropdown-menu">
               <a href="#" class="cbp-dropdown__item">Port of Baltimore</a>
               <a href="#" class="cbp-dropdown__item">Port of Newark</a>
