@@ -100,7 +100,6 @@ class Dropdown {
     const { target } = e;
     e.preventDefault();
     if (target != this.dropdownNode) {
-      // this.handleChips(target.closest(".cbp-chips"));
       this.removeCount(e);
     } else {
       this.toggle(dropdown);
