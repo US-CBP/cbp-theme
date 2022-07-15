@@ -100,7 +100,8 @@ class Dropdown {
     const { target } = e;
     e.preventDefault();
     if (target != this.dropdownNode) {
-      this.handleChips(target.closest(".cbp-chips"));
+      // this.handleChips(target.closest(".cbp-chips"));
+      this.removeCount(e);
     } else {
       this.toggle(dropdown);
     }
@@ -199,15 +200,23 @@ class Dropdown {
       const element = items[i];
 
       element.addEventListener("change", (e) => {
-        const selectedIndex = i + 1;
         if (element.firstElementChild.checked) {
           this.chips.push(element.firstElementChild.value);
-          // this.updateChips(this.chips);
-          this.addCount(this.chips.length)
+          if (this.selectionCount <= 0) {
+            this.selectionCount++;
+            this.dropdownNode.insertBefore(this.createChip(this.selectionCount), this.placeHolder);
+          } else {
+            this.selectionCount++;
+            this.dropdownNode.querySelector('.cbp-chips').firstElementChild.innerHTML = this.selectionCount;
+          }
         } else {
           this.chips = this.chips.filter((val) => val != element.firstElementChild.value);
-          // this.updateChips(this.chips);
-          this.addCount(this.chips.length)
+          this.selectionCount--;
+          if (this.selectionCount == 0) {
+            this.dropdownNode.querySelector('.cbp-chips').remove();
+          } else {
+            this.dropdownNode.querySelector('.cbp-chips').firstElementChild.innerHTML = this.selectionCount;
+          }
         }
       });
     }
@@ -230,17 +239,6 @@ class Dropdown {
     return chip;
   }
 
-  addCount (count) {
-    this.dropdownNode.innerHTML = "";
-    const counterChip = this.createChip(count);
-
-    if (count == 0) {
-      this.dropdownNode.appendChild(this.placeHolder);
-    } else {
-      this.dropdownNode.appendChild(counterChip)
-    }
-  }
-
   updateChips(allChips) {
     this.dropdownNode.innerHTML = "";
     allChips.forEach((val) => {
@@ -257,6 +255,14 @@ class Dropdown {
     const chipVal = parentChip.querySelector("span").innerHTML;
     this.chips = this.chips.filter((item) => item != chipVal);
     this.updateChips(this.chips);
+  }
+
+  removeCount(e) {
+    this.chips = [];
+    this.dropdownNode.querySelector('.cbp-chips').remove();
+    this.dropdownMenuNode.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      checkbox.checked = false;
+    });
   }
 }
 
