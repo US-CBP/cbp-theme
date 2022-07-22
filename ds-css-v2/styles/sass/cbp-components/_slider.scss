@@ -54,7 +54,7 @@
 
 input[type='range'] {
   -webkit-appearance: none;
-  appearance: none;
+  // appearance: none;
   background: transparent;
   cursor: pointer;
   margin: 0;
@@ -83,7 +83,7 @@ input[type='range'] {
   }
 
   /* Google Chrome */
-  &::-webkit-slider-runnable-track {
+  &::-webkit-slider-runnable-track { // Check MDN for updates for this spec and refactor 'slider.js' if necessary
     @include track;
   }
 
@@ -113,7 +113,6 @@ input[type='range'] {
   }
   
   /* Document needed that the pseudo classes for IE (-ms-fill-lower & -ms-fill-upper) do not work in Edge */
-
   &::-ms-thumb {
     @include thumb;
   }
@@ -157,13 +156,37 @@ input[type='range'] {
   }
 }
 
+/* Styling for this consists of two range inputs */
 .range-wrapper {
+  // background: $cbp-ui-neutral-base;
+  background: transparent;
   display: grid;
-  grid-template-rows: max-content 1em;
-  margin: 1em auto;
-  width: 20em;
+  grid-template-rows: auto 3rem;
+  margin: 0 8px;
+  width: 100%;
   overflow: hidden;
   position: relative;
+  pointer-events: none;
+
+  input[type="range"] {
+    &::-webkit-slider-runnable-track {
+      background: $cbp-base-neutral-light;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      z-index: 9999;
+    }
+
+    &::-moz-range-progress {
+      background: unset;
+    }
+
+    &::-moz-range-thumb {
+      position: relative !important;
+      z-index: 9999;
+    }
+  }
 }
 
 .sr-only {

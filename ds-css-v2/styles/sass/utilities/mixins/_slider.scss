@@ -29,6 +29,7 @@ $thumb-margin: (($track-height / 2) - ($thumb-height / 2));
   cursor: default;
   height: $thumb-height;
   width: $thumb-width;
+  pointer-events: auto;
 
   &:hover {
     box-shadow: 0 0 0 8px rgba(230, 230, 226, 0.5);

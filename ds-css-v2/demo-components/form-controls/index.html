@@ -209,7 +209,7 @@
             <label for="number" class="cbp-form__label">Volume</label>
             <div class="cbp-form__control cbp-form__control--range">
               <i class="fas fa-volume-down"></i>
-              <input type="range" name="volume" id="volume" max="100" min="0">
+              <input type="range" name="volume" id="volume" max="100" min="0" value="15">
               <i class="fas fa-volume-up"></i>
             </div>
           </div>
@@ -226,12 +226,12 @@
         <form action="submit">
           <div class="cbp-form-wrapper">
             <label for="number" class="cbp-form__label">How many turnips you want?</label>
-            <div class="cbp-form__control cbp-form__control--range">
+            <div class="cbp-form__control cbp-form__control--value" id="demo-value-slider">
               <span>0</span>
-              <input type="range" name="value-slider" id="value-slider" max="100" min="0" value="15">
+              <input type="range" name="value-slider" id="value-slider" max="100" min="0" value="15" step="1">
               <span>100</span>
               <div class="cbp-form__number">
-                <input type="number" class="value-slider" name="value-slider-input" id="value-slider-input" value="15">
+                <input type="number" class="value-slider" name="value-slider-input" id="value-slider-input" value="15" autocomplete="off">
               </div>
             </div>
           </div>
@@ -243,7 +243,7 @@
       </div>
     </div>
 
-    <!-- <div class="cbp-row">
+    <div class="cbp-row">
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <form action="submit">
           <div class="cbp-form-wrapper">
@@ -255,7 +255,7 @@
               <span>0</span>
               <div class="range-wrapper">
                 <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
-                <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="15">
+                <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="75">
               </div>
               <span>100</span>
               <div class="cbp-form__number">
@@ -269,7 +269,7 @@
       <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Range Slider</h3>
       </div>
-    </div> -->
+    </div>
 
     <footer class="cbp-footer">
       <span class="font-sans-3xs text-ls-1 text-base-dark">Made with ♥️ by Creative Services</span>
