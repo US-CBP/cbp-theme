@@ -1,16 +1,16 @@
 // Remove once Selector class is added.
 const allSliders = document.querySelectorAll("[data-slider]");
+const FILL = '#745fe9';
+const TRACK = '#afaea2';
 
 class Slider {
   constructor(element) {
     this.type = element.dataset.slider;
     this.slider = element;
-    this.wrapper = this.slider.closest(".cbp-form__control"); // The parent/wrapper of the input
+    this.wrapper = this.slider.closest(".cbp-form__control");
     this.valueInput = this.wrapper.querySelector(".cbp-form__number")?.firstElementChild;
     this.min = this.slider.min;
     this.max = this.slider.max;
-    this.fillHex = "#745fe9";
-    this.trackHex = "#afaea2";
     this.styleTag = document.createElement("style");
     this.isChrome = navigator.userAgent.indexOf("Chrome") != -1;
     this.isSafari = navigator.userAgent.indexOf("Safari") != -1;
@@ -23,7 +23,7 @@ class Slider {
   }
 
   handleChange(e, slider) {
-    const gradient = `background: linear-gradient(to right, ${this.fillHex} 0%, ${this.fillHex} ${slider.value}%, ${this.trackHex} ${slider.value}%, ${this.trackHex} 100%)`;
+    const gradient = `background: linear-gradient(to right, ${FILL} 0%, ${FILL} ${slider.value}%, ${TRACK} ${slider.value}%, ${TRACK} 100%)`;
     const property = `#${this.slider.id}::-webkit-slider-runnable-track {${gradient}}`;
 
     this.styleTag.innerHTML = property;
@@ -36,14 +36,14 @@ class Slider {
   handleInput(e, slider) {
     this.slider.value = this.valueInput.value;
 
-    const gradient = `background: linear-gradient(to right, ${this.fillHex} 0%, ${this.fillHex} ${slider.value}%, ${this.trackHex} ${slider.value}%, ${this.trackHex} 100%)`;
+    const gradient = `background: linear-gradient(to right, ${FILL} 0%, ${FILL} ${slider.value}%, ${TRACK} ${slider.value}%, ${TRACK} 100%)`;
     const property = `#${slider.id}::-webkit-slider-runnable-track {${gradient}}`;
 
     this.styleTag.innerHTML = property;
   }
 
   chromeFill() {
-    const gradient = `background: linear-gradient(to right, ${this.fillHex} 0%, ${this.fillHex} ${this.slider.value}%, ${this.trackHex} ${this.slider.value}%, ${this.trackHex} 100%)`;
+    const gradient = `background: linear-gradient(to right, ${FILL} 0%, ${FILL} ${this.slider.value}%, ${TRACK} ${this.slider.value}%, ${TRACK} 100%)`;
     const property = `#${this.slider.id}::-webkit-slider-runnable-track {${gradient}}`;
 
     this.styleTag.innerHTML = property;
