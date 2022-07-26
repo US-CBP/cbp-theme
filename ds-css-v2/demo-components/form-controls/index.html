@@ -207,9 +207,9 @@
         <form action="submit">
           <div class="cbp-form-wrapper">
             <label for="number" class="cbp-form__label">Volume</label>
-            <div class="cbp-form__control cbp-form__control--range">
+            <div class="cbp-form__control cbp-form__control--range" id="demo-slider">
               <i class="fas fa-volume-down"></i>
-              <input type="range" name="volume" id="volume" max="100" min="0" value="15">
+              <input type="range" name="volume" id="volume" max="100" min="0" value="88" data-slider="continuous">
               <i class="fas fa-volume-up"></i>
             </div>
           </div>
@@ -228,7 +228,7 @@
             <label for="number" class="cbp-form__label">How many turnips you want?</label>
             <div class="cbp-form__control cbp-form__control--value" id="demo-value-slider">
               <span>0</span>
-              <input type="range" name="value-slider" id="value-slider" max="100" min="0" value="15" step="1">
+              <input type="range" name="value-slider" id="value-slider" max="100" min="0" value="15" step="1"  data-slider="value">
               <span>100</span>
               <div class="cbp-form__number">
                 <input type="number" class="value-slider" name="value-slider-input" id="value-slider-input" value="15" autocomplete="off">
