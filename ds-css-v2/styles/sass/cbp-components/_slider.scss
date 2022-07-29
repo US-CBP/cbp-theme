@@ -50,11 +50,14 @@
       width: 40px;
     }
   }
+
+  & span:last-of-type {
+    margin-left: 0;
+  }
 }
 
 input[type='range'] {
   -webkit-appearance: none;
-  // appearance: none;
   background: transparent;
   cursor: pointer;
   margin: 0;
@@ -162,9 +165,10 @@ input[type='range'] {
   background: transparent;
   display: grid;
   grid-template-rows: auto 3rem;
-  margin: 0 8px;
+  margin: 0;
   width: 100%;
   overflow: hidden;
+  padding: 0 8px;
   position: relative;
   pointer-events: none;
 
@@ -174,7 +178,7 @@ input[type='range'] {
     }
 
     &::-webkit-slider-thumb {
-      position: relative;
+      position: relative !important;
       z-index: 9999;
     }
 
@@ -186,6 +190,10 @@ input[type='range'] {
       position: relative !important;
       z-index: 9999;
     }
+  }
+
+  input[type="range"]:last-child::-moz-range-track {
+    background: transparent !important;
   }
 }
 

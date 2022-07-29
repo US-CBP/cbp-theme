@@ -71,6 +71,37 @@ class Slider {
   }
 }
 
+class MultiThumb extends Slider {
+  constructor(element) {
+    super(element);
+    this.rangeWrapper = element.querySelector('.range-wrapper');
+    this.lowerSlider = this.rangeWrapper.firstElementChild;
+    this.lowerInput = element.querySelector('#lower-range');
+    this.lowerInput.value = this.lowerSlider.value;
+    this.upperSlider = this.rangeWrapper.lastElementChild;
+    this.upperInput = element.querySelector('#upper-range');
+    this.upperInput.value = this.upperSlider.value;
+
+    this.lowerSlider.addEventListener('input', (e) => {
+      this.lowerInput.value = e.target.value;
+    })
+
+    this.upperSlider.addEventListener('input', (e) => {
+      this.upperInput.value = e.target.value;
+    })
+
+    this.lowerInput.addEventListener('change', (e) => {
+      this.lowerSlider.value = e.target.value;
+    })
+
+    this.upperInput.addEventListener('change', (e) => {
+      this.upperSlider.value = e.target.value;
+    })
+  }
+}
+
+const testMultiThumb = new MultiThumb(document.getElementById('demo-multi-thumb'));
+
 allSliders.forEach((slider) => {
   return new Slider(slider);
 });
