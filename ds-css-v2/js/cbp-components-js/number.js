@@ -13,20 +13,36 @@ class NumberInput {
   constructor(id) {
     this.numCounterNode = document.getElementById(id)
     this.input = this.numCounterNode.querySelector('input[type="number"]');
-    this.value = this.input.value;
+    this.value = this.input.value || 0;
     this.minus = this.numCounterNode.querySelector('#decrement');
     this.plus = this.numCounterNode.querySelector('#increment');
 
-    this.plus.addEventListener('click', this.increment(10), false)
-    console.log(this.plus);
+    this.plus.addEventListener('click', (e) => {
+      this.increment(this.input)
+    })
+
+    this.minus.addEventListener('click', (e) => {
+      this.decrement(this.input)
+    })
   }
 
-  increment(step = 1) {
-    console.log('increment was called');
+  increment(input, step = 1) {
     if (step > 1) {
       this.value += step;
+      input.value = this.value;
     } else {
       this.value++;
+      input.value = this.value;
+    }
+  }
+
+  decrement(input, step = 1) {
+    if (step > 1) {
+      this.value -= step;
+      input.value = this.value;
+    } else {
+      this.value--;
+      input.value = this.value;
     }
   }
 }
