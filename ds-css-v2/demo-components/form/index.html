@@ -80,7 +80,7 @@
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
           <div class="cbp-form__password">
             <input type="password" name="password" id="password" placeholder="Enter Password"></input>
-            <button type="button" class="cbp-form__btn--square">
+            <button type="button">
               <i class="fas fa-eye-slash"></i>
             </button>
           </div>
@@ -179,7 +179,7 @@
               <input type="number" name="numeric-switch" id="numeric-switch" placeholder="Enter Weight"></input>
               <div class="cbp-form__unit">lbs</div>
             </div>
-            <div class="cbp-btn--segment cbp-btn--readyonly">
+            <div class="cbp-btn--segment">
               <button class="active">LBS</button>
               <button>KG</button>
             </div>
@@ -194,11 +194,11 @@
           <label for="invalid">Error</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric-switch')">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableNumSwitch(event, 'numeric-switch')">
           <label for="disable">Disable</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric-switch')">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="handleReadOnly(event, 'numeric-switch')">
           <label for="readonly">Read Only</label>
         </div>
       </div>
@@ -210,10 +210,12 @@
           <label for="number" class="cbp-form__label">Phone Number</label>
           <span class="cbp-form__description">Required. Country code first, then local number.</span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-          <div class="cbp-form__number cbp-form__number--phone">
-            <div class="cbp-dropdown__wrapper">
-              <button class="cbp-dropdown__custom" id="phone-dropdown" onclick="openDropdown(event, 'phone-dropdown')">IM/IMN +44 - 1624</button>
-              <div class="cbp-dropdown" id="custom-dropdown-menu">
+          <div class="cbp-form__number cbp-form__number--phone" id="phone-number-demo">
+            <div class="cbp-dropdown-wrapper" id="dropdown-demo-2">
+              <button class="cbp-dropdown__custom" id="area-code" data-toggle="dropdown">
+                <span class="cbp-dropdown__placeholder">US/USA +1</span>
+              </button>
+              <div class="cbp-dropdown" id="area-code">
                 <a href="#" class="cbp-dropdown__item">AF/AFG +93</a>
                 <a href="#" class="cbp-dropdown__item">AL/ALB +355</a>
                 <a href="#" class="cbp-dropdown__item">DZ/DZA +213</a>
@@ -221,13 +223,21 @@
                 <a href="#" class="cbp-dropdown__item">AO/AGO +244</a>
               </div>
             </div>
-            <input type="tel" name="phone" id="phone" placeholder="Enter Number"></input>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number"></input>
           </div>
         </div>
       </div>
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <h3>Phone Number Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="phoneError(event, 'phone-number-demo')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="phoneDisable(event, 'phone-number-demo')">
+          <label for="disable">Disable</label>
+        </div>
       </div>
     </div>
 

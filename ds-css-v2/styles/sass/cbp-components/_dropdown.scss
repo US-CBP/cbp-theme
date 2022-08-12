@@ -8,6 +8,7 @@
   background-color: transparent;
   border: 1px solid $cbp-ui-neutral-base;
   border-radius: 3px;
+  border-right: 0;
   cursor: inherit;
   display: flex;
   font-family: inherit;
@@ -292,8 +293,7 @@
 /* Open Custom Dropdown */
 .cbp-dropdown--open {
   border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  
+
   & + .cbp-dropdown {
     border-top: 0;
     display: block !important;
@@ -301,6 +301,8 @@
 
   &::after {
     content: '\f106';
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }
 

@@ -74,7 +74,8 @@
     border: 1px solid $cbp-ui-neutral-light;
     cursor: not-allowed;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border: 1px solid $cbp-ui-neutral-light;
     }
   }
@@ -82,7 +83,7 @@
   &:disabled {
     background-color: $cbp-disabled-light;
     border: 1px solid $cbp-disabled-dark;
-    cursor: not-allowed;
+    cursor: pointer;
 
     &:hover {
       border: 2px solid $cbp-ui-neutral-darker;
@@ -127,15 +128,49 @@
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+
+    &:disabled {
+      cursor: pointer;
+    }
   }
 
   & > button {
     @extend .cbp-btn;
     @extend .cbp-btn__square;
     @extend .cbp-btn__square-secondary;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
     margin-left: -2px;
+
+    &:disabled {
+      background-color: $cbp-disabled-dark;
+      color: $cbp-disabled-light;
+    }
   }
 }
+
+.cbp-form__password--error {
+  & > button {
+    @extend .cbp-btn__square-danger;
+  }
+}
+
+.cbp-form__password--readonly {
+  & > button {
+    background-color: $cbp-ui-neutral-light;
+    color: $cbp-text-lightest;
+    cursor: not-allowed;
+
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-neutral-light;
+    }
+
+    &:disabled {
+      background-color: $cbp-base-neutral-light;
+      color: $cbp-text-lightest;
+    }
+  }
+} 
 
 .cbp-form__number {
   & > input[type=number],
@@ -150,6 +185,19 @@
 
     & > button {
       margin-left: 16px;
+    }
+
+    & > button:disabled {
+      background-color: $cbp-disabled-dark;
+      color: $cbp-text-lightest;
+    }
+
+    &.input-read-only {
+      & > button:disabled {
+        background-color: $cbp-ui-neutral-light;
+        color: $cbp-text-lightest;
+        cursor: not-allowed !important;
+      }
     }
   }
 }
@@ -261,7 +309,7 @@
   }
 
   & .cbp-dropdown {
-    width: calc(100% - 16px);
+    width: 168px;
   }
 
   & input {

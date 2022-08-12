@@ -347,6 +347,12 @@ span.ripple {
         outline-offset: -3px;
       }
 
+      &:disabled {
+        background-color: $cbp-disabled-light;
+        border-color: $cbp-disabled-dark;
+        color: $cbp-disabled-dark;
+      }
+
       & > i {
         margin-right: 0;
       }
@@ -360,6 +366,24 @@ span.ripple {
         @extend .btn-focus;
         outline-offset: -3px;
       }
+
+      &:disabled {
+        background-color: $cbp-disabled-dark;
+        color: $cbp-disabled-light;
+      }
+    }
+  }
+
+  &--segment.read-only {
+    button:disabled {
+      background-color: $cbp-ui-neutral-lighter;
+      border-color: $cbp-ui-neutral-light; 
+      color: $cbp-text-base
+    }
+
+    .active {
+      background-color: $cbp-base-neutral-base !important;
+      color: $cbp-text-base
     }
   }
 

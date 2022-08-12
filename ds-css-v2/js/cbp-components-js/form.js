@@ -28,37 +28,86 @@ const setInvalid = (event, inputId) => {
   const { target: { checked } } = event;
   const input = getInput(inputId);
   const desc = findDesc(input);
+  const isPassword = inputId == 'password';
+  const passParent = isPassword && input.closest('.cbp-form__password');
+  const hashBtn = isPassword && input.nextElementSibling;
 
   if (checked) {
     desc[0].hidden = true;
     desc[1].hidden = false;
     input.setCustomValidity("invalid");
+    isPassword && passParent.classList.add("cbp-form__password--error");
   } else {
     desc[0].hidden = false;
     desc[1].hidden = true;
     input.setCustomValidity("");
+    isPassword && passParent.classList.remove("cbp-form__password--error");
   }
 }
 
 const disableInput = (event, inputId) => {
   const { target: { checked } } = event;
   const input = getInput(inputId);
+  const isPassword = inputId == 'password';
+  const hashBtn = isPassword && input.nextElementSibling;
+  const isNumericCounter = inputId == 'numeric-counter';
+  const increment = document.getElementById('increment');
+  const decrement = document.getElementById('decrement');
 
   if (checked) {
     input.disabled = true;
+    hashBtn.disabled = true;
+
+    if (isNumericCounter) {
+      increment.disabled = true;
+      decrement.disabled = true;
+    }
   } else {
     input.disabled = false;
+    hashBtn.disabled = false;
+    
+    if (isNumericCounter) {
+      increment.disabled = false;
+      decrement.disabled = false;
+    }
   }
 }
 
 const readOnlyInput = (event, inputId) => {
   const { target: { checked } } = event;
   const input = getInput(inputId);
+  const isPassword = inputId == 'password';
+  const passParent = isPassword && input.closest('.cbp-form__password');
+  const hashBtn = isPassword && input.nextElementSibling;
+  const isNumericCounter = inputId == 'numeric-counter';
+  const increment = document.getElementById('increment');
+  const decrement = document.getElementById('decrement');
+  const numericParent = isNumericCounter && input.closest('.cbp-form__number--counter');
 
   if (checked) {
     input.readOnly = true;
+    if (isPassword) {
+      passParent.classList.add('cbp-form__password--readonly');
+      hashBtn.disabled = true;
+    }
+
+    if (isNumericCounter) {
+      increment.disabled = true;
+      decrement.disabled = true;
+      numericParent.classList.add('input-read-only')
+    }
   } else {
     input.readOnly = false;
+    if (isPassword) {
+      passParent.classList.remove('cbp-form__password--readonly');
+      hashBtn.disabled = false;
+    }
+
+    if (isNumericCounter) {
+      increment.disabled = false;
+      decrement.disabled = false;
+      numericParent.classList.remove('input-read-only')
+    }
   }
 }
 
