@@ -1,4 +1,4 @@
-const KEY_EVENTS = new Set(["Enter", "Escape", "ArrowUp", "ArrowDown", "Tab"]);
+const KEY_EVENTS = new Set(["Enter", "Escape", "ArrowUp", "ArrowDown", "Tab", "Space"]);
 
 const util = {
   openDropdowns: [],
@@ -153,8 +153,19 @@ class Dropdown {
         }
 
         if (e.key === "Enter" && KEY_EVENTS.has(e.key)) {
-          e.preventDefault();
-          this.toggle(dropdown);
+          if (e.target.nodeName === "A") { // DRY
+            e.preventDefault();
+            this.selected = e.target.innerHTML;
+            if (typeof this.selected != undefined) {
+              this.dropdownNode.innerHTML = this.selected;
+            }
+            util.getCurrentMenu().close();
+          }
+
+          if (e.target.nodeName === 'INPUT') {
+            e.preventDefault();
+            this.close();
+          }
         }
 
         if (e.key === "ArrowUp" && KEY_EVENTS.has(e.key)) {
@@ -179,13 +190,23 @@ class Dropdown {
           this.close();
         }
 
+        if (e.key === " " && KEY_EVENTS.has(e.code)) {
+          if (e.target.nodeName === "A") { // DRY
+            e.preventDefault();
+            this.selected = e.target.innerHTML;
+            if (typeof this.selected != undefined) {
+              this.dropdownNode.innerHTML = this.selected;
+            }
+            util.getCurrentMenu().close();
+          }
+        }
       });
     }
 
     for (let i = 0; i < items.length; i++) {
       const element = items[i];
       element.addEventListener("click", (e) => {
-        if (e.target.nodeName === "A") {
+        if (e.target.nodeName === "A") { // DRY
           this.selected = e.target.innerHTML;
           if (typeof this.selected != undefined) {
             this.dropdownNode.innerHTML = this.selected;
@@ -258,6 +279,7 @@ class Dropdown {
 
   removeCount(e) {
     this.chips = [];
+    this.selectionCount = 0;
     this.dropdownNode.querySelector('.cbp-chips').remove();
     this.dropdownMenuNode.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
       checkbox.checked = false;
