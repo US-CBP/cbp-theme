@@ -218,13 +218,29 @@
     }
   }
 
+  /* Hacky solution due to width property (right margin) of separating line */
   &::after {
-    all: initial;
+    content: "";
+    border-bottom: 1px solid $cbp-ui-neutral-lighter;
+    display: block;
+    height: 1px;
+    left: 12px;
+    bottom: 0;
+    position: absolute;
+    width: calc(100% - 24px);
+
+    &:hover {
+      border-bottom: 0;
+    }
   }
 
   &:focus-within {
     background-color: $cbp-focus-dark;
     color: $cbp-text-lighter;
+
+    &::after {
+      border-bottom: 0;
+    }
   }
 }
 
