@@ -15,47 +15,11 @@
     margin-bottom: 12px;
   }
 
-  &__item.active {
-
-    .cbp-accordion__title {
-      background-color: $cbp-base-secondary-base;
-      color: $cbp-white;
-
-      .fa-angle-down {
-        transform: rotate(-180deg);
-      }
-
-      &--danger {
-        background: $cbp-ui-danger-base;
-        color: $cbp-white;
-
-        + .cbp-accordion__content {
-          border-color: $cbp-ui-danger-base;
-        }
-      }
-    }
-
-    .cbp-accordion__content {
-      display: block;
-      max-height: fit-content;
-      border-bottom: 4px solid $cbp-base-secondary-base;
-      border-left: 4px solid $cbp-base-secondary-base;
-      border-right: 4px solid $cbp-base-secondary-base;
-      .cbp-accordion__footer {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 16px;
-        margin-top: 16px;
-      }
-    }
-
-  }
-
   &__title {
     align-items: center;
-    background: $cbp-gray-cool-2; // $ui-neutral-lighter
+    background: $cbp-ui-neutral-lighter;
     border: none;
+    color: $cbp-text-darkest;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -64,8 +28,8 @@
     transition: all 300ms;
     width: 100%;
 
-    .fa-angle-down {
-      font-size: 18px;
+    .title-left i {
+      font-size: 20px;
       transition: transform .2s ease-in-out;
     }
 
@@ -87,20 +51,6 @@
       border-left: 4px solid $cbp-focus-dark !important;
       border-right: 4px solid $cbp-focus-dark !important;
     }
-
-    &--danger {
-      background: $cbp-ui-danger-base;
-      color: $cbp-white;
-
-      &:hover {
-        background: $cbp-ui-danger-dark;
-      }
-
-      &:focus {
-        @extend .hover-focus;
-        @extend .focus-outline;
-      }
-    }
   }
 
   &__content {
@@ -110,7 +60,58 @@
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
 
-    > * { margin: 16px }
+    > * { 
+      margin: 16px 
+    }
+  }
+}
+
+.cbp-accordion__title--danger {
+  background: $cbp-ui-danger-base;
+  color: $cbp-text-lightest;
+
+  &:hover {
+    background: $cbp-ui-danger-dark;
+  }
+
+  &:focus {
+    @extend .hover-focus;
+    @extend .focus-outline;
+  }
+}
+
+.active {
+  .cbp-accordion__title {
+    background-color: $cbp-base-secondary-base;
+    color: $cbp-text-lightest;
+
+    .title-left i {
+      transform: rotate(-180deg);
+    }
+
+    &--danger {
+      background: $cbp-ui-danger-base;
+      color: $cbp-text-lightest;
+    }
+
+    &--danger + .cbp-accordion__content {
+      border-color: $cbp-ui-danger-base;
+    }
+  }
+
+  .cbp-accordion__content {
+    display: block;
+    max-height: fit-content;
+    border-bottom: 4px solid $cbp-base-secondary-base;
+    border-left: 4px solid $cbp-base-secondary-base;
+    border-right: 4px solid $cbp-base-secondary-base;
+    .cbp-accordion__footer {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      margin-top: 16px;
+    }
   }
 }
 
