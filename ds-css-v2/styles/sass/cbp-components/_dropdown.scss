@@ -1,0 +1,354 @@
+.cbp-dropdown__wrapper {
+  position: relative;
+}
+
+/* Dropdown Button */
+.cbp-dropdown__custom {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-radius: 3px;
+  border-right: 0;
+  cursor: inherit;
+  display: flex;
+  font-family: inherit;
+  font-size: inherit;
+  height: 36px;
+  line-height: inherit;
+  outline: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    border: 2px solid $cbp-ui-neutral-darker;
+    border-right: 0;
+  }
+  
+  &:hover::after {
+    background-color: $cbp-ui-neutral-darker;
+    border: 2px solid $cbp-ui-neutral-darker;
+  }
+
+  &:disabled {
+    border: 1px solid $cbp-disabled-dark;
+    background-color: $cbp-disabled-light;
+    color: $cbp-disabled-dark;
+    font-style: italic;
+
+    &::after {
+      background-color: $cbp-disabled-dark;
+      border-color: $cbp-disabled-dark;
+      font-style: initial;
+    }
+
+    &:hover {
+      border: 2px solid $cbp-ui-neutral-darker;
+      border-right: 0;
+    }
+
+    &:disabled:hover::after {
+      background-color: $cbp-ui-neutral-darker;
+      border: 2px solid $cbp-ui-neutral-darker;
+    }
+  }
+
+  &:disabled .cbp-chips {
+    background-color: $cbp-disabled-dark;
+    color: $cbp-disabled-light;
+    font-style: normal;
+  }
+}
+
+/* Down Caret */
+.cbp-dropdown__custom::after {
+  align-items: center;
+  background-color: $cbp-ui-neutral-base;
+  border: 2px solid $cbp-ui-neutral-base;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  content: "\f107";
+  color: $cbp-white;
+  display: flex;
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  font-weight: 900;
+  justify-content: center;
+  text-align: center;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  width: 36px;
+  z-index: 1;
+}
+
+.cbp-dropdown__placeholder {
+  color: $cbp-text-dark;
+  display: block;
+  font-style: italic;
+}
+
+.cbp-dropdown__custom .cbp-chips {
+  font-size: 12px;
+  height: 20px;
+}
+
+/* Dropdown Menu */
+.cbp-dropdown {
+  background-color: $cbp-white;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+  max-height: 216px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+
+  &:hover {
+    border-top: 0;
+  }
+
+  &__item {
+    align-items: center;
+    border-bottom: 0;
+    border-top: 0;
+    color: $cbp-text-darkest;
+    display: flex;
+    font-size: 1rem;
+    height: 36px;
+    padding-left: 16px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-neutral-darker;
+      color: $cbp-text-lightest;
+      cursor: pointer;
+      font-weight: 700;
+
+      &::after {
+        border-bottom: 1px solid $cbp-ui-neutral-darker;
+      }
+    }
+
+    &:focus:not([disabled]) {
+      background-color: $cbp-focus-dark;
+      color: $cbp-white;
+      font-weight: 700;
+      outline: 0;
+
+      &::after {
+        content: "";
+        display: none;
+        border-bottom: 1px solid $cbp-ui-neutral-darker;
+      }
+    }
+
+    /* Hacky solution due to width property (right margin) of separating line */
+    &::after {
+      content: "";
+      border-bottom: 1px solid $cbp-ui-neutral-lighter;
+      display: block;
+      height: 1px;
+      left: 12px;
+      bottom: 0;
+      position: absolute;
+      width: calc(100% - 24px);
+    }
+
+    &:visited {
+      color: $cbp-text-darkest;
+    }
+  }
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &__item:last-child {
+    &::after {
+      content: "";
+      border-bottom: 0;
+      height: 0;
+    }
+  }
+}
+
+.cbp-dropdown__item--multiselect {
+  & > input[type="checkbox"] {
+    @extend .cbp-form__checkbox;
+    border-radius: 12px;
+
+    &:hover:not([disabled]) {
+      background-color: inherit;
+      border-color: $cbp-ui-neutral-lighter;
+      box-shadow: initial;
+      clip-path: initial;
+    }
+
+    &:checked {
+      &:hover {
+        background-color: $cbp-selected-light;
+
+        &::before {
+          border-right: 3px solid $cbp-text-darkest;
+          border-bottom: 3px solid $cbp-text-darkest;
+          height: 70%;
+          width: 30%;
+          transform: rotate(45deg) translateY(-10%) translateX(-10%);
+        }
+      }
+    }
+
+    &:focus {
+      border: 2px solid $cbp-ui-neutral-lighter;
+      box-shadow: initial;
+      clip-path: initial;
+      outline: 0 !important; // Overriding style from _focus.scss??
+  
+      &:hover:not([disabled]) {
+        box-shadow: initial;
+        clip-path: initial;
+      }
+    }
+  }
+
+  /* Hacky solution due to width property (right margin) of separating line */
+  &::after {
+    content: "";
+    border-bottom: 1px solid $cbp-ui-neutral-lighter;
+    display: block;
+    height: 1px;
+    left: 12px;
+    bottom: 0;
+    position: absolute;
+    width: calc(100% - 24px);
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+
+  &:focus-within {
+    background-color: $cbp-focus-dark;
+    color: $cbp-text-lighter;
+
+    &::after {
+      border-bottom: 0;
+    }
+  }
+}
+
+/* Custom Dropdown Error State */
+.cbp-dropdown__custom--error {
+  background-color: $cbp-ui-danger-lighter;
+  border-left: 2px solid $cbp-ui-danger-base;
+  border-right: 0;
+  border-top: 2px solid $cbp-ui-danger-base;
+  border-bottom: 2px solid $cbp-ui-danger-base;
+
+  &::after {
+    border: 2px solid $cbp-ui-danger-base !important;
+    background-color: $cbp-ui-danger-base !important;
+  }
+
+  &:hover {
+    border-left: 2px solid $cbp-ui-danger-dark;
+    border-right: 0;
+    border-top: 2px solid $cbp-ui-danger-dark;
+    border-bottom: 2px solid $cbp-ui-danger-dark;
+
+    &::after {
+      border: 2px solid $cbp-ui-danger-dark !important;
+      background-color: $cbp-ui-danger-dark !important;
+    }
+  }
+
+  &:focus:not([disabled]) {
+    border: 2px solid $cbp-focus-dark;
+    outline: 0;
+
+    &::after {
+      border: 2px solid $cbp-focus-dark !important;
+      background-color: $cbp-focus-dark !important;
+    }
+  }
+
+  & + .cbp-dropdown {
+    background-color: $cbp-ui-danger-lighter;
+    border: 2px solid $cbp-danger;
+    border-top: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &:hover {
+      border-top: 0;
+    }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+      border-top: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      outline: 0;
+    }
+  }
+
+  /* Caret Button */
+  &::after {
+    background-color: $cbp-danger;
+    border: 2px solid $cbp-danger;
+  }
+}
+
+/* Open Custom Dropdown */
+.cbp-dropdown--open {
+  border-bottom-left-radius: 0px;
+
+  & + .cbp-dropdown {
+    border-top: 0;
+    display: block !important;
+  }
+
+  &::after {
+    content: '\f106';
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+/* When hover over custom select, apply hover to dropdown menu */
+.cbp-dropdown__custom:hover + .cbp-dropdown {
+  border: 2px solid $cbp-ui-neutral-darker;
+  border-top: 0;
+}
+
+/* Hover over error custom select, apply hover to dropdown menu */
+.cbp-dropdown__custom--error:hover + .cbp-dropdown {
+  border: 2px solid $cbp-ui-danger-dark;
+  border-top: 0;
+}
+
+/* Focus State */
+.cbp-dropdown__custom:focus:not([disabled]) {
+  border: 2px solid $cbp-focus-dark;
+  border-right: 0;
+  outline: 0;
+}
+
+/* Focus Caret State */
+.cbp-dropdown__custom:focus-within::after {
+  background-color: $cbp-focus-dark;
+  border: 2px solid $cbp-focus-dark;
+}
+
+// Focus on Select and Dropdown Menu
+.cbp-dropdown--open:focus + .cbp-dropdown {
+  border: 2px solid $cbp-focus-dark;
+  border-top: 0;
+}  

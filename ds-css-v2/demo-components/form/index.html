@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBP Theme Boilerplate</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <!-- Font awesome loaded locally from assets-->
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+</head>
+<body>
+  <div class="cbp-grid-container">
+    <div class="cbp-row margin-top-5">
+      <div class="cbp-grid-col-full">
+        <h1>Form Components</h1>
+      </div>
+    </div>
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="firstName" class="cbp-form__label">First Name</label>
+          <span class="cbp-form__description">
+            Required. <span id="char-count-2" data-char-counter="true">250</span>/250 Characters remaining.
+          </span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <input type="text" class="cbp-form__input" name="firstName" id="firstName" maxlength="250" oninput="countChar('char-count-2', event)" placeholder="Enter first name">
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Simple Text Input</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'firstName')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'firstName')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'firstName')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="firstName" class="cbp-form__label">Description</label>
+          <span class="cbp-form__description">Required. <span id="char-count">500</span>/500 Characters remaining.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;You must make a selection</span>
+          <textarea class="cbp-form__textarea" name="description" id="description" cols="30" rows="10" maxlength="500" oninput="countChar('char-count', event)" placeholder="Enter a description"></textarea>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Text Area</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'description')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'description')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'description')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Password</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
+          <div class="cbp-form__password">
+            <input type="password" name="password" id="password" placeholder="Enter Password"></input>
+            <button type="button">
+              <i class="fas fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Password (Hash) Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'password')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'password')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'password')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="number" class="cbp-form__label">Number of Fish</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-form__number">
+            <input type="number" name="numeric" id="numeric" placeholder="Enter Number of Fish"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Simple Numeric Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="number" class="cbp-form__label">Number of Fish</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-form__number cbp-form__number--counter" id="number-counter">
+            <input type="number" name="numeric-counter" id="numeric-counter" placeholder="Enter Number of Fish"></input>
+            <button class="cbp-btn cbp-btn__square cbp-btn__square-secondary" id="decrement">
+              <i class="fas fa-minus"></i>
+            </button>
+            <button class="cbp-btn cbp-btn__square cbp-btn__square-secondary" id="increment">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Numeric Counter Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric-counter')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInput(event, 'numeric-counter')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'numeric-counter')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="number" class="cbp-form__label">Your Weight</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-form__number cbp-form__number--switch" id="demo-switch">
+            <div>
+              <input type="number" name="numeric-switch" id="numeric-switch" placeholder="Enter Weight"></input>
+              <div class="cbp-form__unit">lbs</div>
+            </div>
+            <div class="cbp-btn--segment">
+              <button class="active">LBS</button>
+              <button>KG</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Numeric Switch Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="setInvalid(event, 'numeric-switch')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableNumSwitch(event, 'numeric-switch')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="handleReadOnly(event, 'numeric-switch')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="number" class="cbp-form__label">Phone Number</label>
+          <span class="cbp-form__description">Required. Country code first, then local number.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-form__number cbp-form__number--phone" id="phone-number-demo">
+            <div class="cbp-dropdown-wrapper" id="dropdown-demo-2">
+              <button class="cbp-dropdown__custom" id="area-code" data-toggle="dropdown">
+                <span class="cbp-dropdown__placeholder">US/USA +1</span>
+              </button>
+              <div class="cbp-dropdown" id="area-code">
+                <a href="#" class="cbp-dropdown__item">AF/AFG +93</a>
+                <a href="#" class="cbp-dropdown__item">AL/ALB +355</a>
+                <a href="#" class="cbp-dropdown__item">DZ/DZA +213</a>
+                <a href="#" class="cbp-dropdown__item">AS/ASM +1-684</a>
+                <a href="#" class="cbp-dropdown__item">AO/AGO +244</a>
+              </div>
+            </div>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number"></input>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Phone Number Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="phoneError(event, 'phone-number-demo')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="phoneDisable(event, 'phone-number-demo')">
+          <label for="disable">Disable</label>
+        </div>
+      </div>
+    </div>
+
+    <footer class="cbp-footer">
+      <span class="font-sans-3xs text-ls-1 text-base-dark">Made with ♥️ by Creative Services</span>
+    </footer>
+  </div>
+
+  <!-- Required JS for USWDS -->
+  <script src="../../js/uswds.min.js"></script>
+  <!-- JS for dropdowns -->
+  <script src="../../js/universalHeader.js"></script>
+  <script src="../cbp-buttons/index.js"></script>
+  <script src="../../js/cbp-components-js/form.js"></script>
+  <script src="../../js/cbp-components-js/selectDropdown.js"></script>
+  <script src="../../js/cbp-components-js/number.js"></script>
+</body>
+</html>

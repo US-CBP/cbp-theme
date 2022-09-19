@@ -1,0 +1,344 @@
+.cbp-form__group {
+  display: flex;
+  align-items: center;
+
+  & > label {
+    margin-left: 6px;
+  }
+}
+
+.cbp-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.cbp-form__control {
+  display: block;
+}
+
+.cbp-form__control--inline {
+  display: flex;
+}
+
+.cbp-form__label {
+  color: $cbp-text-darkest;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.cbp-form__description {
+  color: $cbp-text-darkest;
+  font-size: 0.889rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding-bottom: 8px;
+
+  &--error {
+    color: $cbp-danger;
+  }
+}
+
+.cbp-form__input {
+  background-color: $cbp-white;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $cbp-text-darkest;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 36px;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  width: 100%;
+
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &:hover:not([disabled]) {
+    border: 2px solid $cbp-ui-neutral-darker;
+  }
+
+  &:focus:not([disabled]) {
+    border: 2px solid $cbp-focus-dark;
+    outline: 0;
+  }
+
+  &:read-only {
+    background-color: $cbp-base-neutral-lighter;
+    border: 1px solid $cbp-ui-neutral-light;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $cbp-ui-neutral-light;
+    }
+  }
+
+  &:disabled {
+    background-color: $cbp-disabled-light;
+    border: 1px solid $cbp-disabled-dark;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid $cbp-ui-neutral-darker;
+    }
+
+    &:focus {
+      border: 2px solid $cbp-focus-dark;
+    }
+  }
+
+  &:invalid {
+    background-color: $cbp-ui-danger-lighter;
+    border: 1px solid $cbp-danger;
+
+    &:focus {
+      border-color: $cbp-focus-dark;
+    }
+    
+    &:hover {
+      border: 2px solid $cbp-ui-danger-dark;
+
+      &:focus {
+        border-color: $cbp-focus-dark;
+      }
+    }
+  }
+}
+
+.cbp-form__textarea {
+  @extend .cbp-form__input;
+  min-height: 108px;
+  padding: 8px;
+  resize: none;
+}
+
+.cbp-form__password {
+  display: flex;
+
+  & > input[type=password],
+  & > input[type=text] {
+    @extend .cbp-form__input;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:disabled {
+      cursor: pointer;
+    }
+  }
+
+  & > button {
+    @extend .cbp-btn;
+    @extend .cbp-btn__square;
+    @extend .cbp-btn__square-secondary;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -2px;
+
+    &:disabled {
+      background-color: $cbp-disabled-dark;
+      color: $cbp-disabled-light;
+    }
+  }
+}
+
+.cbp-form__password--error {
+  & > button {
+    @extend .cbp-btn__square-danger;
+  }
+}
+
+.cbp-form__password--readonly {
+  & > button {
+    background-color: $cbp-ui-neutral-light;
+    color: $cbp-text-lightest;
+    cursor: not-allowed;
+
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-neutral-light;
+    }
+
+    &:disabled {
+      background-color: $cbp-base-neutral-light;
+      color: $cbp-text-lightest;
+    }
+  }
+} 
+
+.cbp-form__number {
+  & > input[type=number],
+  & > div:first-child > input[type=number] {
+    @extend .cbp-form__input;
+    // This removes the default increment arrows in the number input field
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+  &--counter {
+    display: flex;
+
+    & > button {
+      margin-left: 16px;
+    }
+
+    & > button:disabled {
+      background-color: $cbp-disabled-dark;
+      color: $cbp-text-lightest;
+    }
+
+    &.input-read-only {
+      & > button:disabled {
+        background-color: $cbp-ui-neutral-light;
+        color: $cbp-text-lightest;
+        cursor: not-allowed !important;
+      }
+    }
+  }
+}
+
+.cbp-form__number--switch {
+  display: flex;
+
+  & > div:first-child {
+    margin-right: 16px;
+    display: flex;
+    width: 100%;
+
+    & > input[type=number] {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      width: 100%;
+
+      &:hover {
+        border-right: 0 !important;
+
+        & ~ .cbp-form__unit {
+          border: 2px solid $cbp-ui-neutral-darker;
+          border-left: 0;
+        }
+      }
+
+      &:read-only {
+        border-right: inherit;
+
+        & ~ .cbp-form__unit {
+          background-color: $cbp-base-neutral-lighter;
+          border: 1px solid $cbp-ui-neutral-light;
+          border-left: 0;
+          cursor: not-allowed;
+
+          &:hover {
+            border: 1px solid $cbp-ui-neutral-light;
+            border-left: 0;
+          }
+        }
+      }
+
+      &:focus {
+        border-right: 0 !important;
+
+        & ~ .cbp-form__unit {
+          border: 2px solid $cbp-focus-dark;
+          border-left: 0;
+
+          &:hover {
+            border: 2px solid $cbp-focus-dark;
+            border-left: 0;
+          }
+        }
+      }
+
+      &:disabled {
+        border-right: inherit;
+    
+        & ~ .cbp-form__unit {
+          background-color: $cbp-disabled-light;
+          border: 1px solid $cbp-disabled-dark;
+          border-left: 0;
+        }
+
+        &:hover {
+          border-right: inherit;
+
+          & ~ .cbp-form__unit {
+            border: 2px solid $cbp-ui-neutral-darker;
+            border-left: 0;
+          }
+        }
+
+        &:focus {
+          border: 2px solid $cbp-focus-dark;
+        }
+      }
+
+      &:invalid {
+        border-right: 0;
+
+        & ~ .cbp-form__unit {
+          background-color: $cbp-ui-danger-lighter;
+          border: 1px solid $cbp-danger;
+          border-left: 0;
+        }
+
+        &:hover {
+          border-right: 0 !important;
+  
+          & ~ .cbp-form__unit {
+            border: 2px solid $cbp-ui-danger-dark;
+            border-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cbp-form__number--phone {
+  display: flex;
+
+  & button {
+    margin-right: 16px;
+    width: 168px;
+  }
+
+  & .cbp-dropdown {
+    width: 168px;
+  }
+
+  & input {
+    @extend .cbp-form__input;
+    width: 100%;
+  }
+}
+
+.cbp-form__unit {
+  border: 1px solid $cbp-ui-neutral-base;
+  border-left: none;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: $cbp-text-darker;
+  font-style: italic;
+  font-weight: 700;
+  height: 36px;
+  line-height: 34px;
+  margin-bottom: 16px;
+  margin-left: -1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: auto;
+}
+
+// This removes the default increment arrows in the number input field
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Margins still appear even if hidden */
+}

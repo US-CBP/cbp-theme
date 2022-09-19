@@ -1,21 +1,23 @@
+.mr-2 {
+  margin-right: 8px;
+}
+
 // CBP Badges
-// .cbp-text-badge,
 .cbp-badge {
   align-items: center;
-  background-color: #0081A1;
+  background-color: $cbp-info-base;
   border-radius: 12px;
-  color: #FFF;
+  color: $cbp-white;
   cursor: default;
   display: flex;
   font-size: 10px;
   height: 24px;
   justify-content: center;
-  // padding-top: 7px;
   text-align: center;
   width: 24px;
 
   &--danger {
-    background-color: $cbp-danger;
+    background-color: $cbp-ui-danger-base;
   }
 }
 
@@ -23,26 +25,27 @@
 .cbp-tag {
   @extend .cbp-text-subhead;
   align-items: center;
-  background-color: #0081A1;
+  background-color: $cbp-info-base;
   border-radius: 14px;
-  color: #FFF;
+  color: $cbp-white;
   cursor: default;
   display: flex;
   height: 28px;
   justify-content: center;
   padding: 0 12px;
+  width: fit-content;
 
-  > i + span {
-    margin-left: 6px;
+  & > i::after {
+    content: '\a0\a0';
   }
 
   &--warning {
-    background-color: #FACE00;
-    color: #000;
+    background-color: $cbp-ui-warning-base;
+    color: $cbp-black;
   }
 
   &--success {
-    background-color: #008817;
+    background-color: $cbp-ui-success-base;
   }
 
   &--danger {
@@ -54,19 +57,22 @@
 .cbp-chips {
   @extend .cbp-text-subhead;
   align-items: center;
-  background-color: #76766A;
+  background-color: $cbp-ui-neutral-base;
   border-radius: 14px;
-  color: #FFF;
+  color: $cbp-white;
   display: flex;
   height: 28px;
   justify-content: center;
   padding-left: 12px;
   text-transform: uppercase;
+  width: fit-content;
 
   &--active {
-    background-color: #1B2B85;
+    background-color: $cbp-active-dark;
     
-    &:hover { background-color: #1B2B85; }
+    &:hover { 
+      background-color: $cbp-active-dark; 
+    }
 
     & > span + .plus-border {
       transform: rotate(-45deg);
@@ -93,12 +99,12 @@
   }
 
   &:focus {
-    background-color: #BE32D0;
+    background-color: $cbp-focus-dark;
     outline: none;
 
     > span + .plus-border {
       background-color: transparent;
-      border-color: #FFF;
+      border-color: $cbp-white;
     }
   }
 

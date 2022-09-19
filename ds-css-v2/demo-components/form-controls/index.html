@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBP Theme Boilerplate</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <!-- Font awesome loaded locally from assets-->
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+</head>
+<body>
+  <div class="cbp-grid-container">
+    <div class="cbp-row margin-top-5">
+      <div class="cbp-grid-col-full">
+        <h1>Form Control Components</h1>
+      </div>
+    </div>
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">Pizza Toppings</label>
+            <span class="cbp-form__description">Required. Choose as many as you like.</span>
+            <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+            <div class="cbp-form__control" id="check-wrapper">
+              <div class="form-check">
+                <input type="checkbox" name="checkbox1" class="cbp-form__checkbox">
+                <label for="checkbox1">Bacon</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="checkbox2" class="cbp-form__checkbox">
+                <label for="checkbox1">Pepperoni</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="checkbox3" class="cbp-form__checkbox">
+                <label for="checkbox1">Sausage</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Checkbox Field</h3>
+        <div class="cbp-form__control">
+          <div class="form-radio">
+            <input type="checkbox" name="checkbox-inline" class="cbp-form__checkbox" onchange="setInline(event, 'check-wrapper')">
+            <label for="checkbox-inline">Inline</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline2" class="cbp-form__checkbox" onchange="setControlDisabled(event, 'check-wrapper')">
+            <label for="checkbox-inline2">Disable</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">Pizza Toppings</label>
+            <span class="cbp-form__description">Required. Choose as many as you like.</span>
+            <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+            <div class="cbp-form__control" id="indy-wrapper">
+              <div class="form-check">
+                <input type="checkbox" name="toppings" class="cbp-form__checkbox" id="all-toppings">
+                <label for="all-toppings">All Toppings</label>
+              </div>
+              <div class="cbp-form__control--nested">
+                <div class="form-check">
+                  <input type="checkbox" name="toppings" id="checkbox2" class="cbp-form__checkbox">
+                  <label for="checkbox2">Olives</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" name="toppings" id="checkbox3" class="cbp-form__checkbox">
+                  <label for="checkbox3">Pineapple</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" name="toppings" id="checkbox4" class="cbp-form__checkbox">
+                  <label for="checkbox4">Sardines</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Indeterminate Checkbox Field</h3>
+        <div class="cbp-form__control">
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline2" class="cbp-form__checkbox" onchange="setControlDisabled(event, 'indy-wrapper')">
+            <label for="checkbox-inline2">Disable</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">Pizza Toppings</label>
+            <span class="cbp-form__description">Required. Choose as many as you like.</span>
+            <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+            <div class="cbp-form__control" id="radio-wrapper">
+              <div class="form-radio">
+                <input type="radio" name="pizza-radio" class="cbp-form__radio" id="pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="pizza-radio" class="cbp-form__radio" id="sardines">
+                <label for="sardines">Sardines</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="pizza-radio" class="cbp-form__radio" id="olives">
+                <label for="olives">Olives</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Radio Button Field</h3>
+        <div class="cbp-form__control">
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline" class="cbp-form__checkbox" onchange="setInline(event, 'radio-wrapper')">
+            <label for="checkbox-inline">Inline</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="checkbox-inline2" class="cbp-form__checkbox" onchange="setControlDisabled(event, 'radio-wrapper')">
+            <label for="checkbox-inline2">Disable</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <h4><i class="fas fa-user"></i> User Preferences</h4>
+          <div class="cbp-toggle__wrapper">
+            <label for="wi-fi" class="cbp-toggle__label">Wi-Fi Connection</label>
+            <label class="cbp-toggle" data-component="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>On</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="cell-data" class="cbp-toggle__label">Cellular Data</label>
+            <label class="cbp-toggle" data-component="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>On</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="bluetooth" class="cbp-toggle__label">Bluetooth</label>
+            <label class="cbp-toggle" data-component="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>On</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="dnd" class="cbp-toggle__label">Do Not Disturb</label>
+            <label class="cbp-toggle" data-component="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>Off</span>
+          </div>
+          <div class="cbp-toggle__wrapper">
+            <label for="airplane-mode" class="cbp-toggle__label">Airplane Mode</label>
+            <label class="cbp-toggle" data-component="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>Off</span>
+          </div>
+        </div>
+        <div class="cbp-form__wrapper">
+          <div class="cbp-toggle__wrapper">
+            <label for="airplane-mode" class="cbp-toggle__label">Night Mode</label>
+            <label class="cbp-toggle demo-toggle" data-component="cbp-toggle">
+              <input type="checkbox">
+              <span class="slider">
+                <i class="fas fa-moon" style="color: yellow;"></i>
+                <i class="fas fa-sun" style="color: orange;"></i>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Toggle Field</h3>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">Volume</label>
+            <div class="cbp-form__control cbp-form__control--range" id="demo-slider">
+              <i class="fas fa-volume-down"></i>
+              <input type="range" name="volume" id="volume" max="100" min="0" value="88" data-slider="continuous">
+              <i class="fas fa-volume-up"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Continuous Slider</h3>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">How many turnips you want?</label>
+            <div class="cbp-form__control cbp-form__control--value" id="demo-value-slider">
+              <span>0</span>
+              <input type="range" name="value-slider" id="value-slider" max="100" min="0" value="15" step="1"  data-slider="value">
+              <span>100</span>
+              <div class="cbp-form__number">
+                <input type="number" class="value-slider" name="value-slider-input" id="value-slider-input" value="15" autocomplete="off">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Value Slider</h3>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <form action="submit">
+          <div class="cbp-form-wrapper">
+            <label for="number" class="cbp-form__label">Price Range for Turnips</label>
+            <div class="cbp-form__control cbp-form__control--range" id="demo-multi-thumb">
+              <div class="cbp-form__number">
+                <input type="number" name="lower-range" id="lower-range">
+              </div>
+              <span>0</span>
+              <div class="range-wrapper">
+                <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="25">
+                <input type="range" name="range-slider" id="range-slider" max="100" min="0" value="75">
+              </div>
+              <span>100</span>
+              <div class="cbp-form__number">
+                <input type="number" name="upper-range" id="upper-range" value="75">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Range Slider</h3>
+      </div>
+    </div>
+
+    <footer class="cbp-footer">
+      <span class="font-sans-3xs text-ls-1 text-base-dark">Made with ♥️ by Creative Services</span>
+    </footer>
+  </div>
+
+  <!-- Required JS for USWDS -->
+  <script src="../../js/uswds.min.js"></script>
+  <!-- JS for dropdowns -->
+  <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/formControls.js"></script>
+  <script src="../../js/cbp-components-js/toggle.js"></script>
+  <script src="../../js/cbp-components-js/slider.js"></script>
+</body>
+</html>

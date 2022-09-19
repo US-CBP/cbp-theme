@@ -18,18 +18,18 @@
 
     // Focus states for expand button 
     &:focus {
-      background-color: #be32d0; // $cbp-focus-dark
+      background-color: $cbp-focus-dark;
       outline: none;
     }
 
     &:focus i {
-      color: #ffffff;
+      color: $cbp-white;
     }
   }
 
   button > i {
     font-size: 16px;
-    color: #5D5D52; // $cbp-ui-neutral-darker
+    color: $cbp-ui-neutral-darker;
     transform: rotate(0);
     transition: transform 0.2s ease-in-out;
   }
@@ -45,10 +45,10 @@
 
   // Hover states for expand button
   &:hover button {
-    background-color: #5D5D52; // $cbp-ui-neutral-darker
+    background-color: $cbp-ui-neutral-darker;
 
     i {
-      color: #ffffff; // $white
+      color: $cbp-white; // $white
     }
   }
 }

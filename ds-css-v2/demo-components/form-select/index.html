@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBP Theme Boilerplate</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+</head>
+<body>
+  <div class="cbp-grid-container">
+    <div class="cbp-row margin-top-5">
+      <h1>Dropdown Component</h1>
+    </div>
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="pod2" class="cbp-form__label">Port of Departure</label>
+          <span class="cbp-form__description">
+            Required.
+          </span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-dropdown-wrapper" id="dropdown-demo-2">
+            <button class="cbp-dropdown__custom" id="port-dropdown" data-toggle="dropdown">
+              <span class="cbp-dropdown__placeholder">Choose Ports</span>
+            </button>
+            <div class="cbp-dropdown" id="custom-dropdown-menu">
+              <a href="#" class="cbp-dropdown__item">Port of Baltimore</a>
+              <a href="#" class="cbp-dropdown__item">Port of Newark</a>
+              <a href="#" class="cbp-dropdown__item">Port of Washington</a>
+              <a href="#" class="cbp-dropdown__item">Port of Zoolily</a>
+              <a href="#" class="cbp-dropdown__item">Port of Boston</a>
+              <a href="#" class="cbp-dropdown__item">Port of San Ysidro</a>
+              <a href="#" class="cbp-dropdown__item">Port of San Diego</a>
+              <a href="#" class="cbp-dropdown__item">Port of Rhode Island</a>
+              <a href="#" class="cbp-dropdown__item">Port of Galveston</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>CBP Dropdown*</h3>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable2" id="disable2" onchange="disableSelect(event, 'dropdown-demo-2', true)">
+          <label for="disable2">Disable</label>
+        </div>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="error2" id="error2" onchange="addError(event, 'dropdown-demo-2', true)">
+          <label for="error2">Error</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="pod2" class="cbp-form__label">Port(s) of Departure</label>
+          <span class="cbp-form__description">
+            Required.
+          </span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-dropdown-wrapper" id="dropdown-demo-3">
+            <button class="cbp-dropdown__custom" id="ports-dropdown" data-toggle="dropdown">
+              <span class="cbp-dropdown__placeholder">Choose Ports</span>
+            </button>
+            <div class="cbp-dropdown" id="custom-dropdown-menu">
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="22" autocomplete="off">
+                Port of Balitmore
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="82" autocomplete="off">
+                Port of Newark
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="11" autocomplete="off">
+                Port of Washington
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="667" autocomplete="off">
+                Port of Zoolily
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="2" autocomplete="off">
+                Port of Boston
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="65" autocomplete="off">
+                Port of San Ysidro
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="87" autocomplete="off">
+                Port of San Diego
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="998" autocomplete="off">
+                Port of Rhode Island
+              </label>
+              <label class="cbp-dropdown__item cbp-dropdown__item--multiselect">
+                <input type="checkbox" value="423" autocomplete="off">
+                Port of Galveston
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-2-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>CBP Multi-Select Dropdown*</h3>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable3" id="disable3"  onchange="disableSelect(event, 'dropdown-demo-3', true)">
+          <label for="disable3">Disable</label>
+        </div>
+        <div class="cbp-form__control--inline form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="error3" id="error3" onchange="addError(event, 'dropdown-demo-3', true)">
+          <label for="error3">Error</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Required JS for USWDS -->
+  <script src="../../js/uswds.min.js"></script>
+  <!-- JS for dropdowns -->
+  <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/selectDropdown.js"></script>
+  <script src="../../js/utilities/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+.cbp-form__control--value {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  & > i {
+    color: $cbp-text-darkest;
+    font-size: 16px;
+
+    &:first-child {
+      margin-right: 8px;  
+    }
+
+    &:last-child {
+      margin-left: 8px;  
+    }
+  }
+
+  & > span {
+    color: $cbp-text-darkest;
+    font-size: 12px;
+    font-weight: 700;
+
+    &:first-child {
+      margin-right: 8px;  
+    }
+
+    &:last-of-type {
+      margin-left: 8px; 
+    }
+  }
+
+  & > .cbp-form__number {
+    margin-left: 8px;
+
+    & > input[type='number'] {
+      margin-bottom: unset;
+      width: 40px;
+    }
+  }
+}
+
+.cbp-form__control--range {
+  @extend .cbp-form__control--value;
+  & > .cbp-form__number:first-child {
+    margin-right: 8px;
+
+    & > input[type='number'] {
+      margin-bottom: unset;
+      width: 40px;
+    }
+  }
+
+  & span:last-of-type {
+    margin-left: 0;
+  }
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 2;
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &:focus:not([disabled]) {
+    outline: none;
+
+    &::-moz-range-thumb {
+      @include thumb-focus;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb-focus;
+    }
+
+    &::-ms-thumb {
+      @include thumb-focus;
+    }
+  }
+
+  /* Google Chrome */
+  &::-webkit-slider-runnable-track { // Check MDN for updates for this spec and refactor 'slider.js' if necessary
+    @include track;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+    -webkit-appearance: none;
+    margin-top: $thumb-margin;
+  }
+
+  /* Mozilla Firefox */
+  &::-moz-range-track {
+    @include track;
+    height: 4px;
+  }
+
+  &::-moz-range-progress {
+    @include fill;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+
+  /* Microsoft Edge */
+  &::-ms-track {
+    @include track;
+  }
+  
+  /* Document needed that the pseudo classes for IE (-ms-fill-lower & -ms-fill-upper) do not work in Edge */
+  &::-ms-thumb {
+    @include thumb;
+  }
+
+  &:disabled {
+    &::-moz-range-track {
+      background-color: $cbp-disabled-light;
+    }
+
+    &::-moz-range-progress {
+      background: $cbp-disabled-dark;
+    }
+
+    &::-moz-range-thumb {
+      background: $cbp-ui-neutral-light;
+    }
+
+    &::-moz-range-thumb:hover {
+      background: $cbp-ui-neutral-darker;
+    }
+
+    &::-moz-range-thumb:focus {
+      @include thumb-focus;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-color: $cbp-disabled-light;
+    }
+
+    &::-webkit-slider-thumb {
+      background: $cbp-ui-neutral-light;
+    }
+
+    &::-webkit-slider-thumb:hover {
+      background: $cbp-ui-neutral-darker;
+    }
+
+    &::-webkit-slider-thumb:focus {
+      @include thumb-focus;
+    }
+  }
+}
+
+/* Styling for this consists of two range inputs */
+.range-wrapper {
+  // background: $cbp-ui-neutral-base;
+  background: transparent;
+  display: grid;
+  grid-template-rows: auto 3rem;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 8px;
+  position: relative;
+  pointer-events: none;
+
+  input[type="range"] {
+    &::-webkit-slider-runnable-track {
+      background: $cbp-base-neutral-light;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative !important;
+      z-index: 9999;
+    }
+
+    &::-moz-range-progress {
+      background: unset;
+    }
+
+    &::-moz-range-thumb {
+      position: relative !important;
+      z-index: 9999;
+    }
+  }
+
+  input[type="range"]:last-child::-moz-range-track {
+    background: transparent !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  clip-path: inset(50%);
+}

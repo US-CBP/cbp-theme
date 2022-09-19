@@ -62,6 +62,7 @@ ghostActiveBtns.forEach((btn) => {
   })
 })
 
+// Add aria disabled to a element
 disabledLinks.forEach(link => {
   link.addEventListener("click", e => {
     if (e.target.nodeName === 'A' && e.target.getAttribute('aria-disabled') == 'true') {
@@ -70,13 +71,17 @@ disabledLinks.forEach(link => {
   })
 })
 
-linkDisableBtn.addEventListener("click", e => {
-  const parent = e.target.parentElement;
-  const targetBtn = parent.firstElementChild;
-  
-  targetBtn.ariaDisabled = linkDisableBtn.checked
-  targetBtn.classList.toggle("cbp-link__inline--disabled");
-})
+// Disabled Text Link
+
+if (linkDisableBtn) {
+  linkDisableBtn.addEventListener("click", e => {
+    const parent = e.target.parentElement;
+    const targetBtn = parent.firstElementChild;
+    
+    targetBtn.ariaDisabled = linkDisableBtn.checked
+    targetBtn.classList.toggle("cbp-link__inline--disabled");
+  })
+}
 
 const singleSegment = document.querySelectorAll('[data-segment-button="single"]');
 const multiSegment = document.querySelectorAll('[data-segment-button="multi"]');
@@ -96,7 +101,6 @@ multiSegment.forEach(segment => {
 
 singleSegment.forEach(segment => {
   let selected;
-  
   const { children } = segment;
 
   for (const child of children) {
