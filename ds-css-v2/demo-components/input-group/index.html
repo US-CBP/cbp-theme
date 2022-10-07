@@ -158,7 +158,7 @@
       </div>
     </div>
 
-    <div class="cbp-row">
+    <!-- <div class="cbp-row">
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-form-wrapper">
           <label for="password" class="cbp-form__label">Search</label>
@@ -194,6 +194,55 @@
           <label for="readonly">Read Only</label>
         </div>
       </div>
+    </div> -->
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label class="cbp-form__label">Upload Files</label>
+          <span class="cbp-form__description">Accepted files: .doc, .docx, .pdf, .jpg, .png, .gif. Max File size 10mb per file. Up to 5 files may be uploaded.</span>
+          <label for="file-upload-demo" class="cbp-form__file">
+            <i class="fas fa-file-alt"></i>
+            Drag & Drop Files Here or
+            <button class="cbp-btn cbp-btn__secondary" tabindex="-1">
+              <i class="fas fa-upload"></i>
+              browse
+            </button>
+            <input type="file" name="file-upload-demo" id="file-upload-demo" multiple>
+          </label>
+          <!-- <div class="cbp-form__upload">
+            <span>super_duper-fun_times_at_the_beach.jpg</span>
+            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+            <progress value="0" max="100">70 %</progress>
+          </div> -->
+          <!-- <div class="cbp-form__upload cbp-form__upload--error">
+            <div>
+              <span>super_duper-fun_times_at_the_beach.jpg</span>
+              <button><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <hr>
+            <span>
+              <i class="fas fa-exclamation-triangle"></i>File size exceeds the limit.
+            </span>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>File Upload</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
     </div>
 
     <footer class="cbp-footer">
@@ -208,6 +257,7 @@
   <script src="../../js/cbp-components-js/toggle.js"></script>
   <script src="../../js/cbp-components-js/demo.js"></script>
   <script src="../../js/utilities/autocomplete.js"></script>
-  <script src="../../js/utilities//new-autocomplete.js"></script>
+  <script src="../../js/utilities/new-autocomplete.js"></script>
+  <script src="../../js/cbp-components-js/fileupload.js"></script>
 </body>
 </html>

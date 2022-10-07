@@ -1,0 +1,254 @@
+.cbp-form__file {
+  align-items: center;
+  background-color: transparent;
+  border: 1px dashed $cbp-ui-neutral-base;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  font-style: italic;
+  height: 72px;
+  margin-bottom: 16px;
+  padding: 0 12px;
+  position: relative;
+  width: fit-content;
+
+  i {
+    color: $cbp-text-base;
+    font-size: 30px;
+    margin-right: 12px;
+  }
+
+  input[type=file] {
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  &:hover {
+    border: 2px dashed $cbp-ui-neutral-darker;
+    outline: 4px solid $cbp-ui-neutral-light;
+    outline-offset: -6px;
+
+    & > .cbp-btn__secondary {
+      background-color: $cbp-ui-neutral-darker;
+    }
+  }
+}
+
+.cbp-form__file:focus-within {
+  border: 2px dashed $cbp-focus-dark;
+  outline: 4px solid $cbp-focus-light;
+  outline-offset: -6px;
+}
+
+.cbp-form__file:focus-within > .cbp-btn__secondary {
+  @extend .btn-focus;
+}
+
+.cbp-form__file:focus-within > .cbp-btn__secondary {
+  background-color: $cbp-focus-dark;
+}
+
+.cbp-form__file > .cbp-btn__secondary {
+  margin-left: 6px;
+  pointer-events: none;
+  & > i {
+    color: $cbp-text-lightest;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+}
+
+/* DISABLED */
+.cbp-form__file.disabled {
+  border: 1px dashed $cbp-disabled-dark;
+  color: $cbp-disabled-dark;
+
+  & > i {
+    color: $cbp-disabled-dark;
+  }
+
+  & > button {
+    background-color: $cbp-disabled-dark;
+    color: $cbp-disabled-light;
+    font-style: italic;
+
+    & > i {
+      color: inherit;
+    }
+  }
+
+  &:hover {
+    outline: none;
+  }
+}
+
+.cbp-form__file.read-only {
+  border: 1px dashed $cbp-ui-neutral-light;
+  color: $cbp-text-dark;
+
+  & > i {
+    color: $cbp-text-light;
+  }
+
+  & > button {
+    background-color: $cbp-ui-neutral-light;
+    color: $cbp-text-lightest;
+    font-style: italic;
+
+    & > i {
+      color: inherit;
+    }
+  }
+
+  &:hover {
+    outline: none;
+
+    & > button {
+      background-color: $cbp-ui-neutral-light;
+      color: $cbp-text-lightest;
+    }
+  }
+}
+
+.cbp-form__upload {
+  align-items: center;
+  background-color: $cbp-base-neutral-lighter;
+  border-radius: 3px;
+  display: flex;
+  font-style: italic;
+  height: 40px;
+  margin-bottom: 16px;
+  padding: 12px;
+  position: relative;
+  width: 333px;
+  
+  & > button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    font-size: 14px;
+    height: 28px;
+    position: absolute;
+    right: 12px;
+    width: 28px;
+
+    & > i {
+      color: $cbp-ui-neutral-dark;
+    }
+
+    &:hover {
+      background-color: $cbp-ui-neutral-darker;
+
+      & > i {
+        color: $cbp-ui-neutral-lighter;
+      }
+    }
+
+    &:focus {
+      @extend .btn-focus;
+      
+      & > i {
+        color: $cbp-ui-neutral-lighter;
+      }
+    }
+  }
+}
+
+.cbp-form__upload > progress {
+  background-color: transparent;
+  border: 0; // FF
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+
+.cbp-form__upload > progress::-webkit-progress-bar {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.cbp-form__upload > progress[value]::-webkit-progress-bar {
+  background-color: $cbp-base-neutral-lighter;
+}
+
+.cbp-form__upload > progress[value]::-webkit-progress-value {
+  background-color: $cbp-info-base;
+  border-bottom-left-radius: 3px !important;
+}
+
+.cbp-form__upload > progress[value]::-moz-progress-bar {
+  background-color: $cbp-info-base;
+  border-bottom-left-radius: 3px;
+}
+
+.cbp-form__upload--error {
+  align-items: baseline;
+  background-color: $cbp-ui-danger-lighter;
+  border: 2px solid $cbp-ui-danger-base;
+  flex-direction: column;
+  height: 72px;
+
+  & > progress {
+    display: none;
+  }
+
+  & > hr {
+    border: none;
+    border-top: 1px solid $cbp-base-neutral-lighter;
+    color: $cbp-base-neutral-lighter;
+    height: 1px;
+    margin: 8px 0;
+    width: 100%;
+  }
+}
+
+.cbp-form__upload--error > div:first-child {
+  align-items: center;
+  position: relative;
+  width: 100%;
+  
+  & > button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    font-size: 14px;
+    height: 28px;
+    position: absolute;
+    right: -1px;
+    top: -6px;
+    width: 28px;
+
+    & > i {
+      color: $cbp-ui-danger-base;
+    }
+
+    &:hover {
+      background-color: $cbp-ui-neutral-darker;
+
+      & > i {
+        color: $cbp-ui-neutral-lighter
+      }
+    }
+
+    &:focus {
+      @extend .btn-focus;
+
+      & > i {
+        color: $cbp-ui-neutral-lighter
+      }
+    }
+  }
+}
+
+.cbp-form__upload--error > span:last-child {
+  color: $cbp-ui-danger-base;
+
+  & > i {
+    margin-right: 4px;
+  }
+}
