@@ -1,0 +1,238 @@
+/* 2022: Input <time> is not completely stylable in current browsers */
+input[type=time] {
+  appearance: none;
+  border: 0;
+
+  &::-webkit-calendar-picker-indicator  { // Hide Native Chrome Icon
+    display: none;
+    background: none;
+  }
+}
+
+.cbp-form__time {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.cbp-form__time--input {
+  align-items: center;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: inherit;
+  color: $cbp-text-dark;
+  height: 36px;
+  padding: 0 8px;
+  position: relative;
+  width: 100%;
+
+  & > i {
+    font-size: 1rem;
+  }
+
+  & > input[type=text] {
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    color: $cbp-text-darkest;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: 0.3px;
+    margin-bottom: 0;
+    padding: 0 8px;
+    width: 100%;
+
+    &::placeholder {
+      font-style: italic;
+    }
+    
+    &:focus:not([disabled]) {
+      outline: 0;
+    }
+
+    /*
+    * 10-19-22: These pseudo-classes for input[type=time] are only available on Chrome 
+
+    * &::-webkit-datetime-edit-ampm-field {
+        display: none;
+      }
+    */
+  }
+
+  & > input[type=number] {
+    border: none;
+    outline: 0;
+    text-align: center;
+    width: 28px;
+  }
+
+  & .hours {
+    width: 20px !important;
+    margin-left: 2px;
+    padding: 0 !important;
+  }
+
+  & .minutes {
+    width: 24px !important;
+    padding: 0 !important;
+  }
+
+  &:hover {
+    border: 2px solid $cbp-base-neutral-darker;
+    border-right: 0;
+  }
+
+  &:focus-within {
+    border: 2px solid $cbp-focus-dark;
+    border-right: 0;
+  }
+}
+
+
+/* AM:PM:24HR */
+.cbp-btn__time--period {
+  @extend .cbp-btn--segment;
+  & button:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-right: 1px solid $cbp-ui-neutral-base;
+  }
+
+  & button {
+    border-color: $cbp-ui-neutral-base;
+    color: $cbp-text-darker;
+  }
+
+  & button:not(:first-child):not(:last-child) {
+    border-left: 1px solid $cbp-ui-neutral-base;
+    border-right: 1px solid $cbp-ui-neutral-base;
+    border-radius: 0;
+  }
+
+  & button:last-child {
+    border-left: 1px solid $cbp-ui-neutral-base;
+  }
+
+  /* Disabled */
+  & button.active:disabled {
+    background-color: $cbp-ui-neutral-base;
+    color: $cbp-disabled-light;
+  }
+}
+
+/* 
+  State: Disabled 
+  - Add className "disabled" .cbp-form__time
+  - input[type=text] or input[type=time] needs "disabled" attribute
+  - All buttons associated with 
+    this component need the "disabled=true" attribute
+*/
+.cbp-form__time.disabled {
+  border: 0;
+
+  & > .cbp-form__time--input {
+    background-color: $cbp-disabled-light;
+    border: 1px solid $cbp-disabled-dark;
+    border-right: 0;
+    color: $cbp-text-dark;
+
+    &:hover {
+      border: 2px solid $cbp-ui-neutral-darker;
+      border-right: 0;
+    }
+
+    &:focus-within {
+      border: 2px solid $cbp-focus-dark;
+      border-right: 0;
+    }
+  }
+
+  & > .cbp-form__time--input > input {
+    background-color: $cbp-disabled-light;
+  }
+
+  & > .cbp-btn__time--period {
+    & button:first-child {
+      border-right: 1px solid $cbp-disabled-dark;
+    }
+
+    & button:not(:first-child):not(:last-child) {
+      border-left: 1px solid $cbp-disabled-dark;
+      border-right: 1px solid $cbp-disabled-dark;
+    }
+
+    & button:last-child {
+      border-left: 1px solid $cbp-disabled-dark;
+    }
+
+    & button.active:disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
+/*
+  State: Read-Only
+  - input[type=text] or input[type=time] needs "readonly" attribute
+  - Wrapping form needs the class ".read-only" while the
+    associated segment buttons needs the 
+    "disabled=true" attribute
+  - :read-only pseudo-class
+*/
+
+.cbp-form__time.readonly {
+  & > .cbp-form__time--input {
+    background-color: $cbp-base-neutral-lighter;
+    border: 1px solid $cbp-ui-neutral-light;
+    border-right: 0;
+    color: $cbp-text-dark;
+  }
+
+  & > .cbp-form__time--input > input {
+    background-color: $cbp-base-neutral-lighter;
+  }
+
+  & > .cbp-btn__time--period {
+    & button {
+      background-color: $cbp-base-neutral-lighter;
+      border-color: $cbp-ui-neutral-light;
+      color: $cbp-text-dark;
+    }
+
+    & button.active:disabled {
+      background-color: $cbp-ui-neutral-base;
+      color: $cbp-text-lightest;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/*
+  State: Error
+  - Wrapping form needs the class ".error"
+*/
+.cbp-form__time.error {
+  background-color: $cbp-ui-danger-lighter;
+  & > .cbp-form__time--input {
+    border: 1px solid $cbp-ui-danger-base;
+    border-right: 0;
+
+    &:hover {
+      border-width: 2px;
+    }
+
+    &:focus-within {
+      border: 2px solid $cbp-focus-dark;
+      border-right: 0;
+    }
+  }
+
+  & > .cbp-form__time--input > input {
+    background-color: $cbp-ui-danger-lighter;
+  }
+}

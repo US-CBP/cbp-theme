@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBP Theme Boilerplate</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <!-- Font awesome loaded locally from assets-->
+  <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+</head>
+<body>
+  <div class="cbp-grid-container">
+    <div class="cbp-row margin-top-5">
+      <div class="cbp-grid-col-full">
+        <h1>Input Group Components</h1>
+      </div>
+    </div>
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Add Person to List</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
+          <div class="cbp-field-group" id="demo-button-text-field">
+            <input type="text" name="tag" id="tag" placeholder="Add Person"></input>
+            <button type="button">
+              Add Person
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Input Text Group</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-button-text-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-button-text-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-button-text-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Add Tags</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
+          <div class="cbp-field-group" id="demo-square-button-field">
+            <input type="text" name="tag" id="tag" placeholder="Add Tag Keyword"></input>
+            <button type="button" class="square">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <div class="bacon-tags" style="display: flex;">
+            <div class="cbp-chips" style="margin-right: 8px;">
+              <span>Pepperoni</span>
+              <div class="plus-border">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="cbp-chips">
+              <span>Mushroom</span>
+              <div class="plus-border">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Input Group</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Search</label>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
+          <div class="cbp-field-group" id="demo-square-button-field">
+            <input type="text" name="tag" id="tag" placeholder="Enter Search Criteria"></input>
+            <button type="button" class="square">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Search Field</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Search</label>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
+          <form autocomplete="off" style="margin: 0;">
+            <div class="cbp-field-group autocomplete">
+              <input type="text" name="myInput" id="myInput" placeholder="Enter Search Criteria"></input>
+              <button type="button" class="square">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Search Field w/ Predictive Text</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Search</label>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
+          <form>
+            <div class="cbp-field-group">
+              <input type="text" name="autocomplete-demo" id="autocomplete-demo" placeholder="Enter Search Criteria" autocomplete="off"></input>
+              <button type="button" class="square">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <ul class="cbp-autocomplete">
+              <li class="cbp-autocomplete__item">Uganda</li>
+              <li class="cbp-autocomplete__item">United States of America</li>
+              <li class="cbp-autocomplete__item">United Emerites</li>
+            </ul>
+          </form>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>New Search Field w/ Predictive Text</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label class="cbp-form__label">Upload Files</label>
+          <span class="cbp-form__description">Accepted files: .doc, .docx, .pdf, .jpg, .png, .gif. Max File size 10mb per file. Up to 5 files may be uploaded.</span>
+          <label for="file-upload-demo" class="cbp-form__file">
+            <i class="fas fa-file-alt"></i>
+            Drag & Drop Files Here or
+            <button class="cbp-btn cbp-btn__secondary" tabindex="-1">
+              <i class="fas fa-upload"></i>
+              browse
+            </button>
+            <input type="file" name="file-upload-demo" id="file-upload-demo" multiple>
+          </label>
+          <!-- <div class="cbp-form__upload">
+            <span>super_duper-fun_times_at_the_beach.jpg</span>
+            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+            <progress value="0" max="100">70 %</progress>
+          </div> -->
+          <!-- <div class="cbp-form__upload cbp-form__upload--error">
+            <div>
+              <span>super_duper-fun_times_at_the_beach.jpg</span>
+              <button><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+            <hr>
+            <span>
+              <i class="fas fa-exclamation-triangle"></i>File size exceeds the limit.
+            </span>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>File Upload</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="invalidateInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="disableInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInputGroup(event, 'demo-square-button-field', 'component')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <footer class="cbp-footer">
+      <span class="font-sans-3xs text-ls-1 text-base-dark">Made with ♥️ by Creative Services</span>
+    </footer>
+  </div>
+
+  <!-- Required JS for USWDS -->
+  <script src="../../js/uswds.min.js"></script>
+  <!-- JS for dropdowns -->
+  <script src="../../js/universalHeader.js"></script>
+  <script src="../../js/cbp-components-js/toggle.js"></script>
+  <script src="../../js/cbp-components-js/demo.js"></script>
+  <script src="../../js/utilities/autocomplete.js"></script>
+  <script src="../../js/utilities/new-autocomplete.js"></script>
+  <script src="../../js/cbp-components-js/fileupload.js"></script>
+</body>
+</html>

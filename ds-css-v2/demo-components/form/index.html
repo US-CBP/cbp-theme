@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../dist/styles.css">
   <!-- Font awesome loaded locally from assets-->
   <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+  <script src="https://unpkg.com/imask"></script>
 
 </head>
 <body>
@@ -99,6 +100,38 @@
         </div>
         <div class="form-check">
           <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="readOnlyInput(event, 'password')">
+          <label for="readonly">Read Only</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="cbp-row">
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <div class="cbp-form-wrapper">
+          <label for="password" class="cbp-form__label">Add Tags</label>
+          <span class="cbp-form__description">Required.</span>
+          <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This password does not match our records</span>
+          <div class="cbp-form__password">
+            <input type="text" name="tag" id="tag" placeholder="Enter Password"></input>
+            <button type="button">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
+        <h3>Input Group</h3>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid">
+          <label for="invalid">Error</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable">
+          <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly">
           <label for="readonly">Read Only</label>
         </div>
       </div>
@@ -207,36 +240,42 @@
     <div class="cbp-row">
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
         <div class="cbp-form-wrapper">
-          <label for="number" class="cbp-form__label">Phone Number</label>
-          <span class="cbp-form__description">Required. Country code first, then local number.</span>
+          <label for="time" class="cbp-form__label">Arrival Time</label>
+          <span class="cbp-form__description">Required. (HH:MM Format) UTC-6 America/New York</span>
           <span class="cbp-form__description cbp-form__description--error" hidden><i class="fas fa-exclamation-triangle"></i>&nbsp;This field is required.</span>
-          <div class="cbp-form__number cbp-form__number--phone" id="phone-number-demo">
-            <div class="cbp-dropdown-wrapper" id="dropdown-demo-2">
-              <button class="cbp-dropdown__custom" id="area-code" data-toggle="dropdown">
-                <span class="cbp-dropdown__placeholder">US/USA +1</span>
-              </button>
-              <div class="cbp-dropdown" id="area-code">
-                <a href="#" class="cbp-dropdown__item">AF/AFG +93</a>
-                <a href="#" class="cbp-dropdown__item">AL/ALB +355</a>
-                <a href="#" class="cbp-dropdown__item">DZ/DZA +213</a>
-                <a href="#" class="cbp-dropdown__item">AS/ASM +1-684</a>
-                <a href="#" class="cbp-dropdown__item">AO/AGO +244</a>
-              </div>
+          <!-- Component: Time Picker - Default -->
+          <div class="cbp-form__time" id="time-picker-demo">
+            <div class="cbp-form__time--input">
+              <i class="far fa-clock"></i>
+              <!-- <input type="time" name="time-picker-demo" id="time-picker-demo"> -->
+              <!-- <input type="text" name="time-picker-demo" placeholder="HH:MM" data-time-period="PM"> -->
+              <input type="number" name="demo-hours" id="demo-hours" class="hours" placeholder="HH" min="0" max="23" data-time-period="PM" oninput="validity.valid||(value='');">
+              <span>:</span>
+              <input type="number" name="demo-minutes" id="demo-minutes" class="minutes" placeholder="MM" min="0" max="59" oninput="validity.valid||(value='');">
             </div>
-            <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number"></input>
+            <div class="cbp-btn__time--period">
+              <button>AM</button>
+              <button>PM</button>
+              <button>24HR</button>
+            </div>
           </div>
+          <!-- Component End -->
         </div>
       </div>
 
       <div class="cbp-grid-col-12-sm cbp-grid-col-4-md cbp-grid-col-6-lg cbp-grid-col-6-xl">
-        <h3>Phone Number Field</h3>
+        <h3>Time Picker Field (Default)</h3>
         <div class="form-check">
-          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="phoneError(event, 'phone-number-demo')">
+          <input type="checkbox" class="cbp-form__checkbox" name="invalid" id="invalid" onchange="tpDemo(event, 'time-picker-demo')">
           <label for="invalid">Error</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="phoneDisable(event, 'phone-number-demo')">
+          <input type="checkbox" class="cbp-form__checkbox" name="disable" id="disable" onchange="tpDemo(event, 'time-picker-demo')">
           <label for="disable">Disable</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="cbp-form__checkbox" name="readonly" id="readonly" onchange="tpDemo(event, 'time-picker-demo')">
+          <label for="readonly">Read Only</label>
         </div>
       </div>
     </div>
@@ -254,5 +293,7 @@
   <script src="../../js/cbp-components-js/form.js"></script>
   <script src="../../js/cbp-components-js/selectDropdown.js"></script>
   <script src="../../js/cbp-components-js/number.js"></script>
+  <script src="../../js/demo/timepicker-demo.js"></script>
+  <script src="../../js/cbp-components-js/timepicker.js"></script>
 </body>
 </html>

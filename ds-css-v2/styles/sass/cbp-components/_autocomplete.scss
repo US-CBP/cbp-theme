@@ -1,0 +1,31 @@
+.cbp-autocomplete {
+  background-color: $cbp-white;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin-top: 0;
+  max-height: 216px;
+  padding-left: 0;
+}
+
+.cbp-autocomplete__item {
+  height: 100%;
+  list-style-type: none;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.cbp-autocomplete__item > a {
+  color: $cbp-text-darkest;
+  height: 100%;
+  line-height: 0.7;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $cbp-ui-neutral-darker;
+  }
+}

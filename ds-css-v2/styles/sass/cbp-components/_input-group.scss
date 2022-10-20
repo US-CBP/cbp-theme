@@ -1,0 +1,141 @@
+.cbp-field-group {
+  display: flex;
+
+  & > input[type=password],
+  & > input[type=text] {
+    @extend .cbp-form__input;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    flex: 1 1 auto;
+    width: auto;
+
+    &:disabled {
+      cursor: pointer;
+    }
+  }
+
+  & > button {
+    @extend .cbp-btn;
+    @extend .cbp-btn__secondary;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    display: inline-block;
+    margin-left: -2px;
+    white-space: nowrap;
+
+    &:disabled {
+      background-color: $cbp-disabled-dark;
+      color: $cbp-disabled-light;
+    }
+  }
+
+  & > .square {
+    @extend .cbp-btn;
+    @extend .cbp-btn__square;
+    @extend .cbp-btn__square-secondary;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -2px;
+
+    &:disabled {
+      background-color: $cbp-disabled-dark;
+      color: $cbp-disabled-light;
+    }
+  }
+}
+
+.cbp-field-group--error {
+  & > button {
+    @extend .cbp-btn__square-danger;
+  }
+
+  & > .square {
+    @extend .cbp-btn__square-danger;
+  }
+}
+
+.cbp-field-group--readonly {
+  & > button,
+  & > .square {
+    background-color: $cbp-ui-neutral-light;
+    color: $cbp-text-lightest;
+    cursor: not-allowed;
+
+    &:hover:not([disabled]) {
+      background-color: $cbp-ui-neutral-light;
+    }
+
+    &:disabled {
+      background-color: $cbp-base-neutral-light;
+      color: $cbp-text-lightest;
+    }
+  }
+}
+
+.autocomplete {
+  position: relative;
+
+  input[type="text"] {
+    margin-bottom: 0;
+  }
+}
+
+.autocomplete-items {
+  background-color: $cbp-white;
+  border: 1px solid $cbp-ui-neutral-base;
+  border-top: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  left: 0;
+  right: 0;
+  max-height: 216px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 100%;
+  z-index: 99;
+}
+
+.autocomplete-items div {
+  align-items: center;
+  background-color: $cbp-white;
+  border-bottom: 1px solid $cbp-ui-neutral-lighter;
+  color: $cbp-text-dark;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  height: 36px;
+  letter-spacing: 0.3px;
+  padding-left: 16px;
+
+  & > strong {
+    color: $cbp-text-darkest;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: $cbp-ui-neutral-darker;
+  color: $cbp-text-base;
+  & > strong {
+    color: $cbp-text-lightest;
+    font-weight: 700;
+  }
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: $cbp-focus-dark !important; 
+  color: $cbp-text-base !important;
+  
+  & > strong {
+    color: $cbp-text-lightest !important;
+    font-weight: 700 !important;
+  }
+}
